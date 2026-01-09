@@ -1,13 +1,13 @@
 /* /assets/css/header.css */
-/* TCFR header - stable mobile + desktop behavior */
+/* The Cloud Forest Retreat - Global header (stable mobile + desktop) */
 
 /* =====================
-   Variables
+   Tokens
 ===================== */
 :root{
   --tcfr-bg: #A1BFAA;
-  --tcfr-text: #E7E4D1;
   --tcfr-forest: #0D5925;
+  --tcfr-forest-2: #0B2B12;
   --tcfr-orange: #E0643A;
   --tcfr-beige: #F5F5DC;
   --tcfr-line: rgba(13,89,37,.18);
@@ -15,8 +15,11 @@
   --tcfr-radius: 18px;
 }
 
+/* Always respect hidden attribute */
+.tcfr-header [hidden]{ display:none !important; }
+
 /* =====================
-   Header shell
+   Header bar
 ===================== */
 .tcfr-header{
   position: sticky;
@@ -41,6 +44,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 /* =====================
@@ -65,8 +69,15 @@
   font-weight: 900;
   letter-spacing: -0.02em;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 420px;
   font-size: 16px;
   line-height: 1;
+}
+
+@media (max-width: 420px){
+  .tcfr-brandText{ max-width: 240px; }
 }
 
 /* =====================
@@ -76,43 +87,52 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-left: 12px;
+  margin-left: 10px;
   flex: 1 1 auto;
+  min-width: 0;
 }
 
-.tcfr-navDesktop{
-  display: none;
-}
-
+.tcfr-navDesktop{ display:none; }
 @media (min-width: 901px){
-  .tcfr-navDesktop{
-    display: flex;
-  }
+  .tcfr-navDesktop{ display:flex; }
 }
 
-.tcfr-link,
-.tcfr-ddBtn{
+.tcfr-link{
+  text-decoration: none;
+  color: inherit;
   font-weight: 700;
   font-size: 14px;
   padding: 10px 10px;
   border-radius: 999px;
   line-height: 1;
   white-space: nowrap;
-  background: transparent;
+}
+
+.tcfr-link:hover{ background: rgba(13,89,37,.08); }
+
+/* Dropdowns (desktop) */
+.tcfr-dd{ position: relative; }
+
+.tcfr-ddBtn{
+  appearance: none;
   border: 0;
+  background: transparent;
   color: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 10px;
+  border-radius: 999px;
   cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
 }
 
-.tcfr-link:hover,
-.tcfr-ddBtn:hover{
-  background: rgba(13,89,37,.08);
-}
+.tcfr-ddBtn:hover{ background: rgba(13,89,37,.08); }
 
-/* Dropdowns */
-.tcfr-dd{
-  position: relative;
-}
+.tcfr-caret{ font-size: 12px; opacity: .9; }
 
 .tcfr-ddMenu{
   position: absolute;
@@ -125,6 +145,7 @@
   box-shadow: var(--tcfr-shadow);
   padding: 8px;
   display: none;
+  color: var(--tcfr-forest);
 }
 
 .tcfr-dd:hover .tcfr-ddMenu,
@@ -134,16 +155,15 @@
 
 .tcfr-ddItem{
   display: block;
-  padding: 10px;
+  padding: 10px 10px;
   border-radius: 12px;
   text-decoration: none;
   color: var(--tcfr-forest);
   font-weight: 700;
+  font-size: 14px;
 }
 
-.tcfr-ddItem:hover{
-  background: rgba(13,89,37,.08);
-}
+.tcfr-ddItem:hover{ background: rgba(13,89,37,.08); }
 
 /* =====================
    Actions (right side)
@@ -158,6 +178,7 @@
 /* Language pills */
 .tcfr-lang{
   display: inline-flex;
+  align-items: center;
   gap: 6px;
   padding: 6px;
   border-radius: 999px;
@@ -166,6 +187,9 @@
 }
 
 .tcfr-langBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 38px;
   height: 30px;
   padding: 0 10px;
@@ -174,42 +198,40 @@
   font-size: 13px;
   text-decoration: none;
   color: inherit;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 1;
 }
 
-.tcfr-langBtn.is-active{
-  background: rgba(13,89,37,.10);
-}
+.tcfr-langBtn.is-active{ background: rgba(13,89,37,.10); }
 
 .tcfr-langBtn.is-disabled{
   opacity: .55;
   cursor: not-allowed;
+  user-select: none;
 }
 
 /* CTA */
 .tcfr-cta{
   display: none;
+  text-decoration: none;
   font-weight: 800;
   font-size: 14px;
   padding: 11px 14px;
   border-radius: 999px;
   color: #fff;
   background: var(--tcfr-orange);
+  border: 1px solid rgba(0,0,0,.08);
   box-shadow: 0 14px 30px rgba(224,100,58,.22);
+  white-space: nowrap;
 }
-
 @media (min-width: 901px){
-  .tcfr-cta{
-    display: inline-flex;
-  }
+  .tcfr-cta{ display: inline-flex; }
 }
 
 /* =====================
-   Burger
+   Burger (mobile)
 ===================== */
 .tcfr-burger{
+  appearance: none;
   border: 1px solid rgba(13,89,37,.18);
   background: rgba(13,89,37,.05);
   border-radius: 14px;
@@ -219,70 +241,92 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: inherit;
 }
 
 .tcfr-burgerLines{
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 5px;
 }
-
 .tcfr-burgerLines span{
   width: 20px;
   height: 2px;
   background: currentColor;
   border-radius: 999px;
+  display: block;
+}
+
+@media (min-width: 901px){
+  .tcfr-burger{ display:none; }
 }
 
 /* =====================
-   Mobile overlay & panel
-   CLOSED by default
+   Mobile overlay + panel
+   Base styles live here. Visibility controlled by [hidden] + JS.
 ===================== */
-.tcfr-mobileOverlay,
-.tcfr-mobilePanel{
-  display: none;
-}
-
-/* OPEN state only when html.tcfr-navOpen exists */
-html.tcfr-navOpen .tcfr-mobileOverlay{
-  display: block;
+.tcfr-mobileOverlay{
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.35);
   z-index: 6000;
 }
 
-html.tcfr-navOpen .tcfr-mobilePanel{
-  display: flex;
+.tcfr-mobilePanel{
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: min(420px, 92vw);
   background: rgba(245,245,220,.98);
+  color: var(--tcfr-forest);
   z-index: 7000;
   box-shadow: -18px 0 55px rgba(0,0,0,.20);
+  border-left: 1px solid rgba(13,89,37,.14);
+  display: flex;
   flex-direction: column;
   padding: 14px;
 }
 
-/* Mobile content */
 .tcfr-mobileTop{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(13,89,37,.14);
+  justify-content: space-between;
+  gap: 10px;
   padding-bottom: 10px;
+  border-bottom: 1px solid rgba(13,89,37,.14);
+}
+
+.tcfr-mobileBrand{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.tcfr-mobileTitle{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
 }
 
 .tcfr-close{
+  appearance: none;
   border: 1px solid rgba(13,89,37,.16);
   background: rgba(13,89,37,.05);
   border-radius: 14px;
   height: 42px;
   width: 46px;
-  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  font-weight: 900;
+  color: inherit;
 }
 
 .tcfr-navMobile{
@@ -290,19 +334,94 @@ html.tcfr-navOpen .tcfr-mobilePanel{
   display: flex;
   flex-direction: column;
   gap: 8px;
-  overflow-y: auto;
+  overflow: auto;
+  padding-bottom: 16px;
 }
 
-/* Desktop hides mobile */
+.tcfr-mLink{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(13,89,37,.14);
+  background: rgba(255,255,255,.55);
+  text-decoration: none;
+  color: var(--tcfr-forest);
+  font-weight: 700;
+}
+
+.tcfr-mGroup{
+  appearance: none;
+  border: 1px solid rgba(13,89,37,.14);
+  background: rgba(255,255,255,.55);
+  border-radius: 14px;
+  padding: 12px 12px;
+  text-align: left;
+  color: var(--tcfr-forest);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.tcfr-mSub{
+  padding: 6px 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tcfr-mSubLink{
+  text-decoration: none;
+  color: var(--tcfr-forest);
+  font-weight: 700;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(13,89,37,.12);
+  background: rgba(255,255,255,.45);
+}
+
+.tcfr-mSubLink:hover{ background: rgba(13,89,37,.06); }
+
+.tcfr-mobileDivider{
+  height: 1px;
+  background: rgba(13,89,37,.14);
+  margin: 10px 0;
+}
+
+.tcfr-mobileLang{ padding: 10px 8px; }
+
+.tcfr-mobileLangLabel{
+  font-weight: 900;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--tcfr-forest);
+}
+
+.tcfr-mobileCta{
+  margin-top: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--tcfr-orange);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(224,100,58,.22);
+}
+
 @media (min-width: 901px){
-  .tcfr-burger,
   .tcfr-mobileOverlay,
   .tcfr-mobilePanel{
     display: none !important;
   }
 }
 
-/* Scroll lock */
+/* Scroll lock (JS toggles this on <html>) */
 html.tcfr-navOpen{
   overflow: hidden;
 }
