@@ -1,14 +1,49 @@
 /* /assets/js/site.js (TCFR)
-   - Injects header/footer once (if mounts exist)
-   - Initializes hamburger open/close
-   - Mobile accordion toggles
-   - Sticky scroll class
+   Goals:
+   - Never inject twice
+   - Never initialize twice
+   - If something else injected/duplicated (e.g., head.js), clean duplicates safely
 */
 (function () {
   "use strict";
 
+  // Global lock (prevents double boot even if script is included twice)
+  if (window.__TCFR_SITE_BOOTED__) return;
+  window.__TCFR_SITE_BOOTED__ = true;
+
   function qs(root, sel) { return root ? root.querySelector(sel) : null; }
   function qsa(root, sel) { return root ? Array.prototype.slice.call(root.querySelectorAll(sel)) : []; }
+
+  function removeAllButFirst(nodes) {
+    for (var i = 1; i < nodes.length; i++) {
+      if (nodes[i] && nodes[i].parentNode) nodes[i].parentNode.removeChild(nodes[i]);
+    }
+  }
+
+  function cleanupDuplicates() {
+    // If header was injected multiple times, keep first
+    var headers = qsa(document, "[data-tcfr-header]");
+    removeAllButFirst(headers);
+
+    // If siteHeader mount contains multiple headers (nested), keep first header
+    var mountHeader = document.getElementById("siteHeader");
+    if (mountHeader) {
+      var insideHeaders = qsa(mountHeader, "[data-tcfr-header]");
+      removeAllButFirst(insideHeaders);
+    }
+
+    // If there are multiple "main.wrap" blocks (this is the "double page" symptom)
+    var mains = qsa(document, "main.wrap");
+    removeAllButFirst(mains);
+
+    // If there are multiple footer mounts/content (future-proof)
+    var mountFooter = document.getElementById("siteFooter");
+    if (mountFooter) {
+      // If your footer include later adds a marker, this will still be safe
+      // For now just prevent duplicate direct children that look like a full footer wrapper
+      // (Nothing destructive if empty)
+    }
+  }
 
   function setLocked(locked) {
     document.documentElement.classList.toggle("tcfr-navOpen", locked);
@@ -82,52 +117,52 @@
     });
   }
 
-  async function injectOnce(mountId, url, markerAttr) {
+  async function injectMount(mountId, url) {
     var mount = document.getElementById(mountId);
     if (!mount) return;
 
-    // Prevent double injection
-    if (mount.getAttribute(markerAttr) === "1") return;
-    mount.setAttribute(markerAttr, "1");
+    // If something already injected, do not inject again.
+    // We treat any non-whitespace content as "already injected".
+    var already = (mount.innerHTML || "").replace(/\s+/g, "");
+    if (already.length > 0) return;
 
     var res = await fetch(url, { cache: "no-store" });
     var html = await res.text();
 
-    // Clear then inject
+    // Replace (not append)
     mount.innerHTML = html;
   }
 
   async function boot() {
-    // If your page has mounts, inject includes
-    var hasHeaderMount = !!document.getElementById("siteHeader");
-    var hasFooterMount = !!document.getElementById("siteFooter");
+    // First: clean up any duplicates that might already exist
+    cleanupDuplicates();
 
-    if (hasHeaderMount) {
-      try { await injectOnce("siteHeader", "/assets/includes/header.html", "data-tcfr-injected"); }
-      catch (e) {}
-    }
-    if (hasFooterMount) {
-      try { await injectOnce("siteFooter", "/assets/includes/footer.html", "data-tcfr-injected"); }
-      catch (e) {}
-    }
+    // Inject only if mounts are empty
+    try { await injectMount("siteHeader", "/assets/includes/header.html"); } catch (e) {}
+    try { await injectMount("siteFooter", "/assets/includes/footer.html"); } catch (e) {}
 
-    // Init header after injection or if already present
+    // Clean again (in case another script injected at the same time)
+    cleanupDuplicates();
+
+    // Init header
     var header = qs(document, "[data-tcfr-header]");
     if (header) initHeader(header);
 
-    // Observe in case header arrives later
+    // Observe: if some other injector runs later, we still clean and init once
     var mount = document.getElementById("siteHeader");
     if (mount) {
       var mo = new MutationObserver(function () {
+        cleanupDuplicates();
         var h = qs(document, "[data-tcfr-header]");
-        if (h) {
-          initHeader(h);
-          mo.disconnect();
-        }
+        if (h) initHeader(h);
       });
       mo.observe(mount, { childList: true, subtree: true });
     }
   }
 
-  boot();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();
