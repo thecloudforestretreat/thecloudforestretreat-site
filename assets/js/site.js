@@ -1,64 +1,84 @@
-/* /assets/js/site.js (TCFR)
-   Goals:
-   - Never inject twice
-   - Never initialize twice
-   - If something else injected/duplicated (e.g., head.js), clean duplicates safely
+/* /assets/js/site.js
+   The Cloud Forest Retreat
+   - Injects /assets/includes/header.html into #siteHeader
+   - Injects /assets/includes/footer.html into #siteFooter (optional)
+   - Initializes mobile hamburger + accordions
+   - Sticky scrolled state
+   - GA4 loader: G-D3W4SP5MGX
 */
 (function () {
   "use strict";
 
-  // Global lock (prevents double boot even if script is included twice)
-  if (window.__TCFR_SITE_BOOTED__) return;
-  window.__TCFR_SITE_BOOTED__ = true;
+  var GA_ID = "G-D3W4SP5MGX";
 
-  function qs(root, sel) { return root ? root.querySelector(sel) : null; }
-  function qsa(root, sel) { return root ? Array.prototype.slice.call(root.querySelectorAll(sel)) : []; }
+  function initGA4() {
+    if (window.__TCFR_GA4_LOADED__) return;
+    window.__TCFR_GA4_LOADED__ = true;
 
-  function removeAllButFirst(nodes) {
-    for (var i = 1; i < nodes.length; i++) {
-      if (nodes[i] && nodes[i].parentNode) nodes[i].parentNode.removeChild(nodes[i]);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag =
+      window.gtag ||
+      function () {
+        window.dataLayer.push(arguments);
+      };
+
+    var hasGtag = document.querySelector(
+      'script[src^="https://www.googletagmanager.com/gtag/js?id="]'
+    );
+    if (!hasGtag) {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src =
+        "https://www.googletagmanager.com/gtag/js?id=" +
+        encodeURIComponent(GA_ID);
+      document.head.appendChild(s);
+    }
+
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID, {
+      anonymize_ip: true,
+      send_page_view: true
+    });
+  }
+
+  function qs(root, sel) {
+    return root ? root.querySelector(sel) : null;
+  }
+  function qsa(root, sel) {
+    return root ? Array.prototype.slice.call(root.querySelectorAll(sel)) : [];
+  }
+
+  async function inject(mountId, url) {
+    var el = document.getElementById(mountId);
+    if (!el) return null;
+
+    try {
+      var res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) return null;
+      el.innerHTML = await res.text();
+      return el;
+    } catch (e) {
+      return null;
     }
   }
 
-  function cleanupDuplicates() {
-    // If header was injected multiple times, keep first
-    var headers = qsa(document, "[data-tcfr-header]");
-    removeAllButFirst(headers);
+  function initHeader(headerRoot) {
+    if (!headerRoot || headerRoot.__tcfrInit) return;
+    headerRoot.__tcfrInit = true;
 
-    // If siteHeader mount contains multiple headers (nested), keep first header
-    var mountHeader = document.getElementById("siteHeader");
-    if (mountHeader) {
-      var insideHeaders = qsa(mountHeader, "[data-tcfr-header]");
-      removeAllButFirst(insideHeaders);
-    }
-
-    // If there are multiple "main.wrap" blocks (this is the "double page" symptom)
-    var mains = qsa(document, "main.wrap");
-    removeAllButFirst(mains);
-
-    // If there are multiple footer mounts/content (future-proof)
-    var mountFooter = document.getElementById("siteFooter");
-    if (mountFooter) {
-      // If your footer include later adds a marker, this will still be safe
-      // For now just prevent duplicate direct children that look like a full footer wrapper
-      // (Nothing destructive if empty)
-    }
-  }
-
-  function setLocked(locked) {
-    document.documentElement.classList.toggle("tcfr-navOpen", locked);
-    document.body.style.overflow = locked ? "hidden" : "";
-    document.body.style.touchAction = locked ? "none" : "";
-  }
-
-  function initHeader(header) {
-    if (!header || header.__tcfrInit) return;
-    header.__tcfrInit = true;
+    var header = qs(headerRoot, ".tcfr-header") || qs(headerRoot, "header");
+    if (!header) header = headerRoot;
 
     var burger = qs(header, ".tcfr-burger");
     var closeBtn = qs(header, ".tcfr-close");
     var panel = qs(header, ".tcfr-mobilePanel");
     var overlay = qs(header, ".tcfr-mobileOverlay");
+
+    function setLocked(locked) {
+      document.documentElement.classList.toggle("tcfr-navOpen", locked);
+      document.body.style.overflow = locked ? "hidden" : "";
+      document.body.style.touchAction = locked ? "none" : "";
+    }
 
     function openMenu() {
       if (!panel || !overlay || !burger) return;
@@ -74,6 +94,14 @@
       overlay.hidden = true;
       burger.setAttribute("aria-expanded", "false");
       setLocked(false);
+
+      // Also collapse all accordions when closing
+      qsa(header, ".tcfr-mGroup").forEach(function (btn) {
+        var id = btn.getAttribute("aria-controls");
+        var sub = id ? document.getElementById(id) : null;
+        btn.setAttribute("aria-expanded", "false");
+        if (sub) sub.hidden = true;
+      });
     }
 
     if (burger) burger.addEventListener("click", openMenu);
@@ -112,52 +140,20 @@
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
+    // If switching to desktop, force-close mobile
     window.addEventListener("resize", function () {
       if (window.innerWidth >= 901) closeMenu();
     });
   }
 
-  async function injectMount(mountId, url) {
-    var mount = document.getElementById(mountId);
-    if (!mount) return;
-
-    // If something already injected, do not inject again.
-    // We treat any non-whitespace content as "already injected".
-    var already = (mount.innerHTML || "").replace(/\s+/g, "");
-    if (already.length > 0) return;
-
-    var res = await fetch(url, { cache: "no-store" });
-    var html = await res.text();
-
-    // Replace (not append)
-    mount.innerHTML = html;
-  }
-
   async function boot() {
-    // First: clean up any duplicates that might already exist
-    cleanupDuplicates();
+    initGA4();
 
-    // Inject only if mounts are empty
-    try { await injectMount("siteHeader", "/assets/includes/header.html"); } catch (e) {}
-    try { await injectMount("siteFooter", "/assets/includes/footer.html"); } catch (e) {}
+    var headerMount = await inject("siteHeader", "/assets/includes/header.html");
+    await inject("siteFooter", "/assets/includes/footer.html");
 
-    // Clean again (in case another script injected at the same time)
-    cleanupDuplicates();
-
-    // Init header
-    var header = qs(document, "[data-tcfr-header]");
-    if (header) initHeader(header);
-
-    // Observe: if some other injector runs later, we still clean and init once
-    var mount = document.getElementById("siteHeader");
-    if (mount) {
-      var mo = new MutationObserver(function () {
-        cleanupDuplicates();
-        var h = qs(document, "[data-tcfr-header]");
-        if (h) initHeader(h);
-      });
-      mo.observe(mount, { childList: true, subtree: true });
-    }
+    // Init header behaviors from injected DOM
+    if (headerMount) initHeader(headerMount);
   }
 
   if (document.readyState === "loading") {
