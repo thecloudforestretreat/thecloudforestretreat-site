@@ -23,7 +23,6 @@
           Rooms <span class="tcfr-caret" aria-hidden="true">▾</span>
         </button>
         <div class="tcfr-ddMenu" role="menu" aria-label="Rooms submenu">
-          <!-- Update links later -->
           <a role="menuitem" class="tcfr-ddItem" href="/rooms/">All Rooms</a>
           <a role="menuitem" class="tcfr-ddItem" href="/rooms/suites/">Suites</a>
           <a role="menuitem" class="tcfr-ddItem" href="/rooms/family/">Family Rooms</a>
@@ -35,7 +34,6 @@
           Features <span class="tcfr-caret" aria-hidden="true">▾</span>
         </button>
         <div class="tcfr-ddMenu" role="menu" aria-label="Features submenu">
-          <!-- Update links later -->
           <a role="menuitem" class="tcfr-ddItem" href="/features/">Overview</a>
           <a role="menuitem" class="tcfr-ddItem" href="/features/activities/">Activities</a>
           <a role="menuitem" class="tcfr-ddItem" href="/features/dining/">Dining</a>
@@ -49,7 +47,6 @@
           About <span class="tcfr-caret" aria-hidden="true">▾</span>
         </button>
         <div class="tcfr-ddMenu" role="menu" aria-label="About submenu">
-          <!-- Update links later -->
           <a role="menuitem" class="tcfr-ddItem" href="/about/">Our Story</a>
           <a role="menuitem" class="tcfr-ddItem" href="/about/location/">Location</a>
           <a role="menuitem" class="tcfr-ddItem" href="/about/policies/">Policies</a>
@@ -64,11 +61,7 @@
       <!-- Language toggle (ES visible but not live) -->
       <div class="tcfr-lang" aria-label="Language">
         <a class="tcfr-langBtn is-active" href="#" aria-current="page">EN</a>
-        <span
-          class="tcfr-langBtn is-disabled"
-          aria-disabled="true"
-          title="Spanish coming soon"
-        >ES</span>
+        <span class="tcfr-langBtn is-disabled" aria-disabled="true" title="Spanish coming soon">ES</span>
       </div>
 
       <a class="tcfr-cta" href="/booking/">Book Your Stay</a>
@@ -82,7 +75,7 @@
     </div>
   </div>
 
-  <!-- Mobile panel -->
+  <!-- Mobile overlay + panel -->
   <div class="tcfr-mobileOverlay" hidden></div>
 
   <aside class="tcfr-mobilePanel" id="tcfrMobilePanel" hidden aria-label="Mobile menu">
@@ -183,6 +176,16 @@
 
       function closeMenu(){
         if (!panel || !overlay || !burger) return;
+
+        // Close all accordions
+        var groups = header.querySelectorAll(".tcfr-mGroup");
+        Array.prototype.forEach.call(groups, function(btn){
+          btn.setAttribute("aria-expanded", "false");
+          var id = btn.getAttribute("aria-controls");
+          var sub = id ? document.getElementById(id) : null;
+          if (sub) sub.hidden = true;
+        });
+
         panel.hidden = true;
         overlay.hidden = true;
         burger.setAttribute("aria-expanded", "false");
@@ -211,11 +214,12 @@
         });
       });
 
-      // Close menu on mobile link click
+      // Close menu on mobile link click (ignore # links)
       var mobileLinks = header.querySelectorAll(".tcfr-navMobile a[href]");
       Array.prototype.forEach.call(mobileLinks, function(a){
         a.addEventListener("click", function(){
-          closeMenu();
+          var href = a.getAttribute("href") || "";
+          if (href && href !== "#") closeMenu();
         });
       });
 
