@@ -47,10 +47,10 @@
 
   <!-- Global / shared CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
-  <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/header.css?v=3" />
 
   <!-- Head-only JS -->
-  <script src="/assets/js/head.js" defer></script>
+  <script src="/assets/js/head.js?v=1" defer></script>
 
   <style>
     :root{
@@ -134,7 +134,7 @@
       display:inline-flex;
       align-items:center;
       gap: 8px;
-      font-weight: 900;
+      font-weight: 800;
       font-size: 12px;
       letter-spacing: 0.10em;
       text-transform: uppercase;
@@ -170,12 +170,13 @@
     .pill{
       display:inline-flex;
       align-items:center;
+      justify-content:center;
       padding: 9px 12px;
       border-radius: 999px;
       border: 1px solid rgba(13,89,37,.20);
       background: rgba(255,255,255,.62);
       color: var(--forest-2);
-      font-weight: 900;
+      font-weight: 800;
       font-size: 13px;
       white-space: nowrap;
     }
@@ -194,7 +195,7 @@
       justify-content:center;
       padding: 12px 14px;
       border-radius: 999px;
-      font-weight: 950;
+      font-weight: 900;
       border: 1px solid rgba(13,89,37,.18);
       box-shadow: 0 14px 30px rgba(0,0,0,.12);
       cursor: pointer;
@@ -238,7 +239,7 @@
 
     .trustTitle{
       margin: 0 0 6px;
-      font-weight: 950;
+      font-weight: 900;
       letter-spacing: -0.01em;
       font-size: 13.8px;
       color: var(--forest-2);
@@ -249,7 +250,7 @@
       color: rgba(13,89,37,.92);
       font-size: 13px;
       line-height: 1.55;
-      font-weight: 650;
+      font-weight: 600;
     }
 
     .section{
@@ -285,7 +286,7 @@
       font-size: 13.2px;
       line-height: 1.55;
       max-width: 90ch;
-      font-weight: 650;
+      font-weight: 600;
     }
 
     .grid3{
@@ -311,7 +312,7 @@
 
     .tileTitle{
       margin: 0;
-      font-weight: 950;
+      font-weight: 900;
       letter-spacing: -0.01em;
       font-size: 16px;
       color: var(--forest-2);
@@ -322,7 +323,7 @@
       color: rgba(13,89,37,.94);
       font-size: 13.5px;
       line-height: 1.65;
-      font-weight: 650;
+      font-weight: 600;
     }
 
     .tileMeta{
@@ -331,7 +332,7 @@
       justify-content:space-between;
       gap: 10px;
       color: rgba(13,89,37,.92);
-      font-weight: 900;
+      font-weight: 800;
       font-size: 12.5px;
     }
 
@@ -342,7 +343,7 @@
       border-radius: 999px;
       border: 1px solid rgba(13,89,37,.16);
       background: rgba(255,255,255,.60);
-      font-weight: 950;
+      font-weight: 900;
       font-size: 12.2px;
       color: var(--forest-2);
       white-space: nowrap;
@@ -381,7 +382,7 @@
       background: rgba(245,245,220,.90);
       border: 1px solid rgba(13,89,37,.16);
       color: var(--forest-2);
-      font-weight: 950;
+      font-weight: 900;
       letter-spacing: -0.01em;
       font-size: 13px;
       box-shadow: 0 14px 30px rgba(0,0,0,.12);
@@ -416,7 +417,7 @@
       line-height: 1.6;
       font-size: 13.8px;
       max-width: 80ch;
-      font-weight: 650;
+      font-weight: 600;
     }
 
     .bandActions{
@@ -426,11 +427,34 @@
       align-items:center;
     }
 
+    /* MOBILE: pills and CTA layout cleanup */
     @media (max-width: 900px){
       .wrap{ padding: 10px 14px 54px; }
+
       .hero{ grid-template-columns: 1fr; gap: 12px; }
       .heroMedia{ min-height: 290px; }
       .heroCopy{ min-height: 0; }
+
+      .pillRow{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .pill{ width: 100%; }
+      .pillRow .pill:nth-child(4){
+        grid-column: 1 / -1;
+      }
+
+      .heroCtas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .heroCtas .btn{ width: 100%; }
+      .heroCtas .btn.ghost{
+        grid-column: 1 / -1;
+      }
+
       .trustRow{ grid-template-columns: 1fr; }
       .grid3{ grid-template-columns: 1fr; }
       .photoStrip{ grid-template-columns: 1fr; }
@@ -598,7 +622,7 @@
 
   <div id="siteFooter"></div>
 
-  <!-- TCFR site behavior -->
-  <script src="/assets/js/site.js?v=2" defer></script>
+  <!-- TCFR global behavior: inject header/footer, GA, nav -->
+  <script src="/assets/js/site.js?v=3"></script>
 </body>
 </html>
