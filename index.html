@@ -1,15 +1,3 @@
-<!-- /index.html (EN Home) - The Cloud Forest Retreat
-     Drop-in file. Includes:
-     - Canonical + hreflang (PRODUCTION URLs)
-     - Open Graph (PRODUCTION URLs)
-     - Twitter (PRODUCTION URLs)
-     - Favicons (approved root paths)
-     - Global / shared CSS
-     - Head-only JS
-     - Global header/footer injection + mounts
-     - Ensures header JS loads AFTER injection (fixes mobile hamburger stuck open)
-     - Adds sticky + semi-transparent beige-on-scroll behavior (scoped to #siteHeader)
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,27 +53,18 @@
   <script src="/assets/js/head.js" defer></script>
 
   <style>
-    /* =========================
-       Page-only styles (main content only)
-       ========================= */
     :root{
       --bg: #A1BFAA;
-      --ink: #E7E4D1;
-
       --forest: #0D5925;
       --forest-2: #0B2B12;
-
       --beige: #F5F5DC;
       --orange: #E0643A;
-
       --line: rgba(13,89,37,.18);
       --card: rgba(245,245,220,.55);
       --card2: rgba(245,245,220,.72);
-
       --shadow: 0 18px 55px rgba(0,0,0,.14);
       --r: 22px;
       --max: 1180px;
-
       --font-head: "Playfair Display", serif;
       --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
@@ -94,7 +73,7 @@
     body{
       margin:0;
       background: var(--bg);
-      color: var(--ink);
+      color: var(--forest-2);
       font-family: var(--font-body);
     }
 
@@ -107,58 +86,6 @@
       padding: 18px 16px 64px;
     }
 
-    /* =========================
-       Header fixes (scoped to #siteHeader only)
-       - Sticky
-       - Better contrast for nav links
-       - Semi-transparent beige on scroll
-       - Prevent lang overlap by giving it space
-       ========================= */
-    #siteHeader .topbar,
-    #siteHeader header{
-      position: sticky;
-      top: 0;
-      z-index: 5000;
-    }
-
-    /* Default (not scrolled) */
-    #siteHeader .topbar,
-    #siteHeader header{
-      background: rgba(161,191,170,0.92);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    /* On scroll */
-    #siteHeader .topbar.is-scrolled,
-    #siteHeader header.is-scrolled{
-      background: rgba(245,245,220,0.78);
-      border-bottom: 1px solid rgba(13,89,37,.18);
-    }
-
-    /* Make desktop nav links readable (green, not white) */
-    #siteHeader a,
-    #siteHeader .nav-link{
-      color: var(--forest) !important;
-    }
-
-    /* Ensure CTA stays readable */
-    #siteHeader .cta,
-    #siteHeader .btn.primary{
-      color: #fff !important;
-    }
-
-    /* Add a little spacing so lang toggle does not collide */
-    @media (min-width: 901px){
-      #siteHeader .lang,
-      #siteHeader .langDesktop{
-        margin-left: 10px !important;
-      }
-    }
-
-    /* =========================
-       HERO
-       ========================= */
     .hero{
       display: grid;
       grid-template-columns: 1.12fr 0.88fr;
@@ -196,7 +123,6 @@
       box-shadow: var(--shadow);
       border: 1px solid rgba(13,89,37,.18);
       background: var(--card2);
-      color: var(--forest-2);
       padding: 18px;
       display:flex;
       flex-direction: column;
@@ -244,7 +170,6 @@
     .pill{
       display:inline-flex;
       align-items:center;
-      gap: 8px;
       padding: 9px 12px;
       border-radius: 999px;
       border: 1px solid rgba(13,89,37,.20);
@@ -267,7 +192,6 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap: 8px;
       padding: 12px 14px;
       border-radius: 999px;
       font-weight: 950;
@@ -308,7 +232,6 @@
       background: rgba(255,255,255,.60);
       border: 1px solid rgba(13,89,37,.16);
       padding: 12px;
-      color: var(--forest-2);
       box-shadow: 0 14px 30px rgba(0,0,0,.10);
       min-width: 0;
     }
@@ -329,16 +252,12 @@
       font-weight: 650;
     }
 
-    /* =========================
-       SECTION CARDS
-       ========================= */
     .section{
       margin-top: 18px;
       border-radius: var(--r);
       box-shadow: var(--shadow);
       border: 1px solid rgba(13,89,37,.18);
       background: var(--card);
-      color: var(--forest-2);
       padding: 18px;
     }
 
@@ -419,7 +338,6 @@
     .badge{
       display:inline-flex;
       align-items:center;
-      gap: 8px;
       padding: 8px 10px;
       border-radius: 999px;
       border: 1px solid rgba(13,89,37,.16);
@@ -430,9 +348,6 @@
       white-space: nowrap;
     }
 
-    /* =========================
-       PHOTO STRIP
-       ========================= */
     .photoStrip{
       margin-top: 12px;
       display:grid;
@@ -472,9 +387,6 @@
       box-shadow: 0 14px 30px rgba(0,0,0,.12);
     }
 
-    /* =========================
-       BOOKING BAND
-       ========================= */
     .band{
       margin-top: 18px;
       border-radius: var(--r);
@@ -482,7 +394,6 @@
       box-shadow: var(--shadow);
       background: rgba(245,245,220,.76);
       padding: 16px;
-      color: var(--forest-2);
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -515,20 +426,11 @@
       align-items:center;
     }
 
-    /* =========================
-       MOBILE: image first, copy below
-       ========================= */
     @media (max-width: 900px){
       .wrap{ padding: 10px 14px 54px; }
-
-      .hero{
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
+      .hero{ grid-template-columns: 1fr; gap: 12px; }
       .heroMedia{ min-height: 290px; }
       .heroCopy{ min-height: 0; }
-
       .trustRow{ grid-template-columns: 1fr; }
       .grid3{ grid-template-columns: 1fr; }
       .photoStrip{ grid-template-columns: 1fr; }
@@ -543,23 +445,20 @@
 </head>
 
 <body>
-  <!-- Global header mount -->
   <div id="siteHeader"></div>
 
   <main class="wrap" aria-label="The Cloud Forest Retreat home">
-    <!-- HERO -->
     <section class="hero" aria-label="Hero">
-      <!-- Image (mobile sees first) -->
       <div class="heroMedia" aria-label="Mountain retreat view">
         <img src="/assets/images/pages/home/tcfr-hero.jpg" alt="The Cloud Forest Retreat in the mountains of Ecuador" loading="eager" decoding="async" />
         <div class="heroOverlay" aria-hidden="true"></div>
       </div>
 
-      <!-- Copy -->
       <div class="heroCopy" aria-label="Welcome message">
         <div>
           <div class="kicker">Eco-luxury mountain retreat</div>
           <h1 class="h1">Welcome to The Cloud Forest Retreat</h1>
+
           <p class="sub">
             Wake up above the valley with breathtaking views, fresh mountain air, and calm mornings.
             A scenic bed and breakfast designed for slow travel, nature, and comfort in Ecuador’s cloud forest.
@@ -592,7 +491,6 @@
       </div>
     </section>
 
-    <!-- EXPERIENCES -->
     <section class="section" aria-label="Experiences">
       <div class="sectionHead">
         <h2 class="h2">Experience the cloud forest</h2>
@@ -650,7 +548,6 @@
       </div>
     </section>
 
-    <!-- ROOMS -->
     <section class="section" aria-label="Rooms">
       <div class="sectionHead">
         <h2 class="h2">Rooms designed for rest</h2>
@@ -684,7 +581,6 @@
       </div>
     </section>
 
-    <!-- BOOKING BAND -->
     <section class="band" aria-label="Booking call to action">
       <div>
         <p class="bandTitle">Ready for your mountain stay?</p>
@@ -700,60 +596,9 @@
     </section>
   </main>
 
-  <!-- Global footer mount (can stay empty until you build it) -->
   <div id="siteFooter"></div>
 
-  <!-- Inject header/footer, then load global nav JS AFTER injection (fixes mobile hamburger behavior) -->
-  <script>
-    (function(){
-      "use strict";
-
-      function qs(root, sel){ return root ? root.querySelector(sel) : null; }
-
-      async function inject(id, url){
-        var el = document.getElementById(id);
-        if(!el) return;
-        var res = await fetch(url, { cache: "no-store" });
-        el.innerHTML = await res.text();
-      }
-
-      function loadScript(src){
-        return new Promise(function(resolve){
-          var s = document.createElement("script");
-          s.src = src;
-          s.onload = resolve;
-          s.onerror = resolve;
-          document.body.appendChild(s);
-        });
-      }
-
-      function setupHeaderScrollClass(){
-        var mount = document.getElementById("siteHeader");
-        if (!mount) return;
-
-        var headerEl = qs(mount, ".topbar") || qs(mount, "header");
-        if (!headerEl) return;
-
-        function onScroll(){
-          var scrolled = (window.scrollY || document.documentElement.scrollTop || 0) > 8;
-          headerEl.classList.toggle("is-scrolled", scrolled);
-        }
-
-        window.addEventListener("scroll", onScroll, { passive: true });
-        onScroll();
-      }
-
-      Promise.all([
-        inject("siteHeader", "/assets/includes/header.html"),
-        inject("siteFooter", "/assets/includes/footer.html")
-      ]).then(function(){
-        setupHeaderScrollClass();
-        return loadScript("/assets/js/site.js?v=1");
-      }).catch(function(){
-        // Even if injection fails, still try to load global JS
-        return loadScript("/assets/js/site.js?v=1");
-      });
-    })();
-  </script>
+  <!-- TCFR site behavior -->
+  <script src="/assets/js/site.js?v=1" defer></script>
 </body>
 </html>
