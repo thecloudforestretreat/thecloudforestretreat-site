@@ -1,5 +1,6 @@
 /* /assets/css/header.css */
-/* The Cloud Forest Retreat - Global header (stable mobile + desktop) */
+/* The Cloud Forest Retreat - Global header (fixed + reliable on all browsers) */
+/* ASCII only */
 
 /* =====================
    Tokens
@@ -13,22 +14,42 @@
   --tcfr-line: rgba(13,89,37,.18);
   --tcfr-shadow: 0 18px 55px rgba(0,0,0,.12);
   --tcfr-radius: 18px;
+
+  /* Header height (used to offset the page when header is fixed) */
+  --tcfr-header-h: 68px;
 }
 
 /* Always respect hidden attribute */
-.tcfr-header [hidden]{ display:none !important; }
+[hidden]{ display:none !important; }
+
+/* =====================
+   Make the header reliably sticky by using fixed positioning
+   Reason: if any ancestor has overflow/transform, position:sticky will not stick.
+   Fixed avoids that entire class of bugs.
+===================== */
+#siteHeader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5000;
+}
+
+/* Push page content down so it does not sit under the fixed header */
+body{
+  padding-top: var(--tcfr-header-h);
+}
 
 /* =====================
    Header bar
 ===================== */
 .tcfr-header{
-  position: sticky;
-  top: 0;
-  z-index: 5000;
+  width: 100%;
   background: rgba(161,191,170,0.92);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: var(--tcfr-forest);
+  border-bottom: 1px solid rgba(13,89,37,.12);
 }
 
 .tcfr-header.is-scrolled{
@@ -41,6 +62,7 @@
   max-width: 1180px;
   margin: 0 auto;
   padding: 12px 16px;
+  min-height: var(--tcfr-header-h);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -71,7 +93,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 420px;
+  max-width: 520px;
   font-size: 16px;
   line-height: 1;
 }
@@ -173,6 +195,7 @@
   align-items: center;
   gap: 10px;
   margin-left: auto;
+  flex: 0 0 auto;
 }
 
 /* Language pills */
@@ -263,7 +286,7 @@
 
 /* =====================
    Mobile overlay + panel
-   Base styles live here. Visibility controlled by [hidden] + JS.
+   Visibility controlled by [hidden] in header.html + JS.
 ===================== */
 .tcfr-mobileOverlay{
   position: fixed;
