@@ -11,6 +11,12 @@
   --tcfr-font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
+/* Critical: hidden must win over any display rules */
+.tcfr-mobileOverlay[hidden],
+.tcfr-mobilePanel[hidden]{
+  display: none !important;
+}
+
 .tcfr-header{
   position: sticky;
   top: 0;
@@ -54,7 +60,7 @@
 .tcfr-brandText{
   font-weight: 900;
   letter-spacing: -0.02em;
-  white-space: nowrap;
+  white-space: nowrap;        /* keep on one line */
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline;
@@ -64,9 +70,10 @@
 }
 
 @media (min-width: 901px){
-  .tcfr-brandText{ max-width: 360px; font-size: 16px; }
+  .tcfr-brandText{ max-width: 420px; }
 }
 
+/* Desktop nav */
 .tcfr-nav{
   display: flex;
   align-items: center;
@@ -104,7 +111,7 @@
   border: 0;
   background: transparent;
   color: inherit;
-  font-weight: 800;
+  font-weight: 800;          /* match links */
   font-size: 14px;
   padding: 10px 10px;
   border-radius: 999px;
