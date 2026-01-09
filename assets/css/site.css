@@ -248,3 +248,91 @@ p{
   .page{ padding: 18px; }
   .grid2{ grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   TCFR Footer (used by /assets/includes/footer.html)
+   - Social icon row + copyright line
+   - Matches TCFR palette and looks good on mobile + desktop
+========================================================= */
+
+.tcfr-footer{
+  margin-top: 28px;
+  padding: 18px 0 26px;
+}
+
+.tcfr-footerShell{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+.tcfr-social{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 999px;
+  background: rgba(245,245,220,0.62);
+  border: 1px solid rgba(11,26,16,0.12);
+  box-shadow: 0 14px 34px rgba(13,89,37,0.10);
+}
+
+.tcfr-social a{
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(13,89,37,0.14);
+  background: rgba(255,255,255,0.45);
+  transition: transform 140ms ease, filter 140ms ease, background 140ms ease;
+}
+
+.tcfr-social a:hover{
+  text-decoration: none;
+  transform: translateY(-1px);
+  filter: brightness(0.98);
+  background: rgba(255,255,255,0.58);
+}
+
+.tcfr-social a:focus{
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+.tcfr-social img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.tcfr-footerCopy{
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(11,26,16,0.72);
+  font-weight: 700;
+}
+
+@media (max-width: 420px){
+  .tcfr-social{
+    width: calc(100% - (var(--pad) * 2));
+    border-radius: 22px;
+    padding: 12px;
+  }
+  .tcfr-social a{
+    width: 46px;
+    height: 46px;
+  }
+  .tcfr-social img{
+    width: 23px;
+    height: 23px;
+  }
+}
