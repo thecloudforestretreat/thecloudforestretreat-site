@@ -1,34 +1,30 @@
 /* /assets/css/header.css */
 :root{
   --tcfr-bg: #A1BFAA;
-  --tcfr-text: #0D5925;     /* make nav readable by default */
+  --tcfr-text: #E7E4D1;
   --tcfr-forest: #0D5925;
-  --tcfr-ink: #0B2B12;
   --tcfr-orange: #E0643A;
   --tcfr-beige: #F5F5DC;
   --tcfr-line: rgba(13,89,37,.18);
   --tcfr-shadow: 0 18px 55px rgba(0,0,0,.12);
   --tcfr-radius: 18px;
   --tcfr-font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --tcfr-head: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .tcfr-header{
   position: sticky;
   top: 0;
   z-index: 5000;
-  color: var(--tcfr-text);
-  background: rgba(161,191,170,.92);
+  background: rgba(161,191,170,0.92);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(13,89,37,.10);
+  color: var(--tcfr-forest);
 }
 
 .tcfr-header.is-scrolled{
-  background: rgba(245,245,220,.82);
+  background: rgba(245,245,220,0.82);
   box-shadow: 0 12px 34px rgba(0,0,0,.12);
   border-bottom: 1px solid rgba(13,89,37,.14);
-  color: var(--tcfr-forest);
 }
 
 .tcfr-shell{
@@ -37,9 +33,7 @@
   padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 14px;
-  flex-wrap: nowrap;
-  min-width: 0;
+  gap: 12px;
 }
 
 .tcfr-brand{
@@ -49,55 +43,48 @@
   text-decoration: none;
   color: inherit;
   min-width: 0;
-  flex: 0 0 auto;
 }
 
 .tcfr-logo{
-  height: 40px;
+  height: 34px;
   width: auto;
   display: block;
 }
 
 .tcfr-brandText{
-  font-family: var(--tcfr-head);
   font-weight: 900;
   letter-spacing: -0.02em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 280px;
-  display: none;
-  color: var(--tcfr-forest);
+  display: inline;
+  max-width: 260px;
+  font-size: 16px;
+  line-height: 1;
 }
 
-@media (min-width: 980px){
-  .tcfr-brandText{ display: inline; }
+@media (min-width: 901px){
+  .tcfr-brandText{ max-width: 360px; font-size: 16px; }
 }
 
-/* Desktop nav */
 .tcfr-nav{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   margin-left: 8px;
   flex: 1 1 auto;
   min-width: 0;
-  flex-wrap: nowrap;
-  overflow: hidden;
 }
 
-.tcfr-navDesktop{
-  display: none;
-}
-
+.tcfr-navDesktop{ display: none; }
 @media (min-width: 901px){
   .tcfr-navDesktop{ display: flex; }
 }
 
 .tcfr-link{
   text-decoration: none;
-  color: var(--tcfr-forest);
-  font-weight: 850;
+  color: inherit;
+  font-weight: 800;
   font-size: 14px;
   padding: 10px 10px;
   border-radius: 999px;
@@ -110,17 +97,14 @@
 }
 
 /* Dropdowns (desktop) */
-.tcfr-dd{
-  position: relative;
-  flex: 0 0 auto;
-}
+.tcfr-dd{ position: relative; }
 
 .tcfr-ddBtn{
   appearance: none;
   border: 0;
   background: transparent;
-  color: var(--tcfr-forest);
-  font-weight: 900;
+  color: inherit;
+  font-weight: 800;
   font-size: 14px;
   padding: 10px 10px;
   border-radius: 999px;
@@ -165,14 +149,9 @@
   font-size: 14px;
 }
 
-.tcfr-ddItem:hover{
-  background: rgba(13,89,37,.08);
-}
+.tcfr-ddItem:hover{ background: rgba(13,89,37,.08); }
 
-.tcfr-caret{
-  font-size: 12px;
-  opacity: .9;
-}
+.tcfr-caret{ font-size: 12px; opacity: .9; }
 
 /* Right-side actions */
 .tcfr-actions{
@@ -180,7 +159,6 @@
   align-items: center;
   gap: 10px;
   margin-left: auto;
-  flex: 0 0 auto;
 }
 
 /* Language pills */
@@ -202,16 +180,14 @@
   height: 30px;
   padding: 0 10px;
   border-radius: 999px;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 13px;
   text-decoration: none;
-  color: var(--tcfr-forest);
+  color: inherit;
   line-height: 1;
 }
 
-.tcfr-langBtn.is-active{
-  background: rgba(13,89,37,.10);
-}
+.tcfr-langBtn.is-active{ background: rgba(13,89,37,.10); }
 
 .tcfr-langBtn.is-disabled{
   opacity: .55;
@@ -250,7 +226,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--tcfr-forest);
 }
 
 .tcfr-burgerLines{
@@ -275,11 +250,6 @@
   z-index: 6000;
 }
 
-/* IMPORTANT: hidden must win */
-.tcfr-mobileOverlay[hidden]{
-  display: none !important;
-}
-
 .tcfr-mobilePanel{
   position: fixed;
   top: 0;
@@ -296,11 +266,6 @@
   padding: 14px;
 }
 
-/* IMPORTANT: hidden must win */
-.tcfr-mobilePanel[hidden]{
-  display: none !important;
-}
-
 .tcfr-mobileTop{
   display: flex;
   align-items: center;
@@ -310,19 +275,6 @@
   border-bottom: 1px solid rgba(13,89,37,.14);
 }
 
-.tcfr-mobileBrand{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-}
-
-.tcfr-mobileLogo{
-  height: 34px;
-  width: auto;
-  display: block;
-}
-
 .tcfr-mobileTitle{
   font-weight: 900;
   letter-spacing: -0.02em;
@@ -330,6 +282,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 260px;
 }
 
 .tcfr-close{
@@ -356,6 +309,11 @@
   padding-bottom: 16px;
 }
 
+.tcfr-mLink,
+.tcfr-mGroup{
+  font-weight: 800;
+}
+
 .tcfr-mLink{
   display: flex;
   align-items: center;
@@ -366,7 +324,6 @@
   background: rgba(255,255,255,.55);
   text-decoration: none;
   color: var(--tcfr-forest);
-  font-weight: 900;
 }
 
 .tcfr-mGroup{
@@ -376,7 +333,6 @@
   border-radius: 14px;
   padding: 12px 12px;
   text-align: left;
-  font-weight: 900;
   color: var(--tcfr-forest);
   cursor: pointer;
   display: flex;
@@ -401,9 +357,7 @@
   background: rgba(255,255,255,.45);
 }
 
-.tcfr-mSubLink:hover{
-  background: rgba(13,89,37,.06);
-}
+.tcfr-mSubLink:hover{ background: rgba(13,89,37,.06); }
 
 .tcfr-mobileDivider{
   height: 1px;
@@ -411,10 +365,7 @@
   margin: 10px 0;
 }
 
-.tcfr-mobileLang{
-  padding: 10px 8px;
-}
-
+.tcfr-mobileLang{ padding: 10px 8px; }
 .tcfr-mobileLangLabel{
   font-weight: 900;
   margin-bottom: 8px;
