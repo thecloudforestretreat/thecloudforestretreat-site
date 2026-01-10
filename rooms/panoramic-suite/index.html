@@ -6,12 +6,10 @@
   <title>Panoramic Suite | The Cloud Forest Retreat</title>
   <meta name="description" content="Wake up above the Mindo cloud forest. The Panoramic Suite features sweeping valley views, a private terrace, and an open-concept design built for peace, privacy, and nature." />
   <meta name="robots" content="index,follow" />
-  <!-- Canonical + hreflang (PRODUCTION URLs) -->
   <link rel="canonical" href="https://thecloudforestretreat.com/rooms/panoramic-suite/" />
   <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/panoramic-suite/" />
   <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/suite-panoramica/" />
   <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/panoramic-suite/" />
-  <!-- Open Graph (PRODUCTION URLs) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
   <meta property="og:title" content="Panoramic Suite | The Cloud Forest Retreat" />
@@ -23,28 +21,22 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="The Cloud Forest Retreat Panoramic Suite" />
-  <!-- Twitter (PRODUCTION URLs) -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Panoramic Suite | The Cloud Forest Retreat" />
   <meta name="twitter:description" content="Wake up above the Mindo cloud forest. Sweeping views, private terrace, and open-concept comfort." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <!-- Favicons (approved root paths) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0D5925" />
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <!-- Global / shared CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
-  <!-- Head-only JS -->
   <script src="/assets/js/head.js" defer></script>
   <style>
-    /* Page-only styles (main content only). Do not restyle header/footer here. */
     :root{
       --room-max: 1180px;
       --room-r: 24px;
@@ -291,11 +283,6 @@
       max-width: 90ch;
     }
 
-    /* =========================
-       Carousel (tight, premium, no extra padding)
-       - Uses translateX, not scroll, for consistent mobile/desktop feel
-       - Adds 2.8s autoplay + left/right overlay buttons
-       ========================= */
     .roomCarousel{
       background: var(--room-surface-2);
       border: 1px solid var(--room-line);
@@ -349,7 +336,6 @@
       letter-spacing: -0.01em;
     }
 
-    /* Overlay nav buttons (left/right) */
     .roomCarArrow{
       position: absolute;
       top: 50%;
@@ -385,7 +371,6 @@
     .roomCarArrow.prev{ left: 10px; }
     .roomCarArrow.next{ right: 10px; }
 
-    /* Bottom controls (dots) */
     .roomCarouselNav{
       display: flex;
       align-items: center;
@@ -423,7 +408,10 @@
 
     /* =========================
        Vertical video (YouTube Short embed)
-       FIX: remove extra padding and "cover" the iframe to reduce black bars
+       Desktop FIX:
+       - Remove the "two-tone" look by making BOTH columns share the same surface
+       - Add a subtle divider instead of a color block
+       - Keep mobile exactly as-is (your screenshot 1)
        ========================= */
     .roomVideoCard{
       background: var(--room-surface-2);
@@ -439,19 +427,21 @@
       gap: 0;
       align-items: stretch;
       min-height: 520px;
+      background: var(--room-surface-2);
     }
 
     .roomVideoMedia{
-      background: rgba(0,0,0,0.08);
+      background: transparent;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0;
+      padding: 18px;
+      border-right: 1px solid rgba(11,26,16,0.10);
     }
 
     .roomYt{
       width: 100%;
-      max-width: 420px;
+      max-width: 460px;
       aspect-ratio: 9 / 16;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.18);
@@ -461,7 +451,6 @@
       position: relative;
     }
 
-    /* "Cover" technique: zoom iframe so the 9:16 frame is filled */
     .roomYt iframe{
       position: absolute;
       inset: 0;
@@ -480,6 +469,7 @@
       gap: 12px;
       color: var(--room-ink);
       min-width: 0;
+      background: transparent;
     }
 
     .roomQuote{
@@ -494,7 +484,6 @@
       line-height: 1.7;
     }
 
-    /* Who it's for */
     .roomTwoCol{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -512,7 +501,6 @@
 
     .roomList li{ margin: 6px 0; }
 
-    /* Final CTA band */
     .roomBand{
       margin-top: 16px;
       border-radius: var(--room-r);
@@ -553,7 +541,6 @@
       align-items: center;
     }
 
-    /* Mobile */
     @media (max-width: 900px){
       .roomWrap{ padding: 10px 14px 58px; }
 
@@ -568,7 +555,6 @@
       }
 
       .roomFeatureGrid{ grid-template-columns: 1fr; }
-
       .roomSlide{ aspect-ratio: 4 / 3; }
 
       .roomCarArrow{
@@ -593,6 +579,7 @@
 
       .roomVideoMedia{
         padding: 0;
+        border-right: 0;
       }
 
       .roomYt{
@@ -606,13 +593,11 @@
 <body>
   <div id="siteHeader"></div>
   <main class="roomWrap" aria-label="Panoramic Suite page">
-    <!-- HERO -->
     <section class="roomHero" aria-label="Panoramic Suite hero">
       <div class="roomHeroMedia" aria-label="Panoramic Suite view media">
         <img src="/assets/images/pages/rooms/tcfr_rooms_ps_hero_01.jpg" alt="Panoramic Suite with sweeping cloud forest views" loading="eager" decoding="async" />
       </div>
-  <div class="roomHeroOverlay" aria-hidden="true"></div>
-
+      <div class="roomHeroOverlay" aria-hidden="true"></div>
   <div class="roomHeroInner">
     <div class="roomKicker">Open concept suite</div>
 
@@ -636,7 +621,6 @@
   </div>
 </section>
 
-<!-- TOP GRID: STORY + FEATURES -->
 <section class="roomGridTop" aria-label="Suite story and highlights">
   <article class="roomCard" aria-label="Suite story">
     <h2 class="roomH2">A front-row seat to the Mindo cloud forest</h2>
@@ -697,7 +681,6 @@
   </aside>
 </section>
 
-<!-- GALLERY / CAROUSEL -->
 <section class="roomSection" aria-label="Photo gallery">
   <div class="roomSectionHead">
     <h2 class="roomH2">Photo gallery</h2>
@@ -743,7 +726,6 @@
   </div>
 </section>
 
-<!-- VERTICAL VIDEO MOMENT -->
 <section class="roomSection" aria-label="Suite video moment">
   <div class="roomSectionHead">
     <h2 class="roomH2">Morning in the Panoramic Suite</h2>
@@ -783,7 +765,6 @@
   </div>
 </section>
 
-<!-- WHO ITS FOR -->
 <section class="roomSection" aria-label="Who this suite is for">
   <div class="roomSectionHead">
     <h2 class="roomH2">Who this suite is for</h2>
@@ -812,7 +793,6 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
 <section class="roomBand" aria-label="Final call to action">
   <div>
     <p class="roomBandTitle">Ready to wake up above the cloud forest?</p>
@@ -827,9 +807,7 @@
 </section>
   </main>
   <div id="siteFooter"></div>
-  <!-- TCFR global behavior: inject header/footer, GA, nav -->
   <script src="/assets/js/site.js?v=1"></script>
-  <!-- Page-only: carousel logic (autoplay + arrows + dots, mobile safe) -->
   <script>
     (function(){
       "use strict";
