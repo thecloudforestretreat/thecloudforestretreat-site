@@ -298,7 +298,11 @@
       max-width: 90ch;
     }
 
-    /* Carousel */
+    /* =========================
+       Carousel (tight, premium, no extra padding)
+       - Uses translateX, not scroll, for consistent mobile/desktop feel
+       - Adds 2.8s autoplay + left/right overlay buttons
+       ========================= */
     .roomCarousel{
       background: var(--room-surface-2);
       border: 1px solid var(--room-line);
@@ -307,20 +311,26 @@
       overflow: hidden;
     }
 
+    .roomCarouselViewport{
+      position: relative;
+      overflow: hidden;
+      background: rgba(0,0,0,0.08);
+    }
+
     .roomCarouselTrack{
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: 100%;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
+      display: flex;
+      width: 100%;
+      transform: translateX(0);
+      transition: transform 420ms ease;
+      will-change: transform;
     }
 
     .roomSlide{
-      scroll-snap-align: start;
+      flex: 0 0 100%;
       position: relative;
       aspect-ratio: 16 / 10;
-      background: rgba(0,0,0,0.10);
+      margin: 0;
+      padding: 0;
     }
 
     .roomSlide img{
@@ -332,12 +342,12 @@
 
     .roomSlideCap{
       position: absolute;
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
-      padding: 10px 12px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 9px 11px;
       border-radius: 14px;
-      background: rgba(245,245,220,0.90);
+      background: rgba(245,245,220,0.92);
       border: 1px solid rgba(13,89,37,0.16);
       color: #0b2b12;
       box-shadow: 0 14px 30px rgba(0,0,0,0.14);
@@ -346,12 +356,49 @@
       letter-spacing: -0.01em;
     }
 
+    /* Overlay nav buttons (left/right) */
+    .roomCarArrow{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 46px;
+      width: 52px;
+      border-radius: 16px;
+      border: 1px solid rgba(245,245,220,0.45);
+      background: rgba(11,26,16,0.30);
+      color: rgba(231,228,209,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+      cursor: pointer;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      line-height: 1;
+      z-index: 3;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .roomCarArrow:hover{
+      background: rgba(11,26,16,0.38);
+    }
+
+    .roomCarArrow:focus{
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(224,100,58,0.25), 0 18px 55px rgba(0,0,0,0.20);
+    }
+
+    .roomCarArrow.prev{ left: 10px; }
+    .roomCarArrow.next{ right: 10px; }
+
+    /* Bottom controls (dots) */
     .roomCarouselNav{
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       gap: 10px;
-      padding: 12px;
+      padding: 10px 12px;
       border-top: 1px solid rgba(11,26,16,0.12);
     }
 
@@ -359,38 +406,26 @@
       display: inline-flex;
       gap: 8px;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .roomDot{
+    .roomDotBtn{
+      appearance: none;
+      border: 1px solid rgba(13,89,37,0.20);
+      background: rgba(255,255,255,0.72);
       width: 10px;
       height: 10px;
       border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.20);
-      background: rgba(255,255,255,0.70);
-    }
-
-    .roomCarouselBtns{
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .roomIconBtn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 42px;
-      width: 46px;
-      border-radius: 14px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.70);
-      color: #0b2b12;
-      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
       cursor: pointer;
-      user-select: none;
-      font-weight: 900;
-      line-height: 1;
+      padding: 0;
+    }
+
+    .roomDotBtn.is-active{
+      background: rgba(224,100,58,0.95);
+      border-color: rgba(0,0,0,0.10);
+      box-shadow: 0 10px 22px rgba(224,100,58,0.18);
+      transform: scale(1.05);
     }
 
     /* Vertical video */
@@ -415,7 +450,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 14px;
+      padding: 12px;
     }
 
     .roomVideoMedia video{
@@ -468,9 +503,7 @@
       font-weight: 650;
     }
 
-    .roomList li{
-      margin: 6px 0;
-    }
+    .roomList li{ margin: 6px 0; }
 
     /* Final CTA band */
     .roomBand{
@@ -515,21 +548,11 @@
 
     /* Mobile */
     @media (max-width: 900px){
-      .roomWrap{
-        padding: 10px 14px 58px;
-      }
+      .roomWrap{ padding: 10px 14px 58px; }
 
-      .roomHero{
-        min-height: 360px;
-      }
-
-      .roomHeroInner{
-        padding: 16px;
-      }
-
-      .roomTitle{
-        max-width: none;
-      }
+      .roomHero{ min-height: 360px; }
+      .roomHeroInner{ padding: 16px; }
+      .roomTitle{ max-width: none; }
 
       .roomGridTop{
         grid-template-columns: 1fr;
@@ -537,12 +560,23 @@
         margin-top: 12px;
       }
 
-      .roomFeatureGrid{
-        grid-template-columns: 1fr;
-      }
+      .roomFeatureGrid{ grid-template-columns: 1fr; }
 
-      .roomSlide{
-        aspect-ratio: 4 / 3;
+      .roomSlide{ aspect-ratio: 4 / 3; }
+
+      .roomCarArrow{
+        height: 44px;
+        width: 48px;
+        border-radius: 16px;
+      }
+      .roomCarArrow.prev{ left: 8px; }
+      .roomCarArrow.next{ right: 8px; }
+
+      .roomSlideCap{
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        font-size: 12.8px;
       }
 
       .roomVideoFrame{
@@ -550,18 +584,14 @@
         min-height: 0;
       }
 
-      .roomVideoMedia{
-        padding: 14px 14px 0;
-      }
+      .roomVideoMedia{ padding: 12px 12px 0; }
 
       .roomVideoMedia video{
         max-height: 520px;
         width: 100%;
       }
 
-      .roomTwoCol{
-        grid-template-columns: 1fr;
-      }
+      .roomTwoCol{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -571,15 +601,8 @@
     <!-- HERO -->
     <section class="roomHero" aria-label="Panoramic Suite hero">
       <div class="roomHeroMedia" aria-label="Panoramic Suite view media">
-        <!-- Option A: Hero image (recommended first) -->
         <img src="/assets/images/pages/rooms/tcfr_rooms_ps_hero_01.jpg" alt="Panoramic Suite with sweeping cloud forest views" loading="eager" decoding="async" />
-    <!-- Option B: Hero video (if you prefer). If you use video, remove the img above.
-    <video autoplay muted loop playsinline preload="metadata" poster="/assets/images/pages/rooms/panoramic-suite/hero.jpg">
-      <source src="/assets/videos/pages/rooms/panoramic-suite/hero.mp4" type="video/mp4" />
-    </video>
-    -->
-  </div>
-
+      </div>
   <div class="roomHeroOverlay" aria-hidden="true"></div>
 
   <div class="roomHeroInner">
@@ -670,46 +693,44 @@
 <section class="roomSection" aria-label="Photo gallery">
   <div class="roomSectionHead">
     <h2 class="roomH2">Photo gallery</h2>
-    <p class="roomHint">A few moments from the suite. Replace placeholders with your best 5 to 7 photos.</p>
+    <p class="roomHint">Autoplays every ~3 seconds. Use arrows or dots to jump.</p>
   </div>
 
   <div class="roomCarousel" aria-label="Panoramic Suite carousel">
-    <div class="roomCarouselTrack" id="psCarousel" aria-label="Carousel track">
-      <figure class="roomSlide" aria-label="Gallery image 1">
-        <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_01.jpg" alt="Panoramic Suite interior with valley view" loading="lazy" decoding="async" />
-        <figcaption class="roomSlideCap">Floor-to-ceiling views</figcaption>
-      </figure>
+    <div class="roomCarouselViewport" id="psCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
+      <button class="roomCarArrow prev" type="button" data-action="prev" aria-label="Previous photo">‹</button>
+      <button class="roomCarArrow next" type="button" data-action="next" aria-label="Next photo">›</button>
 
-      <figure class="roomSlide" aria-label="Gallery image 2">
-        <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_02.jpg" alt="Private terrace breakfast view" loading="lazy" decoding="async" />
-        <figcaption class="roomSlideCap">Private terrace mornings</figcaption>
-      </figure>
+      <div class="roomCarouselTrack" data-track>
+        <figure class="roomSlide" aria-label="Gallery image 1">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_01.jpg" alt="Panoramic Suite interior with valley view" loading="lazy" decoding="async" />
+          <figcaption class="roomSlideCap">Floor-to-ceiling views</figcaption>
+        </figure>
 
-      <figure class="roomSlide" aria-label="Gallery image 3">
-        <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_03.jpg" alt="Open concept suite details" loading="lazy" decoding="async" />
-        <figcaption class="roomSlideCap">Open concept calm</figcaption>
-      </figure>
+        <figure class="roomSlide" aria-label="Gallery image 2">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_02.jpg" alt="Private terrace breakfast view" loading="lazy" decoding="async" />
+          <figcaption class="roomSlideCap">Private terrace mornings</figcaption>
+        </figure>
 
-      <figure class="roomSlide" aria-label="Gallery image 4">
-        <img src="/assets/images/pages/rooms/tcfr_rooms_ps_hero_01.jpg" alt="Sunrise over the cloud forest valley" loading="lazy" decoding="async" />
-        <figcaption class="roomSlideCap">Golden sunrise light</figcaption>
-      </figure>
+        <figure class="roomSlide" aria-label="Gallery image 3">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_03.jpg" alt="Open concept suite details" loading="lazy" decoding="async" />
+          <figcaption class="roomSlideCap">Open concept calm</figcaption>
+        </figure>
 
-      <figure class="roomSlide" aria-label="Gallery image 5">
-        <img src="/assets/images/pages/rooms/tcfr_rooms_ps_hero_01.jpg" alt="Suite view into the Mindo cloud forest" loading="lazy" decoding="async" />
-        <figcaption class="roomSlideCap">Cloud forest immersion</figcaption>
-      </figure>
+        <figure class="roomSlide" aria-label="Gallery image 4">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_ps_hero_01.jpg" alt="Sunrise over the cloud forest valley" loading="lazy" decoding="async" />
+          <figcaption class="roomSlideCap">Golden sunrise light</figcaption>
+        </figure>
+
+        <figure class="roomSlide" aria-label="Gallery image 5">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_ps_hero_01.jpg" alt="Suite view into the Mindo cloud forest" loading="lazy" decoding="async" />
+          <figcaption class="roomSlideCap">Cloud forest immersion</figcaption>
+        </figure>
+      </div>
     </div>
 
-    <div class="roomCarouselNav" aria-label="Carousel controls">
-      <div class="roomCarouselDots" aria-hidden="true">
-        <span class="roomDot"></span><span class="roomDot"></span><span class="roomDot"></span><span class="roomDot"></span><span class="roomDot"></span>
-      </div>
-
-      <div class="roomCarouselBtns">
-        <button class="roomIconBtn" type="button" data-dir="-1" aria-label="Previous photo">‹</button>
-        <button class="roomIconBtn" type="button" data-dir="1" aria-label="Next photo">›</button>
-      </div>
+    <div class="roomCarouselNav" aria-label="Carousel dots">
+      <div class="roomCarouselDots" data-dots aria-label="Choose a photo"></div>
     </div>
   </div>
 </section>
@@ -790,32 +811,188 @@
     <a class="btn secondary" href="/contact/">Contact</a>
   </div>
 </section>
-      </main>
+  </main>
   <div id="siteFooter"></div>
   <!-- TCFR global behavior: inject header/footer, GA, nav -->
   <script src="/assets/js/site.js?v=1"></script>
-  <!-- Page-only: simple carousel buttons -->
+  <!-- Page-only: carousel logic (autoplay + arrows + dots, mobile safe) -->
   <script>
     (function(){
       "use strict";
 
-      var track = document.getElementById("psCarousel");
+      var root = document.getElementById("psCarousel");
+      if (!root) return;
+
+      var track = root.querySelector("[data-track]");
+      var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
+
       if (!track) return;
 
-      function scrollBySlide(dir){
-        var w = track.getBoundingClientRect().width || 0;
-        if (!w) return;
-        track.scrollBy({ left: dir * w, behavior: "smooth" });
+      var slides = track.children ? Array.prototype.slice.call(track.children) : [];
+      if (!slides.length) return;
+
+      var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2800");
+      var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
+
+      var index = 0;
+      var timer = null;
+      var resumeTimer = null;
+      var isPaused = false;
+
+      function clamp(n, min, max){
+        return Math.max(min, Math.min(max, n));
       }
 
-      var btns = document.querySelectorAll('.roomIconBtn[data-dir]');
-      for (var i = 0; i < btns.length; i++){
-        btns[i].addEventListener("click", function(){
-          var d = Number(this.getAttribute("data-dir") || "0");
-          if (!d) return;
-          scrollBySlide(d);
-        });
+      function setTransform(){
+        track.style.transform = "translateX(" + (-index * 100) + "%)";
       }
+
+      function setActiveDot(){
+        if (!dotsWrap) return;
+        var btns = dotsWrap.querySelectorAll("button[data-dot]");
+        for (var i = 0; i < btns.length; i++){
+          btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
+        }
+      }
+
+      function goTo(i){
+        index = clamp(i, 0, slides.length - 1);
+        setTransform();
+        setActiveDot();
+      }
+
+      function next(){
+        var n = index + 1;
+        if (n >= slides.length) n = 0;
+        goTo(n);
+      }
+
+      function prev(){
+        var p = index - 1;
+        if (p < 0) p = slides.length - 1;
+        goTo(p);
+      }
+
+      function clearTimers(){
+        if (timer) { clearInterval(timer); timer = null; }
+        if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+      }
+
+      function startAutoplay(){
+        clearTimers();
+        if (autoplayMs < 1200) autoplayMs = 1200;
+        timer = setInterval(function(){
+          if (isPaused) return;
+          next();
+        }, autoplayMs);
+      }
+
+      function pauseTemporarily(){
+        isPaused = true;
+        if (resumeTimer) clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function(){
+          isPaused = false;
+        }, pauseAfterMs);
+      }
+
+      function buildDots(){
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = "";
+        for (var i = 0; i < slides.length; i++){
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "roomDotBtn" + (i === 0 ? " is-active" : "");
+          b.setAttribute("data-dot", String(i));
+          b.setAttribute("aria-label", "Go to photo " + (i + 1));
+          b.addEventListener("click", function(){
+            var n = Number(this.getAttribute("data-dot") || "0");
+            goTo(n);
+            pauseTemporarily();
+          });
+          dotsWrap.appendChild(b);
+        }
+      }
+
+      function bindArrows(){
+        var prevBtn = root.querySelector('button[data-action="prev"]');
+        var nextBtn = root.querySelector('button[data-action="next"]');
+
+        if (prevBtn){
+          prevBtn.addEventListener("click", function(){
+            prev();
+            pauseTemporarily();
+          });
+        }
+
+        if (nextBtn){
+          nextBtn.addEventListener("click", function(){
+            next();
+            pauseTemporarily();
+          });
+        }
+      }
+
+      function bindHoverPause(){
+        root.addEventListener("mouseenter", function(){ isPaused = true; });
+        root.addEventListener("mouseleave", function(){ isPaused = false; });
+        root.addEventListener("focusin", function(){ isPaused = true; });
+        root.addEventListener("focusout", function(){ isPaused = false; });
+      }
+
+      function bindTouchSwipe(){
+        var startX = 0;
+        var deltaX = 0;
+        var isDown = false;
+
+        function onDown(x){
+          isDown = true;
+          startX = x;
+          deltaX = 0;
+          pauseTemporarily();
+        }
+
+        function onMove(x){
+          if (!isDown) return;
+          deltaX = x - startX;
+        }
+
+        function onUp(){
+          if (!isDown) return;
+          isDown = false;
+
+          var threshold = 38;
+          if (Math.abs(deltaX) > threshold){
+            if (deltaX < 0) next();
+            else prev();
+          }
+          deltaX = 0;
+        }
+
+        root.addEventListener("touchstart", function(e){
+          if (!e.touches || !e.touches.length) return;
+          onDown(e.touches[0].clientX);
+        }, { passive: true });
+
+        root.addEventListener("touchmove", function(e){
+          if (!e.touches || !e.touches.length) return;
+          onMove(e.touches[0].clientX);
+        }, { passive: true });
+
+        root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
+        root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+      }
+
+      buildDots();
+      bindArrows();
+      bindHoverPause();
+      bindTouchSwipe();
+
+      goTo(0);
+      startAutoplay();
+
+      window.addEventListener("resize", function(){
+        setTransform();
+      }, { passive: true });
     })();
   </script>
 </body>
