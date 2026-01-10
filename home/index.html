@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Cloud Forest Retreat | Eco-Luxury Mountain Stay in Ecuador</title>
+  <meta name="description" content="A scenic bed and breakfast in Ecuador’s mountains with breathtaking views. Eco-luxury comfort, wellness, nature, and unforgettable stays in the cloud forest." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical + hreflang (PRODUCTION URLs) -->
+  <link rel="canonical" href="https://thecloudforestretreat.com/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/" />
+
+  <!-- Open Graph (PRODUCTION URLs) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="The Cloud Forest Retreat | Eco-Luxury Mountain Stay in Ecuador" />
+  <meta property="og:description" content="A scenic bed and breakfast in Ecuador’s mountains with breathtaking views. Eco-luxury comfort, wellness, nature, and unforgettable stays in the cloud forest." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/" />
+  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat mountain view" />
+
+  <!-- Twitter (PRODUCTION URLs) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Cloud Forest Retreat | Eco-Luxury Mountain Stay in Ecuador" />
+  <meta name="twitter:description" content="A scenic bed and breakfast in Ecuador’s mountains with breathtaking views. Eco-luxury comfort, wellness, nature, and unforgettable stays in the cloud forest." />
+  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+
+  <!-- Favicons (approved root paths) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Global / shared CSS -->
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css?v=3" />
+
+  <!-- Head-only JS -->
+  <script src="/assets/js/head.js?v=1" defer></script>
+
+  <style>
+    :root{
+      --bg: #A1BFAA;
+      --forest: #0D5925;
+      --forest-2: #0B2B12;
+      --beige: #F5F5DC;
+      --orange: #E0643A;
+      --line: rgba(13,89,37,.18);
+      --card: rgba(245,245,220,.55);
+      --card2: rgba(245,245,220,.72);
+      --shadow: 0 18px 55px rgba(0,0,0,.14);
+      --r: 22px;
+      --max: 1180px;
+      --font-head: "Playfair Display", serif;
+      --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--forest-2);
+      font-family: var(--font-body);
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width:100%; display:block; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 16px 64px;
+    }
+
+    .hero{
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 16px;
+      align-items: stretch;
+      margin-top: 10px;
+    }
+
+    .heroMedia{
+      border-radius: var(--r);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.10);
+      min-height: 420px;
+      position: relative;
+    }
+
+    .heroMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+    }
+
+    .heroOverlay{
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.34));
+      pointer-events:none;
+    }
+
+    .heroCopy{
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(13,89,37,.18);
+      background: var(--card2);
+      padding: 18px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 420px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: rgba(13,89,37,.92);
+    }
+
+    .h1{
+      margin: 10px 0 10px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(32px, 3.9vw, 50px);
+      color: var(--forest-2);
+    }
+
+    .sub{
+      margin: 0;
+      font-size: 15.8px;
+      line-height: 1.78;
+      color: rgba(13,89,37,.96);
+      max-width: 62ch;
+      font-weight: 600;
+    }
+
+    .pillRow{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,.20);
+      background: rgba(255,255,255,.62);
+      color: var(--forest-2);
+      font-weight: 800;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .heroCtas{
+      margin-top: 16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      border: 1px solid rgba(13,89,37,.18);
+      box-shadow: 0 14px 30px rgba(0,0,0,.12);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .btn.primary{
+      background: var(--orange);
+      color: #fff;
+      border-color: rgba(0,0,0,.10);
+      box-shadow: 0 14px 30px rgba(224,100,58,.26);
+    }
+
+    .btn.secondary{
+      background: rgba(255,255,255,.64);
+      color: var(--forest-2);
+    }
+
+    .btn.ghost{
+      background: transparent;
+      color: var(--forest-2);
+      border-color: rgba(13,89,37,.18);
+      box-shadow: none;
+    }
+
+    .trustRow{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .trustCard{
+      border-radius: 16px;
+      background: rgba(255,255,255,.60);
+      border: 1px solid rgba(13,89,37,.16);
+      padding: 12px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      min-width: 0;
+    }
+
+    .trustTitle{
+      margin: 0 0 6px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 13.8px;
+      color: var(--forest-2);
+    }
+
+    .trustText{
+      margin: 0;
+      color: rgba(13,89,37,.92);
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .section{
+      margin-top: 18px;
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(13,89,37,.18);
+      background: var(--card);
+      padding: 18px;
+    }
+
+    .sectionHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .h2{
+      margin: 0;
+      font-family: var(--font-head);
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      color: var(--forest-2);
+      font-weight: 900;
+    }
+
+    .hint{
+      margin: 0;
+      color: rgba(13,89,37,.92);
+      font-size: 13.2px;
+      line-height: 1.55;
+      max-width: 90ch;
+      font-weight: 600;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .tile{
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      padding: 14px;
+      min-height: 132px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--forest-2);
+    }
+
+    .tileTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 16px;
+      color: var(--forest-2);
+    }
+
+    .tileText{
+      margin: 0;
+      color: rgba(13,89,37,.94);
+      font-size: 13.5px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .tileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      color: rgba(13,89,37,.92);
+      font-weight: 800;
+      font-size: 12.5px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      font-weight: 900;
+      font-size: 12.2px;
+      color: var(--forest-2);
+      white-space: nowrap;
+    }
+
+    .photoStrip{
+      margin-top: 12px;
+      display:grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    .photoCard{
+      border-radius: 18px;
+      overflow:hidden;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      min-height: 220px;
+      position: relative;
+    }
+
+    .photoCard img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photoCap{
+      position:absolute;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(245,245,220,.90);
+      border: 1px solid rgba(13,89,37,.16);
+      color: var(--forest-2);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 13px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.12);
+    }
+
+    .band{
+      margin-top: 18px;
+      border-radius: var(--r);
+      border: 1px solid rgba(13,89,37,.18);
+      box-shadow: var(--shadow);
+      background: rgba(245,245,220,.76);
+      padding: 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .bandTitle{
+      margin: 0 0 6px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      color: var(--forest-2);
+    }
+
+    .bandText{
+      margin: 0;
+      color: rgba(13,89,37,.94);
+      line-height: 1.6;
+      font-size: 13.8px;
+      max-width: 80ch;
+      font-weight: 600;
+    }
+
+    .bandActions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    /* MOBILE: pills and CTA layout cleanup */
+    @media (max-width: 900px){
+      .wrap{ padding: 10px 14px 54px; }
+
+      .hero{ grid-template-columns: 1fr; gap: 12px; }
+      .heroMedia{ min-height: 290px; }
+      .heroCopy{ min-height: 0; }
+
+      .pillRow{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .pill{ width: 100%; }
+      .pillRow .pill:nth-child(4){
+        grid-column: 1 / -1;
+      }
+
+      .heroCtas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .heroCtas .btn{ width: 100%; }
+      .heroCtas .btn.ghost{
+        grid-column: 1 / -1;
+      }
+
+      .trustRow{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .photoStrip{ grid-template-columns: 1fr; }
+      .photoCard{ min-height: 210px; }
+    }
+
+    @media (min-width: 901px){
+      .heroMedia{ min-height: 520px; }
+      .heroCopy{ min-height: 520px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="siteHeader"></div>
+
+  <main class="wrap" aria-label="The Cloud Forest Retreat home">
+    <section class="hero" aria-label="Hero">
+      <div class="heroMedia" aria-label="Mountain retreat view">
+        <img src="/assets/images/pages/home/tcfr_images_home_hero-02.jpg" alt="The Cloud Forest Retreat in the mountains of Ecuador" loading="eager" decoding="async" />
+        <div class="heroOverlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="heroCopy" aria-label="Welcome message">
+        <div>
+          <div class="kicker">Eco-luxury mountain retreat</div>
+          <h1 class="h1">Welcome to The Cloud Forest Retreat</h1>
+
+          <p class="sub">
+            Wake up above the valley with breathtaking views, fresh mountain air, and calm mornings.
+            A scenic bed and breakfast designed for slow travel, nature, and comfort in Ecuador’s cloud forest.
+          </p>
+
+          <div class="pillRow" aria-label="Highlights">
+            <span class="pill">Birdwatching</span>
+            <span class="pill">Waterfalls</span>
+            <span class="pill">Wilderness</span>
+            <span class="pill">Wellness</span>
+          </div>
+
+          <div class="heroCtas" aria-label="Primary actions">
+            <a class="btn primary" href="/booking/">Book Your Stay</a>
+            <a class="btn secondary" href="/rooms/">Explore Rooms</a>
+            <a class="btn ghost" href="/features/">See Features</a>
+          </div>
+        </div>
+
+        <div class="trustRow" aria-label="Trust and quick info">
+          <div class="trustCard">
+            <p class="trustTitle">Easy planning</p>
+            <p class="trustText">Clear check-in details, local guidance, and help planning activities.</p>
+          </div>
+          <div class="trustCard">
+            <p class="trustTitle">Unforgettable views</p>
+            <p class="trustText">Sunrise coffee, cloud forest panoramas, and quiet nights under the stars.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Experiences">
+      <div class="sectionHead">
+        <h2 class="h2">Experience the cloud forest</h2>
+        <p class="hint">Choose your pace. Fill your days with nature, wellness, and stunning scenery.</p>
+      </div>
+
+      <div class="grid3" aria-label="Experience tiles">
+        <a class="tile" href="/features/activities/" aria-label="Birdwatching">
+          <div>
+            <p class="tileTitle">Birdwatching</p>
+            <p class="tileText">Spot hummingbirds, toucans, and cloud forest specialties with local guidance.</p>
+          </div>
+          <div class="tileMeta">
+            <span class="badge">Best at sunrise</span>
+            <span>Explore</span>
+          </div>
+        </a>
+
+        <a class="tile" href="/features/activities/" aria-label="Waterfalls">
+          <div>
+            <p class="tileTitle">Waterfalls</p>
+            <p class="tileText">Short hikes to misty falls and viewpoints perfect for photos and cooling off.</p>
+          </div>
+          <div class="tileMeta">
+            <span class="badge">Scenic trails</span>
+            <span>Explore</span>
+          </div>
+        </a>
+
+        <a class="tile" href="/features/dining/" aria-label="Wellness">
+          <div>
+            <p class="tileTitle">Wellness</p>
+            <p class="tileText">Slow mornings, nourishing meals, and space to reset with nature all around you.</p>
+          </div>
+          <div class="tileMeta">
+            <span class="badge">Recharge</span>
+            <span>Explore</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="photoStrip" aria-label="Photo strip">
+        <div class="photoCard">
+          <img src="/assets/images/pages/home/tcfr_images_home_01.jpg" alt="Panoramic mountain view near the retreat" loading="lazy" decoding="async" />
+          <div class="photoCap">Mountain views that feel unreal</div>
+        </div>
+        <div class="photoCard">
+          <img src="/assets/images/pages/home/tcfr_images_home_02.jpg" alt="Cloud forest greenery and trails" loading="lazy" decoding="async" />
+          <div class="photoCap">Cloud forest trails nearby</div>
+        </div>
+        <div class="photoCard">
+          <img src="/assets/images/pages/home/tcfr_images_home_03.jpg" alt="Cozy eco-luxury room interior" loading="lazy" decoding="async" />
+          <div class="photoCap">Comfort built for rest</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Rooms">
+      <div class="sectionHead">
+        <h2 class="h2">Rooms designed for rest</h2>
+        <p class="hint">Quiet nights, cozy details, and views you will want to wake up to.</p>
+      </div>
+
+      <div class="grid3" aria-label="Room tiles">
+        <a class="tile" href="/rooms/suites/" aria-label="Suites">
+          <div>
+            <p class="tileTitle">Suites</p>
+            <p class="tileText">More space, elevated comfort, and the best angles for sunrise views.</p>
+          </div>
+          <div class="tileMeta"><span class="badge">Premium</span><span>View</span></div>
+        </a>
+
+        <a class="tile" href="/rooms/" aria-label="Classic rooms">
+          <div>
+            <p class="tileTitle">Classic Rooms</p>
+            <p class="tileText">Simple, warm, and peaceful. Perfect for couples and quiet getaways.</p>
+          </div>
+          <div class="tileMeta"><span class="badge">Cozy</span><span>View</span></div>
+        </a>
+
+        <a class="tile" href="/rooms/family/" aria-label="Family rooms">
+          <div>
+            <p class="tileTitle">Family Rooms</p>
+            <p class="tileText">Comfortable layouts for families and small groups who want to explore together.</p>
+          </div>
+          <div class="tileMeta"><span class="badge">Flexible</span><span>View</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="band" aria-label="Booking call to action">
+      <div>
+        <p class="bandTitle">Ready for your mountain stay?</p>
+        <p class="bandText">
+          Check availability, choose your dates, and book in minutes. If you have questions, contact us and we will help you plan.
+        </p>
+      </div>
+
+      <div class="bandActions" aria-label="Booking actions">
+        <a class="btn primary" href="/booking/">Book Your Stay</a>
+        <a class="btn secondary" href="/contact/">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <!-- TCFR global behavior: inject header/footer, GA, nav -->
+  <script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
