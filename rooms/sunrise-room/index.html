@@ -33,9 +33,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
@@ -432,16 +429,6 @@
 
     .rightStackPad{ padding: 14px; }
 
-    .h2{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      font-size: 22px;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: var(--forest);
-      font-weight: 900;
-    }
-
     .p{
       margin: 0;
       color: rgba(11,26,16,0.78);
@@ -456,6 +443,98 @@
       color: rgba(11,26,16,0.68);
       font-weight: 650;
       line-height: 1.6;
+    }
+
+    /* Shared bathroom section */
+    .bathSection{
+      margin-top: 14px;
+    }
+
+    .bathPad{
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .bathNotice{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.60);
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bathNotice:before{
+      content:"";
+      position:absolute;
+      inset: -80px auto auto -80px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+      pointer-events: none;
+    }
+
+    .bathNoticeTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      line-height: 1.15;
+      color: var(--forest);
+      position: relative;
+    }
+
+    .bathNoticeText{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      font-weight: 650;
+      line-height: 1.75;
+      font-size: 14px;
+      position: relative;
+      max-width: 95ch;
+    }
+
+    .bathGrid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .bathShot{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      box-shadow: 0 14px 34px rgba(13,89,37,0.10);
+      position: relative;
+      aspect-ratio: 4 / 3;
+      margin: 0;
+    }
+
+    .bathShot img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .bathCap{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.14);
+      padding: 10px 10px;
+      font-weight: 900;
+      color: rgba(11,26,16,0.88);
+      font-size: 13px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
     }
 
     .details{
@@ -575,6 +654,7 @@
       .miniArrow.prev{ left: 8px; }
       .miniArrow.next{ right: 8px; }
 
+      .bathGrid{ grid-template-columns: 1fr; }
       .details{ grid-template-columns: 1fr; }
     }
   </style>
@@ -711,6 +791,39 @@
   </aside>
 </section>
 
+<!-- SHARED BATHROOM (Sunrise + Sunset) -->
+<section class="bathSection" aria-label="Shared bathroom">
+  <article class="card" aria-label="Shared bathroom card">
+    <div class="cardHead">
+      <h2 class="cardTitle">Shared full bathroom</h2>
+      <p class="cardHint">Right outside the room in the hallway</p>
+    </div>
+
+    <div class="bathPad">
+      <div class="bathNotice" aria-label="Bathroom note">
+        <p class="bathNoticeTitle">Private access, shared between two rooms</p>
+        <p class="bathNoticeText">
+          The Sunrise Room and Sunset Room share a full bathroom located in the hallway right outside your door.
+          It is reserved only for these two rooms, and it is just a few steps away.
+          We include this clearly so you know exactly what to expect.
+        </p>
+      </div>
+
+      <div class="bathGrid" aria-label="Bathroom photos">
+        <figure class="bathShot" aria-label="Bathroom photo 1">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg" alt="Shared bathroom photo 1" loading="lazy" decoding="async" />
+          <figcaption class="bathCap">Bright, clean, full bathroom</figcaption>
+        </figure>
+
+        <figure class="bathShot" aria-label="Bathroom photo 2">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg" alt="Shared bathroom photo 2" loading="lazy" decoding="async" />
+          <figcaption class="bathCap">Reserved for Sunrise and Sunset rooms</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+</section>
+
 <!-- DETAILS -->
 <section class="details" aria-label="Room details">
   <article class="card detailCard" aria-label="What you will love">
@@ -746,7 +859,7 @@
     <a class="btn secondary" href="/contact/">Contact</a>
   </div>
 </section>
-      </main>
+  </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
   <script>
