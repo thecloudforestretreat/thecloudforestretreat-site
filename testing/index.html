@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sunset Room | The Cloud Forest Retreat</title>
-  <meta name="description" content="Unwind with breathtaking evening views in Mindo. The Sunset Room is a cozy, west-facing retreat with golden-hour balcony moments, soft ambient lighting, and cloud forest calm." />
+  <title>Sunrise Room | The Cloud Forest Retreat</title>
+  <meta name="description" content="Wake up to the first light of day in Mindo. The Sunrise Room is a cozy, east-facing retreat with breathtaking dawn views, balcony coffee moments, and cloud forest calm." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/sunset-room/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/sunrise-room/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Sunset Room | The Cloud Forest Retreat" />
-  <meta property="og:description" content="A west-facing room for sunset lovers: golden-hour views, balcony tea or wine, and a calm, romantic cloud forest stay." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/sunset-room/" />
+  <meta property="og:title" content="Sunrise Room | The Cloud Forest Retreat" />
+  <meta property="og:description" content="An east-facing room for early risers: dawn views, balcony coffee, and the cloud forest coming alive." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/sunrise-room/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat Sunset Room" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat mountain view" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sunset Room | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Unwind with golden-hour views in Mindo. Sunset light, balcony moments, and cloud forest calm." />
+  <meta name="twitter:title" content="Sunrise Room | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Wake up to the first light of day in Mindo. Dawn views, balcony coffee, and cloud forest calm." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -43,11 +43,12 @@
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
 
-      --sunset: #E0643A;
-      --sunsetSoft: rgba(224,100,58,0.14);
+      --sunrise: #E0643A;
+      --sunriseSoft: rgba(224,100,58,0.12);
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
       --forest: #0D5925;
     }
 
@@ -109,7 +110,6 @@
       overflow: hidden;
       color: var(--ink);
       min-width: 0;
-      position: relative;
     }
 
     .cardHead{
@@ -119,8 +119,6 @@
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
     }
 
     .cardTitle{
@@ -161,8 +159,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(900px 520px at 80% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.46));
+        radial-gradient(900px 520px at 18% 12%, rgba(224,100,58,0.26), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.42));
       pointer-events: none;
     }
 
@@ -207,20 +205,8 @@
       max-width: 70ch;
       font-weight: 600;
       line-height: 1.7;
-      color: rgba(231,228,209,0.92);
+      color: rgba(255,255,255,0.92);
       font-size: 15.5px;
-    }
-
-    /* Video card: make it feel like a matched pair with the hero */
-    .videoCard:before{
-      content:"";
-      position:absolute;
-      inset: 0;
-      background:
-        radial-gradient(520px 360px at 82% 18%, rgba(224,100,58,0.18), rgba(224,100,58,0) 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.00), rgba(245,245,220,0.24));
-      pointer-events:none;
-      z-index: 1;
     }
 
     .videoCardInner{
@@ -229,8 +215,6 @@
       flex-direction: column;
       gap: 12px;
       height: calc(560px - 56px);
-      position: relative;
-      z-index: 2;
     }
 
     .ytFrame{
@@ -461,37 +445,74 @@
       line-height: 1.6;
     }
 
-    /* Full width shared bathroom section */
-    .gridFull{
+    /* Shared bathroom section */
+    .bathSection{
       margin-top: 14px;
     }
 
-    .bathInner{
+    .bathPad{
       padding: 14px;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 14px;
-      align-items: stretch;
+      gap: 12px;
     }
 
-    .bathMedia{
+    .bathNotice{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.60);
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bathNotice:before{
+      content:"";
+      position:absolute;
+      inset: -80px auto auto -80px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+      pointer-events: none;
+    }
+
+    .bathNoticeTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      line-height: 1.15;
+      color: var(--forest);
+      position: relative;
+    }
+
+    .bathNoticeText{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      font-weight: 650;
+      line-height: 1.75;
+      font-size: 14px;
+      position: relative;
+      max-width: 95ch;
+    }
+
+    .bathGrid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .bathShot{
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(11,26,16,0.10);
       background: rgba(255,255,255,0.55);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      padding: 10px;
-    }
-
-    .bathShot{
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(0,0,0,0.08);
-      min-height: 220px;
+      box-shadow: 0 14px 34px rgba(13,89,37,0.10);
       position: relative;
+      aspect-ratio: 4 / 3;
+      margin: 0;
     }
 
     .bathShot img{
@@ -506,49 +527,15 @@
       left: 10px;
       right: 10px;
       bottom: 10px;
-      padding: 9px 11px;
       border-radius: 14px;
       background: rgba(245,245,220,0.92);
-      border: 1px solid rgba(13,89,37,0.16);
-      color: #0b2b12;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      border: 1px solid rgba(13,89,37,0.14);
+      padding: 10px 10px;
       font-weight: 900;
+      color: rgba(11,26,16,0.88);
       font-size: 13px;
-      letter-spacing: -0.01em;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
     }
-
-    .bathCopy{
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .bathTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 20px;
-      line-height: 1.15;
-      color: var(--forest);
-    }
-
-    .bathList{
-      margin: 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.8;
-      font-weight: 650;
-      font-size: 14.6px;
-    }
-
-    .bathList li{ margin: 6px 0; }
 
     .details{
       margin-top: 14px;
@@ -667,24 +654,21 @@
       .miniArrow.prev{ left: 8px; }
       .miniArrow.next{ right: 8px; }
 
-      .bathInner{ grid-template-columns: 1fr; }
-      .bathMedia{ grid-template-columns: 1fr; }
-      .bathShot{ min-height: 220px; }
-
+      .bathGrid{ grid-template-columns: 1fr; }
       .details{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Sunset Room page">
+  <main class="wrap" aria-label="Sunrise Room page">
     <section class="topBand" aria-label="Room navigation and booking actions">
       <div class="crumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">›</span>
         <a href="/rooms/">Rooms</a>
         <span aria-hidden="true">›</span>
-        <span>Sunset Room</span>
+        <span>Sunrise Room</span>
       </div>
   <div class="quickActions" aria-label="Quick actions">
     <a class="btn secondary" href="/rooms/">Compare rooms</a>
@@ -692,36 +676,35 @@
   </div>
 </section>
 
-<!-- Row 1: Hero left, Video right (matched height) -->
-<section class="gridA" aria-label="Sunset hero and video">
+<!-- OPTION A: Row 1 (Hero left, Video right, same height) -->
+<section class="gridA" aria-label="Sunrise hero and video">
   <article class="card" aria-label="Hero image">
-    <div class="heroMedia" aria-label="Sunset Room hero image">
-      <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Sunset Room with evening light and cloud forest views" loading="eager" decoding="async" />
+    <div class="heroMedia" aria-label="Sunrise Room hero image">
+      <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Sunrise Room with morning light and cloud forest views" loading="eager" decoding="async" />
       <div class="heroShade" aria-hidden="true"></div>
 
       <div class="heroTitleBadge" aria-label="Room title">
-        <div class="kicker">West-facing windows • Golden hour views</div>
-        <h1 class="heroH1">Sunset Room</h1>
+        <div class="kicker">East-facing balcony • Dawn views</div>
+        <h1 class="heroH1">Sunrise Room</h1>
         <p class="heroLead">
-          A front-row seat to Mindo’s fiery evening glow. Sip wine or tea on your balcony as the forest turns amber and violet.
-          The most romantic room on the property.
+          Wake up to golden light, birdsong, and a quiet balcony coffee. A cozy room for early risers who want Mindo at its most magical hour.
         </p>
       </div>
     </div>
   </article>
 
-  <aside class="card videoCard" aria-label="Video preview">
+  <aside class="card" aria-label="Video preview">
     <div class="cardHead">
-      <h2 class="cardTitle">A quick sunset feel</h2>
+      <h2 class="cardTitle">A quick sunrise feel</h2>
       <p class="cardHint">YouTube Short</p>
     </div>
 
     <div class="videoCardInner" aria-label="Video content">
-      <div class="ytFrame" aria-label="Sunset Room video">
+      <div class="ytFrame" aria-label="Sunrise Room video">
         <div class="ytBox" aria-label="YouTube video">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/1Djnf3UnF4g?autoplay=1&mute=1&loop=1&playlist=1Djnf3UnF4g&controls=1&modestbranding=1&rel=0&playsinline=1"
-            title="Sunset Room video"
+            src="https://www.youtube-nocookie.com/embed/_VGh3YEdYl4?autoplay=1&mute=1&loop=1&playlist=_VGh3YEdYl4&controls=1&modestbranding=1&rel=0&playsinline=1"
+            title="Sunrise Room video"
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -730,20 +713,17 @@
       </div>
 
       <div class="videoMiniCopy" aria-label="Video caption">
-        <p class="quote">"Golden hour turns into a quiet kind of magic."</p>
-        <p>West-facing light, soft ambiance, and a balcony made for slowing down.</p>
-        <div class="pillRow" aria-label="Video moments">
-          <span class="pill"><strong>Moment:</strong> wine or tea</span>
-          <span class="pill"><strong>Light:</strong> golden hour</span>
-          <span class="pill"><strong>Vibe:</strong> romantic</span>
-        </div>
+        <p class="quote">"The first light of day, right from your balcony."</p>
+        <p>
+          If you love quiet mornings and soft dawn colors, this room delivers it every single day.
+        </p>
       </div>
     </div>
   </aside>
 </section>
 
-<!-- Row 2: Carousel left, Highlights right -->
-<section class="gridB" aria-label="Sunset gallery and highlights">
+<!-- OPTION A: Row 2 (Carousel left, Highlights right) -->
+<section class="gridB" aria-label="Sunrise gallery and highlights">
   <article class="card" aria-label="Photo highlights">
     <div class="cardHead">
       <h2 class="cardTitle">Photo highlights</h2>
@@ -751,20 +731,20 @@
     </div>
 
     <div class="miniCarouselPad">
-      <div class="miniCarousel" aria-label="Sunset mini carousel">
-        <div class="miniViewport" id="ssCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
+      <div class="miniCarousel" aria-label="Sunrise mini carousel">
+        <div class="miniViewport" id="srCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
           <button class="miniArrow prev" type="button" data-action="prev" aria-label="Previous photo">‹</button>
           <button class="miniArrow next" type="button" data-action="next" aria-label="Next photo">›</button>
 
           <div class="miniTrack" data-track>
-            <figure class="miniSlide" aria-label="Sunset image 1">
-              <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Sunset Room photo highlight 1" loading="lazy" decoding="async" />
-              <figcaption class="miniCap">Amber light at dusk</figcaption>
+            <figure class="miniSlide" aria-label="Sunrise image 1">
+              <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Sunrise Room photo highlight 1" loading="lazy" decoding="async" />
+              <figcaption class="miniCap">Golden morning light</figcaption>
             </figure>
 
-            <figure class="miniSlide" aria-label="Sunset image 2">
-              <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Sunset Room photo highlight 2" loading="lazy" decoding="async" />
-              <figcaption class="miniCap">A balcony made for sunsets</figcaption>
+            <figure class="miniSlide" aria-label="Sunrise image 2">
+              <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Sunrise Room photo highlight 2" loading="lazy" decoding="async" />
+              <figcaption class="miniCap">Balcony coffee calm</figcaption>
             </figure>
           </div>
         </div>
@@ -778,24 +758,22 @@
 
   <aside class="card" aria-label="Highlights and actions">
     <div class="cardHead">
-      <h2 class="cardTitle">Romantic, calm, unforgettable</h2>
-      <p class="cardHint">The room couples remember</p>
+      <h2 class="cardTitle">Built for calm mornings</h2>
+      <p class="cardHint">Simple, warm, restorative</p>
     </div>
 
     <div class="rightStackPad">
       <p class="p">
-        As daylight fades, the room becomes a cocoon of calm: handcrafted details, soft ambient lighting, and every hue of the setting sun
-        spilling across the space. A perfect reset after a day of exploring.
+        The Sunrise Room faces east, so the day starts softly: mist in the valley, birds in the trees, and warm light filling the room.
       </p>
 
       <div style="height:12px;"></div>
 
       <div class="pillRow" aria-label="Key highlights">
-        <span class="pill"><strong>Best for:</strong> couples</span>
-        <span class="pill"><strong>Views:</strong> west-facing sunset</span>
-        <span class="pill"><strong>Vibe:</strong> romantic and calm</span>
-        <span class="pill"><strong>Moment:</strong> wine or tea at dusk</span>
-        <span class="pill"><strong>Bathroom:</strong> shared</span>
+        <span class="pill"><strong>Best for:</strong> early risers</span>
+        <span class="pill"><strong>Views:</strong> east-facing dawn</span>
+        <span class="pill"><strong>Vibe:</strong> cozy and quiet</span>
+        <span class="pill"><strong>Moment:</strong> balcony coffee</span>
       </div>
 
       <div style="height:14px;"></div>
@@ -807,65 +785,61 @@
       </div>
 
       <div class="note">
-        Tip: If sunsets are your ritual, this is your room.
+        Tip: This is the room that turns "one more minute" into an hour.
       </div>
     </div>
   </aside>
 </section>
 
-<!-- Full width: Shared bathroom clarity (swap images when you have them) -->
-<section class="gridFull" aria-label="Shared bathroom information">
-  <article class="card" aria-label="Bathroom access">
+<!-- SHARED BATHROOM (Sunrise + Sunset) -->
+<section class="bathSection" aria-label="Shared bathroom">
+  <article class="card" aria-label="Shared bathroom card">
     <div class="cardHead">
-      <h2 class="cardTitle">Bathroom access</h2>
-      <p class="cardHint">Shared between Sunrise and Sunset Rooms</p>
+      <h2 class="cardTitle">Shared full bathroom</h2>
+      <p class="cardHint">Right outside the room in the hallway</p>
     </div>
 
-    <div class="bathInner">
-      <div class="bathMedia" aria-label="Bathroom photos">
-        <figure class="bathShot" aria-label="Bathroom location photo">
-          <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg" alt="Bathroom location near the room (replace with your photo)" loading="lazy" decoding="async" />
-          <figcaption class="bathCap">Just steps from your door</figcaption>
-        </figure>
-        <figure class="bathShot" aria-label="Bathroom interior photo">
-          <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg" alt="Bathroom interior (replace with your photo)" loading="lazy" decoding="async" />
-          <figcaption class="bathCap">Full bathroom, stocked daily</figcaption>
-        </figure>
+    <div class="bathPad">
+      <div class="bathNotice" aria-label="Bathroom note">
+        <p class="bathNoticeTitle">Private access, shared between two rooms</p>
+        <p class="bathNoticeText">
+          The Sunrise Room and Sunset Room share a full bathroom located in the hallway right outside your door.
+          It is reserved only for these two rooms, and it is just a few steps away.
+          We include this clearly so you know exactly what to expect.
+        </p>
       </div>
 
-      <div class="bathCopy" aria-label="Bathroom details">
-        <p class="bathTitle">Private feel, shared setup</p>
-        <ul class="bathList">
-          <li>Shared only between the Sunrise Room and Sunset Room</li>
-          <li>Located in the hallway right outside the room doors</li>
-          <li>Cleaned daily and kept stocked with essentials</li>
-        </ul>
-        <div class="pillRow" aria-label="Bathroom quick tags">
-          <span class="pill"><strong>Type:</strong> full bathroom</span>
-          <span class="pill"><strong>Distance:</strong> steps away</span>
-          <span class="pill"><strong>Shared:</strong> 2 rooms</span>
-        </div>
+      <div class="bathGrid" aria-label="Bathroom photos">
+        <figure class="bathShot" aria-label="Bathroom photo 1">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg" alt="Shared bathroom photo 1" loading="lazy" decoding="async" />
+          <figcaption class="bathCap">Bright, clean, full bathroom</figcaption>
+        </figure>
+
+        <figure class="bathShot" aria-label="Bathroom photo 2">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg" alt="Shared bathroom photo 2" loading="lazy" decoding="async" />
+          <figcaption class="bathCap">Reserved for Sunrise and Sunset rooms</figcaption>
+        </figure>
       </div>
     </div>
   </article>
 </section>
 
-<!-- Details -->
+<!-- DETAILS -->
 <section class="details" aria-label="Room details">
   <article class="card detailCard" aria-label="What you will love">
     <h3 class="detailH3">What you will love</h3>
     <ul class="detailList">
-      <li>West-facing views for golden hour and sunsets</li>
-      <li>Private balcony for wine, tea, and slow evenings</li>
-      <li>Soft ambient lighting and handcrafted furnishings</li>
-      <li>Romantic, peaceful atmosphere for true unwind time</li>
+      <li>East-facing balcony for sunrise views</li>
+      <li>Cozy wood accents and soft, calming lighting</li>
+      <li>Peaceful atmosphere ideal for recharging</li>
+      <li>Perfect base for early birding and nature walks</li>
     </ul>
   </article>
 
   <article class="card quoteCard" aria-label="Room quote">
-    <p class="quoteText">“A front-row seat to the glow that melts behind the peaks.”</p>
+    <p class="quoteText">“Wake up to a horizon kissed by the first light of day.”</p>
     <p class="quoteSub">
-      The Sunset Room is for guests who want the day to end slowly: warm light, quiet views, and the forest turning calm.
+      The Sunrise Room is for guests who want to feel the cloud forest awaken, slowly and beautifully, right from their balcony.
     </p>
   </article>
 </section>
@@ -873,7 +847,7 @@
 <!-- CTA -->
 <section class="ctaBand" aria-label="Booking call to action">
   <div>
-    <h2>Ready to chase the sunset?</h2>
+    <h2>Ready to wake up to the cloud forest?</h2>
     <p>
       Check availability and book your stay in minutes. If you are deciding between rooms, compare them side by side.
     </p>
@@ -892,7 +866,7 @@
     (function(){
       "use strict";
 
-      var root = document.getElementById("ssCarousel");
+      var root = document.getElementById("srCarousel");
       if (!root) return;
 
       var track = root.querySelector("[data-track]");
