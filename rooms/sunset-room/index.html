@@ -44,7 +44,7 @@
       --line: rgba(11,26,16,0.12);
 
       --sunset: #E0643A;
-      --sunsetSoft: rgba(224,100,58,0.12);
+      --sunsetSoft: rgba(224,100,58,0.14);
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
@@ -109,6 +109,7 @@
       overflow: hidden;
       color: var(--ink);
       min-width: 0;
+      position: relative;
     }
 
     .cardHead{
@@ -118,6 +119,8 @@
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
 
     .cardTitle{
@@ -208,12 +211,26 @@
       font-size: 15.5px;
     }
 
+    /* Video card: make it feel like a matched pair with the hero */
+    .videoCard:before{
+      content:"";
+      position:absolute;
+      inset: 0;
+      background:
+        radial-gradient(520px 360px at 82% 18%, rgba(224,100,58,0.18), rgba(224,100,58,0) 60%),
+        linear-gradient(180deg, rgba(255,255,255,0.00), rgba(245,245,220,0.24));
+      pointer-events:none;
+      z-index: 1;
+    }
+
     .videoCardInner{
       padding: 14px;
       display: flex;
       flex-direction: column;
       gap: 12px;
       height: calc(560px - 56px);
+      position: relative;
+      z-index: 2;
     }
 
     .ytFrame{
@@ -428,16 +445,6 @@
 
     .rightStackPad{ padding: 14px; }
 
-    .h2{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      font-size: 22px;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: var(--forest);
-      font-weight: 900;
-    }
-
     .p{
       margin: 0;
       color: rgba(11,26,16,0.78);
@@ -453,6 +460,95 @@
       font-weight: 650;
       line-height: 1.6;
     }
+
+    /* Full width shared bathroom section */
+    .gridFull{
+      margin-top: 14px;
+    }
+
+    .bathInner{
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .bathMedia{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .bathShot{
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(0,0,0,0.08);
+      min-height: 220px;
+      position: relative;
+    }
+
+    .bathShot img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .bathCap{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 9px 11px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+    }
+
+    .bathCopy{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .bathTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      line-height: 1.15;
+      color: var(--forest);
+    }
+
+    .bathList{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.8;
+      font-weight: 650;
+      font-size: 14.6px;
+    }
+
+    .bathList li{ margin: 6px 0; }
 
     .details{
       margin-top: 14px;
@@ -571,6 +667,10 @@
       .miniArrow.prev{ left: 8px; }
       .miniArrow.next{ right: 8px; }
 
+      .bathInner{ grid-template-columns: 1fr; }
+      .bathMedia{ grid-template-columns: 1fr; }
+      .bathShot{ min-height: 220px; }
+
       .details{ grid-template-columns: 1fr; }
     }
   </style>
@@ -592,7 +692,7 @@
   </div>
 </section>
 
-<!-- OPTION A: Row 1 (Hero left, Video right, same height) -->
+<!-- Row 1: Hero left, Video right (matched height) -->
 <section class="gridA" aria-label="Sunset hero and video">
   <article class="card" aria-label="Hero image">
     <div class="heroMedia" aria-label="Sunset Room hero image">
@@ -610,7 +710,7 @@
     </div>
   </article>
 
-  <aside class="card" aria-label="Video preview">
+  <aside class="card videoCard" aria-label="Video preview">
     <div class="cardHead">
       <h2 class="cardTitle">A quick sunset feel</h2>
       <p class="cardHint">YouTube Short</p>
@@ -631,15 +731,18 @@
 
       <div class="videoMiniCopy" aria-label="Video caption">
         <p class="quote">"Golden hour turns into a quiet kind of magic."</p>
-        <p>
-          West-facing light, soft ambiance, and a balcony made for slowing down.
-        </p>
+        <p>West-facing light, soft ambiance, and a balcony made for slowing down.</p>
+        <div class="pillRow" aria-label="Video moments">
+          <span class="pill"><strong>Moment:</strong> wine or tea</span>
+          <span class="pill"><strong>Light:</strong> golden hour</span>
+          <span class="pill"><strong>Vibe:</strong> romantic</span>
+        </div>
       </div>
     </div>
   </aside>
 </section>
 
-<!-- OPTION A: Row 2 (Carousel left, Highlights right) -->
+<!-- Row 2: Carousel left, Highlights right -->
 <section class="gridB" aria-label="Sunset gallery and highlights">
   <article class="card" aria-label="Photo highlights">
     <div class="cardHead">
@@ -692,6 +795,7 @@
         <span class="pill"><strong>Views:</strong> west-facing sunset</span>
         <span class="pill"><strong>Vibe:</strong> romantic and calm</span>
         <span class="pill"><strong>Moment:</strong> wine or tea at dusk</span>
+        <span class="pill"><strong>Bathroom:</strong> shared</span>
       </div>
 
       <div style="height:14px;"></div>
@@ -709,7 +813,44 @@
   </aside>
 </section>
 
-<!-- DETAILS -->
+<!-- Full width: Shared bathroom clarity (swap images when you have them) -->
+<section class="gridFull" aria-label="Shared bathroom information">
+  <article class="card" aria-label="Bathroom access">
+    <div class="cardHead">
+      <h2 class="cardTitle">Bathroom access</h2>
+      <p class="cardHint">Shared between Sunrise and Sunset Rooms</p>
+    </div>
+
+    <div class="bathInner">
+      <div class="bathMedia" aria-label="Bathroom photos">
+        <figure class="bathShot" aria-label="Bathroom location photo">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg" alt="Bathroom location near the room (replace with your photo)" loading="lazy" decoding="async" />
+          <figcaption class="bathCap">Just steps from your door</figcaption>
+        </figure>
+        <figure class="bathShot" aria-label="Bathroom interior photo">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg" alt="Bathroom interior (replace with your photo)" loading="lazy" decoding="async" />
+          <figcaption class="bathCap">Full bathroom, stocked daily</figcaption>
+        </figure>
+      </div>
+
+      <div class="bathCopy" aria-label="Bathroom details">
+        <p class="bathTitle">Private feel, shared setup</p>
+        <ul class="bathList">
+          <li>Shared only between the Sunrise Room and Sunset Room</li>
+          <li>Located in the hallway right outside the room doors</li>
+          <li>Cleaned daily and kept stocked with essentials</li>
+        </ul>
+        <div class="pillRow" aria-label="Bathroom quick tags">
+          <span class="pill"><strong>Type:</strong> full bathroom</span>
+          <span class="pill"><strong>Distance:</strong> steps away</span>
+          <span class="pill"><strong>Shared:</strong> 2 rooms</span>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Details -->
 <section class="details" aria-label="Room details">
   <article class="card detailCard" aria-label="What you will love">
     <h3 class="detailH3">What you will love</h3>
