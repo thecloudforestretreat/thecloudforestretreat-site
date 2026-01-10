@@ -448,3 +448,44 @@ body{
 html.tcfr-navOpen{
   overflow: hidden;
 }
+
+/* ==========================================================================
+   FIXES: normalize dropdown vs link sizes + limit mobile panel height
+   (This is the part you were trying to replace with.)
+   ========================================================================== */
+
+/* Desktop: dropdown buttons must match links exactly */
+.tcfr-navDesktop .tcfr-link,
+.tcfr-navDesktop .tcfr-ddBtn{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Ensure the caret never changes the perceived font sizing */
+.tcfr-navDesktop .tcfr-caret{
+  font-size: 0.8em;
+}
+
+/* Mobile: dropdown groups must match links exactly */
+.tcfr-navMobile .tcfr-mLink,
+.tcfr-navMobile .tcfr-mGroup{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Mobile panel: do not cover the entire screen.
+   Start below the fixed header and stop shortly after CTA. */
+.tcfr-mobilePanel{
+  top: var(--tcfr-header-h);
+  height: auto;
+  max-height: calc(100vh - var(--tcfr-header-h) - 18px);
+  overflow-y: auto;
+  border-top-left-radius: 18px;
+}
+
+/* Overlay still covers full screen behind the panel */
+.tcfr-mobileOverlay{
+  top: 0;
+}
