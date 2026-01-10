@@ -1,1 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunrise Room | The Cloud Forest Retreat</title>
+  <meta name="description" content="Wake up to the first light of day in Mindo. The Sunrise Room is a cozy, east-facing retreat with breathtaking dawn views, balcony coffee moments, and cloud forest calm." />
+  <meta name="robots" content="index,follow" />
+  <!-- Canonical + hreflang (PRODUCTION URLs) -->
+  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/sunrise-room/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
+  <!-- Open Graph (PRODUCTION URLs) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="Sunrise Room | The Cloud Forest Retreat" />
+  <meta property="og:description" content="An east-facing room for early risers: dawn views, balcony coffee, and the cloud forest coming alive." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/sunrise-room/" />
+  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat mountain view" />
+  <!-- Twitter (PRODUCTION URLs) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sunrise Room | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Wake up to the first light of day in Mindo. Dawn views, balcony coffee, and cloud forest calm." />
+  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <!-- Favicons (approved root paths) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Global / shared CSS -->
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <!-- Head-only JS -->
+  <script src="/assets/js/head.js" defer></script>
+  <style>
+    :root{
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
 
+      --sunrise: #E0643A;
+      --sunriseSoft: rgba(224,100,58,0.12);
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
+      --forest: #0D5925;
+    }
+
+    *{ box-sizing: border-box; }
+    body{ margin: 0; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 76px;
+    }
+
+    /* Top band */
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Hero */
+    .hero{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .heroMedia{
+      position: relative;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: var(--shadow);
+      min-height: 520px;
+      background: rgba(0,0,0,0.10);
+    }
+
+    .heroMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+      display: block;
+    }
+
+    .heroShade{
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(900px 520px at 18% 12%, rgba(224,100,58,0.26), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.40));
+      pointer-events: none;
+    }
+
+    .heroTitleBadge{
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      right: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.28);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: #fff;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
+    }
+
+    .kicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .heroH1{
+      margin: 8px 0 6px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(32px, 3.6vw, 50px);
+      color: #fff;
+    }
+
+    .heroLead{
+      margin: 0;
+      max-width: 70ch;
+      font-weight: 600;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.92);
+      font-size: 15.5px;
+    }
+
+    .heroSide{
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 16px;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 520px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .heroSide:before{
+      content:"";
+      position:absolute;
+      inset: -120px -120px auto auto;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle at center, rgba(224,100,58,0.24), rgba(224,100,58,0) 62%);
+      pointer-events:none;
+    }
+
+    .sideHead{
+      position: relative;
+    }
+
+    .sideH2{
+      margin: 0 0 10px;
+      font-family: var(--font-head);
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--forest);
+      font-weight: 900;
+    }
+
+    .sideP{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.75;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .pillRow{
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: relative;
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.62);
+      color: var(--ink);
+      font-weight: 900;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .pill strong{
+      font-weight: 900;
+      color: var(--forest);
+    }
+
+    .sideCtas{
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      position: relative;
+    }
+
+    .sideNote{
+      margin-top: 10px;
+      font-size: 13px;
+      color: rgba(11,26,16,0.68);
+      font-weight: 600;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    /* Gallery + vertical video */
+    .mediaRow{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr 0.52fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: var(--glass2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      color: var(--ink);
+    }
+
+    .cardHead{
+      padding: 14px 14px 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cardTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .cardHint{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* Carousel */
+    .carousel{
+      padding: 14px;
+    }
+
+    .rail{
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(240px, 1fr);
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
+    }
+
+    .rail::-webkit-scrollbar{ height: 10px; }
+    .rail::-webkit-scrollbar-thumb{
+      background: rgba(13,89,37,0.18);
+      border-radius: 999px;
+    }
+
+    .shot{
+      scroll-snap-align: start;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      position: relative;
+      min-height: 280px;
+    }
+
+    .shot img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .shotCap{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.90);
+      border: 1px solid rgba(13,89,37,0.14);
+      padding: 10px 10px;
+      font-weight: 900;
+      color: var(--ink);
+      font-size: 13px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    }
+
+    /* Vertical video card */
+    .vwrap{
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .vframe{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      aspect-ratio: 9 / 16;
+      position: relative;
+    }
+
+    .vframe video,
+    .vframe iframe{
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      object-fit: cover;
+      background: rgba(0,0,0,0.08);
+    }
+
+    .vmeta{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 12px;
+    }
+
+    .vmeta p{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.7;
+      font-weight: 650;
+      font-size: 14px;
+    }
+
+    /* Details grid */
+    .details{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .detailCard{
+      padding: 16px;
+    }
+
+    .detailH3{
+      margin: 0 0 10px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .detailList{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.82);
+      line-height: 1.85;
+      font-weight: 650;
+      font-size: 15px;
+    }
+
+    .quote{
+      padding: 16px;
+      position: relative;
+    }
+
+    .quote:before{
+      content:"";
+      position:absolute;
+      inset: -60px auto auto -60px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle at center, rgba(224,100,58,0.18), rgba(224,100,58,0) 62%);
+      pointer-events:none;
+    }
+
+    .quoteText{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      line-height: 1.2;
+      color: var(--forest);
+      position: relative;
+    }
+
+    .quoteSub{
+      margin: 10px 0 0;
+      color: rgba(11,26,16,0.70);
+      font-weight: 650;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    /* CTA band */
+    .ctaBand{
+      margin-top: 14px;
+      border-radius: var(--r);
+      border: 1px solid rgba(11,26,16,0.12);
+      background: rgba(245,245,220,0.82);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .ctaBand h2{
+      margin: 0 0 6px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .ctaBand p{
+      margin: 0;
+      color: rgba(11,26,16,0.72);
+      font-weight: 650;
+      line-height: 1.7;
+      max-width: 80ch;
+    }
+
+    .ctaBtns{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px){
+      .wrap{ padding: 12px 14px 64px; }
+
+      .hero{
+        grid-template-columns: 1fr;
+      }
+
+      .heroMedia{
+        min-height: 320px;
+      }
+
+      .heroSide{
+        min-height: 0;
+      }
+
+      .mediaRow{
+        grid-template-columns: 1fr;
+      }
+
+      .rail{
+        grid-auto-columns: minmax(78%, 1fr);
+      }
+
+      .shot{
+        min-height: 240px;
+      }
+
+      .details{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Sunrise Room page">
+    <section class="topBand" aria-label="Room navigation and booking actions">
+      <div class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/rooms/">Rooms</a>
+        <span aria-hidden="true">›</span>
+        <span>Sunrise Room</span>
+      </div>
+  <div class="quickActions" aria-label="Quick actions">
+    <a class="btn secondary" href="/rooms/">Compare rooms</a>
+    <a class="btn primary" href="/booking/">Book Your Stay</a>
+  </div>
+</section>
+
+<!-- HERO -->
+<section class="hero" aria-label="Sunrise Room hero">
+  <!-- Big image first on mobile -->
+  <div class="heroMedia" aria-label="Sunrise Room hero image">
+    <img src="/assets/images/pages/rooms/sunrise/hero.jpg" alt="Sunrise Room with morning light and cloud forest views" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
+
+    <div class="heroTitleBadge" aria-label="Room title">
+      <div class="kicker">East-facing balcony • Dawn views</div>
+      <h1 class="heroH1">Sunrise Room</h1>
+      <p class="heroLead">
+        Awaken to the first light of day as the cloud forest comes alive. A cozy, intimate room designed for early risers, quiet mornings, and unforgettable views.
+      </p>
+    </div>
+  </div>
+
+  <!-- Story / highlights -->
+  <aside class="heroSide" aria-label="Sunrise Room highlights">
+    <div class="sideHead">
+      <h2 class="sideH2">The most magical hour, right outside your window</h2>
+      <p class="sideP">
+        Sip your coffee on the balcony as hummingbirds hover nearby and distant waterfalls echo through the valley.
+        Warm wood accents and soft lighting make this room feel calm, intimate, and deeply restorative.
+      </p>
+
+      <div class="pillRow" aria-label="Key highlights">
+        <span class="pill"><strong>Best for:</strong> early risers</span>
+        <span class="pill"><strong>Views:</strong> east-facing dawn</span>
+        <span class="pill"><strong>Vibe:</strong> cozy and quiet</span>
+        <span class="pill"><strong>Moment:</strong> balcony coffee</span>
+      </div>
+
+      <div class="sideCtas" aria-label="Primary actions">
+        <a class="btn primary" href="/booking/">Book Your Stay</a>
+        <a class="btn secondary" href="/contact/">Ask a question</a>
+        <a class="btn secondary" href="/rooms/">See all rooms</a>
+      </div>
+
+      <p class="sideNote">
+        Tip: If you love golden light and calm mornings, this is the room you will remember.
+      </p>
+    </div>
+
+    <div></div>
+  </aside>
+</section>
+
+<!-- GALLERY + VERTICAL VIDEO -->
+<section class="mediaRow" aria-label="Sunrise Room media">
+  <article class="card" aria-label="Photo carousel">
+    <div class="cardHead">
+      <h2 class="cardTitle">Photo highlights</h2>
+      <p class="cardHint">Swipe to explore the room and views</p>
+    </div>
+
+    <div class="carousel" aria-label="Sunrise Room carousel">
+      <div class="rail" aria-label="Scrollable photo rail">
+        <figure class="shot" aria-label="Balcony at sunrise">
+          <img src="/assets/images/pages/rooms/sunrise/01.jpg" alt="Sunrise Room balcony at dawn" loading="lazy" decoding="async" />
+          <figcaption class="shotCap">Balcony sunrise moments</figcaption>
+        </figure>
+
+        <figure class="shot" aria-label="Room interior">
+          <img src="/assets/images/pages/rooms/sunrise/02.jpg" alt="Cozy Sunrise Room interior" loading="lazy" decoding="async" />
+          <figcaption class="shotCap">Warm, intimate interior</figcaption>
+        </figure>
+
+        <figure class="shot" aria-label="Morning light">
+          <img src="/assets/images/pages/rooms/sunrise/03.jpg" alt="Morning light spilling into the room" loading="lazy" decoding="async" />
+          <figcaption class="shotCap">First light in the room</figcaption>
+        </figure>
+
+        <figure class="shot" aria-label="Forest view">
+          <img src="/assets/images/pages/rooms/sunrise/04.jpg" alt="Cloud forest view from Sunrise Room" loading="lazy" decoding="async" />
+          <figcaption class="shotCap">Cloud forest waking up</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <aside class="card" aria-label="Vertical video">
+    <div class="cardHead">
+      <h2 class="cardTitle">A 20 second feel</h2>
+      <p class="cardHint">Vertical 9:16 video</p>
+    </div>
+
+    <div class="vwrap">
+      <div class="vframe" aria-label="Sunrise Room vertical video placeholder">
+        <!-- Option A: local mp4 -->
+        <!-- <video src="/assets/videos/rooms/sunrise-vertical.mp4" playsinline muted autoplay loop controls></video> -->
+
+        <!-- Option B: placeholder image until video is ready -->
+        <img src="/assets/images/pages/rooms/sunrise/video-poster.jpg" alt="Sunrise Room video placeholder" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="vmeta">
+        <p>
+          Capture the moment the horizon turns gold. If you have one standout vertical clip, place it here.
+          When you are ready, swap the poster for an MP4 or an embed.
+        </p>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<!-- DETAILS -->
+<section class="details" aria-label="Room details">
+  <article class="card detailCard" aria-label="What you will love">
+    <h3 class="detailH3">What you will love</h3>
+    <ul class="detailList">
+      <li>East-facing balcony for sunrise views</li>
+      <li>Cozy wood accents and soft, calming lighting</li>
+      <li>Peaceful atmosphere ideal for recharging</li>
+      <li>Perfect base for early birding and nature walks</li>
+    </ul>
+  </article>
+
+  <article class="card quote" aria-label="Room quote">
+    <p class="quoteText">“Wake up to a horizon kissed by the first light of day.”</p>
+    <p class="quoteSub">
+      The Sunrise Room is for guests who want to feel the cloud forest awaken, slowly and beautifully, right from their balcony.
+    </p>
+  </article>
+</section>
+
+<!-- CTA -->
+<section class="ctaBand" aria-label="Booking call to action">
+  <div>
+    <h2>Ready to wake up to the cloud forest?</h2>
+    <p>
+      Check availability and book your stay in minutes. If you are deciding between rooms, compare them side by side.
+    </p>
+  </div>
+
+  <div class="ctaBtns" aria-label="CTA buttons">
+    <a class="btn primary" href="/booking/">Book Your Stay</a>
+    <a class="btn secondary" href="/rooms/">Compare rooms</a>
+    <a class="btn secondary" href="/contact/">Contact</a>
+  </div>
+</section>
+  </main>
+  <div id="siteFooter"></div>
+  <!-- TCFR global behavior: inject header/footer, GA, nav -->
+  <script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
