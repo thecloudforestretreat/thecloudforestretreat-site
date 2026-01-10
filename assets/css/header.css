@@ -1,84 +1,450 @@
-TCFR HEADER.CSS UPDATE
+/* /assets/css/header.css */
+/* The Cloud Forest Retreat - Global header (fixed + reliable on all browsers) */
+/* ASCII only */
 
-/* 
-Purpose:
-1. Normalize font sizes between links and dropdown buttons (desktop + mobile)
-2. Prevent mobile menu from covering full viewport height
-3. Preserve existing structure and JS behavior
-*/
+/* =====================
+   Tokens
+===================== */
+:root{
+  --tcfr-bg: #A1BFAA;
+  --tcfr-forest: #0D5925;
+  --tcfr-forest-2: #0B2B12;
+  --tcfr-orange: #E0643A;
+  --tcfr-beige: #F5F5DC;
+  --tcfr-line: rgba(13,89,37,.18);
+  --tcfr-shadow: 0 18px 55px rgba(0,0,0,.12);
+  --tcfr-radius: 18px;
 
-/* =========================
-   DESKTOP NAV FIXES
-   ========================= */
-
-/* Ensure dropdown buttons look identical to links */
-.tcfr-navDesktop .tcfr-link,
-.tcfr-navDesktop .tcfr-ddBtn {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.1;
+  /* Header height (used to offset the page when header is fixed) */
+  --tcfr-header-h: 68px;
 }
 
-/* Remove default button scaling */
-.tcfr-ddBtn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-family: inherit;
+/* Always respect hidden attribute */
+[hidden]{ display:none !important; }
+
+/* =====================
+   Make the header reliably sticky by using fixed positioning
+   Reason: if any ancestor has overflow/transform, position:sticky will not stick.
+   Fixed avoids that entire class of bugs.
+===================== */
+#siteHeader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5000;
 }
 
-/* Align caret without shrinking text */
-.tcfr-caret {
-  font-size: 0.75em;
-  margin-left: 4px;
+/* Push page content down so it does not sit under the fixed header */
+body{
+  padding-top: var(--tcfr-header-h);
 }
 
-/* =========================
-   MOBILE NAV FIXES
-   ========================= */
-
-/* Normalize mobile link + group sizes */
-.tcfr-mLink,
-.tcfr-mGroup {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-/* Remove button scaling differences */
-.tcfr-mGroup {
-  background: none;
-  border: none;
-  padding: 16px 18px;
+/* =====================
+   Header bar
+===================== */
+.tcfr-header{
   width: 100%;
-  text-align: left;
-  font-family: inherit;
+  background: rgba(161,191,170,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--tcfr-forest);
+  border-bottom: 1px solid rgba(13,89,37,.12);
 }
 
-/* Sub-links slightly smaller but consistent */
-.tcfr-mSubLink {
+.tcfr-header.is-scrolled{
+  background: rgba(245,245,220,0.82);
+  box-shadow: 0 12px 34px rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(13,89,37,.14);
+}
+
+.tcfr-shell{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  min-height: var(--tcfr-header-h);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* =====================
+   Brand
+===================== */
+.tcfr-brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.tcfr-logo{
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.tcfr-brandText{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 520px;
   font-size: 16px;
-  font-weight: 600;
+  line-height: 1;
 }
 
-/* =========================
-   MOBILE PANEL HEIGHT FIX
-   ========================= */
-
-/* Prevent full-screen takeover */
-.tcfr-mobilePanel {
-  max-height: calc(100vh - 96px);
-  overflow-y: auto;
+@media (max-width: 420px){
+  .tcfr-brandText{ max-width: 240px; }
 }
 
-/* Keep CTA visible without pushing panel full height */
-.tcfr-mobileCta {
-  margin-bottom: 16px;
+/* =====================
+   Desktop nav
+===================== */
+.tcfr-nav{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-/* Ensure overlay does not force full height */
-.tcfr-mobileOverlay {
+.tcfr-navDesktop{ display:none; }
+@media (min-width: 901px){
+  .tcfr-navDesktop{ display:flex; }
+}
+
+.tcfr-link{
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 10px;
+  border-radius: 999px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.tcfr-link:hover{ background: rgba(13,89,37,.08); }
+
+/* Dropdowns (desktop) */
+.tcfr-dd{ position: relative; }
+
+.tcfr-ddBtn{
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.tcfr-ddBtn:hover{ background: rgba(13,89,37,.08); }
+
+.tcfr-caret{ font-size: 12px; opacity: .9; }
+
+.tcfr-ddMenu{
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 220px;
+  background: rgba(245,245,220,.98);
+  border: 1px solid rgba(13,89,37,.16);
+  border-radius: 16px;
+  box-shadow: var(--tcfr-shadow);
+  padding: 8px;
+  display: none;
+  color: var(--tcfr-forest);
+}
+
+.tcfr-dd:hover .tcfr-ddMenu,
+.tcfr-dd:focus-within .tcfr-ddMenu{
+  display: block;
+}
+
+.tcfr-ddItem{
+  display: block;
+  padding: 10px 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--tcfr-forest);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.tcfr-ddItem:hover{ background: rgba(13,89,37,.08); }
+
+/* =====================
+   Actions (right side)
+===================== */
+.tcfr-actions{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+/* Language pills */
+.tcfr-lang{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,.18);
+  background: rgba(13,89,37,.05);
+}
+
+.tcfr-langBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+}
+
+.tcfr-langBtn.is-active{ background: rgba(13,89,37,.10); }
+
+.tcfr-langBtn.is-disabled{
+  opacity: .55;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+/* CTA */
+.tcfr-cta{
+  display: none;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 11px 14px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--tcfr-orange);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 14px 30px rgba(224,100,58,.22);
+  white-space: nowrap;
+}
+@media (min-width: 901px){
+  .tcfr-cta{ display: inline-flex; }
+}
+
+/* =====================
+   Burger (mobile)
+===================== */
+.tcfr-burger{
+  appearance: none;
+  border: 1px solid rgba(13,89,37,.18);
+  background: rgba(13,89,37,.05);
+  border-radius: 14px;
+  height: 42px;
+  width: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+}
+
+.tcfr-burgerLines{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.tcfr-burgerLines span{
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 999px;
+  display: block;
+}
+
+@media (min-width: 901px){
+  .tcfr-burger{ display:none; }
+}
+
+/* =====================
+   Mobile overlay + panel
+   Visibility controlled by [hidden] in header.html + JS.
+===================== */
+.tcfr-mobileOverlay{
   position: fixed;
   inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 6000;
+}
+
+.tcfr-mobilePanel{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(420px, 92vw);
+  background: rgba(245,245,220,.98);
+  color: var(--tcfr-forest);
+  z-index: 7000;
+  box-shadow: -18px 0 55px rgba(0,0,0,.20);
+  border-left: 1px solid rgba(13,89,37,.14);
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+}
+
+.tcfr-mobileTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(13,89,37,.14);
+}
+
+.tcfr-mobileBrand{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.tcfr-mobileTitle{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.tcfr-close{
+  appearance: none;
+  border: 1px solid rgba(13,89,37,.16);
+  background: rgba(13,89,37,.05);
+  border-radius: 14px;
+  height: 42px;
+  width: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 900;
+  color: inherit;
+}
+
+.tcfr-navMobile{
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+  padding-bottom: 16px;
+}
+
+.tcfr-mLink{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(13,89,37,.14);
+  background: rgba(255,255,255,.55);
+  text-decoration: none;
+  color: var(--tcfr-forest);
+  font-weight: 700;
+}
+
+.tcfr-mGroup{
+  appearance: none;
+  border: 1px solid rgba(13,89,37,.14);
+  background: rgba(255,255,255,.55);
+  border-radius: 14px;
+  padding: 12px 12px;
+  text-align: left;
+  color: var(--tcfr-forest);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.tcfr-mSub{
+  padding: 6px 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tcfr-mSubLink{
+  text-decoration: none;
+  color: var(--tcfr-forest);
+  font-weight: 700;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(13,89,37,.12);
+  background: rgba(255,255,255,.45);
+}
+
+.tcfr-mSubLink:hover{ background: rgba(13,89,37,.06); }
+
+.tcfr-mobileDivider{
+  height: 1px;
+  background: rgba(13,89,37,.14);
+  margin: 10px 0;
+}
+
+.tcfr-mobileLang{ padding: 10px 8px; }
+
+.tcfr-mobileLangLabel{
+  font-weight: 900;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--tcfr-forest);
+}
+
+.tcfr-mobileCta{
+  margin-top: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--tcfr-orange);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(224,100,58,.22);
+}
+
+@media (min-width: 901px){
+  .tcfr-mobileOverlay,
+  .tcfr-mobilePanel{
+    display: none !important;
+  }
+}
+
+/* Scroll lock (JS toggles this on <html>) */
+html.tcfr-navOpen{
+  overflow: hidden;
 }
