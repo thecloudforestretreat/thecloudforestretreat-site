@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Features | The Cloud Forest Retreat</title>
-  <meta name="description" content="Explore everything that makes The Cloud Forest Retreat special: amenities, local produce, cloud forest flora and fauna, nearby attractions, landscapes, and gallery." />
+  <title>Choco Andino de Pichincha | The Cloud Forest Retreat</title>
+  <meta name="description" content="Learn about the Choco Andino de Pichincha UNESCO Biosphere Reserve - a biodiversity hotspot near Quito and home to cloud forests, endemic species, and community-led conservation. Plan your visit from The Cloud Forest Retreat." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/features/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/features/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/choco-andino-de-pichincha/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/features/choco-andino-de-pichincha/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/features/choco-andino-de-pichincha/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Features | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Amenities, nature, landscapes, attractions, produce, and gallery. Explore the full experience." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/features/" />
+  <meta property="og:title" content="Choco Andino de Pichincha | The Cloud Forest Retreat" />
+  <meta property="og:description" content="A UNESCO Biosphere Reserve near Quito with cloud forests, endemic species, and community-led conservation. Learn what makes Choco Andino special." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/features/choco-andino-de-pichincha/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat features overview" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat - Choco Andino de Pichincha" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Features | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Amenities, nature, landscapes, attractions, produce, and gallery. Explore the full experience." />
+  <meta name="twitter:title" content="Choco Andino de Pichincha | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Learn about the UNESCO Biosphere Reserve near Quito - cloud forests, biodiversity, and conservation." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -42,25 +43,21 @@
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
 
+      --accent: #0D5925;
+      --accent2: #E0643A;
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
-      --forest: #0D5925;
       --muted: rgba(11,26,16,0.72);
-
-      --chipBg: rgba(255,255,255,0.62);
-      --chipLine: rgba(13,89,37,0.18);
-
-      --imgPlaceholderWide: /assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg;
     }
 
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
+    *{ box-sizing: border-box; }
+    body{ margin: 0; }
 
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 18px 18px 84px;
+      padding: 18px 18px 76px;
     }
 
     .topBand{
@@ -98,22 +95,16 @@
 
     .hero{
       margin-top: 14px;
-      border: 1px solid var(--line);
       border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
       overflow: hidden;
-      position: relative;
-      color: var(--ink);
-    }
-
-    .heroMedia{
-      position: relative;
-      min-height: 340px;
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: var(--shadow);
       background: rgba(0,0,0,0.10);
+      position: relative;
+      min-height: 320px;
     }
 
-    .heroMedia img{
+    .hero img{
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -125,24 +116,24 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+        radial-gradient(900px 520px at 20% 18%, rgba(224,100,58,0.16), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.50));
       pointer-events: none;
     }
 
-    .heroInner{
+    .heroBadge{
       position: absolute;
       left: 14px;
-      right: 14px;
       bottom: 14px;
+      right: 14px;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.30);
+      background: rgba(0,0,0,0.28);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       padding: 14px;
-      color: rgba(255,255,255,0.96);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+      color: #fff;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
     }
 
     .kicker{
@@ -162,84 +153,23 @@
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1.02;
-      font-size: clamp(32px, 3.8vw, 54px);
+      font-size: clamp(30px, 3.6vw, 52px);
       color: #fff;
     }
 
     .heroLead{
       margin: 0;
       max-width: 80ch;
-      font-weight: 600;
+      font-weight: 650;
       line-height: 1.7;
       color: rgba(231,228,209,0.92);
       font-size: 15.5px;
     }
 
-    .filters{
-      margin-top: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .filterLeft{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      min-width: 0;
-    }
-
-    .filterLabel{
-      font-weight: 900;
-      color: rgba(11,26,16,0.72);
-      font-size: 13px;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
-
-    .chips{
-      display: inline-flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .chip{
-      appearance: none;
-      border: 1px solid var(--chipLine);
-      background: var(--chipBg);
-      border-radius: 999px;
-      padding: 10px 12px;
-      cursor: pointer;
-      font-weight: 900;
-      font-size: 13px;
-      color: #0b2b12;
-      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-      user-select: none;
-      white-space: nowrap;
-    }
-
-    .chip.is-active{
-      background: rgba(224,100,58,0.92);
-      border-color: rgba(0,0,0,0.10);
-      color: #fff;
-      box-shadow: 0 14px 30px rgba(224,100,58,0.18);
-    }
-
-    .filterRight{
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .grid{
+    .gridA{
       margin-top: 14px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 14px;
       align-items: stretch;
     }
@@ -252,88 +182,55 @@
       overflow: hidden;
       color: var(--ink);
       min-width: 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card a{
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .cardMedia{
       position: relative;
-      aspect-ratio: 16 / 10;
-      background: rgba(0,0,0,0.10);
-      overflow: hidden;
     }
 
-    .cardMedia img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
-
-    .cardMediaShade{
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.26));
-      pointer-events: none;
-    }
-
-    .cardTopBadge{
-      position: absolute;
-      left: 12px;
-      top: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.20);
-      background: rgba(0,0,0,0.30);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      color: rgba(255,255,255,0.96);
-      font-weight: 900;
-      font-size: 12px;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-    }
-
-    .cardBody{
-      padding: 14px;
-      display: grid;
-      gap: 10px;
-      flex: 1 1 auto;
+    .cardHead{
+      padding: 14px 14px 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
 
     .cardTitle{
       margin: 0;
       font-family: var(--font-head);
-      font-weight: 900;
+      color: var(--accent);
       letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-      color: var(--forest);
+      font-weight: 900;
+      font-size: 20px;
     }
 
-    .cardText{
+    .cardHint{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .pad{
+      padding: 14px;
+    }
+
+    .p{
       margin: 0;
       color: rgba(11,26,16,0.78);
-      font-weight: 650;
       line-height: 1.75;
       font-size: 14.8px;
+      font-weight: 650;
     }
 
+    .p + .p{ margin-top: 10px; }
+
     .pillRow{
+      margin-top: 12px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      align-items: center;
     }
 
     .pill{
@@ -344,65 +241,172 @@
       border-radius: 999px;
       border: 1px solid rgba(13,89,37,0.18);
       background: rgba(255,255,255,0.62);
-      color: #0b2b12;
+      color: var(--ink);
       font-weight: 900;
       font-size: 13px;
       white-space: nowrap;
-      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+    }
+    .pill strong{ color: var(--accent); }
+
+    .mapWrap{
+      padding: 14px;
     }
 
-    .cardCtaRow{
+    .mapFrame{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      position: relative;
+    }
+
+    .mapFrame img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .mapTag{
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      right: 12px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.16);
+      padding: 10px 10px;
+      font-weight: 900;
+      color: var(--ink);
+      font-size: 13px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    }
+
+    .gridB{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .miniCarouselPad{ padding: 14px; }
+
+    .miniCarousel{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      overflow: hidden;
+    }
+
+    .miniViewport{
+      position: relative;
+      overflow: hidden;
+      background: rgba(0,0,0,0.08);
+    }
+
+    .miniTrack{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-top: 2px;
-      flex-wrap: wrap;
+      width: 100%;
+      transform: translateX(0);
+      transition: transform 420ms ease;
+      will-change: transform;
     }
 
-    .cardCta{
+    .miniSlide{
+      flex: 0 0 100%;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .miniSlide img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .miniCap{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 9px 11px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+    }
+
+    .miniArrow{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 44px;
+      width: 48px;
+      border-radius: 16px;
+      border: 1px solid rgba(245,245,220,0.45);
+      background: rgba(11,26,16,0.30);
+      color: rgba(231,228,209,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+      cursor: pointer;
+      user-select: none;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
       font-weight: 900;
-      color: #0b2b12;
-      font-size: 13px;
+      line-height: 1;
+      z-index: 3;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .miniArrow.prev{ left: 10px; }
+    .miniArrow.next{ right: 10px; }
+
+    .miniNav{
+      border-top: 1px solid rgba(11,26,16,0.12);
       padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
-      white-space: nowrap;
+      display: flex;
+      justify-content: center;
     }
 
-    .card:hover .cardCta{
-      background: rgba(224,100,58,0.10);
-      border-color: rgba(224,100,58,0.30);
+    .miniDots{
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
     }
 
-    .card:hover .cardMedia img{
-      transform: scale(1.03);
-      transition: transform 260ms ease;
+    .miniDotBtn{
+      appearance: none;
+      border: 1px solid rgba(13,89,37,0.20);
+      background: rgba(255,255,255,0.72);
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      padding: 0;
+    }
+    .miniDotBtn.is-active{
+      background: rgba(224,100,58,0.95);
+      border-color: rgba(0,0,0,0.10);
+      box-shadow: 0 10px 22px rgba(224,100,58,0.18);
+      transform: scale(1.05);
     }
 
-    .sectionTitle{
-      margin: 18px 0 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-      color: var(--forest);
-    }
-
-    .sectionHint{
-      margin: 8px 0 0;
-      color: var(--muted);
+    .list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.82);
+      line-height: 1.85;
       font-weight: 650;
-      line-height: 1.7;
-      font-size: 14px;
-      max-width: 90ch;
+      font-size: 15px;
     }
+    .list li{ margin: 6px 0; }
 
     .ctaBand{
       margin-top: 14px;
@@ -422,7 +426,7 @@
     .ctaBand h2{
       margin: 0 0 6px;
       font-family: var(--font-head);
-      color: var(--forest);
+      color: var(--accent);
       font-weight: 900;
       letter-spacing: -0.02em;
       font-size: 22px;
@@ -444,282 +448,167 @@
       align-items: center;
     }
 
-    .is-hidden{ display:none !important; }
-
     @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 74px; }
-      .heroMedia{ min-height: 280px; }
-      .grid{ grid-template-columns: 1fr; }
-      .cardMedia{ aspect-ratio: 4 / 3; }
+      .wrap{ padding: 12px 14px 64px; }
+      .hero{ min-height: 260px; }
+      .gridA{ grid-template-columns: 1fr; }
+      .gridB{ grid-template-columns: 1fr; }
+      .miniSlide{ aspect-ratio: 4 / 3; }
+      .miniArrow.prev{ left: 8px; }
+      .miniArrow.next{ right: 8px; }
     }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Features overview page">
-    <section class="topBand" aria-label="Page navigation and quick actions">
+  <main class="wrap" aria-label="Choco Andino de Pichincha page">
+    <section class="topBand" aria-label="Page navigation and actions">
       <div class="crumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">›</span>
-        <span>Features</span>
+        <a href="/features/">Features</a>
+        <span aria-hidden="true">›</span>
+        <span>Choco Andino de Pichincha</span>
       </div>
       <div class="quickActions" aria-label="Quick actions">
-        <a class="btn secondary" href="/rooms/">View Rooms</a>
+        <a class="btn secondary" href="/features/">All features</a>
         <a class="btn primary" href="/booking/">Book Your Stay</a>
       </div>
     </section>
-<section class="hero" aria-label="Features hero">
-  <div class="heroMedia" aria-label="Hero image">
-    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat view and surroundings" loading="eager" decoding="async" />
-    <div class="heroShade" aria-hidden="true"></div>
+<section class="hero" aria-label="Hero">
+  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest landscape near The Cloud Forest Retreat" loading="eager" decoding="async" />
+  <div class="heroShade" aria-hidden="true"></div>
+  <div class="heroBadge" aria-label="Title and introduction">
+    <div class="kicker">UNESCO Biosphere Reserve • Cloud forests • Near Quito</div>
+    <h1 class="heroH1">Choco Andino de Pichincha</h1>
+    <p class="heroLead">
+      A living corridor of cloud forest and mountain ecosystems where birdsong, orchids, and mist shape the rhythm of the day.
+      This is the natural region that surrounds Mindo and makes your stay feel so wild, vibrant, and alive.
+    </p>
+  </div>
+</section>
 
-    <div class="heroInner" aria-label="Hero content">
-      <div class="kicker">Explore the experience</div>
-      <h1 class="heroH1">Features</h1>
-      <p class="heroLead">
-        Everything that makes your stay feel special: cloud forest life, landscapes, nearby wonders, fresh farm produce, and the details that make the retreat comfortable.
+<section class="gridA" aria-label="Map and overview">
+  <article class="card" aria-label="Map card">
+    <div class="cardHead">
+      <h2 class="cardTitle">Where you are in the Biosphere Reserve</h2>
+      <p class="cardHint">Map overview</p>
+    </div>
+    <div class="mapWrap">
+      <div class="mapFrame" aria-label="Choco Andino map">
+        <img src="/assets/images/pages/features/choco-andino/choco-andino-map.jpg" alt="Choco Andino de Pichincha Biosphere Reserve map" loading="lazy" decoding="async" />
+        <div class="mapTag">Place your map image at: /assets/images/pages/features/choco-andino/choco-andino-map.jpg</div>
+      </div>
+    </div>
+  </article>
+
+  <aside class="card" aria-label="Why it matters">
+    <div class="cardHead">
+      <h2 class="cardTitle">Why it is important</h2>
+      <p class="cardHint">Biodiversity + conservation</p>
+    </div>
+    <div class="pad">
+      <p class="p">
+        The Choco Andino de Pichincha Biosphere Reserve was nominated in 2018 and spans 286,806 hectares.  [oai_citation:0‡UNESCO](https://www.unesco.org/en/mab/choco-andino-de-pichincha)
+        It stretches from low foothill forests to high Andean landscapes (roughly 360m to 4,480m), creating a huge range of habitats in one region.  [oai_citation:1‡UNESCO](https://www.unesco.org/en/mab/choco-andino-de-pichincha)
       </p>
+      <p class="p">
+        That habitat diversity is why the area is recognized for biodiversity and endemism. UNESCO notes thousands of plant species and rich wildlife across mammals, reptiles, birds, and amphibians.  [oai_citation:2‡UNESCO](https://www.unesco.org/en/mab/choco-andino-de-pichincha)
+      </p>
+
+      <div class="pillRow" aria-label="Quick facts">
+        <span class="pill"><strong>UNESCO:</strong> MAB network</span>
+        <span class="pill"><strong>Year:</strong> 2018</span>
+        <span class="pill"><strong>Area:</strong> 286,806 ha</span>
+        <span class="pill"><strong>Range:</strong> 360m to 4,480m</span>
+      </div>
+
+      <div class="pillRow" aria-label="Suggested experiences">
+        <span class="pill"><strong>Best for:</strong> birding</span>
+        <span class="pill"><strong>Best for:</strong> waterfalls</span>
+        <span class="pill"><strong>Best for:</strong> cloud forest hikes</span>
+      </div>
     </div>
-  </div>
+  </aside>
 </section>
 
-<section class="filters" aria-label="Feature filters">
-  <div class="filterLeft">
-    <div class="filterLabel">Filter:</div>
-    <div class="chips" aria-label="Category chips">
-      <button class="chip is-active" type="button" data-filter="all">All</button>
-      <button class="chip" type="button" data-filter="essentials">Essentials</button>
-      <button class="chip" type="button" data-filter="nature">Nature</button>
-      <button class="chip" type="button" data-filter="landscapes">Landscapes</button>
-      <button class="chip" type="button" data-filter="attractions">Attractions</button>
-      <button class="chip" type="button" data-filter="gallery">Gallery</button>
+<section class="gridB" aria-label="Carousel and what to look for">
+  <article class="card" aria-label="Photo carousel">
+    <div class="cardHead">
+      <h2 class="cardTitle">What it looks like</h2>
+      <p class="cardHint">Replace with your best images</p>
     </div>
-  </div>
 
-  <div class="filterRight" aria-label="Quick links">
-    <a class="btn secondary" href="/contact/">Ask a question</a>
-  </div>
+    <div class="miniCarouselPad">
+      <div class="miniCarousel" aria-label="Choco Andino mini carousel">
+        <div class="miniViewport" id="caCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
+          <button class="miniArrow prev" type="button" data-action="prev" aria-label="Previous photo">‹</button>
+          <button class="miniArrow next" type="button" data-action="next" aria-label="Next photo">›</button>
+
+          <div class="miniTrack" data-track>
+            <figure class="miniSlide" aria-label="Carousel image 1">
+              <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest canopy and mist" loading="lazy" decoding="async" />
+              <figcaption class="miniCap">Cloud forest mornings</figcaption>
+            </figure>
+
+            <figure class="miniSlide" aria-label="Carousel image 2">
+              <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Waterfall trail in the region" loading="lazy" decoding="async" />
+              <figcaption class="miniCap">Hidden waterfall trails</figcaption>
+            </figure>
+
+            <figure class="miniSlide" aria-label="Carousel image 3">
+              <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Birdwatching viewpoint" loading="lazy" decoding="async" />
+              <figcaption class="miniCap">Birding viewpoints</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="miniNav" aria-label="Carousel dots">
+          <div class="miniDots" data-dots aria-label="Choose a photo"></div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <aside class="card" aria-label="How to experience it">
+    <div class="cardHead">
+      <h2 class="cardTitle">How to experience it</h2>
+      <p class="cardHint">Simple guest guide</p>
+    </div>
+    <div class="pad">
+      <p class="p">
+        Think of Choco Andino as a giant outdoor living room: every road turn can reveal a new microclimate, a new set of birds, and a new trail.
+        The best experiences here are slow and sensory.
+      </p>
+
+      <ul class="list" aria-label="Visitor ideas">
+        <li>Start early for birds and soft light.</li>
+        <li>Plan for short hikes with waterfall breaks.</li>
+        <li>Bring a light rain layer. Cloud forest weather shifts fast.</li>
+        <li>Support local guides and community projects - it is part of what makes a biosphere reserve work.</li>
+      </ul>
+
+      <div class="pillRow" aria-label="Quick actions">
+        <span class="pill"><strong>Tip:</strong> ask us for a route</span>
+        <span class="pill"><strong>Tip:</strong> pack binoculars</span>
+        <span class="pill"><strong>Tip:</strong> waterproof shoes</span>
+      </div>
+    </div>
+  </aside>
 </section>
 
-<h2 class="sectionTitle">Pick what you want to explore</h2>
-<p class="sectionHint">
-  Tap any card to open the full page for that topic. If you are not sure where to start, begin with Amenities and Fauna.
-</p>
-
-<section class="grid" aria-label="Features grid">
-  <!-- ESSENTIALS -->
-  <article class="card" data-cat="essentials" aria-label="Amenities card">
-    <a href="/features/ammenities/" aria-label="Open Amenities page">
-      <div class="cardMedia" aria-label="Amenities image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Amenities at The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Essentials</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Amenities</h3>
-        <p class="cardText">The comfort details that make the retreat feel easy: the essentials, the extras, and the little things guests remember.</p>
-        <div class="pillRow" aria-label="Amenities highlights">
-          <span class="pill">List view</span>
-          <span class="pill">2 images</span>
-          <span class="pill">Stay-ready</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Amenities</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <article class="card" data-cat="essentials" aria-label="Produce card">
-    <a href="/features/produce/" aria-label="Open Produce page">
-      <div class="cardMedia" aria-label="Produce image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Farm produce and local ingredients" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Essentials</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Produce</h3>
-        <p class="cardText">From the farm to your table. Fresh ingredients, local flavor, and the kind of simple food that tastes better in the mountains.</p>
-        <div class="pillRow" aria-label="Produce highlights">
-          <span class="pill">Farm-to-table</span>
-          <span class="pill">Local</span>
-          <span class="pill">Seasonal</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Produce</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- NATURE -->
-  <article class="card" data-cat="nature" aria-label="Flora card">
-    <a href="/features/flora/" aria-label="Open Flora page">
-      <div class="cardMedia" aria-label="Flora image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest flora" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Nature</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Flora</h3>
-        <p class="cardText">A living green world: orchids, moss, towering trees, and the plant life that makes the cloud forest feel unreal.</p>
-        <div class="pillRow" aria-label="Flora highlights">
-          <span class="pill">Photos</span>
-          <span class="pill">On-property</span>
-          <span class="pill">Cloud forest</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Flora</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <article class="card" data-cat="nature" aria-label="Fauna card">
-    <a href="/features/fauna/" aria-label="Open Fauna page">
-      <div class="cardMedia" aria-label="Fauna image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest fauna" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Nature</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Fauna</h3>
-        <p class="cardText">Birdsong, movement in the trees, and the feeling that nature is everywhere. A favorite for birders and curious explorers.</p>
-        <div class="pillRow" aria-label="Fauna highlights">
-          <span class="pill">Images</span>
-          <span class="pill">2 videos</span>
-          <span class="pill">Wildlife</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Fauna</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- LANDSCAPES -->
-  <article class="card" data-cat="landscapes" aria-label="Choco Andino de Pichincha card">
-    <a href="/features/choco-andino-de-pichincha/" aria-label="Open Choco Andino de Pichincha page">
-      <div class="cardMedia" aria-label="Choco Andino image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Choco Andino de Pichincha" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Landscapes</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Choco Andino de Pichincha</h3>
-        <p class="cardText">A region shaped by mist, mountains, and biodiversity. Learn the story of where you are staying and why it matters.</p>
-        <div class="pillRow" aria-label="Choco Andino highlights">
-          <span class="pill">History</span>
-          <span class="pill">Context</span>
-          <span class="pill">Region</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore the Region</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <article class="card" data-cat="landscapes" aria-label="Rio Guayllabamba card">
-    <a href="/features/rio-guayllabamba/" aria-label="Open Rio Guayllabamba page">
-      <div class="cardMedia" aria-label="Rio Guayllabamba image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Rio Guayllabamba" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Landscapes</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Rio Guayllabamba</h3>
-        <p class="cardText">A river landscape that shapes the valley. A peaceful read with visuals that make the scale feel real.</p>
-        <div class="pillRow" aria-label="Rio highlights">
-          <span class="pill">Horizontal images</span>
-          <span class="pill">1 video</span>
-          <span class="pill">Landscape</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore the River</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <article class="card" data-cat="landscapes" aria-label="Pululahua card">
-    <a href="/features/pululahua/" aria-label="Open Pululahua page">
-      <div class="cardMedia" aria-label="Pululahua image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Pululahua" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Landscapes</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Pululahua</h3>
-        <p class="cardText">A rare and unforgettable landscape. Learn what makes it unique and why it belongs on your Ecuador itinerary.</p>
-        <div class="pillRow" aria-label="Pululahua highlights">
-          <span class="pill">Info</span>
-          <span class="pill">Images</span>
-          <span class="pill">Must-see</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Pululahua</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- ATTRACTIONS -->
-  <article class="card" data-cat="attractions" aria-label="Attractions card">
-    <a href="/features/attractions/" aria-label="Open Attractions page">
-      <div class="cardMedia" aria-label="Attractions image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Attractions near the retreat" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Attractions</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Attractions</h3>
-        <p class="cardText">Your adventure list, curated. The places guests love most, with visuals that help you choose what fits your day.</p>
-        <div class="pillRow" aria-label="Attractions highlights">
-          <span class="pill">Images</span>
-          <span class="pill">4 videos</span>
-          <span class="pill">Nearby</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Attractions</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- GALLERY -->
-  <article class="card" data-cat="gallery" aria-label="Gallery card">
-    <a href="/features/gallery/" aria-label="Open Gallery page">
-      <div class="cardMedia" aria-label="Gallery image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat gallery" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Gallery</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Gallery</h3>
-        <p class="cardText">A visual tour of the retreat and surroundings. Perfect if you want to feel the vibe before you book.</p>
-        <div class="pillRow" aria-label="Gallery highlights">
-          <span class="pill">Images</span>
-          <span class="pill">Mood</span>
-          <span class="pill">Highlights</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Open Gallery</span>
-        </div>
-      </div>
-    </a>
-  </article>
-</section>
-
-<section class="ctaBand" aria-label="Bottom call to action">
+<section class="ctaBand" aria-label="Call to action">
   <div>
-    <h2>Want help choosing what to do first?</h2>
-    <p>Message us and we will recommend the best experiences based on your time, season, and energy level.</p>
+    <h2>Make your stay part of the landscape</h2>
+    <p>
+      When you stay at The Cloud Forest Retreat, you are already inside the wider Choco Andino story.
+      Want help planning a day of waterfalls, birding, or viewpoints? Contact us and we will recommend a simple route.
+    </p>
   </div>
   <div class="ctaBtns" aria-label="CTA buttons">
-    <a class="btn primary" href="/contact/">Contact</a>
-    <a class="btn secondary" href="/rooms/">View Rooms</a>
-    <a class="btn secondary" href="/booking/">Book Your Stay</a>
+    <a class="btn primary" href="/booking/">Book Your Stay</a>
+    <a class="btn secondary" href="/contact/">Ask a question</a>
+    <a class="btn secondary" href="/features/">Explore features</a>
   </div>
 </section>
   </main>
@@ -729,33 +618,176 @@
     (function(){
       "use strict";
 
-      var chips = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
-      var cards = Array.prototype.slice.call(document.querySelectorAll(".card[data-cat]"));
+      var root = document.getElementById("caCarousel");
+      if (!root) return;
 
-      function setActiveChip(active){
-        chips.forEach(function(c){
-          c.classList.toggle("is-active", c.getAttribute("data-filter") === active);
-        });
+      var track = root.querySelector("[data-track]");
+      var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
+      if (!track) return;
+
+      var slides = track.children ? Array.prototype.slice.call(track.children) : [];
+      if (!slides.length) return;
+
+      var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2800");
+      var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
+
+      var index = 0;
+      var timer = null;
+      var resumeTimer = null;
+      var isPaused = false;
+
+      function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+
+      function setTransform(){
+        track.style.transform = "translateX(" + (-index * 100) + "%)";
       }
 
-      function applyFilter(f){
-        if (f === "all"){
-          cards.forEach(function(card){ card.classList.remove("is-hidden"); });
-          return;
+      function setActiveDot(){
+        if (!dotsWrap) return;
+        var btns = dotsWrap.querySelectorAll("button[data-dot]");
+        for (var i = 0; i < btns.length; i++){
+          btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
         }
-        cards.forEach(function(card){
-          var cat = card.getAttribute("data-cat");
-          card.classList.toggle("is-hidden", cat !== f);
-        });
       }
 
-      chips.forEach(function(chip){
-        chip.addEventListener("click", function(){
-          var f = chip.getAttribute("data-filter") || "all";
-          setActiveChip(f);
-          applyFilter(f);
-        });
-      });
+      function goTo(i){
+        index = clamp(i, 0, slides.length - 1);
+        setTransform();
+        setActiveDot();
+      }
+
+      function next(){
+        var n = index + 1;
+        if (n >= slides.length) n = 0;
+        goTo(n);
+      }
+
+      function prev(){
+        var p = index - 1;
+        if (p < 0) p = slides.length - 1;
+        goTo(p);
+      }
+
+      function clearTimers(){
+        if (timer) { clearInterval(timer); timer = null; }
+        if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+      }
+
+      function startAutoplay(){
+        clearTimers();
+        if (autoplayMs < 1200) autoplayMs = 1200;
+        timer = setInterval(function(){
+          if (isPaused) return;
+          next();
+        }, autoplayMs);
+      }
+
+      function pauseTemporarily(){
+        isPaused = true;
+        if (resumeTimer) clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function(){
+          isPaused = false;
+        }, pauseAfterMs);
+      }
+
+      function buildDots(){
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = "";
+        for (var i = 0; i < slides.length; i++){
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "miniDotBtn" + (i === 0 ? " is-active" : "");
+          b.setAttribute("data-dot", String(i));
+          b.setAttribute("aria-label", "Go to photo " + (i + 1));
+          b.addEventListener("click", function(){
+            var n = Number(this.getAttribute("data-dot") || "0");
+            goTo(n);
+            pauseTemporarily();
+          });
+          dotsWrap.appendChild(b);
+        }
+      }
+
+      function bindArrows(){
+        var prevBtn = root.querySelector('button[data-action="prev"]');
+        var nextBtn = root.querySelector('button[data-action="next"]');
+
+        if (prevBtn){
+          prevBtn.addEventListener("click", function(){
+            prev();
+            pauseTemporarily();
+          });
+        }
+
+        if (nextBtn){
+          nextBtn.addEventListener("click", function(){
+            next();
+            pauseTemporarily();
+          });
+        }
+      }
+
+      function bindHoverPause(){
+        root.addEventListener("mouseenter", function(){ isPaused = true; });
+        root.addEventListener("mouseleave", function(){ isPaused = false; });
+        root.addEventListener("focusin", function(){ isPaused = true; });
+        root.addEventListener("focusout", function(){ isPaused = false; });
+      }
+
+      function bindTouchSwipe(){
+        var startX = 0;
+        var deltaX = 0;
+        var isDown = false;
+
+        function onDown(x){
+          isDown = true;
+          startX = x;
+          deltaX = 0;
+          pauseTemporarily();
+        }
+
+        function onMove(x){
+          if (!isDown) return;
+          deltaX = x - startX;
+        }
+
+        function onUp(){
+          if (!isDown) return;
+          isDown = false;
+
+          var threshold = 38;
+          if (Math.abs(deltaX) > threshold){
+            if (deltaX < 0) next();
+            else prev();
+          }
+          deltaX = 0;
+        }
+
+        root.addEventListener("touchstart", function(e){
+          if (!e.touches || !e.touches.length) return;
+          onDown(e.touches[0].clientX);
+        }, { passive: true });
+
+        root.addEventListener("touchmove", function(e){
+          if (!e.touches || !e.touches.length) return;
+          onMove(e.touches[0].clientX);
+        }, { passive: true });
+
+        root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
+        root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+      }
+
+      buildDots();
+      bindArrows();
+      bindHoverPause();
+      bindTouchSwipe();
+
+      goTo(0);
+      startAutoplay();
+
+      window.addEventListener("resize", function(){
+        setTransform();
+      }, { passive: true });
     })();
   </script>
 </body>
