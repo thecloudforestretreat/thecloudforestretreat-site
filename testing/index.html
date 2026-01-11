@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Common Areas | The Cloud Forest Retreat</title>
-  <meta name="description" content="Relax and connect in the Common Areas at The Cloud Forest Retreat. Shared spaces with stunning views, cozy seating, and a welcoming kitchen designed for comfort and community." />
+  <meta name="description" content="Relax and connect in the Common Areas at The Cloud Forest Retreat. Cozy shared spaces with stunning views, a warm kitchen hub, living room moments, and a guest bathroom for comfort." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/rooms/common-areas/" />
   <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/common-areas/" />
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
   <meta property="og:title" content="Common Areas | The Cloud Forest Retreat" />
-  <meta property="og:description" content="The shared heart of the retreat: a welcoming kitchen, cozy living room, and spaces designed for calm mornings and slow evenings." />
+  <meta property="og:description" content="Shared spaces designed for comfort and community: kitchen moments, living room views, and a guest bathroom." />
   <meta property="og:url" content="https://thecloudforestretreat.com/rooms/common-areas/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
@@ -23,7 +23,7 @@
   <meta property="og:image:alt" content="The Cloud Forest Retreat common areas" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Common Areas | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="A welcoming kitchen, cozy living room, and spaces designed for calm mornings and slow evenings." />
+  <meta name="twitter:description" content="Relax and connect in our shared spaces: kitchen hub, living room moments, and guest bathroom." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -47,6 +47,10 @@
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
       --forest: #0D5925;
+      --muted: rgba(11,26,16,0.72);
+
+      --accent: #E0643A;
+      --accentSoft: rgba(224,100,58,0.14);
     }
 
     *{ box-sizing: border-box; }
@@ -120,6 +124,7 @@
       letter-spacing: -0.02em;
       font-weight: 900;
       font-size: 20px;
+      line-height: 1.1;
     }
 
     .cardHint{
@@ -127,6 +132,7 @@
       color: rgba(11,26,16,0.68);
       font-weight: 700;
       font-size: 13px;
+      line-height: 1.4;
     }
 
     /* HERO */
@@ -141,7 +147,7 @@
       border: 1px solid rgba(255,255,255,0.22);
       box-shadow: var(--shadow);
       background: rgba(0,0,0,0.10);
-      height: 520px;
+      height: 360px;
     }
 
     .heroMedia img{
@@ -156,8 +162,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(900px 520px at 22% 16%, rgba(224,100,58,0.16), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.46));
+        radial-gradient(1000px 520px at 22% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.50));
       pointer-events: none;
     }
 
@@ -168,7 +174,7 @@
       right: 14px;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.26);
+      background: rgba(0,0,0,0.30);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       padding: 14px;
@@ -193,78 +199,37 @@
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1.02;
-      font-size: clamp(32px, 3.8vw, 52px);
+      font-size: clamp(30px, 3.6vw, 48px);
       color: #fff;
     }
 
     .heroLead{
       margin: 0;
-      max-width: 78ch;
-      font-weight: 650;
+      max-width: 80ch;
+      font-weight: 600;
       line-height: 1.7;
       color: rgba(231,228,209,0.92);
       font-size: 15.5px;
     }
 
-    .heroActions{
-      margin-top: 10px;
+    .heroCtas{
+      margin-top: 12px;
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
       align-items: center;
     }
 
-    /* MAIN GRID (asym split) */
-    .gridMain{
+    /* GRID OPTION A (Aligned rows to remove dead space) */
+    .gridRow{
       margin-top: 14px;
       display: grid;
-      grid-template-columns: 0.62fr 0.38fr;
+      grid-template-columns: 1.25fr 0.75fr;
       gap: 14px;
-      align-items: start;
+      align-items: stretch;
     }
 
-    .stack{
-      display: grid;
-      gap: 14px;
-    }
-
-    /* VERTICAL MEDIA CARD */
-    .vCardPad{
-      padding: 14px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .vLabelRow{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .pillRow{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-    .pill strong{ color: var(--forest); }
-
-    /* YT vertical (tight, reduced black bars) */
+    /* 9:16 MEDIA */
     .ytFrame{
       border-radius: 18px;
       overflow: hidden;
@@ -274,7 +239,7 @@
       align-items: center;
       justify-content: center;
       padding: 0;
-      min-height: 520px;
+      min-height: 0;
     }
 
     .ytBox{
@@ -298,54 +263,97 @@
       display: block;
     }
 
-    /* Vertical image */
-    .vImgFrame{
+    .vImageFrame{
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(11,26,16,0.10);
       background: rgba(255,255,255,0.55);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .vImageBox{
+      width: min(420px, 100%);
       aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
       position: relative;
     }
-    .vImgFrame img{
+
+    .vImageBox img{
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    /* RIGHT COLUMN: living room paired content */
-    .rightHeroCopy{
-      padding: 14px;
+    .mediaPad{ padding: 14px; }
+
+    .mediaStack{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .h2{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      font-size: 22px;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: var(--forest);
-      font-weight: 900;
+    .microCopy{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 12px;
+      display: grid;
+      gap: 10px;
     }
 
-    .p{
+    .microCopy p{
       margin: 0;
       color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-size: 14.8px;
+      line-height: 1.7;
       font-weight: 650;
+      font-size: 13.8px;
     }
 
-    .note{
-      margin-top: 10px;
+    .microCopy .quote{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      line-height: 1.15;
+      color: var(--forest);
+    }
+
+    .pillRow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.62);
+      color: var(--ink);
+      font-weight: 900;
       font-size: 13px;
-      color: rgba(11,26,16,0.68);
-      font-weight: 650;
-      line-height: 1.6;
+      white-space: nowrap;
     }
 
-    /* MINI CAROUSEL (2-3 images), same pattern as rooms */
+    .pill strong{
+      font-weight: 900;
+      color: var(--forest);
+    }
+
+    /* Living moments carousel (compact, 2 slides) */
     .miniCarouselPad{ padding: 14px; }
 
     .miniCarousel{
@@ -372,12 +380,26 @@
     .miniSlide{
       flex: 0 0 100%;
       position: relative;
-      aspect-ratio: 16 / 10;
+      aspect-ratio: 9 / 16;
       margin: 0;
-      padding: 0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .miniSlide img{
+    .miniSlideInner{
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+    }
+
+    .miniSlideInner img{
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -386,9 +408,9 @@
 
     .miniCap{
       position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
       padding: 9px 11px;
       border-radius: 14px;
       background: rgba(245,245,220,0.92);
@@ -455,7 +477,7 @@
       transform: scale(1.05);
     }
 
-    /* FULL WIDTH: Guest bathroom */
+    /* Shared guest bathroom (full width) */
     .gridFull{
       margin-top: 14px;
     }
@@ -541,58 +563,67 @@
       font-weight: 650;
       font-size: 14.6px;
     }
+
     .bathList li{ margin: 6px 0; }
 
-    /* CLOSE */
-    .closeQuote{
+    /* CTA band */
+    .ctaBand{
       margin-top: 14px;
-    }
-
-    .quoteInner{
+      border-radius: var(--r);
+      border: 1px solid rgba(11,26,16,0.12);
+      background: rgba(245,245,220,0.82);
+      box-shadow: var(--shadow);
       padding: 16px;
-      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--ink);
     }
 
-    .quoteInner:before{
-      content:"";
-      position:absolute;
-      inset: -60px auto auto -60px;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
-      pointer-events:none;
-    }
-
-    .quoteText{
-      margin: 0;
+    .ctaBand h2{
+      margin: 0 0 6px;
       font-family: var(--font-head);
+      color: var(--forest);
       font-weight: 900;
       letter-spacing: -0.02em;
       font-size: 22px;
-      line-height: 1.2;
-      color: var(--forest);
-      position: relative;
+      line-height: 1.1;
     }
 
-    .quoteSub{
-      margin: 10px 0 0;
+    .ctaBand p{
+      margin: 0;
       color: rgba(11,26,16,0.72);
       font-weight: 650;
       line-height: 1.7;
-      position: relative;
-      max-width: 90ch;
+      max-width: 80ch;
     }
 
+    .ctaBtns{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Mobile */
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
 
-      .heroMedia{ height: 380px; }
+      .heroMedia{ height: 300px; }
 
-      .gridMain{ grid-template-columns: 1fr; }
-      .ytFrame{ min-height: 0; padding: 12px; }
+      .gridRow{ grid-template-columns: 1fr; }
+
+      .ytFrame{ padding: 12px; }
       .ytBox{ width: 100%; max-width: 100%; }
 
-      .miniSlide{ aspect-ratio: 4 / 3; }
+      .vImageFrame{ padding: 12px; }
+      .vImageBox{ width: 100%; max-width: 100%; }
+
+      .miniSlide{ padding: 12px; }
+      .miniSlideInner{ max-width: 100%; }
+
       .miniArrow.prev{ left: 8px; }
       .miniArrow.next{ right: 8px; }
 
@@ -605,7 +636,7 @@
 <body>
   <div id="siteHeader"></div>
   <main class="wrap" aria-label="Common Areas page">
-    <section class="topBand" aria-label="Navigation and booking actions">
+    <section class="topBand" aria-label="Common Areas navigation and booking actions">
       <div class="crumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">›</span>
@@ -621,44 +652,44 @@
 
 <!-- HERO -->
 <section class="hero" aria-label="Common Areas hero">
-  <article class="card" aria-label="Hero image">
+  <article class="card" aria-label="Hero image card">
     <div class="heroMedia" aria-label="Common Areas hero image">
-      <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Common Areas hero (replace with your horizontal hero image)" loading="eager" decoding="async" />
+      <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Common Areas with mountain and cloud forest views" loading="eager" decoding="async" />
       <div class="heroShade" aria-hidden="true"></div>
 
-      <div class="heroBadge" aria-label="Intro text">
-        <div class="kicker">The shared heart of the retreat</div>
+      <div class="heroBadge" aria-label="Common Areas intro">
+        <div class="kicker">Shared spaces • Views • Comfort</div>
         <h1 class="heroH1">Common Areas</h1>
         <p class="heroLead">
-          A shared sanctuary where mornings begin slowly and evenings stretch longer than planned.
-          From coffee at sunrise to conversations under the clouds, these spaces bring people together without ever feeling crowded.
+          Relax and connect in the heart of the retreat. These shared spaces are designed for comfort and community,
+          with cozy seating, stunning views, and the perfect setting to unwind, read, cook, or share stories after a day in the cloud forest.
         </p>
-        <div class="heroActions" aria-label="Primary actions">
+
+        <div class="heroCtas" aria-label="Hero actions">
           <a class="btn primary" href="/booking/">Book Your Stay</a>
           <a class="btn secondary" href="/contact/">Ask a question</a>
-          <a class="btn secondary" href="/rooms/">See rooms</a>
+          <a class="btn secondary" href="/rooms/">See all rooms</a>
         </div>
       </div>
     </div>
   </article>
 </section>
 
-<!-- MAIN GRID: Kitchen (left) + Living Room (right) -->
-<section class="gridMain" aria-label="Kitchen and living room">
-  <!-- LEFT: Kitchen (video + image) -->
-  <div class="stack" aria-label="Kitchen column">
-    <article class="card" aria-label="Kitchen video">
-      <div class="cardHead">
-        <h2 class="cardTitle">Communal kitchen</h2>
-        <p class="cardHint">A warm place to start the day</p>
-      </div>
+<!-- ROW 1: Kitchen video (left) aligned with Living moments + copy (right) -->
+<section class="gridRow" aria-label="Kitchen video and living room moments">
+  <article class="card" aria-label="Kitchen video card">
+    <div class="cardHead">
+      <h2 class="cardTitle">Kitchen moments</h2>
+      <p class="cardHint">YouTube Short</p>
+    </div>
 
-      <div class="vCardPad">
-        <div class="ytFrame" aria-label="Kitchen video (YouTube Short)">
-          <div class="ytBox" aria-label="YouTube video">
+    <div class="mediaPad">
+      <div class="mediaStack">
+        <div class="ytFrame" aria-label="Kitchen vertical video">
+          <div class="ytBox" aria-label="YouTube kitchen video">
             <iframe
               src="https://www.youtube-nocookie.com/embed/lz7DEZKFkX8?autoplay=1&mute=1&loop=1&playlist=lz7DEZKFkX8&controls=1&modestbranding=1&rel=0&playsinline=1"
-              title="Communal kitchen video"
+              title="Common Areas kitchen video"
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -666,106 +697,142 @@
           </div>
         </div>
 
-        <div class="pillRow" aria-label="Kitchen highlights">
-          <span class="pill"><strong>Feel:</strong> welcoming</span>
-          <span class="pill"><strong>Best time:</strong> mornings</span>
-          <span class="pill"><strong>Use:</strong> coffee + meals</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" aria-label="Kitchen vertical photo">
-      <div class="cardHead">
-        <h2 class="cardTitle">Kitchen photo</h2>
-        <p class="cardHint">Replace with a 9:16 image</p>
-      </div>
-      <div class="vCardPad">
-        <div class="vImgFrame" aria-label="Kitchen vertical image placeholder">
-          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Kitchen vertical placeholder image (replace me)" loading="lazy" decoding="async" />
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <!-- RIGHT: Living room (carousel + video + copy) -->
-  <div class="stack" aria-label="Living room column">
-    <article class="card" aria-label="Living room photo highlights">
-      <div class="cardHead">
-        <h2 class="cardTitle">Living room moments</h2>
-        <p class="cardHint">Autoplays every ~3 seconds</p>
-      </div>
-
-      <div class="miniCarouselPad">
-        <div class="miniCarousel" aria-label="Living room mini carousel">
-          <div class="miniViewport" id="lrCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
-            <button class="miniArrow prev" type="button" data-action="prev" aria-label="Previous photo">‹</button>
-            <button class="miniArrow next" type="button" data-action="next" aria-label="Next photo">›</button>
-
-            <div class="miniTrack" data-track>
-              <figure class="miniSlide" aria-label="Living room image 1">
-                <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Living room image placeholder 1 (replace me)" loading="lazy" decoding="async" />
-                <figcaption class="miniCap">Cozy seating, open views</figcaption>
-              </figure>
-
-              <figure class="miniSlide" aria-label="Living room image 2">
-                <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Living room image placeholder 2 (replace me)" loading="lazy" decoding="async" />
-                <figcaption class="miniCap">A place to slow down</figcaption>
-              </figure>
-
-              <figure class="miniSlide" aria-label="Living room image 3">
-                <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Living room image placeholder 3 (replace me)" loading="lazy" decoding="async" />
-                <figcaption class="miniCap">Quiet mornings, soft light</figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="miniNav" aria-label="Carousel dots">
-            <div class="miniDots" data-dots aria-label="Choose a photo"></div>
+        <div class="microCopy" aria-label="Kitchen copy">
+          <p class="quote">"Where mornings begin and plans get made."</p>
+          <p>
+            Brew coffee, prep snacks for the day, or settle in for a slow breakfast with the view.
+            The kitchen is simple, practical, and made for real travel.
+          </p>
+          <div class="pillRow" aria-label="Kitchen tags">
+            <span class="pill"><strong>Vibe:</strong> warm and practical</span>
+            <span class="pill"><strong>Best for:</strong> slow mornings</span>
+            <span class="pill"><strong>Moment:</strong> coffee with a view</span>
           </div>
         </div>
       </div>
+    </div>
+  </article>
 
-      <div class="rightHeroCopy" aria-label="Living room copy">
-        <h3 class="h2">Where the day happens</h3>
-        <p class="p">
-          Comfortable seating, open views, and the kind of calm that invites you to stay a little longer.
-          Read, plan your next hike, share stories, or simply listen to the forest.
+  <aside class="card" aria-label="Living room moments and day copy">
+    <div class="cardHead">
+      <h2 class="cardTitle">Where the day happens</h2>
+      <p class="cardHint">Living room moments</p>
+    </div>
+
+    <div class="miniCarouselPad" aria-label="Living room vertical carousel">
+      <div class="miniCarousel" aria-label="Living room carousel">
+        <div class="miniViewport" id="lrCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
+          <button class="miniArrow prev" type="button" data-action="prev" aria-label="Previous image">‹</button>
+          <button class="miniArrow next" type="button" data-action="next" aria-label="Next image">›</button>
+
+          <div class="miniTrack" data-track>
+            <figure class="miniSlide" aria-label="Living room image 1">
+              <div class="miniSlideInner">
+                <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Living room photo placeholder 1" loading="lazy" decoding="async" />
+              </div>
+              <figcaption class="miniCap">Cozy seating, mountain light</figcaption>
+            </figure>
+
+            <figure class="miniSlide" aria-label="Living room image 2">
+              <div class="miniSlideInner">
+                <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Living room photo placeholder 2" loading="lazy" decoding="async" />
+              </div>
+              <figcaption class="miniCap">Quiet corners to unwind</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="miniNav" aria-label="Carousel dots">
+          <div class="miniDots" data-dots aria-label="Choose an image"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mediaPad" aria-label="Living room text section">
+      <div class="microCopy" aria-label="Where the day happens expanded copy">
+        <p class="quote">"A calm place to reset between adventures."</p>
+        <p>
+          This is the space you return to: after waterfalls, after birding, after the last light fades.
+          Set down your bag, breathe, and let the cloud forest do what it does best.
         </p>
-        <div class="pillRow" aria-label="Living room highlights" style="margin-top:12px;">
-          <span class="pill"><strong>Vibe:</strong> cozy</span>
-          <span class="pill"><strong>Views:</strong> cloud forest</span>
+        <p>
+          Read, journal, play cards, or just watch the weather move through the valley.
+          If you meet another guest, it usually happens here, naturally and unforced.
+        </p>
+        <div class="pillRow" aria-label="Living room tags">
           <span class="pill"><strong>Best for:</strong> relaxing</span>
-        </div>
-        <div class="note">Tip: This is the best spot for a slow afternoon and a warm conversation.</div>
-      </div>
-    </article>
-
-    <article class="card" aria-label="Living room video">
-      <div class="cardHead">
-        <h2 class="cardTitle">Living room video</h2>
-        <p class="cardHint">YouTube Short</p>
-      </div>
-
-      <div class="vCardPad">
-        <div class="ytFrame" aria-label="Living room video (YouTube Short)">
-          <div class="ytBox" aria-label="YouTube video">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/aPklWBKloRc?autoplay=1&mute=1&loop=1&playlist=aPklWBKloRc&controls=1&modestbranding=1&rel=0&playsinline=1"
-              title="Living room video"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
+          <span class="pill"><strong>Vibe:</strong> cozy and quiet</span>
+          <span class="pill"><strong>Moment:</strong> sunset chat</span>
         </div>
       </div>
-    </article>
-  </div>
+    </div>
+  </aside>
 </section>
 
-<!-- GUEST BATHROOM -->
-<section class="gridFull" aria-label="Guest bathroom">
-  <article class="card" aria-label="Guest bathroom section">
+<!-- ROW 2: Kitchen photo (left) aligned with Living room video (right) -->
+<section class="gridRow" aria-label="Kitchen photo and living room video">
+  <article class="card" aria-label="Kitchen photo card">
+    <div class="cardHead">
+      <h2 class="cardTitle">Kitchen photo</h2>
+      <p class="cardHint">Replace with your best horizontal or vertical shot</p>
+    </div>
+
+    <div class="mediaPad">
+      <div class="vImageFrame" aria-label="Kitchen vertical image">
+        <div class="vImageBox">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Kitchen vertical image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div style="height:12px;"></div>
+
+      <div class="pillRow" aria-label="Kitchen photo tags">
+        <span class="pill"><strong>Best for:</strong> breakfast prep</span>
+        <span class="pill"><strong>Vibe:</strong> simple and clean</span>
+        <span class="pill"><strong>Use:</strong> shared kitchen</span>
+      </div>
+    </div>
+  </article>
+
+  <aside class="card" aria-label="Living room video card">
+    <div class="cardHead">
+      <h2 class="cardTitle">Living room video</h2>
+      <p class="cardHint">YouTube Short</p>
+    </div>
+
+    <div class="mediaPad">
+      <div class="mediaStack">
+        <div class="ytFrame" aria-label="Living room vertical video">
+          <div class="ytBox" aria-label="YouTube living room video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/aPklWBKloRc?autoplay=1&mute=1&loop=1&playlist=aPklWBKloRc&controls=1&modestbranding=1&rel=0&playsinline=1"
+              title="Common Areas living room video"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="microCopy" aria-label="Living room video caption">
+          <p class="quote">"The softest part of the day lives here."</p>
+          <p>
+            A quiet, comfortable space to unwind, connect, and let the cloud forest slow you down.
+          </p>
+          <div class="pillRow" aria-label="Living room video tags">
+            <span class="pill"><strong>Moment:</strong> end of day</span>
+            <span class="pill"><strong>Vibe:</strong> restful</span>
+            <span class="pill"><strong>Best for:</strong> couples and friends</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<!-- Guest bathroom (common areas) -->
+<section class="gridFull" aria-label="Guest bathroom section">
+  <article class="card" aria-label="Guest bathroom card">
     <div class="cardHead">
       <h2 class="cardTitle">Guest bathroom</h2>
       <p class="cardHint">In the common areas</p>
@@ -773,49 +840,52 @@
 
     <div class="bathInner">
       <div class="bathMedia" aria-label="Guest bathroom photos">
-        <figure class="bathShot" aria-label="Bathroom photo 1">
-          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Guest bathroom photo placeholder 1 (replace me)" loading="lazy" decoding="async" />
-          <figcaption class="bathCap">Clean, bright, easy access</figcaption>
+        <figure class="bathShot" aria-label="Guest bathroom image 1">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Guest bathroom image placeholder 1" loading="lazy" decoding="async" />
+          <figcaption class="bathCap">Easy access from the living room</figcaption>
         </figure>
-        <figure class="bathShot" aria-label="Bathroom photo 2">
-          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Guest bathroom photo placeholder 2 (replace me)" loading="lazy" decoding="async" />
-          <figcaption class="bathCap">Stocked daily with essentials</figcaption>
+        <figure class="bathShot" aria-label="Guest bathroom image 2">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Guest bathroom image placeholder 2" loading="lazy" decoding="async" />
+          <figcaption class="bathCap">Clean, stocked, and comfortable</figcaption>
         </figure>
       </div>
 
-      <div class="bathCopy" aria-label="Bathroom details">
-        <p class="bathTitle">Comfort, kept simple</p>
+      <div class="bathCopy" aria-label="Guest bathroom details">
+        <p class="bathTitle">Comfort, right where you need it</p>
         <ul class="bathList">
-          <li>Located within the common areas for convenience</li>
-          <li>Maintained regularly and kept stocked with essentials</li>
-          <li>Perfect for guests relaxing in shared spaces</li>
+          <li>Guest bathroom located in the common areas</li>
+          <li>Perfect between meals, lounging, or social time</li>
+          <li>Kept clean and stocked with essentials</li>
         </ul>
-        <div class="pillRow" aria-label="Bathroom quick tags">
+
+        <div class="pillRow" aria-label="Guest bathroom tags">
           <span class="pill"><strong>Type:</strong> guest bathroom</span>
           <span class="pill"><strong>Access:</strong> common areas</span>
-          <span class="pill"><strong>Stocked:</strong> daily</span>
+          <span class="pill"><strong>Clean:</strong> stocked daily</span>
         </div>
       </div>
     </div>
   </article>
 </section>
 
-<!-- CLOSE QUOTE -->
-<section class="closeQuote" aria-label="Closing note">
-  <article class="card" aria-label="Closing quote">
-    <div class="quoteInner">
-      <p class="quoteText">“Some of our favorite moments did not happen in our room, they happened here.”</p>
-      <p class="quoteSub">
-        The Common Areas are where stories are shared, friendships begin, and the cloud forest becomes part of the conversation.
-        Quiet when you want it. Communal when you feel it.
-      </p>
-    </div>
-  </article>
+<!-- CTA -->
+<section class="ctaBand" aria-label="Common Areas CTA">
+  <div>
+    <h2>Ready to enjoy the cloud forest, together?</h2>
+    <p>
+      Book your stay and settle into spaces that feel calm, warm, and real. If you have questions about how the retreat is set up, send us a message.
+    </p>
+  </div>
+
+  <div class="ctaBtns" aria-label="CTA buttons">
+    <a class="btn primary" href="/booking/">Book Your Stay</a>
+    <a class="btn secondary" href="/rooms/">See all rooms</a>
+    <a class="btn secondary" href="/contact/">Contact</a>
+  </div>
 </section>
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-  <!-- Page-only: mini carousel logic (autoplay + arrows + dots) -->
   <script>
     (function(){
       "use strict";
@@ -825,9 +895,9 @@
         if (!root) return;
 
         var track = root.querySelector("[data-track]");
-        var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
         if (!track) return;
 
+        var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
         var slides = track.children ? Array.prototype.slice.call(track.children) : [];
         if (!slides.length) return;
 
@@ -901,7 +971,7 @@
             b.type = "button";
             b.className = "miniDotBtn" + (i === 0 ? " is-active" : "");
             b.setAttribute("data-dot", String(i));
-            b.setAttribute("aria-label", "Go to photo " + (i + 1));
+            b.setAttribute("aria-label", "Go to image " + (i + 1));
             b.addEventListener("click", function(){
               var n = Number(this.getAttribute("data-dot") || "0");
               goTo(n);
