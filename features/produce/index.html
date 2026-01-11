@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produce | The Cloud Forest Retreat</title>
+
+  <meta name="description" content="Discover the fresh, organic produce grown at The Cloud Forest Retreat. Seasonal fruits, vegetables, and herbs grown sustainably and used in daily meals." />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/produce/" />
+
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <script src="/assets/js/head.js" defer></script>
+
+  <style>
+    :root{
+      --max:1120px;
+      --r:24px;
+      --shadow:0 18px 55px rgba(13,89,37,0.16);
+      --line:rgba(11,26,16,0.12);
+      --glass:rgba(245,245,220,0.78);
+      --glass2:rgba(245,245,220,0.62);
+      --ink:#0b1a10;
+      --forest:#0D5925;
+    }
+
+    *{ box-sizing:border-box; }
+    body{ margin:0; }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 18px 72px;
+    }
+
+    .card{
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;
+      height:380px;
+      border-radius:var(--r);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .hero img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .heroOverlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.50));
+    }
+
+    .heroContent{
+      position:absolute;
+      bottom:18px;
+      left:18px;
+      right:18px;
+      max-width:720px;
+      color:#fff;
+    }
+
+    .heroContent h1{
+      margin:0 0 8px;
+      font-family:var(--font-head);
+      font-size:clamp(34px,4vw,48px);
+      letter-spacing:-0.03em;
+      color:#fff; /* force white hero title */
+    }
+
+    .heroContent p{
+      margin:0;
+      font-size:16px;
+      line-height:1.7;
+      color:rgba(255,255,255,0.92);
+    }
+
+    /* INTRO */
+    .intro{
+      margin-top:18px;
+      padding:18px;
+    }
+
+    .intro p{
+      margin:0;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      max-width:85ch;
+    }
+
+    /* PRODUCE GRID */
+    .produceGrid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .produceItem{
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      aspect-ratio:1/1;
+      background:#ccc;
+    }
+
+    .produceItem img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .produceCap{
+      position:absolute;
+      left:8px;
+      right:8px;
+      bottom:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(245,245,220,0.92);
+      border:1px solid rgba(13,89,37,0.16);
+      font-size:12px;
+      font-weight:800;
+      color:#0b2b12;
+      text-align:center;
+    }
+
+    /* HIGHLIGHT STRIPS */
+    .highlight{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      align-items:center;
+    }
+
+    .highlightImage{
+      border-radius:24px;
+      overflow:hidden;
+      aspect-ratio:9/16;
+      background:#ccc;
+    }
+
+    .highlightImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .highlightText{
+      padding:18px;
+    }
+
+    .highlightText h2{
+      margin:0 0 8px;
+      font-family:var(--font-head);
+      font-size:26px;
+      color:var(--forest);
+      letter-spacing:-0.02em;
+    }
+
+    .highlightText p{
+      margin:0;
+      font-size:15px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      max-width:60ch;
+    }
+
+    /* SPOTLIGHT CAROUSEL */
+    .spotlight{
+      margin-top:18px;
+      padding:14px;
+    }
+
+    .spotlightTrack{
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      padding-bottom:6px;
+    }
+
+    .spotlightTrack::-webkit-scrollbar{ display:none; }
+
+    .spotItem{
+      flex:0 0 260px;
+      border-radius:24px;
+      overflow:hidden;
+      background:var(--glass);
+      border:1px solid var(--line);
+      scroll-snap-align:start;
+    }
+
+    .spotImage{
+      aspect-ratio:9/16;
+      background:#ccc;
+    }
+
+    .spotImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .spotBody{
+      padding:12px;
+    }
+
+    .spotBody h3{
+      margin:0 0 4px;
+      font-family:var(--font-head);
+      font-size:18px;
+      color:var(--forest);
+    }
+
+    .spotBody p{
+      margin:0;
+      font-size:13.8px;
+      line-height:1.6;
+      color:rgba(11,26,16,0.75);
+    }
+
+    /* CLOSING */
+    .closing{
+      margin-top:18px;
+      padding:18px;
+      text-align:center;
+    }
+
+    .closing p{
+      margin:0 auto;
+      max-width:70ch;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+    }
+
+    @media(max-width:900px){
+      .hero{ height:300px; }
+      .produceGrid{ grid-template-columns:repeat(2,1fr); }
+      .highlight{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+<div id="siteHeader"></div>
+
+<main class="wrap" aria-label="Produce page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Organic produce at The Cloud Forest Retreat">
+    <div class="heroOverlay"></div>
+    <div class="heroContent">
+      <h1>Produce</h1>
+      <p>
+        Fresh, seasonal, and grown with care. What you eat here comes directly from the land around you.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="card intro">
+    <p>
+      At The Cloud Forest Retreat, much of what ends up on your plate begins just steps away.
+      Our farm produces a rotating selection of fruits, vegetables, and herbs grown organically,
+      shaped by the seasons, and harvested with intention.
+    </p>
+  </section>
+
+  <!-- PRODUCE GRID -->
+  <section class="produceGrid" aria-label="Produce gallery">
+    <!-- Repeat as needed -->
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Tree tomatoes</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Peppers</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Herbs</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Leafy greens</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Citrus</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Coffee cherries</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Garden harvest</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Seasonal fruits</div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT -->
+  <section class="highlight">
+    <div class="highlightImage">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+    </div>
+    <div class="card highlightText">
+      <h2>From garden to table</h2>
+      <p>
+        Ingredients are picked at peak ripeness and used fresh.
+        Meals here reflect what the land offers in that moment, creating
+        a direct connection between soil, season, and flavor.
+      </p>
+    </div>
+  </section>
+
+  <!-- SPOTLIGHT -->
+  <section class="card spotlight">
+    <h2 class="h2">Seasonal highlights</h2>
+    <div class="spotlightTrack">
+      <div class="spotItem">
+        <div class="spotImage">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+        </div>
+        <div class="spotBody">
+          <h3>Tree tomato</h3>
+          <p>Tangy, vibrant, and often used in sauces and fresh preparations.</p>
+        </div>
+      </div>
+      <div class="spotItem">
+        <div class="spotImage">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+        </div>
+        <div class="spotBody">
+          <h3>Peppers</h3>
+          <p>Harvested weekly, adding warmth and depth to many dishes.</p>
+        </div>
+      </div>
+      <div class="spotItem">
+        <div class="spotImage">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+        </div>
+        <div class="spotBody">
+          <h3>Fresh herbs</h3>
+          <p>Picked moments before cooking for maximum aroma and flavor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="card closing">
+    <p>
+      Eating here is not just about nourishment. It is about understanding where food comes from,
+      honoring the land, and slowing down enough to taste it.
+    </p>
+  </section>
+
+</main>
+
+<div id="siteFooter"></div>
+<script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
