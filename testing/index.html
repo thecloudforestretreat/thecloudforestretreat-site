@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produce | The Cloud Forest Retreat</title>
+  <title>Attractions | The Cloud Forest Retreat</title>
 
-  <meta name="description" content="Discover the fresh, organic produce grown at The Cloud Forest Retreat. Seasonal fruits, vegetables, and herbs grown sustainably and used in daily meals." />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/produce/" />
+  <meta name="description" content="Explore natural attractions at The Cloud Forest Retreat. Waterfalls, river hikes, wildlife, and immersive experiences in Ecuador’s cloud forest." />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/attractions/" />
 
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
@@ -59,7 +59,7 @@
     .heroOverlay{
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.50));
+      background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
     }
 
     .heroContent{
@@ -76,7 +76,6 @@
       font-family:var(--font-head);
       font-size:clamp(34px,4vw,48px);
       letter-spacing:-0.03em;
-      color:#fff; /* force white hero title */
     }
 
     .heroContent p{
@@ -100,159 +99,152 @@
       max-width:85ch;
     }
 
-    /* PRODUCE GRID */
-    .produceGrid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-    }
-
-    .produceItem{
-      position:relative;
-      border-radius:18px;
-      overflow:hidden;
-      aspect-ratio:1/1;
-      background:#ccc;
-    }
-
-    .produceItem img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    .produceCap{
-      position:absolute;
-      left:8px;
-      right:8px;
-      bottom:8px;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(245,245,220,0.92);
-      border:1px solid rgba(13,89,37,0.16);
-      font-size:12px;
-      font-weight:800;
-      color:#0b2b12;
-      text-align:center;
-    }
-
-    /* HIGHLIGHT STRIPS */
-    .highlight{
+    /* FEATURED ATTRACTIONS */
+    .featureGrid{
       margin-top:18px;
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:18px;
-      align-items:center;
     }
 
-    .highlightImage{
-      border-radius:24px;
-      overflow:hidden;
-      aspect-ratio:9/16;
+    .featureCard{
+      display:grid;
+      grid-template-columns:1fr;
+    }
+
+    .featureImage{
+      aspect-ratio:16/10;
       background:#ccc;
     }
 
-    .highlightImage img{
+    .featureImage img{
       width:100%;
       height:100%;
       object-fit:cover;
     }
 
-    .highlightText{
-      padding:18px;
+    .featureBody{
+      padding:16px;
     }
 
-    .highlightText h2{
-      margin:0 0 8px;
+    .featureBody h2{
+      margin:0 0 6px;
       font-family:var(--font-head);
-      font-size:26px;
+      font-size:22px;
       color:var(--forest);
-      letter-spacing:-0.02em;
     }
 
-    .highlightText p{
+    .featureBody p{
       margin:0;
-      font-size:15px;
-      line-height:1.75;
+      font-size:14.8px;
+      line-height:1.7;
       color:rgba(11,26,16,0.78);
-      max-width:60ch;
     }
 
-    /* SPOTLIGHT CAROUSEL */
-    .spotlight{
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.18);
+      background:rgba(255,255,255,0.6);
+      font-weight:700;
+      color:#0b2b12;
+    }
+
+    /* CAROUSEL */
+    .carousel{
       margin-top:18px;
       padding:14px;
+      position:relative;
     }
 
-    .spotlightTrack{
+    .carouselTrack{
       display:flex;
-      gap:14px;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      padding-bottom:6px;
+      transition:transform 0.4s ease;
     }
 
-    .spotlightTrack::-webkit-scrollbar{ display:none; }
-
-    .spotItem{
-      flex:0 0 260px;
-      border-radius:24px;
+    .carouselViewport{
       overflow:hidden;
-      background:var(--glass);
-      border:1px solid var(--line);
-      scroll-snap-align:start;
+      border-radius:18px;
     }
 
-    .spotImage{
-      aspect-ratio:9/16;
+    .carouselItem{
+      flex:0 0 100%;
+      aspect-ratio:16/9;
       background:#ccc;
     }
 
-    .spotImage img{
+    .carouselItem img{
       width:100%;
       height:100%;
       object-fit:cover;
     }
 
-    .spotBody{
-      padding:12px;
+    .carouselBtn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.45);
+      color:#fff;
+      border:none;
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:22px;
     }
 
-    .spotBody h3{
-      margin:0 0 4px;
-      font-family:var(--font-head);
-      font-size:18px;
-      color:var(--forest);
-    }
+    .carouselBtn.prev{ left:16px; }
+    .carouselBtn.next{ right:16px; }
 
-    .spotBody p{
-      margin:0;
-      font-size:13.8px;
-      line-height:1.6;
-      color:rgba(11,26,16,0.75);
-    }
-
-    /* CLOSING */
-    .closing{
+    /* VIDEOS */
+    .videoRow{
       margin-top:18px;
-      padding:18px;
-      text-align:center;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
     }
 
-    .closing p{
-      margin:0 auto;
-      max-width:70ch;
-      font-size:15.5px;
-      line-height:1.75;
-      color:rgba(11,26,16,0.78);
+    .videoSlot{
+      aspect-ratio:9/16;
+      border-radius:24px;
+      background:#ccc;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .videoSlot::after{
+      content:"▶";
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:48px;
+      color:rgba(255,255,255,0.9);
+      background:rgba(0,0,0,0.25);
+    }
+
+    /* FOOTER NOTE */
+    .note{
+      margin-top:18px;
+      padding:16px;
+      text-align:center;
+      font-size:14px;
+      color:rgba(11,26,16,0.65);
     }
 
     @media(max-width:900px){
       .hero{ height:300px; }
-      .produceGrid{ grid-template-columns:repeat(2,1fr); }
-      .highlight{ grid-template-columns:1fr; }
+      .featureGrid{ grid-template-columns:1fr; }
+      .videoRow{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -260,16 +252,16 @@
 <body>
 <div id="siteHeader"></div>
 
-<main class="wrap" aria-label="Produce page">
+<main class="wrap" aria-label="Attractions page">
 
   <!-- HERO -->
   <section class="hero">
-    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Organic produce at The Cloud Forest Retreat">
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest landscape">
     <div class="heroOverlay"></div>
     <div class="heroContent">
-      <h1>Produce</h1>
+      <h1>Attractions</h1>
       <p>
-        Fresh, seasonal, and grown with care. What you eat here comes directly from the land around you.
+        Step beyond the lodge and into waterfalls, rivers, trails, and quiet places where the forest reveals itself.
       </p>
     </div>
   </section>
@@ -277,109 +269,96 @@
   <!-- INTRO -->
   <section class="card intro">
     <p>
-      At The Cloud Forest Retreat, much of what ends up on your plate begins just steps away.
-      Our farm produces a rotating selection of fruits, vegetables, and herbs grown organically,
-      shaped by the seasons, and harvested with intention.
+      The Cloud Forest Retreat is surrounded by natural experiences that invite exploration at your own pace.
+      From short walks to deeper adventures, each attraction connects you directly with the land.
     </p>
   </section>
 
-  <!-- PRODUCE GRID -->
-  <section class="produceGrid" aria-label="Produce gallery">
-    <!-- Repeat as needed -->
-    <div class="produceItem">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      <div class="produceCap">Tree tomatoes</div>
-    </div>
-    <div class="produceItem">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      <div class="produceCap">Peppers</div>
-    </div>
-    <div class="produceItem">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      <div class="produceCap">Herbs</div>
-    </div>
-    <div class="produceItem">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      <div class="produceCap">Leafy greens</div>
-    </div>
-    <div class="produceItem">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      <div class="produceCap">Citrus</div>
-    </div>
-    <div class="produceItem">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      <div class="produceCap">Coffee cherries</div>
-    </div>
-    <div class="produceItem">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      <div class="produceCap">Garden harvest</div>
-    </div>
-    <div class="produceItem">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      <div class="produceCap">Seasonal fruits</div>
-    </div>
-  </section>
+  <!-- FEATURED -->
+  <section class="featureGrid">
 
-  <!-- HIGHLIGHT -->
-  <section class="highlight">
-    <div class="highlightImage">
-      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-    </div>
-    <div class="card highlightText">
-      <h2>From garden to table</h2>
-      <p>
-        Ingredients are picked at peak ripeness and used fresh.
-        Meals here reflect what the land offers in that moment, creating
-        a direct connection between soil, season, and flavor.
-      </p>
-    </div>
-  </section>
-
-  <!-- SPOTLIGHT -->
-  <section class="card spotlight">
-    <h2 class="h2">Seasonal highlights</h2>
-    <div class="spotlightTrack">
-      <div class="spotItem">
-        <div class="spotImage">
-          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-        </div>
-        <div class="spotBody">
-          <h3>Tree tomato</h3>
-          <p>Tangy, vibrant, and often used in sauces and fresh preparations.</p>
+    <article class="card featureCard">
+      <div class="featureImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      </div>
+      <div class="featureBody">
+        <h2>Secluded waterfall</h2>
+        <p>
+          A hidden waterfall tucked into the forest. Cool mist, birdsong, and a moment of stillness
+          reward those who make the short journey.
+        </p>
+        <div class="tags">
+          <span class="tag">Natural</span>
+          <span class="tag">Quiet</span>
+          <span class="tag">Short walk</span>
         </div>
       </div>
-      <div class="spotItem">
-        <div class="spotImage">
-          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-        </div>
-        <div class="spotBody">
-          <h3>Peppers</h3>
-          <p>Harvested weekly, adding warmth and depth to many dishes.</p>
+    </article>
+
+    <article class="card featureCard">
+      <div class="featureImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      </div>
+      <div class="featureBody">
+        <h2>Hike to the river</h2>
+        <p>
+          A scenic descent through the cloud forest leading to the Río Guayllabamba,
+          where the sound of water and open views mark the journey’s end.
+        </p>
+        <div class="tags">
+          <span class="tag">Hiking</span>
+          <span class="tag">River access</span>
+          <span class="tag">Moderate</span>
         </div>
       </div>
-      <div class="spotItem">
-        <div class="spotImage">
-          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-        </div>
-        <div class="spotBody">
-          <h3>Fresh herbs</h3>
-          <p>Picked moments before cooking for maximum aroma and flavor.</p>
-        </div>
-      </div>
-    </div>
+    </article>
+
   </section>
 
-  <!-- CLOSING -->
-  <section class="card closing">
-    <p>
-      Eating here is not just about nourishment. It is about understanding where food comes from,
-      honoring the land, and slowing down enough to taste it.
-    </p>
+  <!-- CAROUSEL -->
+  <section class="card carousel">
+    <h2 class="h2">Around the property</h2>
+    <div class="carouselViewport">
+      <div class="carouselTrack" id="carouselTrack">
+        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+      </div>
+    </div>
+    <button class="carouselBtn prev" onclick="moveSlide(-1)">‹</button>
+    <button class="carouselBtn next" onclick="moveSlide(1)">›</button>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="videoRow">
+    <div class="videoSlot" aria-label="Attraction video placeholder"></div>
+    <div class="videoSlot" aria-label="Attraction video placeholder"></div>
+  </section>
+
+  <!-- NOTE -->
+  <section class="card note">
+    More trails, viewpoints, and experiences are being added as the retreat continues to grow.
   </section>
 
 </main>
 
 <div id="siteFooter"></div>
 <script src="/assets/js/site.js?v=3"></script>
+
+<script>
+  let index = 0;
+  const track = document.getElementById("carouselTrack");
+  const slides = track.children.length;
+
+  function moveSlide(dir){
+    index = (index + dir + slides) % slides;
+    track.style.transform = "translateX(" + (-index * 100) + "%)";
+  }
+
+  setInterval(() => moveSlide(1), 2800);
+</script>
+
 </body>
 </html>
