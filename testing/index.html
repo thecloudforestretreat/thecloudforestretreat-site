@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Attractions | The Cloud Forest Retreat</title>
+  <title>Gallery | The Cloud Forest Retreat</title>
 
-  <meta name="description" content="Explore natural attractions at The Cloud Forest Retreat. Waterfalls, river hikes, wildlife, and immersive experiences in Ecuador’s cloud forest." />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/attractions/" />
+  <meta name="description" content="Explore the beauty of The Cloud Forest Retreat through images and moments captured across the property, from misty landscapes to quiet interiors and daily life in the cloud forest." />
+  <link rel="canonical" href="https://thecloudforestretreat.com/gallery/" />
 
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
@@ -14,14 +14,14 @@
 
   <style>
     :root{
-      --max:1120px;
-      --r:24px;
-      --shadow:0 18px 55px rgba(13,89,37,0.16);
-      --line:rgba(11,26,16,0.12);
-      --glass:rgba(245,245,220,0.78);
-      --glass2:rgba(245,245,220,0.62);
-      --ink:#0b1a10;
-      --forest:#0D5925;
+      --max: 1180px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --forest: #0D5925;
     }
 
     *{ box-sizing:border-box; }
@@ -30,15 +30,7 @@
     .wrap{
       max-width:var(--max);
       margin:0 auto;
-      padding:18px 18px 72px;
-    }
-
-    .card{
-      background:var(--glass2);
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      overflow:hidden;
+      padding:18px 18px 80px;
     }
 
     /* HERO */
@@ -48,6 +40,7 @@
       border-radius:var(--r);
       overflow:hidden;
       box-shadow:var(--shadow);
+      margin-bottom:18px;
     }
 
     .hero img{
@@ -59,7 +52,7 @@
     .heroOverlay{
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+      background:linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.55));
     }
 
     .heroContent{
@@ -67,7 +60,7 @@
       bottom:18px;
       left:18px;
       right:18px;
-      max-width:720px;
+      max-width:760px;
       color:#fff;
     }
 
@@ -76,7 +69,7 @@
       font-family:var(--font-head);
       font-size:clamp(34px,4vw,48px);
       letter-spacing:-0.03em;
-      color:#fff; /* force white hero title */
+      color:#fff;
     }
 
     .heroContent p{
@@ -86,166 +79,82 @@
       color:rgba(255,255,255,0.92);
     }
 
-    /* INTRO */
-    .intro{
-      margin-top:18px;
-      padding:18px;
-    }
-
-    .intro p{
-      margin:0;
-      font-size:15.5px;
-      line-height:1.75;
-      color:rgba(11,26,16,0.78);
-      max-width:85ch;
-    }
-
-    /* FEATURED ATTRACTIONS */
-    .featureGrid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-    }
-
-    .featureCard{
-      display:grid;
-      grid-template-columns:1fr;
-    }
-
-    .featureImage{
-      aspect-ratio:16/10;
-      background:#ccc;
-    }
-
-    .featureImage img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .featureBody{
+    /* SECTION CARD */
+    .card{
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
       padding:16px;
+      margin-bottom:18px;
     }
 
-    .featureBody h2{
-      margin:0 0 6px;
-      font-family:var(--font-head);
-      font-size:22px;
-      color:var(--forest);
+    /* MASONRY GRID */
+    .masonry{
+      column-count:3;
+      column-gap:14px;
     }
 
-    .featureBody p{
-      margin:0;
-      font-size:14.8px;
-      line-height:1.7;
-      color:rgba(11,26,16,0.78);
-    }
-
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top:10px;
-    }
-
-    .tag{
-      font-size:12px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(13,89,37,0.18);
-      background:rgba(255,255,255,0.6);
-      font-weight:700;
-      color:#0b2b12;
-    }
-
-    /* CAROUSEL */
-    .carousel{
-      margin-top:18px;
-      padding:14px;
-      position:relative;
-    }
-
-    .carouselTrack{
-      display:flex;
-      transition:transform 0.4s ease;
-    }
-
-    .carouselViewport{
-      overflow:hidden;
+    .masonryItem{
+      break-inside:avoid;
+      margin-bottom:14px;
       border-radius:18px;
-    }
-
-    .carouselItem{
-      flex:0 0 100%;
-      aspect-ratio:16/9;
+      overflow:hidden;
       background:#ccc;
     }
 
-    .carouselItem img{
+    .masonryItem img{
       width:100%;
-      height:100%;
-      object-fit:cover;
+      height:auto;
+      display:block;
     }
 
-    .carouselBtn{
-      position:absolute;
-      top:50%;
-      transform:translateY(-50%);
-      background:rgba(0,0,0,0.45);
-      color:#fff;
-      border:none;
-      width:44px;
-      height:44px;
-      border-radius:999px;
-      cursor:pointer;
-      font-size:22px;
-    }
-
-    .carouselBtn.prev{ left:16px; }
-    .carouselBtn.next{ right:16px; }
-
-    /* VIDEOS */
-    .videoRow{
-      margin-top:18px;
+    /* VIDEO STRIP */
+    .videoStrip{
+      margin:22px 0;
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:repeat(2,1fr);
       gap:18px;
     }
 
-    .videoSlot{
-      aspect-ratio:9/16;
-      border-radius:24px;
-      background:#ccc;
+    .videoCard{
       position:relative;
+      aspect-ratio:9/16;
+      border-radius:26px;
       overflow:hidden;
+      background:#bbb;
+      box-shadow:var(--shadow);
     }
 
-    .videoSlot::after{
+    .videoCard::after{
       content:"▶";
       position:absolute;
       inset:0;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:48px;
-      color:rgba(255,255,255,0.9);
-      background:rgba(0,0,0,0.25);
+      font-size:52px;
+      color:rgba(255,255,255,0.95);
+      background:rgba(0,0,0,0.28);
     }
 
-    /* FOOTER NOTE */
-    .note{
-      margin-top:18px;
-      padding:16px;
+    /* FOOT NOTE */
+    .galleryNote{
       text-align:center;
-      font-size:14px;
-      color:rgba(11,26,16,0.65);
+      margin-top:26px;
+      font-size:14.5px;
+      color:rgba(11,26,16,0.68);
+      line-height:1.7;
     }
 
-    @media(max-width:900px){
+    @media(max-width:1000px){
+      .masonry{ column-count:2; }
+    }
+
+    @media(max-width:680px){
       .hero{ height:300px; }
-      .featureGrid{ grid-template-columns:1fr; }
-      .videoRow{ grid-template-columns:1fr; }
+      .masonry{ column-count:1; }
+      .videoStrip{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -253,113 +162,62 @@
 <body>
 <div id="siteHeader"></div>
 
-<main class="wrap" aria-label="Attractions page">
+<main class="wrap" aria-label="Gallery page">
 
   <!-- HERO -->
   <section class="hero">
-    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest landscape">
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest landscape" />
     <div class="heroOverlay"></div>
     <div class="heroContent">
-      <h1>Attractions</h1>
+      <h1>Gallery</h1>
       <p>
-        Step beyond the lodge and into waterfalls, rivers, trails, and quiet places where the forest reveals itself.
+        A visual journey through misty mornings, quiet trails, warm interiors,
+        and everyday moments that unfold slowly in the cloud forest.
       </p>
     </div>
   </section>
 
-  <!-- INTRO -->
-  <section class="card intro">
-    <p>
-      The Cloud Forest Retreat is surrounded by natural experiences that invite exploration at your own pace.
-      From short walks to deeper adventures, each attraction connects you directly with the land.
-    </p>
-  </section>
-
-  <!-- FEATURED -->
-  <section class="featureGrid">
-
-    <article class="card featureCard">
-      <div class="featureImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      </div>
-      <div class="featureBody">
-        <h2>Secluded waterfall</h2>
-        <p>
-          A hidden waterfall tucked into the forest. Cool mist, birdsong, and a moment of stillness
-          reward those who make the short journey.
-        </p>
-        <div class="tags">
-          <span class="tag">Natural</span>
-          <span class="tag">Quiet</span>
-          <span class="tag">Short walk</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card featureCard">
-      <div class="featureImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
-      </div>
-      <div class="featureBody">
-        <h2>Hike to the river</h2>
-        <p>
-          A scenic descent through the cloud forest leading to the Río Guayllabamba,
-          where the sound of water and open views mark the journey’s end.
-        </p>
-        <div class="tags">
-          <span class="tag">Hiking</span>
-          <span class="tag">River access</span>
-          <span class="tag">Moderate</span>
-        </div>
-      </div>
-    </article>
-
-  </section>
-
-  <!-- CAROUSEL -->
-  <section class="card carousel">
-    <h2 class="h2">Around the property</h2>
-    <div class="carouselViewport">
-      <div class="carouselTrack" id="carouselTrack">
-        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
-        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
-        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
-        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
-        <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
-      </div>
+  <!-- IMAGE GRID -->
+  <section class="card" aria-label="Photo gallery">
+    <div class="masonry">
+      <!-- placeholders -->
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt=""></div>
     </div>
-    <button class="carouselBtn prev" onclick="moveSlide(-1)">‹</button>
-    <button class="carouselBtn next" onclick="moveSlide(1)">›</button>
   </section>
 
-  <!-- VIDEOS -->
-  <section class="videoRow">
-    <div class="videoSlot" aria-label="Attraction video placeholder"></div>
-    <div class="videoSlot" aria-label="Attraction video placeholder"></div>
+  <!-- VIDEO BREAK -->
+  <section class="videoStrip" aria-label="Gallery videos">
+    <div class="videoCard" aria-label="Gallery video placeholder"></div>
+    <div class="videoCard" aria-label="Gallery video placeholder"></div>
+  </section>
+
+  <!-- MORE IMAGES -->
+  <section class="card" aria-label="More moments">
+    <div class="masonry">
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt=""></div>
+      <div class="masonryItem"><img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt=""></div>
+    </div>
   </section>
 
   <!-- NOTE -->
-  <section class="card note">
-    More trails, viewpoints, and experiences are being added as the retreat continues to grow.
-  </section>
+  <div class="galleryNote">
+    Every season brings new light, new colors, and new moments.
+    <br>
+    This gallery is always evolving.
+  </div>
 
 </main>
 
 <div id="siteFooter"></div>
 <script src="/assets/js/site.js?v=3"></script>
-
-<script>
-  let index = 0;
-  const track = document.getElementById("carouselTrack");
-  const slides = track.children.length;
-
-  function moveSlide(dir){
-    index = (index + dir + slides) % slides;
-    track.style.transform = "translateX(" + (-index * 100) + "%)";
-  }
-
-  setInterval(() => moveSlide(1), 2800);
-</script>
-
 </body>
 </html>
