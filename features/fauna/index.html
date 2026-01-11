@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fauna | The Cloud Forest Retreat</title>
+
+  <meta name="description" content="Discover the birds and wildlife of Ecuador’s cloud forest. From colorful toucans and hummingbirds to the elusive spectacled bear, explore the fauna surrounding The Cloud Forest Retreat." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/fauna/" />
+
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <script src="/assets/js/head.js" defer></script>
+
+  <style>
+    :root{
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --forest: #0D5925;
+    }
+
+    *{ box-sizing:border-box; }
+    body{ margin:0; }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 18px 72px;
+    }
+
+    .card{
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;
+      height:420px;
+      border-radius:var(--r);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .hero img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .heroOverlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.55));
+    }
+
+    .heroContent{
+      position:absolute;
+      bottom:18px;
+      left:18px;
+      right:18px;
+      max-width:720px;
+      color:#fff;
+    }
+
+    .heroContent h1{
+      margin:0 0 8px;
+      font-family:var(--font-head);
+      font-size:clamp(34px,4vw,48px);
+      letter-spacing:-0.03em;
+    }
+
+    .heroContent p{
+      margin:0;
+      font-size:16px;
+      line-height:1.7;
+      color:rgba(255,255,255,0.92);
+    }
+
+    /* INTRO */
+    .intro{
+      margin-top:18px;
+      padding:18px;
+    }
+
+    .intro p{
+      margin:0;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+    }
+
+    /* CAROUSEL */
+    .carouselWrap{
+      margin-top:18px;
+      padding:14px;
+    }
+
+    .carouselTrack{
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      padding-bottom:6px;
+    }
+
+    .carouselTrack::-webkit-scrollbar{ display:none; }
+
+    .carouselItem{
+      flex:0 0 220px;
+      height:220px;
+      scroll-snap-align:start;
+      border-radius:18px;
+      overflow:hidden;
+      background:#ccc;
+    }
+
+    .carouselItem img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* GRID */
+    .faunaGrid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .faunaCard{
+      display:grid;
+      grid-template-columns:0.95fr 1.05fr;
+      gap:14px;
+      padding:14px;
+      align-items:stretch;
+    }
+
+    .faunaImage{
+      border-radius:18px;
+      overflow:hidden;
+      min-height:260px;
+      background:#ccc;
+    }
+
+    .faunaImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .faunaBody h3{
+      margin:0 0 4px;
+      font-family:var(--font-head);
+      font-size:20px;
+      color:var(--forest);
+    }
+
+    .faunaLatin{
+      font-size:13px;
+      font-style:italic;
+      color:rgba(11,26,16,0.55);
+      margin-bottom:8px;
+    }
+
+    .faunaTags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:10px;
+    }
+
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.18);
+      background:rgba(255,255,255,0.6);
+      font-weight:700;
+      color:#0b2b12;
+    }
+
+    .faunaText{
+      font-size:14.5px;
+      line-height:1.7;
+      color:rgba(11,26,16,0.78);
+    }
+
+    /* VIDEO STRIP */
+    .videoStrip{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .videoSlot{
+      position:relative;
+      aspect-ratio:9/16;
+      border-radius:24px;
+      overflow:hidden;
+      background:#ccc;
+    }
+
+    .videoSlot::after{
+      content:"▶";
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:48px;
+      color:rgba(255,255,255,0.9);
+      background:rgba(0,0,0,0.25);
+    }
+
+    @media(max-width:900px){
+      .hero{ height:320px; }
+      .faunaGrid{ grid-template-columns:1fr; }
+      .faunaCard{ grid-template-columns:1fr; }
+      .videoStrip{ grid-template-columns:1fr; }
+      .faunaImage{ min-height:240px; }
+    }
+  </style>
+</head>
+
+<body>
+<div id="siteHeader"></div>
+
+<main class="wrap" aria-label="Fauna page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest wildlife" />
+    <div class="heroOverlay"></div>
+    <div class="heroContent">
+      <h1>Fauna</h1>
+      <p>
+        From colorful birds to elusive mammals, the cloud forest surrounding
+        The Cloud Forest Retreat is alive with movement, sound, and rare encounters.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="card intro">
+    <p>
+      The Chocó Andino region is one of the richest wildlife habitats in the world.
+      Birds dominate the skies and canopy, while mammals like the spectacled bear
+      quietly roam forest corridors below.
+    </p>
+  </section>
+
+  <!-- BIRD CAROUSEL -->
+  <section class="card carouselWrap" aria-label="Bird gallery">
+    <h2 class="h2">Birdlife of the Cloud Forest</h2>
+    <div class="carouselTrack">
+      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
+      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
+      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
+      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
+      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED ANIMALS -->
+  <section class="faunaGrid">
+
+    <!-- TOUCAN -->
+    <article class="card faunaCard">
+      <div class="faunaImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Toucan placeholder">
+      </div>
+      <div class="faunaBody">
+        <h3>Toucans</h3>
+        <div class="faunaLatin">Ramphastidae family</div>
+        <div class="faunaTags">
+          <span class="tag">Iconic</span>
+          <span class="tag">Fruit-eaters</span>
+        </div>
+        <div class="faunaText">
+          Known for their oversized bills and vibrant colors, toucans play a key role
+          in seed dispersal throughout the forest.
+        </div>
+      </div>
+    </article>
+
+    <!-- HUMMINGBIRDS -->
+    <article class="card faunaCard">
+      <div class="faunaImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Hummingbird placeholder">
+      </div>
+      <div class="faunaBody">
+        <h3>Hummingbirds</h3>
+        <div class="faunaLatin">Trochilidae family</div>
+        <div class="faunaTags">
+          <span class="tag">Pollinators</span>
+          <span class="tag">Fast flyers</span>
+        </div>
+        <div class="faunaText">
+          Tiny and tireless, hummingbirds feed on nectar and help pollinate countless
+          flowering plants across the forest.
+        </div>
+      </div>
+    </article>
+
+    <!-- SPECTACLED BEAR -->
+    <article class="card faunaCard">
+      <div class="faunaImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Spectacled bear placeholder">
+      </div>
+      <div class="faunaBody">
+        <h3>Spectacled Bear</h3>
+        <div class="faunaLatin">Tremarctos ornatus</div>
+        <div class="faunaTags">
+          <span class="tag">Endangered</span>
+          <span class="tag">Keystone species</span>
+        </div>
+        <div class="faunaText">
+          South America’s only bear species, the spectacled bear is rarely seen but
+          plays a vital role in maintaining forest balance.
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="videoStrip" aria-label="Wildlife videos">
+    <div class="videoSlot" aria-label="Wildlife video placeholder"></div>
+    <div class="videoSlot" aria-label="Wildlife video placeholder"></div>
+  </section>
+
+</main>
+
+<div id="siteFooter"></div>
+<script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
