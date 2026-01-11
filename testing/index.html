@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fauna | The Cloud Forest Retreat</title>
+  <title>Flora | The Cloud Forest Retreat</title>
 
-  <meta name="description" content="Discover the birds and wildlife of Ecuador’s cloud forest. From colorful toucans and hummingbirds to the elusive spectacled bear, explore the fauna surrounding The Cloud Forest Retreat." />
+  <meta name="description" content="Explore the rich flora of Ecuador’s cloud forest. Discover edible plants, medicinal trees, bromeliads, orchids, and native species surrounding The Cloud Forest Retreat." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/fauna/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/flora/" />
 
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
@@ -25,30 +25,30 @@
       --forest: #0D5925;
     }
 
-    *{ box-sizing:border-box; }
     body{ margin:0; }
+    *{ box-sizing:border-box; }
 
     .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:18px 18px 72px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 72px;
     }
 
     .card{
-      background:var(--glass2);
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      overflow:hidden;
+      background: var(--glass2);
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
     /* HERO */
     .hero{
-      position:relative;
-      height:420px;
-      border-radius:var(--r);
-      overflow:hidden;
-      box-shadow:var(--shadow);
+      position: relative;
+      height: 420px;
+      border-radius: var(--r);
+      overflow: hidden;
+      box-shadow: var(--shadow);
     }
 
     .hero img{
@@ -60,7 +60,7 @@
     .heroOverlay{
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.55));
+      background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
     }
 
     .heroContent{
@@ -68,8 +68,8 @@
       bottom:18px;
       left:18px;
       right:18px;
-      max-width:720px;
       color:#fff;
+      max-width:720px;
     }
 
     .heroContent h1{
@@ -79,6 +79,7 @@
       letter-spacing:-0.03em;
       color:#fff; /* force white hero title */
     }
+
     .heroContent p{
       margin:0;
       font-size:16px;
@@ -86,7 +87,7 @@
       color:rgba(255,255,255,0.92);
     }
 
-    /* INTRO */
+    /* SECTION INTRO */
     .intro{
       margin-top:18px;
       padding:18px;
@@ -99,82 +100,51 @@
       color:rgba(11,26,16,0.78);
     }
 
-    /* CAROUSEL */
-    .carouselWrap{
+    /* GRID */
+    .floraGrid{
       margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+      gap:18px;
+    }
+
+    .floraCard{
+      display:grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap:14px;
       padding:14px;
+      align-items:stretch;
     }
 
-    .carouselTrack{
-      display:flex;
-      gap:12px;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      padding-bottom:6px;
-    }
-
-    .carouselTrack::-webkit-scrollbar{ display:none; }
-
-    .carouselItem{
-      flex:0 0 220px;
-      height:220px;
-      scroll-snap-align:start;
+    .floraImage{
       border-radius:18px;
       overflow:hidden;
       background:#ccc;
+      min-height:260px;
     }
 
-    .carouselItem img{
+    .floraImage img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
     }
 
-    /* GRID */
-    .faunaGrid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
-    }
-
-    .faunaCard{
-      display:grid;
-      grid-template-columns:0.95fr 1.05fr;
-      gap:14px;
-      padding:14px;
-      align-items:stretch;
-    }
-
-    .faunaImage{
-      border-radius:18px;
-      overflow:hidden;
-      min-height:260px;
-      background:#ccc;
-    }
-
-    .faunaImage img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .faunaBody h3{
+    .floraBody h3{
       margin:0 0 4px;
-      font-family:var(--font-head);
+      font-family: var(--font-head);
       font-size:20px;
       color:var(--forest);
     }
 
-    .faunaLatin{
+    .floraLatin{
       font-size:13px;
       font-style:italic;
       color:rgba(11,26,16,0.55);
       margin-bottom:8px;
     }
 
-    .faunaTags{
+    .floraTags{
       display:flex;
       flex-wrap:wrap;
       gap:8px;
@@ -191,46 +161,44 @@
       color:#0b2b12;
     }
 
-    .faunaText{
+    .floraText{
       font-size:14.5px;
       line-height:1.7;
       color:rgba(11,26,16,0.78);
+      margin-bottom:10px;
     }
 
-    /* VIDEO STRIP */
-    .videoStrip{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
+    .floraNote{
+      font-size:13px;
+      color:rgba(11,26,16,0.65);
+      font-weight:600;
     }
 
-    .videoSlot{
-      position:relative;
-      aspect-ratio:9/16;
-      border-radius:24px;
-      overflow:hidden;
-      background:#ccc;
+    /* SECTION BREAK */
+    .sectionBreak{
+      grid-column:1 / -1;
+      padding:16px;
     }
 
-    .videoSlot::after{
-      content:"▶";
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:48px;
-      color:rgba(255,255,255,0.9);
-      background:rgba(0,0,0,0.25);
+    .sectionBreak h2{
+      margin:0;
+      font-family: var(--font-head);
+      color:var(--forest);
+      font-size:24px;
+      letter-spacing:-0.02em;
+    }
+
+    .sectionBreak p{
+      margin-top:6px;
+      color:rgba(11,26,16,0.7);
+      font-size:14.8px;
     }
 
     @media(max-width:900px){
       .hero{ height:320px; }
-      .faunaGrid{ grid-template-columns:1fr; }
-      .faunaCard{ grid-template-columns:1fr; }
-      .videoStrip{ grid-template-columns:1fr; }
-      .faunaImage{ min-height:240px; }
+      .floraGrid{ grid-template-columns:1fr; }
+      .floraCard{ grid-template-columns:1fr; }
+      .floraImage{ min-height:240px; }
     }
   </style>
 </head>
@@ -238,17 +206,17 @@
 <body>
 <div id="siteHeader"></div>
 
-<main class="wrap" aria-label="Fauna page">
+<main class="wrap" aria-label="Flora page">
 
   <!-- HERO -->
   <section class="hero">
-    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest wildlife" />
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest vegetation" />
     <div class="heroOverlay"></div>
     <div class="heroContent">
-      <h1>Fauna</h1>
+      <h1>Flora</h1>
       <p>
-        From colorful birds to elusive mammals, the cloud forest surrounding
-        The Cloud Forest Retreat is alive with movement, sound, and rare encounters.
+        A living field guide to the plants, trees, and botanical life that surround
+        The Cloud Forest Retreat and shape the Chocó Andino ecosystem.
       </p>
     </div>
   </section>
@@ -256,92 +224,114 @@
   <!-- INTRO -->
   <section class="card intro">
     <p>
-      The Chocó Andino region is one of the richest wildlife habitats in the world.
-      Birds dominate the skies and canopy, while mammals like the spectacled bear
-      quietly roam forest corridors below.
+      Ecuador’s cloud forest is one of the most plant-rich environments on Earth.
+      Around the retreat you will find edible fruits, medicinal trees, epiphytes
+      that hold entire micro-ecosystems, and flowering species that feed birds,
+      insects, and mammals alike.
     </p>
   </section>
 
-  <!-- BIRD CAROUSEL -->
-  <section class="card carouselWrap" aria-label="Bird gallery">
-    <h2 class="h2">Birdlife of the Cloud Forest</h2>
-    <div class="carouselTrack">
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
+  <!-- GRID -->
+  <section class="floraGrid">
+
+    <!-- PLANTS HEADER -->
+    <div class="sectionBreak card">
+      <h2>Plants & Epiphytes</h2>
+      <p>Small but powerful species that feed wildlife and people alike.</p>
     </div>
-  </section>
 
-  <!-- FEATURED ANIMALS -->
-  <section class="faunaGrid">
-
-    <!-- TOUCAN -->
-    <article class="card faunaCard">
-      <div class="faunaImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Toucan placeholder">
+    <!-- GUAYABILLA -->
+    <article class="card floraCard">
+      <div class="floraImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Guayabilla fruit" />
       </div>
-      <div class="faunaBody">
-        <h3>Toucans</h3>
-        <div class="faunaLatin">Ramphastidae family</div>
-        <div class="faunaTags">
-          <span class="tag">Iconic</span>
-          <span class="tag">Fruit-eaters</span>
+      <div class="floraBody">
+        <h3>Guayabilla</h3>
+        <div class="floraLatin">Acca sellowiana</div>
+        <div class="floraTags">
+          <span class="tag">Edible</span>
+          <span class="tag">Medicinal</span>
+          <span class="tag">Wildlife food</span>
         </div>
-        <div class="faunaText">
-          Known for their oversized bills and vibrant colors, toucans play a key role
-          in seed dispersal throughout the forest.
+        <div class="floraText">
+          Sweet-tart fruits enjoyed fresh or in jams. Fragrant flowers attract birds and insects.
+        </div>
+        <div class="floraNote">
+          Look for oval green fruits and soft pink-white flowers.
         </div>
       </div>
     </article>
 
-    <!-- HUMMINGBIRDS -->
-    <article class="card faunaCard">
-      <div class="faunaImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Hummingbird placeholder">
+    <!-- BROMELIADS -->
+    <article class="card floraCard">
+      <div class="floraImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bromeliad plant" />
       </div>
-      <div class="faunaBody">
-        <h3>Hummingbirds</h3>
-        <div class="faunaLatin">Trochilidae family</div>
-        <div class="faunaTags">
+      <div class="floraBody">
+        <h3>Bromeliads</h3>
+        <div class="floraLatin">Bromeliaceae family</div>
+        <div class="floraTags">
+          <span class="tag">Wildlife habitat</span>
           <span class="tag">Pollinators</span>
-          <span class="tag">Fast flyers</span>
         </div>
-        <div class="faunaText">
-          Tiny and tireless, hummingbirds feed on nectar and help pollinate countless
-          flowering plants across the forest.
+        <div class="floraText">
+          Rosette-shaped plants that collect rainwater, creating miniature ecosystems for frogs and insects.
+        </div>
+        <div class="floraNote">
+          Often seen growing on trees or rocks.
         </div>
       </div>
     </article>
 
-    <!-- SPECTACLED BEAR -->
-    <article class="card faunaCard">
-      <div class="faunaImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Spectacled bear placeholder">
+    <!-- TREES HEADER -->
+    <div class="sectionBreak card">
+      <h2>Trees of the Cloud Forest</h2>
+      <p>Foundational species that shape the landscape and climate.</p>
+    </div>
+
+    <!-- ALGARROBO -->
+    <article class="card floraCard">
+      <div class="floraImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Algarrobo tree" />
       </div>
-      <div class="faunaBody">
-        <h3>Spectacled Bear</h3>
-        <div class="faunaLatin">Tremarctos ornatus</div>
-        <div class="faunaTags">
-          <span class="tag">Endangered</span>
-          <span class="tag">Keystone species</span>
+      <div class="floraBody">
+        <h3>Algarrobo</h3>
+        <div class="floraLatin">Prosopis species</div>
+        <div class="floraTags">
+          <span class="tag">Edible pods</span>
+          <span class="tag">Drought-hardy</span>
         </div>
-        <div class="faunaText">
-          South America’s only bear species, the spectacled bear is rarely seen but
-          plays a vital role in maintaining forest balance.
+        <div class="floraText">
+          Produces nutrient-rich pods with a naturally sweet flavor, used by people and wildlife.
+        </div>
+        <div class="floraNote">
+          Key species for soil health and erosion control.
+        </div>
+      </div>
+    </article>
+
+    <!-- CHOLAN -->
+    <article class="card floraCard">
+      <div class="floraImage">
+        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Cholan yellow flowers" />
+      </div>
+      <div class="floraBody">
+        <h3>Cholán</h3>
+        <div class="floraLatin">Tecoma stans</div>
+        <div class="floraTags">
+          <span class="tag">Ornamental</span>
+          <span class="tag">Medicinal</span>
+        </div>
+        <div class="floraText">
+          Bright yellow trumpet flowers brighten the forest edges and attract pollinators.
+        </div>
+        <div class="floraNote">
+          Beautiful but not edible. Handle with care.
         </div>
       </div>
     </article>
 
   </section>
-
-  <!-- VIDEOS -->
-  <section class="videoStrip" aria-label="Wildlife videos">
-    <div class="videoSlot" aria-label="Wildlife video placeholder"></div>
-    <div class="videoSlot" aria-label="Wildlife video placeholder"></div>
-  </section>
-
 </main>
 
 <div id="siteFooter"></div>
