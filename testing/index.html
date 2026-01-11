@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flora | The Cloud Forest Retreat</title>
+  <title>Produce | The Cloud Forest Retreat</title>
 
-  <meta name="description" content="Explore the rich flora of Ecuador’s cloud forest. Discover edible plants, medicinal trees, bromeliads, orchids, and native species surrounding The Cloud Forest Retreat." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/flora/" />
+  <meta name="description" content="Discover the fresh, organic produce grown at The Cloud Forest Retreat. Seasonal fruits, vegetables, and herbs grown sustainably and used in daily meals." />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/produce/" />
 
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
@@ -15,40 +14,40 @@
 
   <style>
     :root{
-      --max: 1120px;
-      --r: 24px;
-      --shadow: 0 18px 55px rgba(13,89,37,0.16);
-      --line: rgba(11,26,16,0.12);
-      --glass: rgba(245,245,220,0.78);
-      --glass2: rgba(245,245,220,0.62);
-      --ink: #0b1a10;
-      --forest: #0D5925;
+      --max:1120px;
+      --r:24px;
+      --shadow:0 18px 55px rgba(13,89,37,0.16);
+      --line:rgba(11,26,16,0.12);
+      --glass:rgba(245,245,220,0.78);
+      --glass2:rgba(245,245,220,0.62);
+      --ink:#0b1a10;
+      --forest:#0D5925;
     }
 
-    body{ margin:0; }
     *{ box-sizing:border-box; }
+    body{ margin:0; }
 
     .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 72px;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 18px 72px;
     }
 
     .card{
-      background: var(--glass2);
-      border-radius: var(--r);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      overflow: hidden;
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
     }
 
     /* HERO */
     .hero{
-      position: relative;
-      height: 420px;
-      border-radius: var(--r);
-      overflow: hidden;
-      box-shadow: var(--shadow);
+      position:relative;
+      height:380px;
+      border-radius:var(--r);
+      overflow:hidden;
+      box-shadow:var(--shadow);
     }
 
     .hero img{
@@ -60,7 +59,7 @@
     .heroOverlay{
       position:absolute;
       inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+      background:linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.50));
     }
 
     .heroContent{
@@ -68,8 +67,8 @@
       bottom:18px;
       left:18px;
       right:18px;
-      color:#fff;
       max-width:720px;
+      color:#fff;
     }
 
     .heroContent h1{
@@ -77,7 +76,6 @@
       font-family:var(--font-head);
       font-size:clamp(34px,4vw,48px);
       letter-spacing:-0.03em;
-      color:#fff; /* force white hero title */
     }
 
     .heroContent p{
@@ -87,7 +85,7 @@
       color:rgba(255,255,255,0.92);
     }
 
-    /* SECTION INTRO */
+    /* INTRO */
     .intro{
       margin-top:18px;
       padding:18px;
@@ -98,107 +96,162 @@
       font-size:15.5px;
       line-height:1.75;
       color:rgba(11,26,16,0.78);
+      max-width:85ch;
     }
 
-    /* GRID */
-    .floraGrid{
+    /* PRODUCE GRID */
+    .produceGrid{
       margin-top:18px;
       display:grid;
-      grid-template-columns: repeat(2,1fr);
-      gap:18px;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
     }
 
-    .floraCard{
-      display:grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap:14px;
-      padding:14px;
-      align-items:stretch;
-    }
-
-    .floraImage{
+    .produceItem{
+      position:relative;
       border-radius:18px;
       overflow:hidden;
+      aspect-ratio:1/1;
       background:#ccc;
-      min-height:260px;
     }
 
-    .floraImage img{
+    .produceItem img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
     }
 
-    .floraBody h3{
-      margin:0 0 4px;
-      font-family: var(--font-head);
-      font-size:20px;
-      color:var(--forest);
-    }
-
-    .floraLatin{
-      font-size:13px;
-      font-style:italic;
-      color:rgba(11,26,16,0.55);
-      margin-bottom:8px;
-    }
-
-    .floraTags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-bottom:10px;
-    }
-
-    .tag{
-      font-size:12px;
+    .produceCap{
+      position:absolute;
+      left:8px;
+      right:8px;
+      bottom:8px;
       padding:6px 10px;
       border-radius:999px;
-      border:1px solid rgba(13,89,37,0.18);
-      background:rgba(255,255,255,0.6);
-      font-weight:700;
+      background:rgba(245,245,220,0.92);
+      border:1px solid rgba(13,89,37,0.16);
+      font-size:12px;
+      font-weight:800;
       color:#0b2b12;
+      text-align:center;
     }
 
-    .floraText{
-      font-size:14.5px;
-      line-height:1.7;
-      color:rgba(11,26,16,0.78);
-      margin-bottom:10px;
+    /* HIGHLIGHT STRIPS */
+    .highlight{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      align-items:center;
     }
 
-    .floraNote{
-      font-size:13px;
-      color:rgba(11,26,16,0.65);
-      font-weight:600;
+    .highlightImage{
+      border-radius:24px;
+      overflow:hidden;
+      aspect-ratio:9/16;
+      background:#ccc;
     }
 
-    /* SECTION BREAK */
-    .sectionBreak{
-      grid-column:1 / -1;
-      padding:16px;
+    .highlightImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .sectionBreak h2{
-      margin:0;
-      font-family: var(--font-head);
+    .highlightText{
+      padding:18px;
+    }
+
+    .highlightText h2{
+      margin:0 0 8px;
+      font-family:var(--font-head);
+      font-size:26px;
       color:var(--forest);
-      font-size:24px;
       letter-spacing:-0.02em;
     }
 
-    .sectionBreak p{
-      margin-top:6px;
-      color:rgba(11,26,16,0.7);
-      font-size:14.8px;
+    .highlightText p{
+      margin:0;
+      font-size:15px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      max-width:60ch;
+    }
+
+    /* SPOTLIGHT CAROUSEL */
+    .spotlight{
+      margin-top:18px;
+      padding:14px;
+    }
+
+    .spotlightTrack{
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      padding-bottom:6px;
+    }
+
+    .spotlightTrack::-webkit-scrollbar{ display:none; }
+
+    .spotItem{
+      flex:0 0 260px;
+      border-radius:24px;
+      overflow:hidden;
+      background:var(--glass);
+      border:1px solid var(--line);
+      scroll-snap-align:start;
+    }
+
+    .spotImage{
+      aspect-ratio:9/16;
+      background:#ccc;
+    }
+
+    .spotImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .spotBody{
+      padding:12px;
+    }
+
+    .spotBody h3{
+      margin:0 0 4px;
+      font-family:var(--font-head);
+      font-size:18px;
+      color:var(--forest);
+    }
+
+    .spotBody p{
+      margin:0;
+      font-size:13.8px;
+      line-height:1.6;
+      color:rgba(11,26,16,0.75);
+    }
+
+    /* CLOSING */
+    .closing{
+      margin-top:18px;
+      padding:18px;
+      text-align:center;
+    }
+
+    .closing p{
+      margin:0 auto;
+      max-width:70ch;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
     }
 
     @media(max-width:900px){
-      .hero{ height:320px; }
-      .floraGrid{ grid-template-columns:1fr; }
-      .floraCard{ grid-template-columns:1fr; }
-      .floraImage{ min-height:240px; }
+      .hero{ height:300px; }
+      .produceGrid{ grid-template-columns:repeat(2,1fr); }
+      .highlight{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -206,17 +259,16 @@
 <body>
 <div id="siteHeader"></div>
 
-<main class="wrap" aria-label="Flora page">
+<main class="wrap" aria-label="Produce page">
 
   <!-- HERO -->
   <section class="hero">
-    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest vegetation" />
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Organic produce at The Cloud Forest Retreat">
     <div class="heroOverlay"></div>
     <div class="heroContent">
-      <h1>Flora</h1>
+      <h1>Produce</h1>
       <p>
-        A living field guide to the plants, trees, and botanical life that surround
-        The Cloud Forest Retreat and shape the Chocó Andino ecosystem.
+        Fresh, seasonal, and grown with care. What you eat here comes directly from the land around you.
       </p>
     </div>
   </section>
@@ -224,114 +276,106 @@
   <!-- INTRO -->
   <section class="card intro">
     <p>
-      Ecuador’s cloud forest is one of the most plant-rich environments on Earth.
-      Around the retreat you will find edible fruits, medicinal trees, epiphytes
-      that hold entire micro-ecosystems, and flowering species that feed birds,
-      insects, and mammals alike.
+      At The Cloud Forest Retreat, much of what ends up on your plate begins just steps away.
+      Our farm produces a rotating selection of fruits, vegetables, and herbs grown organically,
+      shaped by the seasons, and harvested with intention.
     </p>
   </section>
 
-  <!-- GRID -->
-  <section class="floraGrid">
-
-    <!-- PLANTS HEADER -->
-    <div class="sectionBreak card">
-      <h2>Plants & Epiphytes</h2>
-      <p>Small but powerful species that feed wildlife and people alike.</p>
+  <!-- PRODUCE GRID -->
+  <section class="produceGrid" aria-label="Produce gallery">
+    <!-- Repeat as needed -->
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Tree tomatoes</div>
     </div>
-
-    <!-- GUAYABILLA -->
-    <article class="card floraCard">
-      <div class="floraImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Guayabilla fruit" />
-      </div>
-      <div class="floraBody">
-        <h3>Guayabilla</h3>
-        <div class="floraLatin">Acca sellowiana</div>
-        <div class="floraTags">
-          <span class="tag">Edible</span>
-          <span class="tag">Medicinal</span>
-          <span class="tag">Wildlife food</span>
-        </div>
-        <div class="floraText">
-          Sweet-tart fruits enjoyed fresh or in jams. Fragrant flowers attract birds and insects.
-        </div>
-        <div class="floraNote">
-          Look for oval green fruits and soft pink-white flowers.
-        </div>
-      </div>
-    </article>
-
-    <!-- BROMELIADS -->
-    <article class="card floraCard">
-      <div class="floraImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bromeliad plant" />
-      </div>
-      <div class="floraBody">
-        <h3>Bromeliads</h3>
-        <div class="floraLatin">Bromeliaceae family</div>
-        <div class="floraTags">
-          <span class="tag">Wildlife habitat</span>
-          <span class="tag">Pollinators</span>
-        </div>
-        <div class="floraText">
-          Rosette-shaped plants that collect rainwater, creating miniature ecosystems for frogs and insects.
-        </div>
-        <div class="floraNote">
-          Often seen growing on trees or rocks.
-        </div>
-      </div>
-    </article>
-
-    <!-- TREES HEADER -->
-    <div class="sectionBreak card">
-      <h2>Trees of the Cloud Forest</h2>
-      <p>Foundational species that shape the landscape and climate.</p>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Peppers</div>
     </div>
-
-    <!-- ALGARROBO -->
-    <article class="card floraCard">
-      <div class="floraImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Algarrobo tree" />
-      </div>
-      <div class="floraBody">
-        <h3>Algarrobo</h3>
-        <div class="floraLatin">Prosopis species</div>
-        <div class="floraTags">
-          <span class="tag">Edible pods</span>
-          <span class="tag">Drought-hardy</span>
-        </div>
-        <div class="floraText">
-          Produces nutrient-rich pods with a naturally sweet flavor, used by people and wildlife.
-        </div>
-        <div class="floraNote">
-          Key species for soil health and erosion control.
-        </div>
-      </div>
-    </article>
-
-    <!-- CHOLAN -->
-    <article class="card floraCard">
-      <div class="floraImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Cholan yellow flowers" />
-      </div>
-      <div class="floraBody">
-        <h3>Cholán</h3>
-        <div class="floraLatin">Tecoma stans</div>
-        <div class="floraTags">
-          <span class="tag">Ornamental</span>
-          <span class="tag">Medicinal</span>
-        </div>
-        <div class="floraText">
-          Bright yellow trumpet flowers brighten the forest edges and attract pollinators.
-        </div>
-        <div class="floraNote">
-          Beautiful but not edible. Handle with care.
-        </div>
-      </div>
-    </article>
-
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Herbs</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Leafy greens</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Citrus</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Coffee cherries</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Garden harvest</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+      <div class="produceCap">Seasonal fruits</div>
+    </div>
   </section>
+
+  <!-- HIGHLIGHT -->
+  <section class="highlight">
+    <div class="highlightImage">
+      <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+    </div>
+    <div class="card highlightText">
+      <h2>From garden to table</h2>
+      <p>
+        Ingredients are picked at peak ripeness and used fresh.
+        Meals here reflect what the land offers in that moment, creating
+        a direct connection between soil, season, and flavor.
+      </p>
+    </div>
+  </section>
+
+  <!-- SPOTLIGHT -->
+  <section class="card spotlight">
+    <h2 class="h2">Seasonal highlights</h2>
+    <div class="spotlightTrack">
+      <div class="spotItem">
+        <div class="spotImage">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+        </div>
+        <div class="spotBody">
+          <h3>Tree tomato</h3>
+          <p>Tangy, vibrant, and often used in sauces and fresh preparations.</p>
+        </div>
+      </div>
+      <div class="spotItem">
+        <div class="spotImage">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+        </div>
+        <div class="spotBody">
+          <h3>Peppers</h3>
+          <p>Harvested weekly, adding warmth and depth to many dishes.</p>
+        </div>
+      </div>
+      <div class="spotItem">
+        <div class="spotImage">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="">
+        </div>
+        <div class="spotBody">
+          <h3>Fresh herbs</h3>
+          <p>Picked moments before cooking for maximum aroma and flavor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="card closing">
+    <p>
+      Eating here is not just about nourishment. It is about understanding where food comes from,
+      honoring the land, and slowing down enough to taste it.
+    </p>
+  </section>
+
 </main>
 
 <div id="siteFooter"></div>
