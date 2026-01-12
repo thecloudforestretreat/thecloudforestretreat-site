@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Features | The Cloud Forest Retreat</title>
-  <meta name="description" content="Explore everything that makes The Cloud Forest Retreat special: amenities, local produce, cloud forest flora and fauna, nearby attractions, landscapes, and gallery." />
+  <meta name="description" content="Explore everything that makes The Cloud Forest Retreat special: amenities, activities, on and near property attractions, farm-to-table produce, cloud forest flora and fauna, landscapes, and gallery." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/features/" />
   <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/features/" />
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
   <meta property="og:title" content="Features | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Amenities, nature, landscapes, attractions, produce, and gallery. Explore the full experience." />
+  <meta property="og:description" content="Amenities, activities, attractions, produce, nature, landscapes, and gallery. Explore the full experience." />
   <meta property="og:url" content="https://thecloudforestretreat.com/features/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="The Cloud Forest Retreat features overview" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Features | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Amenities, nature, landscapes, attractions, produce, and gallery. Explore the full experience." />
+  <meta name="twitter:description" content="Amenities, activities, attractions, produce, nature, landscapes, and gallery. Explore the full experience." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -41,417 +41,416 @@
       --r: 24px;
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
+  --glass: rgba(245,245,220,0.78);
+  --glass2: rgba(245,245,220,0.62);
+  --ink: #0b1a10;
+  --forest: #0D5925;
+  --muted: rgba(11,26,16,0.72);
 
-      --glass: rgba(245,245,220,0.78);
-      --glass2: rgba(245,245,220,0.62);
-      --ink: #0b1a10;
-      --forest: #0D5925;
-      --muted: rgba(11,26,16,0.72);
+  --chipBg: rgba(255,255,255,0.62);
+  --chipLine: rgba(13,89,37,0.18);
 
-      --chipBg: rgba(255,255,255,0.62);
-      --chipLine: rgba(13,89,37,0.18);
+  --imgPlaceholderWide: /assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg;
+}
 
-      --imgPlaceholderWide: /assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg;
-    }
+*{ box-sizing:border-box; }
+body{ margin:0; }
 
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 84px;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 84px;
-    }
+.topBand{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .topBand{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.crumbs{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+}
+.crumbs a{ color: inherit; text-decoration: none; }
+.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+.quickActions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.hero{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
 
-    .hero{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      overflow: hidden;
-      position: relative;
-      color: var(--ink);
-    }
+.heroMedia{
+  position: relative;
+  min-height: 340px;
+  background: rgba(0,0,0,0.10);
+}
 
-    .heroMedia{
-      position: relative;
-      min-height: 340px;
-      background: rgba(0,0,0,0.10);
-    }
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .heroMedia img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
+.heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events: none;
+}
 
-    .heroShade{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      pointer-events: none;
-    }
+.heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+}
 
-    .heroInner{
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.30);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 14px;
-      color: rgba(255,255,255,0.96);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-    }
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
 
-    .kicker{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: rgba(255,255,255,0.92);
-    }
+.heroH1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 3.8vw, 54px);
+  color: #fff;
+}
 
-    .heroH1{
-      margin: 8px 0 6px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-      font-size: clamp(32px, 3.8vw, 54px);
-      color: #fff;
-    }
+.heroLead{
+  margin: 0;
+  max-width: 80ch;
+  font-weight: 600;
+  line-height: 1.7;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
+}
 
-    .heroLead{
-      margin: 0;
-      max-width: 80ch;
-      font-weight: 600;
-      line-height: 1.7;
-      color: rgba(231,228,209,0.92);
-      font-size: 15.5px;
-    }
+.filters{
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-    .filters{
-      margin-top: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+.filterLeft{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
 
-    .filterLeft{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      min-width: 0;
-    }
+.filterLabel{
+  font-weight: 900;
+  color: rgba(11,26,16,0.72);
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
 
-    .filterLabel{
-      font-weight: 900;
-      color: rgba(11,26,16,0.72);
-      font-size: 13px;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
+.chips{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 
-    .chips{
-      display: inline-flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
+.chip{
+  appearance: none;
+  border: 1px solid var(--chipLine);
+  background: var(--chipBg);
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 13px;
+  color: #0b2b12;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+  user-select: none;
+  white-space: nowrap;
+}
 
-    .chip{
-      appearance: none;
-      border: 1px solid var(--chipLine);
-      background: var(--chipBg);
-      border-radius: 999px;
-      padding: 10px 12px;
-      cursor: pointer;
-      font-weight: 900;
-      font-size: 13px;
-      color: #0b2b12;
-      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-      user-select: none;
-      white-space: nowrap;
-    }
+.chip.is-active{
+  background: rgba(224,100,58,0.92);
+  border-color: rgba(0,0,0,0.10);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(224,100,58,0.18);
+}
 
-    .chip.is-active{
-      background: rgba(224,100,58,0.92);
-      border-color: rgba(0,0,0,0.10);
-      color: #fff;
-      box-shadow: 0 14px 30px rgba(224,100,58,0.18);
-    }
+.filterRight{
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .filterRight{
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    .grid{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items: stretch;
-    }
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-    }
+.card a{
+  color: inherit;
+  text-decoration: none;
+}
 
-    .card a{
-      color: inherit;
-      text-decoration: none;
-    }
+.cardMedia{
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: rgba(0,0,0,0.10);
+  overflow: hidden;
+}
 
-    .cardMedia{
-      position: relative;
-      aspect-ratio: 16 / 10;
-      background: rgba(0,0,0,0.10);
-      overflow: hidden;
-    }
+.cardMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .cardMedia img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
+.cardMediaShade{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.26));
+  pointer-events: none;
+}
 
-    .cardMediaShade{
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.26));
-      pointer-events: none;
-    }
+.cardTopBadge{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.96);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
 
-    .cardTopBadge{
-      position: absolute;
-      left: 12px;
-      top: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.20);
-      background: rgba(0,0,0,0.30);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      color: rgba(255,255,255,0.96);
-      font-weight: 900;
-      font-size: 12px;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-    }
+.cardBody{
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  flex: 1 1 auto;
+}
 
-    .cardBody{
-      padding: 14px;
-      display: grid;
-      gap: 10px;
-      flex: 1 1 auto;
-    }
+.cardTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+  color: var(--forest);
+}
 
-    .cardTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-      color: var(--forest);
-    }
+.cardText{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 14.8px;
+}
 
-    .cardText{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      font-weight: 650;
-      line-height: 1.75;
-      font-size: 14.8px;
-    }
+.pillRow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 
-    .pillRow{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: #0b2b12;
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+}
 
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: #0b2b12;
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-    }
+.cardCtaRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+  flex-wrap: wrap;
+}
 
-    .cardCtaRow{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-top: 2px;
-      flex-wrap: wrap;
-    }
+.cardCta{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  color: #0b2b12;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+  white-space: nowrap;
+}
 
-    .cardCta{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      color: #0b2b12;
-      font-size: 13px;
-      padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
-      white-space: nowrap;
-    }
+.card:hover .cardCta{
+  background: rgba(224,100,58,0.10);
+  border-color: rgba(224,100,58,0.30);
+}
 
-    .card:hover .cardCta{
-      background: rgba(224,100,58,0.10);
-      border-color: rgba(224,100,58,0.30);
-    }
+.card:hover .cardMedia img{
+  transform: scale(1.03);
+  transition: transform 260ms ease;
+}
 
-    .card:hover .cardMedia img{
-      transform: scale(1.03);
-      transition: transform 260ms ease;
-    }
+.sectionTitle{
+  margin: 18px 0 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+  color: var(--forest);
+}
 
-    .sectionTitle{
-      margin: 18px 0 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-      color: var(--forest);
-    }
+.sectionHint{
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14px;
+  max-width: 90ch;
+}
 
-    .sectionHint{
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-weight: 650;
-      line-height: 1.7;
-      font-size: 14px;
-      max-width: 90ch;
-    }
+.ctaBand{
+  margin-top: 14px;
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.12);
+  background: rgba(245,245,220,0.82);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .ctaBand{
-      margin-top: 14px;
-      border-radius: var(--r);
-      border: 1px solid rgba(11,26,16,0.12);
-      background: rgba(245,245,220,0.82);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
 
-    .ctaBand h2{
-      margin: 0 0 6px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-    }
+.ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 80ch;
+}
 
-    .ctaBand p{
-      margin: 0;
-      color: rgba(11,26,16,0.72);
-      font-weight: 650;
-      line-height: 1.7;
-      max-width: 80ch;
-    }
+.ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .ctaBtns{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.is-hidden{ display:none !important; }
 
-    .is-hidden{ display:none !important; }
-
-    @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 74px; }
-      .heroMedia{ min-height: 280px; }
-      .grid{ grid-template-columns: 1fr; }
-      .cardMedia{ aspect-ratio: 4 / 3; }
-    }
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 74px; }
+  .heroMedia{ min-height: 280px; }
+  .grid{ grid-template-columns: 1fr; }
+  .cardMedia{ aspect-ratio: 4 / 3; }
+}
   </style>
 </head>
 <body>
@@ -477,7 +476,7 @@
       <div class="kicker">Explore the experience</div>
       <h1 class="heroH1">Features</h1>
       <p class="heroLead">
-        Everything that makes your stay feel special: cloud forest life, landscapes, nearby wonders, fresh farm produce, and the details that make the retreat comfortable.
+        Everything that makes your stay feel special: comfort, activities, cloud forest life, nearby wonders, fresh farm produce, and the landscapes that surround you.
       </p>
     </div>
   </div>
@@ -489,9 +488,10 @@
     <div class="chips" aria-label="Category chips">
       <button class="chip is-active" type="button" data-filter="all">All</button>
       <button class="chip" type="button" data-filter="essentials">Essentials</button>
+      <button class="chip" type="button" data-filter="activities">Activities</button>
+      <button class="chip" type="button" data-filter="attractions">Attractions</button>
       <button class="chip" type="button" data-filter="nature">Nature</button>
       <button class="chip" type="button" data-filter="landscapes">Landscapes</button>
-      <button class="chip" type="button" data-filter="attractions">Attractions</button>
       <button class="chip" type="button" data-filter="gallery">Gallery</button>
     </div>
   </div>
@@ -503,13 +503,13 @@
 
 <h2 class="sectionTitle">Pick what you want to explore</h2>
 <p class="sectionHint">
-  Tap any card to open the full page for that topic. If you are not sure where to start, begin with Amenities and Fauna.
+  Tap any card to open the full page for that topic. If you are not sure where to start, begin with Amenities, Activities, and Attractions.
 </p>
 
 <section class="grid" aria-label="Features grid">
-  <!-- ESSENTIALS -->
+  <!-- 1. AMENITIES -->
   <article class="card" data-cat="essentials" aria-label="Amenities card">
-    <a href="/features/ammenities/" aria-label="Open Amenities page">
+    <a href="/features/amenities/" aria-label="Open Amenities page">
       <div class="cardMedia" aria-label="Amenities image">
         <img src="/assets/images/pages/features/tcfr_features_card_amenities_01.jpeg" alt="Amenities at The Cloud Forest Retreat" loading="lazy" decoding="async" />
         <div class="cardMediaShade" aria-hidden="true"></div>
@@ -530,6 +530,53 @@
     </a>
   </article>
 
+  <!-- 2. ACTIVITIES -->
+  <article class="card" data-cat="activities" aria-label="Activities card">
+    <a href="/features/activities/" aria-label="Open Activities page">
+      <div class="cardMedia" aria-label="Activities image">
+        <img src="/assets/images/pages/features/tcfr_features_card_activities_01.jpg" alt="Activities at and near the retreat" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Activities</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Activities</h3>
+        <p class="cardText">What you can do while you are here: easy nature time, active adventures, and calm moments that fit your pace.</p>
+        <div class="pillRow" aria-label="Activities highlights">
+          <span class="pill">On-site</span>
+          <span class="pill">Nearby</span>
+          <span class="pill">For all energy levels</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Activities</span>
+        </div>
+      </div>
+    </a>
+  </article>
+
+  <!-- 3. ATTRACTIONS -->
+  <article class="card" data-cat="attractions" aria-label="Attractions card">
+    <a href="/features/attractions/" aria-label="Open Attractions page">
+      <div class="cardMedia" aria-label="Attractions image">
+        <img src="/assets/images/pages/features/tcfr_features_card_attractions_01.png" alt="Attractions near the retreat" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Attractions</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Attractions</h3>
+        <p class="cardText">On and near property experiences guests love most, with visuals that help you choose what fits your day.</p>
+        <div class="pillRow" aria-label="Attractions highlights">
+          <span class="pill">On and near property</span>
+          <span class="pill">4 videos</span>
+          <span class="pill">Easy planning</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Attractions</span>
+        </div>
+      </div>
+    </a>
+  </article>
+
+  <!-- 4. PRODUCE -->
   <article class="card" data-cat="essentials" aria-label="Produce card">
     <a href="/features/produce/" aria-label="Open Produce page">
       <div class="cardMedia" aria-label="Produce image">
@@ -539,7 +586,7 @@
       </div>
       <div class="cardBody">
         <h3 class="cardTitle">Produce</h3>
-        <p class="cardText">From the farm to your table. Fresh ingredients, local flavor, and the kind of simple food that tastes better in the mountains.</p>
+        <p class="cardText">Farm-to-table is part of the stay. Fresh ingredients, local flavor, and simple food that tastes better in the mountains.</p>
         <div class="pillRow" aria-label="Produce highlights">
           <span class="pill">Farm-to-table</span>
           <span class="pill">Local</span>
@@ -552,7 +599,7 @@
     </a>
   </article>
 
-  <!-- NATURE -->
+  <!-- 5. FLORA -->
   <article class="card" data-cat="nature" aria-label="Flora card">
     <a href="/features/flora/" aria-label="Open Flora page">
       <div class="cardMedia" aria-label="Flora image">
@@ -575,6 +622,7 @@
     </a>
   </article>
 
+  <!-- 6. FAUNA -->
   <article class="card" data-cat="nature" aria-label="Fauna card">
     <a href="/features/fauna/" aria-label="Open Fauna page">
       <div class="cardMedia" aria-label="Fauna image">
@@ -597,19 +645,19 @@
     </a>
   </article>
 
-  <!-- LANDSCAPES -->
-  <article class="card" data-cat="landscapes" aria-label="Chocó Andino de Pichincha card">
+  <!-- 7. CHOCO ANDINO -->
+  <article class="card" data-cat="landscapes" aria-label="Choco Andino de Pichincha card">
     <a href="/features/choco-andino-de-pichincha/" aria-label="Open Choco Andino de Pichincha page">
       <div class="cardMedia" aria-label="Choco Andino image">
-        <img src="/assets/images/pages/features/tcfr_features_card_choco_01.jpg" alt="Chocó Andino de Pichincha" loading="lazy" decoding="async" />
+        <img src="/assets/images/pages/features/tcfr_features_card_choco_01.jpg" alt="Choco Andino de Pichincha" loading="lazy" decoding="async" />
         <div class="cardMediaShade" aria-hidden="true"></div>
         <div class="cardTopBadge">Landscapes</div>
       </div>
       <div class="cardBody">
         <h3 class="cardTitle">Chocó Andino de Pichincha</h3>
-        <p class="cardText">A region shaped by mist, mountains, and biodiversity. Learn the story of where you are staying and why it matters.</p>
+        <p class="cardText">Big context for your stay. A region shaped by mist, mountains, and biodiversity, and why it matters.</p>
         <div class="pillRow" aria-label="Choco Andino highlights">
-          <span class="pill">History</span>
+          <span class="pill">Where you are</span>
           <span class="pill">Context</span>
           <span class="pill">Region</span>
         </div>
@@ -620,18 +668,19 @@
     </a>
   </article>
 
-  <article class="card" data-cat="landscapes" aria-label="Rio Guayllabamba card">
-    <a href="/features/rio-guayllabamba/" aria-label="Open Rio Guayllabamba page">
+  <!-- 8. RIO GUAYLLABAMBA -->
+  <article class="card" data-cat="landscapes" aria-label="Río Guayllabamba card">
+    <a href="/features/rio-guayllabamba/" aria-label="Open Río Guayllabamba page">
       <div class="cardMedia" aria-label="Rio Guayllabamba image">
-        <img src="/assets/images/pages/features/tcfr_features_card_rio_01.jpg" alt="Rio Guayllabamba" loading="lazy" decoding="async" />
+        <img src="/assets/images/pages/features/tcfr_features_card_rio_01.jpg" alt="Río Guayllabamba" loading="lazy" decoding="async" />
         <div class="cardMediaShade" aria-hidden="true"></div>
         <div class="cardTopBadge">Landscapes</div>
       </div>
       <div class="cardBody">
-        <h3 class="cardTitle">Rio Guayllabamba</h3>
-        <p class="cardText">A river landscape that shapes the valley. A peaceful read with visuals that make the scale feel real.</p>
+        <h3 class="cardTitle">Río Guayllabamba</h3>
+        <p class="cardText">A nearby natural landmark that shapes the valley. A peaceful read with visuals that make the scale feel real.</p>
         <div class="pillRow" aria-label="Rio highlights">
-          <span class="pill">Horizontal images</span>
+          <span class="pill">Landmark</span>
           <span class="pill">1 video</span>
           <span class="pill">Landscape</span>
         </div>
@@ -642,6 +691,7 @@
     </a>
   </article>
 
+  <!-- 9. PULULAHUA -->
   <article class="card" data-cat="landscapes" aria-label="Pululahua card">
     <a href="/features/pululahua/" aria-label="Open Pululahua page">
       <div class="cardMedia" aria-label="Pululahua image">
@@ -651,9 +701,9 @@
       </div>
       <div class="cardBody">
         <h3 class="cardTitle">Pululahua</h3>
-        <p class="cardText">A rare and unforgettable landscape. Learn what makes it unique and why it belongs on your Ecuador itinerary.</p>
+        <p class="cardText">A nearby destination that is rare and unforgettable. Learn what makes it unique and why it belongs on your itinerary.</p>
         <div class="pillRow" aria-label="Pululahua highlights">
-          <span class="pill">Info</span>
+          <span class="pill">Nearby</span>
           <span class="pill">Images</span>
           <span class="pill">Must-see</span>
         </div>
@@ -664,30 +714,7 @@
     </a>
   </article>
 
-  <!-- ATTRACTIONS -->
-  <article class="card" data-cat="attractions" aria-label="Attractions card">
-    <a href="/features/attractions/" aria-label="Open Attractions page">
-      <div class="cardMedia" aria-label="Attractions image">
-        <img src="/assets/images/pages/features/tcfr_features_card_attractions_01.png" alt="Attractions near the retreat" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Attractions</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Attractions</h3>
-        <p class="cardText">Your adventure list, curated. The places guests love most, with visuals that help you choose what fits your day.</p>
-        <div class="pillRow" aria-label="Attractions highlights">
-          <span class="pill">Images</span>
-          <span class="pill">4 videos</span>
-          <span class="pill">Nearby</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Attractions</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- GALLERY -->
+  <!-- 10. GALLERY -->
   <article class="card" data-cat="gallery" aria-label="Gallery card">
     <a href="/features/gallery/" aria-label="Open Gallery page">
       <div class="cardMedia" aria-label="Gallery image">
@@ -697,7 +724,7 @@
       </div>
       <div class="cardBody">
         <h3 class="cardTitle">Gallery</h3>
-        <p class="cardText">A visual tour of the retreat and surroundings. Perfect if you want to feel the vibe before you book.</p>
+        <p class="cardText">A visual tour of the retreat and surroundings. Perfect if you want to feel the vibe after you understand the offering.</p>
         <div class="pillRow" aria-label="Gallery highlights">
           <span class="pill">Images</span>
           <span class="pill">Mood</span>
@@ -728,35 +755,34 @@
   <script>
     (function(){
       "use strict";
+  var chips = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".card[data-cat]"));
 
-      var chips = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
-      var cards = Array.prototype.slice.call(document.querySelectorAll(".card[data-cat]"));
+  function setActiveChip(active){
+    chips.forEach(function(c){
+      c.classList.toggle("is-active", c.getAttribute("data-filter") === active);
+    });
+  }
 
-      function setActiveChip(active){
-        chips.forEach(function(c){
-          c.classList.toggle("is-active", c.getAttribute("data-filter") === active);
-        });
-      }
+  function applyFilter(f){
+    if (f === "all"){
+      cards.forEach(function(card){ card.classList.remove("is-hidden"); });
+      return;
+    }
+    cards.forEach(function(card){
+      var cat = card.getAttribute("data-cat");
+      card.classList.toggle("is-hidden", cat !== f);
+    });
+  }
 
-      function applyFilter(f){
-        if (f === "all"){
-          cards.forEach(function(card){ card.classList.remove("is-hidden"); });
-          return;
-        }
-        cards.forEach(function(card){
-          var cat = card.getAttribute("data-cat");
-          card.classList.toggle("is-hidden", cat !== f);
-        });
-      }
-
-      chips.forEach(function(chip){
-        chip.addEventListener("click", function(){
-          var f = chip.getAttribute("data-filter") || "all";
-          setActiveChip(f);
-          applyFilter(f);
-        });
-      });
-    })();
+  chips.forEach(function(chip){
+    chip.addEventListener("click", function(){
+      var f = chip.getAttribute("data-filter") || "all";
+      setActiveChip(f);
+      applyFilter(f);
+    });
+  });
+})();
   </script>
 </body>
 </html>
