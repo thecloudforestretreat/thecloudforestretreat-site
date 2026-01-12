@@ -3,27 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Features | The Cloud Forest Retreat</title>
-  <meta name="description" content="Explore everything that makes The Cloud Forest Retreat special: amenities, activities, on and near property attractions, farm-to-table produce, cloud forest flora and fauna, landscapes, and gallery." />
+  <title>Activities | The Cloud Forest Retreat</title>
+  <meta name="description" content="Explore activities at The Cloud Forest Retreat: yoga by request, mountain biking, hiking, horseback riding, and more. Nature-first experiences in Ecuador's cloud forest." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/features/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/features/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Features | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Amenities, activities, attractions, produce, nature, landscapes, and gallery. Explore the full experience." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/features/" />
-  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat features overview" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Features | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Amenities, activities, attractions, produce, nature, landscapes, and gallery. Explore the full experience." />
-  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/activities/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -41,25 +24,71 @@
       --r: 24px;
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
-  --glass: rgba(245,245,220,0.78);
-  --glass2: rgba(245,245,220,0.62);
-  --ink: #0b1a10;
   --forest: #0D5925;
+  --ink: #0b1a10;
   --muted: rgba(11,26,16,0.72);
 
-  --chipBg: rgba(255,255,255,0.62);
-  --chipLine: rgba(13,89,37,0.18);
+  --glass: rgba(245,245,220,0.78);
+  --glass2: rgba(245,245,220,0.62);
 
-  --imgPlaceholderWide: /assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg;
+  --accent: #E0643A;
+  --accentSoft: rgba(224,100,58,0.14);
 }
 
-*{ box-sizing:border-box; }
-body{ margin:0; }
+*{ box-sizing: border-box; }
+body{ margin: 0; }
 
 .wrap{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 18px 18px 84px;
+  padding: 18px 18px 76px;
+}
+
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+  position: relative;
+}
+
+.cardHead{
+  padding: 14px 14px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.h2{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.hint{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.p{
+  margin: 0;
+  color: rgba(11,26,16,0.80);
+  line-height: 1.75;
+  font-size: 15px;
+  font-weight: 650;
 }
 
 .topBand{
@@ -84,6 +113,7 @@ body{ margin:0; }
   font-weight: 800;
   font-size: 13px;
   color: rgba(11,26,16,0.75);
+  flex-wrap: wrap;
 }
 .crumbs a{ color: inherit; text-decoration: none; }
 .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
@@ -95,6 +125,7 @@ body{ margin:0; }
   align-items: center;
 }
 
+/* HERO (match Features landing) */
 .hero{
   margin-top: 14px;
   border: 1px solid var(--line);
@@ -147,7 +178,7 @@ body{ margin:0; }
 .kicker{
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -168,171 +199,151 @@ body{ margin:0; }
 .heroLead{
   margin: 0;
   max-width: 80ch;
-  font-weight: 600;
-  line-height: 1.7;
+  font-weight: 650;
+  line-height: 1.75;
   color: rgba(231,228,209,0.92);
   font-size: 15.5px;
 }
 
-.filters{
+/* Jump section moved OUT of hero (clean + consistent) */
+.jumpBand{
   margin-top: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  color: var(--ink);
 }
 
-.filterLeft{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  min-width: 0;
-}
-
-.filterLabel{
+.jumpTitle{
+  margin: 0 0 10px;
   font-weight: 900;
-  color: rgba(11,26,16,0.72);
-  font-size: 13px;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
+  letter-spacing: -0.02em;
+  font-size: 14px;
+  color: rgba(11,26,16,0.78);
 }
 
-.chips{
-  display: inline-flex;
+.chipRow{
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
 }
 
 .chip{
-  appearance: none;
-  border: 1px solid var(--chipLine);
-  background: var(--chipBg);
-  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 12px;
-  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: #0b2b12;
   font-weight: 900;
   font-size: 13px;
-  color: #0b2b12;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-  user-select: none;
+  text-decoration: none;
   white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
 }
 
-.chip.is-active{
-  background: rgba(224,100,58,0.92);
-  border-color: rgba(0,0,0,0.10);
-  color: #fff;
-  box-shadow: 0 14px 30px rgba(224,100,58,0.18);
+.chip:hover{
+  background: rgba(224,100,58,0.10);
+  border-color: rgba(224,100,58,0.30);
 }
 
-.filterRight{
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
+/* ACTIVITY GRID */
 .grid{
   margin-top: 14px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.activity{
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
   gap: 14px;
   align-items: stretch;
 }
 
-.card{
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  background: var(--glass2);
-  box-shadow: var(--shadow);
+.media9x16{
+  border-radius: 18px;
   overflow: hidden;
-  color: var(--ink);
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.card a{
-  color: inherit;
-  text-decoration: none;
-}
-
-.cardMedia{
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
   position: relative;
-  aspect-ratio: 16 / 10;
-  background: rgba(0,0,0,0.10);
-  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cardMedia img{
+.media9x16 .frame{
+  width: min(420px, 100%);
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.10);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.14);
+  position: relative;
+}
+
+.media9x16 img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.01);
 }
 
-.cardMediaShade{
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.26));
-  pointer-events: none;
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
 }
 
-.cardTopBadge{
-  position: absolute;
-  left: 12px;
-  top: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.20);
-  background: rgba(0,0,0,0.30);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: rgba(255,255,255,0.96);
-  font-weight: 900;
-  font-size: 12px;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-}
-
-.cardBody{
-  padding: 14px;
-  display: grid;
+.titleRow{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   gap: 10px;
-  flex: 1 1 auto;
+  flex-wrap: wrap;
 }
 
-.cardTitle{
+.h3{
   margin: 0;
   font-family: var(--font-head);
   font-weight: 900;
   letter-spacing: -0.02em;
-  font-size: 22px;
-  line-height: 1.1;
+  font-size: 26px;
+  line-height: 1.08;
   color: var(--forest);
 }
 
-.cardText{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  font-weight: 650;
-  line-height: 1.75;
-  font-size: 14.8px;
+.badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: #0b2b12;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .pillRow{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  align-items: center;
 }
 
 .pill{
@@ -343,66 +354,104 @@ body{ margin:0; }
   border-radius: 999px;
   border: 1px solid rgba(13,89,37,0.18);
   background: rgba(255,255,255,0.62);
-  color: #0b2b12;
+  color: var(--ink);
   font-weight: 900;
   font-size: 13px;
   white-space: nowrap;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
 }
 
-.cardCtaRow{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-top: 2px;
-  flex-wrap: wrap;
-}
-
-.cardCta{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.pill strong{
   font-weight: 900;
-  color: #0b2b12;
-  font-size: 13px;
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.62);
-  box-shadow: 0 12px 28px rgba(13,89,37,0.10);
-  white-space: nowrap;
-}
-
-.card:hover .cardCta{
-  background: rgba(224,100,58,0.10);
-  border-color: rgba(224,100,58,0.30);
-}
-
-.card:hover .cardMedia img{
-  transform: scale(1.03);
-  transition: transform 260ms ease;
-}
-
-.sectionTitle{
-  margin: 18px 0 0;
-  font-family: var(--font-head);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  font-size: 22px;
-  line-height: 1.1;
   color: var(--forest);
 }
 
-.sectionHint{
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-weight: 650;
-  line-height: 1.7;
-  font-size: 14px;
-  max-width: 90ch;
+.subCard{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 12px;
 }
 
+.subTitle{
+  margin: 0 0 8px;
+  font-weight: 900;
+  color: #0b2b12;
+  letter-spacing: -0.01em;
+  font-size: 14px;
+}
+
+.list{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.8;
+  font-weight: 650;
+  font-size: 14.6px;
+}
+
+.list li{ margin: 6px 0; }
+
+.schedule{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.slot{
+  border-radius: 16px;
+  border: 1px solid rgba(13,89,37,0.14);
+  background: rgba(245,245,220,0.62);
+  padding: 10px;
+  box-shadow: 0 12px 28px rgba(13,89,37,0.08);
+}
+
+.slotTop{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.slotName{
+  margin: 0;
+  font-weight: 900;
+  color: #0b2b12;
+  font-size: 13.5px;
+  letter-spacing: -0.01em;
+}
+
+.slotTime{
+  margin: 0;
+  font-weight: 900;
+  color: rgba(11,26,16,0.72);
+  font-size: 12.8px;
+}
+
+.slotNote{
+  margin: 6px 0 0;
+  color: rgba(11,26,16,0.74);
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.ctaRow{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.note{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Bottom CTA band */
 .ctaBand{
   margin-top: 14px;
   border-radius: var(--r);
@@ -436,353 +485,345 @@ body{ margin:0; }
   max-width: 80ch;
 }
 
-.ctaBtns{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.is-hidden{ display:none !important; }
-
+/* Mobile */
 @media (max-width: 900px){
-  .wrap{ padding: 12px 14px 74px; }
+  .wrap{ padding: 12px 14px 64px; }
   .heroMedia{ min-height: 280px; }
-  .grid{ grid-template-columns: 1fr; }
-  .cardMedia{ aspect-ratio: 4 / 3; }
+  .activity{ grid-template-columns: 1fr; }
+  .media9x16{ min-height: 0; padding: 12px; }
+  .media9x16 .frame{ width: 100%; max-width: 100%; }
+  .schedule{ grid-template-columns: 1fr; }
 }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Features overview page">
-    <section class="topBand" aria-label="Page navigation and quick actions">
+  <main class="wrap" aria-label="Activities page">
+    <section class="topBand" aria-label="Page navigation">
       <div class="crumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">›</span>
-        <span>Features</span>
+        <a href="/features/">Features</a>
+        <span aria-hidden="true">›</span>
+        <span>Activities</span>
       </div>
       <div class="quickActions" aria-label="Quick actions">
-        <a class="btn secondary" href="/rooms/">View Rooms</a>
-        <a class="btn primary" href="/booking/">Book Your Stay</a>
+        <a class="btn secondary" href="/booking/">Check availability</a>
+        <a class="btn primary" href="/contact/">Ask about activities</a>
       </div>
     </section>
-<section class="hero" aria-label="Features hero">
+<section class="hero" aria-label="Activities hero">
   <div class="heroMedia" aria-label="Hero image">
-    <img src="/assets/images/pages/features/tcfr_features_hero_card_01.jpeg" alt="The Cloud Forest Retreat view and surroundings" loading="eager" decoding="async" />
+    <img src="/assets/images/pages/features/activities/tcfr_activities_hero.jpg" alt="Cloud forest landscape near The Cloud Forest Retreat" loading="eager" decoding="async" />
     <div class="heroShade" aria-hidden="true"></div>
 
     <div class="heroInner" aria-label="Hero content">
-      <div class="kicker">Explore the experience</div>
-      <h1 class="heroH1">Features</h1>
+      <div class="kicker">Move • Breathe • Explore</div>
+      <h1 class="heroH1">Activities</h1>
       <p class="heroLead">
-        Everything that makes your stay feel special: comfort, activities, cloud forest life, nearby wonders, fresh farm produce, and the landscapes that surround you.
+        From sunrise yoga to mountain bike trails, the cloud forest is not just a view.
+        It is something you step into. Choose slow and grounding, or fast and thrilling, and make it yours.
       </p>
     </div>
   </div>
 </section>
 
-<section class="filters" aria-label="Feature filters">
-  <div class="filterLeft">
-    <div class="filterLabel">Filter:</div>
-    <div class="chips" aria-label="Category chips">
-      <button class="chip is-active" type="button" data-filter="all">All</button>
-      <button class="chip" type="button" data-filter="essentials">Essentials</button>
-      <button class="chip" type="button" data-filter="activities">Activities</button>
-      <button class="chip" type="button" data-filter="attractions">Attractions</button>
-      <button class="chip" type="button" data-filter="nature">Nature</button>
-      <button class="chip" type="button" data-filter="landscapes">Landscapes</button>
-      <button class="chip" type="button" data-filter="gallery">Gallery</button>
+<section class="jumpBand" aria-label="Jump links">
+  <p class="jumpTitle">Jump to:</p>
+  <div class="chipRow">
+    <a class="chip" href="#yoga">Yoga</a>
+    <a class="chip" href="#biking">Biking</a>
+    <a class="chip" href="#hiking">Hiking</a>
+    <a class="chip" href="#horseback">Horseback riding</a>
+    <a class="chip" href="#motocross">Motocross</a>
+  </div>
+</section>
+
+<section class="grid" aria-label="Activities list">
+
+  <!-- YOGA -->
+  <article class="card" id="yoga" aria-label="Yoga">
+    <div class="cardHead">
+      <h2 class="h2">Yoga</h2>
+      <p class="hint">By request • advance booking</p>
     </div>
-  </div>
 
-  <div class="filterRight" aria-label="Quick links">
-    <a class="btn secondary" href="/contact/">Ask a question</a>
-  </div>
+    <div class="activity">
+      <div class="media9x16" aria-label="Yoga image">
+        <div class="frame">
+          <img src="/assets/images/pages/features/activities/tcfr_activities_yoga_01.jpg" alt="Yoga image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Yoga content">
+        <div class="titleRow">
+          <h3 class="h3">Reconnect in the cloud forest</h3>
+          <span class="badge">Wellness</span>
+        </div>
+
+        <p class="p">
+          Practice surrounded by green canopy, birdsong, and fresh mountain air.
+          Sessions are available upon request and scheduled in advance so everything feels calm and intentional.
+        </p>
+
+        <div class="pillRow" aria-label="Yoga highlights">
+          <span class="pill"><strong>Setting:</strong> forest views</span>
+          <span class="pill"><strong>Style:</strong> all levels</span>
+          <span class="pill"><strong>Focus:</strong> breath + reset</span>
+        </div>
+
+        <div class="subCard" aria-label="Yoga schedule">
+          <p class="subTitle">Suggested schedule</p>
+          <div class="schedule" role="list">
+            <div class="slot" role="listitem">
+              <div class="slotTop">
+                <p class="slotName">Morning Flow</p>
+                <p class="slotTime">7:30 AM - 9:00 AM</p>
+              </div>
+              <p class="slotNote">Gentle vinyasa to energize and center your day.</p>
+            </div>
+            <div class="slot" role="listitem">
+              <div class="slotTop">
+                <p class="slotName">Evening Wind-Down</p>
+                <p class="slotTime">6:00 PM - 7:30 PM</p>
+              </div>
+              <p class="slotNote">Restorative practice to release tension and soften into night.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="subCard" aria-label="Yoga spaces">
+          <p class="subTitle">Yoga spaces (weather and vibe)</p>
+          <ul class="list">
+            <li>Open-air: panoramic forest and volcanic landscapes</li>
+            <li>Indoor: cozy, light-filled, weather-protected</li>
+            <li>Riverside: nature-forward sessions near the Guayllabamba River</li>
+          </ul>
+        </div>
+
+        <p class="note">
+          Retreat packages and private sessions are available. Pricing: inquire with admin.
+        </p>
+
+        <div class="ctaRow" aria-label="Yoga actions">
+          <a class="btn primary" href="/contact/">Request yoga</a>
+          <a class="btn secondary" href="/booking/">Check availability</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- BIKING -->
+  <article class="card" id="biking" aria-label="Biking">
+    <div class="cardHead">
+      <h2 class="h2">Biking</h2>
+      <p class="hint">Trail access • rider-friendly base</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Biking image">
+        <div class="frame">
+          <img src="/assets/images/pages/features/activities/tcfr_activities_biking.jpg" alt="Biking image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Biking content">
+        <div class="titleRow">
+          <h3 class="h3">Ride through paradise</h3>
+          <span class="badge">Adventure</span>
+        </div>
+
+        <p class="p">
+          Based near Niebli de la Compania, with routes around the Pululahua area and Guayllabamba River.
+          Stop in to refuel, tune up, and reset - or stay overnight to keep the adventure going.
+        </p>
+
+        <div class="pillRow" aria-label="Biking highlights">
+          <span class="pill"><strong>Best for:</strong> mountain bikers</span>
+          <span class="pill"><strong>Terrain:</strong> scenic + varied</span>
+          <span class="pill"><strong>Extras:</strong> rest + refuel</span>
+        </div>
+
+        <div class="subCard" aria-label="Biker amenities">
+          <p class="subTitle">Biker-friendly setup</p>
+          <ul class="list">
+            <li>Trail access points and route guidance (ask us)</li>
+            <li>Rest stop: drinks, snacks, and farm-to-table meals</li>
+            <li>Bike maintenance station: tools and space for quick fixes</li>
+            <li>Overnight stays: secure storage + a calm reset</li>
+          </ul>
+        </div>
+
+        <div class="subCard" aria-label="Biking packages">
+          <p class="subTitle">Packages (example)</p>
+          <ul class="list">
+            <li>Day rider pass: trail access + rest stop amenities (inquire)</li>
+            <li>Overnight stay: lodging + dinner + breakfast + storage (inquire)</li>
+            <li>Groups/events: guided rides and catered options (custom)</li>
+          </ul>
+        </div>
+
+        <div class="ctaRow" aria-label="Biking actions">
+          <a class="btn primary" href="/contact/">Ask about biking</a>
+          <a class="btn secondary" href="/booking/">Book a stay</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- HIKING -->
+  <article class="card" id="hiking" aria-label="Hiking">
+    <div class="cardHead">
+      <h2 class="h2">Hiking</h2>
+      <p class="hint">Forest walks • viewpoints • nature pace</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Hiking image">
+        <div class="frame">
+          <img src="/assets/images/pages/features/activities/tcfr_activities_hiking.jpg" alt="Hiking image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Hiking content">
+        <div class="titleRow">
+          <h3 class="h3">Slow trails, big rewards</h3>
+          <span class="badge">Nature</span>
+        </div>
+
+        <p class="p">
+          Cloud forest trails are best enjoyed unhurried. Expect changing light, birds overhead, and quiet moments that feel rare.
+          Ask us for easy walks, longer routes, and the best times for wildlife.
+        </p>
+
+        <div class="pillRow" aria-label="Hiking highlights">
+          <span class="pill"><strong>Vibe:</strong> calm + scenic</span>
+          <span class="pill"><strong>Best time:</strong> morning</span>
+          <span class="pill"><strong>Bring:</strong> light rain layer</span>
+        </div>
+
+        <div class="subCard" aria-label="Hiking options">
+          <p class="subTitle">Options</p>
+          <ul class="list">
+            <li>Easy nature walks for all levels</li>
+            <li>Longer hikes with viewpoints</li>
+            <li>Birding-focused routes (ask for timing)</li>
+          </ul>
+        </div>
+
+        <div class="ctaRow" aria-label="Hiking actions">
+          <a class="btn primary" href="/contact/">Ask for trail recommendations</a>
+          <a class="btn secondary" href="/booking/">Stay nearby</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- HORSEBACK -->
+  <article class="card" id="horseback" aria-label="Horseback riding">
+    <div class="cardHead">
+      <h2 class="h2">Horseback riding</h2>
+      <p class="hint">By request • advance notice required</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Horseback riding image">
+        <div class="frame">
+          <img src="/assets/images/pages/features/activities/tcfr_activities_horseback_riding.jpg" alt="Horseback riding image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Horseback riding content">
+        <div class="titleRow">
+          <h3 class="h3">A quieter way to explore</h3>
+          <span class="badge">By request</span>
+        </div>
+
+        <p class="p">
+          Horseback rides are arranged in advance and tailored to your comfort level.
+          Ideal for guests who want a scenic experience without the intensity of longer hikes.
+        </p>
+
+        <div class="pillRow" aria-label="Horseback highlights">
+          <span class="pill"><strong>Style:</strong> guided</span>
+          <span class="pill"><strong>Level:</strong> beginner-friendly</span>
+          <span class="pill"><strong>Book:</strong> advance notice</span>
+        </div>
+
+        <div class="subCard" aria-label="Horseback notes">
+          <p class="subTitle">Good to know</p>
+          <ul class="list">
+            <li>Advance booking required</li>
+            <li>Closed-toe shoes recommended</li>
+            <li>Routes depend on weather and trail conditions</li>
+          </ul>
+        </div>
+
+        <div class="ctaRow" aria-label="Horseback actions">
+          <a class="btn primary" href="/contact/">Request horseback riding</a>
+          <a class="btn secondary" href="/booking/">Book your stay</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- MOTOCROSS -->
+  <article class="card" id="motocross" aria-label="Motocross">
+    <div class="cardHead">
+      <h2 class="h2">Motocross</h2>
+      <p class="hint">Info coming soon</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Motocross image">
+        <div class="frame">
+          <img src="/assets/images/pages/features/activities/tcfr_activities_motorcross.jpg" alt="Motocross image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Motocross content">
+        <div class="titleRow">
+          <h3 class="h3">Add speed to the cloud forest</h3>
+          <span class="badge">Coming soon</span>
+        </div>
+
+        <p class="p">
+          We are building out clear guidance for motocross-friendly routes, best practices, and how to coordinate respectfully with the area.
+          If you want to ride while you stay, message us and we will help you plan.
+        </p>
+
+        <div class="subCard" aria-label="Motocross note">
+          <p class="subTitle">Request info</p>
+          <p class="note">
+            Tell us your experience level and your preferred ride style (scenic vs technical), and we will recommend the best options.
+          </p>
+        </div>
+
+        <div class="ctaRow" aria-label="Motocross actions">
+          <a class="btn primary" href="/contact/">Ask about motocross</a>
+          <a class="btn secondary" href="/booking/">Book your stay</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
 </section>
 
-<h2 class="sectionTitle">Pick what you want to explore</h2>
-<p class="sectionHint">
-  Tap any card to open the full page for that topic. If you are not sure where to start, begin with Amenities, Activities, and Attractions.
-</p>
-
-<section class="grid" aria-label="Features grid">
-  <!-- 1. AMENITIES -->
-  <article class="card" data-cat="essentials" aria-label="Amenities card">
-    <a href="/features/amenities/" aria-label="Open Amenities page">
-      <div class="cardMedia" aria-label="Amenities image">
-        <img src="/assets/images/pages/features/tcfr_features_card_amenities_01.jpeg" alt="Amenities at The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Essentials</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Amenities</h3>
-        <p class="cardText">The comfort details that make the retreat feel easy: the essentials, the extras, and the little things guests remember.</p>
-        <div class="pillRow" aria-label="Amenities highlights">
-          <span class="pill">List view</span>
-          <span class="pill">2 images</span>
-          <span class="pill">Stay-ready</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Amenities</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 2. ACTIVITIES -->
-  <article class="card" data-cat="activities" aria-label="Activities card">
-    <a href="/features/activities/" aria-label="Open Activities page">
-      <div class="cardMedia" aria-label="Activities image">
-        <img src="/assets/images/pages/features/tcfr_features_card_activities_01.jpg" alt="Activities at and near the retreat" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Activities</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Activities</h3>
-        <p class="cardText">What you can do while you are here: easy nature time, active adventures, and calm moments that fit your pace.</p>
-        <div class="pillRow" aria-label="Activities highlights">
-          <span class="pill">On-site</span>
-          <span class="pill">Nearby</span>
-          <span class="pill">For all energy levels</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Activities</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 3. ATTRACTIONS -->
-  <article class="card" data-cat="attractions" aria-label="Attractions card">
-    <a href="/features/attractions/" aria-label="Open Attractions page">
-      <div class="cardMedia" aria-label="Attractions image">
-        <img src="/assets/images/pages/features/tcfr_features_card_attractions_01.png" alt="Attractions near the retreat" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Attractions</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Attractions</h3>
-        <p class="cardText">On and near property experiences guests love most, with visuals that help you choose what fits your day.</p>
-        <div class="pillRow" aria-label="Attractions highlights">
-          <span class="pill">On and near property</span>
-          <span class="pill">4 videos</span>
-          <span class="pill">Easy planning</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Attractions</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 4. PRODUCE -->
-  <article class="card" data-cat="essentials" aria-label="Produce card">
-    <a href="/features/produce/" aria-label="Open Produce page">
-      <div class="cardMedia" aria-label="Produce image">
-        <img src="/assets/images/pages/features/tcfr_features_card_produce_01.jpg" alt="Farm produce and local ingredients" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Essentials</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Produce</h3>
-        <p class="cardText">Farm-to-table is part of the stay. Fresh ingredients, local flavor, and simple food that tastes better in the mountains.</p>
-        <div class="pillRow" aria-label="Produce highlights">
-          <span class="pill">Farm-to-table</span>
-          <span class="pill">Local</span>
-          <span class="pill">Seasonal</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Produce</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 5. FLORA -->
-  <article class="card" data-cat="nature" aria-label="Flora card">
-    <a href="/features/flora/" aria-label="Open Flora page">
-      <div class="cardMedia" aria-label="Flora image">
-        <img src="/assets/images/pages/features/tcfr_features_card_flora_01.jpg" alt="Cloud forest flora" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Nature</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Flora</h3>
-        <p class="cardText">A living green world: orchids, moss, towering trees, and the plant life that makes the cloud forest feel unreal.</p>
-        <div class="pillRow" aria-label="Flora highlights">
-          <span class="pill">Photos</span>
-          <span class="pill">On-property</span>
-          <span class="pill">Cloud forest</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Flora</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 6. FAUNA -->
-  <article class="card" data-cat="nature" aria-label="Fauna card">
-    <a href="/features/fauna/" aria-label="Open Fauna page">
-      <div class="cardMedia" aria-label="Fauna image">
-        <img src="/assets/images/pages/features/tcfr_features_card_fauna_02.jpg" alt="Cloud forest fauna" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Nature</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Fauna</h3>
-        <p class="cardText">Birdsong, movement in the trees, and the feeling that nature is everywhere. A favorite for birders and curious explorers.</p>
-        <div class="pillRow" aria-label="Fauna highlights">
-          <span class="pill">Images</span>
-          <span class="pill">2 videos</span>
-          <span class="pill">Wildlife</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Fauna</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 7. CHOCO ANDINO -->
-  <article class="card" data-cat="landscapes" aria-label="Choco Andino de Pichincha card">
-    <a href="/features/choco-andino-de-pichincha/" aria-label="Open Choco Andino de Pichincha page">
-      <div class="cardMedia" aria-label="Choco Andino image">
-        <img src="/assets/images/pages/features/tcfr_features_card_choco_01.jpg" alt="Choco Andino de Pichincha" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Landscapes</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Chocó Andino de Pichincha</h3>
-        <p class="cardText">Big context for your stay. A region shaped by mist, mountains, and biodiversity, and why it matters.</p>
-        <div class="pillRow" aria-label="Choco Andino highlights">
-          <span class="pill">Where you are</span>
-          <span class="pill">Context</span>
-          <span class="pill">Region</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore the Region</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 8. RIO GUAYLLABAMBA -->
-  <article class="card" data-cat="landscapes" aria-label="Río Guayllabamba card">
-    <a href="/features/rio-guayllabamba/" aria-label="Open Río Guayllabamba page">
-      <div class="cardMedia" aria-label="Rio Guayllabamba image">
-        <img src="/assets/images/pages/features/tcfr_features_card_rio_01.jpg" alt="Río Guayllabamba" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Landscapes</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Río Guayllabamba</h3>
-        <p class="cardText">A nearby natural landmark that shapes the valley. A peaceful read with visuals that make the scale feel real.</p>
-        <div class="pillRow" aria-label="Rio highlights">
-          <span class="pill">Landmark</span>
-          <span class="pill">1 video</span>
-          <span class="pill">Landscape</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore the River</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 9. PULULAHUA -->
-  <article class="card" data-cat="landscapes" aria-label="Pululahua card">
-    <a href="/features/pululahua/" aria-label="Open Pululahua page">
-      <div class="cardMedia" aria-label="Pululahua image">
-        <img src="/assets/images/pages/features/tcfr_features_card_pululahua_01.jpg" alt="Pululahua" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Landscapes</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Pululahua</h3>
-        <p class="cardText">A nearby destination that is rare and unforgettable. Learn what makes it unique and why it belongs on your itinerary.</p>
-        <div class="pillRow" aria-label="Pululahua highlights">
-          <span class="pill">Nearby</span>
-          <span class="pill">Images</span>
-          <span class="pill">Must-see</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Explore Pululahua</span>
-        </div>
-      </div>
-    </a>
-  </article>
-
-  <!-- 10. GALLERY -->
-  <article class="card" data-cat="gallery" aria-label="Gallery card">
-    <a href="/features/gallery/" aria-label="Open Gallery page">
-      <div class="cardMedia" aria-label="Gallery image">
-        <img src="/assets/images/pages/features/tcfr_features_card_gallery_01.jpg" alt="The Cloud Forest Retreat gallery" loading="lazy" decoding="async" />
-        <div class="cardMediaShade" aria-hidden="true"></div>
-        <div class="cardTopBadge">Gallery</div>
-      </div>
-      <div class="cardBody">
-        <h3 class="cardTitle">Gallery</h3>
-        <p class="cardText">A visual tour of the retreat and surroundings. Perfect if you want to feel the vibe after you understand the offering.</p>
-        <div class="pillRow" aria-label="Gallery highlights">
-          <span class="pill">Images</span>
-          <span class="pill">Mood</span>
-          <span class="pill">Highlights</span>
-        </div>
-        <div class="cardCtaRow">
-          <span class="cardCta">Open Gallery</span>
-        </div>
-      </div>
-    </a>
-  </article>
-</section>
-
-<section class="ctaBand" aria-label="Bottom call to action">
+<section class="ctaBand" aria-label="Activities CTA">
   <div>
-    <h2>Want help choosing what to do first?</h2>
-    <p>Message us and we will recommend the best experiences based on your time, season, and energy level.</p>
+    <h2>Want us to plan your activity mix?</h2>
+    <p>
+      Tell us your travel dates and what you like: slow mornings, big hikes, bike trails, or wellness.
+      We will recommend the best schedule for weather and light.
+    </p>
   </div>
-  <div class="ctaBtns" aria-label="CTA buttons">
-    <a class="btn primary" href="/contact/">Contact</a>
-    <a class="btn secondary" href="/rooms/">View Rooms</a>
-    <a class="btn secondary" href="/booking/">Book Your Stay</a>
+  <div class="quickActions" aria-label="CTA buttons">
+    <a class="btn primary" href="/contact/">Contact us</a>
+    <a class="btn secondary" href="/booking/">Check availability</a>
   </div>
 </section>
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-  <script>
-    (function(){
-      "use strict";
-  var chips = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
-  var cards = Array.prototype.slice.call(document.querySelectorAll(".card[data-cat]"));
-
-  function setActiveChip(active){
-    chips.forEach(function(c){
-      c.classList.toggle("is-active", c.getAttribute("data-filter") === active);
-    });
-  }
-
-  function applyFilter(f){
-    if (f === "all"){
-      cards.forEach(function(card){ card.classList.remove("is-hidden"); });
-      return;
-    }
-    cards.forEach(function(card){
-      var cat = card.getAttribute("data-cat");
-      card.classList.toggle("is-hidden", cat !== f);
-    });
-  }
-
-  chips.forEach(function(chip){
-    chip.addEventListener("click", function(){
-      var f = chip.getAttribute("data-filter") || "all";
-      setActiveChip(f);
-      applyFilter(f);
-    });
-  });
-})();
-  </script>
 </body>
 </html>
