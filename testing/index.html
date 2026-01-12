@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Booking | The Cloud Forest Retreat</title>
-  <meta name="description" content="Request availability and book your stay at The Cloud Forest Retreat in Mindo, Ecuador. Tell us your dates, group size, and room preference, and we will follow up quickly." />
+  <meta name="description" content="Request availability and book your stay at The Cloud Forest Retreat in Mindo, Ecuador." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/booking/" />
 
@@ -28,14 +28,12 @@
       --r: 24px;
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
-
       --forest: #0D5925;
       --forest2: #0B2B12;
       --orange: #E0643A;
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
-      --muted: rgba(11,26,16,0.72);
     }
 
     *{ box-sizing: border-box; }
@@ -164,6 +162,7 @@
     }
 
     .field{ min-width: 0; }
+    .full{ grid-column: 1 / -1; }
 
     label{
       display: block;
@@ -196,8 +195,6 @@
       box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
       border-color: rgba(224,100,58,0.45);
     }
-
-    .full{ grid-column: 1 / -1; }
 
     .req{
       color: rgba(224,100,58,0.95);
@@ -239,21 +236,11 @@
       gap: 10px;
     }
 
-    .submitBtn[disabled]{
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
+    .submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
 
-    .sideStack{
-      display: grid;
-      gap: 14px;
-    }
+    .sideStack{ display: grid; gap: 14px; }
 
-    .sideCard{
-      padding: 14px;
-      position: relative;
-      overflow: hidden;
-    }
+    .sideCard{ padding: 14px; position: relative; overflow: hidden; }
 
     .sideCard:before{
       content:"";
@@ -285,58 +272,6 @@
       position: relative;
     }
 
-    .pillRow{
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      position: relative;
-    }
-
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-
-    .pill strong{ color: var(--forest); }
-
-    .links{
-      margin-top: 12px;
-      display: grid;
-      gap: 10px;
-      position: relative;
-    }
-
-    .linkBtn{
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 12px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(13,89,37,0.14);
-      background: rgba(255,255,255,0.62);
-      color: var(--forest2);
-      font-weight: 900;
-    }
-
-    .linkBtn:hover{ background: rgba(13,89,37,0.06); }
-
-    .chev{
-      opacity: 0.7;
-      font-weight: 900;
-    }
-
     .statusCard{
       padding: 14px;
       display: none;
@@ -358,23 +293,6 @@
       line-height: 1.75;
       font-weight: 650;
       font-size: 14.6px;
-    }
-
-    .finePrint{
-      margin-top: 12px;
-      color: rgba(11,26,16,0.62);
-      font-weight: 650;
-      font-size: 13px;
-      line-height: 1.65;
-    }
-
-    .hiddenFrame{
-      width: 1px;
-      height: 1px;
-      border: 0;
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
     }
 
     @media (max-width: 900px){
@@ -400,7 +318,8 @@
         <div class="kicker">Request availability</div>
         <h1 class="heroH1">Book Your Stay</h1>
         <p class="heroP">
-          Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability, next steps, and help arranging ground transportation from Quito if needed.
+          Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability and next steps.
+          If needed, we can also help arrange ground transportation from Quito or the airport.
         </p>
       </div>
     </section>
@@ -410,16 +329,10 @@
       <section class="card pad" aria-label="Booking request form">
         <h2 class="h2">Booking request</h2>
         <p class="hint">
-          This form sends your request directly to our team and confirms by email. Fields marked with an asterisk are required.
+          This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
         </p>
 
-        <form
-          id="tcfrBookingForm"
-          action="https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec"
-          method="POST"
-          target="tcfrHiddenFrame"
-          aria-label="Booking form"
-        >
+        <form id="tcfrBookingForm" aria-label="Booking form">
           <div class="formGrid">
 
             <div class="field">
@@ -520,17 +433,9 @@
             <p class="miniNote">
               By submitting, you agree we may contact you by email or phone to confirm details.
             </p>
-            <button id="tcfrSubmitBtn" class="submitBtn" type="submit">
-              Submit request
-            </button>
+            <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit request</button>
           </div>
-
-          <p class="finePrint">
-            Tip: If you need transportation from Quito or the airport, select "Yes" and include your preferred pickup time in the message. We will respond with options and pricing.
-          </p>
         </form>
-
-        <iframe id="tcfrHiddenFrame" name="tcfrHiddenFrame" class="hiddenFrame" title="Hidden submission frame"></iframe>
       </section>
 
       <aside class="sideStack" aria-label="Booking details">
@@ -538,7 +443,8 @@
         <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
           <h3 class="statusTitle">Request sent</h3>
           <p class="statusText">
-            Thank you. We received your booking inquiry. If you do not see a confirmation email, please check your spam folder.
+            Thank you. We received your booking inquiry and sent a confirmation email.
+            If you do not see it, please check your spam or promotions folder.
           </p>
         </section>
 
@@ -548,31 +454,6 @@
             We will reply with availability, pricing, and any recommendations to make your stay effortless.
             If you selected transportation, we will include pickup options from Quito or the airport.
           </p>
-
-          <div class="pillRow" aria-label="Quick reassurance">
-            <span class="pill"><strong>Response:</strong> usually same day</span>
-            <span class="pill"><strong>Location:</strong> Mindo, Ecuador</span>
-            <span class="pill"><strong>Support:</strong> transportation help</span>
-          </div>
-        </section>
-
-        <section class="card sideCard" aria-label="Book through partners">
-          <h3 class="sideTitle">Prefer to book through a partner?</h3>
-          <p class="sideP">
-            You can also book through our listing partners. If you do, send us a quick note so we can help with transportation and local tips.
-          </p>
-
-          <div class="links" aria-label="Partner links">
-            <a class="linkBtn" href="https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information" target="_blank" rel="noopener">
-              Vrbo / Expedia <span class="chev">›</span>
-            </a>
-            <a class="linkBtn" href="https://www.booking.com/hotel/ec/the-cloud-forest-retreat.html?chal_t=1768182087459&force_referer=" target="_blank" rel="noopener">
-              Booking.com <span class="chev">›</span>
-            </a>
-            <a class="linkBtn" href="#" onclick="return false;" aria-disabled="true" title="Airbnb link coming soon" style="opacity:.7;cursor:not-allowed;">
-              Airbnb (coming soon) <span class="chev">›</span>
-            </a>
-          </div>
         </section>
 
       </aside>
@@ -588,17 +469,16 @@
     (function(){
       "use strict";
 
+      var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec";
+
       function toTitleCase(s){
         var t = String(s || "").trim();
         if (!t) return "";
-        t = t.toLowerCase();
-        t = t.replace(/\s+/g, " ");
+        t = t.toLowerCase().replace(/\s+/g, " ");
         var parts = t.split(" ");
         for (var i = 0; i < parts.length; i++){
           var w = parts[i];
           if (!w) continue;
-
-          // Handle hyphenated last names: "garcia-lopez"
           var hy = w.split("-");
           for (var j = 0; j < hy.length; j++){
             var seg = hy[j];
@@ -610,48 +490,70 @@
         return parts.join(" ");
       }
 
+      var form = document.getElementById("tcfrBookingForm");
+      var btn = document.getElementById("tcfrSubmitBtn");
+      var statusCard = document.getElementById("tcfrStatusCard");
+
       var first = document.getElementById("first_name");
       var last = document.getElementById("last_name");
 
       function bindTitleCase(el){
         if (!el) return;
-        el.addEventListener("blur", function(){
-          el.value = toTitleCase(el.value);
-        });
+        el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
       }
       bindTitleCase(first);
       bindTitleCase(last);
 
-      var form = document.getElementById("tcfrBookingForm");
-      var iframe = document.getElementById("tcfrHiddenFrame");
-      var btn = document.getElementById("tcfrSubmitBtn");
-      var statusCard = document.getElementById("tcfrStatusCard");
+      function setSending(isSending){
+        btn.disabled = isSending;
+        btn.textContent = isSending ? "Sending..." : "Submit request";
+      }
 
-      if (!form || !iframe || !btn || !statusCard) return;
+      function showSuccess(){
+        statusCard.classList.add("show");
+        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
 
-      var submitted = false;
+      function showError(msg){
+        statusCard.classList.add("show");
+        statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
+        statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
+        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
 
-      form.addEventListener("submit", function(){
-        // Ensure capitalization is applied before submit
+      if (!form || !btn || !statusCard) return;
+
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+
         if (first) first.value = toTitleCase(first.value);
         if (last) last.value = toTitleCase(last.value);
 
-        submitted = true;
-        btn.disabled = true;
-        btn.textContent = "Sending...";
-      });
+        var fd = new FormData(form);
 
-      iframe.addEventListener("load", function(){
-        if (!submitted) return;
+        // Basic required enforcement (HTML required should cover most)
+        if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
+          showError("Please fill out all required fields.");
+          return;
+        }
 
-        statusCard.classList.add("show");
-        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        setSending(true);
 
-        btn.disabled = false;
-        btn.textContent = "Submit request";
-
-        form.reset();
-        submitted = false;
+        fetch(WEB_APP_URL, {
+          method: "POST",
+          body: fd,
+          mode: "no-cors"
+        })
+        .then(function(){
+          // With no-cors, we cannot read response, but it still sends.
+          showSuccess();
+          form.reset();
+          setSending(false);
+        })
+        .catch(function(){
+          setSending(false);
+          showError("We could not submit your request. Please try again.");
+        });
       });
     })();
   </script>
