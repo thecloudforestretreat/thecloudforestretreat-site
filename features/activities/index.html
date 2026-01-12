@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Activities | The Cloud Forest Retreat</title>
+  <meta name="description" content="Explore activities at The Cloud Forest Retreat: yoga by request, mountain biking, hiking, horseback riding, and more. Nature-first experiences in Ecuador's cloud forest." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/activities/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <script src="/assets/js/head.js" defer></script>
+  <style>
+    :root{
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
+
+      --forest: #0D5925;
+      --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
+
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+
+      --accent: #E0643A;
+      --accentSoft: rgba(224,100,58,0.14);
+    }
+
+    *{ box-sizing: border-box; }
+    body{ margin: 0; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 76px;
+    }
+
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: var(--glass2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      color: var(--ink);
+      min-width: 0;
+      position: relative;
+    }
+
+    .cardHead{
+      padding: 14px 14px 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    .h2{
+      margin: 0;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .hint{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .p{
+      margin: 0;
+      color: rgba(11,26,16,0.80);
+      line-height: 1.75;
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+      flex-wrap: wrap;
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* HERO */
+    .hero{
+      margin-top: 14px;
+      border-radius: var(--r);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative;
+      min-height: 420px;
+      background: rgba(0,0,0,0.10);
+    }
+
+    .heroMedia{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .heroMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.01);
+    }
+
+    .heroShade{
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(900px 520px at 18% 18%, rgba(224,100,58,0.20), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.16), rgba(0,0,0,0.52));
+      pointer-events: none;
+    }
+
+    .heroInner{
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 14px;
+      align-items: end;
+    }
+
+    .heroTitleBox{
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.30);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: #fff;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
+      max-width: 720px;
+    }
+
+    .kicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .heroH1{
+      margin: 8px 0 8px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(34px, 3.8vw, 54px);
+      color: #fff;
+    }
+
+    .heroLead{
+      margin: 0;
+      color: rgba(231,228,209,0.92);
+      font-size: 15.5px;
+      line-height: 1.75;
+      font-weight: 650;
+      max-width: 70ch;
+    }
+
+    .jumpBox{
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(245,245,220,0.20);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: rgba(255,255,255,0.94);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+    }
+
+    .jumpTitle{
+      margin: 0 0 10px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 14px;
+      color: rgba(255,255,255,0.94);
+    }
+
+    .chipRow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(245,245,220,0.42);
+      background: rgba(11,26,16,0.32);
+      color: rgba(231,228,209,0.96);
+      font-weight: 900;
+      font-size: 13px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .chip:hover{ background: rgba(11,26,16,0.44); }
+
+    /* ACTIVITY GRID */
+    .grid{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .activity{
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .media9x16{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .media9x16 .frame{
+      width: min(420px, 100%);
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.10);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.14);
+      position: relative;
+    }
+
+    .media9x16 img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .titleRow{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .h3{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 26px;
+      line-height: 1.08;
+      color: var(--forest);
+    }
+
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.62);
+      color: #0b2b12;
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .pillRow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.62);
+      color: var(--ink);
+      font-weight: 900;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .pill strong{
+      font-weight: 900;
+      color: var(--forest);
+    }
+
+    .subCard{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 12px;
+    }
+
+    .subTitle{
+      margin: 0 0 8px;
+      font-weight: 900;
+      color: #0b2b12;
+      letter-spacing: -0.01em;
+      font-size: 14px;
+    }
+
+    .list{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.8;
+      font-weight: 650;
+      font-size: 14.6px;
+    }
+
+    .list li{ margin: 6px 0; }
+
+    .schedule{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .slot{
+      border-radius: 16px;
+      border: 1px solid rgba(13,89,37,0.14);
+      background: rgba(245,245,220,0.62);
+      padding: 10px;
+      box-shadow: 0 12px 28px rgba(13,89,37,0.08);
+    }
+
+    .slotTop{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .slotName{
+      margin: 0;
+      font-weight: 900;
+      color: #0b2b12;
+      font-size: 13.5px;
+      letter-spacing: -0.01em;
+    }
+
+    .slotTime{
+      margin: 0;
+      font-weight: 900;
+      color: rgba(11,26,16,0.72);
+      font-size: 12.8px;
+    }
+
+    .slotNote{
+      margin: 6px 0 0;
+      color: rgba(11,26,16,0.74);
+      font-weight: 650;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .ctaRow{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .note{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 650;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* Bottom CTA band */
+    .ctaBand{
+      margin-top: 14px;
+      border-radius: var(--r);
+      border: 1px solid rgba(11,26,16,0.12);
+      background: rgba(245,245,220,0.82);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .ctaBand h2{
+      margin: 0 0 6px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .ctaBand p{
+      margin: 0;
+      color: rgba(11,26,16,0.72);
+      font-weight: 650;
+      line-height: 1.7;
+      max-width: 80ch;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px){
+      .wrap{ padding: 12px 14px 64px; }
+
+      .hero{ min-height: 360px; }
+      .heroInner{ grid-template-columns: 1fr; align-items: end; }
+      .jumpBox{ background: rgba(0,0,0,0.22); }
+
+      .activity{ grid-template-columns: 1fr; }
+      .media9x16{ min-height: 0; padding: 12px; }
+      .media9x16 .frame{ width: 100%; max-width: 100%; }
+      .schedule{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Activities page">
+<section class="topBand" aria-label="Page navigation">
+  <div class="crumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span aria-hidden="true">›</span>
+    <a href="/features/">Features</a>
+    <span aria-hidden="true">›</span>
+    <span>Activities</span>
+  </div>
+  <div class="quickActions" aria-label="Quick actions">
+    <a class="btn secondary" href="/booking/">Check availability</a>
+    <a class="btn primary" href="/contact/">Ask about activities</a>
+  </div>
+</section>
+
+<section class="hero" aria-label="Activities hero">
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest landscape near The Cloud Forest Retreat" loading="eager" decoding="async" />
+  </div>
+  <div class="heroShade" aria-hidden="true"></div>
+
+  <div class="heroInner">
+    <div class="heroTitleBox" aria-label="Hero copy">
+      <div class="kicker">Move • Breathe • Explore</div>
+      <h1 class="heroH1">Activities</h1>
+      <p class="heroLead">
+        From sunrise yoga to mountain bike trails, the cloud forest is not just a view.
+        It is something you step into. Choose slow and grounding, or fast and thrilling, and make it yours.
+      </p>
+    </div>
+
+    <div class="jumpBox" aria-label="Jump links">
+      <p class="jumpTitle">Jump to:</p>
+      <div class="chipRow">
+        <a class="chip" href="#yoga">Yoga</a>
+        <a class="chip" href="#biking">Biking</a>
+        <a class="chip" href="#hiking">Hiking</a>
+        <a class="chip" href="#horseback">Horseback riding</a>
+        <a class="chip" href="#motocross">Motocross</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="grid" aria-label="Activities list">
+
+  <!-- YOGA -->
+  <article class="card" id="yoga" aria-label="Yoga">
+    <div class="cardHead">
+      <h2 class="h2">Yoga</h2>
+      <p class="hint">By request • advance booking</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Yoga image">
+        <div class="frame">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Yoga image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Yoga content">
+        <div class="titleRow">
+          <h3 class="h3">Reconnect in the cloud forest</h3>
+          <span class="badge">Wellness</span>
+        </div>
+
+        <p class="p">
+          Practice surrounded by green canopy, birdsong, and fresh mountain air.
+          Sessions are available upon request and scheduled in advance so everything feels calm and intentional.
+        </p>
+
+        <div class="pillRow" aria-label="Yoga highlights">
+          <span class="pill"><strong>Setting:</strong> forest views</span>
+          <span class="pill"><strong>Style:</strong> all levels</span>
+          <span class="pill"><strong>Focus:</strong> breath + reset</span>
+        </div>
+
+        <div class="subCard" aria-label="Yoga schedule">
+          <p class="subTitle">Suggested schedule</p>
+          <div class="schedule" role="list">
+            <div class="slot" role="listitem">
+              <div class="slotTop">
+                <p class="slotName">Morning Flow</p>
+                <p class="slotTime">7:30 AM - 9:00 AM</p>
+              </div>
+              <p class="slotNote">Gentle vinyasa to energize and center your day.</p>
+            </div>
+            <div class="slot" role="listitem">
+              <div class="slotTop">
+                <p class="slotName">Evening Wind-Down</p>
+                <p class="slotTime">6:00 PM - 7:30 PM</p>
+              </div>
+              <p class="slotNote">Restorative practice to release tension and soften into night.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="subCard" aria-label="Yoga spaces">
+          <p class="subTitle">Yoga spaces (weather and vibe)</p>
+          <ul class="list">
+            <li>Open-air: panoramic forest and volcanic landscapes</li>
+            <li>Indoor: cozy, light-filled, weather-protected</li>
+            <li>Riverside: nature-forward sessions near the Guayllabamba River</li>
+          </ul>
+        </div>
+
+        <p class="note">
+          Retreat packages and private sessions are available. Pricing: inquire with admin.
+        </p>
+
+        <div class="ctaRow" aria-label="Yoga actions">
+          <a class="btn primary" href="/contact/">Request yoga</a>
+          <a class="btn secondary" href="/booking/">Check availability</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- BIKING -->
+  <article class="card" id="biking" aria-label="Biking">
+    <div class="cardHead">
+      <h2 class="h2">Biking</h2>
+      <p class="hint">Trail access • rider-friendly base</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Biking image">
+        <div class="frame">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Biking image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Biking content">
+        <div class="titleRow">
+          <h3 class="h3">Ride through paradise</h3>
+          <span class="badge">Adventure</span>
+        </div>
+
+        <p class="p">
+          Based near Niebli de la Compania, with routes around the Pululahua area and Guayllabamba River.
+          Stop in to refuel, tune up, and reset - or stay overnight to keep the adventure going.
+        </p>
+
+        <div class="pillRow" aria-label="Biking highlights">
+          <span class="pill"><strong>Best for:</strong> mountain bikers</span>
+          <span class="pill"><strong>Terrain:</strong> scenic + varied</span>
+          <span class="pill"><strong>Extras:</strong> rest + refuel</span>
+        </div>
+
+        <div class="subCard" aria-label="Biker amenities">
+          <p class="subTitle">Biker-friendly setup</p>
+          <ul class="list">
+            <li>Trail access points and route guidance (ask us)</li>
+            <li>Rest stop: drinks, snacks, and farm-to-table meals</li>
+            <li>Bike maintenance station: tools and space for quick fixes</li>
+            <li>Overnight stays: secure storage + a calm reset</li>
+          </ul>
+        </div>
+
+        <div class="subCard" aria-label="Biking packages">
+          <p class="subTitle">Packages (example)</p>
+          <ul class="list">
+            <li>Day rider pass: trail access + rest stop amenities (inquire)</li>
+            <li>Overnight stay: lodging + dinner + breakfast + storage (inquire)</li>
+            <li>Groups/events: guided rides and catered options (custom)</li>
+          </ul>
+        </div>
+
+        <div class="ctaRow" aria-label="Biking actions">
+          <a class="btn primary" href="/contact/">Ask about biking</a>
+          <a class="btn secondary" href="/booking/">Book a stay</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- HIKING -->
+  <article class="card" id="hiking" aria-label="Hiking">
+    <div class="cardHead">
+      <h2 class="h2">Hiking</h2>
+      <p class="hint">Forest walks • viewpoints • nature pace</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Hiking image">
+        <div class="frame">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Hiking image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Hiking content">
+        <div class="titleRow">
+          <h3 class="h3">Slow trails, big rewards</h3>
+          <span class="badge">Nature</span>
+        </div>
+
+        <p class="p">
+          Cloud forest trails are best enjoyed unhurried. Expect changing light, birds overhead, and quiet moments that feel rare.
+          Ask us for easy walks, longer routes, and the best times for wildlife.
+        </p>
+
+        <div class="pillRow" aria-label="Hiking highlights">
+          <span class="pill"><strong>Vibe:</strong> calm + scenic</span>
+          <span class="pill"><strong>Best time:</strong> morning</span>
+          <span class="pill"><strong>Bring:</strong> light rain layer</span>
+        </div>
+
+        <div class="subCard" aria-label="Hiking options">
+          <p class="subTitle">Options</p>
+          <ul class="list">
+            <li>Easy nature walks for all levels</li>
+            <li>Longer hikes with viewpoints</li>
+            <li>Birding-focused routes (ask for timing)</li>
+          </ul>
+        </div>
+
+        <div class="ctaRow" aria-label="Hiking actions">
+          <a class="btn primary" href="/contact/">Ask for trail recommendations</a>
+          <a class="btn secondary" href="/booking/">Stay nearby</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- HORSEBACK -->
+  <article class="card" id="horseback" aria-label="Horseback riding">
+    <div class="cardHead">
+      <h2 class="h2">Horseback riding</h2>
+      <p class="hint">By request • advance notice required</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Horseback riding image">
+        <div class="frame">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Horseback riding image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Horseback riding content">
+        <div class="titleRow">
+          <h3 class="h3">A quieter way to explore</h3>
+          <span class="badge">By request</span>
+        </div>
+
+        <p class="p">
+          Horseback rides are arranged in advance and tailored to your comfort level.
+          Ideal for guests who want a scenic experience without the intensity of longer hikes.
+        </p>
+
+        <div class="pillRow" aria-label="Horseback highlights">
+          <span class="pill"><strong>Style:</strong> guided</span>
+          <span class="pill"><strong>Level:</strong> beginner-friendly</span>
+          <span class="pill"><strong>Book:</strong> advance notice</span>
+        </div>
+
+        <div class="subCard" aria-label="Horseback notes">
+          <p class="subTitle">Good to know</p>
+          <ul class="list">
+            <li>Advance booking required</li>
+            <li>Closed-toe shoes recommended</li>
+            <li>Routes depend on weather and trail conditions</li>
+          </ul>
+        </div>
+
+        <div class="ctaRow" aria-label="Horseback actions">
+          <a class="btn primary" href="/contact/">Request horseback riding</a>
+          <a class="btn secondary" href="/booking/">Book your stay</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- MOTOCROSS -->
+  <article class="card" id="motocross" aria-label="Motocross">
+    <div class="cardHead">
+      <h2 class="h2">Motocross</h2>
+      <p class="hint">Info coming soon</p>
+    </div>
+
+    <div class="activity">
+      <div class="media9x16" aria-label="Motocross image">
+        <div class="frame">
+          <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Motocross image placeholder" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="body" aria-label="Motocross content">
+        <div class="titleRow">
+          <h3 class="h3">Add speed to the cloud forest</h3>
+          <span class="badge">Coming soon</span>
+        </div>
+
+        <p class="p">
+          We are building out clear guidance for motocross-friendly routes, best practices, and how to coordinate respectfully with the area.
+          If you want to ride while you stay, message us and we will help you plan.
+        </p>
+
+        <div class="subCard" aria-label="Motocross note">
+          <p class="subTitle">Request info</p>
+          <p class="note">
+            Tell us your experience level and your preferred ride style (scenic vs technical), and we will recommend the best options.
+          </p>
+        </div>
+
+        <div class="ctaRow" aria-label="Motocross actions">
+          <a class="btn primary" href="/contact/">Ask about motocross</a>
+          <a class="btn secondary" href="/booking/">Book your stay</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<section class="ctaBand" aria-label="Activities CTA">
+  <div>
+    <h2>Want us to plan your activity mix?</h2>
+    <p>
+      Tell us your travel dates and what you like: slow mornings, big hikes, bike trails, or wellness.
+      We will recommend the best schedule for weather and light.
+    </p>
+  </div>
+  <div class="quickActions" aria-label="CTA buttons">
+    <a class="btn primary" href="/contact/">Contact us</a>
+    <a class="btn secondary" href="/booking/">Check availability</a>
+  </div>
+</section>
+  </main>
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
