@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amenities | The Cloud Forest Retreat</title>
-  <meta name="description" content="Explore amenities at The Cloud Forest Retreat: cozy fireplaces, shared living spaces, outdoor fire pit, trails, kitchen, dining, workshops, and guided nature moments in the cloud forest." />
+  <meta name="description" content="Explore amenities at The Cloud Forest Retreat: fireplaces, fire pit, kitchen and dining, trails, gardens, reading corners, workshops by request, and guided nature moments in the cloud forest." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/features/ammenities/" />
   <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/features/ammenities/" />
@@ -12,12 +12,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
   <meta property="og:title" content="Amenities | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Comfort and convenience in the cloud forest: fireplaces, shared spaces, trails, fire pit, kitchen, dining, and curated experiences." />
+  <meta property="og:description" content="Comfort and convenience in the cloud forest: fireplaces, fire pit, kitchen, dining, trails, gardens, and curated experiences." />
   <meta property="og:url" content="https://thecloudforestretreat.com/features/ammenities/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Amenities | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Comfort and convenience in the cloud forest: fireplaces, shared spaces, trails, fire pit, kitchen, dining, and curated experiences." />
+  <meta name="twitter:description" content="Comfort and convenience in the cloud forest: fireplaces, fire pit, kitchen, dining, trails, gardens, and curated experiences." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -36,556 +36,608 @@
       --r: 24px;
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
+  --glass: rgba(245,245,220,0.78);
+  --glass2: rgba(245,245,220,0.62);
+  --ink: #0b1a10;
+  --forest: #0D5925;
+  --accent: #E0643A;
+}
 
-      --glass: rgba(245,245,220,0.78);
-      --glass2: rgba(245,245,220,0.62);
-      --ink: #0b1a10;
-      --forest: #0D5925;
-      --accent: #E0643A;
-    }
+*{ box-sizing: border-box; }
+body{ margin: 0; }
 
-    *{ box-sizing: border-box; }
-    body{ margin: 0; }
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 76px;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 76px;
-    }
+.topBand{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .topBand{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.crumbs{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+  flex-wrap: wrap;
+}
+.crumbs a{ color: inherit; text-decoration: none; }
+.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+.quickActions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+  position: relative;
+}
 
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-      min-width: 0;
-      position: relative;
-    }
+.cardHead{
+  padding: 14px 14px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
 
-    .cardHead{
-      padding: 14px 14px 0;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
-    }
+.cardTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.1;
+}
 
-    .cardTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 20px;
-    }
+.cardHint{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.5;
+}
 
-    .cardHint{
-      margin: 0;
-      color: rgba(11,26,16,0.68);
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 1.5;
-    }
+/* HERO (clean + consistent with Features landing) */
+.hero{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
 
-    /* HERO */
-    .hero{
-      margin-top: 14px;
-      border-radius: var(--r);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.22);
-      box-shadow: var(--shadow);
-      background: rgba(0,0,0,0.10);
-      position: relative;
-      min-height: 440px;
-    }
+.heroMedia{
+  position: relative;
+  min-height: 340px;
+  background: rgba(0,0,0,0.10);
+}
 
-    .hero img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-      min-height: 440px;
-    }
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .heroShade{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(900px 520px at 16% 10%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.46));
-      pointer-events: none;
-    }
+.heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events: none;
+}
 
-    .heroBadge{
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      right: 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.28);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 14px;
-      color: #fff;
-      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
-    }
+.heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+}
 
-    .kicker{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: rgba(255,255,255,0.92);
-    }
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
 
-    .h1{
-      margin: 8px 0 6px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-      font-size: clamp(32px, 3.6vw, 54px);
-      color: #fff;
-    }
+.h1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 3.6vw, 54px);
+  color: #fff;
+}
 
-    .lead{
-      margin: 0;
-      max-width: 78ch;
-      font-weight: 600;
-      line-height: 1.7;
-      color: rgba(231,228,209,0.92);
-      font-size: 15.5px;
-    }
+.lead{
+  margin: 0;
+  max-width: 78ch;
+  font-weight: 650;
+  line-height: 1.7;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
+}
 
-    .pillRow{
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.pillRow{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(245,245,220,0.28);
-      background: rgba(11,26,16,0.22);
-      color: rgba(231,228,209,0.92);
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-    }
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,245,220,0.28);
+  background: rgba(11,26,16,0.22);
+  color: rgba(231,228,209,0.92);
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+}
 
-    /* GRID A (9:16 + right stack) */
-    .gridA{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 14px;
-      align-items: stretch;
-    }
+/* GRID A */
+.gridA{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    .vShot{
-      border-radius: var(--r);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.22);
-      box-shadow: var(--shadow);
-      background: rgba(0,0,0,0.10);
-      position: relative;
-      min-height: 560px;
-    }
+.vShot{
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: var(--shadow);
+  background: rgba(0,0,0,0.10);
+  position: relative;
+  min-height: 560px;
+}
 
-    .vShot img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.vShot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-    .vShotShade{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(560px 420px at 14% 12%, rgba(224,100,58,0.16), rgba(0,0,0,0) 62%),
-        linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.30));
-      pointer-events: none;
-    }
+.vShotShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(560px 420px at 14% 12%, rgba(224,100,58,0.16), rgba(0,0,0,0) 62%),
+    linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.30));
+  pointer-events: none;
+}
 
-    .vShotCap{
-      position: absolute;
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.22);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 12px;
-      color: rgba(231,228,209,0.92);
-      font-weight: 800;
-      line-height: 1.5;
-      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
-    }
+.vShotCap{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px;
+  color: rgba(231,228,209,0.92);
+  font-weight: 800;
+  line-height: 1.5;
+  box-shadow: 0 18px 55px rgba(0,0,0,0.22);
+}
 
-    .stack{
-      display: grid;
-      gap: 14px;
-    }
+.stack{
+  display: grid;
+  gap: 14px;
+}
 
-    .pad{
-      padding: 14px;
-    }
+.pad{
+  padding: 14px;
+}
 
-    .bigTitle{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 1.08;
-    }
+.bigTitle{
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.08;
+}
 
-    .p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-size: 15px;
-      font-weight: 650;
-    }
+.p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-size: 15px;
+  font-weight: 650;
+}
 
-    .tagPills{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
+.tagPills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
 
-    .tag{
-      display: inline-flex;
-      align-items: center;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-    }
+.tag{
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+}
 
-    .miniCtas{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-top: 14px;
-    }
+.miniCtas{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 14px;
+}
 
-    /* SECTION CARDS */
-    .sectionGrid{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items: start;
-    }
+/* SECTION CARDS */
+.sectionGrid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
 
-    .sectionCard:before{
-      content:"";
-      position:absolute;
-      inset: -120px -120px auto auto;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.14), rgba(224,100,58,0) 62%);
-      pointer-events:none;
-    }
+.sectionCard:before{
+  content:"";
+  position:absolute;
+  inset: -120px -120px auto auto;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.14), rgba(224,100,58,0) 62%);
+  pointer-events:none;
+}
 
-    .sectionBody{
-      padding: 14px;
-      position: relative;
-    }
+.sectionBody{
+  padding: 14px;
+  position: relative;
+}
 
-    .sectionTitle{
-      margin: 0 0 8px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.08;
-      color: var(--forest);
-    }
+.sectionLead{
+  margin: 0 0 12px;
+  color: rgba(11,26,16,0.74);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14.6px;
+}
 
-    .sectionLead{
-      margin: 0 0 12px;
-      color: rgba(11,26,16,0.74);
-      font-weight: 650;
-      line-height: 1.7;
-      font-size: 14.6px;
-    }
+.listGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-    .listGrid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px 14px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+.li{
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  border-radius: 16px;
+  padding: 10px 12px;
+  color: rgba(11,26,16,0.82);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.45;
+  position: relative;
+}
 
-    .li{
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      border-radius: 16px;
-      padding: 10px 12px;
-      color: rgba(11,26,16,0.82);
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 1.45;
-      position: relative;
-    }
+.sigRow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  position: relative;
+}
 
-    .li:before{
-      content:"";
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: rgba(224,100,58,0.92);
-      box-shadow: 0 10px 22px rgba(224,100,58,0.18);
-      position: absolute;
-      left: 12px;
-      top: 14px;
-      transform: translateY(-1px);
-      opacity: 0.85;
-      display: none;
-    }
+.sig{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+}
 
-    .sigRow{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-      position: relative;
-    }
+/* UNIQUE STRIP */
+.unique{
+  margin-top: 14px;
+}
 
-    .sig{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-    }
+.uniqueInner{
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    /* UNIQUE STRIP */
-    .unique{
-      margin-top: 14px;
-    }
+.uniqueLeft{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
 
-    .uniqueInner{
-      padding: 14px;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 14px;
-      align-items: stretch;
-    }
+.uniqueLeft:before{
+  content:"";
+  position:absolute;
+  inset: -120px auto auto -120px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.14), rgba(224,100,58,0) 62%);
+  pointer-events:none;
+}
 
-    .uniqueLeft{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      padding: 14px;
-      position: relative;
-      overflow: hidden;
-    }
+.uniqueH{
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.08;
+  color: var(--forest);
+  position: relative;
+}
 
-    .uniqueLeft:before{
-      content:"";
-      position:absolute;
-      inset: -120px auto auto -120px;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.14), rgba(224,100,58,0) 62%);
-      pointer-events:none;
-    }
+.uniqueP{
+  margin: 0;
+  color: rgba(11,26,16,0.76);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 14.8px;
+  position: relative;
+}
 
-    .uniqueH{
-      margin: 0 0 8px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.08;
-      color: var(--forest);
-      position: relative;
-    }
+.uniqueList{
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: rgba(11,26,16,0.82);
+  line-height: 1.85;
+  font-weight: 650;
+  font-size: 15px;
+  position: relative;
+}
 
-    .uniqueP{
-      margin: 0;
-      color: rgba(11,26,16,0.76);
-      font-weight: 650;
-      line-height: 1.75;
-      font-size: 14.8px;
-      position: relative;
-    }
+.uniqueRight{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
 
-    .uniqueList{
-      margin: 12px 0 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.82);
-      line-height: 1.85;
-      font-weight: 650;
-      font-size: 15px;
-      position: relative;
-    }
+.promise{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--forest);
+}
 
-    .uniqueRight{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-    }
+.promiseP{
+  margin: 0;
+  color: rgba(11,26,16,0.76);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 14.6px;
+}
 
-    .promise{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-      line-height: 1.2;
-      color: var(--forest);
-    }
+/* COZY (single card so no empty green gap beside image) */
+.cozy{
+  margin-top: 14px;
+}
 
-    .promiseP{
-      margin: 0;
-      color: rgba(11,26,16,0.76);
-      font-weight: 650;
-      line-height: 1.75;
-      font-size: 14.6px;
-    }
+.cozyInner{
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    /* GRID B (Cozy moments) */
-    .gridB{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 14px;
-      align-items: stretch;
-    }
+.cozyCopy{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  min-width: 0;
+}
 
-    /* CTA BAND */
-    .ctaBand{
-      margin-top: 14px;
-      border-radius: var(--r);
-      border: 1px solid rgba(11,26,16,0.12);
-      background: rgba(245,245,220,0.82);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.cozyMedia{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  position: relative;
+  min-height: 420px;
+}
 
-    .ctaBand h2{
-      margin: 0 0 6px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-    }
+.cozyMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .ctaBand p{
-      margin: 0;
-      color: rgba(11,26,16,0.72);
-      font-weight: 650;
-      line-height: 1.7;
-      max-width: 80ch;
-    }
+.cozyShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(560px 420px at 14% 12%, rgba(224,100,58,0.14), rgba(0,0,0,0) 62%),
+    linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.26));
+  pointer-events: none;
+}
 
-    .ctaBtns{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.cozyCap{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px;
+  color: rgba(231,228,209,0.92);
+  font-weight: 800;
+  line-height: 1.5;
+  box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+}
 
-    /* MOBILE */
-    @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 64px; }
+/* CTA BAND */
+.ctaBand{
+  margin-top: 14px;
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.12);
+  background: rgba(245,245,220,0.82);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-      .hero img{ min-height: 360px; }
-      .hero{ min-height: 360px; }
-      .heroBadge{ left: 12px; right: 12px; bottom: 12px; padding: 12px; }
+.ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
 
-      .gridA{ grid-template-columns: 1fr; }
-      .vShot{ min-height: 420px; }
+.ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 80ch;
+}
 
-      .sectionGrid{ grid-template-columns: 1fr; }
-      .listGrid{ grid-template-columns: 1fr; }
+.ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-      .uniqueInner{ grid-template-columns: 1fr; }
-      .gridB{ grid-template-columns: 1fr; }
-    }
+/* MOBILE */
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 64px; }
+
+  .heroMedia{ min-height: 360px; }
+  .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; }
+
+  .lead{
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+
+  .pillRow{ gap: 8px; }
+  .pill{ padding: 9px 11px; }
+
+  .gridA{ grid-template-columns: 1fr; }
+  .vShot{ min-height: 420px; }
+
+  .sectionGrid{ grid-template-columns: 1fr; }
+  .listGrid{ grid-template-columns: 1fr; }
+
+  .uniqueInner{ grid-template-columns: 1fr; }
+  .cozyInner{ grid-template-columns: 1fr; }
+  .cozyMedia{ min-height: 360px; }
+}
   </style>
 </head>
 <body>
@@ -599,31 +651,32 @@
         <span aria-hidden="true">›</span>
         <span>Amenities</span>
       </div>
-  <div class="quickActions" aria-label="Quick actions">
-    <a class="btn secondary" href="/rooms/">View rooms</a>
-    <a class="btn primary" href="/booking/">Book your stay</a>
-  </div>
-</section>
-
+      <div class="quickActions" aria-label="Quick actions">
+        <a class="btn secondary" href="/rooms/">View rooms</a>
+        <a class="btn primary" href="/booking/">Book your stay</a>
+      </div>
+    </section>
 <!-- HERO -->
 <section class="hero" aria-label="Amenities hero">
-  <img src="/assets/images/pages/features/tcfr_rooms_features_amenities_hero_01.jpeg" alt="The Cloud Forest Retreat amenities and shared spaces" loading="eager" decoding="async" />
-  <div class="heroShade" aria-hidden="true"></div>
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/features/tcfr_rooms_features_amenities_hero_01.jpeg" alt="The Cloud Forest Retreat amenities and shared spaces" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
 
-  <div class="heroBadge" aria-label="Amenities intro">
-    <div class="kicker">Comfort • Convenience • Cloud forest calm</div>
-    <h1 class="h1">Amenities</h1>
-    <p class="lead">
-      Comfort in the cloud forest should feel effortless. Here, amenities are designed to help you slow down, stay cozy,
-      and enjoy nature without giving up convenience. Whether you are here to explore Mindo or simply exhale for a few days,
-      everything around you is built for calm, warmth, and connection.
-    </p>
+    <div class="heroInner" aria-label="Amenities intro">
+      <div class="kicker">Comfort • Convenience • Cloud forest calm</div>
+      <h1 class="h1">Amenities</h1>
+      <p class="lead">
+        Comfort in the cloud forest should feel effortless. Here, amenities are designed to help you slow down, stay cozy,
+        and enjoy nature without giving up convenience. Whether you are here to explore Mindo or simply exhale for a few days,
+        everything around you is built for calm, warmth, and connection.
+      </p>
 
-    <div class="pillRow" aria-label="Top amenities">
-      <span class="pill">Wi-Fi</span>
-      <span class="pill">Fire pit</span>
-      <span class="pill">Kitchen and dining</span>
-      <span class="pill">Pet friendly (fee)</span>
+      <div class="pillRow" aria-label="Top amenities">
+        <span class="pill">Wi-Fi</span>
+        <span class="pill">Fire pit</span>
+        <span class="pill">Kitchen and dining</span>
+        <span class="pill">Pet friendly (fee)</span>
+      </div>
     </div>
   </div>
 </section>
@@ -818,32 +871,35 @@
   </article>
 </section>
 
-<!-- GRID B (Cozy moments) -->
-<section class="gridB" aria-label="Cozy moments section">
-  <article class="card" aria-label="Cozy moments copy">
+<!-- COZY MOMENTS -->
+<section class="cozy" aria-label="Cozy moments section">
+  <article class="card" aria-label="Cozy moments">
     <div class="cardHead">
       <h2 class="cardTitle">Cozy moments</h2>
       <p class="cardHint">The parts you remember</p>
     </div>
-    <div class="pad">
-      <p class="p">
-        A fire crackling while the forest cools down. A quiet table for planning tomorrow. A swing on the patio when the mist drifts in.
-        These are the small, perfect scenes the retreat is built around.
-      </p>
-      <div class="sigRow" aria-label="Cozy signatures">
-        <span class="sig">Chimney warmth</span>
-        <span class="sig">Reading corners</span>
-        <span class="sig">Meditation areas</span>
-        <span class="sig">Garden light</span>
+
+    <div class="cozyInner" aria-label="Cozy moments layout">
+      <div class="cozyCopy" aria-label="Cozy moments copy">
+        <p class="p">
+          A fire crackling while the forest cools down. A quiet table for planning tomorrow. A swing on the patio when the mist drifts in.
+          These are the small, perfect scenes the retreat is built around.
+        </p>
+        <div class="sigRow" aria-label="Cozy signatures">
+          <span class="sig">Chimney warmth</span>
+          <span class="sig">Reading corners</span>
+          <span class="sig">Meditation areas</span>
+          <span class="sig">Garden light</span>
+        </div>
+      </div>
+
+      <div class="cozyMedia" aria-label="Cozy moments image">
+        <img src="/assets/images/pages/features/tcfr_rooms_features_amenities_02.jpg" alt="Amenities photo placeholder" loading="lazy" decoding="async" />
+        <div class="cozyShade" aria-hidden="true"></div>
+        <div class="cozyCap">Quiet corners, shared warmth, and room to breathe.</div>
       </div>
     </div>
   </article>
-
-  <div class="vShot" aria-label="Second vertical photo highlight">
-    <img src="/assets/images/pages/features/tcfr_rooms_features_amenities_02.jpg" alt="Amenities photo placeholder" loading="lazy" decoding="async" />
-    <div class="vShotShade" aria-hidden="true"></div>
-    <div class="vShotCap">Quiet corners, shared warmth, and room to breathe.</div>
-  </div>
 </section>
 
 <!-- CTA -->
