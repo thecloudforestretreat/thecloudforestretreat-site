@@ -1,1 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | The Cloud Forest Retreat</title>
+  <meta name="description" content="Escape to The Cloud Forest Retreat in Mindo, Ecuador - an eco-lodge where sustainability meets serenity. Learn our story, mission, and conservation commitment in the Choco Andino UNESCO Biosphere Reserve." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/about/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <script src="/assets/js/head.js" defer></script>
+  <style>
+    :root{
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
+      --forest: #0D5925;
+      --accent: #E0643A;
+    }
 
+    *{ box-sizing:border-box; }
+    body{ margin:0; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 76px;
+    }
+
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: var(--glass2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      color: var(--ink);
+      min-width: 0;
+    }
+
+    .cardHead{
+      padding: 14px 14px 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cardTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .cardHint{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* HERO */
+    .hero{
+      margin-top: 14px;
+      position: relative;
+      height: 420px;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: var(--shadow);
+      background: rgba(0,0,0,0.08);
+    }
+    .hero img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+      display: block;
+    }
+    .heroOverlay{
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(900px 520px at 70% 18%, rgba(224,100,58,0.16), rgba(0,0,0,0) 58%),
+        linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.60));
+      pointer-events: none;
+    }
+    .heroBadge{
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.28);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: #fff;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
+      max-width: 980px;
+    }
+
+    .kicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .heroH1{
+      margin: 8px 0 6px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(34px, 4.2vw, 54px);
+      color: #fff;
+    }
+
+    .heroLead{
+      margin: 0;
+      color: rgba(231,228,209,0.92);
+      font-size: 15.8px;
+      line-height: 1.75;
+      font-weight: 650;
+      max-width: 92ch;
+    }
+
+    /* QUICK PILL ROW */
+    .pillRow{
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.62);
+      color: var(--ink);
+      font-weight: 900;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .pill strong{ color: var(--forest); font-weight: 900; }
+
+    /* MAIN GRID */
+    .gridA{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .pad{ padding: 14px; }
+
+    .h2{
+      margin: 0 0 10px;
+      font-family: var(--font-head);
+      font-size: 22px;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--forest);
+      font-weight: 900;
+    }
+
+    .p{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.78;
+      font-size: 14.9px;
+      font-weight: 650;
+    }
+    .p + .p{ margin-top: 10px; }
+
+    .callout{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 14px;
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+    .calloutQuote{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      line-height: 1.18;
+      color: var(--forest);
+    }
+    .callout p{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.75;
+      font-weight: 650;
+      font-size: 14.4px;
+    }
+
+    .list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.85;
+      font-weight: 650;
+      font-size: 14.6px;
+    }
+    .list li{ margin: 6px 0; }
+
+    /* MEDIA CARD (IMAGE BOX + HORIZONTAL VIDEO) */
+    .mediaCard{
+      position: relative;
+    }
+    .mediaInner{
+      padding: 14px;
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 12px;
+      height: 100%;
+    }
+
+    .imgBox{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      min-height: 260px;
+      position: relative;
+    }
+    .imgBox img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .imgCap{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 9px 11px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+    }
+
+    .videoBox{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      position: relative;
+      aspect-ratio: 16 / 9;
+      min-height: 220px;
+    }
+    .videoBox iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    /* SECTION: WHAT WE OFFER (TIGHT CARDS) */
+    .offerGrid{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .mini{
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mini:before{
+      content:"";
+      position:absolute;
+      inset: -140px -140px auto auto;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+      pointer-events: none;
+    }
+    .mini h3{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      line-height: 1.15;
+      color: var(--forest);
+      position: relative;
+    }
+    .mini p{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.75;
+      font-weight: 650;
+      font-size: 14.4px;
+      position: relative;
+    }
+    .mini .tagRow{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .tag{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.60);
+      font-weight: 800;
+      color: #0b2b12;
+    }
+
+    /* COMMITMENT (FULL WIDTH) */
+    .commitInner{
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .commitBox{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+      height: 100%;
+    }
+    .commitBox h3{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      line-height: 1.15;
+      color: var(--forest);
+    }
+    .commitBox p{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.75;
+      font-weight: 650;
+      font-size: 14.4px;
+    }
+
+    /* CTA BAND */
+    .ctaBand{
+      margin-top: 14px;
+      border-radius: var(--r);
+      border: 1px solid rgba(11,26,16,0.12);
+      background: rgba(245,245,220,0.82);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .ctaBand h2{
+      margin: 0 0 6px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .ctaBand p{
+      margin: 0;
+      color: rgba(11,26,16,0.72);
+      font-weight: 650;
+      line-height: 1.7;
+      max-width: 86ch;
+    }
+
+    .ctaBtns{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @media (max-width: 900px){
+      .wrap{ padding: 12px 14px 64px; }
+      .hero{ height: 320px; }
+      .gridA{ grid-template-columns: 1fr; }
+      .offerGrid{ grid-template-columns: 1fr; }
+      .commitInner{ grid-template-columns: 1fr; }
+      .imgBox{ min-height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="About page">
+    <section class="topBand" aria-label="Page navigation">
+      <div class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <span>About</span>
+      </div>
+      <div class="quickActions" aria-label="Quick actions">
+        <a class="btn secondary" href="/rooms/">Explore Rooms</a>
+        <a class="btn primary" href="/booking/">Book Your Stay</a>
+      </div>
+    </section>
+<!-- HERO -->
+<section class="hero" aria-label="About hero">
+  <!-- Replace with your About hero image when ready -->
+  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
+  <div class="heroOverlay" aria-hidden="true"></div>
+
+  <div class="heroBadge" aria-label="About intro">
+    <div class="kicker">Eco-lodge in Mindo, Ecuador</div>
+    <h1 class="heroH1">About Us</h1>
+    <p class="heroLead">
+      Escape to The Cloud Forest Retreat - a quiet eco-lodge in the heart of Mindo where sustainability meets serenity.
+      Come for the views, stay for the calm, and leave feeling restored.
+    </p>
+  </div>
+</section>
+
+<!-- QUICK SUMMARY (NO EMPTY SPACE) -->
+<section class="card" style="margin-top:14px;" aria-label="At a glance">
+  <div class="cardHead">
+    <h2 class="cardTitle">At a glance</h2>
+    <p class="cardHint">What guests feel here, fast</p>
+  </div>
+  <div class="pad">
+    <p class="p">
+      Nestled in the Choco Andino de Pichincha (a UNESCO Biosphere Reserve region), our retreat is built for slow mornings,
+      fresh air, and the kind of stillness you only find in the cloud forest.
+    </p>
+    <div class="pillRow" aria-label="Highlights">
+      <span class="pill"><strong>Setting:</strong> cloud forest</span>
+      <span class="pill"><strong>Style:</strong> eco-lodge</span>
+      <span class="pill"><strong>Vibe:</strong> peaceful + cozy</span>
+      <span class="pill"><strong>Ideal for:</strong> couples, friends, solo, family</span>
+      <span class="pill"><strong>Also:</strong> camping available</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN STORY + MEDIA -->
+<section class="gridA" aria-label="Our story and media">
+  <article class="card" aria-label="Our story">
+    <div class="cardHead">
+      <h2 class="cardTitle">Our story</h2>
+      <p class="cardHint">How this place came to life</p>
+    </div>
+    <div class="pad">
+      <p class="p">
+        The Cloud Forest Retreat was born from a deep love for nature and a simple idea: create a sanctuary where guests can experience
+        the magic of the cloud forest without giving up comfort.
+      </p>
+      <p class="p">
+        Here, mist moves through the valley, birds call from the canopy, and every view invites you to slow down. Whether you arrive for
+        a weekend getaway, a solo reset, a trip with friends, or a family adventure, the forest meets you where you are.
+      </p>
+
+      <div class="callout" aria-label="Signature feeling">
+        <p class="calloutQuote">"Breathe in the forest. Let the noise fade. Feel the day become yours again."</p>
+        <p>
+          We built this retreat for people who want to reconnect: with nature, with loved ones, and with themselves.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <aside class="card mediaCard" aria-label="About media">
+    <div class="cardHead">
+      <h2 class="cardTitle">A quick look</h2>
+      <p class="cardHint">Image + horizontal video</p>
+    </div>
+
+    <div class="mediaInner">
+      <!-- Image box (replace source when ready) -->
+      <div class="imgBox" aria-label="About image">
+        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="About image placeholder" loading="lazy" decoding="async" />
+        <div class="imgCap">A place designed for calm</div>
+      </div>
+
+      <!-- Horizontal video embed (replace VIDEO_ID) -->
+      <div class="videoBox" aria-label="About video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/VIDEO_ID?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0&playsinline=1"
+          title="The Cloud Forest Retreat - About video"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<!-- WHAT WE OFFER (DENSE BUT READABLE) -->
+<section class="card" style="margin-top:14px;" aria-label="What we offer">
+  <div class="cardHead">
+    <h2 class="cardTitle">What we offer</h2>
+    <p class="cardHint">Comfort, nature, and optional experiences</p>
+  </div>
+
+  <div class="offerGrid" style="padding:14px;">
+    <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Accommodations">
+      <h3>Comfortable accommodations</h3>
+      <p>
+        Eco-friendly rooms with privacy, warmth, and views that make you pause mid-sentence.
+      </p>
+      <div class="tagRow" aria-label="Tags">
+        <span class="tag">Cozy</span>
+        <span class="tag">View-first</span>
+        <span class="tag">Private</span>
+      </div>
+    </article>
+
+    <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Dining">
+      <h3>In-house dining</h3>
+      <p>
+        Farm-to-table meals with organic ingredients from our gardens and local farmers. Ingredient gathering can be an optional experience.
+      </p>
+      <div class="tagRow" aria-label="Tags">
+        <span class="tag">Fresh</span>
+        <span class="tag">Local</span>
+        <span class="tag">Organic</span>
+      </div>
+    </article>
+
+    <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Wellness">
+      <h3>Wellness by request</h3>
+      <p>
+        Yoga, meditation, and holistic sessions available by request so we can prepare the experience you want.
+      </p>
+      <div class="tagRow" aria-label="Tags">
+        <span class="tag">By request</span>
+        <span class="tag">Restorative</span>
+        <span class="tag">Quiet</span>
+      </div>
+    </article>
+
+    <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Excursions">
+      <h3>Nature excursions</h3>
+      <p>
+        Guided hikes, birdwatching, and forest walks with local knowledge and a slow-travel pace.
+      </p>
+      <div class="tagRow" aria-label="Tags">
+        <span class="tag">Guided</span>
+        <span class="tag">Birding</span>
+        <span class="tag">Trails</span>
+      </div>
+    </article>
+
+    <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Trailside rest area">
+      <h3>Trailside rest area</h3>
+      <p>
+        A simple reset spot for mountain biking days: water, shade, and a place to breathe.
+      </p>
+      <div class="tagRow" aria-label="Tags">
+        <span class="tag">Biking</span>
+        <span class="tag">Recharge</span>
+        <span class="tag">Outdoor</span>
+      </div>
+    </article>
+
+    <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Camping">
+      <h3>Camping, too</h3>
+      <p>
+        Prefer the forest even closer? We also offer camping options for guests who want a raw nature experience.
+      </p>
+      <div class="tagRow" aria-label="Tags">
+        <span class="tag">Simple</span>
+        <span class="tag">Nature-first</span>
+        <span class="tag">Adventure</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- COMMITMENT (FULL WIDTH, NO EMPTY SPACE) -->
+<section class="card" style="margin-top:14px;" aria-label="Our commitment">
+  <div class="cardHead">
+    <h2 class="cardTitle">Our commitment</h2>
+    <p class="cardHint">Sustainability and conservation</p>
+  </div>
+
+  <div class="commitInner">
+    <div class="commitBox" aria-label="Commitment overview">
+      <h3>Designed to protect what you came to see</h3>
+      <p>
+        We are committed to sustainability and preserving the natural beauty of the cloud forest. As part of the Choco Andino de Pichincha region,
+        we take pride in protecting a globally significant ecosystem.
+      </p>
+      <p>
+        Our practices focus on minimizing impact and supporting a healthier future for the forest and the communities connected to it.
+      </p>
+    </div>
+
+    <div class="commitBox" aria-label="Practices">
+      <h3>How we reduce our footprint</h3>
+      <ul class="list" aria-label="Sustainability practices">
+        <li>Eco-minded design choices across the property</li>
+        <li>Energy and resource awareness (including solar where applicable)</li>
+        <li>Water conservation practices</li>
+        <li>Local sourcing and responsible stewardship</li>
+      </ul>
+
+      <div class="pillRow" aria-label="Commitment tags">
+        <span class="pill"><strong>Focus:</strong> low impact</span>
+        <span class="pill"><strong>Goal:</strong> preserve biodiversity</span>
+        <span class="pill"><strong>Approach:</strong> thoughtful hosting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctaBand" aria-label="Booking call to action">
+  <div>
+    <h2>Ready to slow down in the cloud forest?</h2>
+    <p>
+      Book your stay, ask us anything, or tell us what kind of trip you want and we will point you to the best rooms and experiences.
+    </p>
+  </div>
+
+  <div class="ctaBtns" aria-label="CTA buttons">
+    <a class="btn primary" href="/booking/">Book Your Stay</a>
+    <a class="btn secondary" href="/contact/">Ask a Question</a>
+    <a class="btn secondary" href="/features/">Explore Features</a>
+  </div>
+</section>
+  </main>
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
