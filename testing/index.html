@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Attractions | The Cloud Forest Retreat</title>
-  <meta name="description" content="Explore natural attractions at The Cloud Forest Retreat. Waterfalls, river hikes, wildlife, and immersive experiences in Ecuador's cloud forest." />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/attractions/" />
+  <title>Produce | The Cloud Forest Retreat</title>
+  <meta name="description" content="Discover the fresh, organic produce grown at The Cloud Forest Retreat. Seasonal fruits, vegetables, and herbs grown sustainably and used in daily meals." />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/produce/" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
@@ -21,464 +21,509 @@
       --forest:#0D5925;
       --muted:rgba(11,26,16,0.72);
     }
-*{ box-sizing:border-box; }
-body{ margin:0; }
 
-.wrap{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:18px 18px 72px;
-}
+    *{ box-sizing:border-box; }
+    body{ margin:0; }
 
-.card{
-  background:var(--glass2);
-  border:1px solid var(--line);
-  border-radius:var(--r);
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  color:var(--ink);
-}
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 18px 72px;
+    }
 
-.topBand{
-  margin-top: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  box-shadow: var(--shadow);
-  background: var(--glass);
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-  color: var(--ink);
-}
+    .card{
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      color:var(--ink);
+    }
 
-.crumbs{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  font-size: 13px;
-  color: rgba(11,26,16,0.75);
-  flex-wrap: wrap;
-}
-.crumbs a{ color: inherit; text-decoration: none; }
-.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+    /* TOP BAND (consistency) */
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
 
-.quickActions{
-  display: inline-flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+      flex-wrap: wrap;
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-.hero{
-  margin-top:14px;
-  border:1px solid var(--line);
-  border-radius:var(--r);
-  box-shadow:var(--shadow);
-  background:var(--glass);
-  overflow:hidden;
-  position:relative;
-  color:var(--ink);
-}
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-.heroMedia{
-  position:relative;
-  min-height:340px;
-  background:rgba(0,0,0,0.10);
-}
+    /* HERO (match Features landing clean hero, maximize space) */
+    .hero{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      background:var(--glass);
+      overflow:hidden;
+      position:relative;
+      color:var(--ink);
+    }
 
-.heroMedia img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
+    .heroMedia{
+      position:relative;
+      min-height:340px;
+      background:rgba(0,0,0,0.10);
+    }
 
-.heroShade{
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-  pointer-events:none;
-}
+    .heroMedia img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.01);
+    }
 
-.heroInner{
-  position:absolute;
-  left:14px;
-  right:14px;
-  bottom:14px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,0.22);
-  background:rgba(0,0,0,0.30);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  padding:14px;
-  color:rgba(255,255,255,0.96);
-  box-shadow:0 18px 55px rgba(0,0,0,0.20);
-  max-width: 860px;
-}
+    .heroShade{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+      pointer-events:none;
+    }
 
-.kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  font-weight:900;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  font-size:12px;
-  color:rgba(255,255,255,0.92);
-}
+    .heroInner{
+      position:absolute;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.22);
+      background:rgba(0,0,0,0.30);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      padding:14px;
+      color:rgba(255,255,255,0.96);
+      box-shadow:0 18px 55px rgba(0,0,0,0.20);
+      max-width: 860px;
+    }
 
-.heroH1{
-  margin:8px 0 6px;
-  font-family:var(--font-head);
-  font-weight:900;
-  letter-spacing:-0.03em;
-  line-height:1.02;
-  font-size:clamp(32px,4vw,54px);
-  color:#fff;
-}
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:rgba(255,255,255,0.92);
+    }
 
-.heroLead{
-  margin:0;
-  max-width:80ch;
-  font-weight:650;
-  line-height:1.7;
-  color:rgba(231,228,209,0.92);
-  font-size:15.5px;
-}
+    .heroH1{
+      margin:8px 0 6px;
+      font-family:var(--font-head);
+      font-weight:900;
+      letter-spacing:-0.03em;
+      line-height:1.02;
+      font-size:clamp(32px,4vw,54px);
+      color:#fff;
+    }
 
-.intro{
-  margin-top:14px;
-  padding:16px;
-}
+    .heroLead{
+      margin:0;
+      max-width:80ch;
+      font-weight:650;
+      line-height:1.7;
+      color:rgba(231,228,209,0.92);
+      font-size:15.5px;
+    }
 
-.intro p{
-  margin:0;
-  font-size:15.5px;
-  line-height:1.75;
-  color:rgba(11,26,16,0.78);
-  max-width:85ch;
-  font-weight:650;
-}
+    /* INTRO */
+    .intro{
+      margin-top:14px;
+      padding:16px;
+    }
 
-.featureGrid{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
+    .intro p{
+      margin:0;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      max-width:88ch;
+      font-weight:650;
+    }
 
-.featureCard{
-  display:grid;
-  grid-template-columns:1fr;
-}
+    /* PRODUCE GRID (tight + responsive, avoids odd empty gaps) */
+    .produceGrid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
 
-.featureImage{
-  position: relative;
-  aspect-ratio:16/10;
-  background:#ccc;
-  overflow: hidden;
-}
+    .produceItem{
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      aspect-ratio:1/1;
+      background:#ccc;
+      border: 1px solid rgba(11,26,16,0.10);
+    }
 
-.featureImage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform: scale(1.01);
-}
+    .produceItem img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
 
-.featureBody{
-  padding:16px;
-  display: grid;
-  gap: 10px;
-}
+    .produceCap{
+      position:absolute;
+      left:10px;
+      right:10px;
+      bottom:10px;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(245,245,220,0.92);
+      border:1px solid rgba(13,89,37,0.16);
+      font-size:13px;
+      font-weight:900;
+      color:#0b2b12;
+      text-align:center;
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+    }
 
-.featureBody h2{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:22px;
-  color:var(--forest);
-  letter-spacing: -0.02em;
-  font-weight: 900;
-  line-height: 1.1;
-}
+    /* HIGHLIGHT (remove empty space by making both sides equal height and reducing max-width constraints) */
+    .highlight{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap:14px;
+      align-items:stretch;
+    }
 
-.featureBody p{
-  margin:0;
-  font-size:14.8px;
-  line-height:1.7;
-  color:rgba(11,26,16,0.78);
-  font-weight:650;
-}
+    .highlightImage{
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(11,26,16,0.10);
+      background:#ccc;
+      position: relative;
+      min-height: 520px;
+    }
 
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
+    .highlightImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
 
-.tag{
-  font-size:13px;
-  padding:9px 12px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,0.18);
-  background:rgba(255,255,255,0.62);
-  font-weight:900;
-  color:#0b2b12;
-  white-space: nowrap;
-}
+    .highlightText{
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:10px;
+      min-width: 0;
+    }
 
-.carousel{
-  margin-top:14px;
-  padding:14px;
-  position:relative;
-}
+    .highlightText h2{
+      margin:0;
+      font-family:var(--font-head);
+      font-size:26px;
+      color:var(--forest);
+      letter-spacing:-0.02em;
+      font-weight:900;
+      line-height:1.08;
+    }
 
-.h2{
-  margin: 0 0 12px;
-  font-family: var(--font-head);
-  color: var(--forest);
-  letter-spacing: -0.02em;
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 1.1;
-}
+    .highlightText p{
+      margin:0;
+      font-size:15px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      font-weight:650;
+      max-width: none;
+    }
 
-.carouselViewport{
-  overflow:hidden;
-  border-radius:18px;
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.55);
-}
+    .pillRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 2px;
+    }
 
-.carouselTrack{
-  display:flex;
-  transition:transform 0.4s ease;
-  will-change: transform;
-}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.18);
+      background:rgba(255,255,255,0.62);
+      color:#0b2b12;
+      font-weight:900;
+      font-size:13px;
+      white-space:nowrap;
+      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+    }
 
-.carouselItem{
-  flex:0 0 100%;
-  aspect-ratio:16/9;
-  background:#ccc;
-}
+    /* SPOTLIGHT CAROUSEL (use full width, better card sizing) */
+    .spotlight{
+      margin-top:14px;
+      padding:14px;
+    }
 
-.carouselItem img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
+    .h2{
+      margin: 0 0 12px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 1.1;
+    }
 
-.carouselBtn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.45);
-  color:#fff;
-  border:none;
-  width:44px;
-  height:44px;
-  border-radius:999px;
-  cursor:pointer;
-  font-size:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+    .spotlightTrack{
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      padding-bottom:6px;
+    }
 
-.carouselBtn.prev{ left:18px; }
-.carouselBtn.next{ right:18px; }
+    .spotlightTrack::-webkit-scrollbar{ display:none; }
 
-.videoRow{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
+    .spotItem{
+      flex:0 0 280px;
+      border-radius:24px;
+      overflow:hidden;
+      background:var(--glass);
+      border:1px solid var(--line);
+      scroll-snap-align:start;
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+    }
 
-.videoCard{
-  border-radius:24px;
-  overflow:hidden;
-  border: 1px solid rgba(11,26,16,0.10);
-  box-shadow: var(--shadow);
-  background: rgba(255,255,255,0.55);
-}
+    .spotImage{
+      aspect-ratio:9/16;
+      background:#ccc;
+    }
 
-.videoWrap{
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  position: relative;
-  background: #000;
-}
+    .spotImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
 
-.videoWrap iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
+    .spotBody{
+      padding:12px;
+      display:grid;
+      gap:6px;
+    }
 
-.note{
-  margin-top:14px;
-  padding:16px;
-  text-align:center;
-  font-size:14px;
-  color:rgba(11,26,16,0.65);
-  font-weight:650;
-}
+    .spotBody h3{
+      margin:0;
+      font-family:var(--font-head);
+      font-size:18px;
+      color:var(--forest);
+      font-weight:900;
+      letter-spacing:-0.01em;
+      line-height:1.15;
+    }
 
-@media(max-width:900px){
-  .wrap{ padding:12px 14px 64px; }
-  .heroMedia{ min-height:280px; }
-  .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width: none; }
-  .featureGrid{ grid-template-columns:1fr; }
-  .videoRow{ grid-template-columns:1fr; }
-  .carouselBtn.prev{ left:12px; }
-  .carouselBtn.next{ right:12px; }
-}
+    .spotBody p{
+      margin:0;
+      font-size:13.8px;
+      line-height:1.6;
+      color:rgba(11,26,16,0.75);
+      font-weight:650;
+    }
+
+    /* CLOSING */
+    .closing{
+      margin-top:14px;
+      padding:16px;
+      text-align:center;
+    }
+
+    .closing p{
+      margin:0 auto;
+      max-width:78ch;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      font-weight:650;
+    }
+
+    @media(max-width:900px){
+      .wrap{ padding:12px 14px 64px; }
+      .heroMedia{ min-height:280px; }
+      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
+
+      .produceGrid{ grid-template-columns:repeat(2,1fr); }
+
+      .highlight{ grid-template-columns:1fr; }
+      .highlightImage{ min-height: 360px; }
+      .spotItem{ flex-basis: 260px; }
+    }
   </style>
 </head>
 <body>
 <div id="siteHeader"></div>
-<main class="wrap" aria-label="Attractions page">
+<main class="wrap" aria-label="Produce page">
   <section class="topBand" aria-label="Page navigation">
     <div class="crumbs" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span aria-hidden="true">›</span>
       <a href="/features/">Features</a>
       <span aria-hidden="true">›</span>
-      <span>Attractions</span>
+      <span>Produce</span>
     </div>
     <div class="quickActions" aria-label="Quick actions">
-      <a class="btn secondary" href="/booking/">Check Availability</a>
-      <a class="btn primary" href="/contact/">Ask About Attractions</a>
+      <a class="btn secondary" href="/booking/">Check availability</a>
+      <a class="btn primary" href="/contact/">Ask about meals</a>
     </div>
   </section>
-  <section class="hero" aria-label="Attractions hero">
+  <!-- HERO -->
+  <section class="hero" aria-label="Produce hero">
     <div class="heroMedia" aria-label="Hero image">
-      <img src="/assets/images/pages/attractions/tcfr_features_attractions_hero_01.jpg" alt="Cloud forest landscape" loading="eager" decoding="async" />
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_hero_01.jpg" alt="Organic produce at The Cloud Forest Retreat" loading="eager" decoding="async" />
       <div class="heroShade" aria-hidden="true"></div>
-      <div class="heroInner" aria-label="Hero content">
-        <div class="kicker">Waterfalls • Rivers • Trails</div>
-        <h1 class="heroH1">Attractions</h1>
-        <p class="heroLead">
-          Step beyond the lodge and into waterfalls, rivers, trails, and quiet places where the forest reveals itself.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="card intro" aria-label="Intro">
-    <p>
-      The Cloud Forest Retreat is surrounded by natural experiences that invite exploration at your own pace.
-      From short walks to deeper adventures, each attraction connects you directly with the land.
+  <div class="heroInner" aria-label="Hero content">
+    <div class="kicker">Farm-to-table • Seasonal • Fresh</div>
+    <h1 class="heroH1">Produce</h1>
+    <p class="heroLead">
+      Fresh, seasonal, and grown with care. What you eat here comes directly from the land around you.
     </p>
-  </section>
-  <section class="featureGrid" aria-label="Featured attractions">
-    <article class="card featureCard" aria-label="Secluded waterfall">
-      <div class="featureImage">
-        <img src="/assets/images/pages/attractions/tcfr_features_attractions_waterfall_01.jpg" alt="Secluded waterfall near the retreat" loading="lazy" decoding="async" />
-      </div>
-      <div class="featureBody">
-        <h2>Secluded waterfall</h2>
-        <p>
-          A hidden waterfall tucked into the forest. Cool mist, birdsong, and a moment of stillness
-          reward those who make the short journey.
-        </p>
-        <div class="tags" aria-label="Waterfall tags">
-          <span class="tag">Natural</span>
-          <span class="tag">Quiet</span>
-          <span class="tag">Short walk</span>
-        </div>
-      </div>
-    </article>
-<article class="card featureCard" aria-label="Hike to the river">
-  <div class="featureImage">
-    <img src="/assets/images/pages/attractions/tcfr_features_attractions_river_hike_01.jpg" alt="River hike through the cloud forest" loading="lazy" decoding="async" />
-  </div>
-  <div class="featureBody">
-    <h2>Hike to the river</h2>
-    <p>
-      A scenic descent through the cloud forest leading to the Rio Guayllabamba,
-      where the sound of water and open views mark the journey's end.
-    </p>
-    <div class="tags" aria-label="River hike tags">
-      <span class="tag">Hiking</span>
-      <span class="tag">River access</span>
-      <span class="tag">Moderate</span>
-    </div>
-  </div>
-</article>
-  </section>
-  <section class="card carousel" aria-label="Around the property carousel">
-    <h2 class="h2">Around the property</h2>
-    <div class="carouselViewport" aria-label="Carousel viewport">
-      <div class="carouselTrack" id="carouselTrack" aria-label="Carousel track">
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_04.jpg" alt="" loading="lazy" decoding="async" /></div>
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_02.jpg" alt="" loading="lazy" decoding="async" /></div>
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_03.jpg" alt="" loading="lazy" decoding="async" /></div>
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_01.jpg" alt="" loading="lazy" decoding="async" /></div>
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_05.jpg" alt="" loading="lazy" decoding="async" /></div>
-      </div>
-    </div>
-    <button class="carouselBtn prev" type="button" aria-label="Previous slide" onclick="moveSlide(-1)">‹</button>
-    <button class="carouselBtn next" type="button" aria-label="Next slide" onclick="moveSlide(1)">›</button>
-  </section>
-  <section class="videoRow" aria-label="Attraction videos">
-    <div class="videoCard" aria-label="Attraction video 1">
-      <div class="videoWrap">
-        <iframe
-          src="https://www.youtube.com/embed/qYGgqEslbNA"
-          title="Attraction video 1"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-<div class="videoCard" aria-label="Attraction video 2">
-  <div class="videoWrap">
-    <iframe
-      src="https://www.youtube.com/embed/pleZvbQhWvs"
-      title="Attraction video 2"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
   </div>
 </div>
   </section>
-  <section class="card note" aria-label="More coming soon">
-    More trails, viewpoints, and experiences are being added as the retreat continues to grow.
+  <!-- INTRO -->
+  <section class="card intro" aria-label="Intro">
+    <p>
+      At The Cloud Forest Retreat, much of what ends up on your plate begins just steps away.
+      Our farm produces a rotating selection of fruits, vegetables, and herbs grown organically,
+      shaped by the seasons, and harvested with intention.
+    </p>
+  </section>
+  <!-- PRODUCE GRID -->
+  <section class="produceGrid" aria-label="Produce gallery">
+    <div class="produceItem">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_tree_tomatoes.jpg" alt="Tree tomatoes" loading="lazy" decoding="async" />
+      <div class="produceCap">Tree tomatoes</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_peppers_02.jpg" alt="Peppers" loading="lazy" decoding="async" />
+      <div class="produceCap">Peppers</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_herbs.jpg" alt="Fresh herbs" loading="lazy" decoding="async" />
+      <div class="produceCap">Herbs</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_leafy_greens.jpg" alt="Leafy greens" loading="lazy" decoding="async" />
+      <div class="produceCap">Leafy greens</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_citrus.jpg" alt="Citrus" loading="lazy" decoding="async" />
+      <div class="produceCap">Citrus</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_coffee_cherries.jpg" alt="Coffee cherries" loading="lazy" decoding="async" />
+      <div class="produceCap">Coffee cherries</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_garden_harvest_01.jpg" alt="Garden harvest" loading="lazy" decoding="async" />
+      <div class="produceCap">Garden harvest</div>
+    </div>
+    <div class="produceItem">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_seasonal_fruits_chirimoya_01.jpg" alt="Seasonal fruits" loading="lazy" decoding="async" />
+      <div class="produceCap">Seasonal fruits</div>
+    </div>
+  </section>
+  <!-- HIGHLIGHT -->
+  <section class="highlight" aria-label="Garden to table">
+    <div class="highlightImage" aria-label="Garden to table image">
+      <img src="/assets/images/pages/features/produce/tcfr_features_produce_garden_to_table_01.jpg" alt="Garden to table produce" loading="lazy" decoding="async" />
+    </div>
+    <div class="card highlightText" aria-label="Garden to table text">
+      <h2>From garden to table</h2>
+      <p>
+        Ingredients are picked at peak ripeness and used fresh.
+        Meals here reflect what the land offers in that moment, creating
+        a direct connection between soil, season, and flavor.
+      </p>
+      <div class="pillRow" aria-label="Highlights">
+        <span class="pill">Picked daily</span>
+        <span class="pill">Season-led menus</span>
+        <span class="pill">Local flavor</span>
+      </div>
+    </div>
+  </section>
+  <!-- SPOTLIGHT -->
+  <section class="card spotlight" aria-label="Seasonal highlights">
+    <h2 class="h2">Seasonal highlights</h2>
+    <div class="spotlightTrack" aria-label="Spotlight track">
+      <div class="spotItem" aria-label="Tree tomato">
+        <div class="spotImage">
+          <img src="/assets/images/pages/features/produce/tcfr_features_produce_tree_tomatoes.jpg" alt="Tree tomato" loading="lazy" decoding="async" />
+        </div>
+        <div class="spotBody">
+          <h3>Tree tomato</h3>
+          <p>Tangy, vibrant, and often used in sauces and fresh preparations.</p>
+        </div>
+      </div>
+      <div class="spotItem" aria-label="Peppers">
+        <div class="spotImage">
+          <img src="/assets/images/pages/features/produce/tcfr_features_produce_peppers_01.jpg" alt="Peppers" loading="lazy" decoding="async" />
+        </div>
+        <div class="spotBody">
+          <h3>Peppers</h3>
+          <p>Harvested weekly, adding warmth and depth to many dishes.</p>
+        </div>
+      </div>
+      <div class="spotItem" aria-label="Fresh herbs">
+        <div class="spotImage">
+          <img src="/assets/images/pages/features/produce/tcfr_features_produce_herbs.jpg" alt="Fresh herbs" loading="lazy" decoding="async" />
+        </div>
+        <div class="spotBody">
+          <h3>Fresh herbs</h3>
+          <p>Picked moments before cooking for maximum aroma and flavor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CLOSING -->
+  <section class="card closing" aria-label="Closing">
+    <p>
+      Eating here is not just about nourishment. It is about understanding where food comes from,
+      honoring the land, and slowing down enough to taste it.
+    </p>
   </section>
 </main>
 <div id="siteFooter"></div>
 <script src="/assets/js/site.js?v=3"></script>
-<script>
-  (function(){
-    "use strict";
-    var index = 0;
-    var track = document.getElementById("carouselTrack");
-    if (!track) return;
-    var slides = track.children.length;
-function moveSlide(dir){
-  index = (index + dir + slides) % slides;
-  track.style.transform = "translateX(" + (-index * 100) + "%)";
-}
-
-window.moveSlide = moveSlide;
-
-    setInterval(function(){ moveSlide(1); }, 2800);
-  })();
-</script>
 </body>
 </html>
