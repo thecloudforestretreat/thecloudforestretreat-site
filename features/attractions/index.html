@@ -39,7 +39,6 @@ body{ margin:0; }
   color:var(--ink);
 }
 
-/* TOP BAND (match other pages) */
 .topBand{
   margin-top: 14px;
   border: 1px solid var(--line);
@@ -74,7 +73,6 @@ body{ margin:0; }
   align-items: center;
 }
 
-/* HERO (match Features landing clean hero) */
 .hero{
   margin-top:14px;
   border:1px solid var(--line);
@@ -155,7 +153,6 @@ body{ margin:0; }
   font-size:15.5px;
 }
 
-/* INTRO */
 .intro{
   margin-top:14px;
   padding:16px;
@@ -170,7 +167,6 @@ body{ margin:0; }
   font-weight:650;
 }
 
-/* FEATURED ATTRACTIONS */
 .featureGrid{
   margin-top:14px;
   display:grid;
@@ -239,7 +235,6 @@ body{ margin:0; }
   white-space: nowrap;
 }
 
-/* CAROUSEL */
 .carousel{
   margin-top:14px;
   padding:14px;
@@ -302,7 +297,6 @@ body{ margin:0; }
 .carouselBtn.prev{ left:18px; }
 .carouselBtn.next{ right:18px; }
 
-/* VIDEOS */
 .videoRow{
   margin-top:14px;
   display:grid;
@@ -318,15 +312,22 @@ body{ margin:0; }
   background: rgba(255,255,255,0.55);
 }
 
-.videoFrame{
+.videoWrap{
   width: 100%;
   aspect-ratio: 9 / 16;
-  border: 0;
-  display: block;
+  position: relative;
   background: #000;
 }
 
-/* FOOTER NOTE */
+.videoWrap iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 .note{
   margin-top:14px;
   padding:16px;
@@ -359,11 +360,10 @@ body{ margin:0; }
       <span>Attractions</span>
     </div>
     <div class="quickActions" aria-label="Quick actions">
-      <a class="btn secondary" href="/booking/">Check availability</a>
-      <a class="btn primary" href="/contact/">Ask about attractions</a>
+      <a class="btn secondary" href="/booking/">Check Availability</a>
+      <a class="btn primary" href="/contact/">Ask About Attractions</a>
     </div>
   </section>
-  <!-- HERO -->
   <section class="hero" aria-label="Attractions hero">
     <div class="heroMedia" aria-label="Hero image">
       <img src="/assets/images/pages/attractions/tcfr_features_attractions_hero_01.jpg" alt="Cloud forest landscape" loading="eager" decoding="async" />
@@ -377,14 +377,12 @@ body{ margin:0; }
       </div>
     </div>
   </section>
-  <!-- INTRO -->
   <section class="card intro" aria-label="Intro">
     <p>
       The Cloud Forest Retreat is surrounded by natural experiences that invite exploration at your own pace.
       From short walks to deeper adventures, each attraction connects you directly with the land.
     </p>
   </section>
-  <!-- FEATURED -->
   <section class="featureGrid" aria-label="Featured attractions">
     <article class="card featureCard" aria-label="Secluded waterfall">
       <div class="featureImage">
@@ -421,7 +419,6 @@ body{ margin:0; }
   </div>
 </article>
   </section>
-  <!-- CAROUSEL -->
   <section class="card carousel" aria-label="Around the property carousel">
     <h2 class="h2">Around the property</h2>
     <div class="carouselViewport" aria-label="Carousel viewport">
@@ -436,32 +433,30 @@ body{ margin:0; }
     <button class="carouselBtn prev" type="button" aria-label="Previous slide" onclick="moveSlide(-1)">‹</button>
     <button class="carouselBtn next" type="button" aria-label="Next slide" onclick="moveSlide(1)">›</button>
   </section>
-  <!-- VIDEOS -->
   <section class="videoRow" aria-label="Attraction videos">
     <div class="videoCard" aria-label="Attraction video 1">
-      <iframe
-        class="videoFrame"
-        src="https://www.youtube.com/embed/qYGgqEslbNA"
-        title="Attraction video 1"
-        frameborder="0"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <div class="videoWrap">
+        <iframe
+          src="https://www.youtube.com/embed/qYGgqEslbNA"
+          title="Attraction video 1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
 <div class="videoCard" aria-label="Attraction video 2">
-  <iframe
-    class="videoFrame"
-    src="https://www.youtube.com/embed/pleZvbQhWvs"
-    title="Attraction video 2"
-    frameborder="0"
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
+  <div class="videoWrap">
+    <iframe
+      src="https://www.youtube.com/embed/pleZvbQhWvs"
+      title="Attraction video 2"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>
   </section>
-  <!-- NOTE -->
   <section class="card note" aria-label="More coming soon">
     More trails, viewpoints, and experiences are being added as the retreat continues to grow.
   </section>
