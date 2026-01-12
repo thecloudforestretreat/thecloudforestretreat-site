@@ -7,17 +7,21 @@
   <meta name="description" content="Request availability and book your stay at The Cloud Forest Retreat in Mindo, Ecuador. Tell us your dates, group size, and room preference, and we will follow up quickly." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/booking/" />
+
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0D5925" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
+
   <style>
     :root{
       --max: 1120px;
@@ -181,9 +185,7 @@
       outline: none;
     }
 
-    select{
-      padding-right: 40px;
-    }
+    select{ padding-right: 40px; }
 
     textarea{
       min-height: 120px;
@@ -328,9 +330,7 @@
       font-weight: 900;
     }
 
-    .linkBtn:hover{
-      background: rgba(13,89,37,0.06);
-    }
+    .linkBtn:hover{ background: rgba(13,89,37,0.06); }
 
     .chev{
       opacity: 0.7;
@@ -341,7 +341,6 @@
       padding: 14px;
       display: none;
     }
-
     .statusCard.show{ display: block; }
 
     .statusTitle{
@@ -388,180 +387,240 @@
     }
   </style>
 </head>
+
 <body>
   <div id="siteHeader"></div>
+
   <main class="wrap" aria-label="Booking page">
-<section class="hero" aria-label="Booking hero">
-  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
-  <div class="heroOverlay" aria-hidden="true"></div>
-  <div class="heroInner">
-    <div class="kicker">Request availability</div>
-    <h1 class="heroH1">Book Your Stay</h1>
-    <p class="heroP">
-      Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability, next steps, and help arranging ground transportation from Quito if needed.
-    </p>
-  </div>
-</section>
 
-<section class="grid" aria-label="Booking form and details">
-
-  <section class="card pad" aria-label="Booking request form">
-    <h2 class="h2">Booking request</h2>
-    <p class="hint">
-      This form sends your request directly to our team and confirms by email. Fields marked with an asterisk are required.
-    </p>
-
-    <form
-      id="tcfrBookingForm"
-      action="https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec"
-      method="POST"
-      target="tcfrHiddenFrame"
-      aria-label="Booking form"
-    >
-      <div class="formGrid">
-
-        <div class="field">
-          <label for="first_name">First name <span class="req">*</span></label>
-          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Your first name" />
-        </div>
-
-        <div class="field">
-          <label for="last_name">Last name <span class="req">*</span></label>
-          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Your last name" />
-        </div>
-
-        <div class="field">
-          <label for="email">Email <span class="req">*</span></label>
-          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
-        </div>
-
-        <div class="field">
-          <label for="phone">Phone number <span class="req">*</span></label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
-        </div>
-
-        <div class="field">
-          <label for="number_of_days_interested">Number of days interested</label>
-          <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Example: 2 nights" />
-        </div>
-
-        <div class="field">
-          <label for="number_of_guests">Number of guests</label>
-          <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Example: 2 adults" />
-        </div>
-
-        <div class="field">
-          <label for="room_preference">Room preference</label>
-          <select id="room_preference" name="room_preference">
-            <option value="">Select a room</option>
-            <option value="Panoramic Suite">Panoramic Suite</option>
-            <option value="Sunrise Room">Sunrise Room</option>
-            <option value="Sunset Room">Sunset Room</option>
-            <option value="Entire house">Entire house</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="transportation_needed">Transportation needed (Quito/airport)</label>
-          <select id="transportation_needed" name="transportation_needed">
-            <option value="">Select</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-        </div>
-
-        <div class="field full">
-          <label for="how_did_you_hear_about_us">How did you hear about us?</label>
-          <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
-            <option value="">Select</option>
-            <option value="Referral">Referral</option>
-            <option value="Instagram">Instagram</option>
-            <option value="TikTok">TikTok</option>
-            <option value="YouTube">YouTube</option>
-            <option value="Google Search">Google Search</option>
-            <option value="Google Maps">Google Maps</option>
-            <option value="Airbnb">Airbnb</option>
-            <option value="Vrbo">Vrbo</option>
-            <option value="Booking.com">Booking.com</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <div class="field full">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
-        </div>
-
-      </div>
-
-      <div class="actionsRow">
-        <p class="miniNote">
-          By submitting, you agree we may contact you by email or phone to confirm details.
+    <section class="hero" aria-label="Booking hero">
+      <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
+      <div class="heroOverlay" aria-hidden="true"></div>
+      <div class="heroInner">
+        <div class="kicker">Request availability</div>
+        <h1 class="heroH1">Book Your Stay</h1>
+        <p class="heroP">
+          Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability, next steps, and help arranging ground transportation from Quito if needed.
         </p>
-        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">
-          Submit request
-        </button>
-      </div>
-
-      <p class="finePrint">
-        Tip: If you need transportation from Quito or the airport, select "Yes" and include your preferred pickup time in the message. We will respond with options and pricing.
-      </p>
-    </form>
-
-    <iframe id="tcfrHiddenFrame" name="tcfrHiddenFrame" class="hiddenFrame" title="Hidden submission frame"></iframe>
-  </section>
-
-  <aside class="sideStack" aria-label="Booking details">
-
-    <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
-      <h3 class="statusTitle">Request sent</h3>
-      <p class="statusText">
-        Thank you. We received your booking inquiry. A confirmation email has been sent to you, and our team will follow up shortly.
-      </p>
-    </section>
-
-    <section class="card sideCard" aria-label="What happens next">
-      <h3 class="sideTitle">What happens next</h3>
-      <p class="sideP">
-        We will reply with availability, pricing, and any recommendations to make your stay effortless.
-        If you selected transportation, we will include pickup options from Quito or the airport.
-      </p>
-
-      <div class="pillRow" aria-label="Quick reassurance">
-        <span class="pill"><strong>Response:</strong> usually same day</span>
-        <span class="pill"><strong>Location:</strong> Mindo, Ecuador</span>
-        <span class="pill"><strong>Support:</strong> transportation help</span>
       </div>
     </section>
 
-    <section class="card sideCard" aria-label="Book through partners">
-      <h3 class="sideTitle">Prefer to book through a partner?</h3>
-      <p class="sideP">
-        You can also book through our listing partners. If you do, send us a quick note so we can help with transportation and local tips.
-      </p>
+    <section class="grid" aria-label="Booking form and details">
 
-      <div class="links" aria-label="Partner links">
-        <a class="linkBtn" href="https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information" target="_blank" rel="noopener">
-          Vrbo / Expedia <span class="chev">›</span>
-        </a>
-        <a class="linkBtn" href="https://www.booking.com/hotel/ec/the-cloud-forest-retreat.html?chal_t=1768182087459&force_referer=" target="_blank" rel="noopener">
-          Booking.com <span class="chev">›</span>
-        </a>
-        <a class="linkBtn" href="#" onclick="return false;" aria-disabled="true" title="Airbnb link coming soon" style="opacity:.7;cursor:not-allowed;">
-          Airbnb (coming soon) <span class="chev">›</span>
-        </a>
-      </div>
+      <section class="card pad" aria-label="Booking request form">
+        <h2 class="h2">Booking request</h2>
+        <p class="hint">
+          This form sends your request directly to our team and confirms by email. Fields marked with an asterisk are required.
+        </p>
+
+        <form
+          id="tcfrBookingForm"
+          action="https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec"
+          method="POST"
+          target="tcfrHiddenFrame"
+          aria-label="Booking form"
+        >
+          <div class="formGrid">
+
+            <div class="field">
+              <label for="first_name">First name <span class="req">*</span></label>
+              <input
+                id="first_name"
+                name="first_name"
+                type="text"
+                autocomplete="given-name"
+                required
+                placeholder="Your first name"
+                autocapitalize="words"
+                inputmode="text"
+                spellcheck="false"
+              />
+            </div>
+
+            <div class="field">
+              <label for="last_name">Last name <span class="req">*</span></label>
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                autocomplete="family-name"
+                required
+                placeholder="Your last name"
+                autocapitalize="words"
+                inputmode="text"
+                spellcheck="false"
+              />
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number <span class="req">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
+            </div>
+
+            <div class="field">
+              <label for="number_of_days_interested">Number of days interested</label>
+              <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Example: 2 nights" />
+            </div>
+
+            <div class="field">
+              <label for="number_of_guests">Number of guests</label>
+              <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Example: 2 adults" />
+            </div>
+
+            <div class="field">
+              <label for="room_preference">Room preference</label>
+              <select id="room_preference" name="room_preference">
+                <option value="">Select a room</option>
+                <option value="Panoramic Suite">Panoramic Suite</option>
+                <option value="Sunrise Room">Sunrise Room</option>
+                <option value="Sunset Room">Sunset Room</option>
+                <option value="Entire house">Entire house</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="transportation_needed">Transportation needed (Quito/airport)</label>
+              <select id="transportation_needed" name="transportation_needed">
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="how_did_you_hear_about_us">How did you hear about us?</label>
+              <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
+                <option value="">Select</option>
+                <option value="Referral">Referral</option>
+                <option value="Instagram">Instagram</option>
+                <option value="TikTok">TikTok</option>
+                <option value="YouTube">YouTube</option>
+                <option value="Google Search">Google Search</option>
+                <option value="Google Maps">Google Maps</option>
+                <option value="Airbnb">Airbnb</option>
+                <option value="Vrbo">Vrbo</option>
+                <option value="Booking.com">Booking.com</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
+            </div>
+
+          </div>
+
+          <div class="actionsRow">
+            <p class="miniNote">
+              By submitting, you agree we may contact you by email or phone to confirm details.
+            </p>
+            <button id="tcfrSubmitBtn" class="submitBtn" type="submit">
+              Submit request
+            </button>
+          </div>
+
+          <p class="finePrint">
+            Tip: If you need transportation from Quito or the airport, select "Yes" and include your preferred pickup time in the message. We will respond with options and pricing.
+          </p>
+        </form>
+
+        <iframe id="tcfrHiddenFrame" name="tcfrHiddenFrame" class="hiddenFrame" title="Hidden submission frame"></iframe>
+      </section>
+
+      <aside class="sideStack" aria-label="Booking details">
+
+        <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
+          <h3 class="statusTitle">Request sent</h3>
+          <p class="statusText">
+            Thank you. We received your booking inquiry. If you do not see a confirmation email, please check your spam folder.
+          </p>
+        </section>
+
+        <section class="card sideCard" aria-label="What happens next">
+          <h3 class="sideTitle">What happens next</h3>
+          <p class="sideP">
+            We will reply with availability, pricing, and any recommendations to make your stay effortless.
+            If you selected transportation, we will include pickup options from Quito or the airport.
+          </p>
+
+          <div class="pillRow" aria-label="Quick reassurance">
+            <span class="pill"><strong>Response:</strong> usually same day</span>
+            <span class="pill"><strong>Location:</strong> Mindo, Ecuador</span>
+            <span class="pill"><strong>Support:</strong> transportation help</span>
+          </div>
+        </section>
+
+        <section class="card sideCard" aria-label="Book through partners">
+          <h3 class="sideTitle">Prefer to book through a partner?</h3>
+          <p class="sideP">
+            You can also book through our listing partners. If you do, send us a quick note so we can help with transportation and local tips.
+          </p>
+
+          <div class="links" aria-label="Partner links">
+            <a class="linkBtn" href="https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information" target="_blank" rel="noopener">
+              Vrbo / Expedia <span class="chev">›</span>
+            </a>
+            <a class="linkBtn" href="https://www.booking.com/hotel/ec/the-cloud-forest-retreat.html?chal_t=1768182087459&force_referer=" target="_blank" rel="noopener">
+              Booking.com <span class="chev">›</span>
+            </a>
+            <a class="linkBtn" href="#" onclick="return false;" aria-disabled="true" title="Airbnb link coming soon" style="opacity:.7;cursor:not-allowed;">
+              Airbnb (coming soon) <span class="chev">›</span>
+            </a>
+          </div>
+        </section>
+
+      </aside>
+
     </section>
 
-  </aside>
-
-</section>
   </main>
+
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
+
   <script>
     (function(){
       "use strict";
+
+      function toTitleCase(s){
+        var t = String(s || "").trim();
+        if (!t) return "";
+        t = t.toLowerCase();
+        t = t.replace(/\s+/g, " ");
+        var parts = t.split(" ");
+        for (var i = 0; i < parts.length; i++){
+          var w = parts[i];
+          if (!w) continue;
+
+          // Handle hyphenated last names: "garcia-lopez"
+          var hy = w.split("-");
+          for (var j = 0; j < hy.length; j++){
+            var seg = hy[j];
+            if (!seg) continue;
+            hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
+          }
+          parts[i] = hy.join("-");
+        }
+        return parts.join(" ");
+      }
+
+      var first = document.getElementById("first_name");
+      var last = document.getElementById("last_name");
+
+      function bindTitleCase(el){
+        if (!el) return;
+        el.addEventListener("blur", function(){
+          el.value = toTitleCase(el.value);
+        });
+      }
+      bindTitleCase(first);
+      bindTitleCase(last);
 
       var form = document.getElementById("tcfrBookingForm");
       var iframe = document.getElementById("tcfrHiddenFrame");
@@ -573,6 +632,10 @@
       var submitted = false;
 
       form.addEventListener("submit", function(){
+        // Ensure capitalization is applied before submit
+        if (first) first.value = toTitleCase(first.value);
+        if (last) last.value = toTitleCase(last.value);
+
         submitted = true;
         btn.disabled = true;
         btn.textContent = "Sending...";
