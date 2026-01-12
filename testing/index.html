@@ -3,559 +3,782 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Booking | The Cloud Forest Retreat</title>
-  <meta name="description" content="Request availability and book your stay at The Cloud Forest Retreat in Mindo, Ecuador." />
+  <title>Features | The Cloud Forest Retreat</title>
+  <meta name="description" content="Explore everything that makes The Cloud Forest Retreat special: amenities, local produce, cloud forest flora and fauna, nearby attractions, landscapes, activities, and gallery." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/booking/" />
-
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/features/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/features/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="Features | The Cloud Forest Retreat" />
+  <meta property="og:description" content="Amenities, nature, landscapes, activities, attractions, produce, and gallery. Explore the full experience." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/features/" />
+  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat features overview" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Features | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Amenities, nature, landscapes, activities, attractions, produce, and gallery. Explore the full experience." />
+  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0D5925" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
-
   <style>
     :root{
       --max: 1120px;
       --r: 24px;
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
-      --forest: #0D5925;
-      --forest2: #0B2B12;
-      --orange: #E0643A;
-      --glass: rgba(245,245,220,0.78);
-      --glass2: rgba(245,245,220,0.62);
-      --ink: #0b1a10;
-    }
+  --glass: rgba(245,245,220,0.78);
+  --glass2: rgba(245,245,220,0.62);
+  --ink: #0b1a10;
+  --forest: #0D5925;
+  --muted: rgba(11,26,16,0.72);
 
-    *{ box-sizing: border-box; }
-    body{ margin: 0; }
+  --chipBg: rgba(255,255,255,0.62);
+  --chipLine: rgba(13,89,37,0.18);
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 76px;
-    }
+  --imgPlaceholderWide: /assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg;
+}
 
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-      min-width: 0;
-    }
+*{ box-sizing:border-box; }
+body{ margin:0; }
 
-    .hero{
-      position: relative;
-      border-radius: var(--r);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(0,0,0,0.10);
-      height: 320px;
-    }
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 84px;
+}
 
-    .hero img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
+.topBand{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .heroOverlay{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(880px 420px at 18% 10%, rgba(224,100,58,0.16), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.52));
-      pointer-events: none;
-    }
+.crumbs{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+}
+.crumbs a{ color: inherit; text-decoration: none; }
+.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-    .heroInner{
-      position: absolute;
-      left: 16px;
-      right: 16px;
-      bottom: 16px;
-      max-width: 820px;
-      color: #fff;
-    }
+.quickActions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .kicker{
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(231,228,209,0.32);
-      background: rgba(0,0,0,0.22);
-      color: rgba(231,228,209,0.94);
-      font-weight: 900;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      font-size: 12px;
-      width: fit-content;
-    }
+.hero{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
 
-    .heroH1{
-      margin: 10px 0 8px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-      font-size: clamp(32px, 4.2vw, 52px);
-      color: #fff;
-      text-shadow: 0 14px 40px rgba(0,0,0,0.34);
-    }
+.heroMedia{
+  position: relative;
+  min-height: 340px;
+  background: rgba(0,0,0,0.10);
+}
 
-    .heroP{
-      margin: 0;
-      color: rgba(231,228,209,0.94);
-      font-size: 15.8px;
-      line-height: 1.75;
-      font-weight: 650;
-      text-shadow: 0 10px 26px rgba(0,0,0,0.18);
-    }
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .grid{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 14px;
-      align-items: start;
-    }
+.heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events: none;
+}
 
-    .pad{ padding: 14px; }
+.heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+}
 
-    .h2{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 22px;
-      line-height: 1.08;
-    }
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
 
-    .hint{
-      margin: 0 0 12px;
-      color: rgba(11,26,16,0.72);
-      font-weight: 650;
-      line-height: 1.7;
-      font-size: 14.6px;
-    }
+.heroH1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 3.8vw, 54px);
+  color: #fff;
+}
 
-    .formGrid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
+.heroLead{
+  margin: 0;
+  max-width: 80ch;
+  font-weight: 600;
+  line-height: 1.7;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
+}
 
-    .field{ min-width: 0; }
-    .full{ grid-column: 1 / -1; }
+.filters{
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-    label{
-      display: block;
-      font-weight: 900;
-      color: var(--forest2);
-      font-size: 13px;
-      margin: 0 0 6px;
-    }
+.filterLeft{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
 
-    input, select, textarea{
-      width: 100%;
-      font-family: inherit;
-      font-size: 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(13,89,37,0.16);
-      background: rgba(255,255,255,0.62);
-      padding: 12px 12px;
-      color: var(--ink);
-      outline: none;
-    }
+.filterLabel{
+  font-weight: 900;
+  color: rgba(11,26,16,0.72);
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
 
-    select{ padding-right: 40px; }
+.chips{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 
-    textarea{
-      min-height: 120px;
-      resize: vertical;
-    }
+.chip{
+  appearance: none;
+  border: 1px solid var(--chipLine);
+  background: var(--chipBg);
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 13px;
+  color: #0b2b12;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+  user-select: none;
+  white-space: nowrap;
+}
 
-    input:focus, select:focus, textarea:focus{
-      box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
-      border-color: rgba(224,100,58,0.45);
-    }
+.chip.is-active{
+  background: rgba(224,100,58,0.92);
+  border-color: rgba(0,0,0,0.10);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(224,100,58,0.18);
+}
 
-    .req{
-      color: rgba(224,100,58,0.95);
-      font-weight: 900;
-      margin-left: 4px;
-    }
+.filterRight{
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .actionsRow{
-      margin-top: 12px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
+.grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    .miniNote{
-      margin: 0;
-      color: rgba(11,26,16,0.68);
-      font-weight: 650;
-      font-size: 13px;
-      line-height: 1.6;
-    }
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-    .submitBtn{
-      appearance: none;
-      border: 1px solid rgba(0,0,0,0.08);
-      background: var(--orange);
-      color: #fff;
-      border-radius: 999px;
-      padding: 12px 16px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 14px 30px rgba(224,100,58,0.22);
-      min-width: 180px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
+.card a{
+  color: inherit;
+  text-decoration: none;
+}
 
-    .submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
+.cardMedia{
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: rgba(0,0,0,0.10);
+  overflow: hidden;
+}
 
-    .sideStack{ display: grid; gap: 14px; }
+.cardMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .sideCard{ padding: 14px; position: relative; overflow: hidden; }
+.cardMediaShade{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.26));
+  pointer-events: none;
+}
 
-    .sideCard:before{
-      content:"";
-      position:absolute;
-      inset: -120px -120px auto auto;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.18), rgba(224,100,58,0) 62%);
-      pointer-events:none;
-    }
+.cardTopBadge{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.96);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
 
-    .sideTitle{
-      margin: 0 0 8px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 20px;
-      line-height: 1.1;
-      color: var(--forest);
-      position: relative;
-    }
+.cardBody{
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  flex: 1 1 auto;
+}
 
-    .sideP{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.6px;
-      position: relative;
-    }
+.cardTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+  color: var(--forest);
+}
 
-    .statusCard{
-      padding: 14px;
-      display: none;
-    }
-    .statusCard.show{ display: block; }
+.cardText{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 14.8px;
+}
 
-    .statusTitle{
-      margin: 0 0 6px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 20px;
-      color: var(--forest);
-    }
+.pillRow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 
-    .statusText{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.6px;
-    }
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: #0b2b12;
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+}
 
-    @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 64px; }
-      .hero{ height: 300px; }
-      .grid{ grid-template-columns: 1fr; }
-      .formGrid{ grid-template-columns: 1fr; }
-      .submitBtn{ width: 100%; }
-      .actionsRow{ gap: 12px; }
-    }
+.cardCtaRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+  flex-wrap: wrap;
+}
+
+.cardCta{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  color: #0b2b12;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+  white-space: nowrap;
+}
+
+.card:hover .cardCta{
+  background: rgba(224,100,58,0.10);
+  border-color: rgba(224,100,58,0.30);
+}
+
+.card:hover .cardMedia img{
+  transform: scale(1.03);
+  transition: transform 260ms ease;
+}
+
+.sectionTitle{
+  margin: 18px 0 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+  color: var(--forest);
+}
+
+.sectionHint{
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14px;
+  max-width: 90ch;
+}
+
+.ctaBand{
+  margin-top: 14px;
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.12);
+  background: rgba(245,245,220,0.82);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
+
+.ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 80ch;
+}
+
+.ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.is-hidden{ display:none !important; }
+
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 74px; }
+  .heroMedia{ min-height: 280px; }
+  .grid{ grid-template-columns: 1fr; }
+  .cardMedia{ aspect-ratio: 4 / 3; }
+}
   </style>
 </head>
-
 <body>
   <div id="siteHeader"></div>
-
-  <main class="wrap" aria-label="Booking page">
-
-    <section class="hero" aria-label="Booking hero">
-      <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
-      <div class="heroOverlay" aria-hidden="true"></div>
-      <div class="heroInner">
-        <div class="kicker">Request availability</div>
-        <h1 class="heroH1">Book Your Stay</h1>
-        <p class="heroP">
-          Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability and next steps.
-          If needed, we can also help arrange ground transportation from Quito or the airport.
-        </p>
+  <main class="wrap" aria-label="Features overview page">
+    <section class="topBand" aria-label="Page navigation and quick actions">
+      <div class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <span>Features</span>
+      </div>
+      <div class="quickActions" aria-label="Quick actions">
+        <a class="btn secondary" href="/rooms/">View Rooms</a>
+        <a class="btn primary" href="/booking/">Book Your Stay</a>
       </div>
     </section>
+<section class="hero" aria-label="Features hero">
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/features/tcfr_features_hero_card_01.jpeg" alt="The Cloud Forest Retreat view and surroundings" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
 
-    <section class="grid" aria-label="Booking form and details">
+    <div class="heroInner" aria-label="Hero content">
+      <div class="kicker">Explore the experience</div>
+      <h1 class="heroH1">Features</h1>
+      <p class="heroLead">
+        Everything that makes your stay feel special: cloud forest life, landscapes, activities, nearby wonders, fresh farm produce, and the details that make the retreat comfortable.
+      </p>
+    </div>
+  </div>
+</section>
 
-      <section class="card pad" aria-label="Booking request form">
-        <h2 class="h2">Booking request</h2>
-        <p class="hint">
-          This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
-        </p>
+<section class="filters" aria-label="Feature filters">
+  <div class="filterLeft">
+    <div class="filterLabel">Filter:</div>
+    <div class="chips" aria-label="Category chips">
+      <button class="chip is-active" type="button" data-filter="all">All</button>
+      <button class="chip" type="button" data-filter="essentials">Essentials</button>
+      <button class="chip" type="button" data-filter="nature">Nature</button>
+      <button class="chip" type="button" data-filter="landscapes">Landscapes</button>
+      <button class="chip" type="button" data-filter="activities">Activities</button>
+      <button class="chip" type="button" data-filter="attractions">Attractions</button>
+      <button class="chip" type="button" data-filter="gallery">Gallery</button>
+    </div>
+  </div>
 
-        <form id="tcfrBookingForm" aria-label="Booking form">
-          <div class="formGrid">
+  <div class="filterRight" aria-label="Quick links">
+    <a class="btn secondary" href="/contact/">Ask a question</a>
+  </div>
+</section>
 
-            <div class="field">
-              <label for="first_name">First name <span class="req">*</span></label>
-              <input
-                id="first_name"
-                name="first_name"
-                type="text"
-                autocomplete="given-name"
-                required
-                placeholder="Your first name"
-                autocapitalize="words"
-                inputmode="text"
-                spellcheck="false"
-              />
-            </div>
+<h2 class="sectionTitle">Pick what you want to explore</h2>
+<p class="sectionHint">
+  Tap any card to open the full page for that topic. If you are not sure where to start, begin with Amenities, Fauna, and Activities.
+</p>
 
-            <div class="field">
-              <label for="last_name">Last name <span class="req">*</span></label>
-              <input
-                id="last_name"
-                name="last_name"
-                type="text"
-                autocomplete="family-name"
-                required
-                placeholder="Your last name"
-                autocapitalize="words"
-                inputmode="text"
-                spellcheck="false"
-              />
-            </div>
+<section class="grid" aria-label="Features grid">
+  <!-- ESSENTIALS -->
+  <article class="card" data-cat="essentials" aria-label="Amenities card">
+    <a href="/features/amenities/" aria-label="Open Amenities page">
+      <div class="cardMedia" aria-label="Amenities image">
+        <img src="/assets/images/pages/features/tcfr_features_card_amenities_01.jpeg" alt="Amenities at The Cloud Forest Retreat" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Essentials</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Amenities</h3>
+        <p class="cardText">The comfort details that make the retreat feel easy: the essentials, the extras, and the little things guests remember.</p>
+        <div class="pillRow" aria-label="Amenities highlights">
+          <span class="pill">List view</span>
+          <span class="pill">2 images</span>
+          <span class="pill">Stay-ready</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Amenities</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-            <div class="field">
-              <label for="email">Email <span class="req">*</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
-            </div>
+  <article class="card" data-cat="essentials" aria-label="Produce card">
+    <a href="/features/produce/" aria-label="Open Produce page">
+      <div class="cardMedia" aria-label="Produce image">
+        <img src="/assets/images/pages/features/tcfr_features_card_produce_01.jpg" alt="Farm produce and local ingredients" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Essentials</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Produce</h3>
+        <p class="cardText">From the farm to your table. Fresh ingredients, local flavor, and the kind of simple food that tastes better in the mountains.</p>
+        <div class="pillRow" aria-label="Produce highlights">
+          <span class="pill">Farm-to-table</span>
+          <span class="pill">Local</span>
+          <span class="pill">Seasonal</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Produce</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-            <div class="field">
-              <label for="phone">Phone number <span class="req">*</span></label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
-            </div>
+  <!-- NATURE -->
+  <article class="card" data-cat="nature" aria-label="Flora card">
+    <a href="/features/flora/" aria-label="Open Flora page">
+      <div class="cardMedia" aria-label="Flora image">
+        <img src="/assets/images/pages/features/tcfr_features_card_flora_01.jpg" alt="Cloud forest flora" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Nature</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Flora</h3>
+        <p class="cardText">A living green world: orchids, moss, towering trees, and the plant life that makes the cloud forest feel unreal.</p>
+        <div class="pillRow" aria-label="Flora highlights">
+          <span class="pill">Photos</span>
+          <span class="pill">On-property</span>
+          <span class="pill">Cloud forest</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Flora</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-            <div class="field">
-              <label for="number_of_days_interested">Number of days interested</label>
-              <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Example: 2 nights" />
-            </div>
+  <article class="card" data-cat="nature" aria-label="Fauna card">
+    <a href="/features/fauna/" aria-label="Open Fauna page">
+      <div class="cardMedia" aria-label="Fauna image">
+        <img src="/assets/images/pages/features/tcfr_features_card_fauna_02.jpg" alt="Cloud forest fauna" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Nature</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Fauna</h3>
+        <p class="cardText">Birdsong, movement in the trees, and the feeling that nature is everywhere. A favorite for birders and curious explorers.</p>
+        <div class="pillRow" aria-label="Fauna highlights">
+          <span class="pill">Images</span>
+          <span class="pill">2 videos</span>
+          <span class="pill">Wildlife</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Fauna</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-            <div class="field">
-              <label for="number_of_guests">Number of guests</label>
-              <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Example: 2 adults" />
-            </div>
+  <!-- LANDSCAPES -->
+  <article class="card" data-cat="landscapes" aria-label="Choco Andino de Pichincha card">
+    <a href="/features/choco-andino-de-pichincha/" aria-label="Open Choco Andino de Pichincha page">
+      <div class="cardMedia" aria-label="Choco Andino image">
+        <img src="/assets/images/pages/features/tcfr_features_card_choco_01.jpg" alt="Choco Andino de Pichincha" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Landscapes</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Chocó Andino de Pichincha</h3>
+        <p class="cardText">A region shaped by mist, mountains, and biodiversity. Learn the story of where you are staying and why it matters.</p>
+        <div class="pillRow" aria-label="Choco Andino highlights">
+          <span class="pill">History</span>
+          <span class="pill">Context</span>
+          <span class="pill">Region</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore the Region</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-            <div class="field">
-              <label for="room_preference">Room preference</label>
-              <select id="room_preference" name="room_preference">
-                <option value="">Select a room</option>
-                <option value="Panoramic Suite">Panoramic Suite</option>
-                <option value="Sunrise Room">Sunrise Room</option>
-                <option value="Sunset Room">Sunset Room</option>
-                <option value="Entire house">Entire house</option>
-              </select>
-            </div>
+  <article class="card" data-cat="landscapes" aria-label="Rio Guayllabamba card">
+    <a href="/features/rio-guayllabamba/" aria-label="Open Rio Guayllabamba page">
+      <div class="cardMedia" aria-label="Rio Guayllabamba image">
+        <img src="/assets/images/pages/features/tcfr_features_card_rio_01.jpg" alt="Rio Guayllabamba" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Landscapes</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Rio Guayllabamba</h3>
+        <p class="cardText">A river landscape that shapes the valley. A peaceful read with visuals that make the scale feel real.</p>
+        <div class="pillRow" aria-label="Rio highlights">
+          <span class="pill">Horizontal images</span>
+          <span class="pill">1 video</span>
+          <span class="pill">Landscape</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore the River</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-            <div class="field">
-              <label for="transportation_needed">Transportation needed (Quito/airport)</label>
-              <select id="transportation_needed" name="transportation_needed">
-                <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-            </div>
+  <article class="card" data-cat="landscapes" aria-label="Pululahua card">
+    <a href="/features/pululahua/" aria-label="Open Pululahua page">
+      <div class="cardMedia" aria-label="Pululahua image">
+        <img src="/assets/images/pages/features/tcfr_features_card_pululahua_01.jpg" alt="Pululahua" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Landscapes</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Pululahua</h3>
+        <p class="cardText">A rare and unforgettable landscape. Learn what makes it unique and why it belongs on your Ecuador itinerary.</p>
+        <div class="pillRow" aria-label="Pululahua highlights">
+          <span class="pill">Info</span>
+          <span class="pill">Images</span>
+          <span class="pill">Must-see</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Pululahua</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-            <div class="field full">
-              <label for="how_did_you_hear_about_us">How did you hear about us?</label>
-              <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
-                <option value="">Select</option>
-                <option value="Referral">Referral</option>
-                <option value="Instagram">Instagram</option>
-                <option value="TikTok">TikTok</option>
-                <option value="YouTube">YouTube</option>
-                <option value="Google Search">Google Search</option>
-                <option value="Google Maps">Google Maps</option>
-                <option value="Airbnb">Airbnb</option>
-                <option value="Vrbo">Vrbo</option>
-                <option value="Booking.com">Booking.com</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
+  <!-- ACTIVITIES -->
+  <article class="card" data-cat="activities" aria-label="Activities card">
+    <a href="/features/activities/" aria-label="Open Activities page">
+      <div class="cardMedia" aria-label="Activities image">
+        <img src="/assets/images/pages/features/tcfr_features_card_activities_01.jpg" alt="Activities at and near the retreat" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Activities</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Activities</h3>
+        <p class="cardText">What you can do while you are here: easy nature time, active adventures, and calm moments that fit your pace.</p>
+        <div class="pillRow" aria-label="Activities highlights">
+          <span class="pill">On-site</span>
+          <span class="pill">Nearby</span>
+          <span class="pill">For all energy levels</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Activities</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-            <div class="field full">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
-            </div>
+  <!-- ATTRACTIONS -->
+  <article class="card" data-cat="attractions" aria-label="Attractions card">
+    <a href="/features/attractions/" aria-label="Open Attractions page">
+      <div class="cardMedia" aria-label="Attractions image">
+        <img src="/assets/images/pages/features/tcfr_features_card_attractions_01.png" alt="Attractions near the retreat" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Attractions</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Attractions</h3>
+        <p class="cardText">Your adventure list, curated. The places guests love most, with visuals that help you choose what fits your day.</p>
+        <div class="pillRow" aria-label="Attractions highlights">
+          <span class="pill">Images</span>
+          <span class="pill">4 videos</span>
+          <span class="pill">Nearby</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Explore Attractions</span>
+        </div>
+      </div>
+    </a>
+  </article>
 
-          </div>
+  <!-- GALLERY -->
+  <article class="card" data-cat="gallery" aria-label="Gallery card">
+    <a href="/features/gallery/" aria-label="Open Gallery page">
+      <div class="cardMedia" aria-label="Gallery image">
+        <img src="/assets/images/pages/features/tcfr_features_card_gallery_01.jpg" alt="The Cloud Forest Retreat gallery" loading="lazy" decoding="async" />
+        <div class="cardMediaShade" aria-hidden="true"></div>
+        <div class="cardTopBadge">Gallery</div>
+      </div>
+      <div class="cardBody">
+        <h3 class="cardTitle">Gallery</h3>
+        <p class="cardText">A visual tour of the retreat and surroundings. Perfect if you want to feel the vibe before you book.</p>
+        <div class="pillRow" aria-label="Gallery highlights">
+          <span class="pill">Images</span>
+          <span class="pill">Mood</span>
+          <span class="pill">Highlights</span>
+        </div>
+        <div class="cardCtaRow">
+          <span class="cardCta">Open Gallery</span>
+        </div>
+      </div>
+    </a>
+  </article>
+</section>
 
-          <div class="actionsRow">
-            <p class="miniNote">
-              By submitting, you agree we may contact you by email or phone to confirm details.
-            </p>
-            <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit request</button>
-          </div>
-        </form>
-      </section>
-
-      <aside class="sideStack" aria-label="Booking details">
-
-        <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
-          <h3 class="statusTitle">Request sent</h3>
-          <p class="statusText">
-            Thank you. We received your booking inquiry and sent a confirmation email.
-            If you do not see it, please check your spam or promotions folder.
-          </p>
-        </section>
-
-        <section class="card sideCard" aria-label="What happens next">
-          <h3 class="sideTitle">What happens next</h3>
-          <p class="sideP">
-            We will reply with availability, pricing, and any recommendations to make your stay effortless.
-            If you selected transportation, we will include pickup options from Quito or the airport.
-          </p>
-        </section>
-
-      </aside>
-
-    </section>
-
+<section class="ctaBand" aria-label="Bottom call to action">
+  <div>
+    <h2>Want help choosing what to do first?</h2>
+    <p>Message us and we will recommend the best experiences based on your time, season, and energy level.</p>
+  </div>
+  <div class="ctaBtns" aria-label="CTA buttons">
+    <a class="btn primary" href="/contact/">Contact</a>
+    <a class="btn secondary" href="/rooms/">View Rooms</a>
+    <a class="btn secondary" href="/booking/">Book Your Stay</a>
+  </div>
+</section>
   </main>
-
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-
   <script>
     (function(){
       "use strict";
+  var chips = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".card[data-cat]"));
 
-      var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec";
+  function setActiveChip(active){
+    chips.forEach(function(c){
+      c.classList.toggle("is-active", c.getAttribute("data-filter") === active);
+    });
+  }
 
-      function toTitleCase(s){
-        var t = String(s || "").trim();
-        if (!t) return "";
-        t = t.toLowerCase().replace(/\s+/g, " ");
-        var parts = t.split(" ");
-        for (var i = 0; i < parts.length; i++){
-          var w = parts[i];
-          if (!w) continue;
-          var hy = w.split("-");
-          for (var j = 0; j < hy.length; j++){
-            var seg = hy[j];
-            if (!seg) continue;
-            hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
-          }
-          parts[i] = hy.join("-");
-        }
-        return parts.join(" ");
-      }
+  function applyFilter(f){
+    if (f === "all"){
+      cards.forEach(function(card){ card.classList.remove("is-hidden"); });
+      return;
+    }
+    cards.forEach(function(card){
+      var cat = card.getAttribute("data-cat");
+      card.classList.toggle("is-hidden", cat !== f);
+    });
+  }
 
-      var form = document.getElementById("tcfrBookingForm");
-      var btn = document.getElementById("tcfrSubmitBtn");
-      var statusCard = document.getElementById("tcfrStatusCard");
-
-      var first = document.getElementById("first_name");
-      var last = document.getElementById("last_name");
-
-      function bindTitleCase(el){
-        if (!el) return;
-        el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
-      }
-      bindTitleCase(first);
-      bindTitleCase(last);
-
-      function setSending(isSending){
-        btn.disabled = isSending;
-        btn.textContent = isSending ? "Sending..." : "Submit request";
-      }
-
-      function showSuccess(){
-        statusCard.classList.add("show");
-        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-
-      function showError(msg){
-        statusCard.classList.add("show");
-        statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
-        statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
-        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-
-      if (!form || !btn || !statusCard) return;
-
-      form.addEventListener("submit", function(e){
-        e.preventDefault();
-
-        if (first) first.value = toTitleCase(first.value);
-        if (last) last.value = toTitleCase(last.value);
-
-        var fd = new FormData(form);
-
-        // Basic required enforcement (HTML required should cover most)
-        if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
-          showError("Please fill out all required fields.");
-          return;
-        }
-
-        setSending(true);
-
-        fetch(WEB_APP_URL, {
-          method: "POST",
-          body: fd,
-          mode: "no-cors"
-        })
-        .then(function(){
-          // With no-cors, we cannot read response, but it still sends.
-          showSuccess();
-          form.reset();
-          setSending(false);
-        })
-        .catch(function(){
-          setSending(false);
-          showError("We could not submit your request. Please try again.");
-        });
-      });
-    })();
+  chips.forEach(function(chip){
+    chip.addEventListener("click", function(){
+      var f = chip.getAttribute("data-filter") || "all";
+      setActiveChip(f);
+      applyFilter(f);
+    });
+  });
+})();
   </script>
 </body>
 </html>
