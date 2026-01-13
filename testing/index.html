@@ -3,27 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produce | Mindo Bird Watching</title>
-  <meta name="description" content="Discover seasonal, farm fresh produce at The Cloud Forest Retreat, grown steps from your room and served in simple, flavorful meals inspired by the land." />
+  <title>Attractions | Mindo Bird Watching</title>
+  <meta name="description" content="Explore waterfalls, river hikes, and forest trails near The Cloud Forest Retreat. Plan easy, nature-first outings with photos and short videos." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/produce/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/attractions/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mindo Bird Watching" />
-  <meta property="og:title" content="Produce | Mindo Bird Watching" />
-  <meta property="og:description" content="Discover seasonal, farm fresh produce at The Cloud Forest Retreat, grown steps from your room and served in simple, flavorful meals inspired by the land." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/features/produce/" />
+  <meta property="og:title" content="Attractions | Mindo Bird Watching" />
+  <meta property="og:description" content="Explore waterfalls, river hikes, and forest trails near The Cloud Forest Retreat. Plan easy, nature-first outings with photos and short videos." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/features/attractions/" />
   <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador's cloud forest" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Produce | Mindo Bird Watching" />
-  <meta name="twitter:description" content="Discover seasonal, farm fresh produce at The Cloud Forest Retreat, grown steps from your room and served in simple, flavorful meals inspired by the land." />
+  <meta name="twitter:title" content="Attractions | Mindo Bird Watching" />
+  <meta name="twitter:description" content="Explore waterfalls, river hikes, and forest trails near The Cloud Forest Retreat. Plan easy, nature-first outings with photos and short videos." />
   <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
-  <link rel="stylesheet" href="/assets/css/site.css" />
-  <link rel="stylesheet" href="/assets/css/header.css" />
-  <script src="/assets/js/head.js" defer></script>
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
@@ -93,7 +90,7 @@
       align-items: center;
     }
 
-    /* HERO (consistent with other pages) */
+    /* HERO (consistent) */
     .hero{
       margin-top:14px;
       border:1px solid var(--line);
@@ -123,7 +120,7 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
         linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
       pointer-events:none;
     }
@@ -185,70 +182,31 @@
       font-size:15.5px;
       line-height:1.75;
       color:rgba(11,26,16,0.78);
-      max-width:88ch;
+      max-width:90ch;
       font-weight:650;
     }
 
-    /* PRODUCE GRID */
-    .produceGrid{
+    /* FEATURED */
+    .featureGrid{
       margin-top:14px;
       display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-    }
-
-    .produceItem{
-      position:relative;
-      border-radius:18px;
-      overflow:hidden;
-      aspect-ratio:1/1;
-      background:#ccc;
-      border: 1px solid rgba(11,26,16,0.10);
-    }
-
-    .produceItem img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform: scale(1.01);
-    }
-
-    .produceCap{
-      position:absolute;
-      left:10px;
-      right:10px;
-      bottom:10px;
-      padding:8px 10px;
-      border-radius:999px;
-      background:rgba(245,245,220,0.92);
-      border:1px solid rgba(13,89,37,0.16);
-      font-size:13px;
-      font-weight:900;
-      color:#0b2b12;
-      text-align:center;
-      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
-    }
-
-    /* HIGHLIGHT */
-    .highlight{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: 0.95fr 1.05fr;
+      grid-template-columns:1fr 1fr;
       gap:14px;
-      align-items:stretch;
     }
 
-    .highlightImage{
-      border-radius:24px;
-      overflow:hidden;
-      border:1px solid rgba(11,26,16,0.10);
-      background:#ccc;
+    .featureCard{
+      display:grid;
+      grid-template-columns:1fr;
+    }
+
+    .featureImage{
       position: relative;
-      min-height: 520px;
+      aspect-ratio:16/10;
+      background:#ccc;
+      overflow: hidden;
     }
 
-    .highlightImage img{
+    .featureImage img{
       width:100%;
       height:100%;
       object-fit:cover;
@@ -256,60 +214,53 @@
       transform: scale(1.01);
     }
 
-    .highlightText{
+    .featureBody{
       padding:16px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      gap:10px;
-      min-width: 0;
+      display: grid;
+      gap: 10px;
     }
 
-    .highlightText h2{
+    .featureBody h2{
       margin:0;
       font-family:var(--font-head);
-      font-size:26px;
+      font-size:22px;
       color:var(--forest);
-      letter-spacing:-0.02em;
-      font-weight:900;
-      line-height:1.08;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      line-height: 1.1;
     }
 
-    .highlightText p{
+    .featureBody p{
       margin:0;
-      font-size:15px;
-      line-height:1.75;
+      font-size:14.8px;
+      line-height:1.7;
       color:rgba(11,26,16,0.78);
       font-weight:650;
-      max-width: none;
     }
 
-    .pillRow{
+    .tags{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top: 2px;
     }
 
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
+    .tag{
+      font-size:13px;
       padding:9px 12px;
       border-radius:999px;
       border:1px solid rgba(13,89,37,0.18);
       background:rgba(255,255,255,0.62);
-      color:#0b2b12;
       font-weight:900;
-      font-size:13px;
-      white-space:nowrap;
+      color:#0b2b12;
+      white-space: nowrap;
       box-shadow: 0 10px 26px rgba(13,89,37,0.10);
     }
 
-    /* SPOTLIGHT */
-    .spotlight{
+    /* CAROUSEL */
+    .carousel{
       margin-top:14px;
       padding:14px;
+      position:relative;
     }
 
     .h2{
@@ -322,117 +273,129 @@
       line-height: 1.1;
     }
 
-    .spotlightTrack{
-      display:flex;
-      gap:14px;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      padding-bottom:6px;
-    }
-
-    .spotlightTrack::-webkit-scrollbar{ display:none; }
-
-    .spotItem{
-      flex:0 0 280px;
-      border-radius:24px;
+    .carouselViewport{
       overflow:hidden;
-      background:var(--glass);
-      border:1px solid var(--line);
-      scroll-snap-align:start;
-      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+      border-radius:18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
     }
 
-    .spotImage{
-      aspect-ratio:9/16;
+    .carouselTrack{
+      display:flex;
+      transition:transform 0.4s ease;
+      will-change: transform;
+    }
+
+    .carouselItem{
+      flex:0 0 100%;
+      aspect-ratio:16/9;
       background:#ccc;
     }
 
-    .spotImage img{
+    .carouselItem img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
-      transform: scale(1.01);
     }
 
-    .spotBody{
-      padding:12px;
+    .carouselBtn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.45);
+      color:#fff;
+      border:none;
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .carouselBtn.prev{ left:18px; }
+    .carouselBtn.next{ right:18px; }
+
+    /* VIDEOS */
+    .videoRow{
+      margin-top:14px;
       display:grid;
-      gap:6px;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
     }
 
-    .spotBody h3{
-      margin:0;
-      font-family:var(--font-head);
-      font-size:18px;
-      color:var(--forest);
-      font-weight:900;
-      letter-spacing:-0.01em;
-      line-height:1.15;
+    .videoCard{
+      border-radius:24px;
+      overflow:hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.55);
     }
 
-    .spotBody p{
-      margin:0;
-      font-size:13.8px;
-      line-height:1.6;
-      color:rgba(11,26,16,0.75);
-      font-weight:650;
+    .videoWrap{
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      position: relative;
+      background: #000;
     }
 
-    /* CLOSING */
-    .closing{
+    .videoWrap iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .note{
       margin-top:14px;
       padding:16px;
       text-align:center;
-    }
-
-    .closing p{
-      margin:0 auto;
-      max-width:78ch;
-      font-size:15.5px;
-      line-height:1.75;
-      color:rgba(11,26,16,0.78);
+      font-size:14px;
+      color:rgba(11,26,16,0.65);
       font-weight:650;
     }
 
     @media(max-width:900px){
       .wrap{ padding:12px 14px 64px; }
       .heroMedia{ min-height:280px; }
-      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
-
-      .produceGrid{ grid-template-columns:repeat(2,1fr); }
-
-      .highlight{ grid-template-columns:1fr; }
-      .highlightImage{ min-height: 360px; }
-      .spotItem{ flex-basis: 260px; }
+      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width: none; }
+      .featureGrid{ grid-template-columns:1fr; }
+      .videoRow{ grid-template-columns:1fr; }
+      .carouselBtn.prev{ left:12px; }
+      .carouselBtn.next{ right:12px; }
     }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Produce page">
+  <main class="wrap" aria-label="Attractions page">
     <section class="topBand" aria-label="Page navigation">
       <div class="crumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">›</span>
         <a href="/features/">Features</a>
         <span aria-hidden="true">›</span>
-        <span>Produce</span>
+        <span>Attractions</span>
       </div>
       <div class="quickActions" aria-label="Quick actions">
         <a class="btn secondary" href="/booking/">Check Availability</a>
-        <a class="btn primary" href="/contact/">Ask About Meals</a>
+        <a class="btn primary" href="/contact/">Ask About Attractions</a>
       </div>
     </section>
-<section class="hero" aria-label="Produce hero">
+<section class="hero" aria-label="Attractions hero">
   <div class="heroMedia" aria-label="Hero image">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_hero_01.jpg" alt="Organic produce at The Cloud Forest Retreat" loading="eager" decoding="async" />
+    <img src="/assets/images/pages/attractions/tcfr_features_attractions_hero_01.jpg" alt="Cloud forest landscape" loading="eager" decoding="async" />
     <div class="heroShade" aria-hidden="true"></div>
     <div class="heroInner" aria-label="Hero content">
-      <div class="kicker">Farm-to-table • Seasonal • Fresh</div>
-      <h1 class="heroH1">Produce</h1>
+      <div class="kicker">Waterfalls • Rivers • Trails</div>
+      <h1 class="heroH1">Attractions</h1>
       <p class="heroLead">
-        Fresh, seasonal, and grown with care. What you eat here comes directly from the land around you.
+        Step beyond the lodge and into waterfalls, rivers, trails, and quiet places where the forest reveals itself.
       </p>
     </div>
   </div>
@@ -440,104 +403,111 @@
 
 <section class="card intro" aria-label="Intro">
   <p>
-    At The Cloud Forest Retreat, much of what ends up on your plate begins just steps away.
-    Our farm produces a rotating selection of fruits, vegetables, and herbs grown organically,
-    shaped by the seasons, and harvested with intention.
+    The Cloud Forest Retreat is surrounded by natural experiences that invite exploration at your own pace.
+    From short walks to deeper adventures, each attraction connects you directly with the land.
   </p>
 </section>
 
-<section class="produceGrid" aria-label="Produce gallery">
-  <div class="produceItem">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_tree_tomatoes.jpg" alt="Tree tomatoes" loading="lazy" decoding="async" />
-    <div class="produceCap">Tree tomatoes</div>
-  </div>
-  <div class="produceItem">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_peppers_02.jpg" alt="Peppers" loading="lazy" decoding="async" />
-    <div class="produceCap">Peppers</div>
-  </div>
-  <div class="produceItem">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_herbs.jpg" alt="Fresh herbs" loading="lazy" decoding="async" />
-    <div class="produceCap">Herbs</div>
-  </div>
-  <div class="produceItem">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_leafy_greens.jpg" alt="Leafy greens" loading="lazy" decoding="async" />
-    <div class="produceCap">Leafy greens</div>
-  </div>
-  <div class="produceItem">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_citrus.jpg" alt="Citrus" loading="lazy" decoding="async" />
-    <div class="produceCap">Citrus</div>
-  </div>
-  <div class="produceItem">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_coffee_cherries.jpg" alt="Coffee cherries" loading="lazy" decoding="async" />
-    <div class="produceCap">Coffee cherries</div>
-  </div>
-  <div class="produceItem">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_garden_harvest_01.jpg" alt="Garden harvest" loading="lazy" decoding="async" />
-    <div class="produceCap">Garden harvest</div>
-  </div>
-  <div class="produceItem">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_seasonal_fruits_chirimoya_01.jpg" alt="Seasonal fruits" loading="lazy" decoding="async" />
-    <div class="produceCap">Seasonal fruits</div>
-  </div>
+<section class="featureGrid" aria-label="Featured attractions">
+  <article class="card featureCard" aria-label="Secluded waterfall">
+    <div class="featureImage">
+      <img src="/assets/images/pages/attractions/tcfr_features_attractions_waterfall_01.jpg" alt="Secluded waterfall near the retreat" loading="lazy" decoding="async" />
+    </div>
+    <div class="featureBody">
+      <h2>Secluded waterfall</h2>
+      <p>
+        A hidden waterfall tucked into the forest. Cool mist, birdsong, and a moment of stillness reward those who make the short journey.
+      </p>
+      <div class="tags" aria-label="Waterfall tags">
+        <span class="tag">Natural</span>
+        <span class="tag">Quiet</span>
+        <span class="tag">Short walk</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="card featureCard" aria-label="Hike to the river">
+    <div class="featureImage">
+      <img src="/assets/images/pages/attractions/tcfr_features_attractions_river_hike_01.jpg" alt="River hike through the cloud forest" loading="lazy" decoding="async" />
+    </div>
+    <div class="featureBody">
+      <h2>Hike to the river</h2>
+      <p>
+        A scenic descent through the cloud forest leading to the Rio Guayllabamba, where the sound of water and open views mark the journey's end.
+      </p>
+      <div class="tags" aria-label="River hike tags">
+        <span class="tag">Hiking</span>
+        <span class="tag">River access</span>
+        <span class="tag">Moderate</span>
+      </div>
+    </div>
+  </article>
 </section>
 
-<section class="highlight" aria-label="Garden to table">
-  <div class="highlightImage" aria-label="Garden to table image">
-    <img src="/assets/images/pages/features/produce/tcfr_features_produce_garden_to_table_01.jpg" alt="Garden to table produce" loading="lazy" decoding="async" />
-  </div>
-  <div class="card highlightText" aria-label="Garden to table text">
-    <h2>From garden to table</h2>
-    <p>
-      Ingredients are picked at peak ripeness and used fresh. Meals here reflect what the land offers in that moment, creating a direct connection between soil, season, and flavor.
-    </p>
-    <div class="pillRow" aria-label="Highlights">
-      <span class="pill">Picked daily</span>
-      <span class="pill">Season-led menus</span>
-      <span class="pill">Local flavor</span>
+<section class="card carousel" aria-label="Around the property carousel">
+  <h2 class="h2">Around the property</h2>
+  <div class="carouselViewport" aria-label="Carousel viewport">
+    <div class="carouselTrack" id="carouselTrack" aria-label="Carousel track">
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_04.jpg" alt="Around the property photo 1" loading="lazy" decoding="async" /></div>
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_02.jpg" alt="Around the property photo 2" loading="lazy" decoding="async" /></div>
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_03.jpg" alt="Around the property photo 3" loading="lazy" decoding="async" /></div>
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_01.jpg" alt="Around the property photo 4" loading="lazy" decoding="async" /></div>
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_05.jpg" alt="Around the property photo 5" loading="lazy" decoding="async" /></div>
     </div>
   </div>
+  <button class="carouselBtn prev" type="button" aria-label="Previous slide" onclick="moveSlide(-1)">‹</button>
+  <button class="carouselBtn next" type="button" aria-label="Next slide" onclick="moveSlide(1)">›</button>
 </section>
 
-<section class="card spotlight" aria-label="Seasonal highlights">
-  <h2 class="h2">Seasonal highlights</h2>
-  <div class="spotlightTrack" aria-label="Spotlight track">
-    <div class="spotItem" aria-label="Tree tomato">
-      <div class="spotImage">
-        <img src="/assets/images/pages/features/produce/tcfr_features_produce_tree_tomatoes.jpg" alt="Tree tomato" loading="lazy" decoding="async" />
-      </div>
-      <div class="spotBody">
-        <h3>Tree tomato</h3>
-        <p>Tangy, vibrant, and often used in sauces and fresh preparations.</p>
-      </div>
+<section class="videoRow" aria-label="Attraction videos">
+  <div class="videoCard" aria-label="Attraction video 1">
+    <div class="videoWrap">
+      <iframe
+        src="https://www.youtube.com/embed/qYGgqEslbNA"
+        title="Attraction video 1"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
-    <div class="spotItem" aria-label="Peppers">
-      <div class="spotImage">
-        <img src="/assets/images/pages/features/produce/tcfr_features_produce_peppers_01.jpg" alt="Peppers" loading="lazy" decoding="async" />
-      </div>
-      <div class="spotBody">
-        <h3>Peppers</h3>
-        <p>Harvested weekly, adding warmth and depth to many dishes.</p>
-      </div>
-    </div>
-    <div class="spotItem" aria-label="Fresh herbs">
-      <div class="spotImage">
-        <img src="/assets/images/pages/features/produce/tcfr_features_produce_herbs.jpg" alt="Fresh herbs" loading="lazy" decoding="async" />
-      </div>
-      <div class="spotBody">
-        <h3>Fresh herbs</h3>
-        <p>Picked moments before cooking for maximum aroma and flavor.</p>
-      </div>
+  </div>
+
+  <div class="videoCard" aria-label="Attraction video 2">
+    <div class="videoWrap">
+      <iframe
+        src="https://www.youtube.com/embed/pleZvbQhWvs"
+        title="Attraction video 2"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
   </div>
 </section>
 
-<section class="card closing" aria-label="Closing">
-  <p>
-    Eating here is not just about nourishment. It is about understanding where food comes from, honoring the land, and slowing down enough to taste it.
-  </p>
+<section class="card note" aria-label="More coming soon">
+  More trails, viewpoints, and experiences are being added as the retreat continues to grow.
 </section>
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
+  <script>
+    (function(){
+      "use strict";
+      var index = 0;
+      var track = document.getElementById("carouselTrack");
+      if (!track) return;
+      var slides = track.children.length;
+
+      function moveSlide(dir){
+        index = (index + dir + slides) % slides;
+        track.style.transform = "translateX(" + (-index * 100) + "%)";
+      }
+
+      window.moveSlide = moveSlide;
+
+      setInterval(function(){ moveSlide(1); }, 2800);
+    })();
+  </script>
 </body>
 </html>
