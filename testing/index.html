@@ -3,24 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fauna | Mindo Bird Watching</title>
-  <meta name="description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
+  <title>Pululahua | The Cloud Forest Retreat</title>
+  <meta name="description" content="Learn about Pululahua, Ecuador’s rare inhabited volcanic caldera. Explore geology, biodiversity, culture, and the best ways to visit with a scenic carousel." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/fauna/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Mindo Bird Watching" />
-  <meta property="og:title" content="Fauna | Mindo Bird Watching" />
-  <meta property="og:description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/features/fauna/" />
-  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador's cloud forest" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fauna | Mindo Bird Watching" />
-  <meta name="twitter:description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
-  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/pululahua/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
@@ -33,553 +27,748 @@
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
-      --forest: #0D5925;
       --muted: rgba(11,26,16,0.72);
+      --forest: #0D5925;
+      --accent: #E0643A;
     }
+*{ box-sizing:border-box; }
+body{ margin:0; }
 
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 76px;
+}
 
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:18px 18px 72px;
-    }
+.topBand{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .card{
-      background:var(--glass2);
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      color:var(--ink);
-    }
+.crumbs{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+  flex-wrap: wrap;
+}
+.crumbs a{ color: inherit; text-decoration: none; }
+.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-    /* TOP BAND */
-    .topBand{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.quickActions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-      flex-wrap: wrap;
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+}
 
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.cardHead{
+  padding: 14px 14px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    /* HERO */
-    .hero{
-      margin-top:14px;
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      background:var(--glass);
-      overflow:hidden;
-      position:relative;
-      color:var(--ink);
-    }
+.cardTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.1;
+}
 
-    .heroMedia{
-      position:relative;
-      min-height:340px;
-      background:rgba(0,0,0,0.10);
-    }
+.cardHint{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+}
 
-    .heroMedia img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform:scale(1.01);
-    }
+/* HERO (match other pages: heroMedia + heroShade + heroInner glass badge) */
+.hero{
+  margin-top:14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
 
-    .heroShade{
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      pointer-events:none;
-    }
+.heroMedia{
+  position: relative;
+  min-height: 340px;
+  background: rgba(0,0,0,0.10);
+}
 
-    .heroInner{
-      position:absolute;
-      left:14px;
-      right:14px;
-      bottom:14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.22);
-      background:rgba(0,0,0,0.30);
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
-      padding:14px;
-      color:rgba(255,255,255,0.96);
-      box-shadow:0 18px 55px rgba(0,0,0,0.20);
-      max-width: 860px;
-    }
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      font-weight:900;
-      letter-spacing:0.12em;
-      text-transform:uppercase;
-      font-size:12px;
-      color:rgba(255,255,255,0.92);
-    }
+.heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 70% 18%, rgba(224,100,58,0.18), rgba(0,0,0,0) 58%),
+    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.50));
+  pointer-events: none;
+}
 
-    .heroH1{
-      margin:8px 0 6px;
-      font-family:var(--font-head);
-      font-weight:900;
-      letter-spacing:-0.03em;
-      line-height:1.02;
-      font-size:clamp(32px,4vw,54px);
-      color:#fff;
-    }
+.heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+  max-width: 860px;
+}
 
-    .heroLead{
-      margin:0;
-      max-width:80ch;
-      font-weight:650;
-      line-height:1.7;
-      color:rgba(231,228,209,0.92);
-      font-size:15.5px;
-    }
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
 
-    /* INTRO */
-    .intro{
-      margin-top:14px;
-      padding:16px;
-    }
+.heroH1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 4vw, 54px);
+  color: #fff;
+}
 
-    .intro p{
-      margin:0;
-      font-size:15.5px;
-      line-height:1.75;
-      color:rgba(11,26,16,0.78);
-      font-weight:650;
-      max-width: 90ch;
-    }
+.heroLead{
+  margin: 0;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
+  line-height: 1.75;
+  font-weight: 650;
+  max-width: 86ch;
+}
 
-    /* CAROUSEL (5 images, auto, buttons) */
-    .carouselWrap{
-      margin-top:14px;
-      padding:14px;
-      position: relative;
-    }
+/* GRID */
+.grid2{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    .h2{
-      margin: 0 0 12px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 20px;
-      line-height: 1.1;
-    }
+.pad{ padding: 14px; }
 
-    .carouselViewport{
-      overflow: hidden;
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-    }
+.p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.78;
+  font-size: 14.9px;
+  font-weight: 650;
+}
+.p + .p{ margin-top: 10px; }
 
-    .carouselTrack{
-      display:flex;
-      transition:transform 0.45s ease;
-      will-change: transform;
-    }
+.pillRow{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .carouselSlide{
-      flex: 0 0 100%;
-      aspect-ratio: 16 / 9;
-      background: #ccc;
-    }
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+}
+.pill strong{ color: var(--forest); font-weight: 900; }
 
-    .carouselSlide img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform: scale(1.01);
-    }
+.list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.85;
+  font-weight: 650;
+  font-size: 14.6px;
+}
+.list li{ margin: 6px 0; }
 
-    .carouselBtn{
-      position:absolute;
-      top: calc(50% + 18px);
-      transform:translateY(-50%);
-      background:rgba(0,0,0,0.45);
-      color:#fff;
-      border:none;
-      width:44px;
-      height:44px;
-      border-radius:999px;
-      cursor:pointer;
-      font-size:22px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      z-index: 2;
-    }
+.noteBox{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  margin-top: 12px;
+}
+.noteTitle{
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.15;
+}
+.noteBox p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.4px;
+}
 
-    .carouselBtn.prev{ left:18px; }
-    .carouselBtn.next{ right:18px; }
+/* HORIZONTAL CAROUSEL (5 images) */
+.carouselPad{ padding: 14px; }
 
-    /* GRID (4 cards) */
-    .faunaGrid{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:14px;
-      align-items: stretch;
-    }
+.hCarousel{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  overflow: hidden;
+}
 
-    .faunaCard{
-      display:grid;
-      grid-template-columns:0.95fr 1.05fr;
-      gap:14px;
-      padding:14px;
-      align-items:stretch;
-    }
+.hViewport{
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,0.08);
+}
 
-    .faunaImage{
-      border-radius:18px;
-      overflow:hidden;
-      min-height:260px;
-      background:#ccc;
-      border: 1px solid rgba(11,26,16,0.10);
-    }
+.hTrack{
+  display: flex;
+  width: 100%;
+  transform: translateX(0);
+  transition: transform 420ms ease;
+  will-change: transform;
+}
 
-    .faunaImage img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform: scale(1.01);
-    }
+.hSlide{
+  flex: 0 0 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  padding: 0;
+}
 
-    .faunaBody{
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      gap:10px;
-      min-width:0;
-    }
+.hSlide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .faunaBody h3{
-      margin:0;
-      font-family:var(--font-head);
-      font-size:22px;
-      color:var(--forest);
-      font-weight:900;
-      letter-spacing:-0.02em;
-      line-height:1.1;
-    }
+.hCap{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 9px 11px;
+  border-radius: 14px;
+  background: rgba(245,245,220,0.92);
+  border: 1px solid rgba(13,89,37,0.16);
+  color: #0b2b12;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+}
 
-    .faunaLatin{
-      font-size:13px;
-      font-style:italic;
-      color:rgba(11,26,16,0.55);
-      font-weight:650;
-      margin-top:-4px;
-    }
+.hArrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 46px;
+  width: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(245,245,220,0.45);
+  background: rgba(11,26,16,0.30);
+  color: rgba(231,228,209,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  line-height: 1;
+  z-index: 3;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.hArrow.prev{ left: 10px; }
+.hArrow.next{ right: 10px; }
 
-    .faunaTags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
+.hNav{
+  border-top: 1px solid rgba(11,26,16,0.12);
+  padding: 10px 12px;
+  display: flex;
+  justify-content: center;
+}
 
-    .tag{
-      font-size:13px;
-      padding:9px 12px;
-      border-radius:999px;
-      border:1px solid rgba(13,89,37,0.18);
-      background:rgba(255,255,255,0.62);
-      font-weight:900;
-      color:#0b2b12;
-      white-space:nowrap;
-      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-    }
+.hDots{
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .faunaText{
-      font-size:14.8px;
-      line-height:1.7;
-      color:rgba(11,26,16,0.78);
-      font-weight:650;
-    }
+.hDotBtn{
+  appearance: none;
+  border: 1px solid rgba(13,89,37,0.20);
+  background: rgba(255,255,255,0.72);
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 0;
+}
+.hDotBtn.is-active{
+  background: rgba(224,100,58,0.95);
+  border-color: rgba(0,0,0,0.10);
+  box-shadow: 0 10px 22px rgba(224,100,58,0.18);
+  transform: scale(1.05);
+}
 
-    /* VIDEOS (embed twice) */
-    .videoStrip{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:14px;
-    }
+/* CTA BAND */
+.ctaBand{
+  margin-top: 14px;
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.12);
+  background: rgba(245,245,220,0.82);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .videoCard{
-      border-radius:24px;
-      overflow:hidden;
-      border: 1px solid rgba(11,26,16,0.10);
-      box-shadow: var(--shadow);
-      background: rgba(255,255,255,0.55);
-    }
+.ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
 
-    .videoWrap{
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      position: relative;
-      background: #000;
-    }
+.ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 86ch;
+}
 
-    .videoWrap iframe{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
+.ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    @media(max-width:900px){
-      .wrap{ padding:12px 14px 64px; }
+/* MOBILE */
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 64px; }
 
-      .heroMedia{ min-height:280px; }
-      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
+  .heroMedia{ min-height: 280px; }
+  .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
 
-      .carouselBtn{ top: calc(50% + 12px); }
-      .carouselBtn.prev{ left:12px; }
-      .carouselBtn.next{ right:12px; }
-
-      .faunaGrid{ grid-template-columns:1fr; }
-      .faunaCard{ grid-template-columns:1fr; }
-      .videoStrip{ grid-template-columns:1fr; }
-      .faunaImage{ min-height:240px; }
-    }
+  .grid2{ grid-template-columns: 1fr; }
+  .hSlide{ aspect-ratio: 4 / 3; }
+  .hArrow.prev{ left: 8px; }
+  .hArrow.next{ right: 8px; }
+}
   </style>
 </head>
 <body>
-<div id="siteHeader"></div>
-<main class="wrap" aria-label="Fauna page">
-  <section class="topBand" aria-label="Page navigation">
-    <div class="crumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">›</span>
-      <a href="/features/">Features</a>
-      <span aria-hidden="true">›</span>
-      <span>Fauna</span>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Pululahua page">
+    <section class="topBand" aria-label="Page navigation">
+      <div class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/features/">Features</a>
+        <span aria-hidden="true">›</span>
+        <span>Pululahua</span>
+      </div>
+      <div class="quickActions" aria-label="Quick actions">
+        <a class="btn secondary" href="/features/">Back to Features</a>
+        <a class="btn primary" href="/booking/">Book Your Stay</a>
+      </div>
+    </section>
+<!-- HERO -->
+<section class="hero" aria-label="Pululahua hero">
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/features/choco/tcfr_features_choco_01.jpg" alt="Pululahua landscape" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
+    <div class="heroInner" aria-label="Hero content">
+      <div class="kicker">Ancient caldera • Misty viewpoints</div>
+      <h1 class="heroH1">Pululahua</h1>
+      <p class="heroLead">
+        Pululahua is an ancient volcanic caldera where cloud and sunlight move fast, farms sit inside a crater, and the landscape tells a story that is thousands of years old.
+      </p>
     </div>
-    <div class="quickActions" aria-label="Quick actions">
-      <a class="btn secondary" href="/booking/">Check Availability</a>
-      <a class="btn primary" href="/contact/">Ask About Wildlife</a>
+  </div>
+</section>
+
+<!-- INFO GRID -->
+<section class="grid2" aria-label="Pululahua information">
+  <article class="card" aria-label="Volcanic story">
+    <div class="cardHead">
+      <h2 class="cardTitle">A volcano you can walk inside</h2>
+      <p class="cardHint">Geology, caldera life, and fertile soils</p>
     </div>
-  </section>
-  <section class="hero" aria-label="Fauna hero">
-    <div class="heroMedia" aria-label="Hero image">
-      <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Cloud forest wildlife" loading="eager" decoding="async" />
-      <div class="heroShade" aria-hidden="true"></div>
-      <div class="heroInner" aria-label="Hero content">
-        <div class="kicker">Birdlife • Mammals • Rare encounters</div>
-        <h1 class="heroH1">Fauna</h1>
-        <p class="heroLead">
-          From colorful birds to elusive mammals, the cloud forest surrounding The Cloud Forest Retreat is alive with movement, sound, and rare encounters.
+    <div class="pad">
+      <p class="p">
+        Pululahua is best known for its enormous caldera, a crater formed after volcanic activity and collapse.
+        The fertile soils inside the crater support small farming communities, making it one of the rare inhabited calderas on Earth.
+      </p>
+      <p class="p">
+        The name “Pululahua” is commonly linked to indigenous Kichwa meanings associated with mist and water, which fits the frequent fog and cloud that drift through the reserve.
+      </p>
+
+      <div class="pillRow" aria-label="Quick facts">
+        <span class="pill"><strong>Type:</strong> volcanic caldera</span>
+        <span class="pill"><strong>Feel:</strong> misty viewpoints</span>
+        <span class="pill"><strong>Soils:</strong> naturally fertile</span>
+      </div>
+
+      <div class="noteBox" aria-label="Visitor note">
+        <div class="noteTitle">Best moment</div>
+        <p>
+          Go when the clouds are moving. You will watch the crater appear and disappear, like the landscape is breathing.
         </p>
       </div>
     </div>
-  </section>
-  <section class="card intro" aria-label="Intro">
+  </article>
+
+  <aside class="card" aria-label="Nature and activities">
+    <div class="cardHead">
+      <h2 class="cardTitle">What you can do there</h2>
+      <p class="cardHint">Easy to visit, hard to forget</p>
+    </div>
+    <div class="pad">
+      <p class="p">
+        Pululahua is famous for scenic overlooks (miradores), short hikes, and quiet exploration through changing microclimates.
+        The reserve also supports diverse plant life, including orchids and bromeliads, and offers excellent birdwatching opportunities.
+      </p>
+
+      <ul class="list" aria-label="Activities">
+        <li><strong>Mirador views:</strong> panoramic crater vistas and patchwork farmland</li>
+        <li><strong>Hiking:</strong> trails down into the caldera and around the rim</li>
+        <li><strong>Birdwatching:</strong> hummingbirds and cloud forest species</li>
+        <li><strong>Photography:</strong> dramatic skies, mist, and layered ridgelines</li>
+      </ul>
+
+      <div class="pillRow" aria-label="Trip vibe">
+        <span class="pill"><strong>Vibe:</strong> quiet and scenic</span>
+        <span class="pill"><strong>Best for:</strong> photos and walks</span>
+        <span class="pill"><strong>Tip:</strong> bring a light jacket</span>
+      </div>
+
+      <div class="noteBox" aria-label="Conservation note">
+        <div class="noteTitle">Respect the reserve</div>
+        <p>
+          Stay on trails, avoid loud music, and pack out what you bring in. Misty ecosystems are delicate and recover slowly.
+        </p>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<!-- HORIZONTAL IMAGE CAROUSEL -->
+<section class="card" style="margin-top:14px;" aria-label="Pululahua photo carousel">
+  <div class="cardHead">
+    <h2 class="cardTitle">Pululahua views</h2>
+    <p class="cardHint">Autoplays every ~3 seconds. Use arrows or dots.</p>
+  </div>
+
+  <div class="carouselPad">
+    <div class="hCarousel" aria-label="Pululahua horizontal carousel">
+      <div class="hViewport" id="puCarousel" data-autoplay-ms="2600" data-pause-after-interaction-ms="9000">
+        <button class="hArrow prev" type="button" data-action="prev" aria-label="Previous photo">‹</button>
+        <button class="hArrow next" type="button" data-action="next" aria-label="Next photo">›</button>
+
+        <div class="hTrack" data-track>
+          <figure class="hSlide" aria-label="Pululahua image 1">
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Pululahua view from the mirador" loading="lazy" decoding="async" />
+            <figcaption class="hCap">Caldera from the mirador</figcaption>
+          </figure>
+          <figure class="hSlide" aria-label="Pululahua image 2">
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Misty rim at Pululahua" loading="lazy" decoding="async" />
+            <figcaption class="hCap">Mist rolling across the rim</figcaption>
+          </figure>
+          <figure class="hSlide" aria-label="Pululahua image 3">
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Farms inside Pululahua caldera" loading="lazy" decoding="async" />
+            <figcaption class="hCap">Patchwork farms inside the crater</figcaption>
+          </figure>
+          <figure class="hSlide" aria-label="Pululahua image 4">
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Trail views at Pululahua" loading="lazy" decoding="async" />
+            <figcaption class="hCap">Trail views through changing habitats</figcaption>
+          </figure>
+          <figure class="hSlide" aria-label="Pululahua image 5">
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Golden hour at Pululahua" loading="lazy" decoding="async" />
+            <figcaption class="hCap">Golden hour on crater walls</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="hNav" aria-label="Carousel dots">
+        <div class="hDots" data-dots aria-label="Choose a photo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctaBand" aria-label="Booking call to action">
+  <div>
+    <h2>Want Pululahua added to your stay?</h2>
     <p>
-      The Choco Andino region is one of the richest wildlife habitats in the world.
-      Birds dominate the skies and canopy, while mammals like the spectacled bear quietly roam forest corridors below.
+      Tell us your pace and interests and we will recommend the best time of day, weather window, and viewpoint for the experience you want.
     </p>
-  </section>
-  <section class="card carouselWrap" aria-label="Bird carousel">
-    <h2 class="h2">Birdlife of The Cloud Forest Retreat</h2>
-<div class="carouselViewport" aria-label="Carousel viewport">
-  <div class="carouselTrack" id="faunaCarouselTrack" aria-label="Carousel track">
-    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
-    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
-    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
-    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
-    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
   </div>
-</div>
-
-<button class="carouselBtn prev" type="button" aria-label="Previous slide" id="faunaPrevBtn">‹</button>
-<button class="carouselBtn next" type="button" aria-label="Next slide" id="faunaNextBtn">›</button>
-  </section>
-  <section class="faunaGrid" aria-label="Featured fauna">
-    <article class="card faunaCard" aria-label="Toucans">
-      <div class="faunaImage" aria-label="Toucans image">
-        <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Toucan photo" loading="lazy" decoding="async">
-      </div>
-      <div class="faunaBody" aria-label="Toucans content">
-        <h3>Toucans</h3>
-        <div class="faunaLatin">Ramphastidae family</div>
-        <div class="faunaTags" aria-label="Toucan tags">
-          <span class="tag">Iconic</span>
-          <span class="tag">Fruit-eaters</span>
-        </div>
-        <div class="faunaText">
-          Known for their oversized bills and vibrant colors, toucans play a key role in seed dispersal throughout the forest.
-        </div>
-      </div>
-    </article>
-<article class="card faunaCard" aria-label="Hummingbirds">
-  <div class="faunaImage" aria-label="Hummingbirds image">
-    <img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Hummingbird photo" loading="lazy" decoding="async">
+  <div class="ctaBtns" aria-label="CTA buttons">
+    <a class="btn primary" href="/booking/">Book Your Stay</a>
+    <a class="btn secondary" href="/contact/">Ask a Question</a>
+    <a class="btn secondary" href="/features/">More Features</a>
   </div>
-  <div class="faunaBody" aria-label="Hummingbirds content">
-    <h3>Hummingbirds</h3>
-    <div class="faunaLatin">Trochilidae family</div>
-    <div class="faunaTags" aria-label="Hummingbird tags">
-      <span class="tag">Pollinators</span>
-      <span class="tag">Fast flyers</span>
-    </div>
-    <div class="faunaText">
-      Tiny and tireless, hummingbirds feed on nectar and help pollinate countless flowering plants across the forest.
-    </div>
-  </div>
-</article>
+</section>
+  </main>
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
+  <script>
+    (function(){
+      "use strict";
 
-<article class="card faunaCard" aria-label="Spectacled bear">
-  <div class="faunaImage" aria-label="Spectacled bear image">
-    <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Spectacled bear photo" loading="lazy" decoding="async">
-  </div>
-  <div class="faunaBody" aria-label="Spectacled bear content">
-    <h3>Spectacled bear</h3>
-    <div class="faunaLatin">Tremarctos ornatus</div>
-    <div class="faunaTags" aria-label="Spectacled bear tags">
-      <span class="tag">Endangered</span>
-      <span class="tag">Keystone species</span>
-    </div>
-    <div class="faunaText">
-      South America's only bear species, the spectacled bear is rarely seen but plays a vital role in maintaining forest balance.
-    </div>
-  </div>
-</article>
+      var root = document.getElementById("puCarousel");
+      if (!root) return;
 
-<article class="card faunaCard" aria-label="Butterflies">
-  <div class="faunaImage" aria-label="Butterflies image">
-    <img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Butterfly photo" loading="lazy" decoding="async">
-  </div>
-  <div class="faunaBody" aria-label="Butterflies content">
-    <h3>Butterflies</h3>
-    <div class="faunaLatin">Lepidoptera order</div>
-    <div class="faunaTags" aria-label="Butterfly tags">
-      <span class="tag">Colorful</span>
-      <span class="tag">Day-active</span>
-    </div>
-    <div class="faunaText">
-      Bright wings flash along forest edges and garden paths, especially when the sun breaks through the mist.
-    </div>
-  </div>
-</article>
-  </section>
-  <section class="videoStrip" aria-label="Wildlife videos">
-    <div class="videoCard" aria-label="Wildlife video">
-      <div class="videoWrap">
-        <iframe
-          src="https://www.youtube.com/embed/BbTNmN-QhQc"
-          title="Wildlife video"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-<div class="videoCard" aria-label="Wildlife video">
-  <div class="videoWrap">
-    <iframe
-      src="https://www.youtube.com/embed/BbTNmN-QhQc"
-      title="Wildlife video"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-  </section>
-</main>
-<div id="siteFooter"></div>
-<script src="/assets/js/site.js?v=3"></script>
-<script>
-  (function(){
-    "use strict";
+      var track = root.querySelector("[data-track]");
+      var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
+      if (!track) return;
 
-    var track = document.getElementById("faunaCarouselTrack");
-    var prevBtn = document.getElementById("faunaPrevBtn");
-    var nextBtn = document.getElementById("faunaNextBtn");
-    if (!track || !prevBtn || !nextBtn) return;
+      var slides = track.children ? Array.prototype.slice.call(track.children) : [];
+      if (!slides.length) return;
 
-    var index = 0;
-    var slides = track.children.length;
-    var intervalMs = 2600;
-    var timer = null;
+      var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2600");
+      var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
 
-    function goTo(i){
-      index = (i + slides) % slides;
-      track.style.transform = "translateX(" + (-index * 100) + "%)";
-    }
+      var index = 0;
+      var timer = null;
+      var resumeTimer = null;
+      var isPaused = false;
 
-    function next(){ goTo(index + 1); }
-    function prev(){ goTo(index - 1); }
+      function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
 
-    function start(){
-      stop();
-      timer = setInterval(next, intervalMs);
-    }
+      function setTransform(){
+        track.style.transform = "translateX(" + (-index * 100) + "%)";
+      }
 
-    function stop(){
-      if (timer) { clearInterval(timer); timer = null; }
-    }
+      function setActiveDot(){
+        if (!dotsWrap) return;
+        var btns = dotsWrap.querySelectorAll("button[data-dot]");
+        for (var i = 0; i < btns.length; i++){
+          btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
+        }
+      }
 
-    nextBtn.addEventListener("click", function(){
-      next();
-      start();
-    });
+      function goTo(i){
+        index = clamp(i, 0, slides.length - 1);
+        setTransform();
+        setActiveDot();
+      }
 
-    prevBtn.addEventListener("click", function(){
-      prev();
-      start();
-    });
+      function next(){
+        var n = index + 1;
+        if (n >= slides.length) n = 0;
+        goTo(n);
+      }
 
-    track.addEventListener("mouseenter", stop);
-    track.addEventListener("mouseleave", start);
+      function prev(){
+        var p = index - 1;
+        if (p < 0) p = slides.length - 1;
+        goTo(p);
+      }
 
-    document.addEventListener("visibilitychange", function(){
-      if (document.hidden) stop();
-      else start();
-    });
+      function clearTimers(){
+        if (timer) { clearInterval(timer); timer = null; }
+        if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+      }
 
-    start();
-  })();
-</script>
+      function startAutoplay(){
+        clearTimers();
+        if (autoplayMs < 1200) autoplayMs = 1200;
+        timer = setInterval(function(){
+          if (isPaused) return;
+          next();
+        }, autoplayMs);
+      }
+
+      function pauseTemporarily(){
+        isPaused = true;
+        if (resumeTimer) clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function(){
+          isPaused = false;
+        }, pauseAfterMs);
+      }
+
+      function buildDots(){
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = "";
+        for (var i = 0; i < slides.length; i++){
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "hDotBtn" + (i === 0 ? " is-active" : "");
+          b.setAttribute("data-dot", String(i));
+          b.setAttribute("aria-label", "Go to photo " + (i + 1));
+          b.addEventListener("click", function(){
+            var n = Number(this.getAttribute("data-dot") || "0");
+            goTo(n);
+            pauseTemporarily();
+          });
+          dotsWrap.appendChild(b);
+        }
+      }
+
+      function bindArrows(){
+        var prevBtn = root.querySelector('button[data-action="prev"]');
+        var nextBtn = root.querySelector('button[data-action="next"]');
+
+        if (prevBtn){
+          prevBtn.addEventListener("click", function(){
+            prev();
+            pauseTemporarily();
+          });
+        }
+
+        if (nextBtn){
+          nextBtn.addEventListener("click", function(){
+            next();
+            pauseTemporarily();
+          });
+        }
+      }
+
+      function bindHoverPause(){
+        root.addEventListener("mouseenter", function(){ isPaused = true; });
+        root.addEventListener("mouseleave", function(){ isPaused = false; });
+        root.addEventListener("focusin", function(){ isPaused = true; });
+        root.addEventListener("focusout", function(){ isPaused = false; });
+      }
+
+      function bindTouchSwipe(){
+        var startX = 0;
+        var deltaX = 0;
+        var isDown = false;
+
+        function onDown(x){
+          isDown = true;
+          startX = x;
+          deltaX = 0;
+          pauseTemporarily();
+        }
+
+        function onMove(x){
+          if (!isDown) return;
+          deltaX = x - startX;
+        }
+
+        function onUp(){
+          if (!isDown) return;
+          isDown = false;
+
+          var threshold = 38;
+          if (Math.abs(deltaX) > threshold){
+            if (deltaX < 0) next();
+            else prev();
+          }
+          deltaX = 0;
+        }
+
+        root.addEventListener("touchstart", function(e){
+          if (!e.touches || !e.touches.length) return;
+          onDown(e.touches[0].clientX);
+        }, { passive: true });
+
+        root.addEventListener("touchmove", function(e){
+          if (!e.touches || !e.touches.length) return;
+          onMove(e.touches[0].clientX);
+        }, { passive: true });
+
+        root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
+        root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+      }
+
+      buildDots();
+      bindArrows();
+      bindHoverPause();
+      bindTouchSwipe();
+
+      goTo(0);
+      startAutoplay();
+
+      window.addEventListener("resize", function(){
+        setTransform();
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
