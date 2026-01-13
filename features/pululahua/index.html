@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pululahua | The Cloud Forest Retreat</title>
-  <meta name="description" content="Learn about Pululahua, Ecuador’s rare inhabited volcanic caldera. Explore its geology, biodiversity, culture, and the best ways to visit, with a scenic photo carousel." />
+  <meta name="description" content="Learn about Pululahua, Ecuador’s rare inhabited volcanic caldera. Explore geology, biodiversity, culture, and the best ways to visit with a scenic carousel." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/features/pululahua/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -31,384 +31,410 @@
       --forest: #0D5925;
       --accent: #E0643A;
     }
+*{ box-sizing:border-box; }
+body{ margin:0; }
 
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 76px;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 76px;
-    }
+.topBand{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .topBand{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.crumbs{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+  flex-wrap: wrap;
+}
+.crumbs a{ color: inherit; text-decoration: none; }
+.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+.quickActions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+}
 
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-      min-width: 0;
-    }
+.cardHead{
+  padding: 14px 14px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    .cardHead{
-      padding: 14px 14px 0;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.cardTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.1;
+}
 
-    .cardTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 20px;
-    }
+.cardHint{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+}
 
-    .cardHint{
-      margin: 0;
-      color: rgba(11,26,16,0.68);
-      font-weight: 700;
-      font-size: 13px;
-    }
+/* HERO (match other pages: heroMedia + heroShade + heroInner glass badge) */
+.hero{
+  margin-top:14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
 
-    /* HERO */
-    .hero{
-      margin-top: 14px;
-      position: relative;
-      height: 420px;
-      border-radius: var(--r);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.22);
-      box-shadow: var(--shadow);
-      background: rgba(0,0,0,0.08);
-    }
-    .hero img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.01);
-      display: block;
-    }
-    .heroOverlay{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(900px 520px at 70% 18%, rgba(224,100,58,0.18), rgba(0,0,0,0) 58%),
-        linear-gradient(180deg, rgba(0,0,0,0.14), rgba(0,0,0,0.56));
-      pointer-events: none;
-    }
-    .heroContent{
-      position: absolute;
-      left: 16px;
-      right: 16px;
-      bottom: 16px;
-      max-width: 840px;
-      color: #fff;
-    }
-    .kicker{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: rgba(255,255,255,0.92);
-    }
-    .heroH1{
-      margin: 8px 0 6px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-      font-size: clamp(34px, 4.2vw, 54px);
-      color: #fff;
-    }
-    .heroLead{
-      margin: 0;
-      color: rgba(231,228,209,0.92);
-      font-size: 15.8px;
-      line-height: 1.75;
-      font-weight: 650;
-      max-width: 86ch;
-    }
+.heroMedia{
+  position: relative;
+  min-height: 340px;
+  background: rgba(0,0,0,0.10);
+}
 
-    /* GRID */
-    .grid2{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 14px;
-      align-items: start;
-    }
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .pad{ padding: 14px; }
+.heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 70% 18%, rgba(224,100,58,0.18), rgba(0,0,0,0) 58%),
+    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.50));
+  pointer-events: none;
+}
 
-    .p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.78;
-      font-size: 14.9px;
-      font-weight: 650;
-    }
-    .p + .p{ margin-top: 10px; }
+.heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+  max-width: 860px;
+}
 
-    .pillRow{
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
 
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-    .pill strong{ color: var(--forest); font-weight: 900; }
+.heroH1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 4vw, 54px);
+  color: #fff;
+}
 
-    .list{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.85;
-      font-weight: 650;
-      font-size: 14.6px;
-    }
-    .list li{ margin: 6px 0; }
+.heroLead{
+  margin: 0;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
+  line-height: 1.75;
+  font-weight: 650;
+  max-width: 86ch;
+}
 
-    .noteBox{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      padding: 14px;
-      margin-top: 12px;
-    }
-    .noteTitle{
-      margin: 0 0 8px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-      line-height: 1.15;
-    }
-    .noteBox p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.4px;
-    }
+/* GRID */
+.grid2{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    /* HORIZONTAL CAROUSEL (5 images) */
-    .carouselPad{ padding: 14px; }
+.pad{ padding: 14px; }
 
-    .hCarousel{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      overflow: hidden;
-    }
+.p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.78;
+  font-size: 14.9px;
+  font-weight: 650;
+}
+.p + .p{ margin-top: 10px; }
 
-    .hViewport{
-      position: relative;
-      overflow: hidden;
-      background: rgba(0,0,0,0.08);
-    }
+.pillRow{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .hTrack{
-      display: flex;
-      width: 100%;
-      transform: translateX(0);
-      transition: transform 420ms ease;
-      will-change: transform;
-    }
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+}
+.pill strong{ color: var(--forest); font-weight: 900; }
 
-    .hSlide{
-      flex: 0 0 100%;
-      position: relative;
-      aspect-ratio: 16 / 9;
-      margin: 0;
-      padding: 0;
-    }
+.list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.85;
+  font-weight: 650;
+  font-size: 14.6px;
+}
+.list li{ margin: 6px 0; }
 
-    .hSlide img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.noteBox{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  margin-top: 12px;
+}
+.noteTitle{
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.15;
+}
+.noteBox p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.4px;
+}
 
-    .hCap{
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      padding: 9px 11px;
-      border-radius: 14px;
-      background: rgba(245,245,220,0.92);
-      border: 1px solid rgba(13,89,37,0.16);
-      color: #0b2b12;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: -0.01em;
-    }
+/* HORIZONTAL CAROUSEL (5 images) */
+.carouselPad{ padding: 14px; }
 
-    .hArrow{
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 46px;
-      width: 52px;
-      border-radius: 16px;
-      border: 1px solid rgba(245,245,220,0.45);
-      background: rgba(11,26,16,0.30);
-      color: rgba(231,228,209,0.96);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-      cursor: pointer;
-      user-select: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      line-height: 1;
-      z-index: 3;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .hArrow.prev{ left: 10px; }
-    .hArrow.next{ right: 10px; }
+.hCarousel{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  overflow: hidden;
+}
 
-    .hNav{
-      border-top: 1px solid rgba(11,26,16,0.12);
-      padding: 10px 12px;
-      display: flex;
-      justify-content: center;
-    }
+.hViewport{
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,0.08);
+}
 
-    .hDots{
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.hTrack{
+  display: flex;
+  width: 100%;
+  transform: translateX(0);
+  transition: transform 420ms ease;
+  will-change: transform;
+}
 
-    .hDotBtn{
-      appearance: none;
-      border: 1px solid rgba(13,89,37,0.20);
-      background: rgba(255,255,255,0.72);
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      cursor: pointer;
-      padding: 0;
-    }
-    .hDotBtn.is-active{
-      background: rgba(224,100,58,0.95);
-      border-color: rgba(0,0,0,0.10);
-      box-shadow: 0 10px 22px rgba(224,100,58,0.18);
-      transform: scale(1.05);
-    }
+.hSlide{
+  flex: 0 0 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  padding: 0;
+}
 
-    /* CTA BAND */
-    .ctaBand{
-      margin-top: 14px;
-      border-radius: var(--r);
-      border: 1px solid rgba(11,26,16,0.12);
-      background: rgba(245,245,220,0.82);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.hSlide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .ctaBand h2{
-      margin: 0 0 6px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-    }
+.hCap{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 9px 11px;
+  border-radius: 14px;
+  background: rgba(245,245,220,0.92);
+  border: 1px solid rgba(13,89,37,0.16);
+  color: #0b2b12;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+}
 
-    .ctaBand p{
-      margin: 0;
-      color: rgba(11,26,16,0.72);
-      font-weight: 650;
-      line-height: 1.7;
-      max-width: 86ch;
-    }
+.hArrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 46px;
+  width: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(245,245,220,0.45);
+  background: rgba(11,26,16,0.30);
+  color: rgba(231,228,209,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  line-height: 1;
+  z-index: 3;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.hArrow.prev{ left: 10px; }
+.hArrow.next{ right: 10px; }
 
-    .ctaBtns{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.hNav{
+  border-top: 1px solid rgba(11,26,16,0.12);
+  padding: 10px 12px;
+  display: flex;
+  justify-content: center;
+}
 
-    /* MOBILE */
-    @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 64px; }
-      .hero{ height: 320px; }
-      .grid2{ grid-template-columns: 1fr; }
-      .hSlide{ aspect-ratio: 4 / 3; }
-      .hArrow.prev{ left: 8px; }
-      .hArrow.next{ right: 8px; }
-    }
+.hDots{
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hDotBtn{
+  appearance: none;
+  border: 1px solid rgba(13,89,37,0.20);
+  background: rgba(255,255,255,0.72);
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 0;
+}
+.hDotBtn.is-active{
+  background: rgba(224,100,58,0.95);
+  border-color: rgba(0,0,0,0.10);
+  box-shadow: 0 10px 22px rgba(224,100,58,0.18);
+  transform: scale(1.05);
+}
+
+/* CTA BAND */
+.ctaBand{
+  margin-top: 14px;
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.12);
+  background: rgba(245,245,220,0.82);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
+
+.ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 86ch;
+}
+
+.ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* MOBILE */
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 64px; }
+
+  .heroMedia{ min-height: 280px; }
+  .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
+
+  .grid2{ grid-template-columns: 1fr; }
+  .hSlide{ aspect-ratio: 4 / 3; }
+  .hArrow.prev{ left: 8px; }
+  .hArrow.next{ right: 8px; }
+}
   </style>
 </head>
 <body>
@@ -429,14 +455,16 @@
     </section>
 <!-- HERO -->
 <section class="hero" aria-label="Pululahua hero">
-  <img src="/assets/images/pages/features/choco/tcfr_features_choco_01.jpg" alt="Pululahua landscape placeholder" loading="eager" decoding="async" />
-  <div class="heroOverlay" aria-hidden="true"></div>
-  <div class="heroContent">
-    <div class="kicker">Ancient caldera • Misty viewpoints</div>
-    <h1 class="heroH1">Pululahua</h1>
-    <p class="heroLead">
-      Pululahua is an ancient volcanic caldera where cloud and sunlight move fast, farms sit inside a crater, and the landscape tells a story that is thousands of years old.
-    </p>
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/features/choco/tcfr_features_choco_01.jpg" alt="Pululahua landscape" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
+    <div class="heroInner" aria-label="Hero content">
+      <div class="kicker">Ancient caldera • Misty viewpoints</div>
+      <h1 class="heroH1">Pululahua</h1>
+      <p class="heroLead">
+        Pululahua is an ancient volcanic caldera where cloud and sunlight move fast, farms sit inside a crater, and the landscape tells a story that is thousands of years old.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -520,24 +548,24 @@
 
         <div class="hTrack" data-track>
           <figure class="hSlide" aria-label="Pululahua image 1">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Pululahua placeholder 1" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Pululahua view from the mirador" loading="lazy" decoding="async" />
             <figcaption class="hCap">Caldera from the mirador</figcaption>
           </figure>
           <figure class="hSlide" aria-label="Pululahua image 2">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Pululahua placeholder 2" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Misty rim at Pululahua" loading="lazy" decoding="async" />
             <figcaption class="hCap">Mist rolling across the rim</figcaption>
           </figure>
           <figure class="hSlide" aria-label="Pululahua image 3">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Pululahua placeholder 3" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Farms inside Pululahua caldera" loading="lazy" decoding="async" />
             <figcaption class="hCap">Patchwork farms inside the crater</figcaption>
           </figure>
           <figure class="hSlide" aria-label="Pululahua image 4">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Pululahua placeholder 4" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Trail views at Pululahua" loading="lazy" decoding="async" />
             <figcaption class="hCap">Trail views through changing habitats</figcaption>
           </figure>
           <figure class="hSlide" aria-label="Pululahua image 5">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Pululahua placeholder 5" loading="lazy" decoding="async" />
-            <figcaption class="hCap">Golden hour on the crater walls</figcaption>
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Golden hour at Pululahua" loading="lazy" decoding="async" />
+            <figcaption class="hCap">Golden hour on crater walls</figcaption>
           </figure>
         </div>
       </div>
@@ -566,7 +594,6 @@
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-  <!-- Page-only: horizontal carousel logic (autoplay + arrows + dots) -->
   <script>
     (function(){
       "use strict";
