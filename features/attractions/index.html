@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Attractions | The Cloud Forest Retreat</title>
-  <meta name="description" content="Explore natural attractions at The Cloud Forest Retreat. Waterfalls, river hikes, wildlife, and immersive experiences in Ecuador's cloud forest." />
+  <title>Attractions | Mindo Bird Watching</title>
+  <meta name="description" content="Explore waterfalls, river hikes, and forest trails near The Cloud Forest Retreat. Plan easy, nature-first outings with photos and short videos." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/features/attractions/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mindo Bird Watching" />
+  <meta property="og:title" content="Attractions | Mindo Bird Watching" />
+  <meta property="og:description" content="Explore waterfalls, river hikes, and forest trails near The Cloud Forest Retreat. Plan easy, nature-first outings with photos and short videos." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/features/attractions/" />
+  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador's cloud forest" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Attractions | Mindo Bird Watching" />
+  <meta name="twitter:description" content="Explore waterfalls, river hikes, and forest trails near The Cloud Forest Retreat. Plan easy, nature-first outings with photos and short videos." />
+  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
@@ -21,464 +36,478 @@
       --forest:#0D5925;
       --muted:rgba(11,26,16,0.72);
     }
-*{ box-sizing:border-box; }
-body{ margin:0; }
 
-.wrap{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:18px 18px 72px;
-}
+    *{ box-sizing:border-box; }
+    body{ margin:0; }
 
-.card{
-  background:var(--glass2);
-  border:1px solid var(--line);
-  border-radius:var(--r);
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  color:var(--ink);
-}
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 18px 72px;
+    }
 
-.topBand{
-  margin-top: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  box-shadow: var(--shadow);
-  background: var(--glass);
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-  color: var(--ink);
-}
+    .card{
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      color:var(--ink);
+    }
 
-.crumbs{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  font-size: 13px;
-  color: rgba(11,26,16,0.75);
-  flex-wrap: wrap;
-}
-.crumbs a{ color: inherit; text-decoration: none; }
-.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+    /* TOP BAND */
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
 
-.quickActions{
-  display: inline-flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+      flex-wrap: wrap;
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-.hero{
-  margin-top:14px;
-  border:1px solid var(--line);
-  border-radius:var(--r);
-  box-shadow:var(--shadow);
-  background:var(--glass);
-  overflow:hidden;
-  position:relative;
-  color:var(--ink);
-}
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-.heroMedia{
-  position:relative;
-  min-height:340px;
-  background:rgba(0,0,0,0.10);
-}
+    /* HERO (consistent) */
+    .hero{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      background:var(--glass);
+      overflow:hidden;
+      position:relative;
+      color:var(--ink);
+    }
 
-.heroMedia img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
+    .heroMedia{
+      position:relative;
+      min-height:340px;
+      background:rgba(0,0,0,0.10);
+    }
 
-.heroShade{
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-  pointer-events:none;
-}
+    .heroMedia img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.01);
+    }
 
-.heroInner{
-  position:absolute;
-  left:14px;
-  right:14px;
-  bottom:14px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,0.22);
-  background:rgba(0,0,0,0.30);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  padding:14px;
-  color:rgba(255,255,255,0.96);
-  box-shadow:0 18px 55px rgba(0,0,0,0.20);
-  max-width: 860px;
-}
+    .heroShade{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+      pointer-events:none;
+    }
 
-.kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  font-weight:900;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  font-size:12px;
-  color:rgba(255,255,255,0.92);
-}
+    .heroInner{
+      position:absolute;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.22);
+      background:rgba(0,0,0,0.30);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      padding:14px;
+      color:rgba(255,255,255,0.96);
+      box-shadow:0 18px 55px rgba(0,0,0,0.20);
+      max-width: 860px;
+    }
 
-.heroH1{
-  margin:8px 0 6px;
-  font-family:var(--font-head);
-  font-weight:900;
-  letter-spacing:-0.03em;
-  line-height:1.02;
-  font-size:clamp(32px,4vw,54px);
-  color:#fff;
-}
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:rgba(255,255,255,0.92);
+    }
 
-.heroLead{
-  margin:0;
-  max-width:80ch;
-  font-weight:650;
-  line-height:1.7;
-  color:rgba(231,228,209,0.92);
-  font-size:15.5px;
-}
+    .heroH1{
+      margin:8px 0 6px;
+      font-family:var(--font-head);
+      font-weight:900;
+      letter-spacing:-0.03em;
+      line-height:1.02;
+      font-size:clamp(32px,4vw,54px);
+      color:#fff;
+    }
 
-.intro{
-  margin-top:14px;
-  padding:16px;
-}
+    .heroLead{
+      margin:0;
+      max-width:80ch;
+      font-weight:650;
+      line-height:1.7;
+      color:rgba(231,228,209,0.92);
+      font-size:15.5px;
+    }
 
-.intro p{
-  margin:0;
-  font-size:15.5px;
-  line-height:1.75;
-  color:rgba(11,26,16,0.78);
-  max-width:85ch;
-  font-weight:650;
-}
+    /* INTRO */
+    .intro{
+      margin-top:14px;
+      padding:16px;
+    }
 
-.featureGrid{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
+    .intro p{
+      margin:0;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      max-width:90ch;
+      font-weight:650;
+    }
 
-.featureCard{
-  display:grid;
-  grid-template-columns:1fr;
-}
+    /* FEATURED */
+    .featureGrid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
 
-.featureImage{
-  position: relative;
-  aspect-ratio:16/10;
-  background:#ccc;
-  overflow: hidden;
-}
+    .featureCard{
+      display:grid;
+      grid-template-columns:1fr;
+    }
 
-.featureImage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform: scale(1.01);
-}
+    .featureImage{
+      position: relative;
+      aspect-ratio:16/10;
+      background:#ccc;
+      overflow: hidden;
+    }
 
-.featureBody{
-  padding:16px;
-  display: grid;
-  gap: 10px;
-}
+    .featureImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
 
-.featureBody h2{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:22px;
-  color:var(--forest);
-  letter-spacing: -0.02em;
-  font-weight: 900;
-  line-height: 1.1;
-}
+    .featureBody{
+      padding:16px;
+      display: grid;
+      gap: 10px;
+    }
 
-.featureBody p{
-  margin:0;
-  font-size:14.8px;
-  line-height:1.7;
-  color:rgba(11,26,16,0.78);
-  font-weight:650;
-}
+    .featureBody h2{
+      margin:0;
+      font-family:var(--font-head);
+      font-size:22px;
+      color:var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      line-height: 1.1;
+    }
 
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
+    .featureBody p{
+      margin:0;
+      font-size:14.8px;
+      line-height:1.7;
+      color:rgba(11,26,16,0.78);
+      font-weight:650;
+    }
 
-.tag{
-  font-size:13px;
-  padding:9px 12px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,0.18);
-  background:rgba(255,255,255,0.62);
-  font-weight:900;
-  color:#0b2b12;
-  white-space: nowrap;
-}
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
 
-.carousel{
-  margin-top:14px;
-  padding:14px;
-  position:relative;
-}
+    .tag{
+      font-size:13px;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.18);
+      background:rgba(255,255,255,0.62);
+      font-weight:900;
+      color:#0b2b12;
+      white-space: nowrap;
+      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+    }
 
-.h2{
-  margin: 0 0 12px;
-  font-family: var(--font-head);
-  color: var(--forest);
-  letter-spacing: -0.02em;
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 1.1;
-}
+    /* CAROUSEL */
+    .carousel{
+      margin-top:14px;
+      padding:14px;
+      position:relative;
+    }
 
-.carouselViewport{
-  overflow:hidden;
-  border-radius:18px;
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.55);
-}
+    .h2{
+      margin: 0 0 12px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 1.1;
+    }
 
-.carouselTrack{
-  display:flex;
-  transition:transform 0.4s ease;
-  will-change: transform;
-}
+    .carouselViewport{
+      overflow:hidden;
+      border-radius:18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+    }
 
-.carouselItem{
-  flex:0 0 100%;
-  aspect-ratio:16/9;
-  background:#ccc;
-}
+    .carouselTrack{
+      display:flex;
+      transition:transform 0.4s ease;
+      will-change: transform;
+    }
 
-.carouselItem img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
+    .carouselItem{
+      flex:0 0 100%;
+      aspect-ratio:16/9;
+      background:#ccc;
+    }
 
-.carouselBtn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.45);
-  color:#fff;
-  border:none;
-  width:44px;
-  height:44px;
-  border-radius:999px;
-  cursor:pointer;
-  font-size:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+    .carouselItem img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
-.carouselBtn.prev{ left:18px; }
-.carouselBtn.next{ right:18px; }
+    .carouselBtn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.45);
+      color:#fff;
+      border:none;
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
 
-.videoRow{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
+    .carouselBtn.prev{ left:18px; }
+    .carouselBtn.next{ right:18px; }
 
-.videoCard{
-  border-radius:24px;
-  overflow:hidden;
-  border: 1px solid rgba(11,26,16,0.10);
-  box-shadow: var(--shadow);
-  background: rgba(255,255,255,0.55);
-}
+    /* VIDEOS */
+    .videoRow{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
 
-.videoWrap{
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  position: relative;
-  background: #000;
-}
+    .videoCard{
+      border-radius:24px;
+      overflow:hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.55);
+    }
 
-.videoWrap iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
+    .videoWrap{
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      position: relative;
+      background: #000;
+    }
 
-.note{
-  margin-top:14px;
-  padding:16px;
-  text-align:center;
-  font-size:14px;
-  color:rgba(11,26,16,0.65);
-  font-weight:650;
-}
+    .videoWrap iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
 
-@media(max-width:900px){
-  .wrap{ padding:12px 14px 64px; }
-  .heroMedia{ min-height:280px; }
-  .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width: none; }
-  .featureGrid{ grid-template-columns:1fr; }
-  .videoRow{ grid-template-columns:1fr; }
-  .carouselBtn.prev{ left:12px; }
-  .carouselBtn.next{ right:12px; }
-}
+    .note{
+      margin-top:14px;
+      padding:16px;
+      text-align:center;
+      font-size:14px;
+      color:rgba(11,26,16,0.65);
+      font-weight:650;
+    }
+
+    @media(max-width:900px){
+      .wrap{ padding:12px 14px 64px; }
+      .heroMedia{ min-height:280px; }
+      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width: none; }
+      .featureGrid{ grid-template-columns:1fr; }
+      .videoRow{ grid-template-columns:1fr; }
+      .carouselBtn.prev{ left:12px; }
+      .carouselBtn.next{ right:12px; }
+    }
   </style>
 </head>
 <body>
-<div id="siteHeader"></div>
-<main class="wrap" aria-label="Attractions page">
-  <section class="topBand" aria-label="Page navigation">
-    <div class="crumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">›</span>
-      <a href="/features/">Features</a>
-      <span aria-hidden="true">›</span>
-      <span>Attractions</span>
-    </div>
-    <div class="quickActions" aria-label="Quick actions">
-      <a class="btn secondary" href="/booking/">Check Availability</a>
-      <a class="btn primary" href="/contact/">Ask About Attractions</a>
-    </div>
-  </section>
-  <section class="hero" aria-label="Attractions hero">
-    <div class="heroMedia" aria-label="Hero image">
-      <img src="/assets/images/pages/attractions/tcfr_features_attractions_hero_01.jpg" alt="Cloud forest landscape" loading="eager" decoding="async" />
-      <div class="heroShade" aria-hidden="true"></div>
-      <div class="heroInner" aria-label="Hero content">
-        <div class="kicker">Waterfalls • Rivers • Trails</div>
-        <h1 class="heroH1">Attractions</h1>
-        <p class="heroLead">
-          Step beyond the lodge and into waterfalls, rivers, trails, and quiet places where the forest reveals itself.
-        </p>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Attractions page">
+    <section class="topBand" aria-label="Page navigation">
+      <div class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/features/">Features</a>
+        <span aria-hidden="true">›</span>
+        <span>Attractions</span>
       </div>
-    </div>
-  </section>
-  <section class="card intro" aria-label="Intro">
-    <p>
-      The Cloud Forest Retreat is surrounded by natural experiences that invite exploration at your own pace.
-      From short walks to deeper adventures, each attraction connects you directly with the land.
-    </p>
-  </section>
-  <section class="featureGrid" aria-label="Featured attractions">
-    <article class="card featureCard" aria-label="Secluded waterfall">
-      <div class="featureImage">
-        <img src="/assets/images/pages/attractions/tcfr_features_attractions_waterfall_01.jpg" alt="Secluded waterfall near the retreat" loading="lazy" decoding="async" />
+      <div class="quickActions" aria-label="Quick actions">
+        <a class="btn secondary" href="/booking/">Check Availability</a>
+        <a class="btn primary" href="/contact/">Ask About Attractions</a>
       </div>
-      <div class="featureBody">
-        <h2>Secluded waterfall</h2>
-        <p>
-          A hidden waterfall tucked into the forest. Cool mist, birdsong, and a moment of stillness
-          reward those who make the short journey.
-        </p>
-        <div class="tags" aria-label="Waterfall tags">
-          <span class="tag">Natural</span>
-          <span class="tag">Quiet</span>
-          <span class="tag">Short walk</span>
-        </div>
-      </div>
-    </article>
-<article class="card featureCard" aria-label="Hike to the river">
-  <div class="featureImage">
-    <img src="/assets/images/pages/attractions/tcfr_features_attractions_river_hike_01.jpg" alt="River hike through the cloud forest" loading="lazy" decoding="async" />
-  </div>
-  <div class="featureBody">
-    <h2>Hike to the river</h2>
-    <p>
-      A scenic descent through the cloud forest leading to the Rio Guayllabamba,
-      where the sound of water and open views mark the journey's end.
-    </p>
-    <div class="tags" aria-label="River hike tags">
-      <span class="tag">Hiking</span>
-      <span class="tag">River access</span>
-      <span class="tag">Moderate</span>
+    </section>
+<section class="hero" aria-label="Attractions hero">
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/attractions/tcfr_features_attractions_hero_01.jpg" alt="Cloud forest landscape" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
+    <div class="heroInner" aria-label="Hero content">
+      <div class="kicker">Waterfalls • Rivers • Trails</div>
+      <h1 class="heroH1">Attractions</h1>
+      <p class="heroLead">
+        Step beyond the lodge and into waterfalls, rivers, trails, and quiet places where the forest reveals itself.
+      </p>
     </div>
   </div>
-</article>
-  </section>
-  <section class="card carousel" aria-label="Around the property carousel">
-    <h2 class="h2">Around the property</h2>
-    <div class="carouselViewport" aria-label="Carousel viewport">
-      <div class="carouselTrack" id="carouselTrack" aria-label="Carousel track">
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_04.jpg" alt="" loading="lazy" decoding="async" /></div>
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_02.jpg" alt="" loading="lazy" decoding="async" /></div>
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_03.jpg" alt="" loading="lazy" decoding="async" /></div>
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_01.jpg" alt="" loading="lazy" decoding="async" /></div>
-        <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_05.jpg" alt="" loading="lazy" decoding="async" /></div>
-      </div>
-    </div>
-    <button class="carouselBtn prev" type="button" aria-label="Previous slide" onclick="moveSlide(-1)">‹</button>
-    <button class="carouselBtn next" type="button" aria-label="Next slide" onclick="moveSlide(1)">›</button>
-  </section>
-  <section class="videoRow" aria-label="Attraction videos">
-    <div class="videoCard" aria-label="Attraction video 1">
-      <div class="videoWrap">
-        <iframe
-          src="https://www.youtube.com/embed/qYGgqEslbNA"
-          title="Attraction video 1"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-<div class="videoCard" aria-label="Attraction video 2">
-  <div class="videoWrap">
-    <iframe
-      src="https://www.youtube.com/embed/pleZvbQhWvs"
-      title="Attraction video 2"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-  </section>
-  <section class="card note" aria-label="More coming soon">
-    More trails, viewpoints, and experiences are being added as the retreat continues to grow.
-  </section>
-</main>
-<div id="siteFooter"></div>
-<script src="/assets/js/site.js?v=3"></script>
-<script>
-  (function(){
-    "use strict";
-    var index = 0;
-    var track = document.getElementById("carouselTrack");
-    if (!track) return;
-    var slides = track.children.length;
-function moveSlide(dir){
-  index = (index + dir + slides) % slides;
-  track.style.transform = "translateX(" + (-index * 100) + "%)";
-}
+</section>
 
-window.moveSlide = moveSlide;
+<section class="card intro" aria-label="Intro">
+  <p>
+    The Cloud Forest Retreat is surrounded by natural experiences that invite exploration at your own pace.
+    From short walks to deeper adventures, each attraction connects you directly with the land.
+  </p>
+</section>
 
-    setInterval(function(){ moveSlide(1); }, 2800);
-  })();
-</script>
+<section class="featureGrid" aria-label="Featured attractions">
+  <article class="card featureCard" aria-label="Secluded waterfall">
+    <div class="featureImage">
+      <img src="/assets/images/pages/attractions/tcfr_features_attractions_waterfall_01.jpg" alt="Secluded waterfall near the retreat" loading="lazy" decoding="async" />
+    </div>
+    <div class="featureBody">
+      <h2>Secluded waterfall</h2>
+      <p>
+        A hidden waterfall tucked into the forest. Cool mist, birdsong, and a moment of stillness reward those who make the short journey.
+      </p>
+      <div class="tags" aria-label="Waterfall tags">
+        <span class="tag">Natural</span>
+        <span class="tag">Quiet</span>
+        <span class="tag">Short walk</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="card featureCard" aria-label="Hike to the river">
+    <div class="featureImage">
+      <img src="/assets/images/pages/attractions/tcfr_features_attractions_river_hike_01.jpg" alt="River hike through the cloud forest" loading="lazy" decoding="async" />
+    </div>
+    <div class="featureBody">
+      <h2>Hike to the river</h2>
+      <p>
+        A scenic descent through the cloud forest leading to the Rio Guayllabamba, where the sound of water and open views mark the journey's end.
+      </p>
+      <div class="tags" aria-label="River hike tags">
+        <span class="tag">Hiking</span>
+        <span class="tag">River access</span>
+        <span class="tag">Moderate</span>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="card carousel" aria-label="Around the property carousel">
+  <h2 class="h2">Around the property</h2>
+  <div class="carouselViewport" aria-label="Carousel viewport">
+    <div class="carouselTrack" id="carouselTrack" aria-label="Carousel track">
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_04.jpg" alt="Around the property photo 1" loading="lazy" decoding="async" /></div>
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_02.jpg" alt="Around the property photo 2" loading="lazy" decoding="async" /></div>
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_03.jpg" alt="Around the property photo 3" loading="lazy" decoding="async" /></div>
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_01.jpg" alt="Around the property photo 4" loading="lazy" decoding="async" /></div>
+      <div class="carouselItem"><img src="/assets/images/pages/attractions/tcfr_features_attractions_carousel_05.jpg" alt="Around the property photo 5" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+  <button class="carouselBtn prev" type="button" aria-label="Previous slide" onclick="moveSlide(-1)">‹</button>
+  <button class="carouselBtn next" type="button" aria-label="Next slide" onclick="moveSlide(1)">›</button>
+</section>
+
+<section class="videoRow" aria-label="Attraction videos">
+  <div class="videoCard" aria-label="Attraction video 1">
+    <div class="videoWrap">
+      <iframe
+        src="https://www.youtube.com/embed/qYGgqEslbNA"
+        title="Attraction video 1"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="videoCard" aria-label="Attraction video 2">
+    <div class="videoWrap">
+      <iframe
+        src="https://www.youtube.com/embed/pleZvbQhWvs"
+        title="Attraction video 2"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="card note" aria-label="More coming soon">
+  More trails, viewpoints, and experiences are being added as the retreat continues to grow.
+</section>
+  </main>
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
+  <script>
+    (function(){
+      "use strict";
+      var index = 0;
+      var track = document.getElementById("carouselTrack");
+      if (!track) return;
+      var slides = track.children.length;
+
+      function moveSlide(dir){
+        index = (index + dir + slides) % slides;
+        track.style.transform = "translateX(" + (-index * 100) + "%)";
+      }
+
+      window.moveSlide = moveSlide;
+
+      setInterval(function(){ moveSlide(1); }, 2800);
+    })();
+  </script>
 </body>
 </html>
