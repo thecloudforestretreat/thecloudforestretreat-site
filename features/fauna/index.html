@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fauna | The Cloud Forest Retreat</title>
-
-  <meta name="description" content="Discover the birds and wildlife of Ecuador’s cloud forest. From colorful toucans and hummingbirds to the elusive spectacled bear, explore the fauna surrounding The Cloud Forest Retreat." />
+  <title>Fauna | Mindo Bird Watching</title>
+  <meta name="description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/features/fauna/" />
-
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mindo Bird Watching" />
+  <meta property="og:title" content="Fauna | Mindo Bird Watching" />
+  <meta property="og:description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/features/fauna/" />
+  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador's cloud forest" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fauna | Mindo Bird Watching" />
+  <meta name="twitter:description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
+  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
-
   <style>
     :root{
       --max: 1120px;
@@ -23,6 +34,7 @@
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
       --forest: #0D5925;
+      --muted: rgba(11,26,16,0.72);
     }
 
     *{ box-sizing:border-box; }
@@ -40,56 +52,129 @@
       border-radius:var(--r);
       box-shadow:var(--shadow);
       overflow:hidden;
+      color:var(--ink);
+    }
+
+    /* TOP BAND */
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+      flex-wrap: wrap;
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     /* HERO */
     .hero{
-      position:relative;
-      height:420px;
+      margin-top:14px;
+      border:1px solid var(--line);
       border-radius:var(--r);
-      overflow:hidden;
       box-shadow:var(--shadow);
+      background:var(--glass);
+      overflow:hidden;
+      position:relative;
+      color:var(--ink);
     }
 
-    .hero img{
+    .heroMedia{
+      position:relative;
+      min-height:340px;
+      background:rgba(0,0,0,0.10);
+    }
+
+    .heroMedia img{
       width:100%;
       height:100%;
       object-fit:cover;
+      display:block;
+      transform:scale(1.01);
     }
 
-    .heroOverlay{
+    .heroShade{
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.55));
+      background:
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+      pointer-events:none;
     }
 
-    .heroContent{
+    .heroInner{
       position:absolute;
-      bottom:18px;
-      left:18px;
-      right:18px;
-      max-width:720px;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.22);
+      background:rgba(0,0,0,0.30);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      padding:14px;
+      color:rgba(255,255,255,0.96);
+      box-shadow:0 18px 55px rgba(0,0,0,0.20);
+      max-width: 860px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:rgba(255,255,255,0.92);
+    }
+
+    .heroH1{
+      margin:8px 0 6px;
+      font-family:var(--font-head);
+      font-weight:900;
+      letter-spacing:-0.03em;
+      line-height:1.02;
+      font-size:clamp(32px,4vw,54px);
       color:#fff;
     }
 
-    .heroContent h1{
-      margin:0 0 8px;
-      font-family:var(--font-head);
-      font-size:clamp(34px,4vw,48px);
-      letter-spacing:-0.03em;
-      color:#fff; /* force white hero title */
-    }
-    .heroContent p{
+    .heroLead{
       margin:0;
-      font-size:16px;
+      max-width:80ch;
+      font-weight:650;
       line-height:1.7;
-      color:rgba(255,255,255,0.92);
+      color:rgba(231,228,209,0.92);
+      font-size:15.5px;
     }
 
     /* INTRO */
     .intro{
-      margin-top:18px;
-      padding:18px;
+      margin-top:14px;
+      padding:16px;
     }
 
     .intro p{
@@ -97,46 +182,82 @@
       font-size:15.5px;
       line-height:1.75;
       color:rgba(11,26,16,0.78);
+      font-weight:650;
+      max-width: 90ch;
     }
 
-    /* CAROUSEL */
+    /* CAROUSEL (5 images, auto, buttons) */
     .carouselWrap{
-      margin-top:18px;
+      margin-top:14px;
       padding:14px;
+      position: relative;
+    }
+
+    .h2{
+      margin: 0 0 12px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .carouselViewport{
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
     }
 
     .carouselTrack{
       display:flex;
-      gap:12px;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      padding-bottom:6px;
+      transition:transform 0.45s ease;
+      will-change: transform;
     }
 
-    .carouselTrack::-webkit-scrollbar{ display:none; }
-
-    .carouselItem{
-      flex:0 0 220px;
-      height:220px;
-      scroll-snap-align:start;
-      border-radius:18px;
-      overflow:hidden;
-      background:#ccc;
+    .carouselSlide{
+      flex: 0 0 100%;
+      aspect-ratio: 16 / 9;
+      background: #ccc;
     }
 
-    .carouselItem img{
+    .carouselSlide img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
+      transform: scale(1.01);
     }
 
-    /* GRID */
+    .carouselBtn{
+      position:absolute;
+      top: calc(50% + 18px);
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.45);
+      color:#fff;
+      border:none;
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index: 2;
+    }
+
+    .carouselBtn.prev{ left:18px; }
+    .carouselBtn.next{ right:18px; }
+
+    /* GRID (4 cards) */
     .faunaGrid{
-      margin-top:18px;
+      margin-top:14px;
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:18px;
+      gap:14px;
+      align-items: stretch;
     }
 
     .faunaCard{
@@ -152,81 +273,110 @@
       overflow:hidden;
       min-height:260px;
       background:#ccc;
+      border: 1px solid rgba(11,26,16,0.10);
     }
 
     .faunaImage img{
       width:100%;
       height:100%;
       object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
+
+    .faunaBody{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:10px;
+      min-width:0;
     }
 
     .faunaBody h3{
-      margin:0 0 4px;
+      margin:0;
       font-family:var(--font-head);
-      font-size:20px;
+      font-size:22px;
       color:var(--forest);
+      font-weight:900;
+      letter-spacing:-0.02em;
+      line-height:1.1;
     }
 
     .faunaLatin{
       font-size:13px;
       font-style:italic;
       color:rgba(11,26,16,0.55);
-      margin-bottom:8px;
+      font-weight:650;
+      margin-top:-4px;
     }
 
     .faunaTags{
       display:flex;
       flex-wrap:wrap;
-      gap:8px;
-      margin-bottom:10px;
+      gap:10px;
     }
 
     .tag{
-      font-size:12px;
-      padding:6px 10px;
+      font-size:13px;
+      padding:9px 12px;
       border-radius:999px;
       border:1px solid rgba(13,89,37,0.18);
-      background:rgba(255,255,255,0.6);
-      font-weight:700;
+      background:rgba(255,255,255,0.62);
+      font-weight:900;
       color:#0b2b12;
+      white-space:nowrap;
+      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
     }
 
     .faunaText{
-      font-size:14.5px;
+      font-size:14.8px;
       line-height:1.7;
       color:rgba(11,26,16,0.78);
+      font-weight:650;
     }
 
-    /* VIDEO STRIP */
+    /* VIDEOS (embed twice) */
     .videoStrip{
-      margin-top:18px;
+      margin-top:14px;
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:18px;
+      gap:14px;
     }
 
-    .videoSlot{
-      position:relative;
-      aspect-ratio:9/16;
+    .videoCard{
       border-radius:24px;
       overflow:hidden;
-      background:#ccc;
+      border: 1px solid rgba(11,26,16,0.10);
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.55);
     }
 
-    .videoSlot::after{
-      content:"▶";
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:48px;
-      color:rgba(255,255,255,0.9);
-      background:rgba(0,0,0,0.25);
+    .videoWrap{
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      position: relative;
+      background: #000;
+    }
+
+    .videoWrap iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
     }
 
     @media(max-width:900px){
-      .hero{ height:320px; }
+      .wrap{ padding:12px 14px 64px; }
+
+      .heroMedia{ min-height:280px; }
+      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
+
+      .carouselBtn{ top: calc(50% + 12px); }
+      .carouselBtn.prev{ left:12px; }
+      .carouselBtn.next{ right:12px; }
+
       .faunaGrid{ grid-template-columns:1fr; }
       .faunaCard{ grid-template-columns:1fr; }
       .videoStrip{ grid-template-columns:1fr; }
@@ -234,117 +384,202 @@
     }
   </style>
 </head>
-
 <body>
 <div id="siteHeader"></div>
-
 <main class="wrap" aria-label="Fauna page">
-
-  <!-- HERO -->
-  <section class="hero">
-    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest wildlife" />
-    <div class="heroOverlay"></div>
-    <div class="heroContent">
-      <h1>Fauna</h1>
-      <p>
-        From colorful birds to elusive mammals, the cloud forest surrounding
-        The Cloud Forest Retreat is alive with movement, sound, and rare encounters.
-      </p>
+  <section class="topBand" aria-label="Page navigation">
+    <div class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">›</span>
+      <a href="/features/">Features</a>
+      <span aria-hidden="true">›</span>
+      <span>Fauna</span>
+    </div>
+    <div class="quickActions" aria-label="Quick actions">
+      <a class="btn secondary" href="/booking/">Check Availability</a>
+      <a class="btn primary" href="/contact/">Ask About Wildlife</a>
     </div>
   </section>
-
-  <!-- INTRO -->
-  <section class="card intro">
+  <section class="hero" aria-label="Fauna hero">
+    <div class="heroMedia" aria-label="Hero image">
+      <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Cloud forest wildlife" loading="eager" decoding="async" />
+      <div class="heroShade" aria-hidden="true"></div>
+      <div class="heroInner" aria-label="Hero content">
+        <div class="kicker">Birdlife • Mammals • Rare encounters</div>
+        <h1 class="heroH1">Fauna</h1>
+        <p class="heroLead">
+          From colorful birds to elusive mammals, the cloud forest surrounding The Cloud Forest Retreat is alive with movement, sound, and rare encounters.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="card intro" aria-label="Intro">
     <p>
-      The Chocó Andino region is one of the richest wildlife habitats in the world.
-      Birds dominate the skies and canopy, while mammals like the spectacled bear
-      quietly roam forest corridors below.
+      The Choco Andino region is one of the richest wildlife habitats in the world.
+      Birds dominate the skies and canopy, while mammals like the spectacled bear quietly roam forest corridors below.
     </p>
   </section>
+  <section class="card carouselWrap" aria-label="Bird carousel">
+    <h2 class="h2">Birdlife of The Cloud Forest Retreat</h2>
+<div class="carouselViewport" aria-label="Carousel viewport">
+  <div class="carouselTrack" id="faunaCarouselTrack" aria-label="Carousel track">
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+  </div>
+</div>
 
-  <!-- BIRD CAROUSEL -->
-  <section class="card carouselWrap" aria-label="Bird gallery">
-    <h2 class="h2">Birdlife of the The Cloud Forest Retreat</h2>
-    <div class="carouselTrack">
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Bird placeholder"></div>
-    </div>
+<button class="carouselBtn prev" type="button" aria-label="Previous slide" id="faunaPrevBtn">‹</button>
+<button class="carouselBtn next" type="button" aria-label="Next slide" id="faunaNextBtn">›</button>
   </section>
-
-  <!-- FEATURED ANIMALS -->
-  <section class="faunaGrid">
-
-    <!-- TOUCAN -->
-    <article class="card faunaCard">
-      <div class="faunaImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Toucan placeholder">
+  <section class="faunaGrid" aria-label="Featured fauna">
+    <article class="card faunaCard" aria-label="Toucans">
+      <div class="faunaImage" aria-label="Toucans image">
+        <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Toucan photo" loading="lazy" decoding="async">
       </div>
-      <div class="faunaBody">
+      <div class="faunaBody" aria-label="Toucans content">
         <h3>Toucans</h3>
         <div class="faunaLatin">Ramphastidae family</div>
-        <div class="faunaTags">
+        <div class="faunaTags" aria-label="Toucan tags">
           <span class="tag">Iconic</span>
           <span class="tag">Fruit-eaters</span>
         </div>
         <div class="faunaText">
-          Known for their oversized bills and vibrant colors, toucans play a key role
-          in seed dispersal throughout the forest.
+          Known for their oversized bills and vibrant colors, toucans play a key role in seed dispersal throughout the forest.
         </div>
       </div>
     </article>
+<article class="card faunaCard" aria-label="Hummingbirds">
+  <div class="faunaImage" aria-label="Hummingbirds image">
+    <img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Hummingbird photo" loading="lazy" decoding="async">
+  </div>
+  <div class="faunaBody" aria-label="Hummingbirds content">
+    <h3>Hummingbirds</h3>
+    <div class="faunaLatin">Trochilidae family</div>
+    <div class="faunaTags" aria-label="Hummingbird tags">
+      <span class="tag">Pollinators</span>
+      <span class="tag">Fast flyers</span>
+    </div>
+    <div class="faunaText">
+      Tiny and tireless, hummingbirds feed on nectar and help pollinate countless flowering plants across the forest.
+    </div>
+  </div>
+</article>
 
-    <!-- HUMMINGBIRDS -->
-    <article class="card faunaCard">
-      <div class="faunaImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Hummingbird placeholder">
-      </div>
-      <div class="faunaBody">
-        <h3>Hummingbirds</h3>
-        <div class="faunaLatin">Trochilidae family</div>
-        <div class="faunaTags">
-          <span class="tag">Pollinators</span>
-          <span class="tag">Fast flyers</span>
-        </div>
-        <div class="faunaText">
-          Tiny and tireless, hummingbirds feed on nectar and help pollinate countless
-          flowering plants across the forest.
-        </div>
-      </div>
-    </article>
+<article class="card faunaCard" aria-label="Spectacled bear">
+  <div class="faunaImage" aria-label="Spectacled bear image">
+    <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Spectacled bear photo" loading="lazy" decoding="async">
+  </div>
+  <div class="faunaBody" aria-label="Spectacled bear content">
+    <h3>Spectacled bear</h3>
+    <div class="faunaLatin">Tremarctos ornatus</div>
+    <div class="faunaTags" aria-label="Spectacled bear tags">
+      <span class="tag">Endangered</span>
+      <span class="tag">Keystone species</span>
+    </div>
+    <div class="faunaText">
+      South America's only bear species, the spectacled bear is rarely seen but plays a vital role in maintaining forest balance.
+    </div>
+  </div>
+</article>
 
-    <!-- SPECTACLED BEAR -->
-    <article class="card faunaCard">
-      <div class="faunaImage">
-        <img src="/assets/images/pages/rooms/tcfr_test_image_9_16.jpg" alt="Spectacled bear placeholder">
-      </div>
-      <div class="faunaBody">
-        <h3>Spectacled Bear</h3>
-        <div class="faunaLatin">Tremarctos ornatus</div>
-        <div class="faunaTags">
-          <span class="tag">Endangered</span>
-          <span class="tag">Keystone species</span>
-        </div>
-        <div class="faunaText">
-          South America’s only bear species, the spectacled bear is rarely seen but
-          plays a vital role in maintaining forest balance.
-        </div>
-      </div>
-    </article>
-
+<article class="card faunaCard" aria-label="Butterflies">
+  <div class="faunaImage" aria-label="Butterflies image">
+    <img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Butterfly photo" loading="lazy" decoding="async">
+  </div>
+  <div class="faunaBody" aria-label="Butterflies content">
+    <h3>Butterflies</h3>
+    <div class="faunaLatin">Lepidoptera order</div>
+    <div class="faunaTags" aria-label="Butterfly tags">
+      <span class="tag">Colorful</span>
+      <span class="tag">Day-active</span>
+    </div>
+    <div class="faunaText">
+      Bright wings flash along forest edges and garden paths, especially when the sun breaks through the mist.
+    </div>
+  </div>
+</article>
   </section>
-
-  <!-- VIDEOS -->
   <section class="videoStrip" aria-label="Wildlife videos">
-    <div class="videoSlot" aria-label="Wildlife video placeholder"></div>
-    <div class="videoSlot" aria-label="Wildlife video placeholder"></div>
+    <div class="videoCard" aria-label="Wildlife video">
+      <div class="videoWrap">
+        <iframe
+          src="https://www.youtube.com/embed/BbTNmN-QhQc"
+          title="Wildlife video"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+<div class="videoCard" aria-label="Wildlife video">
+  <div class="videoWrap">
+    <iframe
+      src="https://www.youtube.com/embed/BbTNmN-QhQc"
+      title="Wildlife video"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
   </section>
-
 </main>
-
 <div id="siteFooter"></div>
 <script src="/assets/js/site.js?v=3"></script>
+<script>
+  (function(){
+    "use strict";
+
+    var track = document.getElementById("faunaCarouselTrack");
+    var prevBtn = document.getElementById("faunaPrevBtn");
+    var nextBtn = document.getElementById("faunaNextBtn");
+    if (!track || !prevBtn || !nextBtn) return;
+
+    var index = 0;
+    var slides = track.children.length;
+    var intervalMs = 2600;
+    var timer = null;
+
+    function goTo(i){
+      index = (i + slides) % slides;
+      track.style.transform = "translateX(" + (-index * 100) + "%)";
+    }
+
+    function next(){ goTo(index + 1); }
+    function prev(){ goTo(index - 1); }
+
+    function start(){
+      stop();
+      timer = setInterval(next, intervalMs);
+    }
+
+    function stop(){
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    nextBtn.addEventListener("click", function(){
+      next();
+      start();
+    });
+
+    prevBtn.addEventListener("click", function(){
+      prev();
+      start();
+    });
+
+    track.addEventListener("mouseenter", stop);
+    track.addEventListener("mouseleave", start);
+
+    document.addEventListener("visibilitychange", function(){
+      if (document.hidden) stop();
+      else start();
+    });
+
+    start();
+  })();
+</script>
 </body>
 </html>
