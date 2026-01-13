@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Río Guayllabamba | The Cloud Forest Retreat</title>
-  <meta name="description" content="Learn about Ecuador’s Río Guayllabamba: where it flows, why it matters, and how it supports ecosystems and communities. Includes a scenic photo carousel and practical visitor tips." />
+  <meta name="description" content="Learn about Ecuador’s Río Guayllabamba: where it flows, why it matters, and how it supports ecosystems and communities, with a scenic carousel and tips." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/features/rio-guayllabamba/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -31,385 +31,410 @@
       --forest: #0D5925;
       --accent: #E0643A;
     }
+*{ box-sizing:border-box; }
+body{ margin:0; }
 
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 76px;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 76px;
-    }
+.topBand{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .topBand{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.crumbs{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+  flex-wrap: wrap;
+}
+.crumbs a{ color: inherit; text-decoration: none; }
+.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+.quickActions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+}
 
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-      min-width: 0;
-    }
+.cardHead{
+  padding: 14px 14px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    .cardHead{
-      padding: 14px 14px 0;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.cardTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.1;
+}
 
-    .cardTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 20px;
-    }
+.cardHint{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+}
 
-    .cardHint{
-      margin: 0;
-      color: rgba(11,26,16,0.68);
-      font-weight: 700;
-      font-size: 13px;
-    }
+/* HERO (match other pages: heroMedia + heroShade + heroInner) */
+.hero{
+  margin-top:14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
 
-    /* HERO */
-    .hero{
-      margin-top: 14px;
-      position: relative;
-      height: 420px;
-      border-radius: var(--r);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.22);
-      box-shadow: var(--shadow);
-      background: rgba(0,0,0,0.08);
-    }
-    .hero img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.01);
-      display: block;
-    }
-    .heroOverlay{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(900px 520px at 22% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 58%),
-        linear-gradient(180deg, rgba(0,0,0,0.14), rgba(0,0,0,0.54));
-      pointer-events: none;
-    }
-    .heroContent{
-      position: absolute;
-      left: 16px;
-      right: 16px;
-      bottom: 16px;
-      max-width: 820px;
-      color: #fff;
-    }
-    .kicker{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: rgba(255,255,255,0.92);
-    }
-    .heroH1{
-      margin: 8px 0 6px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-      font-size: clamp(34px, 4.2vw, 54px);
-      color: #fff;
-    }
-    .heroLead{
-      margin: 0;
-      color: rgba(231,228,209,0.92);
-      font-size: 15.8px;
-      line-height: 1.75;
-      font-weight: 650;
-      max-width: 80ch;
-    }
+.heroMedia{
+  position: relative;
+  min-height: 340px;
+  background: rgba(0,0,0,0.10);
+}
 
-    /* INFO GRID */
-    .grid2{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 14px;
-      align-items: start;
-    }
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .pad{ padding: 14px; }
+.heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 22% 18%, rgba(224,100,58,0.18), rgba(0,0,0,0) 58%),
+    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.50));
+  pointer-events: none;
+}
 
-    .p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.78;
-      font-size: 14.9px;
-      font-weight: 650;
-    }
+.heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+  max-width: 860px;
+}
 
-    .p + .p{ margin-top: 10px; }
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
 
-    .pillRow{
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.heroH1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 4vw, 54px);
+  color: #fff;
+}
 
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-    .pill strong{ color: var(--forest); font-weight: 900; }
+.heroLead{
+  margin: 0;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
+  line-height: 1.75;
+  font-weight: 650;
+  max-width: 86ch;
+}
 
-    .list{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.85;
-      font-weight: 650;
-      font-size: 14.6px;
-    }
-    .list li{ margin: 6px 0; }
+/* INFO GRID */
+.grid2{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    .noteBox{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      padding: 14px;
-      margin-top: 12px;
-    }
-    .noteTitle{
-      margin: 0 0 8px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-      line-height: 1.15;
-    }
-    .noteBox p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.4px;
-    }
+.pad{ padding: 14px; }
 
-    /* HORIZONTAL CAROUSEL */
-    .carouselPad{ padding: 14px; }
+.p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.78;
+  font-size: 14.9px;
+  font-weight: 650;
+}
 
-    .hCarousel{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      overflow: hidden;
-    }
+.p + .p{ margin-top: 10px; }
 
-    .hViewport{
-      position: relative;
-      overflow: hidden;
-      background: rgba(0,0,0,0.08);
-    }
+.pillRow{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .hTrack{
-      display: flex;
-      width: 100%;
-      transform: translateX(0);
-      transition: transform 420ms ease;
-      will-change: transform;
-    }
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+}
+.pill strong{ color: var(--forest); font-weight: 900; }
 
-    .hSlide{
-      flex: 0 0 100%;
-      position: relative;
-      aspect-ratio: 16 / 9;
-      margin: 0;
-      padding: 0;
-    }
+.list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.85;
+  font-weight: 650;
+  font-size: 14.6px;
+}
+.list li{ margin: 6px 0; }
 
-    .hSlide img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.noteBox{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  margin-top: 12px;
+}
+.noteTitle{
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.15;
+}
+.noteBox p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.4px;
+}
 
-    .hCap{
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      padding: 9px 11px;
-      border-radius: 14px;
-      background: rgba(245,245,220,0.92);
-      border: 1px solid rgba(13,89,37,0.16);
-      color: #0b2b12;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: -0.01em;
-    }
+/* HORIZONTAL CAROUSEL */
+.carouselPad{ padding: 14px; }
 
-    .hArrow{
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 46px;
-      width: 52px;
-      border-radius: 16px;
-      border: 1px solid rgba(245,245,220,0.45);
-      background: rgba(11,26,16,0.30);
-      color: rgba(231,228,209,0.96);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-      cursor: pointer;
-      user-select: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      line-height: 1;
-      z-index: 3;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .hArrow.prev{ left: 10px; }
-    .hArrow.next{ right: 10px; }
+.hCarousel{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  overflow: hidden;
+}
 
-    .hNav{
-      border-top: 1px solid rgba(11,26,16,0.12);
-      padding: 10px 12px;
-      display: flex;
-      justify-content: center;
-    }
+.hViewport{
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,0.08);
+}
 
-    .hDots{
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.hTrack{
+  display: flex;
+  width: 100%;
+  transform: translateX(0);
+  transition: transform 420ms ease;
+  will-change: transform;
+}
 
-    .hDotBtn{
-      appearance: none;
-      border: 1px solid rgba(13,89,37,0.20);
-      background: rgba(255,255,255,0.72);
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      cursor: pointer;
-      padding: 0;
-    }
-    .hDotBtn.is-active{
-      background: rgba(224,100,58,0.95);
-      border-color: rgba(0,0,0,0.10);
-      box-shadow: 0 10px 22px rgba(224,100,58,0.18);
-      transform: scale(1.05);
-    }
+.hSlide{
+  flex: 0 0 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  padding: 0;
+}
 
-    /* FULL-WIDTH CTA BAND */
-    .ctaBand{
-      margin-top: 14px;
-      border-radius: var(--r);
-      border: 1px solid rgba(11,26,16,0.12);
-      background: rgba(245,245,220,0.82);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.hSlide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .ctaBand h2{
-      margin: 0 0 6px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-    }
+.hCap{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 9px 11px;
+  border-radius: 14px;
+  background: rgba(245,245,220,0.92);
+  border: 1px solid rgba(13,89,37,0.16);
+  color: #0b2b12;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+}
 
-    .ctaBand p{
-      margin: 0;
-      color: rgba(11,26,16,0.72);
-      font-weight: 650;
-      line-height: 1.7;
-      max-width: 86ch;
-    }
+.hArrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 46px;
+  width: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(245,245,220,0.45);
+  background: rgba(11,26,16,0.30);
+  color: rgba(231,228,209,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  line-height: 1;
+  z-index: 3;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.hArrow.prev{ left: 10px; }
+.hArrow.next{ right: 10px; }
 
-    .ctaBtns{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.hNav{
+  border-top: 1px solid rgba(11,26,16,0.12);
+  padding: 10px 12px;
+  display: flex;
+  justify-content: center;
+}
 
-    /* MOBILE */
-    @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 64px; }
-      .hero{ height: 320px; }
-      .grid2{ grid-template-columns: 1fr; }
-      .hSlide{ aspect-ratio: 4 / 3; }
-      .hArrow.prev{ left: 8px; }
-      .hArrow.next{ right: 8px; }
-    }
+.hDots{
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hDotBtn{
+  appearance: none;
+  border: 1px solid rgba(13,89,37,0.20);
+  background: rgba(255,255,255,0.72);
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 0;
+}
+.hDotBtn.is-active{
+  background: rgba(224,100,58,0.95);
+  border-color: rgba(0,0,0,0.10);
+  box-shadow: 0 10px 22px rgba(224,100,58,0.18);
+  transform: scale(1.05);
+}
+
+/* CTA */
+.ctaBand{
+  margin-top: 14px;
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.12);
+  background: rgba(245,245,220,0.82);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
+
+.ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 86ch;
+}
+
+.ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 64px; }
+
+  .heroMedia{ min-height: 280px; }
+  .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
+
+  .grid2{ grid-template-columns: 1fr; }
+  .hSlide{ aspect-ratio: 4 / 3; }
+  .hArrow.prev{ left: 8px; }
+  .hArrow.next{ right: 8px; }
+}
   </style>
 </head>
 <body>
@@ -422,7 +447,6 @@
         <a href="/features/">Features</a>
         <span aria-hidden="true">›</span>
         <span>Río Guayllabamba</span>
- see sources  [oai_citation:0‡CORE](https://core.ac.uk/download/613198646.pdf?utm_source=chatgpt.com)
       </div>
       <div class="quickActions" aria-label="Quick actions">
         <a class="btn secondary" href="/features/">Back to Features</a>
@@ -431,14 +455,16 @@
     </section>
 <!-- HERO -->
 <section class="hero" aria-label="Rio Guayllabamba hero">
-  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="River valley landscape near the cloud forest" loading="eager" decoding="async" />
-  <div class="heroOverlay" aria-hidden="true"></div>
-  <div class="heroContent">
-    <div class="kicker">River valley • Pacific watershed</div>
-    <h1 class="heroH1">Río Guayllabamba</h1>
-    <p class="heroLead">
-      A major Andean river system that helps shape the landscapes, farms, and ecosystems north and west of Quito, flowing as part of the wider basin that drains toward Ecuador’s Pacific coast.  [oai_citation:1‡Scribd](https://www.scribd.com/document/966136293/Guayllabamba-sub-basin-group-7?utm_source=chatgpt.com)
-    </p>
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="River valley landscape near the cloud forest" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
+    <div class="heroInner" aria-label="Hero content">
+      <div class="kicker">River valley • Pacific watershed</div>
+      <h1 class="heroH1">Río Guayllabamba</h1>
+      <p class="heroLead">
+        A major Andean river system that shapes nearby valleys and ecosystems. From highland headwaters, it flows through changing landscapes toward Ecuador’s Pacific slope.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -451,47 +477,54 @@
     </div>
     <div class="pad">
       <p class="p">
-        The Río Guayllabamba forms part of the larger Esmeraldas drainage system, which reaches the Pacific Ocean. In regional basin descriptions, the Esmeraldas basin is often presented as being formed by major tributaries including the Guayllabamba and the Río Blanco.  [oai_citation:2‡CORE](https://core.ac.uk/download/613198646.pdf?utm_source=chatgpt.com)
+        The Río Guayllabamba is a key river of the northern Andean region. It links cooler highlands to warmer foothills and helps support farms, communities, and wildlife along the way.
       </p>
       <p class="p">
-        Its headwaters are associated with the highlands near Quito and the “upper Guayllabamba” area, where water and land-use management are important for downstream communities and ecosystems.  [oai_citation:3‡Scribd](https://www.scribd.com/document/966136293/Guayllabamba-sub-basin-group-7?utm_source=chatgpt.com)
+        In the cloud forest zone, the river and its tributaries influence humidity, plant growth, and the transitions you feel as you move from ridge viewpoints down toward the valley.
       </p>
 
       <div class="pillRow" aria-label="Quick facts">
         <span class="pill"><strong>Watershed:</strong> Pacific slope</span>
         <span class="pill"><strong>Region:</strong> Andean highlands</span>
-        <span class="pill"><strong>System:</strong> Esmeraldas basin</span>
+        <span class="pill"><strong>Role:</strong> valley lifeline</span>
       </div>
 
       <div class="noteBox" aria-label="Visitor note">
         <div class="noteTitle">A river you can feel from the ridgelines</div>
         <p>
-          Around the cloud forest, rivers are not just scenery, they are the threads that connect misty peaks to fertile valleys. When you hike down, you are literally walking through changing ecosystems.
+          Around the cloud forest, rivers are not just scenery. They connect misty peaks to fertile valleys. When you hike down, you are walking through changing ecosystems.
         </p>
       </div>
     </div>
   </article>
 
-  <aside class="card" aria-label="Ecology and conservation">
+  <aside class="card" aria-label="Ecology and stewardship">
     <div class="cardHead">
-      <h2 class="cardTitle">Ecology and conservation</h2>
-      <p class="cardHint">Nature, water quality, stewardship</p>
+      <h2 class="cardTitle">Ecology and stewardship</h2>
+      <p class="cardHint">Nature, water quality, respectful visits</p>
     </div>
     <div class="pad">
       <p class="p">
-        As Andean rivers descend, the surrounding habitats transition from cooler highlands to warmer foothills, supporting changing plant and wildlife communities. Protection in the upper basin helps reduce downstream pressures.  [oai_citation:4‡Scribd](https://www.scribd.com/document/966136293/Guayllabamba-sub-basin-group-7?utm_source=chatgpt.com)
+        As Andean rivers descend, habitats shift from cooler cloud forest to warmer lower elevations. Protecting upper watersheds helps reduce downstream impacts and keeps trails and river edges healthier.
       </p>
 
-      <ul class="list" aria-label="Key challenges commonly discussed for Andean watersheds">
-        <li><strong>Runoff and pollution:</strong> Urban and agricultural inputs can affect water quality.</li>
-        <li><strong>Erosion:</strong> Land clearing increases sediment in streams and rivers.</li>
-        <li><strong>Climate variability:</strong> Shifting rainfall patterns can change seasonal flows.</li>
+      <ul class="list" aria-label="Common watershed considerations">
+        <li><strong>Runoff and pollution:</strong> Agriculture and roads can affect water quality.</li>
+        <li><strong>Erosion:</strong> Steep slopes can send sediment into streams during heavy rain.</li>
+        <li><strong>Seasonal variability:</strong> Flow levels can change quickly with weather.</li>
       </ul>
 
       <div class="pillRow" aria-label="Respectful visit tips">
         <span class="pill"><strong>Tip:</strong> stay on trails</span>
         <span class="pill"><strong>Tip:</strong> pack out trash</span>
         <span class="pill"><strong>Tip:</strong> avoid soaps in water</span>
+      </div>
+
+      <div class="noteBox" aria-label="Planning note">
+        <div class="noteTitle">Best time to go</div>
+        <p>
+          For calmer trails and better light, go early. If you are hiking toward the river, bring water and a light rain layer.
+        </p>
       </div>
     </div>
   </aside>
@@ -512,23 +545,23 @@
 
         <div class="hTrack" data-track>
           <figure class="hSlide" aria-label="River image 1">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="River landscape placeholder 1" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="River valley view from a ridge" loading="lazy" decoding="async" />
             <figcaption class="hCap">Valley ridgelines and river cuts</figcaption>
           </figure>
           <figure class="hSlide" aria-label="River image 2">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="River landscape placeholder 2" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Green slopes near the river after rain" loading="lazy" decoding="async" />
             <figcaption class="hCap">Green slopes after the rain</figcaption>
           </figure>
           <figure class="hSlide" aria-label="River image 3">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="River landscape placeholder 3" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Trail view toward the river" loading="lazy" decoding="async" />
             <figcaption class="hCap">Trail views down toward the water</figcaption>
           </figure>
           <figure class="hSlide" aria-label="River image 4">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="River landscape placeholder 4" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Cloud forest edges above the valley" loading="lazy" decoding="async" />
             <figcaption class="hCap">Cloud forest edges and foothills</figcaption>
           </figure>
           <figure class="hSlide" aria-label="River image 5">
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="River landscape placeholder 5" loading="lazy" decoding="async" />
+            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Golden hour light across the valley" loading="lazy" decoding="async" />
             <figcaption class="hCap">Quiet moments at golden hour</figcaption>
           </figure>
         </div>
@@ -558,7 +591,6 @@
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-  <!-- Page-only: horizontal carousel logic (autoplay + arrows + dots) -->
   <script>
     (function(){
       "use strict";
