@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fauna | Mindo Bird Watching</title>
+  <meta name="description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/fauna/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mindo Bird Watching" />
   <meta property="og:title" content="Fauna | Mindo Bird Watching" />
-  <meta property="og:description" content="Discover cloud forest fauna around The Cloud Forest Retreat: toucans, hummingbirds, butterflies, and rare mammals like the spectacled bear in the Choco Andino." />
+  <meta property="og:description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
   <meta property="og:url" content="https://thecloudforestretreat.com/features/fauna/" />
   <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
@@ -19,7 +19,7 @@
   <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador's cloud forest" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fauna | Mindo Bird Watching" />
-  <meta name="twitter:description" content="Discover cloud forest fauna around The Cloud Forest Retreat: toucans, hummingbirds, butterflies, and rare mammals like the spectacled bear in the Choco Andino." />
+  <meta name="twitter:description" content="Discover cloud forest fauna around The Cloud Forest Retreat: birds, butterflies, and rare mammals with photo highlights, a carousel, and short videos." />
   <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
@@ -90,7 +90,7 @@
       align-items: center;
     }
 
-    /* HERO (consistent style) */
+    /* HERO */
     .hero{
       margin-top:14px;
       border:1px solid var(--line);
@@ -186,10 +186,11 @@
       max-width: 90ch;
     }
 
-    /* CAROUSEL */
+    /* CAROUSEL (5 images, auto, buttons) */
     .carouselWrap{
       margin-top:14px;
       padding:14px;
+      position: relative;
     }
 
     .h2{
@@ -202,27 +203,26 @@
       line-height: 1.1;
     }
 
+    .carouselViewport{
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+    }
+
     .carouselTrack{
       display:flex;
-      gap:12px;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      padding-bottom:6px;
+      transition:transform 0.45s ease;
+      will-change: transform;
     }
 
-    .carouselTrack::-webkit-scrollbar{ display:none; }
-
-    .carouselItem{
-      flex:0 0 240px;
-      height:240px;
-      scroll-snap-align:start;
-      border-radius:18px;
-      overflow:hidden;
-      background:#ccc;
-      border: 1px solid rgba(11,26,16,0.10);
+    .carouselSlide{
+      flex: 0 0 100%;
+      aspect-ratio: 16 / 9;
+      background: #ccc;
     }
 
-    .carouselItem img{
+    .carouselSlide img{
       width:100%;
       height:100%;
       object-fit:cover;
@@ -230,7 +230,28 @@
       transform: scale(1.01);
     }
 
-    /* GRID */
+    .carouselBtn{
+      position:absolute;
+      top: calc(50% + 18px);
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.45);
+      color:#fff;
+      border:none;
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index: 2;
+    }
+
+    .carouselBtn.prev{ left:18px; }
+    .carouselBtn.next{ right:18px; }
+
+    /* GRID (4 cards) */
     .faunaGrid{
       margin-top:14px;
       display:grid;
@@ -314,7 +335,7 @@
       font-weight:650;
     }
 
-    /* VIDEOS (true 9:16 embeds) */
+    /* VIDEOS (embed twice) */
     .videoStrip{
       margin-top:14px;
       display:grid;
@@ -352,12 +373,14 @@
       .heroMedia{ min-height:280px; }
       .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
 
+      .carouselBtn{ top: calc(50% + 12px); }
+      .carouselBtn.prev{ left:12px; }
+      .carouselBtn.next{ right:12px; }
+
       .faunaGrid{ grid-template-columns:1fr; }
       .faunaCard{ grid-template-columns:1fr; }
       .videoStrip{ grid-template-columns:1fr; }
       .faunaImage{ min-height:240px; }
-
-      .carouselItem{ flex-basis: 220px; height: 220px; }
     }
   </style>
 </head>
@@ -377,7 +400,6 @@
       <a class="btn primary" href="/contact/">Ask about wildlife</a>
     </div>
   </section>
-  <!-- HERO -->
   <section class="hero" aria-label="Fauna hero">
     <div class="heroMedia" aria-label="Hero image">
       <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Cloud forest wildlife" loading="eager" decoding="async" />
@@ -391,46 +413,47 @@
       </div>
     </div>
   </section>
-  <!-- INTRO -->
   <section class="card intro" aria-label="Intro">
     <p>
       The Choco Andino region is one of the richest wildlife habitats in the world.
       Birds dominate the skies and canopy, while mammals like the spectacled bear quietly roam forest corridors below.
     </p>
   </section>
-  <!-- BIRD CAROUSEL -->
-  <section class="card carouselWrap" aria-label="Bird gallery">
+  <section class="card carouselWrap" aria-label="Bird carousel">
     <h2 class="h2">Birdlife of The Cloud Forest Retreat</h2>
-    <div class="carouselTrack" aria-label="Bird carousel">
-      <div class="carouselItem"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Bird photo placeholder" loading="lazy" decoding="async"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo placeholder" loading="lazy" decoding="async"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Bird photo placeholder" loading="lazy" decoding="async"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo placeholder" loading="lazy" decoding="async"></div>
-      <div class="carouselItem"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo placeholder" loading="lazy" decoding="async"></div>
-    </div>
-  </section>
-  <!-- FEATURED ANIMALS -->
-  <section class="faunaGrid" aria-label="Featured fauna">
-<article class="card faunaCard" aria-label="Toucans">
-  <div class="faunaImage" aria-label="Toucans image">
-    <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Toucan photo placeholder" loading="lazy" decoding="async">
+<div class="carouselViewport" aria-label="Carousel viewport">
+  <div class="carouselTrack" id="faunaCarouselTrack" aria-label="Carousel track">
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
+    <div class="carouselSlide"><img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Bird photo" loading="lazy" decoding="async"></div>
   </div>
-  <div class="faunaBody" aria-label="Toucans content">
-    <h3>Toucans</h3>
-    <div class="faunaLatin">Ramphastidae family</div>
-    <div class="faunaTags" aria-label="Toucan tags">
-      <span class="tag">Iconic</span>
-      <span class="tag">Fruit-eaters</span>
-    </div>
-    <div class="faunaText">
-      Known for their oversized bills and vibrant colors, toucans play a key role in seed dispersal throughout the forest.
-    </div>
-  </div>
-</article>
+</div>
 
+<button class="carouselBtn prev" type="button" aria-label="Previous slide" id="faunaPrevBtn">‹</button>
+<button class="carouselBtn next" type="button" aria-label="Next slide" id="faunaNextBtn">›</button>
+  </section>
+  <section class="faunaGrid" aria-label="Featured fauna">
+    <article class="card faunaCard" aria-label="Toucans">
+      <div class="faunaImage" aria-label="Toucans image">
+        <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Toucan photo" loading="lazy" decoding="async">
+      </div>
+      <div class="faunaBody" aria-label="Toucans content">
+        <h3>Toucans</h3>
+        <div class="faunaLatin">Ramphastidae family</div>
+        <div class="faunaTags" aria-label="Toucan tags">
+          <span class="tag">Iconic</span>
+          <span class="tag">Fruit-eaters</span>
+        </div>
+        <div class="faunaText">
+          Known for their oversized bills and vibrant colors, toucans play a key role in seed dispersal throughout the forest.
+        </div>
+      </div>
+    </article>
 <article class="card faunaCard" aria-label="Hummingbirds">
   <div class="faunaImage" aria-label="Hummingbirds image">
-    <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Hummingbird photo placeholder" loading="lazy" decoding="async">
+    <img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Hummingbird photo" loading="lazy" decoding="async">
   </div>
   <div class="faunaBody" aria-label="Hummingbirds content">
     <h3>Hummingbirds</h3>
@@ -447,7 +470,7 @@
 
 <article class="card faunaCard" aria-label="Spectacled bear">
   <div class="faunaImage" aria-label="Spectacled bear image">
-    <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_02.jpg" alt="Spectacled bear photo placeholder" loading="lazy" decoding="async">
+    <img src="/assets/images/pages/features/fauna/tcfr_features_card_fauna_01.jpg" alt="Spectacled bear photo" loading="lazy" decoding="async">
   </div>
   <div class="faunaBody" aria-label="Spectacled bear content">
     <h3>Spectacled bear</h3>
@@ -461,13 +484,29 @@
     </div>
   </div>
 </article>
+
+<article class="card faunaCard" aria-label="Butterflies">
+  <div class="faunaImage" aria-label="Butterflies image">
+    <img src="/assets/images/pages/features/fauna/tcfr_features_fauna_03.jpg" alt="Butterfly photo" loading="lazy" decoding="async">
+  </div>
+  <div class="faunaBody" aria-label="Butterflies content">
+    <h3>Butterflies</h3>
+    <div class="faunaLatin">Lepidoptera order</div>
+    <div class="faunaTags" aria-label="Butterfly tags">
+      <span class="tag">Colorful</span>
+      <span class="tag">Day-active</span>
+    </div>
+    <div class="faunaText">
+      Bright wings flash along forest edges and garden paths, especially when the sun breaks through the mist.
+    </div>
+  </div>
+</article>
   </section>
-  <!-- VIDEOS -->
   <section class="videoStrip" aria-label="Wildlife videos">
     <div class="videoCard" aria-label="Wildlife video">
       <div class="videoWrap">
         <iframe
-          src="https://youtube.com/shorts/xXjuE_lwbbY"
+          src="https://www.youtube.com/embed/BbTNmN-QhQc"
           title="Wildlife video"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -478,7 +517,7 @@
 <div class="videoCard" aria-label="Wildlife video">
   <div class="videoWrap">
     <iframe
-      src="https://youtube.com/shorts/xXjuE_lwbbY"
+      src="https://www.youtube.com/embed/BbTNmN-QhQc"
       title="Wildlife video"
       loading="lazy"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -490,5 +529,57 @@
 </main>
 <div id="siteFooter"></div>
 <script src="/assets/js/site.js?v=3"></script>
+<script>
+  (function(){
+    "use strict";
+
+    var track = document.getElementById("faunaCarouselTrack");
+    var prevBtn = document.getElementById("faunaPrevBtn");
+    var nextBtn = document.getElementById("faunaNextBtn");
+    if (!track || !prevBtn || !nextBtn) return;
+
+    var index = 0;
+    var slides = track.children.length;
+    var intervalMs = 2600;
+    var timer = null;
+
+    function goTo(i){
+      index = (i + slides) % slides;
+      track.style.transform = "translateX(" + (-index * 100) + "%)";
+    }
+
+    function next(){ goTo(index + 1); }
+    function prev(){ goTo(index - 1); }
+
+    function start(){
+      stop();
+      timer = setInterval(next, intervalMs);
+    }
+
+    function stop(){
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    nextBtn.addEventListener("click", function(){
+      next();
+      start();
+    });
+
+    prevBtn.addEventListener("click", function(){
+      prev();
+      start();
+    });
+
+    track.addEventListener("mouseenter", stop);
+    track.addEventListener("mouseleave", start);
+
+    document.addEventListener("visibilitychange", function(){
+      if (document.hidden) stop();
+      else start();
+    });
+
+    start();
+  })();
+</script>
 </body>
 </html>
