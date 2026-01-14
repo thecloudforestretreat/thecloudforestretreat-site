@@ -27,7 +27,6 @@
       --forest: #0D5925;
       --forest2: #0B2B12;
       --orange: #E0643A;
-      --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
     }
@@ -151,7 +150,7 @@
     select{ padding-right: 40px; }
 
     textarea{
-      min-height: 140px;
+      min-height: 160px;
       resize: vertical;
     }
 
@@ -181,7 +180,7 @@
       font-weight: 650;
       font-size: 13px;
       line-height: 1.6;
-      max-width: 70ch;
+      max-width: 72ch;
     }
 
     .submitBtn{
@@ -194,7 +193,7 @@
       font-weight: 900;
       cursor: pointer;
       box-shadow: 0 14px 30px rgba(13,89,37,0.18);
-      min-width: 180px;
+      min-width: 200px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -260,8 +259,9 @@
       box-shadow: 0 12px 26px rgba(13,89,37,0.08);
       cursor: pointer;
       text-decoration: none;
+      min-width: 160px;
     }
-    .linkBtn:hover{ filter: brightness(0.99); }
+
     .linkBtn.primary{
       background: var(--orange);
       color: #fff;
@@ -298,6 +298,7 @@
       .formGrid{ grid-template-columns: 1fr; }
       .submitBtn{ width: 100%; }
       .actionsRow{ gap: 12px; }
+      .linkBtn{ width: 100%; min-width: 0; }
     }
   </style>
 </head>
@@ -324,35 +325,14 @@
       <input type="hidden" name="form_type" value="contact" />
 
       <div class="formGrid">
-
         <div class="field">
           <label for="first_name">First name <span class="req">*</span></label>
-          <input
-            id="first_name"
-            name="first_name"
-            type="text"
-            autocomplete="given-name"
-            required
-            placeholder="Your first name"
-            autocapitalize="words"
-            inputmode="text"
-            spellcheck="false"
-          />
+          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Your first name" autocapitalize="words" inputmode="text" spellcheck="false" />
         </div>
 
         <div class="field">
           <label for="last_name">Last name <span class="req">*</span></label>
-          <input
-            id="last_name"
-            name="last_name"
-            type="text"
-            autocomplete="family-name"
-            required
-            placeholder="Your last name"
-            autocapitalize="words"
-            inputmode="text"
-            spellcheck="false"
-          />
+          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Your last name" autocapitalize="words" inputmode="text" spellcheck="false" />
         </div>
 
         <div class="field">
@@ -361,8 +341,13 @@
         </div>
 
         <div class="field">
-          <label for="phone">Phone number</label>
+          <label for="phone">Phone</label>
           <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Country code + phone number" />
+        </div>
+
+        <div class="field full">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message" required placeholder="Your message"></textarea>
         </div>
 
         <div class="field full">
@@ -370,50 +355,44 @@
           <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
             <option value="">Select</option>
             <option value="Referral">Referral</option>
+            <option value="Google Search">Google Search</option>
+            <option value="Google Maps">Google Maps</option>
             <option value="Instagram">Instagram</option>
             <option value="TikTok">TikTok</option>
             <option value="YouTube">YouTube</option>
-            <option value="Google Search">Google Search</option>
-            <option value="Google Maps">Google Maps</option>
+            <option value="TripAdvisor">TripAdvisor</option>
             <option value="Airbnb">Airbnb</option>
             <option value="Vrbo">Vrbo</option>
             <option value="Booking.com">Booking.com</option>
             <option value="Other">Other</option>
           </select>
         </div>
-
-        <div class="field full">
-          <label for="message">Message <span class="req">*</span></label>
-          <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
-        </div>
-
       </div>
 
       <div class="actionsRow">
         <p class="miniNote">
-          By submitting, you agree we may contact you by email or phone to follow up.
+          By submitting, you agree we may contact you by email and, if provided, by phone.
         </p>
-        <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Submit message</button>
+        <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Submit</button>
       </div>
     </form>
-  </section>
-
-  <aside class="sideStack" aria-label="Contact shortcuts">
 
     <section id="tcfrContactStatusCard" class="card statusCard" aria-label="Submission status">
       <h3 class="statusTitle">Message sent</h3>
       <p class="statusText">
-        Thank you. We received your message and sent a confirmation email.
-        If you do not see it, please check your spam or promotions folder.
+        Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.
       </p>
     </section>
+  </section>
+
+  <aside class="sideStack" aria-label="Contact shortcuts">
 
     <section class="card sideCard" aria-label="Interested in booking">
       <h3 class="sideTitle">Interested in booking?</h3>
       <p class="sideP">
-        If you already have dates in mind, use our booking request form. We will follow up with availability and next steps.
+        If you already have dates in mind, use our booking request form and we will follow up with availability and next steps.
       </p>
-      <div class="btnRow" aria-label="Booking button">
+      <div class="btnRow" aria-label="Booking and gallery buttons">
         <a class="linkBtn primary" href="/booking">Go to booking</a>
         <a class="linkBtn" href="/gallery">View gallery</a>
       </div>
@@ -422,7 +401,7 @@
     <section class="card sideCard" aria-label="Policies">
       <h3 class="sideTitle">Policies</h3>
       <p class="sideP">
-        Review our policies before submitting. These pages cover privacy and terms of service.
+        Review our policies for privacy and terms of service.
       </p>
       <div class="btnRow" aria-label="Policy buttons">
         <a class="linkBtn" href="/privacy-poliy">Privacy policy</a>
@@ -440,7 +419,7 @@
     (function(){
       "use strict";
 
-      var WEB_APP_URL = "PASTE_YOUR_NEW_WEB_APP_URL_HERE";
+      var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyau_y10RvNiQ-nLDlE35UbAWoplw_z17Efw_2ta_V87RbPty5OeBP5q2PMMwZ72SeenA/exec";
 
       function toTitleCase(s){
         var t = String(s || "").trim();
@@ -477,7 +456,7 @@
 
       function setSending(isSending){
         btn.disabled = isSending;
-        btn.textContent = isSending ? "Sending..." : "Submit message";
+        btn.textContent = isSending ? "Sending..." : "Submit";
       }
 
       function showSuccess(){
@@ -515,7 +494,8 @@
           mode: "no-cors"
         })
         .then(function(){
-          showSuccess();
+          statusCard.classList.add("show");
+          statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
           form.reset();
           setSending(false);
         })
