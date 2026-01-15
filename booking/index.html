@@ -3,25 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Booking | The Cloud Forest Retreat</title>
-  <meta name="description" content="Request availability and book your stay at The Cloud Forest Retreat in Mindo, Ecuador." />
+  <title>Booking | Mindo Bird Watching</title>
+  <meta name="description" content="Request availability at The Cloud Forest Retreat in Mindo, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/booking/" />
-
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mindo Bird Watching" />
+  <meta property="og:title" content="Booking | Mindo Bird Watching" />
+  <meta property="og:description" content="Request availability at The Cloud Forest Retreat in Mindo, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/booking/" />
+  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Mindo, Ecuador" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Booking | Mindo Bird Watching" />
+  <meta name="twitter:description" content="Request availability at The Cloud Forest Retreat in Mindo, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
+  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0D5925" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
-
   <style>
     :root{
       --max: 1120px;
@@ -34,6 +47,7 @@
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
     }
 
     *{ box-sizing: border-box; }
@@ -55,17 +69,25 @@
       min-width: 0;
     }
 
+    /* HERO (match the shared hero sizing: 340 desktop / 280 mobile) */
     .hero{
-      position: relative;
+      margin-top: 14px;
+      border: 1px solid var(--line);
       border-radius: var(--r);
-      overflow: hidden;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(0,0,0,0.10);
-      height: 320px;
+      background: var(--glass);
+      overflow: hidden;
+      position: relative;
+      color: var(--ink);
     }
 
-    .hero img{
+    .heroMedia{
+      position: relative;
+      min-height: 340px;
+      background: rgba(0,0,0,0.10);
+    }
+
+    .heroMedia img{
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -77,34 +99,36 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(880px 420px at 18% 10%, rgba(224,100,58,0.16), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.52));
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
       pointer-events: none;
     }
 
     .heroInner{
       position: absolute;
-      left: 16px;
-      right: 16px;
-      bottom: 16px;
-      max-width: 820px;
-      color: #fff;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.30);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: rgba(255,255,255,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+      max-width: 860px;
     }
 
     .kicker{
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(231,228,209,0.32);
-      background: rgba(0,0,0,0.22);
-      color: rgba(231,228,209,0.94);
       font-weight: 900;
       letter-spacing: 0.10em;
       text-transform: uppercase;
       font-size: 12px;
-      width: fit-content;
+      color: rgba(231,228,209,0.94);
     }
 
     .heroH1{
@@ -125,8 +149,10 @@
       line-height: 1.75;
       font-weight: 650;
       text-shadow: 0 10px 26px rgba(0,0,0,0.18);
+      max-width: 92ch;
     }
 
+    /* Main grid */
     .grid{
       margin-top: 14px;
       display: grid;
@@ -149,7 +175,7 @@
 
     .hint{
       margin: 0 0 12px;
-      color: rgba(11,26,16,0.72);
+      color: var(--muted);
       font-weight: 650;
       line-height: 1.7;
       font-size: 14.6px;
@@ -217,6 +243,7 @@
       font-weight: 650;
       font-size: 13px;
       line-height: 1.6;
+      max-width: 72ch;
     }
 
     .submitBtn{
@@ -238,9 +265,17 @@
 
     .submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
 
-    .sideStack{ display: grid; gap: 14px; }
+    .sideStack{
+      display: grid;
+      gap: 14px;
+      align-items: start;
+    }
 
-    .sideCard{ padding: 14px; position: relative; overflow: hidden; }
+    .sideCard{
+      padding: 14px;
+      position: relative;
+      overflow: hidden;
+    }
 
     .sideCard:before{
       content:"";
@@ -272,6 +307,7 @@
       position: relative;
     }
 
+    /* Status card */
     .statusCard{
       padding: 14px;
       display: none;
@@ -295,176 +331,209 @@
       font-size: 14.6px;
     }
 
+    /* Right-column image placeholders (keep aligned with left column) */
+    .sideImageCard{
+      padding: 14px;
+    }
+
+    .sideImageFrame{
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: #ccc;
+      box-shadow: var(--shadow);
+    }
+
+    .sideImageFrame img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.01);
+    }
+
+    .sideImageFrame::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.26));
+      pointer-events:none;
+    }
+
+    .sideImageCaption{
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      color: rgba(255,255,255,0.96);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      text-shadow: 0 14px 40px rgba(0,0,0,0.40);
+      font-size: 13.5px;
+      z-index: 1;
+    }
+
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
-      .hero{ height: 300px; }
+      .heroMedia{ min-height: 280px; }
+      .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
       .grid{ grid-template-columns: 1fr; }
       .formGrid{ grid-template-columns: 1fr; }
       .submitBtn{ width: 100%; }
       .actionsRow{ gap: 12px; }
+      .sideImageFrame{ aspect-ratio: 16 / 10; }
     }
   </style>
 </head>
-
 <body>
   <div id="siteHeader"></div>
-
   <main class="wrap" aria-label="Booking page">
+<section class="hero" aria-label="Booking hero">
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
+    <div class="heroOverlay" aria-hidden="true"></div>
+    <div class="heroInner">
+      <div class="kicker">Request availability</div>
+      <h1 class="heroH1">Book Your Stay</h1>
+      <p class="heroP">
+        Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability and next steps.
+        If needed, we can also help arrange ground transportation from Quito or the airport.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <section class="hero" aria-label="Booking hero">
-      <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
-      <div class="heroOverlay" aria-hidden="true"></div>
-      <div class="heroInner">
-        <div class="kicker">Request availability</div>
-        <h1 class="heroH1">Book Your Stay</h1>
-        <p class="heroP">
-          Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability and next steps.
-          If needed, we can also help arrange ground transportation from Quito or the airport.
+<section class="grid" aria-label="Booking form and details">
+
+  <section class="card pad" aria-label="Booking request form">
+    <h2 class="h2">Booking Request</h2>
+    <p class="hint">
+      This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
+    </p>
+
+    <form id="tcfrBookingForm" aria-label="Booking form">
+      <div class="formGrid">
+
+        <div class="field">
+          <label for="first_name">First name <span class="req">*</span></label>
+          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Your first name" autocapitalize="words" inputmode="text" spellcheck="false" />
+        </div>
+
+        <div class="field">
+          <label for="last_name">Last name <span class="req">*</span></label>
+          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Your last name" autocapitalize="words" inputmode="text" spellcheck="false" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number <span class="req">*</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
+        </div>
+
+        <div class="field">
+          <label for="number_of_days_interested">Number of days interested</label>
+          <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Example: 2 nights" />
+        </div>
+
+        <div class="field">
+          <label for="number_of_guests">Number of guests</label>
+          <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Example: 2 adults" />
+        </div>
+
+        <div class="field">
+          <label for="room_preference">Room preference</label>
+          <select id="room_preference" name="room_preference">
+            <option value="">Select a room</option>
+            <option value="Panoramic Suite">Panoramic Suite</option>
+            <option value="Sunrise Room">Sunrise Room</option>
+            <option value="Sunset Room">Sunset Room</option>
+            <option value="Entire house">Entire house</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="transportation_needed">Transportation needed (Quito/airport)</label>
+          <select id="transportation_needed" name="transportation_needed">
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="how_did_you_hear_about_us">How did you hear about us?</label>
+          <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
+            <option value="">Select</option>
+            <option value="Referral">Referral</option>
+            <option value="Instagram">Instagram</option>
+            <option value="TikTok">TikTok</option>
+            <option value="YouTube">YouTube</option>
+            <option value="Google Search">Google Search</option>
+            <option value="Google Maps">Google Maps</option>
+            <option value="Airbnb">Airbnb</option>
+            <option value="Vrbo">Vrbo</option>
+            <option value="Booking.com">Booking.com</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
+        </div>
+
+      </div>
+
+      <div class="actionsRow">
+        <p class="miniNote">
+          By submitting, you agree we may contact you by email or phone to confirm details.
         </p>
+        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit Request</button>
+      </div>
+    </form>
+  </section>
+
+  <aside class="sideStack" aria-label="Booking details (right column)">
+
+    <!-- Keep this first so success message appears near top -->
+    <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
+      <h3 class="statusTitle">Request sent</h3>
+      <p class="statusText">
+        Thank you. We received your booking inquiry and sent a confirmation email.
+        If you do not see it, please check your spam or promotions folder.
+      </p>
+    </section>
+
+    <section class="card sideCard" aria-label="What happens next">
+      <h3 class="sideTitle">What happens next</h3>
+      <p class="sideP">
+        We will reply with availability, pricing, and any recommendations to make your stay effortless.
+        If you selected transportation, we will include pickup options from Quito or the airport.
+      </p>
+    </section>
+
+    <!-- NEW: 3x4 image placeholder under What happens next -->
+    <section class="card sideImageCard" aria-label="Booking image placeholder">
+      <div class="sideImageFrame">
+        <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="The Cloud Forest Retreat view placeholder" loading="lazy" decoding="async" />
+        <div class="sideImageCaption">A calm place to reset in the cloud forest</div>
       </div>
     </section>
 
-    <section class="grid" aria-label="Booking form and details">
+  </aside>
 
-      <section class="card pad" aria-label="Booking request form">
-        <h2 class="h2">Booking Request</h2>
-        <p class="hint">
-          This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
-        </p>
-
-        <form id="tcfrBookingForm" aria-label="Booking form">
-          <div class="formGrid">
-
-            <div class="field">
-              <label for="first_name">First name <span class="req">*</span></label>
-              <input
-                id="first_name"
-                name="first_name"
-                type="text"
-                autocomplete="given-name"
-                required
-                placeholder="Your first name"
-                autocapitalize="words"
-                inputmode="text"
-                spellcheck="false"
-              />
-            </div>
-
-            <div class="field">
-              <label for="last_name">Last name <span class="req">*</span></label>
-              <input
-                id="last_name"
-                name="last_name"
-                type="text"
-                autocomplete="family-name"
-                required
-                placeholder="Your last name"
-                autocapitalize="words"
-                inputmode="text"
-                spellcheck="false"
-              />
-            </div>
-
-            <div class="field">
-              <label for="email">Email <span class="req">*</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone number <span class="req">*</span></label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
-            </div>
-
-            <div class="field">
-              <label for="number_of_days_interested">Number of days interested</label>
-              <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Example: 2 nights" />
-            </div>
-
-            <div class="field">
-              <label for="number_of_guests">Number of guests</label>
-              <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Example: 2 adults" />
-            </div>
-
-            <div class="field">
-              <label for="room_preference">Room preference</label>
-              <select id="room_preference" name="room_preference">
-                <option value="">Select a room</option>
-                <option value="Panoramic Suite">Panoramic Suite</option>
-                <option value="Sunrise Room">Sunrise Room</option>
-                <option value="Sunset Room">Sunset Room</option>
-                <option value="Entire house">Entire house</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="transportation_needed">Transportation needed (Quito/airport)</label>
-              <select id="transportation_needed" name="transportation_needed">
-                <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label for="how_did_you_hear_about_us">How did you hear about us?</label>
-              <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
-                <option value="">Select</option>
-                <option value="Referral">Referral</option>
-                <option value="Instagram">Instagram</option>
-                <option value="TikTok">TikTok</option>
-                <option value="YouTube">YouTube</option>
-                <option value="Google Search">Google Search</option>
-                <option value="Google Maps">Google Maps</option>
-                <option value="Airbnb">Airbnb</option>
-                <option value="Vrbo">Vrbo</option>
-                <option value="Booking.com">Booking.com</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
-            </div>
-
-          </div>
-
-          <div class="actionsRow">
-            <p class="miniNote">
-              By submitting, you agree we may contact you by email or phone to confirm details.
-            </p>
-            <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit Request</button>
-          </div>
-        </form>
-      </section>
-
-      <aside class="sideStack" aria-label="Booking details">
-
-        <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
-          <h3 class="statusTitle">Request sent</h3>
-          <p class="statusText">
-            Thank you. We received your booking inquiry and sent a confirmation email.
-            If you do not see it, please check your spam or promotions folder.
-          </p>
-        </section>
-
-        <section class="card sideCard" aria-label="What happens next">
-          <h3 class="sideTitle">What happens next</h3>
-          <p class="sideP">
-            We will reply with availability, pricing, and any recommendations to make your stay effortless.
-            If you selected transportation, we will include pickup options from Quito or the airport.
-          </p>
-        </section>
-
-      </aside>
-
-    </section>
-
+</section>
   </main>
-
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-
   <script>
     (function(){
       "use strict";
@@ -531,7 +600,6 @@
 
         var fd = new FormData(form);
 
-        // Basic required enforcement (HTML required should cover most)
         if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
           showError("Please fill out all required fields.");
           return;
@@ -545,7 +613,6 @@
           mode: "no-cors"
         })
         .then(function(){
-          // With no-cors, we cannot read response, but it still sends.
           showSuccess();
           form.reset();
           setSending(false);
