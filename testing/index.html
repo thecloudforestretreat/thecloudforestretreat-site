@@ -126,7 +126,7 @@ body{ margin:0; }
   font-size: 13px;
 }
 
-/* HERO */
+/* HERO (match the same hero box sizing used across pages: 340 desktop, 280 mobile) */
 .hero{
   margin-top: 14px;
   border: 1px solid var(--line);
@@ -240,6 +240,16 @@ body{ margin:0; }
 
 .pad{ padding: 14px; }
 
+.h2{
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  font-size: 22px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  font-weight: 900;
+}
+
 .p{
   margin: 0;
   color: rgba(11,26,16,0.78);
@@ -286,6 +296,9 @@ body{ margin:0; }
 .list li{ margin: 6px 0; }
 
 /* MEDIA CARD */
+.mediaCard{
+  position: relative;
+}
 .mediaInner{
   padding: 14px;
   display: grid;
@@ -345,7 +358,7 @@ body{ margin:0; }
   display: block;
 }
 
-/* OFFER GRID + FILLER */
+/* OFFER GRID */
 .offerGrid{
   margin-top: 14px;
   display: grid;
@@ -402,49 +415,6 @@ body{ margin:0; }
   background: rgba(255,255,255,0.60);
   font-weight: 800;
   color: #0b2b12;
-}
-
-/* NEW: 1x1 image tile to fill the empty space */
-.miniPhoto{
-  padding: 0;
-  background: transparent;
-  border: 1px solid rgba(11,26,16,0.12);
-  box-shadow: var(--shadow);
-  border-radius: var(--r);
-  overflow: hidden;
-}
-.miniPhotoFrame{
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: #ccc;
-}
-.miniPhotoFrame img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-}
-.miniPhotoFrame::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.24));
-  pointer-events:none;
-}
-.miniPhotoCap{
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  color: rgba(255,255,255,0.96);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  text-shadow: 0 14px 40px rgba(0,0,0,0.40);
-  font-size: 13.5px;
-  z-index: 1;
 }
 
 /* COMMITMENT */
@@ -522,6 +492,60 @@ body{ margin:0; }
   align-items: center;
 }
 
+/* NEW: square image in the exact empty spot inside "At a glance" content area (right side) */
+.glanceGrid{
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.glanceText{ min-width: 0; }
+
+.glanceTile{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: #ccc;
+  box-shadow: var(--shadow);
+  aspect-ratio: 1 / 1;
+  min-height: 220px;
+  position: relative;
+}
+
+.glanceTile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+.glanceTile::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.18));
+  pointer-events:none;
+}
+
+.glanceCap{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 9px 11px;
+  border-radius: 14px;
+  background: rgba(245,245,220,0.92);
+  border: 1px solid rgba(13,89,37,0.16);
+  color: #0b2b12;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  z-index: 1;
+}
+
 @media (max-width: 900px){
   .wrap{ padding: 12px 14px 64px; }
   .heroMedia{ min-height: 280px; }
@@ -529,7 +553,9 @@ body{ margin:0; }
   .offerGrid{ grid-template-columns: 1fr; }
   .commitInner{ grid-template-columns: 1fr; }
   .imgBox{ min-height: 220px; }
-  .miniPhotoFrame{ aspect-ratio: 16 / 10; }
+
+  .glanceGrid{ grid-template-columns: 1fr; }
+  .glanceTile{ aspect-ratio: 16 / 10; min-height: 200px; }
 }
   </style>
 </head>
@@ -547,6 +573,7 @@ body{ margin:0; }
         <a class="btn primary" href="/booking/">Book Your Stay</a>
       </div>
     </section>
+<!-- HERO -->
 <section class="hero" aria-label="About hero">
   <div class="heroMedia" aria-label="Hero image">
     <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
@@ -563,26 +590,37 @@ body{ margin:0; }
   </div>
 </section>
 
+<!-- QUICK SUMMARY (NOW INCLUDES THE 1x1 IMAGE TILE IN THE RIGHT-HAND EMPTY AREA) -->
 <section class="card" style="margin-top:14px;" aria-label="At a glance">
   <div class="cardHead">
     <h2 class="cardTitle">At a glance</h2>
     <p class="cardHint></p>
   </div>
   <div class="pad">
-    <p class="p">
-      Nestled in the Chocó Andino de Pichincha (a UNESCO Biosphere Reserve region), our retreat is built for slow mornings,
-      fresh air, and the kind of stillness you only find in the cloud forest.
-    </p>
-    <div class="pillRow" aria-label="Highlights">
-      <span class="pill"><strong>Setting:</strong> cloud forest</span>
-      <span class="pill"><strong>Style:</strong> eco-lodge</span>
-      <span class="pill"><strong>Vibe:</strong> peaceful + cozy</span>
-      <span class="pill"><strong>Ideal for:</strong> couples, friends, solo, family</span>
-      <span class="pill"><strong>Also:</strong> camping available</span>
+    <div class="glanceGrid" aria-label="At a glance layout">
+      <div class="glanceText">
+        <p class="p">
+          Nestled in the Chocó Andino de Pichincha (a UNESCO Biosphere Reserve region), our retreat is built for slow mornings,
+          fresh air, and the kind of stillness you only find in the cloud forest.
+        </p>
+        <div class="pillRow" aria-label="Highlights">
+          <span class="pill"><strong>Setting:</strong> cloud forest</span>
+          <span class="pill"><strong>Style:</strong> eco-lodge</span>
+          <span class="pill"><strong>Vibe:</strong> peaceful + cozy</span>
+          <span class="pill"><strong>Ideal for:</strong> couples, friends, solo, family</span>
+          <span class="pill"><strong>Also:</strong> camping available</span>
+        </div>
+      </div>
+
+      <div class="glanceTile" aria-label="At a glance image">
+        <img src="/assets/images/pages/tcfr_about_01.jpg" alt="Cloud forest detail at The Cloud Forest Retreat" loading="lazy" decoding="async" />
+        <div class="glanceCap">Misty mornings, close-up nature</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- MAIN STORY + MEDIA -->
 <section class="gridA" aria-label="Our story and media">
   <article class="card" aria-label="Our story">
     <div class="cardHead">
@@ -608,7 +646,7 @@ body{ margin:0; }
     </div>
   </article>
 
-  <aside class="card" aria-label="About media">
+  <aside class="card mediaCard" aria-label="About media">
     <div class="cardHead">
       <h2 class="cardTitle">A quick look</h2>
       <p class="cardHint"></p>
@@ -633,6 +671,7 @@ body{ margin:0; }
   </aside>
 </section>
 
+<!-- WHAT WE OFFER -->
 <section class="card" style="margin-top:14px;" aria-label="What we offer">
   <div class="cardHead">
     <h2 class="cardTitle">What we offer</h2>
@@ -711,18 +750,10 @@ body{ margin:0; }
         <span class="tag">Adventure</span>
       </div>
     </article>
-
-    <!-- NEW: 1x1 filler image tile -->
-    <article class="miniPhoto" aria-label="Cloud forest highlight photo">
-      <div class="miniPhotoFrame">
-        <img src="/assets/images/pages/tcfr_about_square_01.jpg" alt="Cloud forest close-up at The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="miniPhotoCap">Cloud forest details, up close</div>
-      </div>
-    </article>
-
   </div>
 </section>
 
+<!-- COMMITMENT -->
 <section class="card" style="margin-top:14px;" aria-label="Our commitment">
   <div class="cardHead">
     <h2 class="cardTitle">Our commitment</h2>
@@ -759,6 +790,7 @@ body{ margin:0; }
   </div>
 </section>
 
+<!-- CTA -->
 <section class="ctaBand" aria-label="Booking call to action">
   <div>
     <h2>Ready to slow down in the cloud forest?</h2>
