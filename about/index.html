@@ -127,7 +127,7 @@
       font-size: 13px;
     }
 
-    /* HERO (match the same hero box sizing used across pages: 340 desktop, 280 mobile) */
+    /* HERO (consistent sizing across pages: 340 desktop, 280 mobile) */
     .hero{
       margin-top: 14px;
       border: 1px solid var(--line);
@@ -241,16 +241,6 @@
 
     .pad{ padding: 14px; }
 
-    .h2{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      font-size: 22px;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: var(--forest);
-      font-weight: 900;
-    }
-
     .p{
       margin: 0;
       color: rgba(11,26,16,0.78);
@@ -286,29 +276,72 @@
       font-size: 14.4px;
     }
 
-    .list{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.85;
-      font-weight: 650;
-      font-size: 14.6px;
+    /* Make the Our story column "use the space" and keep the square image centered */
+    .storyPad{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 0;
     }
-    .list li{ margin: 6px 0; }
 
-    /* MEDIA CARD */
-    .mediaCard{
+    .storyMediaSlot{
+      margin-top: 12px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 240px;
+    }
+
+    .storySquare{
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: #ccc;
+      box-shadow: var(--shadow);
       position: relative;
     }
+
+    .storySquare img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.01);
+    }
+
+    .storySquareCap{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 9px 11px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+      z-index: 1;
+    }
+
+    /* MEDIA CARD (right column) */
+    .mediaCard{ position: relative; }
+
     .mediaInner{
       padding: 14px;
+      padding-bottom: 18px; /* extra bottom breathing room to match top */
       display: grid;
       grid-template-rows: auto auto;
       gap: 12px;
       height: 100%;
     }
 
-    /* Make the image box match the "image tile" feel used elsewhere */
     .imgBox{
       border-radius: 18px;
       overflow: hidden;
@@ -350,6 +383,7 @@
       position: relative;
       aspect-ratio: 16 / 9;
       min-height: 220px;
+      margin-bottom: 6px; /* increases bottom spacing inside the card */
     }
     .videoBox iframe{
       position: absolute;
@@ -501,6 +535,10 @@
       .offerGrid{ grid-template-columns: 1fr; }
       .commitInner{ grid-template-columns: 1fr; }
       .imgBox{ min-height: 220px; }
+      .storyMediaSlot{ min-height: 220px; }
+      .storySquare{ max-width: 520px; }
+      .mediaInner{ padding-bottom: 16px; }
+      .videoBox{ margin-bottom: 4px; }
     }
   </style>
 </head>
@@ -543,7 +581,7 @@
   </div>
   <div class="pad">
     <p class="p">
-      Nestled in the Chocó Andino de Pichincha (a UNESCO Biosphere Reserve region), our retreat is built for slow mornings,
+      Nestled in the Choco Andino de Pichincha (a UNESCO Biosphere Reserve region), our retreat is built for slow mornings,
       fresh air, and the kind of stillness you only find in the cloud forest.
     </p>
     <div class="pillRow" aria-label="Highlights">
@@ -563,7 +601,8 @@
       <h2 class="cardTitle">Our story</h2>
       <p class="cardHint">How this place came to life</p>
     </div>
-    <div class="pad">
+
+    <div class="pad storyPad">
       <p class="p">
         The Cloud Forest Retreat was born from a deep love for nature and a simple idea: create a sanctuary where guests can experience
         the magic of the cloud forest without giving up comfort.
@@ -578,6 +617,15 @@
         <p>
           We built this retreat for people who want to reconnect: with nature, with loved ones, and with themselves.
         </p>
+      </div>
+
+      <!-- 1x1 IMAGE INSIDE OUR STORY (centered and uses the empty space) -->
+      <div class="storyMediaSlot" aria-label="Our story image slot">
+        <div class="storySquare" aria-label="Our story image">
+          <!-- Replace this src with your preferred square image when ready -->
+          <img src="/assets/images/pages/tcfr_about_01.jpg" alt="Cloud forest view near The Cloud Forest Retreat" loading="lazy" decoding="async" />
+          <div class="storySquareCap">A quiet place to reset</div>
+        </div>
       </div>
     </div>
   </article>
@@ -617,9 +665,7 @@
   <div class="offerGrid" style="padding:14px;">
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Accommodations">
       <h3>Comfortable accommodations</h3>
-      <p>
-        Eco-friendly rooms with privacy, warmth, and views that make you pause mid-sentence.
-      </p>
+      <p>Eco-friendly rooms with privacy, warmth, and views that make you pause mid-sentence.</p>
       <div class="tagRow" aria-label="Tags">
         <span class="tag">Cozy</span>
         <span class="tag">View-first</span>
@@ -629,9 +675,7 @@
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Dining">
       <h3>In-house dining</h3>
-      <p>
-        Farm-to-table meals with organic ingredients from our gardens and local farmers. Ingredient gathering can be an optional experience.
-      </p>
+      <p>Farm-to-table meals with organic ingredients from our gardens and local farmers. Ingredient gathering can be an optional experience.</p>
       <div class="tagRow" aria-label="Tags">
         <span class="tag">Fresh</span>
         <span class="tag">Local</span>
@@ -641,9 +685,7 @@
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Wellness">
       <h3>Wellness by request</h3>
-      <p>
-        Yoga, meditation, and holistic sessions available by request so we can prepare the experience you want.
-      </p>
+      <p>Yoga, meditation, and holistic sessions available by request so we can prepare the experience you want.</p>
       <div class="tagRow" aria-label="Tags">
         <span class="tag">By request</span>
         <span class="tag">Restorative</span>
@@ -653,9 +695,7 @@
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Excursions">
       <h3>Nature excursions</h3>
-      <p>
-        Guided hikes, birdwatching, and forest walks with local knowledge and a slow-travel pace.
-      </p>
+      <p>Guided hikes, birdwatching, and forest walks with local knowledge and a slow-travel pace.</p>
       <div class="tagRow" aria-label="Tags">
         <span class="tag">Guided</span>
         <span class="tag">Birding</span>
@@ -665,9 +705,7 @@
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Trailside rest area">
       <h3>Trailside rest area</h3>
-      <p>
-        A simple reset spot for mountain biking days: water, shade, and a place to breathe.
-      </p>
+      <p>A simple reset spot for mountain biking days: water, shade, and a place to breathe.</p>
       <div class="tagRow" aria-label="Tags">
         <span class="tag">Biking</span>
         <span class="tag">Recharge</span>
@@ -677,9 +715,7 @@
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Camping">
       <h3>Camping, too</h3>
-      <p>
-        Prefer the forest even closer? We also offer camping options for guests who want a raw nature experience.
-      </p>
+      <p>Prefer the forest even closer? We also offer camping options for guests who want a raw nature experience.</p>
       <div class="tagRow" aria-label="Tags">
         <span class="tag">Simple</span>
         <span class="tag">Nature-first</span>
@@ -700,7 +736,7 @@
     <div class="commitBox" aria-label="Commitment overview">
       <h3>Designed to protect what you came to see</h3>
       <p>
-        We are committed to sustainability and preserving the natural beauty of the cloud forest. As part of the Chocó Andino de Pichincha region,
+        We are committed to sustainability and preserving the natural beauty of the cloud forest. As part of the Choco Andino de Pichincha region,
         we take pride in protecting a globally significant ecosystem.
       </p>
       <p>
