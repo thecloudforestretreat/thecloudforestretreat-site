@@ -54,6 +54,16 @@
       padding:18px 18px 72px;
     }
 
+    .card{
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      color:var(--ink);
+      min-width:0;
+    }
+
     /* TOP BAND */
     .topBand{
       margin-top: 14px;
@@ -89,7 +99,7 @@
       align-items: center;
     }
 
-    /* HERO */
+    /* HERO (match Attractions hero dimensions) */
     .hero{
       margin-top:14px;
       border:1px solid var(--line);
@@ -119,7 +129,7 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
         linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
       pointer-events:none;
     }
@@ -170,8 +180,14 @@
       font-size:15.5px;
     }
 
+    /* SECTION CARDS (so Highlights + Short videos match other pages) */
+    .sectionCard{
+      margin-top:14px;
+      padding:16px;
+    }
+
     .sectionTitle{
-      margin: 18px 0 0;
+      margin:0;
       font-family: var(--font-head);
       font-weight: 900;
       letter-spacing: -0.02em;
@@ -189,7 +205,7 @@
       max-width: 90ch;
     }
 
-    /* IMAGE GRID */
+    /* IMAGE GRID (wrapped in a card) */
     .galleryGrid{
       margin-top:14px;
       display:grid;
@@ -228,7 +244,7 @@
     .g8{ grid-column: span 4; min-height: 280px; }
     .g9{ grid-column: span 4; min-height: 280px; }
 
-    /* VIDEOS (real YouTube embeds) */
+    /* VIDEOS (wrapped in a card) */
     .videoStrip{
       margin-top:14px;
       display:grid;
@@ -237,7 +253,7 @@
     }
 
     .videoCard{
-      border-radius:24px;
+      border-radius:18px;
       overflow:hidden;
       border: 1px solid rgba(11,26,16,0.10);
       box-shadow: var(--shadow);
@@ -271,23 +287,25 @@
       .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9{ grid-column: auto; }
 
       .videoStrip{ grid-template-columns:1fr; }
+      .sectionCard{ padding:14px; }
     }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
   <main class="wrap" aria-label="Gallery page">
-    <section class="topBand" aria-label="Page navigation">
-      <div class="crumbs" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span aria-hidden="true">›</span>
-        <span>Gallery</span>
-      </div>
-      <div class="quickActions" aria-label="Quick actions">
-        <a class="btn secondary" href="/rooms/">View rooms</a>
-        <a class="btn primary" href="/booking/">Book your stay</a>
-      </div>
-    </section>
+<section class="topBand" aria-label="Page navigation">
+  <div class="crumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span aria-hidden="true">›</span>
+    <span>Gallery</span>
+  </div>
+  <div class="quickActions" aria-label="Quick actions">
+    <a class="btn secondary" href="/rooms/">View rooms</a>
+    <a class="btn primary" href="/booking/">Book your stay</a>
+  </div>
+</section>
+
 <section class="hero" aria-label="Gallery hero">
   <div class="heroMedia" aria-label="Hero image">
     <img src="/assets/images/pages/gallery/tcfr_gallery_hero.jpg" alt="Cloud forest views at The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
@@ -302,80 +320,84 @@
   </div>
 </section>
 
-<h2 class="sectionTitle">Highlights</h2>
-<p class="sectionHint">
-  A quick visual tour of the retreat and the landscapes around it. Tap an image to linger on the details.
-</p>
+<section class="card sectionCard" aria-label="Highlights section">
+  <h2 class="sectionTitle">Highlights</h2>
+  <p class="sectionHint">
+    A quick visual tour of the retreat and the landscapes around it. Tap an image to linger on the details.
+  </p>
 
-<section class="galleryGrid" aria-label="Gallery images">
-  <div class="galleryImg g1">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_02.jpg" alt="Cloud forest landscape near the retreat" loading="lazy" decoding="async" />
-  </div>
+  <section class="galleryGrid" aria-label="Gallery images">
+    <div class="galleryImg g1">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_02.jpg" alt="Cloud forest landscape near the retreat" loading="lazy" decoding="async" />
+    </div>
 
-  <div class="galleryImg g2">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_05.jpg" alt="Room and interior detail at the retreat" loading="lazy" decoding="async" />
-  </div>
+    <div class="galleryImg g2">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_05.jpg" alt="Room and interior detail at the retreat" loading="lazy" decoding="async" />
+    </div>
 
-  <div class="galleryImg g3">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_09.jpg" alt="Outdoor view and surrounding greenery" loading="lazy" decoding="async" />
-  </div>
+    <div class="galleryImg g3">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_09.jpg" alt="Outdoor view and surrounding greenery" loading="lazy" decoding="async" />
+    </div>
 
-  <div class="galleryImg g4">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_07.jpg" alt="Quiet moments and natural textures" loading="lazy" decoding="async" />
-  </div>
+    <div class="galleryImg g4">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_07.jpg" alt="Quiet moments and natural textures" loading="lazy" decoding="async" />
+    </div>
 
-  <div class="galleryImg g5">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_01.jpg" alt="Wide landscape highlight around Mindo" loading="lazy" decoding="async" />
-  </div>
+    <div class="galleryImg g5">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_01.jpg" alt="Wide landscape highlight around Mindo" loading="lazy" decoding="async" />
+    </div>
 
-  <div class="galleryImg g6">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_03.jpg" alt="Forest detail near The Cloud Forest Retreat" loading="lazy" decoding="async" />
-  </div>
+    <div class="galleryImg g6">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_03.jpg" alt="Forest detail near The Cloud Forest Retreat" loading="lazy" decoding="async" />
+    </div>
 
-  <div class="galleryImg g7">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_08.jpg" alt="Views and scenery in the cloud forest" loading="lazy" decoding="async" />
-  </div>
+    <div class="galleryImg g7">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_08.jpg" alt="Views and scenery in the cloud forest" loading="lazy" decoding="async" />
+    </div>
 
-  <div class="galleryImg g8">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_06.jpg" alt="Retreat atmosphere and setting" loading="lazy" decoding="async" />
-  </div>
+    <div class="galleryImg g8">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_06.jpg" alt="Retreat atmosphere and setting" loading="lazy" decoding="async" />
+    </div>
 
-  <div class="galleryImg g9">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_04.jpg" alt="Nature and retreat details" loading="lazy" decoding="async" />
-  </div>
+    <div class="galleryImg g9">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_04.jpg" alt="Nature and retreat details" loading="lazy" decoding="async" />
+    </div>
+  </section>
 </section>
 
-<h2 class="sectionTitle">Short videos</h2>
-<p class="sectionHint">
-  Quick clips that capture the atmosphere.
-</p>
+<section class="card sectionCard" aria-label="Short videos section">
+  <h2 class="sectionTitle">Short videos</h2>
+  <p class="sectionHint">
+    Quick clips that capture the atmosphere.
+  </p>
 
-<section class="videoStrip" aria-label="Gallery videos">
-  <div class="videoCard" aria-label="Gallery video 1">
-    <div class="videoWrap">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/zpX3iZEhwA0?rel=0&modestbranding=1&playsinline=1"
-        title="The Cloud Forest Retreat short video"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+  <section class="videoStrip" aria-label="Gallery videos">
+    <div class="videoCard" aria-label="Gallery video 1">
+      <div class="videoWrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/zpX3iZEhwA0?rel=0&modestbranding=1&playsinline=1"
+          title="The Cloud Forest Retreat short video"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
-  </div>
 
-  <div class="videoCard" aria-label="Gallery video 2">
-    <div class="videoWrap">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/NU31jotCIYg?rel=0&modestbranding=1&playsinline=1"
-        title="The Cloud Forest Retreat short video"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+    <div class="videoCard" aria-label="Gallery video 2">
+      <div class="videoWrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/NU31jotCIYg?rel=0&modestbranding=1&playsinline=1"
+          title="The Cloud Forest Retreat short video"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
-  </div>
+  </section>
 </section>
   </main>
   <div id="siteFooter"></div>
