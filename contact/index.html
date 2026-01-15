@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | The Cloud Forest Retreat</title>
-  <meta name="description" content="Contact The Cloud Forest Retreat in Mindo, Ecuador. Reach out for reservations, travel inquiries, or personalized assistance in planning your eco-lodge stay in Ecuador’s stunning cloud forest." />
+  <title>Contact | Mindo Bird Watching</title>
+  <meta name="description" content="Contact The Cloud Forest Retreat in Mindo, Ecuador. Ask about availability, rooms, directions, and nearby nature experiences. We reply quickly." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/contact/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mindo Bird Watching" />
+  <meta property="og:title" content="Contact | Mindo Bird Watching" />
+  <meta property="og:description" content="Contact The Cloud Forest Retreat in Mindo, Ecuador. Ask about availability, rooms, directions, and nearby nature experiences. We reply quickly." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/contact/" />
+  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Mindo, Ecuador" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Mindo Bird Watching" />
+  <meta name="twitter:description" content="Contact The Cloud Forest Retreat in Mindo, Ecuador. Ask about availability, rooms, directions, and nearby nature experiences. We reply quickly." />
+  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -27,8 +44,10 @@
       --forest: #0D5925;
       --forest2: #0B2B12;
       --orange: #E0643A;
+      --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
     }
 
     *{ box-sizing: border-box; }
@@ -50,19 +69,25 @@
       min-width: 0;
     }
 
-    /* HERO (like the other pages) */
+    /* HERO (match Attractions hero sizing + structure) */
     .hero{
-      position: relative;
+      margin-top: 14px;
+      border: 1px solid var(--line);
       border-radius: var(--r);
-      overflow: hidden;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(0,0,0,0.10);
-      height: 300px;
-      margin-top: 10px;
+      background: var(--glass);
+      overflow: hidden;
+      position: relative;
+      color: var(--ink);
     }
 
-    .hero img{
+    .heroMedia{
+      position: relative;
+      min-height: 340px;
+      background: rgba(0,0,0,0.10);
+    }
+
+    .heroMedia img{
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -74,34 +99,36 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(880px 420px at 18% 10%, rgba(224,100,58,0.16), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.52));
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
       pointer-events: none;
     }
 
     .heroInner{
       position: absolute;
-      left: 16px;
-      right: 16px;
-      bottom: 16px;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.30);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: rgba(255,255,255,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
       max-width: 860px;
-      color: #fff;
     }
 
     .kicker{
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(231,228,209,0.32);
-      background: rgba(0,0,0,0.22);
-      color: rgba(231,228,209,0.94);
       font-weight: 900;
       letter-spacing: 0.10em;
       text-transform: uppercase;
       font-size: 12px;
-      width: fit-content;
+      color: rgba(231,228,209,0.94);
     }
 
     .heroH1{
@@ -147,7 +174,7 @@
 
     .hint{
       margin: 0 0 12px;
-      color: rgba(11,26,16,0.72);
+      color: var(--muted);
       font-weight: 650;
       line-height: 1.7;
       font-size: 14.6px;
@@ -328,9 +355,9 @@
       font-size: 14.6px;
     }
 
-    /* Bottom-right image card (fills the empty space you marked) */
+    /* Bottom-right image card (match Attractions card feel) */
     .imageCard{
-      padding: 0;
+      padding: 14px;
     }
 
     .imageFrame{
@@ -338,9 +365,10 @@
       width: 100%;
       aspect-ratio: 4 / 3;
       overflow: hidden;
-      border-radius: calc(var(--r) - 2px);
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(0,0,0,0.08);
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: #ccc;
+      box-shadow: var(--shadow);
     }
 
     .imageFrame img{
@@ -355,7 +383,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.26));
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.28));
       pointer-events:none;
     }
 
@@ -370,11 +398,13 @@
       line-height: 1.2;
       text-shadow: 0 14px 40px rgba(0,0,0,0.40);
       font-size: 14px;
+      z-index: 1;
     }
 
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
-      .hero{ height: 240px; }
+      .heroMedia{ min-height: 280px; }
+      .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
       .grid{ grid-template-columns: 1fr; }
       .formGrid{ grid-template-columns: 1fr; }
       .submitBtn{ width: 100%; }
@@ -388,14 +418,16 @@
   <div id="siteHeader"></div>
   <main class="wrap" aria-label="Contact page">
 <section class="hero" aria-label="Contact hero">
-  <img src="/assets/images/pages/tcfr_contact_hero.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
-  <div class="heroOverlay" aria-hidden="true"></div>
-  <div class="heroInner">
-    <div class="kicker">Contact</div>
-    <h1 class="heroH1">Contact Us</h1>
-    <p class="heroP">
-      Contact The Cloud Forest Retreat in Mindo, Ecuador. Reach out for reservations, travel inquiries, or personalized assistance in planning your eco-lodge stay in Ecuador’s stunning cloud forest.
-    </p>
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/tcfr_contact_hero.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
+    <div class="heroOverlay" aria-hidden="true"></div>
+    <div class="heroInner">
+      <div class="kicker">Contact</div>
+      <h1 class="heroH1">Contact Us</h1>
+      <p class="heroP">
+        Contact The Cloud Forest Retreat in Mindo, Ecuador. Reach out for reservations, travel inquiries, or personalized assistance in planning your eco-lodge stay in Ecuador’s stunning cloud forest.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -480,7 +512,7 @@
       </p>
       <div class="btnRow" aria-label="Booking and gallery buttons">
         <a class="linkBtn primary" href="/booking">Go To Booking</a>
-        <a class="linkBtn" href="/features/gallery">View Gallery</a>
+        <a class="linkBtn" href="/gallery/">View Gallery</a>
       </div>
     </section>
 
@@ -490,8 +522,8 @@
         Review our policies for privacy and terms of service.
       </p>
       <div class="btnRow" aria-label="Policy buttons">
-        <a class="linkBtn" href="/privacy-policy">Privacy Policy</a>
-        <a class="linkBtn" href="/terms-of-service">Terms of Service</a>
+        <a class="linkBtn" href="/privacy-policy/">Privacy Policy</a>
+        <a class="linkBtn" href="/terms-of-service/">Terms of Service</a>
       </div>
     </section>
 
@@ -552,11 +584,6 @@
         btn.textContent = isSending ? "Sending..." : "Submit";
       }
 
-      function showSuccess(){
-        statusCard.classList.add("show");
-        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-
       function showError(msg){
         statusCard.classList.add("show");
         statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
@@ -588,6 +615,8 @@
         })
         .then(function(){
           statusCard.classList.add("show");
+          statusCard.querySelector(".statusTitle").textContent = "Message sent";
+          statusCard.querySelector(".statusText").textContent = "Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.";
           statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
           form.reset();
           setSending(false);
