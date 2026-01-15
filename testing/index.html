@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery | Mindo Bird Watching</title>
-  <meta name="description" content="Explore The Cloud Forest Retreat gallery: rooms, landscapes, and quiet moments in Mindo, Ecuador, plus short video clips that capture the atmosphere." />
+  <title>Contact | Mindo Bird Watching</title>
+  <meta name="description" content="Contact The Cloud Forest Retreat in Mindo, Ecuador. Ask about availability, rooms, directions, and nearby nature experiences. We reply quickly." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/gallery/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/contact/" />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mindo Bird Watching" />
-  <meta property="og:title" content="Gallery | Mindo Bird Watching" />
-  <meta property="og:description" content="Explore The Cloud Forest Retreat gallery: rooms, landscapes, and quiet moments in Mindo, Ecuador, plus short video clips that capture the atmosphere." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/gallery/" />
+  <meta property="og:title" content="Contact | Mindo Bird Watching" />
+  <meta property="og:description" content="Contact The Cloud Forest Retreat in Mindo, Ecuador. Ask about availability, rooms, directions, and nearby nature experiences. We reply quickly." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/contact/" />
   <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -20,8 +20,8 @@
   <meta property="og:image:alt" content="The Cloud Forest Retreat in Mindo, Ecuador" />
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Gallery | Mindo Bird Watching" />
-  <meta name="twitter:description" content="Explore The Cloud Forest Retreat gallery: rooms, landscapes, and quiet moments in Mindo, Ecuador, plus short video clips that capture the atmosphere." />
+  <meta name="twitter:title" content="Contact | Mindo Bird Watching" />
+  <meta name="twitter:description" content="Contact The Cloud Forest Retreat in Mindo, Ecuador. Ask about availability, rooms, directions, and nearby nature experiences. We reply quickly." />
   <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -29,378 +29,604 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0D5925" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
   <script src="/assets/js/head.js" defer></script>
   <style>
     :root{
-      --max:1120px;
-      --r:24px;
-      --shadow:0 18px 55px rgba(13,89,37,0.16);
-      --line:rgba(11,26,16,0.12);
-      --glass:rgba(245,245,220,0.78);
-      --glass2:rgba(245,245,220,0.62);
-      --ink:#0b1a10;
-      --forest:#0D5925;
-      --muted:rgba(11,26,16,0.72);
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
+      --forest: #0D5925;
+      --forest2: #0B2B12;
+      --orange: #E0643A;
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
     }
 
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
+    *{ box-sizing: border-box; }
+    body{ margin: 0; }
 
     .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:18px 18px 72px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 76px;
     }
 
     .card{
-      background:var(--glass2);
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      color:var(--ink);
-      min-width:0;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: var(--glass2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      color: var(--ink);
+      min-width: 0;
     }
 
-    /* TOP BAND */
-    .topBand{
+    /* HERO (match Attractions hero sizing + structure) */
+    .hero{
       margin-top: 14px;
       border: 1px solid var(--line);
       border-radius: var(--r);
       box-shadow: var(--shadow);
       background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
+      overflow: hidden;
+      position: relative;
       color: var(--ink);
     }
 
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-      flex-wrap: wrap;
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
-
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    /* HERO (match Attractions hero dimensions) */
-    .hero{
-      margin-top:14px;
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      background:var(--glass);
-      overflow:hidden;
-      position:relative;
-      color:var(--ink);
-    }
-
     .heroMedia{
-      position:relative;
-      min-height:340px;
-      background:rgba(0,0,0,0.10);
+      position: relative;
+      min-height: 340px;
+      background: rgba(0,0,0,0.10);
     }
 
     .heroMedia img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform:scale(1.01);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.01);
     }
 
-    .heroShade{
-      position:absolute;
-      inset:0;
+    .heroOverlay{
+      position: absolute;
+      inset: 0;
       background:
         radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
         linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      pointer-events:none;
+      pointer-events: none;
     }
 
     .heroInner{
-      position:absolute;
-      left:14px;
-      right:14px;
-      bottom:14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.22);
-      background:rgba(0,0,0,0.30);
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
-      padding:14px;
-      color:rgba(255,255,255,0.96);
-      box-shadow:0 18px 55px rgba(0,0,0,0.20);
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.30);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: rgba(255,255,255,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
       max-width: 860px;
     }
 
     .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      font-weight:900;
-      letter-spacing:0.12em;
-      text-transform:uppercase;
-      font-size:12px;
-      color:rgba(255,255,255,0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(231,228,209,0.94);
     }
 
     .heroH1{
-      margin:8px 0 6px;
-      font-family:var(--font-head);
-      font-weight:900;
-      letter-spacing:-0.03em;
-      line-height:1.02;
-      font-size:clamp(32px,4vw,54px);
-      color:#fff;
-    }
-
-    .heroLead{
-      margin:0;
-      max-width:80ch;
-      font-weight:650;
-      line-height:1.7;
-      color:rgba(231,228,209,0.92);
-      font-size:15.5px;
-    }
-
-    /* SECTION CARDS (so Highlights + Short videos match other pages) */
-    .sectionCard{
-      margin-top:14px;
-      padding:16px;
-    }
-
-    .sectionTitle{
-      margin:0;
+      margin: 10px 0 8px;
       font-family: var(--font-head);
       font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-      color: var(--forest);
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(32px, 4.2vw, 52px);
+      color: #fff;
+      text-shadow: 0 14px 40px rgba(0,0,0,0.34);
     }
 
-    .sectionHint{
-      margin: 8px 0 0;
+    .heroP{
+      margin: 0;
+      color: rgba(231,228,209,0.94);
+      font-size: 15.8px;
+      line-height: 1.75;
+      font-weight: 650;
+      text-shadow: 0 10px 26px rgba(0,0,0,0.18);
+      max-width: 92ch;
+    }
+
+    .grid{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .pad{ padding: 14px; }
+
+    .h2{
+      margin: 0 0 10px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 1.08;
+    }
+
+    .hint{
+      margin: 0 0 12px;
       color: var(--muted);
       font-weight: 650;
       line-height: 1.7;
+      font-size: 14.6px;
+    }
+
+    .formGrid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .field{ min-width: 0; }
+    .full{ grid-column: 1 / -1; }
+
+    label{
+      display: block;
+      font-weight: 900;
+      color: var(--forest2);
+      font-size: 13px;
+      margin: 0 0 6px;
+    }
+
+    input, select, textarea{
+      width: 100%;
+      font-family: inherit;
       font-size: 14px;
-      max-width: 90ch;
+      border-radius: 14px;
+      border: 1px solid rgba(13,89,37,0.16);
+      background: rgba(255,255,255,0.62);
+      padding: 12px 12px;
+      color: var(--ink);
+      outline: none;
     }
 
-    /* IMAGE GRID (wrapped in a card) */
-    .galleryGrid{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:14px;
-      align-items: stretch;
+    select{ padding-right: 40px; }
+
+    textarea{
+      min-height: 160px;
+      resize: vertical;
     }
 
-    .galleryImg{
-      border-radius:18px;
-      overflow:hidden;
-      background:#ccc;
-      border: 1px solid rgba(11,26,16,0.10);
-      box-shadow: var(--shadow);
+    input:focus, select:focus, textarea:focus{
+      box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
+      border-color: rgba(224,100,58,0.45);
+    }
+
+    .req{
+      color: rgba(224,100,58,0.95);
+      font-weight: 900;
+      margin-left: 4px;
+    }
+
+    .actionsRow{
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .miniNote{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 650;
+      font-size: 13px;
+      line-height: 1.6;
+      max-width: 72ch;
+    }
+
+    .submitBtn{
+      appearance: none;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: var(--forest);
+      color: #fff;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(13,89,37,0.18);
+      min-width: 200px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
+
+    .sideStack{ display: grid; gap: 14px; }
+
+    .sideCard{ padding: 14px; position: relative; overflow: hidden; }
+
+    .sideCard:before{
+      content:"";
+      position:absolute;
+      inset: -120px -120px auto auto;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle at center, rgba(224,100,58,0.14), rgba(224,100,58,0) 62%);
+      pointer-events:none;
+    }
+
+    .sideTitle{
+      margin: 0 0 8px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      line-height: 1.1;
+      color: var(--forest);
       position: relative;
-      min-height: 240px;
     }
 
-    .galleryImg img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
+    .sideP{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.75;
+      font-weight: 650;
+      font-size: 14.6px;
+      position: relative;
+    }
+
+    .btnRow{
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .linkBtn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.62);
+      color: rgba(11,26,16,0.90);
+      font-weight: 900;
+      font-size: 13.5px;
+      box-shadow: 0 12px 26px rgba(13,89,37,0.08);
+      cursor: pointer;
+      text-decoration: none;
+      min-width: 160px;
+    }
+
+    .linkBtn.primary{
+      background: var(--orange);
+      color: #fff;
+      border-color: rgba(0,0,0,0.08);
+      box-shadow: 0 14px 30px rgba(224,100,58,0.20);
+    }
+
+    .statusCard{
+      padding: 14px;
+      display: none;
+      margin-top: 12px;
+    }
+    .statusCard.show{ display: block; }
+
+    .statusTitle{
+      margin: 0 0 6px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      color: var(--forest);
+    }
+
+    .statusText{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.75;
+      font-weight: 650;
+      font-size: 14.6px;
+    }
+
+    /* Bottom-right image card (match Attractions card feel) */
+    .imageCard{
+      padding: 14px;
+    }
+
+    .imageFrame{
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: #ccc;
+      box-shadow: var(--shadow);
+    }
+
+    .imageFrame img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
       transform: scale(1.01);
     }
 
-    .g1{ grid-column: span 4; min-height: 320px; }
-    .g2{ grid-column: span 4; min-height: 320px; }
-    .g3{ grid-column: span 4; min-height: 320px; }
-
-    .g4{ grid-column: span 3; min-height: 260px; }
-    .g5{ grid-column: span 6; min-height: 260px; }
-    .g6{ grid-column: span 3; min-height: 260px; }
-
-    .g7{ grid-column: span 4; min-height: 280px; }
-    .g8{ grid-column: span 4; min-height: 280px; }
-    .g9{ grid-column: span 4; min-height: 280px; }
-
-    /* VIDEOS (wrapped in a card) */
-    .videoStrip{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:14px;
-    }
-
-    .videoCard{
-      border-radius:18px;
-      overflow:hidden;
-      border: 1px solid rgba(11,26,16,0.10);
-      box-shadow: var(--shadow);
-      background: rgba(255,255,255,0.55);
-    }
-
-    .videoWrap{
-      width:100%;
-      aspect-ratio:9/16;
-      position:relative;
-      background:#000;
-    }
-
-    .videoWrap iframe{
+    .imageFrame::after{
+      content:"";
       position:absolute;
       inset:0;
-      width:100%;
-      height:100%;
-      border:0;
-      display:block;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.28));
+      pointer-events:none;
     }
 
-    @media(max-width:900px){
-      .wrap{ padding:12px 14px 64px; }
+    .imageCaption{
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      color: rgba(255,255,255,0.96);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      text-shadow: 0 14px 40px rgba(0,0,0,0.40);
+      font-size: 14px;
+      z-index: 1;
+    }
 
-      .heroMedia{ min-height:280px; }
-      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
-
-      .galleryGrid{ grid-template-columns:1fr; }
-      .galleryImg{ min-height: 240px; }
-      .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9{ grid-column: auto; }
-
-      .videoStrip{ grid-template-columns:1fr; }
-      .sectionCard{ padding:14px; }
+    @media (max-width: 900px){
+      .wrap{ padding: 12px 14px 64px; }
+      .heroMedia{ min-height: 280px; }
+      .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
+      .grid{ grid-template-columns: 1fr; }
+      .formGrid{ grid-template-columns: 1fr; }
+      .submitBtn{ width: 100%; }
+      .actionsRow{ gap: 12px; }
+      .linkBtn{ width: 100%; min-width: 0; }
+      .imageFrame{ aspect-ratio: 16 / 10; }
     }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Gallery page">
-<section class="topBand" aria-label="Page navigation">
-  <div class="crumbs" aria-label="Breadcrumb">
-    <a href="/">Home</a>
-    <span aria-hidden="true">›</span>
-    <span>Gallery</span>
-  </div>
-  <div class="quickActions" aria-label="Quick actions">
-    <a class="btn secondary" href="/rooms/">View rooms</a>
-    <a class="btn primary" href="/booking/">Book your stay</a>
-  </div>
-</section>
-
-<section class="hero" aria-label="Gallery hero">
+  <main class="wrap" aria-label="Contact page">
+<section class="hero" aria-label="Contact hero">
   <div class="heroMedia" aria-label="Hero image">
-    <img src="/assets/images/pages/gallery/tcfr_gallery_hero.jpg" alt="Cloud forest views at The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
-    <div class="heroShade" aria-hidden="true"></div>
-    <div class="heroInner" aria-label="Hero content">
-      <div class="kicker">Landscapes • Rooms • Moments</div>
-      <h1 class="heroH1">Gallery</h1>
-      <p class="heroLead">
-        A visual journey through misty mornings, forest trails, cozy interiors, and quiet moments that define life at The Cloud Forest Retreat.
+    <img src="/assets/images/pages/tcfr_contact_hero.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
+    <div class="heroOverlay" aria-hidden="true"></div>
+    <div class="heroInner">
+      <div class="kicker">Contact</div>
+      <h1 class="heroH1">Contact Us</h1>
+      <p class="heroP">
+        Contact The Cloud Forest Retreat in Mindo, Ecuador. Reach out for reservations, travel inquiries, or personalized assistance in planning your eco-lodge stay in Ecuador’s stunning cloud forest.
       </p>
     </div>
   </div>
 </section>
 
-<section class="card sectionCard" aria-label="Highlights section">
-  <h2 class="sectionTitle">Highlights</h2>
-  <p class="sectionHint">
-    A quick visual tour of the retreat and the landscapes around it. Tap an image to linger on the details.
-  </p>
+<section class="grid" aria-label="Contact form and links">
 
-  <section class="galleryGrid" aria-label="Gallery images">
-    <div class="galleryImg g1">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_02.jpg" alt="Cloud forest landscape near the retreat" loading="lazy" decoding="async" />
-    </div>
+  <section class="card pad" aria-label="Contact form">
+    <h2 class="h2">Send A Message</h2>
+    <p class="hint">
+      This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
+    </p>
 
-    <div class="galleryImg g2">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_05.jpg" alt="Room and interior detail at the retreat" loading="lazy" decoding="async" />
-    </div>
+    <form id="tcfrContactForm" aria-label="Contact form">
+      <input type="hidden" name="form_type" value="contact" />
 
-    <div class="galleryImg g3">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_09.jpg" alt="Outdoor view and surrounding greenery" loading="lazy" decoding="async" />
-    </div>
+      <div class="formGrid">
+        <div class="field">
+          <label for="first_name">First name <span class="req">*</span></label>
+          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Your first name" autocapitalize="words" inputmode="text" spellcheck="false" />
+        </div>
 
-    <div class="galleryImg g4">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_07.jpg" alt="Quiet moments and natural textures" loading="lazy" decoding="async" />
-    </div>
+        <div class="field">
+          <label for="last_name">Last name <span class="req">*</span></label>
+          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Your last name" autocapitalize="words" inputmode="text" spellcheck="false" />
+        </div>
 
-    <div class="galleryImg g5">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_01.jpg" alt="Wide landscape highlight around Mindo" loading="lazy" decoding="async" />
-    </div>
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+        </div>
 
-    <div class="galleryImg g6">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_03.jpg" alt="Forest detail near The Cloud Forest Retreat" loading="lazy" decoding="async" />
-    </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Country code + phone number" />
+        </div>
 
-    <div class="galleryImg g7">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_08.jpg" alt="Views and scenery in the cloud forest" loading="lazy" decoding="async" />
-    </div>
+        <div class="field full">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message" required placeholder="Your message"></textarea>
+        </div>
 
-    <div class="galleryImg g8">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_06.jpg" alt="Retreat atmosphere and setting" loading="lazy" decoding="async" />
-    </div>
-
-    <div class="galleryImg g9">
-      <img src="/assets/images/pages/gallery/tcfr_gallery_04.jpg" alt="Nature and retreat details" loading="lazy" decoding="async" />
-    </div>
-  </section>
-</section>
-
-<section class="card sectionCard" aria-label="Short videos section">
-  <h2 class="sectionTitle">Short videos</h2>
-  <p class="sectionHint">
-    Quick clips that capture the atmosphere.
-  </p>
-
-  <section class="videoStrip" aria-label="Gallery videos">
-    <div class="videoCard" aria-label="Gallery video 1">
-      <div class="videoWrap">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/zpX3iZEhwA0?rel=0&modestbranding=1&playsinline=1"
-          title="The Cloud Forest Retreat short video"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+        <div class="field full">
+          <label for="how_did_you_hear_about_us">How did you hear about us?</label>
+          <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
+            <option value="">Select</option>
+            <option value="Referral">Referral</option>
+            <option value="Google Search">Google Search</option>
+            <option value="Google Maps">Google Maps</option>
+            <option value="Instagram">Instagram</option>
+            <option value="TikTok">TikTok</option>
+            <option value="YouTube">YouTube</option>
+            <option value="TripAdvisor">TripAdvisor</option>
+            <option value="Airbnb">Airbnb</option>
+            <option value="Vrbo">Vrbo</option>
+            <option value="Booking.com">Booking.com</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
       </div>
-    </div>
 
-    <div class="videoCard" aria-label="Gallery video 2">
-      <div class="videoWrap">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/NU31jotCIYg?rel=0&modestbranding=1&playsinline=1"
-          title="The Cloud Forest Retreat short video"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+      <div class="actionsRow">
+        <p class="miniNote">
+          By submitting, you agree we may contact you by email and, if provided, by phone.
+        </p>
+        <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Submit</button>
       </div>
-    </div>
+    </form>
+
+    <section id="tcfrContactStatusCard" class="card statusCard" aria-label="Submission status">
+      <h3 class="statusTitle">Message sent</h3>
+      <p class="statusText">
+        Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.
+      </p>
+    </section>
   </section>
+
+  <aside class="sideStack" aria-label="Contact shortcuts">
+
+    <section class="card sideCard" aria-label="Interested in booking">
+      <h3 class="sideTitle">Interested in booking?</h3>
+      <p class="sideP">
+        If you already have dates in mind, use our booking request form and we will follow up with availability and next steps.
+      </p>
+      <div class="btnRow" aria-label="Booking and gallery buttons">
+        <a class="linkBtn primary" href="/booking">Go To Booking</a>
+        <a class="linkBtn" href="/gallery/">View Gallery</a>
+      </div>
+    </section>
+
+    <section class="card sideCard" aria-label="Policies">
+      <h3 class="sideTitle">Policies</h3>
+      <p class="sideP">
+        Review our policies for privacy and terms of service.
+      </p>
+      <div class="btnRow" aria-label="Policy buttons">
+        <a class="linkBtn" href="/privacy-policy/">Privacy Policy</a>
+        <a class="linkBtn" href="/terms-of-service/">Terms of Service</a>
+      </div>
+    </section>
+
+    <section class="card imageCard" aria-label="Contact page image">
+      <div class="imageFrame">
+        <img src="/assets/images/pages/tcfr_contact_01.jpg" alt="Cloud forest morning at The Cloud Forest Retreat" loading="lazy" decoding="async" />
+        <div class="imageCaption">Mindo cloud forest. Quiet mornings, close-up nature.</div>
+      </div>
+    </section>
+
+  </aside>
+
 </section>
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
+  <script>
+    (function(){
+      "use strict";
+
+      var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyau_y10RvNiQ-nLDlE35UbAWoplw_z17Efw_2ta_V87RbPty5OeBP5q2PMMwZ72SeenA/exec";
+
+      function toTitleCase(s){
+        var t = String(s || "").trim();
+        if (!t) return "";
+        t = t.toLowerCase().replace(/\s+/g, " ");
+        var parts = t.split(" ");
+        for (var i = 0; i < parts.length; i++){
+          var w = parts[i];
+          if (!w) continue;
+          var hy = w.split("-");
+          for (var j = 0; j < hy.length; j++){
+            var seg = hy[j];
+            if (!seg) continue;
+            hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
+          }
+          parts[i] = hy.join("-");
+        }
+        return parts.join(" ");
+      }
+
+      var form = document.getElementById("tcfrContactForm");
+      var btn = document.getElementById("tcfrContactSubmitBtn");
+      var statusCard = document.getElementById("tcfrContactStatusCard");
+
+      var first = document.getElementById("first_name");
+      var last = document.getElementById("last_name");
+
+      function bindTitleCase(el){
+        if (!el) return;
+        el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
+      }
+      bindTitleCase(first);
+      bindTitleCase(last);
+
+      function setSending(isSending){
+        btn.disabled = isSending;
+        btn.textContent = isSending ? "Sending..." : "Submit";
+      }
+
+      function showError(msg){
+        statusCard.classList.add("show");
+        statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
+        statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
+        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      if (!form || !btn || !statusCard) return;
+
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        if (first) first.value = toTitleCase(first.value);
+        if (last) last.value = toTitleCase(last.value);
+
+        var fd = new FormData(form);
+
+        if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("message")){
+          showError("Please fill out all required fields.");
+          return;
+        }
+
+        setSending(true);
+
+        fetch(WEB_APP_URL, {
+          method: "POST",
+          body: fd,
+          mode: "no-cors"
+        })
+        .then(function(){
+          statusCard.classList.add("show");
+          statusCard.querySelector(".statusTitle").textContent = "Message sent";
+          statusCard.querySelector(".statusText").textContent = "Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.";
+          statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+          form.reset();
+          setSending(false);
+        })
+        .catch(function(){
+          setSending(false);
+          showError("We could not submit your message. Please try again.");
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
