@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us | The Cloud Forest Retreat</title>
-  <meta name="description" content="Escape to The Cloud Forest Retreat in Mindo, Ecuador - an eco-lodge where sustainability meets serenity. Learn our story, mission, and conservation commitment in the Chocó Andino UNESCO Biosphere Reserve." />
+  <title>About | Mindo Bird Watching</title>
+  <meta name="description" content="Learn about The Cloud Forest Retreat in Mindo, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/about/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mindo Bird Watching" />
+  <meta property="og:title" content="About | Mindo Bird Watching" />
+  <meta property="og:description" content="Learn about The Cloud Forest Retreat in Mindo, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/about/" />
+  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Mindo, Ecuador" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About | Mindo Bird Watching" />
+  <meta name="twitter:description" content="Learn about The Cloud Forest Retreat in Mindo, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
+  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -63,6 +80,7 @@
       font-weight: 800;
       font-size: 13px;
       color: rgba(11,26,16,0.75);
+      flex-wrap: wrap;
     }
     .crumbs a{ color: inherit; text-decoration: none; }
     .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
@@ -109,32 +127,41 @@
       font-size: 13px;
     }
 
-    /* HERO */
+    /* HERO (match the same hero box sizing used across pages: 340 desktop, 280 mobile) */
     .hero{
       margin-top: 14px;
-      position: relative;
-      height: 420px;
+      border: 1px solid var(--line);
       border-radius: var(--r);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.22);
       box-shadow: var(--shadow);
-      background: rgba(0,0,0,0.08);
+      background: var(--glass);
+      overflow: hidden;
+      position: relative;
+      color: var(--ink);
     }
-    .hero img{
+
+    .heroMedia{
+      position: relative;
+      min-height: 340px;
+      background: rgba(0,0,0,0.10);
+    }
+
+    .heroMedia img{
       width: 100%;
       height: 100%;
       object-fit: cover;
       transform: scale(1.01);
       display: block;
     }
+
     .heroOverlay{
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(900px 520px at 70% 18%, rgba(224,100,58,0.16), rgba(0,0,0,0) 58%),
-        linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.60));
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
       pointer-events: none;
     }
+
     .heroBadge{
       position: absolute;
       left: 14px;
@@ -142,7 +169,7 @@
       bottom: 14px;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.28);
+      background: rgba(0,0,0,0.30);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       padding: 14px;
@@ -269,7 +296,7 @@
     }
     .list li{ margin: 6px 0; }
 
-    /* MEDIA CARD (IMAGE BOX + HORIZONTAL VIDEO) */
+    /* MEDIA CARD */
     .mediaCard{
       position: relative;
     }
@@ -281,11 +308,13 @@
       height: 100%;
     }
 
+    /* Make the image box match the "image tile" feel used elsewhere */
     .imgBox{
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
+      background: #ccc;
+      box-shadow: var(--shadow);
       min-height: 260px;
       position: relative;
     }
@@ -294,6 +323,7 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      transform: scale(1.01);
     }
     .imgCap{
       position: absolute;
@@ -309,6 +339,7 @@
       font-weight: 900;
       font-size: 13px;
       letter-spacing: -0.01em;
+      z-index: 1;
     }
 
     .videoBox{
@@ -329,7 +360,7 @@
       display: block;
     }
 
-    /* SECTION: WHAT WE OFFER (TIGHT CARDS) */
+    /* OFFER GRID */
     .offerGrid{
       margin-top: 14px;
       display: grid;
@@ -388,7 +419,7 @@
       color: #0b2b12;
     }
 
-    /* COMMITMENT (FULL WIDTH) */
+    /* COMMITMENT */
     .commitInner{
       padding: 14px;
       display: grid;
@@ -465,7 +496,7 @@
 
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
-      .hero{ height: 320px; }
+      .heroMedia{ min-height: 280px; }
       .gridA{ grid-template-columns: 1fr; }
       .offerGrid{ grid-template-columns: 1fr; }
       .commitInner{ grid-template-columns: 1fr; }
@@ -489,21 +520,22 @@
     </section>
 <!-- HERO -->
 <section class="hero" aria-label="About hero">
-  <!-- Replace with your About hero image when ready -->
-  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
-  <div class="heroOverlay" aria-hidden="true"></div>
+  <div class="heroMedia" aria-label="Hero image">
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
+    <div class="heroOverlay" aria-hidden="true"></div>
 
-  <div class="heroBadge" aria-label="About intro">
-    <div class="kicker">Eco-lodge in Mindo, Ecuador</div>
-    <h1 class="heroH1">About Us</h1>
-    <p class="heroLead">
-      Escape to The Cloud Forest Retreat - a quiet eco-lodge in the heart of Mindo where sustainability meets serenity.
-      Come for the views, stay for the calm, and leave feeling restored.
-    </p>
+    <div class="heroBadge" aria-label="About intro">
+      <div class="kicker">Eco-lodge in Mindo, Ecuador</div>
+      <h1 class="heroH1">About Us</h1>
+      <p class="heroLead">
+        Escape to The Cloud Forest Retreat, a quiet eco-lodge in the heart of Mindo where sustainability meets serenity.
+        Come for the views, stay for the calm, and leave feeling restored.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- QUICK SUMMARY (NO EMPTY SPACE) -->
+<!-- QUICK SUMMARY -->
 <section class="card" style="margin-top:14px;" aria-label="At a glance">
   <div class="cardHead">
     <h2 class="cardTitle">At a glance</h2>
@@ -557,16 +589,14 @@
     </div>
 
     <div class="mediaInner">
-      <!-- Image box (replace source when ready) -->
       <div class="imgBox" aria-label="About image">
-        <img src="/assets/images/pages/tcfr_about_01.jpg" alt="About image placeholder" loading="lazy" decoding="async" />
+        <img src="/assets/images/pages/tcfr_about_01.jpg" alt="The Cloud Forest Retreat setting in Mindo, Ecuador" loading="lazy" decoding="async" />
         <div class="imgCap">A place designed for calm</div>
       </div>
 
-      <!-- Horizontal video embed (replace VIDEO_ID) -->
       <div class="videoBox" aria-label="About video">
         <iframe
-          src="https://youtu.be/OAtzi6Trz84"
+          src="https://www.youtube-nocookie.com/embed/OAtzi6Trz84?rel=0&modestbranding=1&playsinline=1"
           title="The Cloud Forest Retreat - About video"
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -577,7 +607,7 @@
   </aside>
 </section>
 
-<!-- WHAT WE OFFER (DENSE BUT READABLE) -->
+<!-- WHAT WE OFFER -->
 <section class="card" style="margin-top:14px;" aria-label="What we offer">
   <div class="cardHead">
     <h2 class="cardTitle">What we offer</h2>
@@ -659,7 +689,7 @@
   </div>
 </section>
 
-<!-- COMMITMENT (FULL WIDTH, NO EMPTY SPACE) -->
+<!-- COMMITMENT -->
 <section class="card" style="margin-top:14px;" aria-label="Our commitment">
   <div class="cardHead">
     <h2 class="cardTitle">Our commitment</h2>
