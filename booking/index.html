@@ -3,27 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Booking | Mindo Bird Watching</title>
-  <meta name="description" content="Request availability at The Cloud Forest Retreat in Mindo, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
+  <title>Booking | The Cloud Forest Retreat</title>
+  <meta name="description" content="Request availability at The Cloud Forest Retreat outside of Quito, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/booking/" />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Mindo Bird Watching" />
-  <meta property="og:title" content="Booking | Mindo Bird Watching" />
-  <meta property="og:description" content="Request availability at The Cloud Forest Retreat in Mindo, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="Booking | The Cloud Forest Retreat" />
+  <meta property="og:description" content="Request availability at The Cloud Forest Retreat outside of Quito, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
   <meta property="og:url" content="https://thecloudforestretreat.com/booking/" />
   <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat in Mindo, Ecuador" />
-  <!-- Twitter -->
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Booking | Mindo Bird Watching" />
-  <meta name="twitter:description" content="Request availability at The Cloud Forest Retreat in Mindo, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
+  <meta name="twitter:title" content="Booking | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Request availability at The Cloud Forest Retreat outside of Quito, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
   <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -49,366 +46,368 @@
       --ink: #0b1a10;
       --muted: rgba(11,26,16,0.72);
     }
+*{ box-sizing: border-box; }
+body{ margin: 0; }
 
-    *{ box-sizing: border-box; }
-    body{ margin: 0; }
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 76px;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 76px;
-    }
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+}
 
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-      min-width: 0;
-    }
+.hero{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
 
-    /* HERO (match the shared hero sizing: 340 desktop / 280 mobile) */
-    .hero{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      overflow: hidden;
-      position: relative;
-      color: var(--ink);
-    }
+/*
+  INNER PAGE HERO (Booking):
+  Shorter like Contact/About, keeps subject visible and reduces scroll before the form.
+*/
+.heroMedia{
+  position: relative;
+  height: clamp(320px, 42vh, 520px);
+  background: rgba(0,0,0,0.10);
+}
 
-    .heroMedia{
-      position: relative;
-      min-height: 340px;
-      background: rgba(0,0,0,0.10);
-    }
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .heroMedia img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
+.heroOverlay{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events: none;
+}
 
-    .heroOverlay{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      pointer-events: none;
-    }
+.heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+  max-width: 860px;
+}
 
-    .heroInner{
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.30);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 14px;
-      color: rgba(255,255,255,0.96);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-      max-width: 860px;
-    }
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(231,228,209,0.94);
+}
 
-    .kicker{
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 900;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: rgba(231,228,209,0.94);
-    }
+.heroH1{
+  margin: 10px 0 8px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 4.2vw, 52px);
+  color: #fff;
+  text-shadow: 0 14px 40px rgba(0,0,0,0.34);
+}
 
-    .heroH1{
-      margin: 10px 0 8px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-      font-size: clamp(32px, 4.2vw, 52px);
-      color: #fff;
-      text-shadow: 0 14px 40px rgba(0,0,0,0.34);
-    }
+.heroP{
+  margin: 0;
+  color: rgba(231,228,209,0.94);
+  font-size: 15.8px;
+  line-height: 1.75;
+  font-weight: 650;
+  text-shadow: 0 10px 26px rgba(0,0,0,0.18);
+  max-width: 92ch;
+}
 
-    .heroP{
-      margin: 0;
-      color: rgba(231,228,209,0.94);
-      font-size: 15.8px;
-      line-height: 1.75;
-      font-weight: 650;
-      text-shadow: 0 10px 26px rgba(0,0,0,0.18);
-      max-width: 92ch;
-    }
+.grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 14px;
+  align-items: start;
+}
 
-    /* Main grid */
-    .grid{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 14px;
-      align-items: start;
-    }
+.pad{ padding: 14px; }
 
-    .pad{ padding: 14px; }
+.h2{
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1.08;
+}
 
-    .h2{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 22px;
-      line-height: 1.08;
-    }
+.hint{
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14.6px;
+}
 
-    .hint{
-      margin: 0 0 12px;
-      color: var(--muted);
-      font-weight: 650;
-      line-height: 1.7;
-      font-size: 14.6px;
-    }
+.formGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
 
-    .formGrid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
+.field{ min-width: 0; }
+.full{ grid-column: 1 / -1; }
 
-    .field{ min-width: 0; }
-    .full{ grid-column: 1 / -1; }
+label{
+  display: block;
+  font-weight: 900;
+  color: var(--forest2);
+  font-size: 13px;
+  margin: 0 0 6px;
+}
 
-    label{
-      display: block;
-      font-weight: 900;
-      color: var(--forest2);
-      font-size: 13px;
-      margin: 0 0 6px;
-    }
+input, select, textarea{
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(13,89,37,0.16);
+  background: rgba(255,255,255,0.62);
+  padding: 12px 12px;
+  color: var(--ink);
+  outline: none;
+}
 
-    input, select, textarea{
-      width: 100%;
-      font-family: inherit;
-      font-size: 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(13,89,37,0.16);
-      background: rgba(255,255,255,0.62);
-      padding: 12px 12px;
-      color: var(--ink);
-      outline: none;
-    }
+select{ padding-right: 40px; }
 
-    select{ padding-right: 40px; }
+textarea{
+  min-height: 120px;
+  resize: vertical;
+}
 
-    textarea{
-      min-height: 120px;
-      resize: vertical;
-    }
+input:focus, select:focus, textarea:focus{
+  box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
+  border-color: rgba(224,100,58,0.45);
+}
 
-    input:focus, select:focus, textarea:focus{
-      box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
-      border-color: rgba(224,100,58,0.45);
-    }
+.req{
+  color: rgba(224,100,58,0.95);
+  font-weight: 900;
+  margin-left: 4px;
+}
 
-    .req{
-      color: rgba(224,100,58,0.95);
-      font-weight: 900;
-      margin-left: 4px;
-    }
+.actionsRow{
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    .actionsRow{
-      margin-top: 12px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
+.miniNote{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 72ch;
+}
 
-    .miniNote{
-      margin: 0;
-      color: rgba(11,26,16,0.68);
-      font-weight: 650;
-      font-size: 13px;
-      line-height: 1.6;
-      max-width: 72ch;
-    }
+.submitBtn{
+  appearance: none;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: var(--orange);
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(224,100,58,0.22);
+  min-width: 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
-    .submitBtn{
-      appearance: none;
-      border: 1px solid rgba(0,0,0,0.08);
-      background: var(--orange);
-      color: #fff;
-      border-radius: 999px;
-      padding: 12px 16px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 14px 30px rgba(224,100,58,0.22);
-      min-width: 180px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
+.submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
 
-    .submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
+.sideStack{
+  display: grid;
+  gap: 14px;
+  align-items: start;
+}
 
-    .sideStack{
-      display: grid;
-      gap: 14px;
-      align-items: start;
-    }
+.sideCard{
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
 
-    .sideCard{
-      padding: 14px;
-      position: relative;
-      overflow: hidden;
-    }
+.sideCard:before{
+  content:"";
+  position:absolute;
+  inset: -120px -120px auto auto;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.18), rgba(224,100,58,0) 62%);
+  pointer-events:none;
+}
 
-    .sideCard:before{
-      content:"";
-      position:absolute;
-      inset: -120px -120px auto auto;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.18), rgba(224,100,58,0) 62%);
-      pointer-events:none;
-    }
+.sideTitle{
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--forest);
+  position: relative;
+}
 
-    .sideTitle{
-      margin: 0 0 8px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 20px;
-      line-height: 1.1;
-      color: var(--forest);
-      position: relative;
-    }
+.sideP{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.6px;
+  position: relative;
+}
 
-    .sideP{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.6px;
-      position: relative;
-    }
+.statusCard{
+  padding: 14px;
+  display: none;
+}
+.statusCard.show{ display: block; }
 
-    /* Status card */
-    .statusCard{
-      padding: 14px;
-      display: none;
-    }
-    .statusCard.show{ display: block; }
+.statusTitle{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  color: var(--forest);
+}
 
-    .statusTitle{
-      margin: 0 0 6px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 20px;
-      color: var(--forest);
-    }
+.statusText{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.6px;
+}
 
-    .statusText{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.6px;
-    }
+.sideImageCard{
+  padding: 14px;
+}
 
-    /* Right-column image placeholders (keep aligned with left column) */
-    .sideImageCard{
-      padding: 14px;
-    }
+.sideImageFrame{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: #ccc;
+  box-shadow: var(--shadow);
+}
 
-    .sideImageFrame{
-      position: relative;
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: #ccc;
-      box-shadow: var(--shadow);
-    }
+.sideImageFrame img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .sideImageFrame img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
+.sideImageFrame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.26));
+  pointer-events:none;
+}
 
-    .sideImageFrame::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.26));
-      pointer-events:none;
-    }
+.sideImageCaption{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  color: rgba(255,255,255,0.96);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-shadow: 0 14px 40px rgba(0,0,0,0.40);
+  font-size: 13.5px;
+  z-index: 1;
+}
 
-    .sideImageCaption{
-      position: absolute;
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
-      color: rgba(255,255,255,0.96);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      text-shadow: 0 14px 40px rgba(0,0,0,0.40);
-      font-size: 13.5px;
-      z-index: 1;
-    }
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 64px; }
 
-    @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 64px; }
-      .heroMedia{ min-height: 280px; }
-      .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
-      .grid{ grid-template-columns: 1fr; }
-      .formGrid{ grid-template-columns: 1fr; }
-      .submitBtn{ width: 100%; }
-      .actionsRow{ gap: 12px; }
-      .sideImageFrame{ aspect-ratio: 16 / 10; }
-    }
+  .heroMedia{ height: clamp(240px, 34vh, 340px); }
+  .heroMedia img{ object-position: center 62%; }
+
+  .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
+  .grid{ grid-template-columns: 1fr; }
+  .formGrid{ grid-template-columns: 1fr; }
+  .submitBtn{ width: 100%; }
+  .actionsRow{ gap: 12px; }
+  .sideImageFrame{ aspect-ratio: 16 / 10; }
+}
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
   <main class="wrap" aria-label="Booking page">
-<section class="hero" aria-label="Booking hero">
-  <div class="heroMedia" aria-label="Hero image">
-    <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
-    <div class="heroOverlay" aria-hidden="true"></div>
-    <div class="heroInner">
-      <div class="kicker">Request availability</div>
-      <h1 class="heroH1">Book Your Stay</h1>
-      <p class="heroP">
-        Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability and next steps.
-        If needed, we can also help arrange ground transportation from Quito or the airport.
-      </p>
-    </div>
-  </div>
-</section>
-
+    <section class="hero" aria-label="Booking hero">
+      <div class="heroMedia" aria-label="Hero image">
+        <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
+        <div class="heroOverlay" aria-hidden="true"></div>
+        <div class="heroInner">
+          <div class="kicker">Request availability</div>
+          <h1 class="heroH1">Book Your Stay</h1>
+          <p class="heroP">
+            Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability and next steps.
+            If needed, we can also help arrange ground transportation from Quito or the airport.
+          </p>
+        </div>
+      </div>
+    </section>
 <section class="grid" aria-label="Booking form and details">
-
   <section class="card pad" aria-label="Booking request form">
     <h2 class="h2">Booking Request</h2>
     <p class="hint">
@@ -417,7 +416,6 @@
 
     <form id="tcfrBookingForm" aria-label="Booking form">
       <div class="formGrid">
-
         <div class="field">
           <label for="first_name">First name <span class="req">*</span></label>
           <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Your first name" autocapitalize="words" inputmode="text" spellcheck="false" />
@@ -489,7 +487,6 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
         </div>
-
       </div>
 
       <div class="actionsRow">
@@ -502,8 +499,6 @@
   </section>
 
   <aside class="sideStack" aria-label="Booking details (right column)">
-
-    <!-- Keep this first so success message appears near top -->
     <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
       <h3 class="statusTitle">Request sent</h3>
       <p class="statusText">
@@ -520,16 +515,13 @@
       </p>
     </section>
 
-    <!-- NEW: 3x4 image placeholder under What happens next -->
     <section class="card sideImageCard" aria-label="Booking image placeholder">
       <div class="sideImageFrame">
-        <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="The Cloud Forest Retreat view placeholder" loading="lazy" decoding="async" />
+        <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="The Cloud Forest Retreat view" loading="lazy" decoding="async" />
         <div class="sideImageCaption">A calm place to reset in the cloud forest</div>
       </div>
     </section>
-
   </aside>
-
 </section>
   </main>
   <div id="siteFooter"></div>
@@ -537,92 +529,91 @@
   <script>
     (function(){
       "use strict";
+  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec";
 
-      var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec";
-
-      function toTitleCase(s){
-        var t = String(s || "").trim();
-        if (!t) return "";
-        t = t.toLowerCase().replace(/\s+/g, " ");
-        var parts = t.split(" ");
-        for (var i = 0; i < parts.length; i++){
-          var w = parts[i];
-          if (!w) continue;
-          var hy = w.split("-");
-          for (var j = 0; j < hy.length; j++){
-            var seg = hy[j];
-            if (!seg) continue;
-            hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
-          }
-          parts[i] = hy.join("-");
-        }
-        return parts.join(" ");
+  function toTitleCase(s){
+    var t = String(s || "").trim();
+    if (!t) return "";
+    t = t.toLowerCase().replace(/\s+/g, " ");
+    var parts = t.split(" ");
+    for (var i = 0; i < parts.length; i++){
+      var w = parts[i];
+      if (!w) continue;
+      var hy = w.split("-");
+      for (var j = 0; j < hy.length; j++){
+        var seg = hy[j];
+        if (!seg) continue;
+        hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
       }
+      parts[i] = hy.join("-");
+    }
+    return parts.join(" ");
+  }
 
-      var form = document.getElementById("tcfrBookingForm");
-      var btn = document.getElementById("tcfrSubmitBtn");
-      var statusCard = document.getElementById("tcfrStatusCard");
+  var form = document.getElementById("tcfrBookingForm");
+  var btn = document.getElementById("tcfrSubmitBtn");
+  var statusCard = document.getElementById("tcfrStatusCard");
 
-      var first = document.getElementById("first_name");
-      var last = document.getElementById("last_name");
+  var first = document.getElementById("first_name");
+  var last = document.getElementById("last_name");
 
-      function bindTitleCase(el){
-        if (!el) return;
-        el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
-      }
-      bindTitleCase(first);
-      bindTitleCase(last);
+  function bindTitleCase(el){
+    if (!el) return;
+    el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
+  }
+  bindTitleCase(first);
+  bindTitleCase(last);
 
-      function setSending(isSending){
-        btn.disabled = isSending;
-        btn.textContent = isSending ? "Sending..." : "Submit request";
-      }
+  function setSending(isSending){
+    btn.disabled = isSending;
+    btn.textContent = isSending ? "Sending..." : "Submit request";
+  }
 
-      function showSuccess(){
-        statusCard.classList.add("show");
-        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+  function showSuccess(){
+    statusCard.classList.add("show");
+    statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
-      function showError(msg){
-        statusCard.classList.add("show");
-        statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
-        statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
-        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+  function showError(msg){
+    statusCard.classList.add("show");
+    statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
+    statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
+    statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
-      if (!form || !btn || !statusCard) return;
+  if (!form || !btn || !statusCard) return;
 
-      form.addEventListener("submit", function(e){
-        e.preventDefault();
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
 
-        if (first) first.value = toTitleCase(first.value);
-        if (last) last.value = toTitleCase(last.value);
+    if (first) first.value = toTitleCase(first.value);
+    if (last) last.value = toTitleCase(last.value);
 
-        var fd = new FormData(form);
+    var fd = new FormData(form);
 
-        if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
-          showError("Please fill out all required fields.");
-          return;
-        }
+    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
+      showError("Please fill out all required fields.");
+      return;
+    }
 
-        setSending(true);
+    setSending(true);
 
-        fetch(WEB_APP_URL, {
-          method: "POST",
-          body: fd,
-          mode: "no-cors"
-        })
-        .then(function(){
-          showSuccess();
-          form.reset();
-          setSending(false);
-        })
-        .catch(function(){
-          setSending(false);
-          showError("We could not submit your request. Please try again.");
-        });
-      });
-    })();
+    fetch(WEB_APP_URL, {
+      method: "POST",
+      body: fd,
+      mode: "no-cors"
+    })
+    .then(function(){
+      showSuccess();
+      form.reset();
+      setSending(false);
+    })
+    .catch(function(){
+      setSending(false);
+      showError("We could not submit your request. Please try again.");
+    });
+  });
+})();
   </script>
 </body>
 </html>
