@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | The Cloud Forest Retreat</title>
-  <meta name="description" content="Learn about The Cloud Forest Retreat in Mindo, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
+  <meta name="description" content="Learn about The Cloud Forest Retreat outside of Quito, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/about/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
   <meta property="og:title" content="About | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Learn about The Cloud Forest Retreat in Mindo, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
+  <meta property="og:description" content="Learn about The Cloud Forest Retreat outside of Quito, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
   <meta property="og:url" content="https://thecloudforestretreat.com/about/" />
   <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat in Mindo, Ecuador" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Learn about The Cloud Forest Retreat in Mindo, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
+  <meta name="twitter:description" content="Learn about The Cloud Forest Retreat outside of Quito, Ecuador: our story, eco-lodge values, and a calm, nature-first stay inside the cloud forest." />
   <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -45,635 +45,498 @@
       --forest: #0D5925;
       --accent: #E0643A;
     }
+*{ box-sizing:border-box; }
+body{ margin:0; }
 
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 76px;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 76px;
-    }
+.topBand{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .topBand{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+.crumbs{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+  flex-wrap: wrap;
+}
+.crumbs a{ color: inherit; text-decoration: none; }
+.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-      flex-wrap: wrap;
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+.quickActions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+}
 
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-      min-width: 0;
-    }
+.cardHead{
+  padding: 14px 14px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    .card + .card{ margin-top:16px; }
+.cardTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+}
 
-    .cardHead{
-      padding: 14px 14px 0;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.cardHint{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 700;
+  font-size: 13px;
+}
 
-    .cardTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 20px;
-    }
+.hero{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
 
-    .cardHint{
-      margin: 0;
-      color: rgba(11,26,16,0.68);
-      font-weight: 700;
-      font-size: 13px;
-    }
+/*
+  INNER PAGE HERO (About):
+  Shorter, consistent with Contact adjustments, while keeping the focal subject visible.
+  If your About hero image is not the house shot, this still creates a consistent inner-page rhythm.
+*/
+.heroMedia{
+  position: relative;
+  height: clamp(320px, 42vh, 520px);
+  background: rgba(0,0,0,0.10);
+}
 
-    /* HERO (consistent sizing across pages: 340 desktop, 280 mobile) */
-    .hero{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      overflow: hidden;
-      position: relative;
-      color: var(--ink);
-    }
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+  transform: scale(1.01);
+  display: block;
+}
 
-    .heroMedia{
-      position: relative;
-      min-height: 340px;
-      background: rgba(0,0,0,0.10);
-    }
+.heroOverlay{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events: none;
+}
 
-    .heroMedia img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.01);
-      display: block;
-    }
+.heroBadge{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: #fff;
+  box-shadow: 0 18px 55px rgba(0,0,0,0.22);
+  max-width: 980px;
+}
 
-    .heroOverlay{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      pointer-events: none;
-    }
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
 
-    .heroBadge{
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.30);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 14px;
-      color: #fff;
-      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
-      max-width: 980px;
-    }
+.heroH1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(34px, 4.2vw, 54px);
+  color: #fff;
+}
 
-    .kicker{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: rgba(255,255,255,0.92);
-    }
+.heroLead{
+  margin: 0;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.8px;
+  line-height: 1.75;
+  font-weight: 650;
+  max-width: 92ch;
+}
 
-    .heroH1{
-      margin: 8px 0 6px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-      font-size: clamp(34px, 4.2vw, 54px);
-      color: #fff;
-    }
+.pillRow{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.pill strong{ color: var(--forest); font-weight: 900; }
 
-    .heroLead{
-      margin: 0;
-      color: rgba(231,228,209,0.92);
-      font-size: 15.8px;
-      line-height: 1.75;
-      font-weight: 650;
-      max-width: 92ch;
-    }
+.gridA{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 14px;
+  align-items: stretch;
+}
 
-    /* QUICK PILL ROW */
-    .pillRow{
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-    .pill strong{ color: var(--forest); font-weight: 900; }
+.pad{ padding: 14px; }
 
-    .pad{ padding: 14px; }
+.p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.78;
+  font-size: 14.9px;
+  font-weight: 650;
+}
+.p + .p{ margin-top: 10px; }
 
-    .p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.78;
-      font-size: 14.9px;
-      font-weight: 650;
-    }
-    .p + .p{ margin-top: 10px; }
+.callout{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+.calloutQuote{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.18;
+  color: var(--forest);
+}
+.callout p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.4px;
+}
 
-    .callout{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      padding: 14px;
-      margin-top: 12px;
-      display: grid;
-      gap: 10px;
-    }
-    .calloutQuote{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-      line-height: 1.18;
-      color: var(--forest);
-    }
-    .callout p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.4px;
-    }
+.storyPad{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
 
-    /* PARTNER PROMO (same pattern as Mindo page) */
-    .partnerWrap{
-      margin-top: 14px;
-    }
-    .partnerCard{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: rgba(245,245,220,0.82);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-    }
-    .partnerInner{
-      padding: 14px;
-      display: grid;
-      gap: 12px;
-    }
-    .partnerTop{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .partnerBadge{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      font-weight: 900;
-      font-size: 12.6px;
-      white-space: nowrap;
-    }
-    .partnerMark{
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: linear-gradient(180deg, rgba(13,89,37,0.10), rgba(13,89,37,0.04));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0b2b12;
-      font-weight: 1000;
-      letter-spacing: -0.02em;
-      font-size: 14px;
-      flex: 0 0 auto;
-    }
-    .partnerName{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      color: var(--forest);
-      font-size: 20px;
-      line-height: 1.1;
-    }
-    .partnerSub{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.8px;
-      max-width: 92ch;
-    }
-    .partnerBullets{
-      margin: 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.4px;
-    }
-    .partnerActions{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-top: 2px;
-    }
-    .partnerBtn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 12px;
-      border-radius: 14px;
-      font-weight: 900;
-      font-size: 13.5px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      user-select: none;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-    .partnerBtnPrimary{
-      background: var(--forest);
-      color: #fff;
-      box-shadow: 0 18px 40px rgba(13,89,37,0.18);
-    }
-    .partnerBtnSecondary{
-      background: rgba(255,255,255,0.62);
-      color: #0b2b12;
-      border-color: rgba(13,89,37,0.18);
-      box-shadow: 0 12px 26px rgba(13,89,37,0.10);
-    }
-    .partnerFine{
-      margin: 0;
-      padding-top: 10px;
-      border-top: 1px solid rgba(0,0,0,0.06);
-      color: rgba(11,26,16,0.70);
-      font-size: 12.8px;
-      line-height: 1.6;
-      font-weight: 650;
-    }
-    .partnerLink{
-      color: var(--forest);
-      font-weight: 900;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
+.storyMediaSlot{
+  margin-top: 12px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+}
 
-    /* MAIN GRID */
-    .gridA{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 14px;
-      align-items: stretch;
-    }
+.storySquare{
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: #ccc;
+  box-shadow: var(--shadow);
+  position: relative;
+}
 
-    /* Make the Our story column "use the space" and keep the square image centered */
-    .storyPad{
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      min-height: 0;
-    }
+.storySquare img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
 
-    .storyMediaSlot{
-      margin-top: 12px;
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 240px;
-    }
+.storySquareCap{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 9px 11px;
+  border-radius: 14px;
+  background: rgba(245,245,220,0.92);
+  border: 1px solid rgba(13,89,37,0.16);
+  color: #0b2b12;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  z-index: 1;
+}
 
-    .storySquare{
-      width: 100%;
-      max-width: 420px;
-      aspect-ratio: 1 / 1;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: #ccc;
-      box-shadow: var(--shadow);
-      position: relative;
-    }
+.mediaCard{ position: relative; }
 
-    .storySquare img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
+.mediaInner{
+  padding: 14px;
+  padding-bottom: 18px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 12px;
+  height: 100%;
+}
 
-    .storySquareCap{
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      padding: 9px 11px;
-      border-radius: 14px;
-      background: rgba(245,245,220,0.92);
-      border: 1px solid rgba(13,89,37,0.16);
-      color: #0b2b12;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: -0.01em;
-      z-index: 1;
-    }
+.imgBox{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: #ccc;
+  box-shadow: var(--shadow);
+  min-height: 260px;
+  position: relative;
+}
+.imgBox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+.imgCap{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 9px 11px;
+  border-radius: 14px;
+  background: rgba(245,245,220,0.92);
+  border: 1px solid rgba(13,89,37,0.16);
+  color: #0b2b12;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  z-index: 1;
+}
 
-    /* MEDIA CARD (right column) */
-    .mediaCard{ position: relative; }
+.videoBox{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  position: relative;
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+  margin-bottom: 6px;
+}
+.videoBox iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
 
-    .mediaInner{
-      padding: 14px;
-      padding-bottom: 18px;
-      display: grid;
-      grid-template-rows: auto auto;
-      gap: 12px;
-      height: 100%;
-    }
+.offerGrid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  align-items: stretch;
+}
 
-    .imgBox{
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: #ccc;
-      box-shadow: var(--shadow);
-      min-height: 260px;
-      position: relative;
-    }
-    .imgBox img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
-    .imgCap{
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      padding: 9px 11px;
-      border-radius: 14px;
-      background: rgba(245,245,220,0.92);
-      border: 1px solid rgba(13,89,37,0.16);
-      color: #0b2b12;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: -0.01em;
-      z-index: 1;
-    }
+.mini{
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.mini:before{
+  content:"";
+  position:absolute;
+  inset: -140px -140px auto auto;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+  pointer-events: none;
+}
+.mini h3{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.15;
+  color: var(--forest);
+  position: relative;
+}
+.mini p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.4px;
+  position: relative;
+}
+.mini .tagRow{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.tag{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.60);
+  font-weight: 800;
+  color: #0b2b12;
+}
 
-    .videoBox{
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      position: relative;
-      aspect-ratio: 16 / 9;
-      min-height: 220px;
-      margin-bottom: 6px;
-    }
-    .videoBox iframe{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
+.commitInner{
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 14px;
+  align-items: stretch;
+}
+.commitBox{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  height: 100%;
+}
+.commitBox h3{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.15;
+  color: var(--forest);
+}
+.commitBox p{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.4px;
+}
 
-    /* OFFER GRID */
-    .offerGrid{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      align-items: stretch;
-    }
+.ctaBand{
+  margin-top: 14px;
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.12);
+  background: rgba(245,245,220,0.82);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
 
-    .mini{
-      padding: 14px;
-      display: grid;
-      gap: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-    .mini:before{
-      content:"";
-      position:absolute;
-      inset: -140px -140px auto auto;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
-      pointer-events: none;
-    }
-    .mini h3{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-      line-height: 1.15;
-      color: var(--forest);
-      position: relative;
-    }
-    .mini p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.4px;
-      position: relative;
-    }
-    .mini .tagRow{
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      position: relative;
-    }
-    .tag{
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.60);
-      font-weight: 800;
-      color: #0b2b12;
-    }
+.ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
 
-    /* COMMITMENT */
-    .commitInner{
-      padding: 14px;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 14px;
-      align-items: stretch;
-    }
-    .commitBox{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.55);
-      padding: 14px;
-      display: grid;
-      gap: 10px;
-      height: 100%;
-    }
-    .commitBox h3{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-      line-height: 1.15;
-      color: var(--forest);
-    }
-    .commitBox p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.4px;
-    }
+.ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 86ch;
+}
 
-    .list{
-      margin: 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-weight: 650;
-      font-size: 14.4px;
-    }
+.ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    /* CTA BAND */
-    .ctaBand{
-      margin-top: 14px;
-      border-radius: var(--r);
-      border: 1px solid rgba(11,26,16,0.12);
-      background: rgba(245,245,220,0.82);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 64px; }
 
-    .ctaBand h2{
-      margin: 0 0 6px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-    }
+  .heroMedia{ height: clamp(240px, 34vh, 340px); }
+  .heroMedia img{ object-position: center 62%; }
 
-    .ctaBand p{
-      margin: 0;
-      color: rgba(11,26,16,0.72);
-      font-weight: 650;
-      line-height: 1.7;
-      max-width: 86ch;
-    }
-
-    .ctaBtns{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 64px; }
-      .heroMedia{ min-height: 280px; }
-      .gridA{ grid-template-columns: 1fr; }
-      .offerGrid{ grid-template-columns: 1fr; }
-      .commitInner{ grid-template-columns: 1fr; }
-      .imgBox{ min-height: 220px; }
-      .storyMediaSlot{ min-height: 220px; }
-      .storySquare{ max-width: 520px; }
-      .mediaInner{ padding-bottom: 16px; }
-      .videoBox{ margin-bottom: 4px; }
-    }
+  .gridA{ grid-template-columns: 1fr; }
+  .offerGrid{ grid-template-columns: 1fr; }
+  .commitInner{ grid-template-columns: 1fr; }
+  .imgBox{ min-height: 220px; }
+  .storyMediaSlot{ min-height: 220px; }
+  .storySquare{ max-width: 520px; }
+  .mediaInner{ padding-bottom: 16px; }
+  .videoBox{ margin-bottom: 4px; }
+}
   </style>
 </head>
 <body>
@@ -690,24 +553,22 @@
         <a class="btn primary" href="/booking/">Book Your Stay</a>
       </div>
     </section>
-<!-- HERO -->
 <section class="hero" aria-label="About hero">
   <div class="heroMedia" aria-label="Hero image">
-    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
+    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat in Ecuador" loading="eager" decoding="async" />
     <div class="heroOverlay" aria-hidden="true"></div>
 
     <div class="heroBadge" aria-label="About intro">
-      <div class="kicker">Eco-lodge in Mindo, Ecuador</div>
+      <div class="kicker">Eco-lodge in Ecuador</div>
       <h1 class="heroH1">About Us</h1>
       <p class="heroLead">
-        Escape to The Cloud Forest Retreat, a quiet eco-lodge in the heart of Mindo where sustainability meets serenity.
+        Escape to The Cloud Forest Retreat, a quiet eco-lodge where sustainability meets serenity.
         Come for the views, stay for the calm, and leave feeling restored.
       </p>
     </div>
   </div>
 </section>
 
-<!-- QUICK SUMMARY -->
 <section class="card" style="margin-top:14px;" aria-label="At a glance">
   <div class="cardHead">
     <h2 class="cardTitle">At a glance</h2>
@@ -728,7 +589,6 @@
   </div>
 </section>
 
-<!-- MAIN STORY + MEDIA -->
 <section class="gridA" aria-label="Our story and media">
   <article class="card" aria-label="Our story">
     <div class="cardHead">
@@ -770,7 +630,7 @@
 
     <div class="mediaInner">
       <div class="imgBox" aria-label="About image">
-        <img src="/assets/images/pages/tcfr_about_01.jpg" alt="The Cloud Forest Retreat setting in Mindo, Ecuador" loading="lazy" decoding="async" />
+        <img src="/assets/images/pages/tcfr_about_01.jpg" alt="The Cloud Forest Retreat setting in Ecuador" loading="lazy" decoding="async" />
         <div class="imgCap">A place designed for calm</div>
       </div>
 
@@ -787,7 +647,6 @@
   </aside>
 </section>
 
-<!-- WHAT WE OFFER -->
 <section class="card" style="margin-top:14px;" aria-label="What we offer">
   <div class="cardHead">
     <h2 class="cardTitle">What we offer</h2>
@@ -857,40 +716,6 @@
   </div>
 </section>
 
-<!-- RECOMMENDED OPERATOR (same approach as the Mindo destination page) -->
-<section class="partnerWrap" aria-label="Recommended local tour operator">
-  <div class="partnerCard">
-    <div class="partnerInner">
-      <div class="partnerTop">
-        <div class="partnerBadge">Recommended local operator</div>
-        <div class="partnerMark" aria-hidden="true">MBW</div>
-      </div>
-
-      <h2 class="partnerName">Mindo Bird Watching</h2>
-      <p class="partnerSub">
-        If birding is one of your priorities while staying in Mindo, a local guide helps you get the timing right and spot more species with less guesswork.
-      </p>
-
-      <ul class="partnerBullets" aria-label="Operator highlights">
-        <li>Early-morning birding tours (best light and activity)</li>
-        <li>Half-day and full-day options from Mindo</li>
-        <li>Cloud forest expertise for hummingbirds and endemic species</li>
-      </ul>
-
-      <div class="partnerActions" aria-label="Operator actions">
-        <a class="partnerBtn partnerBtnPrimary" href="https://www.mindobirdwatching.com/?utm_source=thecloudforestretreat&utm_medium=referral&utm_campaign=about_page&utm_content=operator_primary" target="_blank" rel="noopener" aria-label="Visit Mindo Bird Watching website">Visit Website</a>
-        <a class="partnerBtn partnerBtnSecondary" href="https://www.mindobirdwatching.com/?utm_source=thecloudforestretreat&utm_medium=referral&utm_campaign=about_page&utm_content=operator_secondary" target="_blank" rel="noopener" aria-label="See tours on Mindo Bird Watching">See Tours</a>
-      </div>
-
-      <p class="partnerFine">
-        Note: This is a third-party recommendation. Availability and tour details are handled directly by the operator. Learn more at
-        <a class="partnerLink" href="https://www.mindobirdwatching.com/?utm_source=thecloudforestretreat&utm_medium=referral&utm_campaign=about_page&utm_content=operator_textlink" target="_blank" rel="noopener">mindobirdwatching.com</a>.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- COMMITMENT -->
 <section class="card" style="margin-top:14px;" aria-label="Our commitment">
   <div class="cardHead">
     <h2 class="cardTitle">Our commitment</h2>
@@ -927,7 +752,6 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="ctaBand" aria-label="Booking call to action">
   <div>
     <h2>Ready to slow down in the cloud forest?</h2>
