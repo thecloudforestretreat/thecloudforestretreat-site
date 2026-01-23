@@ -282,18 +282,18 @@ body{ margin:0; }
   min-height: 0;
 }
 
+/* UPDATED: Make the left-story image fill the column width and avoid "empty space" stretching */
 .storyMediaSlot{
   margin-top: 12px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 240px;
+  flex: 0 0 auto;
+  display: block;
+  min-height: 0;
 }
 
+/* UPDATED: Remove the small max-width cap so the square can scale up */
 .storySquare{
   width: 100%;
-  max-width: 420px;
+  max-width: none;
   aspect-ratio: 1 / 1;
   border-radius: 18px;
   overflow: hidden;
@@ -341,7 +341,7 @@ body{ margin:0; }
 
 .imgBox{
   border-radius: 18px;
-  overflow: hidden;
+  overflow:hidden;
   border: 1px solid rgba(11,26,16,0.10);
   background: #ccc;
   box-shadow: var(--shadow);
@@ -532,8 +532,8 @@ body{ margin:0; }
   .offerGrid{ grid-template-columns: 1fr; }
   .commitInner{ grid-template-columns: 1fr; }
   .imgBox{ min-height: 220px; }
-  .storyMediaSlot{ min-height: 220px; }
-  .storySquare{ max-width: 520px; }
+  .storyMediaSlot{ min-height: 0; }
+  .storySquare{ max-width: none; }
   .mediaInner{ padding-bottom: 16px; }
   .videoBox{ margin-bottom: 4px; }
 }
@@ -555,7 +555,7 @@ body{ margin:0; }
     </section>
 <section class="hero" aria-label="About hero">
   <div class="heroMedia" aria-label="Hero image">
-    <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="The Cloud Forest Retreat in Ecuador" loading="eager" decoding="async" />
+    <img src="/assets/images/pages/tcfr_assets_images_about_hero_01.jpg" alt="The Cloud Forest Retreat in Ecuador" loading="eager" decoding="async" />
     <div class="heroOverlay" aria-hidden="true"></div>
 
     <div class="heroBadge" aria-label="About intro">
@@ -615,7 +615,7 @@ body{ margin:0; }
 
       <div class="storyMediaSlot" aria-label="Our story image slot">
         <div class="storySquare" aria-label="Our story image">
-          <img src="/assets/images/pages/tcfr_about_01.jpg" alt="Cloud forest view near The Cloud Forest Retreat" loading="lazy" decoding="async" />
+          <img src="/assets/images/pages/tcfr_assets_images_about_02.jpg" alt="Cloud forest view near The Cloud Forest Retreat" loading="lazy" decoding="async" />
           <div class="storySquareCap">A quiet place to reset</div>
         </div>
       </div>
