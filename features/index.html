@@ -108,11 +108,14 @@ body{ margin:0; }
 
 .heroMedia{
   position: relative;
-  min-height: 340px;
+  overflow: hidden;
+  height: 340px;
   background: rgba(0,0,0,0.10);
 }
 
 .heroMedia img{
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -447,7 +450,7 @@ body{ margin:0; }
 
 @media (max-width: 900px){
   .wrap{ padding: 12px 14px 74px; }
-  .heroMedia{ min-height: 280px; }
+  .heroMedia{ height: 280px; }
   .grid{ grid-template-columns: 1fr; }
   .cardMedia{ aspect-ratio: 4 / 3; }
 }
