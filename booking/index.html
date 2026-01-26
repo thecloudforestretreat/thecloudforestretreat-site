@@ -180,6 +180,96 @@ body{ margin: 0; }
   font-size: 14.6px;
 }
 
+/* OTA (booking-site) module */
+.otaBlock{
+  margin-top: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.otaTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.otaHint{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.otaControls{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  max-width: 360px;
+}
+
+.otaGrid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+.otaBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(13,89,37,0.16);
+  background: rgba(245,245,220,0.78);
+  box-shadow: 0 10px 22px rgba(13,89,37,0.10);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 56px;
+}
+
+.otaBtn:hover{
+  transform: translateY(-1px);
+}
+
+.otaBtn:focus{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
+  border-color: rgba(224,100,58,0.45);
+}
+
+.otaBtn img{
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.otaBtn.is-disabled{
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.otaNote{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 650;
+  line-height: 1.6;
+  font-size: 13px;
+  max-width: 92ch;
+}
+
+
 .formGrid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -401,7 +491,7 @@ input:focus, select:focus, textarea:focus{
           <div class="kicker">Request availability</div>
           <h1 class="heroH1">Book Your Stay</h1>
           <p class="heroP">
-            Tell us your ideal dates, group size, and room preference. We will follow up quickly with availability and next steps.
+            Share your preferred travel dates, group size, and room preference. We will follow up quickly with availability and next steps.
             If needed, we can also help arrange ground transportation from Quito or the airport.
           </p>
         </div>
@@ -413,6 +503,44 @@ input:focus, select:focus, textarea:focus{
     <p class="hint">
       This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
     </p>
+
+    
+    <div class="otaBlock" aria-label="Instant booking on partner sites">
+      <h3 class="otaTitle">Book instantly on a booking site</h3>
+      <p class="otaHint">
+        Choose a stay type, then pick a site. If you prefer, you can still send a direct booking request using the form below.
+      </p>
+
+      <div class="otaControls" aria-label="Stay type selection">
+        <label for="ota_room">Stay type</label>
+        <select id="ota_room" name="ota_room">
+          <option value="Entire house">Entire house</option>
+          <option value="Panoramic Suite">Panoramic Suite</option>
+          <option value="Sunrise Room">Sunrise Room</option>
+          <option value="Sunset Room">Sunset Room</option>
+        </select>
+      </div>
+
+      <div class="otaGrid" aria-label="Booking site links">
+        <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Airbnb">
+          <img src="/assets/images/pages/booking/tcfr_booking_airbnb.png" alt="Airbnb" loading="lazy" decoding="async" />
+        </a>
+        <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Vrbo">
+          <img src="/assets/images/pages/booking/tcfr_booking_vrbo.png" alt="Vrbo" loading="lazy" decoding="async" />
+        </a>
+        <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Expedia">
+          <img src="/assets/images/pages/booking/tcfr_booking_expedia.png" alt="Expedia" loading="lazy" decoding="async" />
+        </a>
+        <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Book on Booking.com (coming soon)" aria-disabled="true">
+          <img src="/assets/images/pages/booking/tcfr_booking_booking.png" alt="Booking.com" loading="lazy" decoding="async" />
+        </a>
+      </div>
+
+      <p class="otaNote">
+        On these sites we list the entire house and each room separately, so you can book the stay type that matches your trip.
+      </p>
+    </div>
+
 
     <form id="tcfrBookingForm" aria-label="Booking form">
       <div class="formGrid">
@@ -530,6 +658,108 @@ input:focus, select:focus, textarea:focus{
     (function(){
       "use strict";
   var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec";
+
+
+  var OTA_LINKS = {
+    "Entire house": {
+      "airbnb": "https://airbnb.com/h/thecloudforestretreat-entire",
+      "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4506928vb?dateless=true&x_pwa=1&rfrr=HSR&pwa_ts=1769454869987&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=false&adults=2&regionId=3000388018&destination=Calacali%2C+Pichincha%2C+Ecuador&destType=MARKET&latLong=-0.001291%2C-78.51387&searchId=ea67ea52-0c68-4544-a28a-1061e36034cb&sort=RECOMMENDED&userIntent=&expediaPropertyId=114399386",
+      "expedia": "https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information",
+      "booking": ""
+    },
+    "Panoramic Suite": {
+      "airbnb": "https://airbnb.com/h/thecloudforestretreat-panoramic-suite",
+      "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522305vb",
+      "expedia": "https://www.expedia.com/Quito-Hotels-Luxurious-Panoramic-Suite-At-The-Cloud-Forest-Retreat-W-Views-Modern-Comforts.h114674195.Hotel-Information",
+      "booking": ""
+    },
+    "Sunrise Room": {
+      "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunrise-room",
+      "vrbo": "https://www.vrbo.com/en-gb/p4522358vb",
+      "expedia": "https://www.expedia.com/Quito-Hotels-Sunrise-Room-At-The-Cloud-Forest-Retreat.h114675896.Hotel-Information",
+      "booking": ""
+    },
+    "Sunset Room": {
+      "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunset-room",
+      "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522308vb?dateless=true&x_pwa=1&rfrr=HSR&pwa_ts=1769454870000&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=false&adults=2&regionId=3000388018&destination=Calacali%2C+Pichincha%2C+Ecuador&destType=MARKET&latLong=-0.001291%2C-78.51387&searchId=ea67ea52-0c68-4544-a28a-1061e36034cb&sort=RECOMMENDED&userIntent=&expediaPropertyId=114674265",
+      "expedia": "https://www.expedia.com/Quito-Hotels-Sunset-Room-At-The-Cloud-Forest-Retreat.h114674265.Hotel-Information",
+      "booking": ""
+    }
+  };
+
+  var otaRoom = document.getElementById("ota_room");
+  var roomPref = document.getElementById("room_preference");
+
+  var btnAirbnb = document.getElementById("ota_airbnb");
+  var btnVrbo = document.getElementById("ota_vrbo");
+  var btnExpedia = document.getElementById("ota_expedia");
+  var btnBooking = document.getElementById("ota_booking");
+
+  function setBtnHref(btn, href){
+    if (!btn) return;
+    if (href){
+      btn.href = href;
+      btn.classList.remove("is-disabled");
+      btn.removeAttribute("aria-disabled");
+      btn.setAttribute("target", "_blank");
+      btn.setAttribute("rel", "noopener noreferrer");
+    } else {
+      btn.href = "#";
+      btn.classList.add("is-disabled");
+      btn.setAttribute("aria-disabled", "true");
+      btn.removeAttribute("target");
+      btn.removeAttribute("rel");
+    }
+  }
+
+  function updateOtas(stayType){
+    var map = OTA_LINKS[stayType] || OTA_LINKS["Entire house"];
+    setBtnHref(btnAirbnb, map.airbnb);
+    setBtnHref(btnVrbo, map.vrbo);
+    setBtnHref(btnExpedia, map.expedia);
+    setBtnHref(btnBooking, map.booking);
+  }
+
+  function normalizeStayType(v){
+    var s = String(v || "").trim();
+    if (!s) return "Entire house";
+    if (s === "Entire house") return s;
+    if (s === "Panoramic Suite") return s;
+    if (s === "Sunrise Room") return s;
+    if (s === "Sunset Room") return s;
+    return "Entire house";
+  }
+
+  function syncFromRoomPreference(){
+    if (!roomPref || !otaRoom) return;
+    var v = normalizeStayType(roomPref.value || "Entire house");
+    otaRoom.value = v;
+    updateOtas(v);
+  }
+
+  function syncFromOtaSelector(){
+    if (!otaRoom || !roomPref) return;
+    var v = normalizeStayType(otaRoom.value || "Entire house");
+    otaRoom.value = v;
+    roomPref.value = v;
+    updateOtas(v);
+  }
+
+  if (otaRoom){
+    otaRoom.addEventListener("change", syncFromOtaSelector);
+  }
+  if (roomPref){
+    roomPref.addEventListener("change", syncFromRoomPreference);
+  }
+
+  if (roomPref && roomPref.value){
+    syncFromRoomPreference();
+  } else {
+    if (otaRoom) otaRoom.value = "Entire house";
+    updateOtas("Entire house");
+  }
+
+
 
   function toTitleCase(s){
     var t = String(s || "").trim();
