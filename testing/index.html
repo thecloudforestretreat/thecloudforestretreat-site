@@ -4,33 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Sunset Room | Golden Hour Views | The Cloud Forest Retreat</title>
-  <meta name="description" content="Unwind with golden hour views at The Cloud Forest Retreat. The Sunset Room is a cozy west-facing stay with warm evening light and cloud forest calm." />
+  <title>Common Areas | Shared Spaces and Guest Bathroom | The Cloud Forest Retreat</title>
+  <meta name="description" content="Relax and connect in the Common Areas at The Cloud Forest Retreat. Cozy shared spaces with stunning views, a warm kitchen hub, living room moments, and a guest bathroom for comfort." />
   <meta name="robots" content="index,follow" />
 
   <!-- Canonical + hreflang (PRODUCTION URLs) -->
-  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/sunset-room/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/common-areas/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/common-areas/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/common-areas/" />
 
   <!-- Open Graph (PRODUCTION URLs) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Sunset Room | Golden Hour Views" />
-  <meta property="og:description" content="Unwind with golden hour views at The Cloud Forest Retreat. The Sunset Room is a cozy west-facing stay with warm evening light and cloud forest calm." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/sunset-room/" />
+  <meta property="og:title" content="Common Areas | Shared Spaces and Guest Bathroom" />
+  <meta property="og:description" content="Cozy shared spaces with stunning views: kitchen hub, living room moments, and a guest bathroom at The Cloud Forest Retreat." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/common-areas/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat Sunset Room" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat common areas" />
 
   <!-- Twitter (PRODUCTION URLs) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sunset Room | Golden Hour Views" />
-  <meta name="twitter:description" content="A cozy west-facing room for sunset lovers: warm evening light, peaceful views, and cloud forest calm." />
+  <meta name="twitter:title" content="Common Areas | Shared Spaces and Guest Bathroom" />
+  <meta name="twitter:description" content="Cozy shared spaces with stunning views: kitchen hub, living room moments, and a guest bathroom at The Cloud Forest Retreat." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
 
   <!-- Favicons (approved root paths) -->
@@ -52,6 +52,48 @@
   <!-- Head-only JS -->
   <script src="/assets/js/head.js?v=1" defer></script>
 
+  <!-- Structured data: WebPage + Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Common Areas | Shared Spaces and Guest Bathroom",
+    "description": "Relax and connect in the Common Areas at The Cloud Forest Retreat. Cozy shared spaces with stunning views, a warm kitchen hub, living room moments, and a guest bathroom for comfort.",
+    "url": "https://thecloudforestretreat.com/rooms/common-areas/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "The Cloud Forest Retreat",
+      "url": "https://thecloudforestretreat.com/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://thecloudforestretreat.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Rooms",
+        "item": "https://thecloudforestretreat.com/rooms/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Common Areas",
+        "item": "https://thecloudforestretreat.com/rooms/common-areas/"
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root{
       --max: 1120px;
@@ -59,13 +101,14 @@
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
 
-      --sunset: #E0643A;
-      --sunsetSoft: rgba(224,100,58,0.14);
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
-      --muted: rgba(11,26,16,0.72);
       --forest: #0D5925;
+      --muted: rgba(11,26,16,0.72);
+
+      --accent: #E0643A;
+      --accentSoft: rgba(224,100,58,0.14);
     }
 
     *{ box-sizing: border-box; }
@@ -110,14 +153,6 @@
       align-items: center;
     }
 
-    .gridA{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 14px;
-      align-items: stretch;
-    }
-
     .card{
       border: 1px solid var(--line);
       border-radius: var(--r);
@@ -136,6 +171,8 @@
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
 
     .cardTitle{
@@ -145,6 +182,7 @@
       letter-spacing: -0.02em;
       font-weight: 900;
       font-size: 20px;
+      line-height: 1.1;
     }
 
     .cardHint{
@@ -152,6 +190,12 @@
       color: rgba(11,26,16,0.68);
       font-weight: 700;
       font-size: 13px;
+      line-height: 1.4;
+    }
+
+    /* HERO */
+    .hero{
+      margin-top: 14px;
     }
 
     .heroMedia{
@@ -161,7 +205,7 @@
       border: 1px solid rgba(255,255,255,0.22);
       box-shadow: var(--shadow);
       background: rgba(0,0,0,0.10);
-      height: 560px;
+      height: 360px;
     }
 
     .heroMedia img{
@@ -176,19 +220,19 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(900px 520px at 80% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.46));
+        radial-gradient(1000px 520px at 22% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.50));
       pointer-events: none;
     }
 
-    .heroTitleBadge{
+    .heroBadge{
       position: absolute;
       left: 14px;
       bottom: 14px;
       right: 14px;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.28);
+      background: rgba(0,0,0,0.30);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       padding: 14px;
@@ -213,33 +257,42 @@
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1.02;
-      font-size: clamp(32px, 3.6vw, 50px);
+      font-size: clamp(30px, 3.6vw, 48px);
       color: #fff;
     }
 
     .heroLead{
       margin: 0;
-      max-width: 70ch;
+      max-width: 80ch;
       font-weight: 600;
       line-height: 1.7;
       color: rgba(231,228,209,0.92);
       font-size: 15.5px;
     }
 
-    .videoCardInner{
-      padding: 14px;
+    .heroCtas{
+      margin-top: 12px;
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      height: calc(560px - 56px);
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
+    /* GRID OPTION A (Aligned rows to remove dead space) */
+    .gridRow{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    /* 9:16 MEDIA */
     .ytFrame{
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(11,26,16,0.10);
       background: rgba(255,255,255,0.55);
-      flex: 1 1 auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -268,7 +321,45 @@
       display: block;
     }
 
-    .videoMiniCopy{
+    .vImageFrame{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .vImageBox{
+      width: min(420px, 100%);
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+      position: relative;
+    }
+
+    .vImageBox img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .mediaPad{ padding: 14px; }
+
+    .mediaStack{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .microCopy{
       border-radius: 18px;
       border: 1px solid rgba(11,26,16,0.10);
       background: rgba(255,255,255,0.55);
@@ -277,7 +368,7 @@
       gap: 10px;
     }
 
-    .videoMiniCopy p{
+    .microCopy p{
       margin: 0;
       color: rgba(11,26,16,0.78);
       line-height: 1.7;
@@ -285,7 +376,7 @@
       font-size: 13.8px;
     }
 
-    .videoMiniCopy .quote{
+    .microCopy .quote{
       margin: 0;
       font-family: var(--font-head);
       font-weight: 900;
@@ -320,21 +411,7 @@
       color: var(--forest);
     }
 
-    .tightCtas{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .gridB{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 14px;
-      align-items: start;
-    }
-
+    /* Living moments carousel (compact, 2 slides) */
     .miniCarouselPad{ padding: 14px; }
 
     .miniCarousel{
@@ -361,12 +438,26 @@
     .miniSlide{
       flex: 0 0 100%;
       position: relative;
-      aspect-ratio: 16 / 10;
+      aspect-ratio: 9 / 16;
       margin: 0;
-      padding: 0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .miniSlide img{
+    .miniSlideInner{
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+    }
+
+    .miniSlideInner img{
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -375,9 +466,9 @@
 
     .miniCap{
       position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
       padding: 9px 11px;
       border-radius: 14px;
       background: rgba(245,245,220,0.92);
@@ -444,92 +535,37 @@
       transform: scale(1.05);
     }
 
-    .rightStackPad{ padding: 14px; }
-
-    .p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-size: 14.8px;
-      font-weight: 650;
-    }
-
-    .note{
-      margin-top: 10px;
-      font-size: 13px;
-      color: rgba(11,26,16,0.68);
-      font-weight: 650;
-      line-height: 1.6;
-    }
-
-    /* Shared bathroom section */
-    .bathSection{
+    /* Shared guest bathroom (full width) */
+    .gridFull{
       margin-top: 14px;
     }
 
-    .bathPad{
+    .bathInner{
       padding: 14px;
       display: grid;
-      gap: 12px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+      align-items: stretch;
     }
 
-    .bathNotice{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.60);
-      padding: 12px;
-      display: grid;
-      gap: 8px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bathNotice:before{
-      content:"";
-      position:absolute;
-      inset: -80px auto auto -80px;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
-      pointer-events: none;
-    }
-
-    .bathNoticeTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-      line-height: 1.15;
-      color: var(--forest);
-      position: relative;
-    }
-
-    .bathNoticeText{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      font-weight: 650;
-      line-height: 1.75;
-      font-size: 14px;
-      position: relative;
-      max-width: 95ch;
-    }
-
-    .bathGrid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .bathShot{
+    .bathMedia{
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(11,26,16,0.10);
       background: rgba(255,255,255,0.55);
-      box-shadow: 0 14px 34px rgba(13,89,37,0.10);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .bathShot{
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(0,0,0,0.08);
+      min-height: 220px;
       position: relative;
-      aspect-ratio: 4 / 3;
-      margin: 0;
     }
 
     .bathShot img{
@@ -544,78 +580,51 @@
       left: 10px;
       right: 10px;
       bottom: 10px;
+      padding: 9px 11px;
       border-radius: 14px;
       background: rgba(245,245,220,0.92);
-      border: 1px solid rgba(13,89,37,0.14);
-      padding: 10px 10px;
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
       font-weight: 900;
-      color: rgba(11,26,16,0.88);
       font-size: 13px;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+      letter-spacing: -0.01em;
     }
 
-    .details{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items: start;
+    .bathCopy{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
     }
 
-    .detailCard{ padding: 16px; }
-
-    .detailH3{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 18px;
-    }
-
-    .detailList{
-      margin: 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.82);
-      line-height: 1.85;
-      font-weight: 650;
-      font-size: 15px;
-    }
-
-    .quoteCard{
-      padding: 16px;
-      position: relative;
-    }
-
-    .quoteCard:before{
-      content:"";
-      position:absolute;
-      inset: -60px auto auto -60px;
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.18), rgba(224,100,58,0) 62%);
-      pointer-events:none;
-    }
-
-    .quoteText{
+    .bathTitle{
       margin: 0;
       font-family: var(--font-head);
       font-weight: 900;
       letter-spacing: -0.02em;
       font-size: 20px;
-      line-height: 1.2;
+      line-height: 1.15;
       color: var(--forest);
-      position: relative;
     }
 
-    .quoteSub{
-      margin: 10px 0 0;
-      color: rgba(11,26,16,0.70);
+    .bathList{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.8;
       font-weight: 650;
-      line-height: 1.7;
-      position: relative;
+      font-size: 14.6px;
     }
 
+    .bathList li{ margin: 6px 0; }
+
+    /* CTA band */
     .ctaBand{
       margin-top: 14px;
       border-radius: var(--r);
@@ -656,219 +665,279 @@
       align-items: center;
     }
 
+    /* Mobile */
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
 
-      .gridA{ grid-template-columns: 1fr; }
-      .heroMedia{ height: 380px; }
+      .heroMedia{ height: 300px; }
 
-      .videoCardInner{ height: auto; }
+      .gridRow{ grid-template-columns: 1fr; }
+
       .ytFrame{ padding: 12px; }
       .ytBox{ width: 100%; max-width: 100%; }
 
-      .gridB{ grid-template-columns: 1fr; }
-      .miniSlide{ aspect-ratio: 4 / 3; }
+      .vImageFrame{ padding: 12px; }
+      .vImageBox{ width: 100%; max-width: 100%; }
+
+      .miniSlide{ padding: 12px; }
+      .miniSlideInner{ max-width: 100%; }
+
       .miniArrow.prev{ left: 8px; }
       .miniArrow.next{ right: 8px; }
 
-      .bathGrid{ grid-template-columns: 1fr; }
-      .details{ grid-template-columns: 1fr; }
+      .bathInner{ grid-template-columns: 1fr; }
+      .bathMedia{ grid-template-columns: 1fr; }
+      .bathShot{ min-height: 220px; }
     }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-
-  <main class="wrap" aria-label="Sunset Room page">
-    <section class="topBand" aria-label="Room navigation and booking actions">
+  <main class="wrap" aria-label="Common Areas page">
+    <section class="topBand" aria-label="Common Areas navigation and booking actions">
       <div class="crumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">›</span>
         <a href="/rooms/">Rooms</a>
         <span aria-hidden="true">›</span>
-        <span>Sunset Room</span>
+        <span>Common Areas</span>
       </div>
-
       <div class="quickActions" aria-label="Quick actions">
         <a class="btn secondary" href="/rooms/">Compare rooms</a>
         <a class="btn primary" href="/booking/">Book Your Stay</a>
       </div>
     </section>
 
-    <!-- Row 1 (Hero left, Video right, same height) -->
-    <section class="gridA" aria-label="Sunset hero and video">
-      <article class="card" aria-label="Hero image">
-        <div class="heroMedia" aria-label="Sunset Room hero image">
-          <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Sunset Room with evening light and cloud forest views" loading="eager" decoding="async" />
+    <!-- HERO -->
+    <section class="hero" aria-label="Common Areas hero">
+      <article class="card" aria-label="Hero image card">
+        <div class="heroMedia" aria-label="Common Areas hero image">
+          <img src="/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg" alt="Common Areas with mountain and cloud forest views" loading="eager" decoding="async" />
           <div class="heroShade" aria-hidden="true"></div>
 
-          <div class="heroTitleBadge" aria-label="Room title">
-            <div class="kicker">West-facing windows • Golden hour views</div>
-            <h1 class="heroH1">Sunset Room</h1>
+          <div class="heroBadge" aria-label="Common Areas intro">
+            <div class="kicker">Shared spaces • Views • Comfort</div>
+            <h1 class="heroH1">Common Areas</h1>
             <p class="heroLead">
-              As daylight fades, the forest turns amber and violet. Enjoy wine or tea with a view as the sun settles behind the peaks.
-              A calm, romantic room for slow evenings.
+              Relax and connect in the heart of the retreat. These shared spaces are designed for comfort and community,
+              with cozy seating, stunning views, and the perfect setting to unwind, read, cook, or share stories after a day in the cloud forest.
             </p>
+
+            <div class="heroCtas" aria-label="Hero actions">
+              <a class="btn primary" href="/booking/">Book Your Stay</a>
+              <a class="btn secondary" href="/contact/">Ask A Question</a>
+              <a class="btn secondary" href="/rooms/">See All Rooms</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ROW 1: Kitchen video (left) aligned with Living moments + copy (right) -->
+    <section class="gridRow" aria-label="Kitchen video and living room moments">
+      <article class="card" aria-label="Kitchen video card">
+        <div class="cardHead">
+          <h2 class="cardTitle">Kitchen moments</h2>
+          <p class="cardHint"></p>
+        </div>
+
+        <div class="mediaPad">
+          <div class="mediaStack">
+            <div class="ytFrame" aria-label="Kitchen vertical video">
+              <div class="ytBox" aria-label="YouTube kitchen video">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/lz7DEZKFkX8?autoplay=1&mute=1&loop=1&playlist=lz7DEZKFkX8&controls=1&modestbranding=1&rel=0&playsinline=1"
+                  title="Common Areas kitchen video"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <div class="microCopy" aria-label="Kitchen copy">
+              <p class="quote">"Where mornings begin and plans get made."</p>
+              <p>
+                Brew coffee, prep snacks for the day, or settle in for a slow breakfast with the view.
+                The kitchen is simple, practical, and made for real travel.
+              </p>
+              <div class="pillRow" aria-label="Kitchen tags">
+                <span class="pill"><strong>Vibe:</strong> warm and practical</span>
+                <span class="pill"><strong>Best for:</strong> slow mornings</span>
+                <span class="pill"><strong>Moment:</strong> coffee with a view</span>
+              </div>
+            </div>
           </div>
         </div>
       </article>
 
-      <aside class="card" aria-label="Video preview">
+      <aside class="card" aria-label="Living room moments and day copy">
         <div class="cardHead">
-          <h2 class="cardTitle">A quick sunset feel</h2>
+          <h2 class="cardTitle">Where the day happens</h2>
           <p class="cardHint"></p>
         </div>
 
-        <div class="videoCardInner" aria-label="Video content">
-          <div class="ytFrame" aria-label="Sunset Room video">
-            <div class="ytBox" aria-label="YouTube video">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/1Djnf3UnF4g?autoplay=1&mute=1&loop=1&playlist=1Djnf3UnF4g&controls=1&modestbranding=1&rel=0&playsinline=1"
-                title="Sunset Room video"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-
-          <div class="videoMiniCopy" aria-label="Video caption">
-            <p class="quote">"Golden hour turns into a quiet kind of magic."</p>
-            <p>West-facing light, soft ambiance, and views made for slowing down.</p>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <!-- Row 2 (Carousel left, Highlights right) -->
-    <section class="gridB" aria-label="Sunset gallery and highlights">
-      <article class="card" aria-label="Photo highlights">
-        <div class="cardHead">
-          <h2 class="cardTitle">Photo highlights</h2>
-          <p class="cardHint"></p>
-        </div>
-
-        <div class="miniCarouselPad">
-          <div class="miniCarousel" aria-label="Sunset mini carousel">
-            <div class="miniViewport" id="ssCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
-              <button class="miniArrow prev" type="button" data-action="prev" aria-label="Previous photo">‹</button>
-              <button class="miniArrow next" type="button" data-action="next" aria-label="Next photo">›</button>
+        <div class="miniCarouselPad" aria-label="Living room vertical carousel">
+          <div class="miniCarousel" aria-label="Living room carousel">
+            <div class="miniViewport" id="lrCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
+              <button class="miniArrow prev" type="button" data-action="prev" aria-label="Previous image">‹</button>
+              <button class="miniArrow next" type="button" data-action="next" aria-label="Next image">›</button>
 
               <div class="miniTrack" data-track>
-                <figure class="miniSlide" aria-label="Sunset image 1">
-                  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Sunset Room photo highlight 1" loading="lazy" decoding="async" />
-                  <figcaption class="miniCap">Amber light at dusk</figcaption>
+                <figure class="miniSlide" aria-label="Living room image 1">
+                  <div class="miniSlideInner">
+                    <img src="/assets/images/pages/rooms/tcfr_rooms_common_area_living_room_01.jpeg" alt="Living room seating with mountain light" loading="lazy" decoding="async" />
+                  </div>
+                  <figcaption class="miniCap">Cozy seating, mountain light</figcaption>
                 </figure>
 
-                <figure class="miniSlide" aria-label="Sunset image 2">
-                  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_02.jpg" alt="Sunset Room photo highlight 2" loading="lazy" decoding="async" />
-                  <figcaption class="miniCap">A view made for sunsets</figcaption>
+                <figure class="miniSlide" aria-label="Living room image 2">
+                  <div class="miniSlideInner">
+                    <img src="/assets/images/pages/rooms/tcfr_rooms_common_area_living_room_02.jpeg" alt="Quiet living room corner for relaxing" loading="lazy" decoding="async" />
+                  </div>
+                  <figcaption class="miniCap">Quiet corners to unwind</figcaption>
                 </figure>
               </div>
             </div>
 
             <div class="miniNav" aria-label="Carousel dots">
-              <div class="miniDots" data-dots aria-label="Choose a photo"></div>
+              <div class="miniDots" data-dots aria-label="Choose an image"></div>
             </div>
           </div>
         </div>
-      </article>
 
-      <aside class="card" aria-label="Highlights and actions">
-        <div class="cardHead">
-          <h2 class="cardTitle">Romantic, calm, unforgettable</h2>
-          <p class="cardHint">The room couples remember</p>
-        </div>
-
-        <div class="rightStackPad">
-          <p class="p">
-            Soft lighting, handcrafted details, and a west-facing view that catches every last color of the day.
-            The perfect room for unwinding after exploring the cloud forest.
-          </p>
-
-          <div style="height:12px;"></div>
-
-          <div class="pillRow" aria-label="Key highlights">
-            <span class="pill"><strong>Best for:</strong> couples</span>
-            <span class="pill"><strong>Views:</strong> west-facing sunset</span>
-            <span class="pill"><strong>Vibe:</strong> romantic and calm</span>
-            <span class="pill"><strong>Moment:</strong> wine or tea at dusk</span>
+        <div class="mediaPad" aria-label="Living room text section">
+          <div class="microCopy" aria-label="Where the day happens expanded copy">
+            <p class="quote">"A calm place to reset between adventures."</p>
+            <p>
+              This is the space you return to: after waterfalls, after birding, after the last light fades.
+              Set down your bag, breathe, and let the cloud forest do what it does best.
+            </p>
+            <p>
+              Read, journal, play cards, or just watch the weather move through the valley.
+              If you meet another guest, it usually happens here, naturally and unforced.
+            </p>
+            <div class="pillRow" aria-label="Living room tags">
+              <span class="pill"><strong>Best for:</strong> relaxing</span>
+              <span class="pill"><strong>Vibe:</strong> cozy and quiet</span>
+              <span class="pill"><strong>Moment:</strong> sunset chat</span>
+            </div>
           </div>
-
-          <div style="height:14px;"></div>
-
-          <div class="tightCtas" aria-label="Primary actions">
-            <a class="btn primary" href="/booking/">Book Your Stay</a>
-            <a class="btn secondary" href="/contact/">Ask A Question</a>
-            <a class="btn secondary" href="/rooms/">See All Rooms</a>
-          </div>
-
-          <div class="note">Tip: If sunsets are your ritual, this is your room.</div>
         </div>
       </aside>
     </section>
 
-    <!-- SHARED BATHROOM (Sunrise + Sunset) -->
-    <section class="bathSection" aria-label="Shared bathroom">
-      <article class="card" aria-label="Shared bathroom card">
+    <!-- ROW 2: Kitchen photo (left) aligned with Living room video (right) -->
+    <section class="gridRow" aria-label="Kitchen photo and living room video">
+      <article class="card" aria-label="Kitchen photo card">
         <div class="cardHead">
-          <h2 class="cardTitle">Shared full bathroom</h2>
-          <p class="cardHint">Right outside the room in the hallway</p>
+          <h2 class="cardTitle">Kitchen photo</h2>
+          <p class="cardHint"></p>
         </div>
 
-        <div class="bathPad">
-          <div class="bathNotice" aria-label="Bathroom note">
-            <p class="bathNoticeTitle">Private access, shared between two rooms</p>
-            <p class="bathNoticeText">
-              The Sunrise Room and Sunset Room share a full bathroom located in the hallway right outside your door.
-              It is reserved only for these two rooms, and it is just a few steps away.
-              We include this clearly so you know exactly what to expect.
-            </p>
+        <div class="mediaPad">
+          <div class="vImageFrame" aria-label="Kitchen vertical image">
+            <div class="vImageBox">
+              <img src="/assets/images/pages/rooms/tcfr_rooms_common_area_kitchen_03.jpg" alt="Kitchen space in the common areas" loading="lazy" decoding="async" />
+            </div>
           </div>
 
-          <div class="bathGrid" aria-label="Bathroom photos">
-            <figure class="bathShot" aria-label="Bathroom photo 1">
-              <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg" alt="Shared bathroom photo 1" loading="lazy" decoding="async" />
-              <figcaption class="bathCap">Bright, clean, full bathroom</figcaption>
-            </figure>
+          <div style="height:12px;"></div>
 
-            <figure class="bathShot" aria-label="Bathroom photo 2">
-              <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg" alt="Shared bathroom photo 2" loading="lazy" decoding="async" />
-              <figcaption class="bathCap">Reserved for Sunrise and Sunset rooms</figcaption>
-            </figure>
+          <div class="pillRow" aria-label="Kitchen photo tags">
+            <span class="pill"><strong>Best for:</strong> breakfast prep</span>
+            <span class="pill"><strong>Vibe:</strong> simple and clean</span>
+            <span class="pill"><strong>Use:</strong> shared kitchen</span>
           </div>
         </div>
       </article>
+
+      <aside class="card" aria-label="Living room video card">
+        <div class="cardHead">
+          <h2 class="cardTitle">Living room video</h2>
+          <p class="cardHint"></p>
+        </div>
+
+        <div class="mediaPad">
+          <div class="mediaStack">
+            <div class="ytFrame" aria-label="Living room vertical video">
+              <div class="ytBox" aria-label="YouTube living room video">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/aPklWBKloRc?autoplay=1&mute=1&loop=1&playlist=aPklWBKloRc&controls=1&modestbranding=1&rel=0&playsinline=1"
+                  title="Common Areas living room video"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <div class="microCopy" aria-label="Living room video caption">
+              <p class="quote">"The softest part of the day lives here."</p>
+              <p>
+                A quiet, comfortable space to unwind, connect, and let the cloud forest slow you down.
+              </p>
+              <div class="pillRow" aria-label="Living room video tags">
+                <span class="pill"><strong>Moment:</strong> end of day</span>
+                <span class="pill"><strong>Vibe:</strong> restful</span>
+                <span class="pill"><strong>Best for:</strong> couples and friends</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
     </section>
 
-    <!-- DETAILS -->
-    <section class="details" aria-label="Room details">
-      <article class="card detailCard" aria-label="What you will love">
-        <h3 class="detailH3">What you will love</h3>
-        <ul class="detailList">
-          <li>West-facing views for golden hour and sunsets</li>
-          <li>Private views for wine, tea, and slow evenings</li>
-          <li>Soft ambient lighting and handcrafted furnishings</li>
-          <li>Romantic, peaceful atmosphere for true unwind time</li>
-        </ul>
-      </article>
+    <!-- Guest bathroom (common areas) -->
+    <section class="gridFull" aria-label="Guest bathroom section">
+      <article class="card" aria-label="Guest bathroom card">
+        <div class="cardHead">
+          <h2 class="cardTitle">Guest bathroom</h2>
+          <p class="cardHint">In the common areas</p>
+        </div>
 
-      <article class="card quoteCard" aria-label="Room quote">
-        <p class="quoteText">“A front-row seat to the glow that melts behind the peaks.”</p>
-        <p class="quoteSub">The Sunset Room is for guests who want the day to end slowly: warm light, quiet views, and the forest turning calm.</p>
+        <div class="bathInner">
+          <div class="bathMedia" aria-label="Guest bathroom photos">
+            <figure class="bathShot" aria-label="Guest bathroom image 1">
+              <img src="/assets/images/pages/rooms/tcfr_rooms_common_area_half_bathroom_01.jpeg" alt="Guest bathroom near the living room" loading="lazy" decoding="async" />
+              <figcaption class="bathCap">Easy access from the living room</figcaption>
+            </figure>
+            <figure class="bathShot" aria-label="Guest bathroom image 2">
+              <img src="/assets/images/pages/rooms/tcfr_rooms_common_area_half_bathroom_02.jpeg" alt="Clean guest bathroom with essentials" loading="lazy" decoding="async" />
+              <figcaption class="bathCap">Clean, stocked, and comfortable</figcaption>
+            </figure>
+          </div>
+
+          <div class="bathCopy" aria-label="Guest bathroom details">
+            <p class="bathTitle">Comfort, right where you need it</p>
+            <ul class="bathList">
+              <li>Guest bathroom located in the common areas</li>
+              <li>Perfect between meals, lounging, or social time</li>
+              <li>Kept clean and stocked with essentials</li>
+            </ul>
+
+            <div class="pillRow" aria-label="Guest bathroom tags">
+              <span class="pill"><strong>Type:</strong> guest bathroom</span>
+              <span class="pill"><strong>Access:</strong> common areas</span>
+              <span class="pill"><strong>Clean:</strong> stocked daily</span>
+            </div>
+          </div>
+        </div>
       </article>
     </section>
 
     <!-- CTA -->
-    <section class="ctaBand" aria-label="Booking call to action">
+    <section class="ctaBand" aria-label="Common Areas CTA">
       <div>
-        <h2>Ready to chase the sunset?</h2>
-        <p>Check availability and book your stay in minutes. If you are deciding between rooms, compare them side by side.</p>
+        <h2>Ready to enjoy the cloud forest, together?</h2>
+        <p>
+          Book your stay and settle into spaces that feel calm, warm, and real. If you have questions about how the retreat is set up, send us a message.
+        </p>
       </div>
 
       <div class="ctaBtns" aria-label="CTA buttons">
         <a class="btn primary" href="/booking/">Book Your Stay</a>
-        <a class="btn secondary" href="/rooms/">Compare Rooms</a>
+        <a class="btn secondary" href="/rooms/">See All Rooms</a>
         <a class="btn secondary" href="/contact/">Contact</a>
       </div>
     </section>
@@ -876,183 +945,185 @@
 
   <div id="siteFooter"></div>
 
-  <!-- TCFR global behavior: inject header/footer, GA, nav -->
   <script src="/assets/js/site.js?v=3"></script>
-
   <script>
     (function(){
       "use strict";
 
-      var root = document.getElementById("ssCarousel");
-      if (!root) return;
+      function initMiniCarousel(rootId){
+        var root = document.getElementById(rootId);
+        if (!root) return;
 
-      var track = root.querySelector("[data-track]");
-      var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
-      if (!track) return;
+        var track = root.querySelector("[data-track]");
+        if (!track) return;
 
-      var slides = track.children ? Array.prototype.slice.call(track.children) : [];
-      if (!slides.length) return;
+        var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
+        var slides = track.children ? Array.prototype.slice.call(track.children) : [];
+        if (!slides.length) return;
 
-      var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2800");
-      var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
+        var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2800");
+        var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
 
-      var index = 0;
-      var timer = null;
-      var resumeTimer = null;
-      var isPaused = false;
+        var index = 0;
+        var timer = null;
+        var resumeTimer = null;
+        var isPaused = false;
 
-      function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+        function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
 
-      function setTransform(){
-        track.style.transform = "translateX(" + (-index * 100) + "%)";
-      }
-
-      function setActiveDot(){
-        if (!dotsWrap) return;
-        var btns = dotsWrap.querySelectorAll("button[data-dot]");
-        for (var i = 0; i < btns.length; i++){
-          btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
-        }
-      }
-
-      function goTo(i){
-        index = clamp(i, 0, slides.length - 1);
-        setTransform();
-        setActiveDot();
-      }
-
-      function next(){
-        var n = index + 1;
-        if (n >= slides.length) n = 0;
-        goTo(n);
-      }
-
-      function prev(){
-        var p = index - 1;
-        if (p < 0) p = slides.length - 1;
-        goTo(p);
-      }
-
-      function clearTimers(){
-        if (timer) { clearInterval(timer); timer = null; }
-        if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
-      }
-
-      function startAutoplay(){
-        clearTimers();
-        if (autoplayMs < 1200) autoplayMs = 1200;
-        timer = setInterval(function(){
-          if (isPaused) return;
-          next();
-        }, autoplayMs);
-      }
-
-      function pauseTemporarily(){
-        isPaused = true;
-        if (resumeTimer) clearTimeout(resumeTimer);
-        resumeTimer = setTimeout(function(){
-          isPaused = false;
-        }, pauseAfterMs);
-      }
-
-      function buildDots(){
-        if (!dotsWrap) return;
-        dotsWrap.innerHTML = "";
-        for (var i = 0; i < slides.length; i++){
-          var b = document.createElement("button");
-          b.type = "button";
-          b.className = "miniDotBtn" + (i === 0 ? " is-active" : "");
-          b.setAttribute("data-dot", String(i));
-          b.setAttribute("aria-label", "Go to photo " + (i + 1));
-          b.addEventListener("click", function(){
-            var n = Number(this.getAttribute("data-dot") || "0");
-            goTo(n);
-            pauseTemporarily();
-          });
-          dotsWrap.appendChild(b);
-        }
-      }
-
-      function bindArrows(){
-        var prevBtn = root.querySelector('button[data-action="prev"]');
-        var nextBtn = root.querySelector('button[data-action="next"]');
-
-        if (prevBtn){
-          prevBtn.addEventListener("click", function(){
-            prev();
-            pauseTemporarily();
-          });
+        function setTransform(){
+          track.style.transform = "translateX(" + (-index * 100) + "%)";
         }
 
-        if (nextBtn){
-          nextBtn.addEventListener("click", function(){
-            next();
-            pauseTemporarily();
-          });
-        }
-      }
-
-      function bindHoverPause(){
-        root.addEventListener("mouseenter", function(){ isPaused = true; });
-        root.addEventListener("mouseleave", function(){ isPaused = false; });
-        root.addEventListener("focusin", function(){ isPaused = true; });
-        root.addEventListener("focusout", function(){ isPaused = false; });
-      }
-
-      function bindTouchSwipe(){
-        var startX = 0;
-        var deltaX = 0;
-        var isDown = false;
-
-        function onDown(x){
-          isDown = true;
-          startX = x;
-          deltaX = 0;
-          pauseTemporarily();
-        }
-
-        function onMove(x){
-          if (!isDown) return;
-          deltaX = x - startX;
-        }
-
-        function onUp(){
-          if (!isDown) return;
-          isDown = false;
-
-          var threshold = 38;
-          if (Math.abs(deltaX) > threshold){
-            if (deltaX < 0) next();
-            else prev();
+        function setActiveDot(){
+          if (!dotsWrap) return;
+          var btns = dotsWrap.querySelectorAll("button[data-dot]");
+          for (var i = 0; i < btns.length; i++){
+            btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
           }
-          deltaX = 0;
         }
 
-        root.addEventListener("touchstart", function(e){
-          if (!e.touches || !e.touches.length) return;
-          onDown(e.touches[0].clientX);
-        }, { passive: true });
+        function goTo(i){
+          index = clamp(i, 0, slides.length - 1);
+          setTransform();
+          setActiveDot();
+        }
 
-        root.addEventListener("touchmove", function(e){
-          if (!e.touches || !e.touches.length) return;
-          onMove(e.touches[0].clientX);
-        }, { passive: true });
+        function next(){
+          var n = index + 1;
+          if (n >= slides.length) n = 0;
+          goTo(n);
+        }
 
-        root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
-        root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+        function prev(){
+          var p = index - 1;
+          if (p < 0) p = slides.length - 1;
+          goTo(p);
+        }
+
+        function clearTimers(){
+          if (timer) { clearInterval(timer); timer = null; }
+          if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+        }
+
+        function startAutoplay(){
+          clearTimers();
+          if (autoplayMs < 1200) autoplayMs = 1200;
+          timer = setInterval(function(){
+            if (isPaused) return;
+            next();
+          }, autoplayMs);
+        }
+
+        function pauseTemporarily(){
+          isPaused = true;
+          if (resumeTimer) clearTimeout(resumeTimer);
+          resumeTimer = setTimeout(function(){
+            isPaused = false;
+          }, pauseAfterMs);
+        }
+
+        function buildDots(){
+          if (!dotsWrap) return;
+          dotsWrap.innerHTML = "";
+          for (var i = 0; i < slides.length; i++){
+            var b = document.createElement("button");
+            b.type = "button";
+            b.className = "miniDotBtn" + (i === 0 ? " is-active" : "");
+            b.setAttribute("data-dot", String(i));
+            b.setAttribute("aria-label", "Go to image " + (i + 1));
+            b.addEventListener("click", function(){
+              var n = Number(this.getAttribute("data-dot") || "0");
+              goTo(n);
+              pauseTemporarily();
+            });
+            dotsWrap.appendChild(b);
+          }
+        }
+
+        function bindArrows(){
+          var prevBtn = root.querySelector('button[data-action="prev"]');
+          var nextBtn = root.querySelector('button[data-action="next"]');
+
+          if (prevBtn){
+            prevBtn.addEventListener("click", function(){
+              prev();
+              pauseTemporarily();
+            });
+          }
+
+          if (nextBtn){
+            nextBtn.addEventListener("click", function(){
+              next();
+              pauseTemporarily();
+            });
+          }
+        }
+
+        function bindHoverPause(){
+          root.addEventListener("mouseenter", function(){ isPaused = true; });
+          root.addEventListener("mouseleave", function(){ isPaused = false; });
+          root.addEventListener("focusin", function(){ isPaused = true; });
+          root.addEventListener("focusout", function(){ isPaused = false; });
+        }
+
+        function bindTouchSwipe(){
+          var startX = 0;
+          var deltaX = 0;
+          var isDown = false;
+
+          function onDown(x){
+            isDown = true;
+            startX = x;
+            deltaX = 0;
+            pauseTemporarily();
+          }
+
+          function onMove(x){
+            if (!isDown) return;
+            deltaX = x - startX;
+          }
+
+          function onUp(){
+            if (!isDown) return;
+            isDown = false;
+
+            var threshold = 38;
+            if (Math.abs(deltaX) > threshold){
+              if (deltaX < 0) next();
+              else prev();
+            }
+            deltaX = 0;
+          }
+
+          root.addEventListener("touchstart", function(e){
+            if (!e.touches || !e.touches.length) return;
+            onDown(e.touches[0].clientX);
+          }, { passive: true });
+
+          root.addEventListener("touchmove", function(e){
+            if (!e.touches || !e.touches.length) return;
+            onMove(e.touches[0].clientX);
+          }, { passive: true });
+
+          root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
+          root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+        }
+
+        buildDots();
+        bindArrows();
+        bindHoverPause();
+        bindTouchSwipe();
+
+        goTo(0);
+        startAutoplay();
+
+        window.addEventListener("resize", function(){
+          setTransform();
+        }, { passive: true });
       }
 
-      buildDots();
-      bindArrows();
-      bindHoverPause();
-      bindTouchSwipe();
-
-      goTo(0);
-      startAutoplay();
-
-      window.addEventListener("resize", function(){
-        setTransform();
-      }, { passive: true });
+      initMiniCarousel("lrCarousel");
     })();
   </script>
 </body>
