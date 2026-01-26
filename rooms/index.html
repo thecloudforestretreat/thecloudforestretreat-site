@@ -1,29 +1,16 @@
-<!-- /rooms/index.html (EN Rooms) - The Cloud Forest Retreat
-     Drop-in file. Includes:
-     - Canonical + hreflang (PRODUCTION URLs)
-     - Open Graph (PRODUCTION URLs)
-     - Twitter (PRODUCTION URLs)
-     - Favicons (approved root paths)
-     - Global / shared CSS
-     - Head-only JS
-     - TCFR global behavior (/assets/js/site.js) to inject header/footer + GA + nav
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Rooms | The Cloud Forest Retreat</title>
   <meta name="description" content="Choose your perfect mountain stay: Panoramic Suite, Sunrise Room, or Sunset Room. Cozy comfort, private views, and cloud forest serenity." />
   <meta name="robots" content="index,follow" />
-
   <!-- Canonical + hreflang (PRODUCTION URLs) -->
   <link rel="canonical" href="https://thecloudforestretreat.com/rooms/" />
   <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/" />
   <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/" />
   <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/" />
-
   <!-- Open Graph (PRODUCTION URLs) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
@@ -36,32 +23,26 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="The Cloud Forest Retreat mountain view" />
-
   <!-- Twitter (PRODUCTION URLs) -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rooms | The Cloud Forest Retreat" />
   <meta name="twitter:description" content="Choose your perfect mountain stay: Panoramic Suite, Sunrise Room, or Sunset Room. Cozy comfort, private views, and cloud forest serenity." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-
   <!-- Favicons (approved root paths) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0D5925" />
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <!-- Global / shared CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
-  <link rel="stylesheet" href="/assets/css/header.css" />
-
+  <link rel="stylesheet" href="/assets/css/header.css?v=3" />
   <!-- Head-only JS -->
-  <script src="/assets/js/head.js" defer></script>
-
+  <script src="/assets/js/head.js?v=1" defer></script>
   <style>
     :root{
       --bg: #A1BFAA;
@@ -436,153 +417,135 @@
     }
   </style>
 </head>
-
 <body>
-  <!-- Global header mount -->
   <div id="siteHeader"></div>
-
   <main class="wrap" aria-label="Rooms at The Cloud Forest Retreat">
-    <!-- PAGE HERO -->
     <section class="pageHero" aria-label="Rooms hero">
       <div class="pageHeroMedia" aria-label="Rooms hero image">
-        <!-- Replace with a real rooms/retreat photo when ready -->
         <img src="/assets/images/pages/rooms/tcfr_images_rooms_hero.jpg" alt="Rooms at The Cloud Forest Retreat" loading="eager" decoding="async" />
         <div class="pageHeroOverlay" aria-hidden="true"></div>
       </div>
+  <div class="pageHeroCopy" aria-label="Rooms intro">
+    <div>
+      <div class="kicker">Choose your view</div>
+      <h1 class="h1">Rooms</h1>
+      <p class="sub">
+        Each space is designed for comfort, quiet, and unforgettable cloud forest views. Pick the vibe that matches your stay.
+      </p>
+    </div>
 
-      <div class="pageHeroCopy" aria-label="Rooms intro">
-        <div>
-          <div class="kicker">Choose your view</div>
-          <h1 class="h1">Rooms</h1>
-          <p class="sub">
-            Each space is designed for comfort, quiet, and unforgettable cloud forest views. Pick the vibe that matches your stay.
-          </p>
+    <div class="heroActions" aria-label="Rooms actions">
+      <a class="btn primary" href="/booking/">Book Your Stay</a>
+      <a class="btn secondary" href="/contact/">Ask A Question</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Room options">
+  <div class="sectionHead">
+    <h2 class="h2">Explore our rooms</h2>
+    <p class="hint">Three options with different light, views, and space.</p>
+  </div>
+
+  <div class="grid3" aria-label="Room cards">
+    <a class="roomCard" href="/rooms/panoramic-suite/" aria-label="Panoramic Suite">
+      <div class="roomMedia" aria-hidden="true">
+        <img src="/assets/images/pages/rooms/tcfr_images_rooms_pano_01.jpg" alt="Panoramic Suite at The Cloud Forest Retreat" loading="lazy" decoding="async" />
+        <div class="mediaOverlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="roomBody">
+        <div class="roomTitleRow">
+          <h3 class="roomTitle">Panoramic Suite</h3>
+          <span class="tag">Best views</span>
         </div>
 
-        <div class="heroActions" aria-label="Rooms actions">
-          <a class="btn primary" href="/booking/">Book Your Stay</a>
-          <a class="btn secondary" href="/contact/">Ask A Question</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROOMS GRID -->
-    <section class="section" aria-label="Room options">
-      <div class="sectionHead">
-        <h2 class="h2">Explore our rooms</h2>
-        <p class="hint"></p>
-      </div>
-
-      <div class="grid3" aria-label="Room cards">
-        <!-- Panoramic Suite -->
-        <a class="roomCard" href="/rooms/panoramic-suite/" aria-label="Panoramic Suite">
-          <div class="roomMedia" aria-hidden="true">
-            <!-- Placeholder image -->
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_pano_01.jpg" alt="Panoramic Suite placeholder" loading="lazy" decoding="async" />
-            <div class="mediaOverlay" aria-hidden="true"></div>
-          </div>
-
-          <div class="roomBody">
-            <div class="roomTitleRow">
-              <h3 class="roomTitle">Panoramic Suite</h3>
-              <span class="tag">Best views</span>
-            </div>
-
-            <p class="roomText">
-              Sweeping cloud forest panoramas, floor-to-ceiling windows, and a private terrace made for sunrise breakfast and birdwatching.
-            </p>
-
-            <div class="roomMeta" aria-label="Panoramic Suite highlights">
-              <div class="metaLeft">
-                <span class="miniPill">Spacious</span>
-                <span class="miniPill">Private terrace</span>
-                <span class="miniPill">Photo-friendly</span>
-              </div>
-              <span class="roomCta">View Room</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Sunrise Room -->
-        <a class="roomCard" href="/rooms/sunrise-room/" aria-label="Sunrise Room">
-          <div class="roomMedia" aria-hidden="true">
-            <!-- Placeholder image -->
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Sunrise Room placeholder" loading="lazy" decoding="async" />
-            <div class="mediaOverlay" aria-hidden="true"></div>
-          </div>
-
-          <div class="roomBody">
-            <div class="roomTitleRow">
-              <h3 class="roomTitle">Sunrise Room</h3>
-              <span class="tag">Early glow</span>
-            </div>
-
-            <p class="roomText">
-              East-facing calm with golden dawn views. Start your day with coffee and a view as the forest wakes up around you.
-            </p>
-
-            <div class="roomMeta" aria-label="Sunrise Room highlights">
-              <div class="metaLeft">
-                <span class="miniPill">Sunrise</span>
-                <span class="miniPill">Dawn views</span>
-                <span class="miniPill">Cozy</span>
-              </div>
-              <span class="roomCta">View Room</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Sunset Room -->
-        <a class="roomCard" href="/rooms/sunset-room/" aria-label="Sunset Room">
-          <div class="roomMedia" aria-hidden="true">
-            <!-- Placeholder image -->
-            <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Sunset Room placeholder" loading="lazy" decoding="async" />
-            <div class="mediaOverlay" aria-hidden="true"></div>
-          </div>
-
-          <div class="roomBody">
-            <div class="roomTitleRow">
-              <h3 class="roomTitle">Sunset Room</h3>
-              <span class="tag">Evening cap</span>
-            </div>
-
-            <p class="roomText">
-              A front-row seat to amber skies over emerald peaks. Unwind after adventures with serene evening light and quiet comfort.
-            </p>
-
-            <div class="roomMeta" aria-label="Sunset Room highlights">
-              <div class="metaLeft">
-                <span class="miniPill">West-facing</span>
-                <span class="miniPill">Evening glow</span>
-                <span class="miniPill">Sunsets</span>
-              </div>
-              <span class="roomCta">View Room</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- BOOKING BAND -->
-    <section class="band" aria-label="Booking call to action">
-      <div>
-        <p class="bandTitle">Not sure which room fits?</p>
-        <p class="bandText">
-          Tell us your travel style, and we will recommend the best room for your stay, views, and daily rhythm.
+        <p class="roomText">
+          Sweeping cloud forest panoramas, floor-to-ceiling windows, and a private terrace made for sunrise breakfast and birdwatching.
         </p>
+
+        <div class="roomMeta" aria-label="Panoramic Suite highlights">
+          <div class="metaLeft">
+            <span class="miniPill">Spacious</span>
+            <span class="miniPill">Private terrace</span>
+            <span class="miniPill">Photo-friendly</span>
+          </div>
+          <span class="roomCta">View Room</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="roomCard" href="/rooms/sunrise-room/" aria-label="Sunrise Room">
+      <div class="roomMedia" aria-hidden="true">
+        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Sunrise Room at The Cloud Forest Retreat" loading="lazy" decoding="async" />
+        <div class="mediaOverlay" aria-hidden="true"></div>
       </div>
 
-      <div class="bandActions" aria-label="Booking actions">
-        <a class="btn primary" href="/booking/">Book Your Stay</a>
-        <a class="btn secondary" href="/contact/">Contact</a>
+      <div class="roomBody">
+        <div class="roomTitleRow">
+          <h3 class="roomTitle">Sunrise Room</h3>
+          <span class="tag">Early glow</span>
+        </div>
+
+        <p class="roomText">
+          East-facing calm with golden dawn views. Start your day with coffee and a view as the forest wakes up around you.
+        </p>
+
+        <div class="roomMeta" aria-label="Sunrise Room highlights">
+          <div class="metaLeft">
+            <span class="miniPill">Sunrise</span>
+            <span class="miniPill">Dawn views</span>
+            <span class="miniPill">Cozy</span>
+          </div>
+          <span class="roomCta">View Room</span>
+        </div>
       </div>
-    </section>
+    </a>
+
+    <a class="roomCard" href="/rooms/sunset-room/" aria-label="Sunset Room">
+      <div class="roomMedia" aria-hidden="true">
+        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Sunset Room at The Cloud Forest Retreat" loading="lazy" decoding="async" />
+        <div class="mediaOverlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="roomBody">
+        <div class="roomTitleRow">
+          <h3 class="roomTitle">Sunset Room</h3>
+          <span class="tag">Evening cap</span>
+        </div>
+
+        <p class="roomText">
+          A front-row seat to amber skies over emerald peaks. Unwind after adventures with serene evening light and quiet comfort.
+        </p>
+
+        <div class="roomMeta" aria-label="Sunset Room highlights">
+          <div class="metaLeft">
+            <span class="miniPill">West-facing</span>
+            <span class="miniPill">Evening glow</span>
+            <span class="miniPill">Sunsets</span>
+          </div>
+          <span class="roomCta">View Room</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="band" aria-label="Booking call to action">
+  <div>
+    <p class="bandTitle">Not sure which room fits?</p>
+    <p class="bandText">
+      Tell us your travel style, and we will recommend the best room for your stay, views, and daily rhythm.
+    </p>
+  </div>
+
+  <div class="bandActions" aria-label="Booking actions">
+    <a class="btn primary" href="/booking/">Book Your Stay</a>
+    <a class="btn secondary" href="/contact/">Contact</a>
+  </div>
+</section>
   </main>
-
-  <!-- Global footer mount -->
   <div id="siteFooter"></div>
-
-  <!-- TCFR global behavior: inject header/footer, GA, nav -->
   <script src="/assets/js/site.js?v=3"></script>
 </body>
 </html>
