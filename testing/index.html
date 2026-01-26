@@ -3,549 +3,994 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rooms | The Cloud Forest Retreat</title>
-  <meta name="description" content="Choose your perfect mountain stay: Panoramic Suite, Sunrise Room, or Sunset Room. Cozy comfort, private views, and cloud forest serenity." />
+
+  <title>Panoramic Suite | Cloud Forest View Suite in Ecuador | The Cloud Forest Retreat</title>
+  <meta name="description" content="Wake up above the valley in our Panoramic Suite near Ecuador's cloud forest. Enjoy sweeping views, a private terrace, and open-concept comfort designed for peace and privacy." />
   <meta name="robots" content="index,follow" />
+
   <!-- Canonical + hreflang (PRODUCTION URLs) -->
-  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/panoramic-suite/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/panoramic-suite/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/suite-panoramica/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/panoramic-suite/" />
+
   <!-- Open Graph (PRODUCTION URLs) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Rooms | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Choose your perfect mountain stay: Panoramic Suite, Sunrise Room, or Sunset Room. Cozy comfort, private views, and cloud forest serenity." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/" />
+  <meta property="og:title" content="Panoramic Suite | Cloud Forest View Suite in Ecuador" />
+  <meta property="og:description" content="Sweeping valley views, a private terrace, and open-concept comfort designed for peace and privacy at The Cloud Forest Retreat." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/panoramic-suite/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat mountain view" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat Panoramic Suite" />
+
   <!-- Twitter (PRODUCTION URLs) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rooms | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Choose your perfect mountain stay: Panoramic Suite, Sunrise Room, or Sunset Room. Cozy comfort, private views, and cloud forest serenity." />
+  <meta name="twitter:title" content="Panoramic Suite | Cloud Forest View Suite in Ecuador" />
+  <meta name="twitter:description" content="Sweeping views, private terrace, and open-concept comfort designed for peace and privacy at The Cloud Forest Retreat." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+
   <!-- Favicons (approved root paths) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0D5925" />
+
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <!-- Global / shared CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css?v=3" />
+
   <!-- Head-only JS -->
   <script src="/assets/js/head.js?v=1" defer></script>
+
   <style>
     :root{
-      --bg: #A1BFAA;
-      --forest: #0D5925;
-      --forest-2: #0B2B12;
-      --beige: #F5F5DC;
-      --orange: #E0643A;
-      --line: rgba(13,89,37,.18);
-      --card: rgba(245,245,220,.58);
-      --shadow: 0 18px 55px rgba(0,0,0,.14);
-      --r: 22px;
-      --max: 1180px;
-      --font-head: "Playfair Display", serif;
-      --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      --room-max: 1180px;
+      --room-r: 24px;
+      --room-shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --room-line: rgba(11,26,16,0.12);
+      --room-surface: rgba(245,245,220,0.72);
+      --room-surface-2: rgba(245,245,220,0.82);
+      --room-ink: #0b1a10;
+      --room-muted: rgba(11,26,16,0.72);
     }
 
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      background: var(--bg);
-      color: var(--forest-2);
-      font-family: var(--font-body);
-    }
-
-    a{ color: inherit; text-decoration: none; }
-    img{ max-width:100%; display:block; }
-
-    .wrap{
-      max-width: var(--max);
+    .roomWrap{
+      max-width: var(--room-max);
       margin: 0 auto;
-      padding: 18px 16px 64px;
+      padding: 18px 16px 68px;
     }
 
-    /* Page header */
-    .pageHero{
-      border-radius: var(--r);
-      background: rgba(245,245,220,.72);
-      border: 1px solid rgba(13,89,37,.18);
-      box-shadow: var(--shadow);
+    .roomHero{
+      border-radius: var(--room-r);
       overflow: hidden;
+      box-shadow: var(--room-shadow);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.10);
       position: relative;
-      min-height: 320px;
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 0;
-      align-items: stretch;
+      min-height: 520px;
     }
 
-    .pageHeroMedia{
-      position: relative;
-      min-height: 320px;
-      background: rgba(0,0,0,.08);
-      border-right: 1px solid rgba(13,89,37,.12);
+    .roomHeroMedia{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
     }
 
-    .pageHeroMedia img{
+    .roomHeroMedia img{
       width: 100%;
       height: 100%;
       object-fit: cover;
       transform: scale(1.01);
     }
 
-    .pageHeroOverlay{
-      position:absolute;
-      inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.32));
-      pointer-events:none;
+    .roomHeroOverlay{
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.14), rgba(0,0,0,0.44));
+      pointer-events: none;
     }
 
-    .pageHeroCopy{
-      padding: 18px;
+    .roomHeroInner{
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      padding: 22px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 14px;
     }
 
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
+    .roomKicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(231,228,209,0.36);
+      background: rgba(11,26,16,0.22);
+      color: rgba(231,228,209,0.92);
       font-weight: 900;
-      font-size: 12px;
       letter-spacing: 0.10em;
       text-transform: uppercase;
-      color: rgba(13,89,37,.92);
+      font-size: 12px;
+      width: fit-content;
     }
 
-    .h1{
+    .roomTitle{
       margin: 0;
       font-family: var(--font-head);
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1.02;
-      font-size: clamp(32px, 3.9vw, 50px);
-      color: var(--forest-2);
+      font-size: clamp(34px, 4.2vw, 58px);
+      color: #ffffff;
+      text-shadow: 0 14px 40px rgba(0,0,0,0.34);
+      max-width: 22ch;
     }
 
-    .sub{
+    .roomLead{
       margin: 0;
-      font-size: 15.8px;
-      line-height: 1.78;
-      color: rgba(13,89,37,.96);
-      max-width: 70ch;
+      color: rgba(231,228,209,0.92);
+      font-size: 16.5px;
+      line-height: 1.75;
+      max-width: 72ch;
+      text-shadow: 0 10px 26px rgba(0,0,0,0.22);
       font-weight: 600;
     }
 
-    .heroActions{
-      display:flex;
+    .roomHeroActions{
+      display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      align-items:center;
+      align-items: center;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 12px 14px;
+    .roomScrollHint{
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(231,228,209,0.86);
+      font-weight: 800;
+      font-size: 13px;
+      opacity: 0.95;
+      width: fit-content;
+    }
+
+    .roomScrollDot{
+      width: 10px;
+      height: 10px;
       border-radius: 999px;
-      font-weight: 900;
-      border: 1px solid rgba(13,89,37,.18);
-      box-shadow: 0 14px 30px rgba(0,0,0,.12);
-      cursor: pointer;
-      line-height: 1;
-      white-space: nowrap;
+      background: rgba(231,228,209,0.88);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.22);
     }
 
-    .btn.primary{
-      background: var(--orange);
-      color: #fff;
-      border-color: rgba(0,0,0,.10);
-      box-shadow: 0 14px 30px rgba(224,100,58,.26);
-    }
-
-    .btn.secondary{
-      background: rgba(255,255,255,.66);
-      color: var(--forest-2);
-    }
-
-    /* Room cards grid */
-    .section{
-      margin-top: 18px;
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(13,89,37,.18);
-      background: var(--card);
-      padding: 18px;
-    }
-
-    .sectionHead{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-
-    .h2{
-      margin: 0;
-      font-family: var(--font-head);
-      font-size: 22px;
-      letter-spacing: -0.02em;
-      color: var(--forest-2);
-      font-weight: 900;
-    }
-
-    .hint{
-      margin: 0;
-      color: rgba(13,89,37,.92);
-      font-size: 13.2px;
-      line-height: 1.55;
-      max-width: 90ch;
-      font-weight: 650;
-    }
-
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      align-items: stretch;
+    .roomGridTop{
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 14px;
+      align-items: start;
     }
 
     .roomCard{
-      border-radius: 18px;
-      border: 1px solid rgba(13,89,37,.16);
-      background: rgba(255,255,255,.62);
-      box-shadow: 0 14px 30px rgba(0,0,0,.10);
-      overflow: hidden;
+      background: var(--room-surface);
+      border: 1px solid var(--room-line);
+      border-radius: var(--room-r);
+      box-shadow: var(--room-shadow);
+      padding: 18px;
+      color: var(--room-ink);
       min-width: 0;
-      display:flex;
-      flex-direction: column;
-      color: var(--forest-2);
     }
 
-    .roomMedia{
-      width:100%;
+    .roomCardTight{
+      padding: 16px;
+    }
+
+    .roomH2{
+      margin: 0 0 10px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 1.12;
+    }
+
+    .roomCopy{
+      margin: 0;
+      color: var(--room-ink);
+      line-height: 1.8;
+      font-size: 16px;
+      max-width: 90ch;
+    }
+
+    .roomCopy .muted{
+      color: var(--room-muted);
+      font-weight: 650;
+    }
+
+    .roomFeatureGrid{
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .roomFeature{
+      border: 1px solid rgba(13,89,37,0.14);
+      background: rgba(255,255,255,0.62);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+      min-width: 0;
+    }
+
+    .roomFeatureTitle{
+      margin: 0 0 6px;
+      font-weight: 900;
+      color: #0b2b12;
+      letter-spacing: -0.01em;
+      font-size: 13.8px;
+    }
+
+    .roomFeatureText{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      font-size: 13.3px;
+      line-height: 1.55;
+      font-weight: 650;
+    }
+
+    .roomMiniRow{
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .roomMiniPill{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.62);
+      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+      font-weight: 900;
+      font-size: 13px;
+      color: #0b2b12;
+      white-space: nowrap;
+    }
+
+    .roomSection{
+      margin-top: 16px;
+    }
+
+    .roomSectionHead{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 0 10px;
+    }
+
+    .roomHint{
+      margin: 0;
+      color: rgba(11,26,16,0.72);
+      font-weight: 650;
+      font-size: 13.2px;
+      line-height: 1.55;
+      max-width: 90ch;
+    }
+
+    .roomCarousel{
+      background: var(--room-surface-2);
+      border: 1px solid var(--room-line);
+      border-radius: var(--room-r);
+      box-shadow: var(--room-shadow);
+      overflow: hidden;
+    }
+
+    .roomCarouselViewport{
+      position: relative;
+      overflow: hidden;
+      background: rgba(0,0,0,0.08);
+    }
+
+    .roomCarouselTrack{
+      display: flex;
+      width: 100%;
+      transform: translateX(0);
+      transition: transform 420ms ease;
+      will-change: transform;
+    }
+
+    .roomSlide{
+      flex: 0 0 100%;
+      position: relative;
       aspect-ratio: 16 / 10;
-      background: rgba(0,0,0,.08);
+      margin: 0;
+      padding: 0;
+    }
+
+    .roomSlide img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .roomSlideCap{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 9px 11px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+    }
+
+    .roomCarArrow{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 46px;
+      width: 52px;
+      border-radius: 16px;
+      border: 1px solid rgba(245,245,220,0.45);
+      background: rgba(11,26,16,0.30);
+      color: rgba(231,228,209,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+      cursor: pointer;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      line-height: 1;
+      z-index: 3;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .roomCarArrow:hover{
+      background: rgba(11,26,16,0.38);
+    }
+
+    .roomCarArrow:focus{
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(224,100,58,0.25), 0 18px 55px rgba(0,0,0,0.20);
+    }
+
+    .roomCarArrow.prev{ left: 10px; }
+    .roomCarArrow.next{ right: 10px; }
+
+    .roomCarouselNav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-top: 1px solid rgba(11,26,16,0.12);
+    }
+
+    .roomCarouselDots{
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .roomDotBtn{
+      appearance: none;
+      border: 1px solid rgba(13,89,37,0.20);
+      background: rgba(255,255,255,0.72);
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .roomDotBtn.is-active{
+      background: rgba(224,100,58,0.95);
+      border-color: rgba(0,0,0,0.10);
+      box-shadow: 0 10px 22px rgba(224,100,58,0.18);
+      transform: scale(1.05);
+    }
+
+    .roomVideoCard{
+      background: var(--room-surface-2);
+      border: 1px solid var(--room-line);
+      border-radius: var(--room-r);
+      box-shadow: var(--room-shadow);
+      overflow: hidden;
+    }
+
+    .roomVideoFrame{
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 0;
+      align-items: stretch;
+      min-height: 520px;
+      background: var(--room-surface-2);
+    }
+
+    .roomVideoMedia{
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      border-right: 1px solid rgba(11,26,16,0.10);
+    }
+
+    .roomYt{
+      width: 100%;
+      max-width: 460px;
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.18);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+      overflow: hidden;
       position: relative;
     }
 
-    .roomMedia img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
+    .roomYt iframe{
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 178%;
+      left: -39%;
+      border: 0;
+      display: block;
     }
 
-    .roomMedia .mediaOverlay{
-      position:absolute;
-      inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.25));
-      pointer-events:none;
-    }
-
-    .roomBody{
-      padding: 14px;
-      display:flex;
+    .roomVideoCopy{
+      padding: 18px;
+      display: flex;
       flex-direction: column;
-      gap: 10px;
-      min-height: 190px;
+      justify-content: center;
+      gap: 12px;
+      color: var(--room-ink);
+      min-width: 0;
+      background: transparent;
     }
 
-    .roomTitleRow{
-      display:flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .roomTitle{
+    .roomQuote{
       margin: 0;
-      font-weight: 950;
-      letter-spacing: -0.01em;
-      font-size: 18px;
-      font-family: var(--font-head);
-      color: var(--forest-2);
-      line-height: 1.05;
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,0.14);
+      background: rgba(255,255,255,0.62);
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+      color: #0b2b12;
+      font-weight: 800;
+      line-height: 1.7;
     }
 
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,.18);
-      background: rgba(245,245,220,.70);
-      font-weight: 900;
-      font-size: 12.5px;
-      color: var(--forest);
-      white-space: nowrap;
+    .roomTwoCol{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      align-items: start;
     }
 
-    .roomText{
+    .roomList{
       margin: 0;
-      color: rgba(13,89,37,.94);
-      font-size: 14px;
-      line-height: 1.75;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.80);
+      line-height: 1.8;
       font-weight: 650;
-      max-width: 70ch;
     }
 
-    .roomMeta{
-      margin-top: auto;
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      padding-top: 6px;
-    }
+    .roomList li{ margin: 6px 0; }
 
-    .metaLeft{
-      display:flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items:center;
-    }
-
-    .miniPill{
-      display:inline-flex;
-      align-items:center;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,.16);
-      background: rgba(255,255,255,.60);
-      font-weight: 900;
-      font-size: 12px;
-      color: rgba(13,89,37,.92);
-      white-space: nowrap;
-    }
-
-    .roomCta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      font-weight: 950;
-      background: rgba(13,89,37,.08);
-      border: 1px solid rgba(13,89,37,.18);
-      color: var(--forest-2);
-      white-space: nowrap;
-    }
-
-    .roomCta:hover{
-      background: rgba(13,89,37,.12);
-    }
-
-    /* Bottom band */
-    .band{
-      margin-top: 18px;
-      border-radius: var(--r);
-      border: 1px solid rgba(13,89,37,.18);
-      box-shadow: var(--shadow);
-      background: rgba(245,245,220,.76);
+    .roomBand{
+      margin-top: 16px;
+      border-radius: var(--room-r);
+      border: 1px solid rgba(11,26,16,0.12);
+      box-shadow: var(--room-shadow);
+      background: rgba(245,245,220,0.82);
       padding: 16px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
+      color: #0b2b12;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
-      color: var(--forest-2);
     }
 
-    .bandTitle{
+    .roomBandTitle{
       margin: 0 0 6px;
       font-family: var(--font-head);
       font-weight: 900;
       letter-spacing: -0.02em;
-      font-size: 20px;
-      color: var(--forest-2);
+      font-size: 22px;
+      color: #0b2b12;
     }
 
-    .bandText{
+    .roomBandText{
       margin: 0;
-      color: rgba(13,89,37,.94);
-      line-height: 1.6;
-      font-size: 13.8px;
-      max-width: 80ch;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.65;
+      font-size: 14px;
       font-weight: 650;
+      max-width: 84ch;
     }
 
-    .bandActions{
-      display:flex;
+    .roomBandActions{
+      display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      align-items:center;
+      align-items: center;
     }
 
-    /* Mobile */
     @media (max-width: 900px){
-      .wrap{ padding: 10px 14px 54px; }
+      .roomWrap{ padding: 10px 14px 58px; }
 
-      .pageHero{
+      .roomHero{ min-height: 360px; }
+      .roomHeroInner{ padding: 16px; }
+      .roomTitle{ max-width: none; }
+
+      .roomGridTop{
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .roomFeatureGrid{ grid-template-columns: 1fr; }
+      .roomSlide{ aspect-ratio: 4 / 3; }
+
+      .roomCarArrow{
+        height: 44px;
+        width: 48px;
+        border-radius: 16px;
+      }
+      .roomCarArrow.prev{ left: 8px; }
+      .roomCarArrow.next{ right: 8px; }
+
+      .roomSlideCap{
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        font-size: 12.8px;
+      }
+
+      .roomVideoFrame{
         grid-template-columns: 1fr;
         min-height: 0;
       }
 
-      .pageHeroMedia{
+      .roomVideoMedia{
+        padding: 0;
         border-right: 0;
-        border-bottom: 1px solid rgba(13,89,37,.12);
-        min-height: 240px;
       }
 
-      .grid3{
-        grid-template-columns: 1fr;
+      .roomYt{
+        max-width: 100%;
       }
+
+      .roomTwoCol{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Rooms at The Cloud Forest Retreat">
-    <section class="pageHero" aria-label="Rooms hero">
-      <div class="pageHeroMedia" aria-label="Rooms hero image">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_hero.jpg" alt="Rooms at The Cloud Forest Retreat" loading="eager" decoding="async" />
-        <div class="pageHeroOverlay" aria-hidden="true"></div>
+
+  <main class="roomWrap" aria-label="Panoramic Suite page">
+    <section class="roomHero" aria-label="Panoramic Suite hero">
+      <div class="roomHeroMedia" aria-label="Panoramic Suite view media">
+        <img src="/assets/images/pages/rooms/tcfr_rooms_ps_hero_01.jpg" alt="Panoramic Suite with sweeping cloud forest views" loading="eager" decoding="async" />
       </div>
-  <div class="pageHeroCopy" aria-label="Rooms intro">
-    <div>
-      <div class="kicker">Choose your view</div>
-      <h1 class="h1">Rooms</h1>
-      <p class="sub">
-        Each space is designed for comfort, quiet, and unforgettable cloud forest views. Pick the vibe that matches your stay.
-      </p>
-    </div>
+      <div class="roomHeroOverlay" aria-hidden="true"></div>
 
-    <div class="heroActions" aria-label="Rooms actions">
-      <a class="btn primary" href="/booking/">Book Your Stay</a>
-      <a class="btn secondary" href="/contact/">Ask A Question</a>
-    </div>
-  </div>
-</section>
+      <div class="roomHeroInner">
+        <div class="roomKicker">Open concept suite</div>
 
-<section class="section" aria-label="Room options">
-  <div class="sectionHead">
-    <h2 class="h2">Explore our rooms</h2>
-    <p class="hint">Three options with different light, views, and space.</p>
-  </div>
+        <h1 class="roomTitle">Panoramic Suite</h1>
 
-  <div class="grid3" aria-label="Room cards">
-    <a class="roomCard" href="/rooms/panoramic-suite/" aria-label="Panoramic Suite">
-      <div class="roomMedia" aria-hidden="true">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_pano_01.jpg" alt="Panoramic Suite at The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="mediaOverlay" aria-hidden="true"></div>
-      </div>
-
-      <div class="roomBody">
-        <div class="roomTitleRow">
-          <h3 class="roomTitle">Panoramic Suite</h3>
-          <span class="tag">Best views</span>
-        </div>
-
-        <p class="roomText">
-          Sweeping cloud forest panoramas, floor-to-ceiling windows, and a private terrace made for sunrise breakfast and birdwatching.
+        <p class="roomLead">
+          Wake up above the cloud forest with sweeping valley views, morning mist, and birdsong.
+          A quiet, spacious suite designed for peace, privacy, and nature.
         </p>
 
-        <div class="roomMeta" aria-label="Panoramic Suite highlights">
-          <div class="metaLeft">
-            <span class="miniPill">Spacious</span>
-            <span class="miniPill">Private terrace</span>
-            <span class="miniPill">Photo-friendly</span>
-          </div>
-          <span class="roomCta">View Room</span>
-        </div>
-      </div>
-    </a>
-
-    <a class="roomCard" href="/rooms/sunrise-room/" aria-label="Sunrise Room">
-      <div class="roomMedia" aria-hidden="true">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Sunrise Room at The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="mediaOverlay" aria-hidden="true"></div>
-      </div>
-
-      <div class="roomBody">
-        <div class="roomTitleRow">
-          <h3 class="roomTitle">Sunrise Room</h3>
-          <span class="tag">Early glow</span>
+        <div class="roomHeroActions" aria-label="Primary actions">
+          <a class="btn primary" href="/booking/" aria-label="Book the Panoramic Suite">Book This Suite</a>
+          <a class="btn secondary" href="/booking/" aria-label="Check availability">Check Availability</a>
+          <a class="btn secondary" href="/rooms/" aria-label="View all rooms">View All Rooms</a>
         </div>
 
-        <p class="roomText">
-          East-facing calm with golden dawn views. Start your day with coffee and a view as the forest wakes up around you.
+        <div class="roomScrollHint" aria-hidden="true">
+          <span class="roomScrollDot"></span>
+          <span>Scroll for photos and details</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="roomGridTop" aria-label="Suite story and highlights">
+      <article class="roomCard" aria-label="Suite story">
+        <h2 class="roomH2">A front-row seat at The Cloud Forest Retreat</h2>
+        <p class="roomCopy">
+          Wake up to the symphony of birds and the soft glow of morning mist drifting through the valley.
+          From your private terrace, enjoy breakfast as the sun filters through the treetops, painting the mountains in gold.
+          Floor-to-ceiling windows blur the line between indoors and nature, creating a space designed for stillness, beauty, and connection.
+          <br /><br />
+          <span class="muted">
+            Our most spacious room, ideal for couples or solo travelers seeking immersive nature views, privacy, and peace.
+            Perfect for birdwatchers and photographers.
+          </span>
         </p>
 
-        <div class="roomMeta" aria-label="Sunrise Room highlights">
-          <div class="metaLeft">
-            <span class="miniPill">Sunrise</span>
-            <span class="miniPill">Dawn views</span>
-            <span class="miniPill">Cozy</span>
+        <div class="roomMiniRow" aria-label="Quick highlights">
+          <span class="roomMiniPill">Private terrace</span>
+          <span class="roomMiniPill">Panoramic windows</span>
+          <span class="roomMiniPill">Best sunrise views</span>
+          <span class="roomMiniPill">Quiet and spacious</span>
+        </div>
+      </article>
+
+      <aside class="roomCard roomCardTight" aria-label="Signature features">
+        <h2 class="roomH2">Signature features</h2>
+        <p class="roomHint">Designed for guests who want space, silence, and a view that feels unreal.</p>
+
+        <div class="roomFeatureGrid" aria-label="Feature cards">
+          <div class="roomFeature">
+            <p class="roomFeatureTitle">Open concept comfort</p>
+            <p class="roomFeatureText">A calm layout that feels spacious, airy, and connected to the landscape.</p>
           </div>
-          <span class="roomCta">View Room</span>
-        </div>
-      </div>
-    </a>
 
-    <a class="roomCard" href="/rooms/sunset-room/" aria-label="Sunset Room">
-      <div class="roomMedia" aria-hidden="true">
-        <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Sunset Room at The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="mediaOverlay" aria-hidden="true"></div>
-      </div>
-
-      <div class="roomBody">
-        <div class="roomTitleRow">
-          <h3 class="roomTitle">Sunset Room</h3>
-          <span class="tag">Evening cap</span>
-        </div>
-
-        <p class="roomText">
-          A front-row seat to amber skies over emerald peaks. Unwind after adventures with serene evening light and quiet comfort.
-        </p>
-
-        <div class="roomMeta" aria-label="Sunset Room highlights">
-          <div class="metaLeft">
-            <span class="miniPill">West-facing</span>
-            <span class="miniPill">Evening glow</span>
-            <span class="miniPill">Sunsets</span>
+          <div class="roomFeature">
+            <p class="roomFeatureTitle">Sweeping valley views</p>
+            <p class="roomFeatureText">Cloud forest panoramas from bed, lounge, and terrace.</p>
           </div>
-          <span class="roomCta">View Room</span>
+
+          <div class="roomFeature">
+            <p class="roomFeatureTitle">Private terrace</p>
+            <p class="roomFeatureText">Morning coffee, golden light, and birdsong at your pace.</p>
+          </div>
+
+          <div class="roomFeature">
+            <p class="roomFeatureTitle">Made for birders</p>
+            <p class="roomFeatureText">Toucans, tanagers, hummingbirds, and misty forest mornings.</p>
+          </div>
+
+          <div class="roomFeature">
+            <p class="roomFeatureTitle">Natural textures</p>
+            <p class="roomFeatureText">Warm materials and locally crafted details that feel grounded.</p>
+          </div>
+
+          <div class="roomFeature">
+            <p class="roomFeatureTitle">Quiet and private</p>
+            <p class="roomFeatureText">A peaceful base for slow travel, rest, and photography.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="roomSection" aria-label="Photo gallery">
+      <div class="roomSectionHead">
+        <h2 class="roomH2">Photo gallery</h2>
+        <p class="roomHint">Swipe on mobile or use arrows and dots.</p>
+      </div>
+
+      <div class="roomCarousel" aria-label="Panoramic Suite carousel">
+        <div class="roomCarouselViewport" id="psCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
+          <button class="roomCarArrow prev" type="button" data-action="prev" aria-label="Previous photo">‹</button>
+          <button class="roomCarArrow next" type="button" data-action="next" aria-label="Next photo">›</button>
+
+          <div class="roomCarouselTrack" data-track>
+            <figure class="roomSlide" aria-label="Gallery image 1">
+              <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_01.jpg" alt="Panoramic Suite interior with valley view" loading="lazy" decoding="async" />
+              <figcaption class="roomSlideCap">Floor-to-ceiling views</figcaption>
+            </figure>
+
+            <figure class="roomSlide" aria-label="Gallery image 2">
+              <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_02.jpg" alt="Private terrace breakfast view" loading="lazy" decoding="async" />
+              <figcaption class="roomSlideCap">Private terrace mornings</figcaption>
+            </figure>
+
+            <figure class="roomSlide" aria-label="Gallery image 3">
+              <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_03.jpg" alt="Open concept suite details" loading="lazy" decoding="async" />
+              <figcaption class="roomSlideCap">Open concept calm</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="roomCarouselNav" aria-label="Carousel dots">
+          <div class="roomCarouselDots" data-dots aria-label="Choose a photo"></div>
         </div>
       </div>
-    </a>
-  </div>
-</section>
+    </section>
 
-<section class="band" aria-label="Booking call to action">
-  <div>
-    <p class="bandTitle">Not sure which room fits?</p>
-    <p class="bandText">
-      Tell us your travel style, and we will recommend the best room for your stay, views, and daily rhythm.
-    </p>
-  </div>
+    <section class="roomSection" aria-label="Suite video moment">
+      <div class="roomSectionHead">
+        <h2 class="roomH2">Morning in the Panoramic Suite</h2>
+        <p class="roomHint"></p>
+      </div>
 
-  <div class="bandActions" aria-label="Booking actions">
-    <a class="btn primary" href="/booking/">Book Your Stay</a>
-    <a class="btn secondary" href="/contact/">Contact</a>
-  </div>
-</section>
+      <div class="roomVideoCard">
+        <div class="roomVideoFrame">
+          <div class="roomVideoMedia" aria-label="Vertical video (YouTube Short)">
+            <div class="roomYt" aria-label="YouTube video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/pokjiyuVNuY?autoplay=1&mute=1&loop=1&playlist=pokjiyuVNuY&controls=1&modestbranding=1&rel=0&playsinline=1"
+                title="Panoramic Suite video"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="roomVideoCopy" aria-label="Video story">
+            <p class="roomCopy">
+              Mist drifting through the valley. Hummingbirds hovering near the terrace. The cloud forest waking up slowly.
+              This is what mornings feel like here.
+            </p>
+
+            <p class="roomQuote">
+              "A suite designed to disappear into the landscape, so the view becomes the room."
+            </p>
+
+            <div class="roomMiniRow" aria-label="Video actions">
+              <a class="btn primary" href="/booking/">Book This Suite</a>
+              <a class="btn secondary" href="/contact/">Ask A Question</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roomSection" aria-label="Who this suite is for">
+      <div class="roomSectionHead">
+        <h2 class="roomH2">Who this suite is for</h2>
+        <p class="roomHint"></p>
+      </div>
+
+      <div class="roomTwoCol">
+        <div class="roomCard" aria-label="Perfect for">
+          <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">Perfect for</h3>
+          <ul class="roomList">
+            <li>Couples seeking privacy and a romantic setting</li>
+            <li>Birdwatchers and photographers chasing soft morning light</li>
+            <li>Solo travelers who want quiet, space, and nature immersion</li>
+            <li>Guests who want an open concept room with a view-first design</li>
+          </ul>
+        </div>
+
+        <div class="roomCard" aria-label="Not ideal if">
+          <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">Not ideal if</h3>
+          <ul class="roomList">
+            <li>You prefer busy nightlife or an urban vibe</li>
+            <li>You want a stay centered around TV or indoor entertainment</li>
+            <li>You are looking for a fast-paced, activity-packed schedule all day</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="roomBand" aria-label="Final call to action">
+      <div>
+        <p class="roomBandTitle">Ready to wake up above the cloud forest?</p>
+        <p class="roomBandText">Check availability and book your stay in minutes. If you have questions, contact us and we will help you plan.</p>
+      </div>
+
+      <div class="roomBandActions" aria-label="Final actions">
+        <a class="btn primary" href="/booking/">Book This Suite</a>
+        <a class="btn secondary" href="/rooms/">View All Rooms</a>
+        <a class="btn secondary" href="/contact/">Contact</a>
+      </div>
+    </section>
   </main>
+
   <div id="siteFooter"></div>
+
+  <!-- TCFR global behavior: inject header/footer, GA, nav -->
   <script src="/assets/js/site.js?v=3"></script>
+
+  <script>
+    (function(){
+      "use strict";
+
+      var root = document.getElementById("psCarousel");
+      if (!root) return;
+
+      var track = root.querySelector("[data-track]");
+      var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
+
+      if (!track) return;
+
+      var slides = track.children ? Array.prototype.slice.call(track.children) : [];
+      if (!slides.length) return;
+
+      var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2800");
+      var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
+
+      var index = 0;
+      var timer = null;
+      var resumeTimer = null;
+      var isPaused = false;
+
+      function clamp(n, min, max){
+        return Math.max(min, Math.min(max, n));
+      }
+
+      function setTransform(){
+        track.style.transform = "translateX(" + (-index * 100) + "%)";
+      }
+
+      function setActiveDot(){
+        if (!dotsWrap) return;
+        var btns = dotsWrap.querySelectorAll("button[data-dot]");
+        for (var i = 0; i < btns.length; i++){
+          btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
+        }
+      }
+
+      function goTo(i){
+        index = clamp(i, 0, slides.length - 1);
+        setTransform();
+        setActiveDot();
+      }
+
+      function next(){
+        var n = index + 1;
+        if (n >= slides.length) n = 0;
+        goTo(n);
+      }
+
+      function prev(){
+        var p = index - 1;
+        if (p < 0) p = slides.length - 1;
+        goTo(p);
+      }
+
+      function clearTimers(){
+        if (timer) { clearInterval(timer); timer = null; }
+        if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+      }
+
+      function startAutoplay(){
+        clearTimers();
+        if (autoplayMs < 1200) autoplayMs = 1200;
+        timer = setInterval(function(){
+          if (isPaused) return;
+          next();
+        }, autoplayMs);
+      }
+
+      function pauseTemporarily(){
+        isPaused = true;
+        if (resumeTimer) clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function(){
+          isPaused = false;
+        }, pauseAfterMs);
+      }
+
+      function buildDots(){
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = "";
+        for (var i = 0; i < slides.length; i++){
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "roomDotBtn" + (i === 0 ? " is-active" : "");
+          b.setAttribute("data-dot", String(i));
+          b.setAttribute("aria-label", "Go to photo " + (i + 1));
+          b.addEventListener("click", function(){
+            var n = Number(this.getAttribute("data-dot") || "0");
+            goTo(n);
+            pauseTemporarily();
+          });
+          dotsWrap.appendChild(b);
+        }
+      }
+
+      function bindArrows(){
+        var prevBtn = root.querySelector('button[data-action="prev"]');
+        var nextBtn = root.querySelector('button[data-action="next"]');
+
+        if (prevBtn){
+          prevBtn.addEventListener("click", function(){
+            prev();
+            pauseTemporarily();
+          });
+        }
+
+        if (nextBtn){
+          nextBtn.addEventListener("click", function(){
+            next();
+            pauseTemporarily();
+          });
+        }
+      }
+
+      function bindHoverPause(){
+        root.addEventListener("mouseenter", function(){ isPaused = true; });
+        root.addEventListener("mouseleave", function(){ isPaused = false; });
+        root.addEventListener("focusin", function(){ isPaused = true; });
+        root.addEventListener("focusout", function(){ isPaused = false; });
+      }
+
+      function bindTouchSwipe(){
+        var startX = 0;
+        var deltaX = 0;
+        var isDown = false;
+
+        function onDown(x){
+          isDown = true;
+          startX = x;
+          deltaX = 0;
+          pauseTemporarily();
+        }
+
+        function onMove(x){
+          if (!isDown) return;
+          deltaX = x - startX;
+        }
+
+        function onUp(){
+          if (!isDown) return;
+          isDown = false;
+
+          var threshold = 38;
+          if (Math.abs(deltaX) > threshold){
+            if (deltaX < 0) next();
+            else prev();
+          }
+          deltaX = 0;
+        }
+
+        root.addEventListener("touchstart", function(e){
+          if (!e.touches || !e.touches.length) return;
+          onDown(e.touches[0].clientX);
+        }, { passive: true });
+
+        root.addEventListener("touchmove", function(e){
+          if (!e.touches || !e.touches.length) return;
+          onMove(e.touches[0].clientX);
+        }, { passive: true });
+
+        root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
+        root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+      }
+
+      buildDots();
+      bindArrows();
+      bindHoverPause();
+      bindTouchSwipe();
+
+      goTo(0);
+      startAutoplay();
+
+      window.addEventListener("resize", function(){
+        setTransform();
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
