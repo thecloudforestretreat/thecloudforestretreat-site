@@ -1,1 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Productos Locales| The Cloud Forest Retreat</title>
+  <meta name="description" content="Descubre productos de temporada, frescos de la huerta en The Cloud Forest Retreat. Mira qué está creciendo en la propiedad y cómo las comidas de la huerta a la mesa siguen la tierra y la estación." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical + hreflang (PRODUCTION URLs) -->
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/produce/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/features/produce/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/caracteristicas/productos-locales/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/features/produce/" />
+
+  <!-- Open Graph (PRODUCTION URLs) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="Productos | The Cloud Forest Retreat" />
+  <meta property="og:description" content="Descubre productos de temporada, frescos de la huerta en The Cloud Forest Retreat. Mira qué está creciendo en la propiedad y cómo las comidas de la huerta a la mesa siguen la tierra y la estación." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/features/produce/" />
+  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Vista de montaña de The Cloud Forest Retreat" />
+
+  <!-- Twitter (PRODUCTION URLs) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Productos Locales | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Descubre productos de temporada, frescos de la huerta en The Cloud Forest Retreat. Mira qué está creciendo en la propiedad y cómo las comidas de la huerta a la mesa siguen la tierra y la estación." />
+  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+
+  <!-- Favicons (approved root paths) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Global / shared CSS -->
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+
+  <!-- Head-only JS -->
+  <script src="/assets/js/head.js" defer></script>
+
+  <style>
+    :root{
+      --max:1120px;
+      --r:24px;
+      --shadow:0 18px 55px rgba(13,89,37,0.16);
+      --line:rgba(11,26,16,0.12);
+      --glass:rgba(245,245,220,0.78);
+      --glass2:rgba(245,245,220,0.62);
+      --ink:#0b1a10;
+      --forest:#0D5925;
+      --muted:rgba(11,26,16,0.72);
+    }
+
+    *{ box-sizing:border-box; }
+    body{ margin:0; }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 18px 72px;
+    }
+
+    .card{
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      color:var(--ink);
+    }
+
+    /* TOP BAND */
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+      flex-wrap: wrap;
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* HERO (match other pages exactly: hero -> heroMedia -> heroShade + heroInner) */
+    .hero{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      background:var(--glass);
+      overflow:hidden;
+      position:relative;
+      color:var(--ink);
+    }
+
+    .heroMedia{
+      position:relative;
+      height:400px;
+      background:rgba(0,0,0,0.10);
+    }
+
+    .heroMedia img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.01);
+    }
+
+    .heroShade{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+      pointer-events:none;
+    }
+
+    .heroInner{
+      position:absolute;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.22);
+      background:rgba(0,0,0,0.30);
+      backdrop-filter:blur(6px);
+      -webkit-backdrop-filter:blur(10px);
+      padding:14px;
+      color:rgba(255,255,255,0.96);
+      box-shadow:0 18px 55px rgba(0,0,0,0.20);
+      max-width: 860px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:rgba(255,255,255,0.92);
+    }
+
+    .heroH1{
+      margin:8px 0 6px;
+      font-family:var(--font-head);
+      font-weight:900;
+      letter-spacing:-0.03em;
+      line-height:1.02;
+      font-size:clamp(32px,4vw,54px);
+      color:#fff;
+    }
+
+    .heroLead{
+      margin:0;
+      max-width:80ch;
+      font-weight:650;
+      line-height:1.7;
+      color:rgba(231,228,209,0.92);
+      font-size:15.5px;
+    }
+
+    /* INTRO */
+    .intro{
+      margin-top:12px;
+      padding:14px 16px;
+    }
+
+    .intro p{
+      margin:0;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      max-width:90ch;
+      font-weight:650;
+    }
+
+    /* PRODUCE GRID */
+    .produceGrid{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+    }
+
+    .produceItem{
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      aspect-ratio:1/1;
+      background:#ccc;
+      border: 1px solid rgba(11,26,16,0.10);
+    }
+
+    .produceItem img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
+
+    .produceCap{
+      position:absolute;
+      left:10px;
+      right:10px;
+      bottom:10px;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(245,245,220,0.92);
+      border:1px solid rgba(13,89,37,0.16);
+      font-size:13px;
+      font-weight:900;
+      color:#0b2b12;
+      text-align:center;
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+    }
+
+    /* HIGHLIGHT */
+    .highlight{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .highlightImage{
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(11,26,16,0.10);
+      background:#ccc;
+      position: relative;
+      min-height: 380px;
+    }
+
+    .highlightImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
+
+    .highlightText{
+      padding:14px 16px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      gap:10px;
+      min-width: 0;
+    }
+
+    .highlightText h2{
+      margin:0;
+      font-family:var(--font-head);
+      font-size:26px;
+      color:var(--forest);
+      letter-spacing:-0.02em;
+      font-weight:900;
+      line-height:1.08;
+    }
+
+    .highlightText p{
+      margin:0;
+      font-size:15px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      font-weight:650;
+      max-width: none;
+    }
+
+    .pillRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 2px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.18);
+      background:rgba(255,255,255,0.62);
+      color:#0b2b12;
+      font-weight:900;
+      font-size:13px;
+      white-space:nowrap;
+      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+    }
+
+    .miniBox{
+      border-radius:18px;
+      border:1px solid rgba(11,26,16,0.10);
+      background:rgba(255,255,255,0.55);
+      padding:12px;
+      display:grid;
+      gap:8px;
+    }
+
+    .miniTitle{
+      margin:0;
+      font-family:var(--font-head);
+      color:var(--forest);
+      font-weight:900;
+      letter-spacing:-0.02em;
+      font-size:18px;
+      line-height:1.15;
+    }
+
+    .miniList{
+      margin:0;
+      padding-left:18px;
+      color:rgba(11,26,16,0.78);
+      line-height:1.85;
+      font-weight:650;
+      font-size:14.6px;
+    }
+    .miniList li{ margin:6px 0; }
+
+    /* SEASONAL HIGHLIGHTS */
+    .spotlight{
+      margin-top:12px;
+      padding:14px;
+    }
+
+    .h2{
+      margin: 0 0 12px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .spotGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .spotItem{
+      border-radius:24px;
+      overflow:hidden;
+      background:var(--glass);
+      border:1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+    }
+
+    .spotImage{
+      aspect-ratio:4/5;
+      background:#ccc;
+      border-bottom:1px solid rgba(11,26,16,0.10);
+    }
+
+    .spotImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
+
+    .spotBody{
+      padding:12px;
+      display:grid;
+      gap:6px;
+      flex: 1 1 auto;
+    }
+
+    .spotBody h3{
+      margin:0;
+      font-family:var(--font-head);
+      font-size:18px;
+      color:var(--forest);
+      font-weight:900;
+      letter-spacing:-0.01em;
+      line-height:1.15;
+    }
+
+    .spotBody p{
+      margin:0;
+      font-size:13.8px;
+      line-height:1.6;
+      color:rgba(11,26,16,0.75);
+      font-weight:650;
+    }
+
+    /* CLOSING */
+    .closing{
+      margin-top:12px;
+      padding:14px 16px;
+      text-align:center;
+    }
+
+    .closing p{
+      margin:0 auto;
+      max-width:78ch;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      font-weight:650;
+    }
+
+    @media(max-width:900px){
+      .wrap{ padding:12px 14px 64px; }
+
+      .heroMedia{ min-height:280px; }
+      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
+
+      .intro{ margin-top:12px; padding:12px 14px; }
+
+      .produceGrid{ grid-template-columns:repeat(2,1fr); gap:10px; }
+
+      .highlight{ grid-template-columns:1fr; gap:12px; }
+      .highlightImage{ min-height: 320px; }
+
+      .spotGrid{ grid-template-columns:1fr; }
+      .spotImage{ aspect-ratio:16/9; }
+
+      .closing{ padding:12px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Pagina de Productos">
+    <section class="topBand" aria-label="Navegacion de la pagina">
+      <div class="crumbs" aria-label="Ruta de navegacion">
+        <a href="/">Inicio</a>
+        <span aria-hidden="true">›</span>
+        <a href="/features/">Caracteristicas</a>
+        <span aria-hidden="true">›</span>
+        <span>Productos</span>
+      </div>
+      <div class="quickActions" aria-label="Acciones rapidas">
+        <a class="btn secondary" href="/booking/">Ver disponibilidad</a>
+        <a class="btn primary" href="/contact/">Consultar sobre las comidas</a>
+      </div>
+    </section>
+
+    <section class="hero" aria-label="Hero de Productos">
+      <div class="heroMedia" aria-label="Imagen principal">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_hero_01.jpg" alt="Productos organicos en The Cloud Forest Retreat" loading="eager" decoding="async" />
+        <div class="heroShade" aria-hidden="true"></div>
+        <div class="heroInner" aria-label="Contenido principal">
+          <div class="kicker">De la huerta a la mesa • De temporada • Fresco</div>
+          <h1 class="heroH1">Productos</h1>
+          <p class="heroLead">
+            Fresco, de temporada y cultivado con dedicacion. Lo que comes aqui nace directamente de la tierra que te rodea.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card intro" aria-label="Introduccion">
+      <p>
+        En The Cloud Forest Retreat, gran parte de lo que llega a tu plato empieza a pocos pasos.
+        Nuestra finca produce una seleccion rotativa de frutas, verduras y hierbas cultivadas de forma organica, guiadas por las estaciones y cosechadas con intencion.
+      </p>
+    </section>
+
+    <section class="produceGrid" aria-label="Galeria de productos">
+      <div class="produceItem">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_tree_tomatoes.jpg" alt="Tomate de arbol" loading="lazy" decoding="async" />
+        <div class="produceCap">Tomate de arbol</div>
+      </div>
+      <div class="produceItem">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_peppers_02.jpg" alt="Pimientos" loading="lazy" decoding="async" />
+        <div class="produceCap">Pimientos</div>
+      </div>
+      <div class="produceItem">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_herbs.jpg" alt="Hierbas frescas" loading="lazy" decoding="async" />
+        <div class="produceCap">Hierbas</div>
+      </div>
+      <div class="produceItem">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_leafy_greens.jpg" alt="Hojas verdes" loading="lazy" decoding="async" />
+        <div class="produceCap">Hojas verdes</div>
+      </div>
+      <div class="produceItem">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_citrus.jpg" alt="Citricos" loading="lazy" decoding="async" />
+        <div class="produceCap">Citricos</div>
+      </div>
+      <div class="produceItem">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_coffee_cherries.jpg" alt="Cerezas de cafe" loading="lazy" decoding="async" />
+        <div class="produceCap">Cerezas de cafe</div>
+      </div>
+      <div class="produceItem">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_garden_harvest_01.jpg" alt="Cosecha de la huerta" loading="lazy" decoding="async" />
+        <div class="produceCap">Cosecha de la huerta</div>
+      </div>
+      <div class="produceItem">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_seasonal_fruits_chirimoya_01.jpg" alt="Frutas de temporada" loading="lazy" decoding="async" />
+        <div class="produceCap">Frutas de temporada</div>
+      </div>
+    </section>
+
+    <section class="highlight" aria-label="De la huerta a la mesa">
+      <div class="highlightImage" aria-label="Imagen de la huerta a la mesa">
+        <img src="/assets/images/pages/features/produce/tcfr_features_produce_garden_to_table_01.jpg" alt="Productos de la huerta a la mesa" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="card highlightText" aria-label="Texto de la huerta a la mesa">
+        <h2>De la huerta a la mesa</h2>
+        <p>
+          Los ingredientes se cosechan en su punto y se usan frescos. Las comidas aqui reflejan lo que la tierra ofrece en ese momento,
+          creando una conexion directa entre suelo, estacion y sabor.
+        </p>
+
+        <div class="pillRow" aria-label="Puntos clave">
+          <span class="pill">Cosechado a diario</span>
+          <span class="pill">Menus segun la temporada</span>
+          <span class="pill">Sabor local</span>
+        </div>
+
+        <div class="miniBox" aria-label="Como funciona">
+          <h3 class="miniTitle">Como funciona</h3>
+          <ul class="miniList">
+            <li>Cosechamos en la manana para maxima frescura.</li>
+            <li>Preparamos comidas simples que dejan brillar a los ingredientes.</li>
+            <li>Rotamos el menu segun lo que este listo esa semana.</li>
+          </ul>
+        </div>
+
+        <div class="miniBox" aria-label="Lo que puedes ver en temporada">
+          <h3 class="miniTitle">Lo que puedes ver segun la temporada</h3>
+          <ul class="miniList">
+            <li>Tomate de arbol, citricos y frutas de temporada.</li>
+            <li>Pimientos, hojas verdes, hierbas y cosechas de la huerta.</li>
+            <li>Cerezas de cafe cuando las condiciones son las adecuadas.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card spotlight" aria-label="Destacados de temporada">
+      <h2 class="h2">Destacados de temporada</h2>
+
+      <div class="spotGrid" aria-label="Grid de destacados">
+        <article class="spotItem" aria-label="Tomate de arbol">
+          <div class="spotImage">
+            <img src="/assets/images/pages/features/produce/tcfr_features_produce_tree_tomatoes.jpg" alt="Tomate de arbol" loading="lazy" decoding="async" />
+          </div>
+          <div class="spotBody">
+            <h3>Tomate de arbol</h3>
+            <p>Acido, vibrante y muy usado en salsas y preparaciones frescas.</p>
+          </div>
+        </article>
+
+        <article class="spotItem" aria-label="Pimientos">
+          <div class="spotImage">
+            <img src="/assets/images/pages/features/produce/tcfr_features_produce_peppers_01.jpg" alt="Pimientos" loading="lazy" decoding="async" />
+          </div>
+          <div class="spotBody">
+            <h3>Pimientos</h3>
+            <p>Se cosechan cada semana y aportan calidez y profundidad a muchos platos.</p>
+          </div>
+        </article>
+
+        <article class="spotItem" aria-label="Hierbas frescas">
+          <div class="spotImage">
+            <img src="/assets/images/pages/features/produce/tcfr_features_produce_herbs.jpg" alt="Hierbas frescas" loading="lazy" decoding="async" />
+          </div>
+          <div class="spotBody">
+            <h3>Hierbas frescas</h3>
+            <p>Se cortan justo antes de cocinar para un aroma y sabor al maximo.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="card closing" aria-label="Cierre">
+      <p>
+        Comer aqui no es solo alimentarse. Es entender de donde viene la comida, honrar la tierra y bajar el ritmo lo suficiente para saborearla.
+      </p>
+    </section>
+  </main>
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
