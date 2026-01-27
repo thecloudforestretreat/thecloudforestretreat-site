@@ -4,33 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Habitación Sunrise | Habitación hacia el este en el bosque nublado de Ecuador | The Cloud Forest Retreat</title>
-  <meta name="description" content="Despierta con la primera luz en nuestra Habitación Sunrise en The Cloud Forest Retreat. Una habitación acogedora, orientada al este, con mañanas tranquilas, tonos suaves del amanecer y vistas al bosque nublado." />
+  <title>Habitacion Atardecer | Vistas de hora dorada | The Cloud Forest Retreat</title>
+  <meta name="description" content="Relajate con vistas de hora dorada en The Cloud Forest Retreat. La Habitacion Atardecer es una estadia acogedora orientada al oeste, con luz calida al final del dia y calma del bosque nublado." />
   <meta name="robots" content="index,follow" />
 
   <!-- Canonical + hreflang (PRODUCTION URLs) -->
-  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/habitacion-amanecer/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/sunrise-room/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/sunset-room/" />
 
   <!-- Open Graph (PRODUCTION URLs) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Habitación Sunrise | Habitación hacia el este en el bosque nublado de Ecuador" />
-  <meta property="og:description" content="Una habitación acogedora, orientada al este, para quienes se levantan temprano. Disfruta mañanas tranquilas, luz del amanecer y vistas al bosque nublado en The Cloud Forest Retreat." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/sunrise-room/" />
+  <meta property="og:title" content="Habitacion Atardecer | Vistas de hora dorada" />
+  <meta property="og:description" content="Relajate con vistas de hora dorada en The Cloud Forest Retreat. La Habitacion Atardecer es una estadia acogedora orientada al oeste, con luz calida al final del dia y calma del bosque nublado." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/rooms/sunset-room/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Vista de montaña en The Cloud Forest Retreat" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat - Habitacion Atardecer" />
 
   <!-- Twitter (PRODUCTION URLs) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Habitación Sunrise | Habitación hacia el este en el bosque nublado de Ecuador" />
-  <meta name="twitter:description" content="Una habitación acogedora, orientada al este, para quienes se levantan temprano, con mañanas tranquilas, luz del amanecer y vistas al bosque nublado en The Cloud Forest Retreat." />
+  <meta name="twitter:title" content="Habitacion Atardecer | Vistas de hora dorada" />
+  <meta name="twitter:description" content="Una habitacion acogedora orientada al oeste para amantes del atardecer: luz calida, vistas tranquilas y calma del bosque nublado." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
 
   <!-- Favicons (approved root paths) -->
@@ -59,8 +59,8 @@
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
 
-      --sunrise: #E0643A;
-      --sunriseSoft: rgba(224,100,58,0.12);
+      --sunset: #E0643A;
+      --sunsetSoft: rgba(224,100,58,0.14);
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
@@ -126,6 +126,7 @@
       overflow: hidden;
       color: var(--ink);
       min-width: 0;
+      position: relative;
     }
 
     .cardHead{
@@ -175,8 +176,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(900px 520px at 18% 12%, rgba(224,100,58,0.26), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.42));
+        radial-gradient(900px 520px at 80% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.46));
       pointer-events: none;
     }
 
@@ -221,7 +222,7 @@
       max-width: 70ch;
       font-weight: 600;
       line-height: 1.7;
-      color: rgba(255,255,255,0.92);
+      color: rgba(231,228,209,0.92);
       font-size: 15.5px;
     }
 
@@ -461,6 +462,7 @@
       line-height: 1.6;
     }
 
+    /* Shared bathroom section */
     .bathSection{
       margin-top: 14px;
     }
@@ -676,51 +678,53 @@
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Página de la Habitación Sunrise">
-    <section class="topBand" aria-label="Navegación de la habitación y acciones de reserva">
-      <div class="crumbs" aria-label="Migas de pan">
-        <a href="/">Inicio</a>
+
+  <main class="wrap" aria-label="Pagina de la Habitacion Atardecer">
+    <section class="topBand" aria-label="Navegacion de habitacion y acciones de reserva">
+      <div class="crumbs" aria-label="Miga de pan">
+        <a href="/es/">Inicio</a>
         <span aria-hidden="true">›</span>
-        <a href="/rooms/">Habitaciones</a>
+        <a href="/es/habitaciones/">Habitaciones</a>
         <span aria-hidden="true">›</span>
-        <span>Habitación Sunrise</span>
+        <span>Habitacion Atardecer</span>
       </div>
-      <div class="quickActions" aria-label="Acciones rápidas">
-        <a class="btn secondary" href="/rooms/">Comparar habitaciones</a>
-        <a class="btn primary" href="/booking/">Reservar tu estadía</a>
+
+      <div class="quickActions" aria-label="Acciones rapidas">
+        <a class="btn secondary" href="/es/habitaciones/">Comparar habitaciones</a>
+        <a class="btn primary" href="/es/reserva/">Reservar tu estadia</a>
       </div>
     </section>
 
-    <!-- OPTION A: Row 1 (Hero left, Video right, same height) -->
-    <section class="gridA" aria-label="Hero y video de Sunrise">
-      <article class="card" aria-label="Imagen hero">
-        <div class="heroMedia" aria-label="Imagen hero de la Habitación Sunrise">
-          <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Habitación Sunrise con luz de la mañana y vistas al bosque nublado" loading="eager" decoding="async" />
+    <!-- Row 1 (Hero left, Video right, same height) -->
+    <section class="gridA" aria-label="Hero y video de atardecer">
+      <article class="card" aria-label="Imagen principal">
+        <div class="heroMedia" aria-label="Imagen hero de la Habitacion Atardecer">
+          <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Habitacion Atardecer con luz de la tarde y vistas del bosque nublado" loading="eager" decoding="async" />
           <div class="heroShade" aria-hidden="true"></div>
 
-          <div class="heroTitleBadge" aria-label="Título de la habitación">
-            <div class="kicker">Hacia el este • Vistas de amanecer</div>
-            <h1 class="heroH1">Habitación Sunrise</h1>
+          <div class="heroTitleBadge" aria-label="Titulo de la habitacion">
+            <div class="kicker">Ventanas al oeste • Vistas de hora dorada</div>
+            <h1 class="heroH1">Habitacion Atardecer</h1>
             <p class="heroLead">
-              Despierta con luz dorada, canto de aves y una vista tranquila mientras tomas tu café.
-              Una habitación acogedora para quienes se levantan temprano y quieren vivir The Cloud Forest Retreat en su hora más mágica.
+              Cuando baja la luz, el bosque se vuelve ambar y el aire se calma. Disfruta una copa de vino o un te con vista mientras el sol se esconde detras de las montanas.
+              Una habitacion tranquila y romantica para tardes lentas.
             </p>
           </div>
         </div>
       </article>
 
-      <aside class="card" aria-label="Vista previa del video">
+      <aside class="card" aria-label="Vista previa de video">
         <div class="cardHead">
-          <h2 class="cardTitle">Un vistazo al amanecer</h2>
+          <h2 class="cardTitle">Un vistazo al atardecer</h2>
           <p class="cardHint"></p>
         </div>
 
         <div class="videoCardInner" aria-label="Contenido del video">
-          <div class="ytFrame" aria-label="Video de la Habitación Sunrise">
+          <div class="ytFrame" aria-label="Video de la Habitacion Atardecer">
             <div class="ytBox" aria-label="Video de YouTube">
               <iframe
-                src="https://www.youtube-nocookie.com/embed/_VGh3YEdYl4?autoplay=1&mute=1&loop=1&playlist=_VGh3YEdYl4&controls=1&modestbranding=1&rel=0&playsinline=1"
-                title="Video de la Habitación Sunrise"
+                src="https://www.youtube-nocookie.com/embed/1Djnf3UnF4g?autoplay=1&mute=1&loop=1&playlist=1Djnf3UnF4g&controls=1&modestbranding=1&rel=0&playsinline=1"
+                title="Video de la Habitacion Atardecer"
                 loading="lazy"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -729,17 +733,15 @@
           </div>
 
           <div class="videoMiniCopy" aria-label="Texto del video">
-            <p class="quote">"La primera luz del día, directo desde tus ventanas."</p>
-            <p>
-              Si te encantan las mañanas tranquilas y los tonos suaves del amanecer, esta habitación te lo regala todos los días.
-            </p>
+            <p class="quote">"La hora dorada se vuelve una magia tranquila."</p>
+            <p>Luz al oeste, ambiente suave y vistas hechas para bajar el ritmo.</p>
           </div>
         </div>
       </aside>
     </section>
 
-    <!-- OPTION A: Row 2 (Carousel left, Highlights right) -->
-    <section class="gridB" aria-label="Galería y destacados de Sunrise">
+    <!-- Row 2 (Carousel left, Highlights right) -->
+    <section class="gridB" aria-label="Galeria y puntos destacados">
       <article class="card" aria-label="Destacados en fotos">
         <div class="cardHead">
           <h2 class="cardTitle">Destacados en fotos</h2>
@@ -747,20 +749,20 @@
         </div>
 
         <div class="miniCarouselPad">
-          <div class="miniCarousel" aria-label="Mini carrusel de Sunrise">
-            <div class="miniViewport" id="srCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
+          <div class="miniCarousel" aria-label="Mini carrusel de atardecer">
+            <div class="miniViewport" id="ssCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
               <button class="miniArrow prev" type="button" data-action="prev" aria-label="Foto anterior">‹</button>
               <button class="miniArrow next" type="button" data-action="next" aria-label="Foto siguiente">›</button>
 
               <div class="miniTrack" data-track>
-                <figure class="miniSlide" aria-label="Imagen Sunrise 1">
-                  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Destacado de la Habitación Sunrise 1" loading="lazy" decoding="async" />
-                  <figcaption class="miniCap">Luz dorada de la mañana</figcaption>
+                <figure class="miniSlide" aria-label="Imagen de atardecer 1">
+                  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Habitacion Atardecer - destacado 1" loading="lazy" decoding="async" />
+                  <figcaption class="miniCap">Luz ambar al caer la tarde</figcaption>
                 </figure>
 
-                <figure class="miniSlide" aria-label="Imagen Sunrise 2">
-                  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_02.jpg" alt="Destacado de la Habitación Sunrise 2" loading="lazy" decoding="async" />
-                  <figcaption class="miniCap">Café en calma con vista</figcaption>
+                <figure class="miniSlide" aria-label="Imagen de atardecer 2">
+                  <img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_02.jpg" alt="Habitacion Atardecer - destacado 2" loading="lazy" decoding="async" />
+                  <figcaption class="miniCap">Una vista hecha para atardeceres</figcaption>
                 </figure>
               </div>
             </div>
@@ -774,66 +776,65 @@
 
       <aside class="card" aria-label="Destacados y acciones">
         <div class="cardHead">
-          <h2 class="cardTitle">Hecha para mañanas tranquilas</h2>
-          <p class="cardHint">Simple, cálida, reparadora</p>
+          <h2 class="cardTitle">Romantica, tranquila, inolvidable</h2>
+          <p class="cardHint">La habitacion que las parejas recuerdan</p>
         </div>
 
         <div class="rightStackPad">
           <p class="p">
-            La Habitación Sunrise mira hacia el este, así que el día comienza suave: neblina en el valle, aves en los árboles y luz cálida llenando el espacio.
+            Luz suave, detalles hechos a mano y una vista al oeste que captura los ultimos colores del dia.
+            La habitacion perfecta para descansar despues de explorar el bosque nublado.
           </p>
 
           <div style="height:12px;"></div>
 
-          <div class="pillRow" aria-label="Destacados principales">
-            <span class="pill"><strong>Ideal para:</strong> madrugadores</span>
-            <span class="pill"><strong>Vistas:</strong> amanecer al este</span>
-            <span class="pill"><strong>Ambiente:</strong> acogedor y tranquilo</span>
-            <span class="pill"><strong>Momento:</strong> café con vista</span>
+          <div class="pillRow" aria-label="Puntos clave">
+            <span class="pill"><strong>Ideal para:</strong> parejas</span>
+            <span class="pill"><strong>Vistas:</strong> atardecer al oeste</span>
+            <span class="pill"><strong>Ambiente:</strong> romantico y tranquilo</span>
+            <span class="pill"><strong>Momento:</strong> vino o te al atardecer</span>
           </div>
 
           <div style="height:14px;"></div>
 
           <div class="tightCtas" aria-label="Acciones principales">
-            <a class="btn primary" href="/booking/">Reservar tu estadía</a>
-            <a class="btn secondary" href="/contact/">Hacer una pregunta</a>
-            <a class="btn secondary" href="/rooms/">Ver todas las habitaciones</a>
+            <a class="btn primary" href="/es/reserva/">Reservar tu estadia</a>
+            <a class="btn secondary" href="/es/contacto/">Hacer una pregunta</a>
+            <a class="btn secondary" href="/es/habitaciones/">Ver todas las habitaciones</a>
           </div>
 
-          <div class="note">
-            Tip: esta es la habitación que convierte "un minutito más" en una hora.
-          </div>
+          <div class="note">Tip: Si los atardeceres son tu ritual, esta es tu habitacion.</div>
         </div>
       </aside>
     </section>
 
     <!-- SHARED BATHROOM (Sunrise + Sunset) -->
-    <section class="bathSection" aria-label="Baño compartido">
-      <article class="card" aria-label="Tarjeta de baño compartido">
+    <section class="bathSection" aria-label="Bano compartido">
+      <article class="card" aria-label="Tarjeta de bano compartido">
         <div class="cardHead">
-          <h2 class="cardTitle">Baño completo compartido</h2>
-          <p class="cardHint">Justo afuera de la habitación, en el pasillo</p>
+          <h2 class="cardTitle">Bano completo compartido</h2>
+          <p class="cardHint">Justo afuera de la habitacion, en el pasillo</p>
         </div>
 
         <div class="bathPad">
-          <div class="bathNotice" aria-label="Nota del baño">
+          <div class="bathNotice" aria-label="Nota del bano">
             <p class="bathNoticeTitle">Acceso privado, compartido entre dos habitaciones</p>
             <p class="bathNoticeText">
-              La Habitación Sunrise y la Habitación Sunset comparten un baño completo ubicado en el pasillo, justo afuera de tu puerta.
-              Está reservado únicamente para estas dos habitaciones y queda a pocos pasos.
-              Lo dejamos muy claro para que sepas exactamente qué esperar.
+              La Habitacion Amanecer y la Habitacion Atardecer comparten un bano completo ubicado en el pasillo, justo afuera de tu puerta.
+              Es exclusivo para estas dos habitaciones y esta a solo unos pasos.
+              Lo dejamos claro para que sepas exactamente que esperar.
             </p>
           </div>
 
-          <div class="bathGrid" aria-label="Fotos del baño">
-            <figure class="bathShot" aria-label="Foto del baño 1">
-              <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg" alt="Baño compartido, foto 1" loading="lazy" decoding="async" />
-              <figcaption class="bathCap">Baño completo, luminoso y limpio</figcaption>
+          <div class="bathGrid" aria-label="Fotos del bano">
+            <figure class="bathShot" aria-label="Foto del bano 1">
+              <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg" alt="Foto del bano compartido 1" loading="lazy" decoding="async" />
+              <figcaption class="bathCap">Bano completo, luminoso y limpio</figcaption>
             </figure>
 
-            <figure class="bathShot" aria-label="Foto del baño 2">
-              <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg" alt="Baño compartido, foto 2" loading="lazy" decoding="async" />
-              <figcaption class="bathCap">Reservado para Sunrise y Sunset</figcaption>
+            <figure class="bathShot" aria-label="Foto del bano 2">
+              <img src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg" alt="Foto del bano compartido 2" loading="lazy" decoding="async" />
+              <figcaption class="bathCap">Reservado para Amanecer y Atardecer</figcaption>
             </figure>
           </div>
         </div>
@@ -841,38 +842,34 @@
     </section>
 
     <!-- DETAILS -->
-    <section class="details" aria-label="Detalles de la habitación">
+    <section class="details" aria-label="Detalles de la habitacion">
       <article class="card detailCard" aria-label="Lo que te va a encantar">
         <h3 class="detailH3">Lo que te va a encantar</h3>
         <ul class="detailList">
-          <li>Orientación al este para ver el amanecer</li>
-          <li>Detalles en madera y luz suave, bien relajante</li>
-          <li>Ambiente tranquilo, ideal para recargar</li>
-          <li>Base perfecta para avistamiento temprano y caminatas</li>
+          <li>Vistas al oeste para hora dorada y atardeceres</li>
+          <li>Un espacio perfecto para vino, te y tardes lentas</li>
+          <li>Luz ambiental suave y muebles hechos a mano</li>
+          <li>Ambiente romantico y tranquilo para desconectarte de verdad</li>
         </ul>
       </article>
 
-      <article class="card quoteCard" aria-label="Frase de la habitación">
-        <p class="quoteText">"Despierta con un horizonte tocado por la primera luz del día."</p>
-        <p class="quoteSub">
-          La Habitación Sunrise es para quienes quieren sentir cómo el bosque nublado despierta, lento y hermoso, desde su ventana.
-        </p>
+      <article class="card quoteCard" aria-label="Frase de la habitacion">
+        <p class="quoteText">"Primera fila para el brillo que se derrite detras de las montanas."</p>
+        <p class="quoteSub">La Habitacion Atardecer es para quien quiere que el dia termine despacio: luz calida, vistas silenciosas y el bosque en calma.</p>
       </article>
     </section>
 
     <!-- CTA -->
-    <section class="ctaBand" aria-label="Llamado a la acción para reservar">
+    <section class="ctaBand" aria-label="Llamado a la accion para reservar">
       <div>
-        <h2>¿Listo para despertar con el bosque nublado?</h2>
-        <p>
-          Revisa disponibilidad y reserva en minutos. Si estás decidiendo entre habitaciones, compáralas lado a lado.
-        </p>
+        <h2>Listo para perseguir el atardecer?</h2>
+        <p>Revisa disponibilidad y reserva en minutos. Si estas eligiendo entre habitaciones, comparalas lado a lado.</p>
       </div>
 
-      <div class="ctaBtns" aria-label="Botones de llamada a la acción">
-        <a class="btn primary" href="/booking/">Reservar tu estadía</a>
-        <a class="btn secondary" href="/rooms/">Comparar habitaciones</a>
-        <a class="btn secondary" href="/contact/">Contacto</a>
+      <div class="ctaBtns" aria-label="Botones de CTA">
+        <a class="btn primary" href="/es/reserva/">Reservar tu estadia</a>
+        <a class="btn secondary" href="/es/habitaciones/">Comparar habitaciones</a>
+        <a class="btn secondary" href="/es/contacto/">Contacto</a>
       </div>
     </section>
   </main>
@@ -886,7 +883,7 @@
     (function(){
       "use strict";
 
-      var root = document.getElementById("srCarousel");
+      var root = document.getElementById("ssCarousel");
       if (!root) return;
 
       var track = root.querySelector("[data-track]");
