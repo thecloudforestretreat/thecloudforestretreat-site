@@ -3,24 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contacto | The Cloud Forest Retreat</title>
-  <meta name="description" content="Contacta a The Cloud Forest Retreat cerca de Quito, Ecuador. Consulta disponibilidad, habitaciones, cómo llegar y experiencias de naturaleza cercanas. Respondemos rápido." />
+  <title>Politica de Privacidad | The Cloud Forest Retreat</title>
+  <meta name="description" content="Lee la Politica de Privacidad de The Cloud Forest Retreat para saber como recopilamos, usamos y protegemos tu informacion cuando usas nuestro servicio de automatizacion de Instagram." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/contact/" />
+  <!-- Canonical + hreflang (PRODUCTION URLs) -->
+  <link rel="canonical" href="https://thecloudforestretreat.com/es/privacy-policy/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/privacy-policy/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/privacy-policy/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/privacy-policy/" />
+  <!-- Open Graph (PRODUCTION URLs) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Contacto | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Contacta a The Cloud Forest Retreat cerca de Quito, Ecuador. Consulta disponibilidad, habitaciones, cómo llegar y experiencias de naturaleza cercanas. Respondemos rápido." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/contact/" />
-  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:title" content="Politica de Privacidad | The Cloud Forest Retreat" />
+  <meta property="og:description" content="Lee la Politica de Privacidad de The Cloud Forest Retreat para saber como recopilamos, usamos y protegemos tu informacion cuando usas nuestro servicio de automatizacion de Instagram." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/es/privacy-policy/" />
+  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat en Mindo, Ecuador" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat en el bosque nublado de Ecuador" />
+  <!-- Twitter (PRODUCTION URLs) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contacto | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Contacta a The Cloud Forest Retreat cerca de Quito, Ecuador. Consulta disponibilidad, habitaciones, cómo llegar y experiencias de naturaleza cercanas. Respondemos rápido." />
-  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta name="twitter:title" content="Politica de Privacidad | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Lee la Politica de Privacidad de The Cloud Forest Retreat para saber como recopilamos, usamos y protegemos tu informacion cuando usas nuestro servicio de automatizacion de Instagram." />
+  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <!-- Favicons (approved root paths) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -38,13 +45,13 @@
       --r: 24px;
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
-      --forest: #0D5925;
-      --forest2: #0B2B12;
-      --orange: #E0643A;
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
+      --forest: #0D5925;
       --muted: rgba(11,26,16,0.72);
+      --chipLine: rgba(13,89,37,0.18);
+      --chipBg: rgba(255,255,255,0.62);
     }
 *{ box-sizing: border-box; }
 body{ margin: 0; }
@@ -52,17 +59,51 @@ body{ margin: 0; }
 .wrap{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 18px 18px 76px;
+  padding: 18px 18px 72px;
 }
 
 .card{
+  background: var(--glass2);
   border: 1px solid var(--line);
   border-radius: var(--r);
-  background: var(--glass2);
   box-shadow: var(--shadow);
   overflow: hidden;
   color: var(--ink);
   min-width: 0;
+}
+
+.topBand{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
+
+.crumbs{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+  flex-wrap: wrap;
+}
+.crumbs a{ color: inherit; text-decoration: none; }
+.crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+.quickActions{
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .hero{
@@ -77,10 +118,8 @@ body{ margin: 0; }
 }
 
 /*
-  INNER PAGE HERO: shorter, but protects the subject (house).
-  - Uses a capped viewport-based height (so it never becomes "the page")
-  - Includes a safe minimum so it still feels photographic
-  - Uses object-position to keep the house in view
+  INNER PAGE HERO (Privacy Policy):
+  Shorter like Contact/About/Booking. Keeps consistency and reduces scroll before content.
 */
 .heroMedia{
   position: relative;
@@ -97,11 +136,11 @@ body{ margin: 0; }
   transform: scale(1.01);
 }
 
-.heroOverlay{
+.heroShade{
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
     linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
   pointer-events: none;
 }
@@ -125,511 +164,393 @@ body{ margin: 0; }
 .kicker{
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 900;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(231,228,209,0.94);
+  color: rgba(255,255,255,0.92);
 }
 
 .heroH1{
-  margin: 10px 0 8px;
+  margin: 8px 0 6px;
   font-family: var(--font-head);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.02;
-  font-size: clamp(32px, 4.2vw, 52px);
+  font-size: clamp(32px, 4vw, 54px);
   color: #fff;
-  text-shadow: 0 14px 40px rgba(0,0,0,0.34);
 }
 
-.heroP{
+.heroLead{
   margin: 0;
-  color: rgba(231,228,209,0.94);
-  font-size: 15.8px;
-  line-height: 1.75;
+  max-width: 80ch;
   font-weight: 650;
-  text-shadow: 0 10px 26px rgba(0,0,0,0.18);
-  max-width: 92ch;
+  line-height: 1.7;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
 }
 
-.grid{
-  margin-top: 14px;
+.contentGrid{
+  margin-top: 12px;
   display: grid;
-  grid-template-columns: 1.12fr 0.88fr;
-  gap: 14px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 12px;
   align-items: start;
 }
 
-.pad{ padding: 14px; }
+.contentPad{
+  padding: 14px 16px;
+}
 
 .h2{
-  margin: 0 0 10px;
+  margin: 0;
   font-family: var(--font-head);
   color: var(--forest);
   letter-spacing: -0.02em;
   font-weight: 900;
   font-size: 22px;
-  line-height: 1.08;
+  line-height: 1.1;
 }
 
-.hint{
-  margin: 0 0 12px;
-  color: var(--muted);
+.sub{
+  margin: 8px 0 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+}
+
+.p{
+  margin: 10px 0 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.78;
+  font-size: 14.9px;
   font-weight: 650;
-  line-height: 1.7;
+}
+
+.p a{ color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+.ruleList{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.85;
+  font-weight: 650;
   font-size: 14.6px;
 }
+.ruleList li{ margin: 6px 0; }
 
-.formGrid{
+.section{
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(11,26,16,0.10);
+}
+
+.chipRow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chip{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--chipLine);
+  background: var(--chipBg);
+  color: #0b2b12;
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+}
+
+.rightCol{
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
-.field{ min-width: 0; }
-.full{ grid-column: 1 / -1; }
-
-label{
-  display: block;
-  font-weight: 900;
-  color: var(--forest2);
-  font-size: 13px;
-  margin: 0 0 6px;
-}
-
-input, select, textarea{
-  width: 100%;
-  font-family: inherit;
-  font-size: 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(13,89,37,0.16);
-  background: rgba(255,255,255,0.62);
-  padding: 12px 12px;
-  color: var(--ink);
-  outline: none;
-}
-
-select{ padding-right: 40px; }
-
-textarea{
-  min-height: 160px;
-  resize: vertical;
-}
-
-input:focus, select:focus, textarea:focus{
-  box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
-  border-color: rgba(224,100,58,0.45);
-}
-
-.req{
-  color: rgba(224,100,58,0.95);
-  font-weight: 900;
-  margin-left: 4px;
-}
-
-.actionsRow{
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.miniNote{
-  margin: 0;
-  color: rgba(11,26,16,0.68);
-  font-weight: 650;
-  font-size: 13px;
-  line-height: 1.6;
-  max-width: 72ch;
-}
-
-.submitBtn{
-  appearance: none;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: var(--forest);
-  color: #fff;
-  border-radius: 999px;
-  padding: 12px 16px;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 0 14px 30px rgba(13,89,37,0.18);
-  min-width: 200px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
-
-.sideStack{ display: grid; gap: 14px; }
-
-.sideCard{ padding: 14px; position: relative; overflow: hidden; }
-
-.sideCard:before{
-  content:"";
-  position:absolute;
-  inset: -120px -120px auto auto;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle at center, rgba(224,100,58,0.14), rgba(224,100,58,0) 62%);
-  pointer-events:none;
-}
-
-.sideTitle{
-  margin: 0 0 8px;
-  font-family: var(--font-head);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  font-size: 20px;
-  line-height: 1.1;
-  color: var(--forest);
-  position: relative;
-}
-
-.sideP{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  line-height: 1.75;
-  font-weight: 650;
-  font-size: 14.6px;
-  position: relative;
-}
-
-.btnRow{
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.linkBtn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.62);
-  color: rgba(11,26,16,0.90);
-  font-weight: 900;
-  font-size: 13.5px;
-  box-shadow: 0 12px 26px rgba(13,89,37,0.08);
-  cursor: pointer;
-  text-decoration: none;
-  min-width: 160px;
-}
-
-.linkBtn.primary{
-  background: var(--orange);
-  color: #fff;
-  border-color: rgba(0,0,0,0.08);
-  box-shadow: 0 14px 30px rgba(224,100,58,0.20);
-}
-
-.statusCard{
-  padding: 14px;
-  display: none;
-  margin-top: 12px;
-}
-.statusCard.show{ display: block; }
-
-.statusTitle{
-  margin: 0 0 6px;
-  font-family: var(--font-head);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  font-size: 20px;
-  color: var(--forest);
-}
-
-.statusText{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  line-height: 1.75;
-  font-weight: 650;
-  font-size: 14.6px;
-}
-
-.imageCard{
-  padding: 14px;
-}
-
-.imageFrame{
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
+.vShot{
+  border-radius: var(--r);
   overflow: hidden;
-  border-radius: 18px;
   border: 1px solid rgba(11,26,16,0.10);
-  background: #ccc;
+  background: rgba(255,255,255,0.55);
   box-shadow: var(--shadow);
 }
 
-.imageFrame img{
+.vFrame{
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  position: relative;
+  background: rgba(0,0,0,0.10);
+}
+
+.vFrame img{
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 50%;
   display: block;
   transform: scale(1.01);
 }
 
-.imageFrame::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.28));
-  pointer-events:none;
+.vShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(560px 420px at 18% 12%, rgba(224,100,58,0.14), rgba(0,0,0,0) 62%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.26));
+  pointer-events: none;
 }
 
-.imageCaption{
+.vCap{
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  color: rgba(255,255,255,0.96);
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(245,245,220,0.92);
+  border: 1px solid rgba(13,89,37,0.16);
+  color: #0b2b12;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+}
+
+.sideCard{
+  padding: 14px 16px;
+}
+
+.sideTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.sideText{
+  margin: 10px 0 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-size: 14.6px;
+  font-weight: 650;
+}
+
+.ctaBand{
+  margin-top: 12px;
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.12);
+  background: rgba(245,245,220,0.82);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--ink);
+}
+
+.ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
   font-weight: 900;
   letter-spacing: -0.02em;
-  line-height: 1.2;
-  text-shadow: 0 14px 40px rgba(0,0,0,0.40);
-  font-size: 14px;
-  z-index: 1;
+  font-size: 22px;
+  line-height: 1.1;
 }
 
-@media (max-width: 900px){
-  .wrap{ padding: 12px 14px 64px; }
+.ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 86ch;
+}
 
-  /*
-    Mobile inner page hero:
-    - Shorter so users reach the form quickly
-    - Adjust object-position to keep the house visible
-  */
+.ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media(max-width:900px){
+  .wrap{ padding:12px 14px 64px; }
+
   .heroMedia{ height: clamp(240px, 34vh, 340px); }
   .heroMedia img{ object-position: center 62%; }
 
-  .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
-  .grid{ grid-template-columns: 1fr; }
-  .formGrid{ grid-template-columns: 1fr; }
-  .submitBtn{ width: 100%; }
-  .actionsRow{ gap: 12px; }
-  .linkBtn{ width: 100%; min-width: 0; }
-  .imageFrame{ aspect-ratio: 16 / 10; }
+  .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
+  .contentGrid{ grid-template-columns: 1fr; }
 }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Pagina de contacto">
-    <section class="hero" aria-label="Hero de contacto">
-      <div class="heroMedia" aria-label="Imagen principal">
-        <img src="/assets/images/pages/tcfr_contact_hero.jpg" alt="The Cloud Forest Retreat en Mindo, Ecuador" loading="eager" decoding="async" />
-        <div class="heroOverlay" aria-hidden="true"></div>
-        <div class="heroInner">
-          <div class="kicker">Contacto</div>
-          <h1 class="heroH1">Escribinos</h1>
-          <p class="heroP">
-            Contacta a The Cloud Forest Retreat en Mindo, Ecuador. Escribinos para reservas, consultas de viaje o ayuda personalizada para planificar tu estadia en el impresionante bosque nublado de Ecuador.
-          </p>
-        </div>
+  <main class="wrap" aria-label="Pagina de Politica de Privacidad">
+    <section class="topBand" aria-label="Navegacion de pagina">
+      <div class="crumbs" aria-label="Migas de pan">
+        <a href="/es/">Inicio</a>
+        <span aria-hidden="true">›</span>
+        <span>Politica de privacidad</span>
+      </div>
+      <div class="quickActions" aria-label="Acciones rapidas">
+        <a class="btn secondary" href="/es/contact/">Contacto</a>
+        <a class="btn primary" href="/es/booking/">Reservar</a>
       </div>
     </section>
-<section class="grid" aria-label="Formulario y accesos">
-  <section class="card pad" aria-label="Formulario de contacto">
-    <h2 class="h2">Envia un mensaje</h2>
-    <p class="hint">
-      Este formulario le envia un email a nuestro equipo y tambien te envia una confirmacion. Los campos con asterisco son obligatorios.
-    </p>
 
-    <form id="tcfrContactForm" aria-label="Formulario de contacto">
-      <input type="hidden" name="form_type" value="contact" />
-
-      <div class="formGrid">
-        <div class="field">
-          <label for="first_name">Nombre <span class="req">*</span></label>
-          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Tu nombre" autocapitalize="words" inputmode="text" spellcheck="false" />
-        </div>
-
-        <div class="field">
-          <label for="last_name">Apellido <span class="req">*</span></label>
-          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Tu apellido" autocapitalize="words" inputmode="text" spellcheck="false" />
-        </div>
-
-        <div class="field">
-          <label for="email">Email <span class="req">*</span></label>
-          <input id="email" name="email" type="email" autocomplete="email" required placeholder="tu@ejemplo.com" />
-        </div>
-
-        <div class="field">
-          <label for="phone">Telefono</label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Codigo de pais + numero" />
-        </div>
-
-        <div class="field full">
-          <label for="message">Mensaje <span class="req">*</span></label>
-          <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
-        </div>
-
-        <div class="field full">
-          <label for="how_did_you_hear_about_us">Como te enteraste de nosotros?</label>
-          <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
-            <option value="">Selecciona</option>
-            <option value="Referral">Recomendacion</option>
-            <option value="Google Search">Busqueda en Google</option>
-            <option value="Google Maps">Google Maps</option>
-            <option value="Instagram">Instagram</option>
-            <option value="TikTok">TikTok</option>
-            <option value="YouTube">YouTube</option>
-            <option value="TripAdvisor">TripAdvisor</option>
-            <option value="Airbnb">Airbnb</option>
-            <option value="Vrbo">Vrbo</option>
-            <option value="Booking.com">Booking.com</option>
-            <option value="Other">Otro</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="actionsRow">
-        <p class="miniNote">
-          Al enviar, aceptas que podamos contactarte por email y, si lo proporcionas, por telefono.
-        </p>
-        <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Enviar</button>
-      </div>
-    </form>
-
-    <section id="tcfrContactStatusCard" class="card statusCard" aria-label="Estado del envio">
-      <h3 class="statusTitle">Mensaje enviado</h3>
-      <p class="statusText">
-        Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.
+<section class="hero" aria-label="Hero de Politica de Privacidad">
+  <div class="heroMedia" aria-label="Imagen principal">
+    <img src="/assets/images/pages/tcfr_privacy_policy_hero_01.jpg" alt="Vista del bosque nublado en The Cloud Forest Retreat" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
+    <div class="heroInner" aria-label="Contenido principal">
+      <div class="kicker">Privacidad • Confianza • Transparencia</div>
+      <h1 class="heroH1">Politica de privacidad</h1>
+      <p class="heroLead">
+        Lee la Politica de Privacidad de The Cloud Forest Retreat para entender como recopilamos, usamos y protegemos tu informacion cuando usas nuestro servicio de automatizacion de Instagram.
       </p>
-    </section>
-  </section>
+    </div>
+  </div>
+</section>
 
-  <aside class="sideStack" aria-label="Accesos rapidos">
-    <section class="card sideCard" aria-label="Interes en reservar">
-      <h3 class="sideTitle">Queres reservar?</h3>
-      <p class="sideP">
-        Si ya tenes fechas en mente, usa nuestro formulario de reserva y te responderemos con disponibilidad y los proximos pasos.
+<section class="contentGrid" aria-label="Contenido de la Politica de Privacidad">
+  <article class="card contentPad" aria-label="Texto de la politica">
+    <h2 class="h2">Politica de privacidad de The Cloud Forest Retreat (TCFR)</h2>
+    <p class="sub">Fecha de vigencia: 07/02/2025</p>
+
+    <div class="section" aria-label="1. Introduccion">
+      <p class="p">
+        Bienvenido a The Cloud Forest Retreat (TCFR). Esta Politica de Privacidad explica como recopilamos, usamos y compartimos tu informacion cuando usas nuestra app de automatizacion de Instagram, que ayuda a publicar imagenes, reels y contenido en tu cuenta de Instagram a traves de la API de Meta Graph.
       </p>
-      <div class="btnRow" aria-label="Botones de reserva y galeria">
-        <a class="linkBtn primary" href="/booking">Ir a reservas</a>
-        <a class="linkBtn" href="/features/gallery/">Ver galeria</a>
-      </div>
-    </section>
-
-    <section class="card sideCard" aria-label="Politicas">
-      <h3 class="sideTitle">Politicas</h3>
-      <p class="sideP">
-        Revisa nuestras politicas de privacidad y terminos de servicio.
+      <p class="p">
+        Al usar nuestro servicio, aceptas los terminos de esta Politica de Privacidad.
       </p>
-      <div class="btnRow" aria-label="Botones de politicas">
-        <a class="linkBtn" href="/privacy-policy/">Politica de privacidad</a>
-        <a class="linkBtn" href="/terms-of-service/">Terminos de servicio</a>
-      </div>
-    </section>
+    </div>
 
-    <section class="card imageCard" aria-label="Imagen de contacto">
-      <div class="imageFrame">
-        <img src="/assets/images/pages/tcfr_contact_01.jpg" alt="Manana en el bosque nublado en The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="imageCaption">Bosque nublado de Mindo. Mananas tranquilas, naturaleza de cerca.</div>
+    <div class="section" aria-label="2. Informacion que recopilamos">
+      <h3 class="h2" style="font-size:20px;">2. Informacion que recopilamos</h3>
+      <p class="p">Recopilamos los siguientes tipos de informacion cuando usas nuestra app:</p>
+      <ul class="ruleList">
+        <li><strong>Informacion de la cuenta de Instagram:</strong> ID de tu cuenta de Instagram Business o Creator, nombre de usuario y metadatos relacionados a los que se accede mediante la API de Graph de Meta.</li>
+        <li><strong>Metadatos del contenido:</strong> Informacion sobre las imagenes o videos que publicas con nuestra herramienta (por ejemplo: ID del media, captions, estado de creacion).</li>
+        <li><strong>Informacion basica del perfil:</strong> Informacion publica como foto de perfil y nombre para mostrar.</li>
+      </ul>
+    </div>
+
+    <div class="section" aria-label="3. Como usamos tu informacion">
+      <h3 class="h2" style="font-size:20px;">3. Como usamos tu informacion</h3>
+      <p class="p">Usamos la informacion recopilada para:</p>
+      <ul class="ruleList">
+        <li>Permitir la programacion y publicacion automatizada de posts en Instagram</li>
+        <li>Verificar el estado de cargas y publicaciones</li>
+        <li>Mejorar nuestros servicios y brindar soporte</li>
+      </ul>
+      <p class="p">
+        No vendemos ni compartimos tus datos personales con terceros para fines de marketing.
+      </p>
+    </div>
+
+    <div class="section" aria-label="4. Comparticion y divulgacion de datos">
+      <h3 class="h2" style="font-size:20px;">4. Comparticion y divulgacion de datos</h3>
+      <p class="p">
+        Tus datos solo se comparten con Meta Platforms, Inc. (Facebook/Instagram) para publicar y verificar contenido de Instagram. No divulgamos tu informacion a terceros no autorizados.
+      </p>
+    </div>
+
+    <div class="section" aria-label="5. Retencion de datos">
+      <h3 class="h2" style="font-size:20px;">5. Retencion de datos</h3>
+      <p class="p">
+        Guardamos IDs de contenido y registros de publicacion solo con el fin de hacer seguimiento del estado de los posts y depurar errores. Puedes solicitar la eliminacion en cualquier momento contactandonos al correo que figura mas abajo.
+      </p>
+    </div>
+
+    <div class="section" aria-label="6. APIs de terceros">
+      <h3 class="h2" style="font-size:20px;">6. APIs de terceros</h3>
+      <p class="p">
+        Este servicio utiliza la API de Meta Graph. Puedes leer mas sobre las practicas de datos de Meta en su Politica de Datos.
+      </p>
+    </div>
+
+    <div class="section" aria-label="7. Tus derechos">
+      <h3 class="h2" style="font-size:20px;">7. Tus derechos</h3>
+      <p class="p">Puedes:</p>
+      <ul class="ruleList">
+        <li>Solicitar ver o eliminar tus datos</li>
+        <li>Desconectar tu cuenta de Instagram en cualquier momento</li>
+        <li>Revocar el acceso de TCFR desde la configuracion de tu cuenta de Facebook</li>
+      </ul>
+    </div>
+
+    <div class="section" aria-label="8. Seguridad">
+      <h3 class="h2" style="font-size:20px;">8. Seguridad</h3>
+      <p class="p">
+        Tomamos precauciones razonables para proteger tu informacion. Sin embargo, ningun metodo de transmision por internet es 100% seguro.
+      </p>
+    </div>
+
+    <div class="section" aria-label="9. Contacto">
+      <h3 class="h2" style="font-size:20px;">9. Contacto</h3>
+      <p class="p">
+        Si tienes preguntas sobre esta Politica de Privacidad, por favor contacta a:
+      </p>
+      <div class="chipRow" aria-label="Datos de contacto">
+        <span class="chip">The Cloud Forest Retreat</span>
+        <span class="chip">thecloudforestretreat@gmail.com</span>
       </div>
-    </section>
+    </div>
+  </article>
+
+  <aside class="rightCol" aria-label="Panel visual de privacidad">
+    <div class="vShot" aria-label="Imagen vertical">
+      <div class="vFrame">
+        <img src="/assets/images/pages/tcfr_privacy_policy_01.jpg" alt="Detalle de naturaleza en el bosque nublado" loading="lazy" decoding="async" />
+        <div class="vShade" aria-hidden="true"></div>
+        <div class="vCap">Tu privacidad importa. Usamos datos solo para publicar el contenido que solicitas.</div>
+      </div>
+    </div>
+
+    <div class="card sideCard" aria-label="Resumen rapido">
+      <h3 class="sideTitle">Resumen rapido</h3>
+      <p class="sideText">
+        Accedemos solo a lo necesario para publicar y hacer seguimiento del contenido de Instagram a traves de la API de Meta Graph. No vendemos datos personales.
+      </p>
+      <div class="chipRow" aria-label="Chips de resumen">
+        <span class="chip">No vendemos datos</span>
+        <span class="chip">API de Meta Graph</span>
+        <span class="chip">Eliminacion a pedido</span>
+      </div>
+    </div>
   </aside>
+</section>
+
+<section class="ctaBand" aria-label="CTA de privacidad">
+  <div>
+    <h2>Preguntas sobre privacidad?</h2>
+    <p>
+      Si quieres que eliminemos tus datos o necesitas claridad sobre como funciona nuestra automatizacion de Instagram, escribenos y te ayudamos.
+    </p>
+  </div>
+  <div class="ctaBtns" aria-label="Botones CTA">
+    <a class="btn primary" href="/es/contact/">Contacto</a>
+    <a class="btn secondary" href="/es/booking/">Reservar</a>
+  </div>
 </section>
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-  <script>
-    (function(){
-      "use strict";
-  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyau_y10RvNiQ-nLDlE35UbAWoplw_z17Efw_2ta_V87RbPty5OeBP5q2PMMwZ72SeenA/exec";
-
-  function toTitleCase(s){
-    var t = String(s || "").trim();
-    if (!t) return "";
-    t = t.toLowerCase().replace(/\s+/g, " ");
-    var parts = t.split(" ");
-    for (var i = 0; i < parts.length; i++){
-      var w = parts[i];
-      if (!w) continue;
-      var hy = w.split("-");
-      for (var j = 0; j < hy.length; j++){
-        var seg = hy[j];
-        if (!seg) continue;
-        hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
-      }
-      parts[i] = hy.join("-");
-    }
-    return parts.join(" ");
-  }
-
-  var form = document.getElementById("tcfrContactForm");
-  var btn = document.getElementById("tcfrContactSubmitBtn");
-  var statusCard = document.getElementById("tcfrContactStatusCard");
-
-  var first = document.getElementById("first_name");
-  var last = document.getElementById("last_name");
-
-  function bindTitleCase(el){
-    if (!el) return;
-    el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
-  }
-  bindTitleCase(first);
-  bindTitleCase(last);
-
-  function setSending(isSending){
-    btn.disabled = isSending;
-    btn.textContent = isSending ? "Enviando..." : "Enviar";
-  }
-
-  function showError(msg){
-    statusCard.classList.add("show");
-    statusCard.querySelector(".statusTitle").textContent = "Algo salio mal";
-    statusCard.querySelector(".statusText").textContent = msg || "Por favor, intenta de nuevo en un momento.";
-    statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  if (!form || !btn || !statusCard) return;
-
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-
-    if (first) first.value = toTitleCase(first.value);
-    if (last) last.value = toTitleCase(last.value);
-
-    var fd = new FormData(form);
-
-    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("message")){
-      showError("Por favor completa todos los campos obligatorios.");
-      return;
-    }
-
-    setSending(true);
-
-    fetch(WEB_APP_URL, {
-      method: "POST",
-      body: fd,
-      mode: "no-cors"
-    })
-    .then(function(){
-      statusCard.classList.add("show");
-      statusCard.querySelector(".statusTitle").textContent = "Mensaje enviado";
-      statusCard.querySelector(".statusText").textContent = "Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.";
-      statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      form.reset();
-      setSending(false);
-    })
-    .catch(function(){
-      setSending(false);
-      showError("No pudimos enviar tu mensaje. Por favor intenta de nuevo.");
-    });
-  });
-})();
-  </script>
 </body>
 </html>
