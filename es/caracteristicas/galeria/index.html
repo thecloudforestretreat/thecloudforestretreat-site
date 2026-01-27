@@ -1,1 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galería | Mindo Bird Watching</title>
+  <meta name="description" content="Explora la galería de The Cloud Forest Retreat: habitaciones, paisajes y momentos tranquilos en Mindo, Ecuador, además de clips cortos en video que capturan la atmósfera." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/gallery/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mindo Bird Watching" />
+  <meta property="og:title" content="Galería | Mindo Bird Watching" />
+  <meta property="og:description" content="Explora la galería de The Cloud Forest Retreat: habitaciones, paisajes y momentos tranquilos en Mindo, Ecuador, además de clips cortos en video que capturan la atmósfera." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/gallery/" />
+  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat en Mindo, Ecuador" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Galería | Mindo Bird Watching" />
+  <meta name="twitter:description" content="Explora la galería de The Cloud Forest Retreat: habitaciones, paisajes y momentos tranquilos en Mindo, Ecuador, además de clips cortos en video que capturan la atmósfera." />
+  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <script src="/assets/js/head.js" defer></script>
+  <style>
+    :root{
+      --max:1120px;
+      --r:24px;
+      --shadow:0 18px 55px rgba(13,89,37,0.16);
+      --line:rgba(11,26,16,0.12);
+      --glass:rgba(245,245,220,0.78);
+      --glass2:rgba(245,245,220,0.62);
+      --ink:#0b1a10;
+      --forest:#0D5925;
+      --muted:rgba(11,26,16,0.72);
+    }
 
+    *{ box-sizing:border-box; }
+    body{ margin:0; }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 18px 72px;
+    }
+
+    .card{
+      background:var(--glass2);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      color:var(--ink);
+      min-width:0;
+    }
+
+    /* TOP BAND */
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+      flex-wrap: wrap;
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* HERO (match Attractions hero dimensions) */
+    .hero{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      background:var(--glass);
+      overflow:hidden;
+      position:relative;
+      color:var(--ink);
+    }
+
+    .heroMedia{
+      position:relative;
+      height:400px;
+      background:rgba(0,0,0,0.10);
+    }
+
+    .heroMedia img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.01);
+    }
+
+    .heroShade{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+      pointer-events:none;
+    }
+
+    .heroInner{
+      position:absolute;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.22);
+      background:rgba(0,0,0,0.30);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(6px);
+      padding:14px;
+      color:rgba(255,255,255,0.96);
+      box-shadow:0 18px 55px rgba(0,0,0,0.20);
+      max-width: 860px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:rgba(255,255,255,0.92);
+    }
+
+    .heroH1{
+      margin:8px 0 6px;
+      font-family:var(--font-head);
+      font-weight:900;
+      letter-spacing:-0.03em;
+      line-height:1.02;
+      font-size:clamp(32px,4vw,54px);
+      color:#fff;
+    }
+
+    .heroLead{
+      margin:0;
+      max-width:80ch;
+      font-weight:650;
+      line-height:1.7;
+      color:rgba(231,228,209,0.92);
+      font-size:15.5px;
+    }
+
+    /* SECTION CARDS (so Highlights + Short videos match other pages) */
+    .sectionCard{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .sectionTitle{
+      margin:0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 22px;
+      line-height: 1.1;
+      color: var(--forest);
+    }
+
+    .sectionHint{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-weight: 650;
+      line-height: 1.7;
+      font-size: 14px;
+      max-width: 90ch;
+    }
+
+    /* IMAGE GRID (wrapped in a card) */
+    .galleryGrid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      align-items: stretch;
+    }
+
+    .galleryImg{
+      border-radius:18px;
+      overflow:hidden;
+      background:#ccc;
+      border: 1px solid rgba(11,26,16,0.10);
+      box-shadow: var(--shadow);
+      position: relative;
+      min-height: 240px;
+    }
+
+    .galleryImg img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
+
+    .g1{ grid-column: span 4; min-height: 320px; }
+    .g2{ grid-column: span 4; min-height: 320px; }
+    .g3{ grid-column: span 4; min-height: 320px; }
+
+    .g4{ grid-column: span 3; min-height: 260px; }
+    .g5{ grid-column: span 6; min-height: 260px; }
+    .g6{ grid-column: span 3; min-height: 260px; }
+
+    .g7{ grid-column: span 4; min-height: 280px; }
+    .g8{ grid-column: span 4; min-height: 280px; }
+    .g9{ grid-column: span 4; min-height: 280px; }
+
+    /* VIDEOS (wrapped in a card) */
+    .videoStrip{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    .videoCard{
+      border-radius:18px;
+      overflow:hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.55);
+    }
+
+    .videoWrap{
+      width:100%;
+      aspect-ratio:9/16;
+      position:relative;
+      background:#000;
+    }
+
+    .videoWrap iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
+    @media(max-width:900px){
+      .wrap{ padding:12px 14px 64px; }
+
+      .heroMedia{ min-height:280px; }
+      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
+
+      .galleryGrid{ grid-template-columns:1fr; }
+      .galleryImg{ min-height: 240px; }
+      .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9{ grid-column: auto; }
+
+      .videoStrip{ grid-template-columns:1fr; }
+      .sectionCard{ padding:14px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Pagina de galeria">
+<section class="topBand" aria-label="Navegacion de la pagina">
+  <div class="crumbs" aria-label="Ruta de navegacion">
+    <a href="/">Inicio</a>
+    <span aria-hidden="true">›</span>
+    <span>Galeria</span>
+  </div>
+  <div class="quickActions" aria-label="Acciones rapidas">
+    <a class="btn secondary" href="/rooms/">Ver habitaciones</a>
+    <a class="btn primary" href="/booking/">Reservar tu estadia</a>
+  </div>
+</section>
+
+<section class="hero" aria-label="Hero de galeria">
+  <div class="heroMedia" aria-label="Imagen principal">
+    <img src="/assets/images/pages/gallery/tcfr_gallery_hero.jpg" alt="Vistas del bosque nublado en The Cloud Forest Retreat en Mindo, Ecuador" loading="eager" decoding="async" />
+    <div class="heroShade" aria-hidden="true"></div>
+    <div class="heroInner" aria-label="Contenido principal">
+      <div class="kicker">Paisajes • Habitaciones • Momentos</div>
+      <h1 class="heroH1">Galeria</h1>
+      <p class="heroLead">
+        Un recorrido visual por mananas con neblina, senderos del bosque, interiores acogedores y momentos tranquilos que definen la vida en The Cloud Forest Retreat.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="card sectionCard" aria-label="Seccion de destacados">
+  <h2 class="sectionTitle">Destacados</h2>
+  <p class="sectionHint">
+    Un tour visual rapido del retreat y de los paisajes que lo rodean. Toca una imagen para detenerte en los detalles.
+  </p>
+
+  <section class="galleryGrid" aria-label="Imagenes de la galeria">
+    <div class="galleryImg g1">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_02.jpg" alt="Paisaje del bosque nublado cerca del retreat" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="galleryImg g2">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_05.jpg" alt="Detalle de habitacion e interior en el retreat" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="galleryImg g3">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_09.jpg" alt="Vista exterior y vegetacion alrededor" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="galleryImg g4">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_07.jpg" alt="Momentos tranquilos y texturas naturales" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="galleryImg g5">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_01.jpg" alt="Panoramica amplia del paisaje alrededor de Mindo" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="galleryImg g6">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_03.jpg" alt="Detalle del bosque cerca de The Cloud Forest Retreat" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="galleryImg g7">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_08.jpg" alt="Vistas y naturaleza en el bosque nublado" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="galleryImg g8">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_06.jpg" alt="Ambiente y entorno del retreat" loading="lazy" decoding="async" />
+    </div>
+
+    <div class="galleryImg g9">
+      <img src="/assets/images/pages/gallery/tcfr_gallery_04.jpg" alt="Naturaleza y detalles del retreat" loading="lazy" decoding="async" />
+    </div>
+  </section>
+</section>
+
+<section class="card sectionCard" aria-label="Seccion de videos cortos">
+  <h2 class="sectionTitle">Videos cortos</h2>
+  <p class="sectionHint">
+    Clips rapidos que capturan la atmosfera.
+  </p>
+
+  <section class="videoStrip" aria-label="Videos de la galeria">
+    <div class="videoCard" aria-label="Video de galeria 1">
+      <div class="videoWrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/zpX3iZEhwA0?rel=0&modestbranding=1&playsinline=1"
+          title="The Cloud Forest Retreat - video corto"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <div class="videoCard" aria-label="Video de galeria 2">
+      <div class="videoWrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/NU31jotCIYg?rel=0&modestbranding=1&playsinline=1"
+          title="The Cloud Forest Retreat - video corto"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+</section>
+  </main>
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
