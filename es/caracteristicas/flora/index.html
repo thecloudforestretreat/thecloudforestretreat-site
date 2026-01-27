@@ -1,1 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Flora | The Cloud Forest Retreat</title>
+  <meta name="description" content="Explora la flora del bosque nublado alrededor de The Cloud Forest Retreat: orquideas, bromelias, arboles medicinales, plantas comestibles y especies nativas en el Choco Andino." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical + hreflang (PRODUCTION URLs) -->
+  <link rel="canonical" href="https://thecloudforestretreat.com/features/flora/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/features/flora/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/caracteristicas/flora/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/features/flora/" />
+
+  <!-- Open Graph (PRODUCTION URLs) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="Flora | The Cloud Forest Retreat" />
+  <meta property="og:description" content="Explora la flora del bosque nublado alrededor de The Cloud Forest Retreat: orquideas, bromelias, arboles medicinales, plantas comestibles y especies nativas en el Choco Andino." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/features/flora/" />
+  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat en el bosque nublado de Ecuador" />
+
+  <!-- Twitter (PRODUCTION URLs) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flora | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Explora la flora del bosque nublado alrededor de The Cloud Forest Retreat: orquideas, bromelias, arboles medicinales, plantas comestibles y especies nativas en el Choco Andino." />
+  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+
+  <!-- Favicons (approved root paths) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <script src="/assets/js/head.js" defer></script>
+
+  <style>
+    :root{
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --forest: #0D5925;
+      --muted: rgba(11,26,16,0.72);
+    }
+
+    body{ margin:0; }
+    *{ box-sizing:border-box; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 72px;
+    }
+
+    .card{
+      background: var(--glass2);
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      color: var(--ink);
+    }
+
+    /* TOP BAND */
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+      flex-wrap: wrap;
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* HERO (consistent style used across pages) */
+    .hero{
+      margin-top:14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      overflow: hidden;
+      position: relative;
+      color: var(--ink);
+    }
+
+    .heroMedia{
+      position: relative;
+      height: 400px;
+      background: rgba(0,0,0,0.10);
+    }
+
+    .heroMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.01);
+    }
+
+    .heroShade{
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+      pointer-events: none;
+    }
+
+    .heroInner{
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.30);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 14px;
+      color: rgba(255,255,255,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+      max-width: 860px;
+    }
+
+    .kicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .heroH1{
+      margin: 8px 0 6px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(32px, 4vw, 54px);
+      color: #fff;
+    }
+
+    .heroLead{
+      margin: 0;
+      max-width: 80ch;
+      font-weight: 650;
+      line-height: 1.7;
+      color: rgba(231,228,209,0.92);
+      font-size: 15.5px;
+    }
+
+    /* INTRO */
+    .intro{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .intro p{
+      margin:0;
+      font-size:15.5px;
+      line-height:1.75;
+      color:rgba(11,26,16,0.78);
+      font-weight:650;
+      max-width: 90ch;
+    }
+
+    /* GRID */
+    .floraGrid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+      align-items: stretch;
+    }
+
+    .sectionBreak{
+      grid-column:1 / -1;
+      padding:16px;
+    }
+
+    .sectionBreak h2{
+      margin:0;
+      font-family: var(--font-head);
+      color:var(--forest);
+      font-size:24px;
+      letter-spacing:-0.02em;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .sectionBreak p{
+      margin:8px 0 0;
+      color:rgba(11,26,16,0.70);
+      font-size:14.8px;
+      font-weight: 650;
+      line-height: 1.6;
+      max-width: 90ch;
+    }
+
+    .floraCard{
+      display:grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap:14px;
+      padding:14px;
+      align-items: stretch;
+    }
+
+    .floraImage{
+      border-radius:18px;
+      overflow:hidden;
+      background:#ccc;
+      min-height:260px;
+      border: 1px solid rgba(11,26,16,0.10);
+    }
+
+    .floraImage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+    }
+
+    .floraBody{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .floraBody h3{
+      margin:0;
+      font-family: var(--font-head);
+      font-size:22px;
+      color:var(--forest);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .floraLatin{
+      font-size:13px;
+      font-style:italic;
+      color:rgba(11,26,16,0.55);
+      font-weight: 650;
+      margin-top: -4px;
+    }
+
+    .floraTags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .tag{
+      font-size:13px;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.18);
+      background:rgba(255,255,255,0.62);
+      font-weight:900;
+      color:#0b2b12;
+      white-space: nowrap;
+      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+    }
+
+    .floraText{
+      font-size:14.8px;
+      line-height:1.7;
+      color:rgba(11,26,16,0.78);
+      font-weight:650;
+    }
+
+    .floraNote{
+      font-size:13.2px;
+      color:rgba(11,26,16,0.68);
+      font-weight:650;
+    }
+
+    @media(max-width:900px){
+      .wrap{ padding:12px 14px 64px; }
+
+      .heroMedia{ min-height:280px; }
+      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
+
+      .floraGrid{ grid-template-columns:1fr; }
+      .floraCard{ grid-template-columns:1fr; }
+      .floraImage{ min-height:240px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Pagina de flora">
+    <section class="topBand" aria-label="Navegacion de pagina">
+      <div class="crumbs" aria-label="Miga de pan">
+        <a href="/">Inicio</a>
+        <span aria-hidden="true">›</span>
+        <a href="/features/">Caracteristicas</a>
+        <span aria-hidden="true">›</span>
+        <span>Flora</span>
+      </div>
+      <div class="quickActions" aria-label="Acciones rapidas">
+        <a class="btn secondary" href="/booking/">Ver disponibilidad</a>
+        <a class="btn primary" href="/contact/">Hacer una pregunta</a>
+      </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero de flora">
+      <div class="heroMedia" aria-label="Imagen principal">
+        <img src="/assets/images/pages/features/flora/tcfr_features_flora_hero.jpg" alt="Vegetacion del bosque nublado" loading="eager" decoding="async" />
+        <div class="heroShade" aria-hidden="true"></div>
+        <div class="heroInner" aria-label="Contenido principal">
+          <div class="kicker">Orquideas • Bromelias • Arboles nativos</div>
+          <h1 class="heroH1">Flora</h1>
+          <p class="heroLead">
+            Una guia viva de las plantas, arboles y vida botanica que rodean The Cloud Forest Retreat y dan forma al ecosistema del Choco Andino.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="card intro" aria-label="Introduccion">
+      <p>
+        El bosque nublado del Ecuador es uno de los entornos con mayor riqueza vegetal del planeta.
+        Alrededor del retreat vas a encontrar frutas comestibles, arboles medicinales, epifitas que sostienen microecosistemas completos
+        y especies con flores que alimentan a aves, insectos y mamiferos por igual.
+      </p>
+    </section>
+
+    <!-- GRID -->
+    <section class="floraGrid" aria-label="Cuadricula de flora">
+      <div class="sectionBreak card" aria-label="Encabezado de plantas y epifitas">
+        <h2>Plantas y epifitas</h2>
+        <p>Especies pequenas pero poderosas que alimentan tanto a la vida silvestre como a las personas.</p>
+      </div>
+
+      <article class="card floraCard" aria-label="Guayabilla">
+        <div class="floraImage" aria-label="Imagen de guayabilla">
+          <img src="/assets/images/pages/features/flora/tcfr_features_flora_guayabilla.jpg" alt="Fruto de guayabilla" loading="lazy" decoding="async" />
+        </div>
+        <div class="floraBody" aria-label="Contenido de guayabilla">
+          <h3>Guayabilla</h3>
+          <div class="floraLatin">Acca sellowiana</div>
+          <div class="floraTags" aria-label="Etiquetas de guayabilla">
+            <span class="tag">Comestible</span>
+            <span class="tag">Medicinal</span>
+            <span class="tag">Alimento para la fauna</span>
+          </div>
+          <div class="floraText">
+            Frutos agridulces que se disfrutan frescos o en mermeladas. Sus flores aromaticas atraen aves e insectos.
+          </div>
+          <div class="floraNote">
+            Busca frutos verdes ovalados y flores blanco-rosadas suaves.
+          </div>
+        </div>
+      </article>
+
+      <article class="card floraCard" aria-label="Bromelias">
+        <div class="floraImage" aria-label="Imagen de bromelias">
+          <img src="/assets/images/pages/features/flora/tcfr_features_flora_bromelias.jpg" alt="Planta bromelia" loading="lazy" decoding="async" />
+        </div>
+        <div class="floraBody" aria-label="Contenido de bromelias">
+          <h3>Bromelias</h3>
+          <div class="floraLatin">Familia Bromeliaceae</div>
+          <div class="floraTags" aria-label="Etiquetas de bromelias">
+            <span class="tag">Habitat para fauna</span>
+            <span class="tag">Polinizadores</span>
+          </div>
+          <div class="floraText">
+            Plantas en roseta que acumulan agua de lluvia y crean pequenos ecosistemas para ranas e insectos.
+          </div>
+          <div class="floraNote">
+            A menudo se ven creciendo sobre arboles o rocas.
+          </div>
+        </div>
+      </article>
+
+      <div class="sectionBreak card" aria-label="Encabezado de arboles">
+        <h2>Arboles de The Cloud Forest Retreat</h2>
+        <p>Especies fundamentales que dan forma al paisaje y al microclima.</p>
+      </div>
+
+      <article class="card floraCard" aria-label="Algarrobo">
+        <div class="floraImage" aria-label="Imagen de algarrobo">
+          <img src="/assets/images/pages/features/flora/tcfr_features_flora_algarrobo.jpg" alt="Arbol de algarrobo" loading="lazy" decoding="async" />
+        </div>
+        <div class="floraBody" aria-label="Contenido de algarrobo">
+          <h3>Algarrobo</h3>
+          <div class="floraLatin">Especies de Prosopis</div>
+          <div class="floraTags" aria-label="Etiquetas de algarrobo">
+            <span class="tag">Vainas comestibles</span>
+            <span class="tag">Resistente a la sequia</span>
+          </div>
+          <div class="floraText">
+            Produce vainas ricas en nutrientes y con un sabor naturalmente dulce, aprovechadas por personas y fauna.
+          </div>
+          <div class="floraNote">
+            Especie clave para la salud del suelo y el control de la erosion.
+          </div>
+        </div>
+      </article>
+
+      <article class="card floraCard" aria-label="Cholan">
+        <div class="floraImage" aria-label="Imagen de cholan">
+          <img src="/assets/images/pages/features/flora/tcfr_features_flora_campeche.jpg" alt="Flores amarillas del cholan" loading="lazy" decoding="async" />
+        </div>
+        <div class="floraBody" aria-label="Contenido de cholan">
+          <h3>Cholan</h3>
+          <div class="floraLatin">Haematoxylum campechianum</div>
+          <div class="floraTags" aria-label="Etiquetas de cholan">
+            <span class="tag">Tinte natural</span>
+            <span class="tag">Medicinal</span>
+          </div>
+          <div class="floraText">
+            Racimos de flores amarillas y aromaticas adornan sus ramas retorcidas y aportan nectar esencial para las abejas.
+          </div>
+          <div class="floraNote">
+            Es famoso por su duramen de color morado (tinte). No es para consumo. Manipular con cuidado.
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
+</body>
+</html>
