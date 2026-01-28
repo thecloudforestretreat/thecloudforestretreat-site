@@ -1,15 +1,23 @@
-/* /assets/js/head.js
-   Head-only hooks for TCFR.
-   - Inject header/footer includes
-   - Activate EN/ES language switch
+/* assets/js/head.js
+   Language + header helpers for TCFR
+   - Injects correct EN/ES header include (already handled by includes.js if present)
+   - Keeps EN/ES switch working and sets active state
 */
-(function () {
+(function(){
   "use strict";
 
-  function normalizePath(p){
-    if (!p) return "/";
-    p = p.replace(/\/{2,}/g, "/");
+  function normPath(p){
+    p = (p || "/").trim();
+    // strip query/hash if accidentally passed
+    p = p.split("?")[0].split("#")[0];
+    // ensure leading slash
     if (p.charAt(0) !== "/") p = "/" + p;
+    // remove index.html
+    p = p.replace(/index\.html$/i, "");
+    // collapse multiple slashes
+    p = p.replace(/\/{2,}/g, "/");
+    // ensure trailing slash for "directory" paths
+    if (!/\.[a-z0-9]+$/i.test(p) && p.slice(-1) !== "/") p += "/";
     return p;
   }
 
@@ -17,118 +25,112 @@
     return /^\/es(\/|$)/i.test(pathname || "");
   }
 
+  // EN -> ES routes (canonical slugs from sitemap)
   var ROUTES = {
     "/": "/es/",
+
+    "/about/": "/es/sobre-nosotros/",
     "/contact/": "/es/contacto/",
     "/booking/": "/es/reservas/",
+
     "/rooms/": "/es/habitaciones/",
     "/rooms/panoramic-suite/": "/es/habitaciones/suite-panoramica/",
-    "/rooms/mountain-suite/": "/es/habitaciones/suite-de-montana/",
-    "/rooms/forest-suite/": "/es/habitaciones/suite-del-bosque/",
+    "/rooms/sunrise-room/": "/es/habitaciones/habitacion-amanecer/",
+    "/rooms/sunset-room/": "/es/habitaciones/habitacion-atardecer/",
+    "/rooms/common-areas/": "/es/habitaciones/areas-comunes/",
 
     "/features/": "/es/caracteristicas/",
-    "/features/amenities/": "/es/caracteristicas/amenidades/",
     "/features/activities/": "/es/caracteristicas/actividades/",
+    // keep both spellings in case one exists in production
+    "/features/amenities/": "/es/caracteristicas/amenidades/",
+    "/features/ammenities/": "/es/caracteristicas/amenidades/",
     "/features/attractions/": "/es/caracteristicas/atracciones/",
-    "/features/produce/": "/es/caracteristicas/productos/",
-    "/features/flora/": "/es/caracteristicas/flora/",
-    "/features/fauna/": "/es/caracteristicas/fauna/",
     "/features/choco-andino-de-pichincha/": "/es/caracteristicas/choco-andino-de-pichincha/",
-    "/features/pululahua/": "/es/features/pululahua/",
-    "/features/rio-guayllabamba/": "/es/features/rio-guayllabamba/",
-    "/gallery/": "/es/galeria/"
+    "/features/fauna/": "/es/caracteristicas/fauna/",
+    "/features/flora/": "/es/caracteristicas/flora/",
+    "/features/produce/": "/es/caracteristicas/productos-locales/",
+    "/features/pululahua/": "/es/caracteristicas/pululahua/",
+    "/features/rio-guayllabamba/": "/es/caracteristicas/rio-guayllabamba/",
+
+    "/gallery/": "/es/caracteristicas/galeria/",
+
+    "/privacy-policy/": "/es/politica-de-privacidad/",
+    "/terms-of-service/": "/es/terminos-de-servicio/"
   };
 
-  var ROUTES_REV = {};
+  // ES -> EN reverse map
+  var REV = {};
   (function(){
     for (var k in ROUTES){
       if (!Object.prototype.hasOwnProperty.call(ROUTES, k)) continue;
-      ROUTES_REV[ROUTES[k]] = k;
+      REV[ROUTES[k]] = k;
     }
   })();
 
-  function getAltPath(pathname, toLang){
-    var p = normalizePath(pathname || "/");
-    if (p.length > 1 && p.charAt(p.length - 1) !== "/") p = p + "/";
+  function getCounterpart(pathname, targetLang){
+    var p = normPath(pathname);
 
-    var fromIsEs = isSpanishPath(p);
-
-    if (toLang === "es"){
-      if (fromIsEs) return p;
-      if (ROUTES[p]) return ROUTES[p];
-      return "/es" + (p === "/" ? "/" : p);
+    if (targetLang === "es"){
+      // already ES
+      if (isSpanishPath(p)) return p;
+      return ROUTES[p] || (p === "/" ? "/es/" : "/es/");
     }
 
-    if (!fromIsEs) return p;
-    if (ROUTES_REV[p]) return ROUTES_REV[p];
-    return p.replace(/^\/es/i, "") || "/";
+    // target EN
+    if (!isSpanishPath(p)) return p;
+    return REV[p] || "/";
   }
 
-  function setLangSwitchLinks(){
-    var enBtn = document.getElementById("langEn");
-    var esBtn = document.getElementById("langEs");
-    if (!enBtn || !esBtn) return;
+  function setLangSwitch(){
+    var enLink = document.getElementById("langEn");
+    var esLink = document.getElementById("langEs");
+    if (!enLink || !esLink) return;
 
-    var path = normalizePath(window.location.pathname || "/");
-    if (path.length > 1 && path.charAt(path.length - 1) !== "/") path += "/";
+    var here = normPath(window.location.pathname);
+    var lang = isSpanishPath(here) ? "es" : "en";
 
-    var onEs = isSpanishPath(path);
+    var enTarget = getCounterpart(here, "en");
+    var esTarget = getCounterpart(here, "es");
 
-    var enHref = getAltPath(path, "en");
-    var esHref = getAltPath(path, "es");
+    // always provide usable hrefs (no "#")
+    enLink.setAttribute("href", enTarget);
+    esLink.setAttribute("href", esTarget);
 
-    enBtn.setAttribute("href", enHref);
-    esBtn.setAttribute("href", esHref);
+    // active styles
+    enLink.classList.toggle("is-active", lang === "en");
+    esLink.classList.toggle("is-active", lang === "es");
+    if (lang === "en"){
+      enLink.setAttribute("aria-current", "page");
+      esLink.removeAttribute("aria-current");
+    } else {
+      esLink.setAttribute("aria-current", "page");
+      enLink.removeAttribute("aria-current");
+    }
 
-    enBtn.classList.toggle("is-active", !onEs);
-    esBtn.classList.toggle("is-active", onEs);
+    // JS-driven navigation to ensure we never land on "/#"
+    enLink.addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.href = enTarget;
+    });
 
-    enBtn.setAttribute("aria-current", !onEs ? "page" : "false");
-    esBtn.setAttribute("aria-current", onEs ? "page" : "false");
-
-    enBtn.style.pointerEvents = "auto";
-    esBtn.style.pointerEvents = "auto";
-  }
-
-  function fetchText(url){
-    return fetch(url, { cache: "no-store" }).then(function(r){
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.text();
+    esLink.addEventListener("click", function(e){
+      e.preventDefault();
+      window.location.href = esTarget;
     });
   }
 
-  function inject(selector, html){
-    var el = document.querySelector(selector);
-    if (!el) return;
-    el.innerHTML = html;
+  // Run after header is injected
+  function ready(fn){
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
   }
 
-  function initIncludes(){
-    var path = normalizePath(window.location.pathname || "/");
-    var useEs = isSpanishPath(path);
+  ready(function(){
+    setLangSwitch();
+  });
 
-    var headerUrl = useEs ? "/assets/includes/header-es.html" : "/assets/includes/header.html";
-    var footerUrl = "/assets/includes/footer.html";
-
-    fetchText(headerUrl)
-      .then(function(html){
-        inject("#siteHeader", html);
-        setLangSwitchLinks();
-      })
-      .catch(function(){
-        setLangSwitchLinks();
-      });
-
-    fetchText(footerUrl)
-      .then(function(html){
-        inject("#siteFooter", html);
-      })
-      .catch(function(){});
-  }
-
-  if (document.readyState === "loading"){
-    document.addEventListener("DOMContentLoaded", initIncludes);
-  } else {
-    initIncludes();
-  }
+  // If your include loader dispatches an event, react to it as well
+  document.addEventListener("tcfr:header:loaded", function(){
+    setLangSwitch();
+  });
 })();
