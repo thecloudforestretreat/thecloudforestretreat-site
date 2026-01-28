@@ -1,21 +1,21 @@
-<!-- /assets/includes/header-es.html -->
-<header class="tcfr-header" data-header="tcfr">
+<!-- /assets/includes/header-es.html (ES) -->
+<header class="tcfr-header" role="banner">
   <div class="tcfr-inner">
-    <a class="tcfr-brand" href="/es/" aria-label="The Cloud Forest Retreat Inicio">
+    <a class="tcfr-brand" href="/es/" aria-label="Inicio - The Cloud Forest Retreat">
       <span class="tcfr-mark" aria-hidden="true">
-        <img src="/assets/images/logo/tcfr-logo.png" alt="" />
+        <img src="/assets/images/logo-mark.png" alt="" loading="eager" decoding="async">
       </span>
-      <span class="tcfr-name">The Cloud Forest Retreat</span>
+      <span class="tcfr-wordmark">The Cloud Forest Retreat</span>
     </a>
 
-    <nav class="tcfr-nav" aria-label="Navegacion principal">
+    <nav class="tcfr-nav" aria-label="Menu principal">
       <a class="tcfr-link" href="/es/">Inicio</a>
 
       <div class="tcfr-dd" data-dd>
-        <button class="tcfr-link tcfr-ddbtn" type="button" data-ddbtn aria-haspopup="true" aria-expanded="false">
-          Habitaciones <span class="tcfr-caret" aria-hidden="true">▼</span>
+        <button class="tcfr-ddBtn" type="button" aria-haspopup="true" aria-expanded="false">
+          Habitaciones <span class="tcfr-ddCaret" aria-hidden="true">▼</span>
         </button>
-        <div class="tcfr-ddmenu" data-ddmenu role="menu" aria-label="Submenu habitaciones">
+        <div class="tcfr-ddMenu" role="menu">
           <a role="menuitem" href="/es/habitaciones/">Todas las habitaciones</a>
           <a role="menuitem" href="/es/habitaciones/suite-panoramica/">Suite Panoramica</a>
           <a role="menuitem" href="/es/habitaciones/suite-montana/">Suite Montana</a>
@@ -24,10 +24,10 @@
       </div>
 
       <div class="tcfr-dd" data-dd>
-        <button class="tcfr-link tcfr-ddbtn" type="button" data-ddbtn aria-haspopup="true" aria-expanded="false">
-          Caracteristicas <span class="tcfr-caret" aria-hidden="true">▼</span>
+        <button class="tcfr-ddBtn" type="button" aria-haspopup="true" aria-expanded="false">
+          Caracteristicas <span class="tcfr-ddCaret" aria-hidden="true">▼</span>
         </button>
-        <div class="tcfr-ddmenu" data-ddmenu role="menu" aria-label="Submenu caracteristicas">
+        <div class="tcfr-ddMenu" role="menu">
           <a role="menuitem" href="/es/caracteristicas/">Todas las caracteristicas</a>
           <a role="menuitem" href="/es/caracteristicas/amenidades/">Amenidades</a>
           <a role="menuitem" href="/es/caracteristicas/actividades/">Actividades</a>
@@ -42,21 +42,21 @@
         </div>
       </div>
 
-      <a class="tcfr-link" href="/es/reservas/">Reservas</a>
-      <a class="tcfr-link" href="/es/nosotros/">Nosotros</a>
+      <a class="tcfr-link" href="/booking/">Reservas</a>
+      <a class="tcfr-link" href="/es/sobre/">Sobre</a>
       <a class="tcfr-link" href="/es/contacto/">Contacto</a>
       <a class="tcfr-link" href="/es/blog/">Blog</a>
     </nav>
 
-    <div class="tcfr-actions" aria-label="Acciones del encabezado">
-      <a class="btn primary tcfr-cta" href="/es/reservas/">Reservar</a>
-
-      <div class="tcfr-lang" role="group" aria-label="Selector de idioma">
-        <a class="tcfr-langpill" data-lang="en" href="/" aria-label="English">EN</a>
-        <a class="tcfr-langpill" data-lang="es" href="/es/" aria-label="Espanol">ES</a>
+    <div class="tcfr-actions" aria-label="Acciones">
+      <div class="tcfr-lang" aria-label="Idioma">
+        <a class="tcfr-langBtn" data-lang="en" href="/">EN</a>
+        <a class="tcfr-langBtn is-active" data-lang="es" href="/es/" aria-current="page">ES</a>
       </div>
 
-      <button class="tcfr-burger" type="button" data-burger aria-label="Abrir menu" aria-expanded="false">
+      <a class="btn primary tcfr-cta" href="/booking/">Reservar</a>
+
+      <button class="tcfr-burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="tcfrMobileNav">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -64,56 +64,58 @@
     </div>
   </div>
 
-  <!-- Mobile drawer -->
-  <div class="tcfr-mobile" data-mobile hidden>
-    <div class="tcfr-minner">
-      <nav class="tcfr-mnav" aria-label="Menu movil">
-        <a class="tcfr-mlink" href="/es/">Inicio</a>
-
-        <button class="tcfr-mlink tcfr-mnext" type="button" data-target="#m-rooms" aria-label="Submenu habitaciones">
-          Habitaciones <span aria-hidden="true">›</span>
-        </button>
-
-        <button class="tcfr-mlink tcfr-mnext" type="button" data-target="#m-features" aria-label="Submenu caracteristicas">
-          Caracteristicas <span aria-hidden="true">›</span>
-        </button>
-
-        <a class="tcfr-mlink" href="/es/reservas/">Reservas</a>
-        <a class="tcfr-mlink" href="/es/nosotros/">Nosotros</a>
-        <a class="tcfr-mlink" href="/es/contacto/">Contacto</a>
-        <a class="tcfr-mlink" href="/es/blog/">Blog</a>
-
-        <div class="tcfr-mfooter" aria-label="Acciones moviles">
-          <a class="btn primary" href="/es/reservas/">Reservar</a>
-          <div class="tcfr-lang" role="group" aria-label="Selector de idioma">
-            <a class="tcfr-langpill" data-lang="en" href="/" aria-label="English">EN</a>
-            <a class="tcfr-langpill" data-lang="es" href="/es/" aria-label="Espanol">ES</a>
-          </div>
-        </div>
-      </nav>
-
-      <nav class="tcfr-msub" id="m-rooms" hidden aria-label="Submenu habitaciones">
-        <button class="tcfr-mback" type="button" data-back aria-label="Volver">‹ Volver</button>
-        <a class="tcfr-mlink" href="/es/habitaciones/">Todas las habitaciones</a>
-        <a class="tcfr-mlink" href="/es/habitaciones/suite-panoramica/">Suite Panoramica</a>
-        <a class="tcfr-mlink" href="/es/habitaciones/suite-montana/">Suite Montana</a>
-        <a class="tcfr-mlink" href="/es/habitaciones/suite-bosque/">Suite Bosque</a>
-      </nav>
-
-      <nav class="tcfr-msub" id="m-features" hidden aria-label="Submenu caracteristicas">
-        <button class="tcfr-mback" type="button" data-back aria-label="Volver">‹ Volver</button>
-        <a class="tcfr-mlink" href="/es/caracteristicas/">Todas las caracteristicas</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/amenidades/">Amenidades</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/actividades/">Actividades</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/atracciones/">Atracciones</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/productos/">Productos</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/flora/">Flora</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/fauna/">Fauna</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/choco-andino-de-pichincha/">Choco Andino</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/rio-guayllabamba/">Rio Guayllabamba</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/pululahua/">Pululahua</a>
-        <a class="tcfr-mlink" href="/es/caracteristicas/galeria/">Galeria</a>
-      </nav>
+  <!-- Mobile nav (JS-driven drill-down) -->
+  <nav class="tcfr-mobile" id="tcfrMobileNav" aria-label="Menu movil" hidden>
+    <div class="tcfr-mHead">
+      <span class="tcfr-mTitle">Menu</span>
+      <button class="tcfr-mClose" type="button" aria-label="Cerrar menu">×</button>
     </div>
-  </div>
+
+    <div class="tcfr-mMain m-main">
+      <a class="tcfr-mLink" href="/es/">Inicio</a>
+
+      <button class="tcfr-mNext m-next" type="button" data-target="#m-rooms" aria-label="Habitaciones">
+        Habitaciones <span aria-hidden="true">›</span>
+      </button>
+
+      <button class="tcfr-mNext m-next" type="button" data-target="#m-features" aria-label="Caracteristicas">
+        Caracteristicas <span aria-hidden="true">›</span>
+      </button>
+
+      <a class="tcfr-mLink" href="/booking/">Reservas</a>
+      <a class="tcfr-mLink" href="/es/sobre/">Sobre</a>
+      <a class="tcfr-mLink" href="/es/contacto/">Contacto</a>
+      <a class="tcfr-mLink" href="/es/blog/">Blog</a>
+
+      <a class="btn primary tcfr-mCta" href="/booking/">Reservar</a>
+
+      <div class="tcfr-mLang" aria-label="Idioma">
+        <a class="tcfr-langBtn" data-lang="en" href="/">EN</a>
+        <a class="tcfr-langBtn is-active" data-lang="es" href="/es/" aria-current="page">ES</a>
+      </div>
+    </div>
+
+    <div class="tcfr-mSub m-submenu" id="m-rooms" hidden>
+      <button class="tcfr-mBack" type="button" data-back aria-label="Atras">‹ Atras</button>
+      <a class="tcfr-mLink" href="/es/habitaciones/">Todas las habitaciones</a>
+      <a class="tcfr-mLink" href="/es/habitaciones/suite-panoramica/">Suite Panoramica</a>
+      <a class="tcfr-mLink" href="/es/habitaciones/suite-montana/">Suite Montana</a>
+      <a class="tcfr-mLink" href="/es/habitaciones/suite-bosque/">Suite Bosque</a>
+    </div>
+
+    <div class="tcfr-mSub m-submenu" id="m-features" hidden>
+      <button class="tcfr-mBack" type="button" data-back aria-label="Atras">‹ Atras</button>
+      <a class="tcfr-mLink" href="/es/caracteristicas/">Todas las caracteristicas</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/amenidades/">Amenidades</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/actividades/">Actividades</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/atracciones/">Atracciones</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/productos/">Productos</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/flora/">Flora</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/fauna/">Fauna</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/choco-andino-de-pichincha/">Choco Andino</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/rio-guayllabamba/">Rio Guayllabamba</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/pululahua/">Pululahua</a>
+      <a class="tcfr-mLink" href="/es/caracteristicas/galeria/">Galeria</a>
+    </div>
+  </nav>
 </header>
