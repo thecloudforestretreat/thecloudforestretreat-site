@@ -1,137 +1,157 @@
+/* /assets/js/head.js
+   Loads the correct header include (EN or ES) + footer include, then wires up language switch URLs.
+   ASCII-only.
+*/
 (function(){
   "use strict";
 
-  // Detect language from URL.
-  // English pages live at /..., Spanish pages live at /es/...
-  var path = (window.location && window.location.pathname) ? window.location.pathname : "/";
-  var pathLower = String(path || "/").toLowerCase();
-  var isEs = pathLower === "/es" || pathLower.indexOf("/es/") === 0;
-
-  // Set <html lang=""> for SEO and accessibility.
-  try {
-    document.documentElement.lang = isEs ? "es" : "en";
-  } catch(e) {}
-
-  // Map between EN and ES slugs.
-  function ensureTrailingSlash(p){
-    if (!p) return "/";
-    return p.endsWith("/") ? p : (p + "/");
-  }
+  function $(sel, root){ return (root || document).querySelector(sel); }
 
   function normalizePath(p){
-    // keep leading slash, remove query/hash (already pathname), collapse multiple slashes
-    p = String(p || "/");
-    if (!p.startsWith("/")) p = "/" + p;
+    if (!p) return "/";
+    // strip query/hash
+    p = p.split("?")[0].split("#")[0];
+    // ensure leading slash
+    if (p.charAt(0) !== "/") p = "/" + p;
+    // normalize double slashes
     p = p.replace(/\/{2,}/g, "/");
+    // ensure trailing slash for folder-like paths (no file extension)
+    if (!/\.[a-z0-9]+$/i.test(p) && p.slice(-1) !== "/") p += "/";
     return p;
   }
 
-  function stripEsPrefix(p){
-    p = normalizePath(p);
-    if (p.toLowerCase() === "/es") return "/";
-    if (p.toLowerCase().indexOf("/es/") === 0) return "/" + p.slice(4);
-    return p;
+  function isSpanishPath(pathname){
+    var p = (pathname || "").toLowerCase();
+    return p === "/es" || p.indexOf("/es/") === 0;
   }
 
-  function addEsPrefix(p){
-    p = normalizePath(p);
-    if (p === "/") return "/es/";
-    if (p.toLowerCase().indexOf("/es/") === 0) return ensureTrailingSlash(p);
-    return "/es" + (p.startsWith("/") ? p : ("/" + p));
-  }
-
-  // Feature slug mapping (EN -> ES).
-  var featureMapEnToEs = {
+  // Mapping based on your sitemap slugs.
+  // Add more pairs here if you add more pages later.
+  var EN_TO_ES = {
+    "/": "/es/",
+    "/about/": "/es/sobre/",
+    "/contact/": "/es/contacto/",
+    "/blog/": "/es/blog/",
+    "/rooms/": "/es/habitaciones/",
     "/features/": "/es/caracteristicas/",
     "/features/amenities/": "/es/caracteristicas/amenidades/",
     "/features/activities/": "/es/caracteristicas/actividades/",
     "/features/attractions/": "/es/caracteristicas/atracciones/",
     "/features/produce/": "/es/caracteristicas/productos/",
-    "/features/gallery/": "/es/caracteristicas/galeria/",
     "/features/flora/": "/es/caracteristicas/flora/",
     "/features/fauna/": "/es/caracteristicas/fauna/",
     "/features/choco-andino-de-pichincha/": "/es/caracteristicas/choco-andino-de-pichincha/",
     "/features/pululahua/": "/es/caracteristicas/pululahua/",
-    "/features/rio-guayllabamba/": "/es/caracteristicas/rio-guayllabamba/"
+    "/features/rio-guayllabamba/": "/es/caracteristicas/rio-guayllabamba/",
+    "/gallery/": "/es/caracteristicas/galeria/"
   };
 
-  // Reverse map (ES -> EN).
-  var featureMapEsToEn = {};
-  Object.keys(featureMapEnToEs).forEach(function(k){
-    featureMapEsToEn[featureMapEnToEs[k]] = k;
-  });
-
-  // Common top-level pages (best-effort). Adjust later if your Spanish slugs differ.
-  var pageMapEnToEs = {
-    "/": "/es/",
-    "/rooms/": "/es/habitaciones/",
-    "/booking/": "/es/reservas/",
-    "/contact/": "/es/contacto/",
-    "/about/": "/es/acerca/",
-    "/blog/": "/es/blog/"
-  };
-
-  var pageMapEsToEn = {};
-  Object.keys(pageMapEnToEs).forEach(function(k){
-    pageMapEsToEn[pageMapEnToEs[k]] = k;
-  });
-
-  function mapToEs(currentPath){
-    var p = ensureTrailingSlash(normalizePath(currentPath));
-    // features first
-    if (featureMapEnToEs[p]) return featureMapEnToEs[p];
-    // top pages
-    if (pageMapEnToEs[p]) return pageMapEnToEs[p];
-    // fallback: prefix /es and keep rest
-    return addEsPrefix(stripEsPrefix(p));
-  }
-
-  function mapToEn(currentPath){
-    var p = ensureTrailingSlash(normalizePath(currentPath));
-    // features first
-    if (featureMapEsToEn[p]) return featureMapEsToEn[p];
-    // top pages
-    if (pageMapEsToEn[p]) return pageMapEsToEn[p];
-    // fallback: remove /es prefix
-    return ensureTrailingSlash(stripEsPrefix(p));
-  }
-
-  function setLangSwitchLinks(){
-    var langBtns = document.querySelectorAll(".tcfr-langBtn[data-lang]");
-    if (!langBtns || !langBtns.length) return;
-
-    var current = ensureTrailingSlash(normalizePath(pathLower));
-    var enHref = isEs ? mapToEn(current) : ensureTrailingSlash(stripEsPrefix(current));
-    var esHref = isEs ? ensureTrailingSlash(addEsPrefix(current)) : mapToEs(current);
-
-    for (var i = 0; i < langBtns.length; i++){
-      var btn = langBtns[i];
-      var lang = (btn.getAttribute("data-lang") || "").toLowerCase();
-
-      if (lang === "en"){
-        btn.setAttribute("href", enHref);
-        btn.classList.toggle("is-active", !isEs);
-        if (!isEs) btn.setAttribute("aria-current", "page");
-        else btn.removeAttribute("aria-current");
-      } else if (lang === "es"){
-        btn.setAttribute("href", esHref);
-        btn.classList.toggle("is-active", isEs);
-        if (isEs) btn.setAttribute("aria-current", "page");
-        else btn.removeAttribute("aria-current");
+  var ES_TO_EN = {};
+  (function(){
+    var k;
+    for (k in EN_TO_ES){
+      if (Object.prototype.hasOwnProperty.call(EN_TO_ES, k)){
+        ES_TO_EN[EN_TO_ES[k]] = k;
       }
     }
+  })();
+
+  function toSpanish(pathname){
+    var p = normalizePath(pathname);
+    if (isSpanishPath(p)) return p;
+    return EN_TO_ES[p] || "/es/";
   }
 
-  // Run after header injection (head.js is deferred; injection may happen in site.js).
-  // Retry a few times in case the header arrives slightly later.
-  (function retrySet(){
-    var tries = 0;
-    function tick(){
-      tries++;
-      setLangSwitchLinks();
-      if (document.querySelector(".tcfr-langBtn[data-lang]") || tries >= 20) return;
-      window.setTimeout(tick, 120);
+  function toEnglish(pathname){
+    var p = normalizePath(pathname);
+    if (!isSpanishPath(p)) return p;
+    // normalize "/es/" and deeper
+    if (p === "/es/" || p === "/es") return "/";
+    return ES_TO_EN[p] || "/";
+  }
+
+  function fetchInto(el, url){
+    return fetch(url, { cache: "no-store" })
+      .then(function(r){
+        if (!r.ok) throw new Error("Fetch failed: " + r.status);
+        return r.text();
+      })
+      .then(function(html){
+        el.innerHTML = html;
+        return el;
+      });
+  }
+
+  function setLangSwitch(root, lang){
+    // Desktop switch
+    var langWrap = $(".tcfr-lang", root);
+    // Mobile switch
+    var mLangWrap = $(".tcfr-mLang", root);
+
+    function apply(wrap){
+      if (!wrap) return;
+      var en = wrap.querySelector('[data-lang="en"]');
+      var es = wrap.querySelector('[data-lang="es"]');
+
+      var here = normalizePath(window.location.pathname);
+
+      if (en){
+        en.href = toEnglish(here);
+        en.classList.toggle("is-active", lang === "en");
+        if (lang === "en") en.setAttribute("aria-current", "page");
+        else en.removeAttribute("aria-current");
+      }
+
+      if (es){
+        es.href = toSpanish(here);
+        es.classList.toggle("is-active", lang === "es");
+        if (lang === "es") es.setAttribute("aria-current", "page");
+        else es.removeAttribute("aria-current");
+      }
     }
-    tick();
-  })();
+
+    apply(langWrap);
+    apply(mLangWrap);
+  }
+
+  function init(){
+    var headerHost = document.getElementById("siteHeader");
+    var footerHost = document.getElementById("siteFooter");
+
+    var lang = isSpanishPath(window.location.pathname) ? "es" : "en";
+
+    var headerUrl = lang === "es"
+      ? "/assets/includes/header-es.html"
+      : "/assets/includes/header.html";
+
+    var tasks = [];
+
+    if (headerHost && !headerHost.getAttribute("data-injected")){
+      tasks.push(
+        fetchInto(headerHost, headerUrl).then(function(){
+          headerHost.setAttribute("data-injected", "1");
+          setLangSwitch(headerHost, lang);
+        })
+      );
+    } else if (headerHost){
+      // If already injected, still ensure lang links are correct.
+      setLangSwitch(headerHost, lang);
+    }
+
+    if (footerHost && !footerHost.getAttribute("data-injected")){
+      tasks.push(
+        fetchInto(footerHost, "/assets/includes/footer.html").then(function(){
+          footerHost.setAttribute("data-injected", "1");
+        })
+      );
+    }
+
+    return Promise.all(tasks);
+  }
+
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
