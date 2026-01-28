@@ -13,6 +13,40 @@
 (function () {
   "use strict";
 
+  function isSpanishPath(){
+    return window.location.pathname === "/es/" || window.location.pathname.indexOf("/es/") === 0;
+  }
+
+  function getAlternateHref(lang){
+    try {
+      var link = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
+      if (link && link.getAttribute("href")) return link.getAttribute("href");
+    } catch (e) {}
+    return null;
+  }
+
+  function applyLangSwitch(root){
+    root = root || document;
+    var enHref = getAlternateHref("en") || "/";
+    var esHref = getAlternateHref("es") || "/es/";
+    var enEls = root.querySelectorAll('[data-lang-switch="en"]');
+    var esEls = root.querySelectorAll('[data-lang-switch="es"]');
+
+    for (var i = 0; i < enEls.length; i++){ enEls[i].setAttribute("href", enHref); }
+    for (var j = 0; j < esEls.length; j++){ esEls[j].setAttribute("href", esHref); }
+
+    var isEs = isSpanishPath();
+    for (var k = 0; k < enEls.length; k++){
+      if (isEs) enEls[k].removeAttribute("aria-current");
+      else enEls[k].setAttribute("aria-current", "page");
+    }
+    for (var m = 0; m < esEls.length; m++){
+      if (isEs) esEls[m].setAttribute("aria-current", "page");
+      else esEls[m].removeAttribute("aria-current");
+    }
+  }
+
+
   var GA_ID = "G-D3W4SP5MGX";
 
   // Prevent double-running (can happen if the script is included twice)
@@ -227,40 +261,7 @@
       });
     });
 
-    
-  // Language switch: keep user on the equivalent page when possible
-  try{
-    var i18n = window.TCFR_I18N || null;
-    var path = window.location.pathname || "/";
-    var alt = i18n && i18n.getAltPath ? i18n.getAltPath(path) : null;
-
-    // Desktop toggle
-    var langWrap = header.querySelector(".tcfr-lang");
-    if (langWrap){
-      var enLink = langWrap.querySelector('a[data-lang="en"]');
-      var esLink = langWrap.querySelector('a[data-lang="es"]');
-      if (enLink && (path.indexOf("/es/") === 0 || path === "/es")){
-        enLink.setAttribute("href", alt || "/");
-      }
-      if (esLink && !(path.indexOf("/es/") === 0 || path === "/es")){
-        esLink.setAttribute("href", alt || "/es/inicio/");
-      }
-    }
-
-    // Mobile toggle
-    var mLang = header.querySelector(".tcfr-mobileLang");
-    if (mLang){
-      var mEn = mLang.querySelector('a[data-lang="en"]');
-      var mEs = mLang.querySelector('a[data-lang="es"]');
-      if (mEn && (path.indexOf("/es/") === 0 || path === "/es")){
-        mEn.setAttribute("href", alt || "/");
-      }
-      if (mEs && !(path.indexOf("/es/") === 0 || path === "/es")){
-        mEs.setAttribute("href", alt || "/es/inicio/");
-      }
-    }
-  }catch(e){}
-// Sticky scrolled state
+    // Sticky scrolled state
     function onScroll() {
       var y = window.scrollY || 0;
       header.classList.toggle("is-scrolled", y > 10);
@@ -285,20 +286,14 @@
 
     // IMPORTANT: Cloudflare Pages often uses "pretty URLs" and redirects *.html -> no extension.
     // We try both, and only inject when we confirm it is a fragment (not a full HTML doc).
-    var isEs = false;
-    try{
-      isEs = (window.TCFR_I18N && window.TCFR_I18N.isEsPath) ? window.TCFR_I18N.isEsPath(window.location.pathname) : (window.location.pathname.indexOf("/es/") === 0 || window.location.pathname === "/es");
-    }catch(e){ isEs = false; }
-
-    var headerCandidates = isEs
-      ? ["/assets/includes/header-es", "/assets/includes/header-es.html", "/assets/includes/header", "/assets/includes/header.html"]
-      : ["/assets/includes/header", "/assets/includes/header.html"];
-
     var headerMount = await injectFragment(
       "siteHeader",
-      headerCandidates,
+      isSpanishPath()
+        ? ["/assets/includes/header-es.html", "/assets/includes/header-es", "/assets/includes/header.html", "/assets/includes/header"]
+        : ["/assets/includes/header.html", "/assets/includes/header", "/assets/includes/header-es.html", "/assets/includes/header-es"],
       isValidHeaderFragment
     );
+    if (headerMount) { applyLangSwitch(headerMount); }
 
     // Footer is optional; inject if it exists, otherwise leave blank.
     await injectFragment(
