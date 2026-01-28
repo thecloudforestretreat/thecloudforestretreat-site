@@ -1,136 +1,129 @@
-/* assets/js/head.js
-   Language + header helpers for TCFR
-   - Injects correct EN/ES header include (already handled by includes.js if present)
-   - Keeps EN/ES switch working and sets active state
-*/
 (function(){
   "use strict";
 
   function normPath(p){
-    p = (p || "/").trim();
-    // strip query/hash if accidentally passed
-    p = p.split("?")[0].split("#")[0];
-    // ensure leading slash
-    if (p.charAt(0) !== "/") p = "/" + p;
-    // remove index.html
-    p = p.replace(/index\.html$/i, "");
-    // collapse multiple slashes
-    p = p.replace(/\/{2,}/g, "/");
-    // ensure trailing slash for "directory" paths
-    if (!/\.[a-z0-9]+$/i.test(p) && p.slice(-1) !== "/") p += "/";
+    if (!p) return "/";
+    try { p = decodeURIComponent(p); } catch (e) {}
+    if (p === "") return "/";
+    // keep trailing slash if present, otherwise normalize to trailing slash for directory paths
+    if (p.length > 1 && !p.endsWith("/")) p = p + "/";
     return p;
   }
 
-  function isSpanishPath(pathname){
-    return /^\/es(\/|$)/i.test(pathname || "");
+  var EN_TO_ES = {
+  "/": "/es/",
+  "/rooms/": "/es/habitaciones/",
+  "/rooms/panoramic-suite/": "/es/habitaciones/suite-panoramica/",
+  "/rooms/sunrise-room/": "/es/habitaciones/habitacion-amanecer/",
+  "/rooms/sunset-room/": "/es/habitaciones/habitacion-atardecer/",
+  "/rooms/common-areas/": "/es/habitaciones/areas-comunes/",
+  "/features/": "/es/caracteristicas/",
+  "/features/amenities/": "/es/caracteristicas/amenidades/",
+  "/features/activities/": "/es/caracteristicas/actividades/",
+  "/features/attractions/": "/es/caracteristicas/atracciones/",
+  "/features/produce/": "/es/caracteristicas/productos-locales/",
+  "/features/flora/": "/es/caracteristicas/flora/",
+  "/features/fauna/": "/es/caracteristicas/fauna/",
+  "/features/choco-andino-de-pichincha/": "/es/caracteristicas/choco-andino-de-pichincha/",
+  "/features/pululahua/": "/es/features/pululahua/",
+  "/features/rio-guayllabamba/": "/es/features/rio-guayllabamba/",
+  "/booking/": "/es/reservas/",
+  "/contact/": "/es/contacto/",
+  "/about/": "/es/nosotros/",
+  "/blog/": "/es/blog/",
+  "/gallery/": "/es/galeria/"
+};
+  var ES_TO_EN = {
+  "/es/": "/",
+  "/es/habitaciones/": "/rooms/",
+  "/es/habitaciones/suite-panoramica/": "/rooms/panoramic-suite/",
+  "/es/habitaciones/habitacion-amanecer/": "/rooms/sunrise-room/",
+  "/es/habitaciones/habitacion-atardecer/": "/rooms/sunset-room/",
+  "/es/habitaciones/areas-comunes/": "/rooms/common-areas/",
+  "/es/caracteristicas/": "/features/",
+  "/es/caracteristicas/amenidades/": "/features/amenities/",
+  "/es/caracteristicas/actividades/": "/features/activities/",
+  "/es/caracteristicas/atracciones/": "/features/attractions/",
+  "/es/caracteristicas/productos-locales/": "/features/produce/",
+  "/es/caracteristicas/flora/": "/features/flora/",
+  "/es/caracteristicas/fauna/": "/features/fauna/",
+  "/es/caracteristicas/choco-andino-de-pichincha/": "/features/choco-andino-de-pichincha/",
+  "/es/features/pululahua/": "/features/pululahua/",
+  "/es/features/rio-guayllabamba/": "/features/rio-guayllabamba/",
+  "/es/reservas/": "/booking/",
+  "/es/contacto/": "/contact/",
+  "/es/nosotros/": "/about/",
+  "/es/blog/": "/blog/",
+  "/es/galeria/": "/gallery/"
+};
+
+  function isEs(pathname){
+    return pathname.indexOf("/es/") === 0;
   }
 
-  // EN -> ES routes (canonical slugs from sitemap)
-  var ROUTES = {
-    "/": "/es/",
-
-    "/about/": "/es/sobre-nosotros/",
-    "/contact/": "/es/contacto/",
-    "/booking/": "/es/reservas/",
-
-    "/rooms/": "/es/habitaciones/",
-    "/rooms/panoramic-suite/": "/es/habitaciones/suite-panoramica/",
-    "/rooms/sunrise-room/": "/es/habitaciones/habitacion-amanecer/",
-    "/rooms/sunset-room/": "/es/habitaciones/habitacion-atardecer/",
-    "/rooms/common-areas/": "/es/habitaciones/areas-comunes/",
-
-    "/features/": "/es/caracteristicas/",
-    "/features/activities/": "/es/caracteristicas/actividades/",
-    // keep both spellings in case one exists in production
-    "/features/amenities/": "/es/caracteristicas/amenidades/",
-    "/features/ammenities/": "/es/caracteristicas/amenidades/",
-    "/features/attractions/": "/es/caracteristicas/atracciones/",
-    "/features/choco-andino-de-pichincha/": "/es/caracteristicas/choco-andino-de-pichincha/",
-    "/features/fauna/": "/es/caracteristicas/fauna/",
-    "/features/flora/": "/es/caracteristicas/flora/",
-    "/features/produce/": "/es/caracteristicas/productos-locales/",
-    "/features/pululahua/": "/es/caracteristicas/pululahua/",
-    "/features/rio-guayllabamba/": "/es/caracteristicas/rio-guayllabamba/",
-
-    "/gallery/": "/es/caracteristicas/galeria/",
-
-    "/privacy-policy/": "/es/politica-de-privacidad/",
-    "/terms-of-service/": "/es/terminos-de-servicio/"
-  };
-
-  // ES -> EN reverse map
-  var REV = {};
-  (function(){
-    for (var k in ROUTES){
-      if (!Object.prototype.hasOwnProperty.call(ROUTES, k)) continue;
-      REV[ROUTES[k]] = k;
-    }
-  })();
-
-  function getCounterpart(pathname, targetLang){
-    var p = normPath(pathname);
+  function mapPath(pathname, targetLang){
+    pathname = normPath(pathname || "/");
+    var currentIsEs = isEs(pathname);
 
     if (targetLang === "es"){
-      // already ES
-      if (isSpanishPath(p)) return p;
-      return ROUTES[p] || (p === "/" ? "/es/" : "/es/");
+      if (currentIsEs) return pathname;
+      return EN_TO_ES[pathname] || "/es/";
     }
 
-    // target EN
-    if (!isSpanishPath(p)) return p;
-    return REV[p] || "/";
+    if (!currentIsEs) return pathname;
+    return ES_TO_EN[pathname] || "/";
   }
 
-  function setLangSwitch(){
-    var enLink = document.getElementById("langEn");
-    var esLink = document.getElementById("langEs");
-    if (!enLink || !esLink) return;
+  function setLangSwitchLinks(pathname){
+    var enHref = mapPath(pathname, "en");
+    var esHref = mapPath(pathname, "es");
 
-    var here = normPath(window.location.pathname);
-    var lang = isSpanishPath(here) ? "es" : "en";
+    var enBtn = document.querySelector('[data-lang="en"]');
+    var esBtn = document.querySelector('[data-lang="es"]');
 
-    var enTarget = getCounterpart(here, "en");
-    var esTarget = getCounterpart(here, "es");
+    if (enBtn) enBtn.setAttribute("href", enHref);
+    if (esBtn) esBtn.setAttribute("href", esHref);
 
-    // always provide usable hrefs (no "#")
-    enLink.setAttribute("href", enTarget);
-    esLink.setAttribute("href", esTarget);
-
-    // active styles
-    enLink.classList.toggle("is-active", lang === "en");
-    esLink.classList.toggle("is-active", lang === "es");
-    if (lang === "en"){
-      enLink.setAttribute("aria-current", "page");
-      esLink.removeAttribute("aria-current");
-    } else {
-      esLink.setAttribute("aria-current", "page");
-      enLink.removeAttribute("aria-current");
+    var current = isEs(pathname) ? "es" : "en";
+    if (enBtn){
+      enBtn.classList.toggle("is-active", current === "en");
+      enBtn.setAttribute("aria-current", current === "en" ? "page" : "false");
     }
-
-    // JS-driven navigation to ensure we never land on "/#"
-    enLink.addEventListener("click", function(e){
-      e.preventDefault();
-      window.location.href = enTarget;
-    });
-
-    esLink.addEventListener("click", function(e){
-      e.preventDefault();
-      window.location.href = esTarget;
-    });
+    if (esBtn){
+      esBtn.classList.toggle("is-active", current === "es");
+      esBtn.setAttribute("aria-current", current === "es" ? "page" : "false");
+    }
   }
 
-  // Run after header is injected
-  function ready(fn){
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
-    else fn();
+  function loadInclude(targetId, url, onDone){
+    var el = document.getElementById(targetId);
+    if (!el) { if (onDone) onDone(); return; }
+
+    fetch(url, { cache: "no-store" })
+      .then(function(r){ return r.text(); })
+      .then(function(html){
+        el.innerHTML = html;
+        if (onDone) onDone();
+      })
+      .catch(function(){
+        if (onDone) onDone();
+      });
   }
 
-  ready(function(){
-    setLangSwitch();
-  });
+  function init(){
+    var pathname = normPath(location.pathname || "/");
+    var headerUrl = isEs(pathname) ? "/assets/includes/header-es.html" : "/assets/includes/header.html";
 
-  // If your include loader dispatches an event, react to it as well
-  document.addEventListener("tcfr:header:loaded", function(){
-    setLangSwitch();
-  });
+    loadInclude("siteHeader", headerUrl, function(){
+      setLangSwitchLinks(pathname);
+    });
+
+    loadInclude("siteFooter", "/assets/includes/footer.html");
+  }
+
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
