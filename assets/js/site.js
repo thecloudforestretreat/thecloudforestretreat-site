@@ -13,40 +13,6 @@
 (function () {
   "use strict";
 
-  function isSpanishPath(){
-    return window.location.pathname === "/es/" || window.location.pathname.indexOf("/es/") === 0;
-  }
-
-  function getAlternateHref(lang){
-    try {
-      var link = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
-      if (link && link.getAttribute("href")) return link.getAttribute("href");
-    } catch (e) {}
-    return null;
-  }
-
-  function applyLangSwitch(root){
-    root = root || document;
-    var enHref = getAlternateHref("en") || "/";
-    var esHref = getAlternateHref("es") || "/es/";
-    var enEls = root.querySelectorAll('[data-lang-switch="en"]');
-    var esEls = root.querySelectorAll('[data-lang-switch="es"]');
-
-    for (var i = 0; i < enEls.length; i++){ enEls[i].setAttribute("href", enHref); }
-    for (var j = 0; j < esEls.length; j++){ esEls[j].setAttribute("href", esHref); }
-
-    var isEs = isSpanishPath();
-    for (var k = 0; k < enEls.length; k++){
-      if (isEs) enEls[k].removeAttribute("aria-current");
-      else enEls[k].setAttribute("aria-current", "page");
-    }
-    for (var m = 0; m < esEls.length; m++){
-      if (isEs) esEls[m].setAttribute("aria-current", "page");
-      else esEls[m].removeAttribute("aria-current");
-    }
-  }
-
-
   var GA_ID = "G-D3W4SP5MGX";
 
   // Prevent double-running (can happen if the script is included twice)
@@ -286,14 +252,16 @@
 
     // IMPORTANT: Cloudflare Pages often uses "pretty URLs" and redirects *.html -> no extension.
     // We try both, and only inject when we confirm it is a fragment (not a full HTML doc).
-    var headerMount = await injectFragment(
+    var headerMount = var isEs = (window.location.pathname === "/es/" || window.location.pathname.indexOf("/es/") === 0);
+    var headerCandidates = isEs
+      ? ["/assets/includes/header-es.html", "/assets/includes/header-es.html?v=1"]
+      : ["/assets/includes/header.html", "/assets/includes/header.html?v=1"];
+
+    await injectFragment(
       "siteHeader",
-      isSpanishPath()
-        ? ["/assets/includes/header-es.html", "/assets/includes/header-es", "/assets/includes/header.html", "/assets/includes/header"]
-        : ["/assets/includes/header.html", "/assets/includes/header", "/assets/includes/header-es.html", "/assets/includes/header-es"],
+      headerCandidates,
       isValidHeaderFragment
     );
-    if (headerMount) { applyLangSwitch(headerMount); }
 
     // Footer is optional; inject if it exists, otherwise leave blank.
     await injectFragment(
