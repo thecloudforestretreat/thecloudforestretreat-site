@@ -84,6 +84,10 @@
         .then(function(markup){
           if (!markup) return;
           host.innerHTML = markup;
+          if (host && host.id === "siteHeader"){
+            try{ document.dispatchEvent(new CustomEvent("tcfr:header-ready")); }catch(e){}
+            if (window.TCFR_bindHeader) { try{ window.TCFR_bindHeader(); }catch(e){} }
+          }
         })
         .catch(function(){});
     }
@@ -94,6 +98,7 @@
       })
       .then(function(){
         wireLanguageLinks();
+        if (window.TCFR_bindHeader) { try{ window.TCFR_bindHeader(); }catch(e){} }
       });
   }
 
