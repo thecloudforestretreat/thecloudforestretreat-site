@@ -1,143 +1,119 @@
 <!-- /assets/includes/header.html -->
-<header class="tcfr-header" data-tcfr-header>
-  <div class="tcfr-shell">
-    <a class="tcfr-brand" href="/" aria-label="The Cloud Forest Retreat home">
-      <img
-        class="tcfr-logo"
-        src="/assets/images/tcfr_logo_transparent.png"
-        alt="The Cloud Forest Retreat"
-        width="120"
-        height="38"
-        loading="eager"
-        decoding="async"
-      />
-      <span class="tcfr-brandText">The Cloud Forest Retreat</span>
+<header class="tcfr-header" data-header="tcfr">
+  <div class="tcfr-inner">
+    <a class="tcfr-brand" href="/" aria-label="The Cloud Forest Retreat Home">
+      <span class="tcfr-mark" aria-hidden="true">
+        <img src="/assets/images/logo/tcfr-logo.png" alt="" />
+      </span>
+      <span class="tcfr-name">The Cloud Forest Retreat</span>
     </a>
 
-    <!-- Desktop nav -->
-    <nav class="tcfr-nav tcfr-navDesktop" aria-label="Primary navigation">
+    <nav class="tcfr-nav" aria-label="Primary navigation">
       <a class="tcfr-link" href="/">Home</a>
 
-      <div class="tcfr-dd">
-        <button class="tcfr-ddBtn" type="button" aria-haspopup="true" aria-expanded="false">
-          Rooms <span class="tcfr-caret" aria-hidden="true">▾</span>
+      <div class="tcfr-dd" data-dd>
+        <button class="tcfr-link tcfr-ddbtn" type="button" data-ddbtn aria-haspopup="true" aria-expanded="false">
+          Rooms <span class="tcfr-caret" aria-hidden="true">▼</span>
         </button>
-        <div class="tcfr-ddMenu" role="menu" aria-label="Rooms submenu">
-          <a role="menuitem" class="tcfr-ddItem" href="/rooms/">Rooms Overview</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/rooms/panoramic-suite/">Panoramic Suite</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/rooms/sunrise-room/">Sunrise Room</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/rooms/sunset-room/">Sunset Room</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/rooms/common-areas/">Common Areas</a>
+        <div class="tcfr-ddmenu" data-ddmenu role="menu" aria-label="Rooms submenu">
+          <a role="menuitem" href="/rooms/">All rooms</a>
+          <a role="menuitem" href="/rooms/panoramic-suite/">Panoramic Suite</a>
+          <a role="menuitem" href="/rooms/mountain-suite/">Mountain Suite</a>
+          <a role="menuitem" href="/rooms/forest-suite/">Forest Suite</a>
         </div>
       </div>
 
-      <div class="tcfr-dd">
-        <button class="tcfr-ddBtn" type="button" aria-haspopup="true" aria-expanded="false">
-          Features <span class="tcfr-caret" aria-hidden="true">▾</span>
+      <div class="tcfr-dd" data-dd>
+        <button class="tcfr-link tcfr-ddbtn" type="button" data-ddbtn aria-haspopup="true" aria-expanded="false">
+          Features <span class="tcfr-caret" aria-hidden="true">▼</span>
         </button>
-        <div class="tcfr-ddMenu" role="menu" aria-label="Features submenu">
-          <a role="menuitem" class="tcfr-ddItem" href="/features/">Overview</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/amenities/">Amenities</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/activities/">Activities</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/attractions/">Attractions</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/produce/">Produce</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/flora/">Flora</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/fauna/">Fauna</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/choco-andino-de-pichincha/">Chocó Andino de Pichincha</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/pululahua/">Pululahua</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/rio-guayllabamba/">Rio Guayllabamba</a>
-          <a role="menuitem" class="tcfr-ddItem" href="/features/gallery/">Gallery</a>
+        <div class="tcfr-ddmenu" data-ddmenu role="menu" aria-label="Features submenu">
+          <a role="menuitem" href="/features/">All features</a>
+          <a role="menuitem" href="/features/amenities/">Amenities</a>
+          <a role="menuitem" href="/features/activities/">Activities</a>
+          <a role="menuitem" href="/features/attractions/">Attractions</a>
+          <a role="menuitem" href="/features/produce/">Produce</a>
+          <a role="menuitem" href="/features/flora/">Flora</a>
+          <a role="menuitem" href="/features/fauna/">Fauna</a>
+          <a role="menuitem" href="/features/choco-andino-de-pichincha/">Choco Andino</a>
+          <a role="menuitem" href="/features/rio-guayllabamba/">Rio Guayllabamba</a>
+          <a role="menuitem" href="/features/pululahua/">Pululahua</a>
+          <a role="menuitem" href="/features/gallery/">Gallery</a>
         </div>
       </div>
 
       <a class="tcfr-link" href="/booking/">Booking Page</a>
       <a class="tcfr-link" href="/about/">About</a>
       <a class="tcfr-link" href="/contact/">Contact</a>
-
-      <a
-        class="tcfr-link"
-        href="https://blog.thecloudforestretreat.com/"
-        target="_blank"
-        rel="noopener"
-      >
-        Blog
-      </a>
+      <a class="tcfr-link" href="/blog/">Blog</a>
     </nav>
 
-    <div class="tcfr-actions">
-      <div class="tcfr-lang" aria-label="Language switch">
-          <a class="tcfr-langBtn is-active" data-lang="en" href="/" aria-label="English">EN</a>
-          <a class="tcfr-langBtn" data-lang="es" href="/es/" aria-label="Espanol">ES</a>
-        </div>
+    <div class="tcfr-actions" aria-label="Header actions">
+      <a class="btn primary tcfr-cta" href="/booking/">Book Your Stay</a>
+
+      <div class="tcfr-lang" role="group" aria-label="Language switch">
+        <a class="tcfr-langpill" data-lang="en" href="/" aria-label="English">EN</a>
+        <a class="tcfr-langpill" data-lang="es" href="/es/" aria-label="Espanol">ES</a>
       </div>
 
-  <div class="tcfr-mobileOverlay" hidden></div>
-
-  <aside class="tcfr-mobilePanel" id="tcfrMobilePanel" hidden aria-label="Mobile menu">
-    <div class="tcfr-mobileTop">
-      <div class="tcfr-mobileBrand">
-        <div class="tcfr-mobileTitle">The Cloud Forest Retreat</div>
-      </div>
-      <button class="tcfr-close" type="button" aria-label="Close menu">
-        <span aria-hidden="true">X</span>
+      <button class="tcfr-burger" type="button" data-burger aria-label="Open menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </div>
+  </div>
 
-    <nav class="tcfr-navMobile" aria-label="Mobile navigation">
-      <a class="tcfr-mLink" href="/">Home</a>
+  <!-- Mobile drawer -->
+  <div class="tcfr-mobile" data-mobile hidden>
+    <div class="tcfr-minner">
+      <nav class="tcfr-mnav" aria-label="Mobile navigation">
+        <a class="tcfr-mlink" href="/">Home</a>
 
-      <button class="tcfr-mGroup" type="button" aria-expanded="false" aria-controls="tcfrMRooms">
-        Rooms <span class="tcfr-caret" aria-hidden="true">▾</span>
-      </button>
-      <div class="tcfr-mSub" id="tcfrMRooms" hidden>
-        <a class="tcfr-mSubLink" href="/rooms/">Rooms overview</a>
-        <a class="tcfr-mSubLink" href="/rooms/panoramic-suite/">Panoramic Suite</a>
-        <a class="tcfr-mSubLink" href="/rooms/sunrise-room/">Sunrise Room</a>
-        <a class="tcfr-mSubLink" href="/rooms/sunset-room/">Sunset Room</a>
-        <a class="tcfr-mSubLink" href="/rooms/common-areas/">Common Areas</a>
-      </div>
+        <button class="tcfr-mlink tcfr-mnext" type="button" data-target="#m-rooms" aria-label="Rooms submenu">
+          Rooms <span aria-hidden="true">›</span>
+        </button>
 
-      <button class="tcfr-mGroup" type="button" aria-expanded="false" aria-controls="tcfrMFeatures">
-        Features <span class="tcfr-caret" aria-hidden="true">▾</span>
-      </button>
-      <div class="tcfr-mSub" id="tcfrMFeatures" hidden>
-        <a class="tcfr-mSubLink" href="/features/">Overview</a>
-        <a class="tcfr-mSubLink" href="/features/amenities/">Amenities</a>
-        <a class="tcfr-mSubLink" href="/features/activities/">Activities</a>
-        <a class="tcfr-mSubLink" href="/features/attractions/">Attractions</a>
-        <a class="tcfr-mSubLink" href="/features/produce/">Produce</a>
-        <a class="tcfr-mSubLink" href="/features/flora/">Flora</a>
-        <a class="tcfr-mSubLink" href="/features/fauna/">Fauna</a>
-        <a class="tcfr-mSubLink" href="/features/choco-andino-de-pichincha/">Chocó Andino de Pichincha</a>
-        <a class="tcfr-mSubLink" href="/features/pululahua/">Pululahua</a>
-        <a class="tcfr-mSubLink" href="/features/rio-guayallabamba/">Río Guayllabamba</a>
-        <a class="tcfr-mSubLink" href="/features/gallery/">Gallery</a>
-      </div>
+        <button class="tcfr-mlink tcfr-mnext" type="button" data-target="#m-features" aria-label="Features submenu">
+          Features <span aria-hidden="true">›</span>
+        </button>
 
-      <a class="tcfr-mLink" href="/booking/">Booking Page</a>
-      <a class="tcfr-mLink" href="/about/">About</a>
-      <a class="tcfr-mLink" href="/contact/">Contact</a>
+        <a class="tcfr-mlink" href="/booking/">Booking Page</a>
+        <a class="tcfr-mlink" href="/about/">About</a>
+        <a class="tcfr-mlink" href="/contact/">Contact</a>
+        <a class="tcfr-mlink" href="/blog/">Blog</a>
 
-      <a
-        class="tcfr-mLink"
-        href="https://blog.thecloudforestretreat.com/"
-        target="_blank"
-        rel="noopener"
-      >
-        Blog
-      </a>
-
-      <div class="tcfr-mobileDivider"></div>
-
-      <div class="tcfr-mobileLang" aria-label="Language">
-        <div class="tcfr-mobileLangLabel">Language</div>
-        <div class="tcfr-lang">
-          <a class="tcfr-langBtn is-active" href="#" aria-current="page">EN</a>
-          <span class="tcfr-langBtn is-disabled" aria-disabled="true" title="Spanish coming soon">ES</span>
+        <div class="tcfr-mfooter" aria-label="Mobile actions">
+          <a class="btn primary" href="/booking/">Book Your Stay</a>
+          <div class="tcfr-lang" role="group" aria-label="Language switch">
+            <a class="tcfr-langpill" data-lang="en" href="/" aria-label="English">EN</a>
+            <a class="tcfr-langpill" data-lang="es" href="/es/" aria-label="Espanol">ES</a>
+          </div>
         </div>
-      </div>
+      </nav>
 
-      <a class="tcfr-mobileCta" href="/booking/">Book Your Stay</a>
-    </nav>
-  </aside>
+      <nav class="tcfr-msub" id="m-rooms" hidden aria-label="Rooms submenu">
+        <button class="tcfr-mback" type="button" data-back aria-label="Back">‹ Back</button>
+        <a class="tcfr-mlink" href="/rooms/">All rooms</a>
+        <a class="tcfr-mlink" href="/rooms/panoramic-suite/">Panoramic Suite</a>
+        <a class="tcfr-mlink" href="/rooms/mountain-suite/">Mountain Suite</a>
+        <a class="tcfr-mlink" href="/rooms/forest-suite/">Forest Suite</a>
+      </nav>
+
+      <nav class="tcfr-msub" id="m-features" hidden aria-label="Features submenu">
+        <button class="tcfr-mback" type="button" data-back aria-label="Back">‹ Back</button>
+        <a class="tcfr-mlink" href="/features/">All features</a>
+        <a class="tcfr-mlink" href="/features/amenities/">Amenities</a>
+        <a class="tcfr-mlink" href="/features/activities/">Activities</a>
+        <a class="tcfr-mlink" href="/features/attractions/">Attractions</a>
+        <a class="tcfr-mlink" href="/features/produce/">Produce</a>
+        <a class="tcfr-mlink" href="/features/flora/">Flora</a>
+        <a class="tcfr-mlink" href="/features/fauna/">Fauna</a>
+        <a class="tcfr-mlink" href="/features/choco-andino-de-pichincha/">Choco Andino</a>
+        <a class="tcfr-mlink" href="/features/rio-guayllabamba/">Rio Guayllabamba</a>
+        <a class="tcfr-mlink" href="/features/pululahua/">Pululahua</a>
+        <a class="tcfr-mlink" href="/features/gallery/">Gallery</a>
+      </nav>
+    </div>
+  </div>
 </header>
