@@ -1,282 +1,122 @@
-/* /assets/js/site.js
-   The Cloud Forest Retreat (TCFR)
-   - Injects header/footer fragments into #siteHeader / #siteFooter
-   - Initializes hamburger + mobile accordions
-   - Sticky + scrolled state
-   - GA4 loader: G-D3W4SP5MGX
-
-   Design goals:
-   - Never inject a full HTML document into the header mount (prevents "duplicate page" bugs)
-   - Never leave the mobile menu stuck open after load
-   - Works with Cloudflare Pages "pretty URLs" (header may live at /assets/includes/header)
-*/
-(function () {
+(function(){
   "use strict";
 
-  var GA_ID = "G-D3W4SP5MGX";
+  function qs(sel, root){ return (root || document).querySelector(sel); }
+  function qsa(sel, root){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 
-  // Prevent double-running (can happen if the script is included twice)
-  if (window.__TCFR_SITE_JS_BOOTED__) return;
-  window.__TCFR_SITE_JS_BOOTED__ = true;
-
-  // Do not run on fragment URLs themselves (prevents recursion if someone visits the fragment directly)
-  (function guardFragmentRoutes() {
-    var p = String(window.location.pathname || "/");
-    if (p.indexOf("/assets/includes/") === 0) {
-      window.__TCFR_SITE_JS_NOBOOT__ = true;
-    }
-  })();
-  if (window.__TCFR_SITE_JS_NOBOOT__) return;
-
-  /* =========================
-     GA4
-     ========================= */
-  function initGA4() {
-    if (window.__TCFR_GA4_LOADED__) return;
-    window.__TCFR_GA4_LOADED__ = true;
-
-    window.dataLayer = window.dataLayer || [];
-    window.gtag =
-      window.gtag ||
-      function () {
-        window.dataLayer.push(arguments);
-      };
-
-    var hasGtag = document.querySelector(
-      'script[src^="https://www.googletagmanager.com/gtag/js?id="]'
-    );
-    if (!hasGtag) {
-      var s = document.createElement("script");
-      s.async = true;
-      s.src =
-        "https://www.googletagmanager.com/gtag/js?id=" +
-        encodeURIComponent(GA_ID);
-      document.head.appendChild(s);
-    }
-
-    window.gtag("js", new Date());
-    window.gtag("config", GA_ID, {
-      anonymize_ip: true,
-      send_page_view: true
-    });
-  }
-
-  /* =========================
-     Tiny DOM helpers
-     ========================= */
-  function qs(root, sel) {
-    return root ? root.querySelector(sel) : null;
-  }
-  function qsa(root, sel) {
-    return root ? Array.prototype.slice.call(root.querySelectorAll(sel)) : [];
-  }
-
-  function isValidHeaderFragment(html) {
-    var t = String(html || "");
-    var lower = t.toLowerCase();
-
-    // If a full document comes back, do NOT inject it
-    if (lower.indexOf("<!doctype") !== -1) return false;
-    if (lower.indexOf("<html") !== -1) return false;
-    if (lower.indexOf("<body") !== -1) return false;
-
-    // Must contain our header marker or class
-    if (t.indexOf("data-tcfr-header") !== -1) return true;
-    if (t.indexOf('class="tcfr-header"') !== -1) return true;
-    if (t.indexOf("tcfr-header") !== -1) return true;
-
+  function markBound(el, key){
+    if (!el) return false;
+    var attr = "data-" + key + "-bound";
+    if (el.hasAttribute(attr)) return true;
+    el.setAttribute(attr, "1");
     return false;
   }
 
-  function isValidFooterFragment(html) {
-    var t = String(html || "");
-    var lower = t.toLowerCase();
+  function bindMobileNav(){
+    var burger = qs(".tcfr-burger");
+    var panel = qs("#tcfrMobilePanel");
+    var overlay = qs("#tcfrMobileOverlay");
+    var closeBtn = qs(".tcfr-m-close");
+    if (!burger || !panel || !overlay) return;
 
-    if (lower.indexOf("<!doctype") !== -1) return false;
-    if (lower.indexOf("<html") !== -1) return false;
-    if (lower.indexOf("<body") !== -1) return false;
+    if (markBound(burger, "tcfr")) return; // already bound
 
-    // Footer is optional. If you do not have one yet, we allow empty.
-    // If a footer exists, it should include a tcfr-footer class or data attribute later.
-    return true;
-  }
-
-  async function fetchText(url) {
-    try {
-      var res = await fetch(url, { cache: "no-store", redirect: "follow" });
-      if (!res || !res.ok) return null;
-      return await res.text();
-    } catch (e) {
-      return null;
-    }
-  }
-
-  async function injectFragment(mountId, candidates, validator) {
-    var el = document.getElementById(mountId);
-    if (!el) return null;
-
-    // Hard guard: do not append; always replace.
-    el.innerHTML = "";
-
-    for (var i = 0; i < candidates.length; i++) {
-      var url = candidates[i];
-      var html = await fetchText(url);
-      if (!html) continue;
-
-      if (validator && !validator(html)) {
-        continue;
-      }
-
-      el.innerHTML = html;
-      return el;
-    }
-
-    // Leave empty if nothing valid
-    el.innerHTML = "";
-    return null;
-  }
-
-  /* =========================
-     Header behavior
-     ========================= */
-  function initHeaderFromMount(mountEl) {
-    if (!mountEl) return;
-
-    var header = qs(mountEl, "[data-tcfr-header]") || qs(mountEl, ".tcfr-header") || qs(mountEl, "header");
-    if (!header) return;
-
-    if (header.__tcfrInit) return;
-    header.__tcfrInit = true;
-
-    // Force sticky (defensive: if a CSS override breaks it)
-    header.style.position = "sticky";
-    header.style.top = "0";
-    header.style.zIndex = "5000";
-
-    var burger = qs(header, ".tcfr-burger");
-    var closeBtn = qs(header, ".tcfr-close");
-    var panel = qs(header, ".tcfr-mobilePanel");
-    var overlay = qs(header, ".tcfr-mobileOverlay");
-
-    function setLocked(locked) {
-      document.documentElement.classList.toggle("tcfr-navOpen", locked);
-      document.body.style.overflow = locked ? "hidden" : "";
-      document.body.style.touchAction = locked ? "none" : "";
-    }
-
-    function collapseAccordions() {
-      qsa(header, ".tcfr-mGroup").forEach(function (btn) {
-        var id = btn.getAttribute("aria-controls");
-        var sub = id ? document.getElementById(id) : null;
-        btn.setAttribute("aria-expanded", "false");
-        if (sub) sub.hidden = true;
-      });
-    }
-
-    function closeMenu() {
-      // Ensure closed state, even if markup accidentally shipped open
-      if (burger) burger.setAttribute("aria-expanded", "false");
-      if (panel) panel.hidden = true;
-      if (overlay) overlay.hidden = true;
-      setLocked(false);
-      collapseAccordions();
-    }
-
-    function openMenu() {
-      if (!panel || !overlay || !burger) return;
+    function open(){
+      burger.setAttribute("aria-expanded", "true");
       panel.hidden = false;
       overlay.hidden = false;
-      burger.setAttribute("aria-expanded", "true");
-      setLocked(true);
+      document.documentElement.classList.add("tcfr-navOpen");
+      document.body.classList.add("tcfr-navOpen");
     }
 
-    // Always start CLOSED to avoid "stuck open" on load
-    closeMenu();
-
-    if (burger) {
-      burger.addEventListener("click", function () {
-        var isOpen = burger.getAttribute("aria-expanded") === "true";
-        if (isOpen) closeMenu();
-        else openMenu();
-      });
+    function close(){
+      burger.setAttribute("aria-expanded", "false");
+      panel.hidden = true;
+      overlay.hidden = true;
+      document.documentElement.classList.remove("tcfr-navOpen");
+      document.body.classList.remove("tcfr-navOpen");
     }
-    if (closeBtn) closeBtn.addEventListener("click", closeMenu);
-    if (overlay) overlay.addEventListener("click", closeMenu);
 
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeMenu();
+    burger.addEventListener("click", function(){
+      var isOpen = burger.getAttribute("aria-expanded") === "true";
+      if (isOpen) close();
+      else open();
     });
 
-    // Accordion toggles
-    qsa(header, ".tcfr-mGroup").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var id = btn.getAttribute("aria-controls");
-        var sub = id ? document.getElementById(id) : null;
-        if (!sub) return;
+    overlay.addEventListener("click", close);
+    if (closeBtn) closeBtn.addEventListener("click", close);
 
-        var isOpen = btn.getAttribute("aria-expanded") === "true";
-        btn.setAttribute("aria-expanded", isOpen ? "false" : "true");
-        sub.hidden = isOpen ? true : false;
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape") close();
+    });
+
+    // Ensure closed by default
+    close();
+  }
+
+  function bindDesktopDropdowns(){
+    var triggers = qsa(".tcfr-dd-btn");
+    if (!triggers.length) return;
+
+    triggers.forEach(function(btn){
+      if (markBound(btn, "tcfrdd")) return;
+
+      var li = btn.closest ? btn.closest(".tcfr-navItem") : null;
+      var menu = li ? li.querySelector(".tcfr-dd") : null;
+      if (!li || !menu) return;
+
+      function open(){
+        li.classList.add("is-open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+      function close(){
+        li.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      }
+
+      btn.addEventListener("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var openNow = li.classList.contains("is-open");
+        qsa(".tcfr-navItem.is-open").forEach(function(x){
+          if (x !== li) x.classList.remove("is-open");
+        });
+        if (openNow) close();
+        else open();
       });
-    });
 
-    // Close on any mobile link click
-    qsa(header, ".tcfr-navMobile a[href]").forEach(function (a) {
-      a.addEventListener("click", function () {
-        closeMenu();
+      document.addEventListener("click", function(e){
+        if (!li.contains(e.target)) close();
       });
-    });
 
-    // Sticky scrolled state
-    function onScroll() {
-      var y = window.scrollY || 0;
-      header.classList.toggle("is-scrolled", y > 10);
-    }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+      li.addEventListener("mouseleave", close);
 
-    // If switching to desktop, force-close mobile
-    window.addEventListener("resize", function () {
-      if (window.innerWidth >= 901) closeMenu();
-    });
-    window.addEventListener("orientationchange", function () {
-      closeMenu();
+      btn.addEventListener("keydown", function(e){
+        if (e.key === "Escape") close();
+      });
+
+      close();
     });
   }
 
-  /* =========================
-     Boot
-     ========================= */
-  async function boot() {
-    initGA4();
+  // Expose a single init hook that head.js can call after injecting header
+  window.TCFR_bindHeader = function(){
+    bindMobileNav();
+    bindDesktopDropdowns();
+  };
 
-    // IMPORTANT: Cloudflare Pages often uses "pretty URLs" and redirects *.html -> no extension.
-    // We try both, and only inject when we confirm it is a fragment (not a full HTML doc).
-    var headerMount = var isEs = (window.location.pathname === "/es/" || window.location.pathname.indexOf("/es/") === 0);
-    var headerCandidates = isEs
-      ? ["/assets/includes/header-es.html", "/assets/includes/header-es.html?v=1"]
-      : ["/assets/includes/header.html", "/assets/includes/header.html?v=1"];
-
-    await injectFragment(
-      "siteHeader",
-      headerCandidates,
-      isValidHeaderFragment
-    );
-
-    // Footer is optional; inject if it exists, otherwise leave blank.
-    await injectFragment(
-      "siteFooter",
-      ["/assets/includes/footer", "/assets/includes/footer.html"],
-      isValidFooterFragment
-    );
-
-    // Initialize behaviors AFTER injection
-    initHeaderFromMount(headerMount);
+  function onReady(fn){
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot);
-  } else {
-    boot();
-  }
+  onReady(function(){
+    // If header is already present (non-injected or cached), bind immediately
+    window.TCFR_bindHeader();
+  });
+
+  // Also bind whenever head.js announces that it injected header markup
+  document.addEventListener("tcfr:header-ready", function(){
+    window.TCFR_bindHeader();
+  });
 })();
