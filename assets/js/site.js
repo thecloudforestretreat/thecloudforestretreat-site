@@ -159,11 +159,21 @@
       overlay.style.position = "fixed";
       overlay.style.inset = "0";
       overlay.style.background = "rgba(0,0,0,0.22)";
+      // Keep overlay UNDER the menu panel. If overlay sits above, it will blur/dim the menu itself.
       overlay.style.zIndex = "9998";
       overlay.style.backdropFilter = "blur(2px)";
       overlay.style.webkitBackdropFilter = "blur(2px)";
       document.body.appendChild(overlay);
     }
+
+    // Ensure the panel is above the overlay (fixes "blurry" mobile menu when overlay stacks on top).
+    try {
+      panel.style.position = panel.style.position || "fixed";
+      panel.style.zIndex = "9999";
+    } catch(e) {}
+
+    // Ensure overlay stays below panel.
+    try { overlay.style.zIndex = "9998"; } catch(e) {}
 
     // Normalize ARIA
     burger.setAttribute("aria-expanded", "false");
