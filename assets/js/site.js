@@ -1,200 +1,127 @@
 (function(){
   "use strict";
 
-  function onReady(fn){
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
-    else fn();
-  }
-
   function qs(root, sel){ return (root || document).querySelector(sel); }
   function qsa(root, sel){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 
-  function setScrollLock(lock){
-    var b = document.body;
-    if (!b) return;
-    if (lock){
-      if (!b.hasAttribute("data-prev-overflow")) b.setAttribute("data-prev-overflow", b.style.overflow || "");
-      b.style.overflow = "hidden";
-      b.style.touchAction = "none";
-    } else {
-      var prev = b.getAttribute("data-prev-overflow");
-      b.style.overflow = prev || "";
-      b.style.touchAction = "";
-      b.removeAttribute("data-prev-overflow");
-    }
+  function ensureOverlay(){
+    var o = qs(document, ".mOverlay") || qs(document, ".tcfr-mobileOverlay");
+    if (o) return o;
+
+    o = document.createElement("div");
+    o.className = "mOverlay";
+    o.hidden = true;
+
+    // Keep it simple: no blur, no filters.
+    o.style.position = "fixed";
+    o.style.inset = "0";
+    o.style.background = "rgba(11,26,16,0.35)";
+    o.style.zIndex = "4999";
+
+    document.body.appendChild(o);
+    return o;
   }
 
-  function normalizeTargetId(val){
-    if (!val) return "";
-    if (val.charAt(0) === "#") return val.slice(1);
-    return val;
-  }
+  function initMobileNav(){
+    // Current TCFR header markup uses .mToggle + #mobileNav + .mMain/.mSub drilldown.
+    // Older variants used .tcfr-burger + .tcfr-mobilePanel. Support both.
+    var toggle =
+      qs(document, ".mToggle") ||
+      qs(document, '[data-action="toggle-menu"]') ||
+      qs(document, ".tcfr-burger") ||
+      qs(document, 'button[aria-label="Open menu"]') ||
+      qs(document, 'button[aria-label="Menu"]');
 
-  function bindOneMobileNav(toggleBtn, panel){
-    if (!toggleBtn || !panel) return;
+    var nav =
+      qs(document, "#mobileNav") ||
+      qs(document, ".tcfr-mobilePanel");
 
-    // Prevent double-binding
-    if (toggleBtn.getAttribute("data-mnav-bound") === "1") return;
-    toggleBtn.setAttribute("data-mnav-bound", "1");
+    if (!toggle || !nav) return;
 
-    var main = qs(panel, ".mPanel") || panel;
-    var subs = qsa(panel, ".mSub");
+    var overlay = ensureOverlay();
 
-    function hideAllSubs(){
-      for (var i = 0; i < subs.length; i++){
-        subs[i].hidden = true;
-      }
+    function setOpen(open){
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      nav.hidden = !open;
+      overlay.hidden = !open;
+
+      // Lock scroll when open (no blur).
+      document.documentElement.classList.toggle("navOpen", open);
+      document.body.style.overflow = open ? "hidden" : "";
+      document.body.style.touchAction = open ? "none" : "";
     }
 
-    function showMain(){
-      if (main) main.hidden = false;
-      hideAllSubs();
-    }
+    function isOpen(){ return !nav.hidden; }
 
-    function showSub(targetSel){
-      var target = null;
-      if (targetSel){
-        target = qs(panel, targetSel);
-      }
-      if (!target) return;
-      if (main) main.hidden = true;
-      hideAllSubs();
-      target.hidden = false;
-    }
+    // Always start closed to avoid "menu opens on refresh".
+    setOpen(false);
 
-    function isOpen(){
-      return panel.hidden === false || panel.getAttribute("aria-hidden") === "false" || panel.classList.contains("is-open");
-    }
-
-    function open(){
-      // Remove any older classes that caused blur
-      document.documentElement.classList.remove("tcfr-navOpen", "navOpen");
-      document.body.classList.remove("tcfr-navOpen", "navOpen");
-
-      panel.hidden = false;
-      panel.setAttribute("aria-hidden", "false");
-      toggleBtn.setAttribute("aria-expanded", "true");
-
-      showMain();
-      setScrollLock(true);
-    }
-
-    function close(){
-      panel.hidden = true;
-      panel.setAttribute("aria-hidden", "true");
-      toggleBtn.setAttribute("aria-expanded", "false");
-
-      showMain();
-      setScrollLock(false);
-    }
-
-    function toggle(){
-      if (isOpen()) close();
-      else open();
-    }
-
-    // Toggle click
-    toggleBtn.addEventListener("click", function(e){
+    // Click hamburger
+    toggle.addEventListener("click", function(e){
       e.preventDefault();
-      e.stopPropagation();
-      toggle();
+      setOpen(!isOpen());
     });
 
-    // Drill-down: next/back buttons
-    qsa(panel, ".mNext[data-target]").forEach(function(btn){
-      btn.addEventListener("click", function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        var t = btn.getAttribute("data-target");
-        if (!t) return;
-        showSub(t);
+    // Click outside
+    overlay.addEventListener("click", function(){
+      setOpen(false);
+    });
+
+    // Esc closes
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    // Close on any nav link click (so menu does not stay open).
+    qsa(nav, "a").forEach(function(a){
+      a.addEventListener("click", function(){
+        setOpen(false);
       });
     });
 
-    qsa(panel, ".mBack[data-back]").forEach(function(btn){
-      btn.addEventListener("click", function(e){
-        e.preventDefault();
-        e.stopPropagation();
+    // Drilldown (Rooms/Features -> submenus)
+    var main = qs(nav, ".mMain") || qs(nav, '[data-view="main"]');
+
+    function showMain(){
+      if (main) main.hidden = false;
+      qsa(nav, ".mSub").forEach(function(s){ s.hidden = true; });
+    }
+
+    // Ensure initial drilldown state is sane
+    showMain();
+
+    qsa(nav, ".mNext").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var target = btn.getAttribute("data-target");
+        if (!target) return;
+
+        // data-target is like "#m-rooms"
+        var sub = qs(nav, target) || qs(document, target);
+        if (!sub) return;
+
+        if (main) main.hidden = true;
+        qsa(nav, ".mSub").forEach(function(s){ s.hidden = true; });
+        sub.hidden = false;
+      });
+    });
+
+    qsa(nav, ".mBack").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        // back buttons in this markup use data-back="main"
         showMain();
       });
     });
 
-    // Close on link click
-    qsa(panel, "a[href]").forEach(function(a){
-      a.addEventListener("click", function(){
-        // Let navigation happen
-        close();
-      });
+    // Prevent any stray hash-only navigation that some mobile buttons could trigger.
+    // If a button is mis-marked as <a href="#">, keep it inert.
+    qsa(nav, 'a[href="#"]').forEach(function(a){
+      a.addEventListener("click", function(e){ e.preventDefault(); });
     });
-
-    // Close on Escape
-    document.addEventListener("keydown", function(e){
-      if (e.key === "Escape" && isOpen()) close();
-    });
-
-    // Close if clicking outside the panel (but not the toggle)
-    document.addEventListener("click", function(e){
-      if (!isOpen()) return;
-      var t = e.target;
-      if (panel.contains(t) || toggleBtn.contains(t)) return;
-      close();
-    });
-
-    // Ensure initial state
-    panel.hidden = true;
-    panel.setAttribute("aria-hidden", "true");
-    toggleBtn.setAttribute("aria-expanded", "false");
-    showMain();
   }
 
-  function bindMobileNav(){
-    // Variant A: current header markup uses button.hamburger[aria-controls]
-    qsa(document, "button.hamburger[aria-controls]").forEach(function(btn){
-      var id = normalizeTargetId(btn.getAttribute("aria-controls"));
-      var panel = id ? document.getElementById(id) : null;
-      if (panel) bindOneMobileNav(btn, panel);
-    });
-
-    // Variant B: data-nav-toggle="#mobileNav"
-    qsa(document, "[data-nav-toggle]").forEach(function(btn){
-      var id2 = normalizeTargetId(btn.getAttribute("data-nav-toggle"));
-      var panel2 = id2 ? document.getElementById(id2) : null;
-      if (panel2) bindOneMobileNav(btn, panel2);
-    });
-
-    // Variant C: older builds used .tcfr-burger + #tcfrMobilePanel
-    var legacyBtn = qs(document, ".tcfr-burger");
-    var legacyPanel = document.getElementById("tcfrMobilePanel");
-    if (legacyBtn && legacyPanel) bindOneMobileNav(legacyBtn, legacyPanel);
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", initMobileNav);
+  } else {
+    initMobileNav();
   }
-
-  function waitForHeaderAndBind(){
-    var tries = 0;
-    var maxTries = 60; // ~6s at 100ms
-    var timer = setInterval(function(){
-      tries++;
-      var siteHeader = document.getElementById("siteHeader");
-      // Header injection complete when it has any child elements
-      if (siteHeader && siteHeader.children && siteHeader.children.length){
-        clearInterval(timer);
-        bindMobileNav();
-        return;
-      }
-      // Also bind if the hamburger already exists in DOM
-      if (qs(document, "button.hamburger[aria-controls], [data-nav-toggle], .tcfr-burger")){
-        clearInterval(timer);
-        bindMobileNav();
-        return;
-      }
-      if (tries >= maxTries){
-        clearInterval(timer);
-        // Final attempt anyway
-        bindMobileNav();
-      }
-    }, 100);
-  }
-
-  onReady(function(){
-    waitForHeaderAndBind();
-  });
 })();
