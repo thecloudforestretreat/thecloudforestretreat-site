@@ -1,239 +1,298 @@
-/* TCFR site.js - Mobile menu + submenus (robust, no flicker)
-   Drop-in replacement for /assets/js/site.js
+/* /assets/js/site.js
+   The Cloud Forest Retreat (TCFR)
+   - Injects header/footer fragments into #siteHeader / #siteFooter
+   - Initializes hamburger + mobile accordions
+   - Sticky + scrolled state
+   - GA4 loader: G-D3W4SP5MGX
 
-   Key behaviors:
-   - Hamburger toggles mobile panel reliably (no document-click auto-close to avoid "open then close" flicker)
-   - Close via overlay click, close button, or ESC
-   - Submenus expand/collapse in-place on mobile (Rooms, Features)
-   - Uses [hidden] attribute as the single source of truth
+   Design goals:
+   - Never inject a full HTML document into the header mount (prevents "duplicate page" bugs)
+   - Never leave the mobile menu stuck open after load
+   - Works with Cloudflare Pages "pretty URLs" (header may live at /assets/includes/header)
 */
-
 (function () {
   "use strict";
 
-  function qs(root, sel){ return (root || document).querySelector(sel); }
-  function qsa(root, sel){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+  var GA_ID = "G-D3W4SP5MGX";
 
-  function ready(fn){
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
-    else fn();
+  // Prevent double-running (can happen if the script is included twice)
+  if (window.__TCFR_SITE_JS_BOOTED__) return;
+  window.__TCFR_SITE_JS_BOOTED__ = true;
+
+  // Do not run on fragment URLs themselves (prevents recursion if someone visits the fragment directly)
+  (function guardFragmentRoutes() {
+    var p = String(window.location.pathname || "/");
+    if (p.indexOf("/assets/includes/") === 0) {
+      window.__TCFR_SITE_JS_NOBOOT__ = true;
+    }
+  })();
+  if (window.__TCFR_SITE_JS_NOBOOT__) return;
+
+  /* =========================
+     GA4
+     ========================= */
+  function initGA4() {
+    if (window.__TCFR_GA4_LOADED__) return;
+    window.__TCFR_GA4_LOADED__ = true;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag =
+      window.gtag ||
+      function () {
+        window.dataLayer.push(arguments);
+      };
+
+    var hasGtag = document.querySelector(
+      'script[src^="https://www.googletagmanager.com/gtag/js?id="]'
+    );
+    if (!hasGtag) {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src =
+        "https://www.googletagmanager.com/gtag/js?id=" +
+        encodeURIComponent(GA_ID);
+      document.head.appendChild(s);
+    }
+
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID, {
+      anonymize_ip: true,
+      send_page_view: true
+    });
   }
 
-  ready(function(){
-    // HEADER ROOT (injected into #siteHeader)
-    var headerRoot = qs(document, "#siteHeader") || document;
-    var headerEl = qs(headerRoot, "[data-tcfr-header]") || qs(headerRoot, ".tcfr-header") || qs(headerRoot, "header");
-    if (!headerEl) return;
+  /* =========================
+     Tiny DOM helpers
+     ========================= */
+  function qs(root, sel) {
+    return root ? root.querySelector(sel) : null;
+  }
+  function qsa(root, sel) {
+    return root ? Array.prototype.slice.call(root.querySelectorAll(sel)) : [];
+  }
 
-    // Mobile panel + overlay + burger
-    var burger = qs(headerEl, ".tcfr-burger") || qs(headerEl, "[aria-controls][aria-label*='menu']");
-    var panelId = burger ? burger.getAttribute("aria-controls") : null;
-    var panel = panelId ? document.getElementById(panelId) : qs(headerEl, ".tcfr-mobilePanel");
-    var overlay = qs(headerEl, ".tcfr-mobileOverlay") || qs(headerEl, "[data-overlay]");
+  function isValidHeaderFragment(html) {
+    var t = String(html || "");
+    var lower = t.toLowerCase();
 
-    // Some builds may place overlay/panel as siblings inside header, so re-query globally if needed
-    if (!panel) panel = qs(document, ".tcfr-mobilePanel");
-    if (!overlay) overlay = qs(document, ".tcfr-mobileOverlay");
+    // If a full document comes back, do NOT inject it
+    if (lower.indexOf("<!doctype") !== -1) return false;
+    if (lower.indexOf("<html") !== -1) return false;
+    if (lower.indexOf("<body") !== -1) return false;
 
-    // Close button inside panel
-    var closeBtn = panel ? (qs(panel, "[data-action='close']") || qs(panel, ".tcfr-mClose") || qs(panel, "button[aria-label*='Close']")) : null;
+    // Must contain our header marker or class
+    if (t.indexOf("data-tcfr-header") !== -1) return true;
+    if (t.indexOf('class="tcfr-header"') !== -1) return true;
+    if (t.indexOf("tcfr-header") !== -1) return true;
 
-    if (!burger || !panel) return;
+    return false;
+  }
 
-    function isOpen(){
-      return panel.hidden === false;
+  function isValidFooterFragment(html) {
+    var t = String(html || "");
+    var lower = t.toLowerCase();
+
+    if (lower.indexOf("<!doctype") !== -1) return false;
+    if (lower.indexOf("<html") !== -1) return false;
+    if (lower.indexOf("<body") !== -1) return false;
+
+    // Footer is optional. If you do not have one yet, we allow empty.
+    // If a footer exists, it should include a tcfr-footer class or data attribute later.
+    return true;
+  }
+
+  async function fetchText(url) {
+    try {
+      var res = await fetch(url, { cache: "no-store", redirect: "follow" });
+      if (!res || !res.ok) return null;
+      return await res.text();
+    } catch (e) {
+      return null;
     }
+  }
 
-    function lockScroll(on){
-      // Light-touch scroll lock that works well on iOS Safari
-      if (on){
-        document.documentElement.classList.add("tcfr-scroll-lock");
-        document.body.classList.add("tcfr-scroll-lock");
-      } else {
-        document.documentElement.classList.remove("tcfr-scroll-lock");
-        document.body.classList.remove("tcfr-scroll-lock");
+  async function injectFragment(mountId, candidates, validator) {
+    var el = document.getElementById(mountId);
+    if (!el) return null;
+
+    // Hard guard: do not append; always replace.
+    el.innerHTML = "";
+
+    for (var i = 0; i < candidates.length; i++) {
+      var url = candidates[i];
+      var html = await fetchText(url);
+      if (!html) continue;
+
+      if (validator && !validator(html)) {
+        continue;
       }
+
+      el.innerHTML = html;
+      return el;
     }
 
-    function openMenu(){
-      panel.hidden = false;
-      if (overlay) overlay.hidden = false;
-      burger.setAttribute("aria-expanded", "true");
-      headerEl.setAttribute("data-menu-open", "true");
-      lockScroll(true);
+    // Leave empty if nothing valid
+    el.innerHTML = "";
+    return null;
+  }
+
+  /* =========================
+     Header behavior
+     ========================= */
+  function initHeaderFromMount(mountEl) {
+    if (!mountEl) return;
+
+    var header = qs(mountEl, "[data-tcfr-header]") || qs(mountEl, ".tcfr-header") || qs(mountEl, "header");
+    if (!header) return;
+
+    // The injected header fragment places the overlay + mobile panel as siblings of <header>
+    // inside the same mount. Queries must be scoped to the mount, not only the <header>.
+    var scope = mountEl;
+
+    if (header.__tcfrInit) return;
+    header.__tcfrInit = true;
+
+    // Force sticky (defensive: if a CSS override breaks it)
+    header.style.position = "sticky";
+    header.style.top = "0";
+    header.style.zIndex = "5000";
+
+    var burger = qs(header, "#tcfrBurger") || qs(header, ".tcfr-burger") || qs(header, "[data-controls]");
+    if (!burger) return;
+
+    var closeBtn = qs(scope, ".tcfr-close") || qs(scope, "[data-action='close']");
+
+    var panelId = burger.getAttribute("data-controls") || burger.getAttribute("aria-controls") || "";
+    var panel = (panelId ? qs(scope, "#" + panelId) : null) || qs(scope, ".tcfr-mobilePanel") || qs(scope, "aside[aria-label='Mobile menu']");
+    var overlay = qs(scope, ".tcfr-mobileOverlay") || qs(scope, "#tcfrMobileOverlay");
+    if (!panel || !overlay) return;
+
+    function setLocked(locked) {
+      document.documentElement.classList.toggle("tcfr-navOpen", locked);
+      document.body.style.overflow = locked ? "hidden" : "";
+      document.body.style.touchAction = locked ? "none" : "";
     }
 
-    function closeMenu(){
-      panel.hidden = true;
+    function collapseAccordions() {
+      qsa(scope, ".tcfr-mGroup, .tcfr-mToggle").forEach(function (btn) {
+        var id = btn.getAttribute("aria-controls");
+        var sub = id ? document.getElementById(id) : null;
+        btn.setAttribute("aria-expanded", "false");
+        if (sub) sub.hidden = true;
+      });
+    }
+
+    function closeMenu() {
+      // Ensure closed state, even if markup accidentally shipped open
+      if (burger) burger.setAttribute("aria-expanded", "false");
+      if (panel) panel.hidden = true;
       if (overlay) overlay.hidden = true;
-      burger.setAttribute("aria-expanded", "false");
-      headerEl.removeAttribute("data-menu-open");
-      lockScroll(false);
-      // collapse any open submenu sections for a clean next open
-      collapseAllSubmenus();
+      setLocked(false);
+      collapseAccordions();
     }
 
-    function toggleMenu(){
-      if (isOpen()) closeMenu();
-      else openMenu();
+    function openMenu() {
+      if (!panel || !overlay || !burger) return;
+      panel.hidden = false;
+      overlay.hidden = false;
+      burger.setAttribute("aria-expanded", "true");
+      setLocked(true);
     }
 
-    // Prevent the "flicker" caused by other click handlers:
-    // Use pointerdown + click, and stop propagation.
-    function onBurgerActivate(e){
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      toggleMenu();
-    }
-
-    burger.addEventListener("pointerdown", onBurgerActivate, { passive: false });
-    burger.addEventListener("click", onBurgerActivate, { passive: false });
-
-    if (overlay){
-      overlay.addEventListener("click", function(e){
-        e.preventDefault();
-        closeMenu();
-      });
-      overlay.addEventListener("touchstart", function(){ /* allow iOS tap */ }, { passive: true });
-    }
-
-    if (closeBtn){
-      closeBtn.addEventListener("click", function(e){
-        e.preventDefault();
-        closeMenu();
-      });
-    }
-
-    document.addEventListener("keydown", function(e){
-      if (e.key === "Escape" && isOpen()) closeMenu();
-    });
-
-    // Close if a navigation link is clicked (not submenu toggles)
-    if (panel){
-      panel.addEventListener("click", function(e){
-        var a = e.target && e.target.closest ? e.target.closest("a") : null;
-        if (!a) return;
-
-        // If it's a submenu toggle anchor, ignore
-        if (a.hasAttribute("data-subtoggle")) return;
-
-        // If it links to '#' only, ignore
-        var href = a.getAttribute("href") || "";
-        if (href === "#" || href === "#!") return;
-
-        closeMenu();
-      });
-    }
-
-    // --- Mobile submenus (Rooms / Features) ---
-    // Strategy:
-    // - In the mobile panel, parent items that have a submenu must be buttons or links with [data-subtoggle]
-    // - Their submenu container must have [data-submenu] and start hidden
-    // - We toggle hidden + aria-expanded and ensure only one submenu open at a time
-
-    function collapseAllSubmenus(){
-      if (!panel) return;
-      var toggles = qsa(panel, "[data-subtoggle]");
-      for (var i = 0; i < toggles.length; i++){
-        toggles[i].setAttribute("aria-expanded", "false");
-      }
-      var subs = qsa(panel, "[data-submenu]");
-      for (var j = 0; j < subs.length; j++){
-        subs[j].hidden = true;
-      }
-    }
-
-    function closeOtherSubmenus(exceptToggle){
-      if (!panel) return;
-      var toggles = qsa(panel, "[data-subtoggle]");
-      for (var i = 0; i < toggles.length; i++){
-        var t = toggles[i];
-        if (t === exceptToggle) continue;
-        t.setAttribute("aria-expanded", "false");
-      }
-      var subs = qsa(panel, "[data-submenu]");
-      for (var j = 0; j < subs.length; j++){
-        var sub = subs[j];
-        var ownerId = sub.getAttribute("data-owner");
-        if (!ownerId) continue;
-        if (exceptToggle && exceptToggle.id && ownerId === exceptToggle.id) continue;
-        sub.hidden = true;
-      }
-    }
-
-    function toggleSubmenu(toggleEl){
-      if (!panel || !toggleEl) return;
-
-      // Find submenu by aria-controls or by next sibling
-      var subId = toggleEl.getAttribute("aria-controls");
-      var sub = subId ? document.getElementById(subId) : null;
-      if (!sub) {
-        // fallback: look for data-submenu within same group
-        var group = toggleEl.closest("[data-subgroup]") || toggleEl.parentNode;
-        sub = group ? qs(group, "[data-submenu]") : null;
-      }
-      if (!sub) return;
-
-      // Ensure ownership linkage for closeOtherSubmenus
-      if (!toggleEl.id) toggleEl.id = "mSubToggle_" + Math.random().toString(36).slice(2);
-      if (!sub.getAttribute("data-owner")) sub.setAttribute("data-owner", toggleEl.id);
-
-      var expanded = toggleEl.getAttribute("aria-expanded") === "true";
-      closeOtherSubmenus(toggleEl);
-
-      if (expanded){
-        toggleEl.setAttribute("aria-expanded", "false");
-        sub.hidden = true;
-      } else {
-        toggleEl.setAttribute("aria-expanded", "true");
-        sub.hidden = false;
-      }
-    }
-
-    function wireSubmenus(){
-      if (!panel) return;
-
-      // Normalize: any element with class tcfr-mGroup that contains a submenu
-      // should have a toggle button/link with data-subtoggle.
-      var toggles = qsa(panel, "[data-subtoggle]");
-      for (var i = 0; i < toggles.length; i++){
-        (function(t){
-          // Make sure it behaves like a button
-          t.setAttribute("role", t.tagName.toLowerCase() === "button" ? "button" : "button");
-          if (!t.hasAttribute("aria-expanded")) t.setAttribute("aria-expanded", "false");
-
-          t.addEventListener("click", function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            toggleSubmenu(t);
-          });
-
-          t.addEventListener("pointerdown", function(e){
-            // prevents click-through/ghost click issues on iOS
-            e.preventDefault();
-          }, { passive: false });
-        })(toggles[i]);
-      }
-
-      // Default all submenus hidden on load
-      var subs = qsa(panel, "[data-submenu]");
-      for (var j = 0; j < subs.length; j++){
-        subs[j].hidden = true;
-      }
-    }
-
-    wireSubmenus();
-
-    // Ensure closed on first load (some builds cache open state)
+    // Always start CLOSED to avoid "stuck open" on load
     closeMenu();
 
-    // Expose minimal debug helpers (optional)
-    window.__tcfrMenu = {
-      open: openMenu,
-      close: closeMenu,
-      toggle: toggleMenu
-    };
-  });
+    if (burger) {
+      burger.addEventListener("click", function () {
+        var isOpen = burger.getAttribute("aria-expanded") === "true";
+        if (isOpen) closeMenu();
+        else openMenu();
+      });
+    }
+    if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+    if (overlay) overlay.addEventListener("click", closeMenu);
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    // Accordion toggles
+    qsa(scope, ".tcfr-mGroup, .tcfr-mToggle").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        var id = btn.getAttribute("aria-controls");
+        var sub = id ? document.getElementById(id) : null;
+        if (!sub) return;
+
+        var isOpen = btn.getAttribute("aria-expanded") === "true";
+
+        // Optional: close others to keep the panel tidy
+        qsa(scope, ".tcfr-mGroup, .tcfr-mToggle").forEach(function (other) {
+          if (other === btn) return;
+          var oid = other.getAttribute("aria-controls");
+          var osub = oid ? document.getElementById(oid) : null;
+          other.setAttribute("aria-expanded", "false");
+          if (osub) osub.hidden = true;
+        });
+
+        btn.setAttribute("aria-expanded", isOpen ? "false" : "true");
+        sub.hidden = isOpen ? true : false;
+      });
+    });
+
+    // Close on any mobile link click
+    qsa(scope, ".tcfr-navMobile a[href]").forEach(function (a) {
+      a.addEventListener("click", function () {
+        closeMenu();
+      });
+    });
+
+    // Sticky scrolled state
+    function onScroll() {
+      var y = window.scrollY || 0;
+      header.classList.toggle("is-scrolled", y > 10);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // If switching to desktop, force-close mobile
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 901) closeMenu();
+    });
+    window.addEventListener("orientationchange", function () {
+      closeMenu();
+    });
+  }
+
+  /* =========================
+     Boot
+     ========================= */
+  async function boot() {
+    initGA4();
+
+    // IMPORTANT: Cloudflare Pages often uses "pretty URLs" and redirects *.html -> no extension.
+    // We try both, and only inject when we confirm it is a fragment (not a full HTML doc).
+    var headerMount = await injectFragment(
+      "siteHeader",
+      ["/assets/includes/header", "/assets/includes/header.html"],
+      isValidHeaderFragment
+    );
+
+    // Footer is optional; inject if it exists, otherwise leave blank.
+    await injectFragment(
+      "siteFooter",
+      ["/assets/includes/footer", "/assets/includes/footer.html"],
+      isValidFooterFragment
+    );
+
+    // Initialize behaviors AFTER injection
+    initHeaderFromMount(headerMount);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();
