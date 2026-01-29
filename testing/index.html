@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Cloud Forest Retreat | Eco-Luxury Mountain Stay in Ecuador</title>
-  <meta name="description" content="A scenic bed and breakfast in Ecuador’s mountains with breathtaking views. Eco-luxury comfort, wellness, nature, and unforgettable stays in the cloud forest." />
+  <title>The Cloud Forest Retreat | Estadía de Eco-Lujo en la Montana en Ecuador</title>
+  <meta name="description" content="Un bed and breakfast en las montanas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadias inolvidables en el bosque nublado." />
   <meta name="robots" content="index,follow" />
   <!-- Canonical + hreflang (PRODUCTION URLs) -->
-  <link rel="canonical" href="https://thecloudforestretreat.com/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/es/" />
   <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/" />
   <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/" />
   <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/" />
   <!-- Open Graph (PRODUCTION URLs) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="The Cloud Forest Retreat | Eco-Luxury Mountain Stay in Ecuador" />
-  <meta property="og:description" content="A scenic bed and breakfast in Ecuador’s mountains with breathtaking views. Eco-luxury comfort, wellness, nature, and unforgettable stays in the cloud forest." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/" />
+  <meta property="og:title" content="The Cloud Forest Retreat | Estadia de Eco-Lujo en la Montana en Ecuador" />
+  <meta property="og:description" content="Un bed and breakfast en las montanas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadias inolvidables en el bosque nublado." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/es/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat mountain view" />
+  <meta property="og:image:alt" content="Vista de montana de The Cloud Forest Retreat" />
   <!-- Twitter (PRODUCTION URLs) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Cloud Forest Retreat | Eco-Luxury Mountain Stay in Ecuador" />
-  <meta name="twitter:description" content="A scenic bed and breakfast in Ecuador’s mountains with breathtaking views. Eco-luxury comfort, wellness, nature, and unforgettable stays in the cloud forest." />
+  <meta name="twitter:title" content="The Cloud Forest Retreat | Estadia de Eco-Lujo en la Montana en Ecuador" />
+  <meta name="twitter:description" content="Un bed and breakfast en las montanas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadias inolvidables en el bosque nublado." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <!-- Favicons (approved root paths) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -210,6 +210,137 @@
       color: var(--forest-2);
       border-color: rgba(13,89,37,.18);
       box-shadow: none;
+    }
+
+    /* Google Reviews badge (homepage) */
+    .gReviewCard{
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.64);
+      border: 1px solid rgba(13,89,37,.16);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+    }
+
+    .gReviewLeft{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .gReviewIcon{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(13,89,37,.14);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .gReviewIcon img{
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    .gReviewMeta{
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .gReviewTop{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .gReviewScore{
+      font-weight: 900;
+      font-size: 14px;
+      color: var(--forest-2);
+    }
+
+    .gReviewStars{
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .gReviewStars .star{
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background: #f4b400; /* Google yellow */
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      box-shadow: 0 6px 14px rgba(0,0,0,.10);
+    }
+
+    .gReviewCount{
+      font-weight: 800;
+      font-size: 12.5px;
+      color: rgba(11,26,16,.72);
+      white-space: nowrap;
+    }
+
+    .gReviewActions{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .gBtn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-weight: 900;
+      border: 1px solid rgba(13,89,37,.18);
+      cursor: pointer;
+      line-height: 1;
+      box-shadow: 0 12px 26px rgba(0,0,0,.10);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .gBtn.read{
+      background: rgba(255,255,255,.78);
+      color: var(--forest-2);
+    }
+
+    .gBtn.write{
+      background: var(--orange);
+      color: #fff;
+      border-color: rgba(0,0,0,.10);
+      box-shadow: 0 14px 30px rgba(224,100,58,.26);
+    }
+
+    @media (max-width: 900px){
+      .gReviewCard{
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .gReviewActions{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .gBtn{ width: 100%; }
     }
 
     .trustRow{
@@ -459,259 +590,181 @@
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="The Cloud Forest Retreat home">
+  <main class="wrap" aria-label="Inicio de The Cloud Forest Retreat">
     <section class="hero" aria-label="Hero">
-      <div class="heroMedia" aria-label="Mountain retreat view">
-        <img src="/assets/images/pages/home/tcfr_images_home_hero-02.jpg" alt="The Cloud Forest Retreat in the mountains of Ecuador" loading="eager" decoding="async" />
+      <div class="heroMedia" aria-label="Vista del refugio en la montana">
+        <img src="/assets/images/pages/home/tcfr_images_home_hero-02.jpg" alt="The Cloud Forest Retreat en las montanas de Ecuador" loading="eager" decoding="async" />
         <div class="heroOverlay" aria-hidden="true"></div>
       </div>
-  <div class="heroCopy" aria-label="Welcome message">
-    <div>
-      <div class="kicker">Eco-luxury mountain retreat</div>
-      <h1 class="h1">Welcome to The Cloud Forest Retreat</h1>
 
-      <p class="sub">
-        Wake up above the valley with breathtaking views, fresh mountain air, and calm mornings.
-        A scenic bed and breakfast designed for slow travel, nature, and comfort in Ecuador’s cloud forest.
-      </p>
+      <div class="heroCopy" aria-label="Mensaje de bienvenida">
+        <div>
+          <div class="kicker">Retiro de montana de eco-lujo</div>
+          <h1 class="h1">Bienvenido a The Cloud Forest Retreat</h1>
 
-      <div class="pillRow" aria-label="Highlights">
-        <span class="pill">Birdwatching</span>
-        <span class="pill">Waterfalls</span>
-        <span class="pill">Wilderness</span>
-        <span class="pill">Wellness</span>
+          <p class="sub">
+            Despierta sobre el valle con vistas impresionantes, aire fresco de montana y mananas tranquilas.
+            Un bed and breakfast pensado para viajar sin prisa, conectar con la naturaleza y disfrutar del confort en el bosque nublado de Ecuador.
+          </p>
+
+          <div class="pillRow" aria-label="Destacados">
+            <span class="pill">Avistamiento de aves</span>
+            <span class="pill">Cascadas</span>
+            <span class="pill">Naturaleza</span>
+            <span class="pill">Bienestar</span>
+          </div>
+
+          <div class="heroCtas" aria-label="Acciones principales">
+            <a class="btn primary" href="/es/reservas/">Reserva tu estadia</a>
+            <a class="btn secondary" href="/es/habitaciones/">Explora las habitaciones</a>
+            <a class="btn ghost" href="/es/caracteristicas/">Ver caracteristicas</a>
+          </div>
+        </div>
+
+          <div class="gReviewCard" aria-label="Reseñas de Google">
+            <div class="gReviewLeft">
+              <span class="gReviewIcon" aria-hidden="true">
+                <img src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="" loading="lazy" decoding="async" />
+              </span>
+
+              <div class="gReviewMeta">
+                <div class="gReviewTop">
+                  <span class="gReviewScore">5.0</span>
+                  <span class="gReviewStars" aria-label="5 de 5 estrellas">
+                    <span class="star" aria-hidden="true"></span>
+                    <span class="star" aria-hidden="true"></span>
+                    <span class="star" aria-hidden="true"></span>
+                    <span class="star" aria-hidden="true"></span>
+                    <span class="star" aria-hidden="true"></span>
+                  </span>
+                  <span class="gReviewCount">(9 reseñas)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gReviewActions" aria-label="Acciones de reseñas">
+              <a class="gBtn read" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Leer reseñas</a>
+              <a class="gBtn write" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Escribir una reseña</a>
+            </div>
+          </div>
+
+
+        <div class="trustRow" aria-label="Confianza e info rapida">
+          <div class="trustCard">
+            <p class="trustTitle">Planificacion facil</p>
+            <p class="trustText">Detalles claros de check-in, guias locales y ayuda para planear actividades.</p>
+          </div>
+          <div class="trustCard">
+            <p class="trustTitle">Vistas inolvidables</p>
+            <p class="trustText">Cafe al amanecer, panoramas del bosque nublado y noches tranquilas bajo las estrellas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Experiencias">
+      <div class="sectionHead">
+        <h2 class="h2">Vive el bosque nublado</h2>
+        <p class="hint">Elige tu ritmo. Llena tus dias de naturaleza, bienestar y paisajes espectaculares.</p>
       </div>
 
-      <div class="heroCtas" aria-label="Primary actions">
-        <a class="btn primary" href="/booking/">Book Your Stay</a>
-        <a class="btn secondary" href="/rooms/">Explore Rooms</a>
-<!-- Google Reviews Trust Block -->
-<section class="tcfr-google-reviews">
-  <div class="tcfr-google-reviews-inner">
-    <div class="tcfr-google-left">
-      <img src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" class="tcfr-google-logo">
-      <div class="tcfr-google-rating">
-        <span class="tcfr-rating-score">5.0</span>
-        <span class="tcfr-stars" aria-label="5 out of 5 stars">
-          ★★★★★
-        </span>
-        <span class="tcfr-review-count">(9 reviews)</span>
+      <div class="grid3" aria-label="Tarjetas de experiencias">
+        <a class="tile" href="/es/caracteristicas/actividades/" aria-label="Avistamiento de aves">
+          <div>
+            <p class="tileTitle">Avistamiento de aves</p>
+            <p class="tileText">Observa colibries, tucanes y especies del bosque nublado con guia local.</p>
+          </div>
+          <div class="tileMeta">
+            <span class="badge">Mejor al amanecer</span>
+            <span>Explorar</span>
+          </div>
+        </a>
+
+        <a class="tile" href="/es/caracteristicas/atracciones/" aria-label="Cascadas">
+          <div>
+            <p class="tileTitle">Cascadas</p>
+            <p class="tileText">Caminatas cortas hacia cascadas con bruma y miradores perfectos para fotos y refrescarte.</p>
+          </div>
+          <div class="tileMeta">
+            <span class="badge">Senderos escenicos</span>
+            <span>Explorar</span>
+          </div>
+        </a>
+
+        <a class="tile" href="/es/caracteristicas/amenidades/" aria-label="Amenidades y bienestar">
+          <div>
+            <p class="tileTitle">Bienestar</p>
+            <p class="tileText">Mananas sin prisa, confort que reconforta y espacio para resetear con la naturaleza alrededor.</p>
+          </div>
+          <div class="tileMeta">
+            <span class="badge">Recarga</span>
+            <span>Explorar</span>
+          </div>
+        </a>
       </div>
-    </div>
-    <div class="tcfr-google-actions">
-      <a href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener"
-         class="tcfr-btn tcfr-btn-outline">
-        Read reviews
-      </a>
-      <a href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener"
-         class="tcfr-btn tcfr-btn-primary">
-        Write a review
-      </a>
-    </div>
-  </div>
-</section>
 
-<style>
-.tcfr-google-reviews {
-  margin-top: 18px;
-  padding: 14px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.45);
-  border: 1px solid rgba(0,0,0,0.06);
-}
-.tcfr-google-reviews-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.tcfr-google-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.tcfr-google-logo {
-  width: 34px;
-  height: 34px;
-}
-.tcfr-google-rating {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-}
-.tcfr-rating-score {
-  font-weight: 700;
-  color: #1f3d2b;
-}
-.tcfr-stars {
-  color: #FBBC05;
-  letter-spacing: 1px;
-  font-size: 15px;
-}
-.tcfr-review-count {
-  color: #4b6b5a;
-}
-.tcfr-google-actions {
-  display: flex;
-  gap: 10px;
-}
-.tcfr-btn {
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.tcfr-btn-outline {
-  border: 1px solid #1f3d2b;
-  color: #1f3d2b;
-  background: transparent;
-}
-.tcfr-btn-outline:hover {
-  background: rgba(31,61,43,0.08);
-}
-.tcfr-btn-primary {
-  background: #e46a3a;
-  color: #fff;
-}
-.tcfr-btn-primary:hover {
-  background: #cf5c30;
-}
-@media (max-width: 768px) {
-  .tcfr-google-reviews-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .tcfr-google-actions {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-</style>
-
-        <a class="btn ghost" href="/features/">See Features</a>
+      <div class="photoStrip" aria-label="Franja de fotos">
+        <div class="photoCard">
+          <img src="/assets/images/pages/home/tcfr_images_home_01.jpg" alt="Vista panoramica de montana cerca del refugio" loading="lazy" decoding="async" />
+          <div class="photoCap">Vistas de montana que parecen irreales</div>
+        </div>
+        <div class="photoCard">
+          <img src="/assets/images/pages/home/tcfr_images_home_02.jpg" alt="Vegetacion y senderos del bosque nublado" loading="lazy" decoding="async" />
+          <div class="photoCap">Senderos del bosque nublado cerca</div>
+        </div>
+        <div class="photoCard">
+          <img src="/assets/images/pages/home/tcfr_images_home_03.jpg" alt="Interior acogedor de una habitacion de eco-lujo" loading="lazy" decoding="async" />
+          <div class="photoCap">Pensado para la calma</div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="trustRow" aria-label="Trust and quick info">
-      <div class="trustCard">
-        <p class="trustTitle">Easy planning</p>
-        <p class="trustText">Clear check-in details, local guidance, and help planning activities.</p>
+    <section class="section" aria-label="Habitaciones">
+      <div class="sectionHead">
+        <h2 class="h2">Alojamientos creados para la calma</h2>
+        <p class="hint">Noches tranquilas, detalles acogedores y vistas que vas a querer ver al despertar.</p>
       </div>
-      <div class="trustCard">
-        <p class="trustTitle">Unforgettable views</p>
-        <p class="trustText">Sunrise coffee, cloud forest panoramas, and quiet nights under the stars.</p>
+
+      <div class="grid3" aria-label="Tarjetas de habitaciones">
+        <a class="tile" href="/es/habitaciones/suite-panoramica/" aria-label="Suite panoramica">
+          <div>
+            <p class="tileTitle">Suite Panoramica</p>
+            <p class="tileText">Mas espacio, confort elevado y los mejores angulos para ver el amanecer.</p>
+          </div>
+          <div class="tileMeta"><span class="badge">Premium</span><span>Ver</span></div>
+        </a>
+
+        <a class="tile" href="/es/habitaciones/habitacion-amanecer/" aria-label="Habitacion amanecer">
+          <div>
+            <p class="tileTitle">Habitacion Amanecer</p>
+            <p class="tileText">Calida, tranquila y pensada para mananas lentas y aire de montana.</p>
+          </div>
+          <div class="tileMeta"><span class="badge">Acogedora</span><span>Ver</span></div>
+        </a>
+
+        <a class="tile" href="/es/habitaciones/habitacion-atardecer/" aria-label="Habitacion atardecer">
+          <div>
+            <p class="tileTitle">Habitacion Atardecer</p>
+            <p class="tileText">Un refugio sereno para parejas y escapadas tranquilas, con luz suave al final del dia.</p>
+          </div>
+          <div class="tileMeta"><span class="badge">Relax</span><span>Ver</span></div>
+        </a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section" aria-label="Experiences">
-  <div class="sectionHead">
-    <h2 class="h2">Experience the cloud forest</h2>
-    <p class="hint">Choose your pace. Fill your days with nature, wellness, and stunning scenery.</p>
-  </div>
-
-  <div class="grid3" aria-label="Experience tiles">
-    <a class="tile" href="/features/activities/" aria-label="Birdwatching">
+    <section class="band" aria-label="Llamado a la accion de reservas">
       <div>
-        <p class="tileTitle">Birdwatching</p>
-        <p class="tileText">Spot hummingbirds, toucans, and cloud forest specialties with local guidance.</p>
+        <p class="bandTitle">Listo para tu estadia en la montana?</p>
+        <p class="bandText">
+          Revisa disponibilidad, elige tus fechas y reserva en minutos. Si tienes preguntas, escribenos y te ayudamos a planificar.
+        </p>
       </div>
-      <div class="tileMeta">
-        <span class="badge">Best at sunrise</span>
-        <span>Explore</span>
+
+      <div class="bandActions" aria-label="Acciones de reserva">
+        <a class="btn primary" href="/es/reservas/">Reserva tu estadia</a>
+        <a class="btn secondary" href="/es/contacto/">Contacto</a>
       </div>
-    </a>
-
-    <a class="tile" href="/features/activities/" aria-label="Waterfalls">
-      <div>
-        <p class="tileTitle">Waterfalls</p>
-        <p class="tileText">Short hikes to misty falls and viewpoints perfect for photos and cooling off.</p>
-      </div>
-      <div class="tileMeta">
-        <span class="badge">Scenic trails</span>
-        <span>Explore</span>
-      </div>
-    </a>
-
-    <a class="tile" href="/features/amenities/" aria-label="Amenities and wellness">
-      <div>
-        <p class="tileTitle">Wellness</p>
-        <p class="tileText">Slow mornings, nourishing comfort, and space to reset with nature all around you.</p>
-      </div>
-      <div class="tileMeta">
-        <span class="badge">Recharge</span>
-        <span>Explore</span>
-      </div>
-    </a>
-  </div>
-
-  <div class="photoStrip" aria-label="Photo strip">
-    <div class="photoCard">
-      <img src="/assets/images/pages/home/tcfr_images_home_01.jpg" alt="Panoramic mountain view near the retreat" loading="lazy" decoding="async" />
-      <div class="photoCap">Mountain views that feel unreal</div>
-    </div>
-    <div class="photoCard">
-      <img src="/assets/images/pages/home/tcfr_images_home_02.jpg" alt="Cloud forest greenery and trails" loading="lazy" decoding="async" />
-      <div class="photoCap">Cloud forest trails nearby</div>
-    </div>
-    <div class="photoCard">
-      <img src="/assets/images/pages/home/tcfr_images_home_03.jpg" alt="Cozy eco-luxury room interior" loading="lazy" decoding="async" />
-      <div class="photoCap">Curated for calm</div>
-    </div>
-  </div>
-</section>
-
-<section class="section" aria-label="Rooms">
-  <div class="sectionHead">
-    <h2 class="h2">Accommodations crafted for calm</h2>
-    <p class="hint">Quiet nights, cozy details, and views you will want to wake up to.</p>
-  </div>
-
-  <div class="grid3" aria-label="Room tiles">
-    <a class="tile" href="/rooms/panoramic-suite/" aria-label="Panoramic Suite">
-      <div>
-        <p class="tileTitle">Panoramic Suite</p>
-        <p class="tileText">More space, elevated comfort, and the best angles for sunrise views.</p>
-      </div>
-      <div class="tileMeta"><span class="badge">Premium</span><span>View</span></div>
-    </a>
-
-    <a class="tile" href="/rooms/sunrise-room/" aria-label="Sunrise Room">
-      <div>
-        <p class="tileTitle">Sunrise Room</p>
-        <p class="tileText">Warm, peaceful, and designed for slow mornings and mountain air.</p>
-      </div>
-      <div class="tileMeta"><span class="badge">Cozy</span><span>View</span></div>
-    </a>
-
-    <a class="tile" href="/rooms/sunset-room/" aria-label="Sunset Room">
-      <div>
-        <p class="tileTitle">Sunset Room</p>
-        <p class="tileText">A calm retreat for couples and quiet getaways, with soft evening light.</p>
-      </div>
-      <div class="tileMeta"><span class="badge">Relax</span><span>View</span></div>
-    </a>
-  </div>
-</section>
-
-<section class="band" aria-label="Booking call to action">
-  <div>
-    <p class="bandTitle">Ready for your mountain stay?</p>
-    <p class="bandText">
-      Check availability, choose your dates, and book in minutes. If you have questions, contact us and we will help you plan.
-    </p>
-  </div>
-
-  <div class="bandActions" aria-label="Booking actions">
-    <a class="btn primary" href="/booking/">Book Your Stay</a>
-    <a class="btn secondary" href="/contact/">Contact</a>
-  </div>
-</section>
+    </section>
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
