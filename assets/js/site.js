@@ -1,125 +1,180 @@
-(function(){
+(function () {
   "use strict";
 
-  function qs(root, sel){ return (root || document).querySelector(sel); }
-  function qsa(root, sel){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+  function qs(root, sel) {
+    return (root || document).querySelector(sel);
+  }
 
-  function ensureOverlay(){
-    var o = qs(document, ".mOverlay") || qs(document, ".tcfr-mobileOverlay");
+  function qsa(root, sel) {
+    return Array.prototype.slice.call((root || document).querySelectorAll(sel));
+  }
+
+  function ensureOverlay() {
+    var o = qs(document, ".tcfr-mobileOverlay") || qs(document, ".mOverlay");
     if (o) return o;
 
     o = document.createElement("div");
-    o.className = "mOverlay";
+    o.className = "tcfr-mobileOverlay";
     o.hidden = true;
 
-    // Keep it simple: no blur, no filters.
+    // No blur here (blur was causing the "blurry menu" feel on iOS).
     o.style.position = "fixed";
     o.style.inset = "0";
     o.style.background = "rgba(11,26,16,0.35)";
-    o.style.zIndex = "4999";
+    o.style.zIndex = "9998";
 
     document.body.appendChild(o);
     return o;
   }
 
-  function initMobileNav(){
-    // Current TCFR header markup uses .mToggle + #mobileNav + .mMain/.mSub drilldown.
-    // Older variants used .tcfr-burger + .tcfr-mobilePanel. Support both.
-    var toggle =
-      qs(document, ".mToggle") ||
-      qs(document, '[data-action="toggle-menu"]') ||
-      qs(document, ".tcfr-burger") ||
-      qs(document, 'button[aria-label="Open menu"]') ||
-      qs(document, 'button[aria-label="Menu"]');
+  function getPanelFromToggle(toggle) {
+    if (!toggle) return null;
 
-    var nav =
+    var id = toggle.getAttribute("aria-controls");
+    if (id) {
+      var p = document.getElementById(id);
+      if (p) return p;
+    }
+
+    return (
+      document.getElementById("tcfrMobilePanel") ||
       qs(document, "#mobileNav") ||
-      qs(document, ".tcfr-mobilePanel");
+      qs(document, ".tcfr-mobilePanel")
+    );
+  }
 
-    if (!toggle || !nav) return;
+  function initMobileNav() {
+    var headerRoot =
+      qs(document, "#siteHeader [data-tcfr-header]") ||
+      qs(document, "#siteHeader .tcfr-header") ||
+      qs(document, "#siteHeader header") ||
+      qs(document, "#siteHeader");
+
+    if (!headerRoot) return;
+
+    var toggle =
+      qs(headerRoot, ".tcfr-burger") ||
+      qs(headerRoot, ".mToggle") ||
+      qs(headerRoot, '[data-action="toggle-menu"]') ||
+      qs(headerRoot, 'button[aria-label="Open menu"]') ||
+      qs(headerRoot, 'button[aria-label="Menu"]');
+
+    var panel = getPanelFromToggle(toggle);
+    if (!toggle || !panel) return;
 
     var overlay = ensureOverlay();
 
-    function setOpen(open){
+    var closeBtn =
+      qs(panel, '[data-action="close"]') ||
+      qs(panel, ".tcfr-close") ||
+      qs(panel, 'button[aria-label="Close menu"]') ||
+      qs(panel, 'button[aria-label="Close"]');
+
+    function setOpen(open) {
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      nav.hidden = !open;
+      panel.hidden = !open;
       overlay.hidden = !open;
 
-      // Lock scroll when open (no blur).
-      document.documentElement.classList.toggle("navOpen", open);
+      document.documentElement.classList.toggle("tcfr-navOpen", open);
       document.body.style.overflow = open ? "hidden" : "";
       document.body.style.touchAction = open ? "none" : "";
     }
 
-    function isOpen(){ return !nav.hidden; }
+    function isOpen() {
+      return panel.hidden === false;
+    }
 
-    // Always start closed to avoid "menu opens on refresh".
+    // Always start closed to prevent "open on refresh"
     setOpen(false);
 
-    // Click hamburger
-    toggle.addEventListener("click", function(e){
+    function onToggle(e) {
       e.preventDefault();
+      e.stopPropagation();
       setOpen(!isOpen());
-    });
+    }
 
-    // Click outside
-    overlay.addEventListener("click", function(){
+    if ("onpointerdown" in window) {
+      toggle.addEventListener("pointerdown", onToggle, { passive: false });
+    }
+    toggle.addEventListener("click", onToggle);
+
+    overlay.addEventListener("click", function () {
       setOpen(false);
     });
 
-    // Esc closes
-    document.addEventListener("keydown", function(e){
+    if (closeBtn) {
+      if ("onpointerdown" in window) {
+        closeBtn.addEventListener(
+          "pointerdown",
+          function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            setOpen(false);
+          },
+          { passive: false }
+        );
+      }
+      closeBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setOpen(false);
+      });
+    }
+
+    document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") setOpen(false);
     });
 
-    // Close on any nav link click (so menu does not stay open).
-    qsa(nav, "a").forEach(function(a){
-      a.addEventListener("click", function(){
+    qsa(panel, "a").forEach(function (a) {
+      a.addEventListener("click", function () {
         setOpen(false);
       });
     });
 
-    // Drilldown (Rooms/Features -> submenus)
-    var main = qs(nav, ".mMain") || qs(nav, '[data-view="main"]');
+    // Optional drilldown support (only if markup includes these classes)
+    var main = qs(panel, ".mMain") || qs(panel, '[data-view="main"]');
 
-    function showMain(){
+    function showMain() {
       if (main) main.hidden = false;
-      qsa(nav, ".mSub").forEach(function(s){ s.hidden = true; });
+      qsa(panel, ".mSub").forEach(function (s) {
+        s.hidden = true;
+      });
     }
 
-    // Ensure initial drilldown state is sane
     showMain();
 
-    qsa(nav, ".mNext").forEach(function(btn){
-      btn.addEventListener("click", function(){
+    qsa(panel, ".mNext").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
         var target = btn.getAttribute("data-target");
         if (!target) return;
-
-        // data-target is like "#m-rooms"
-        var sub = qs(nav, target) || qs(document, target);
+        var sub = qs(panel, target) || qs(document, target);
         if (!sub) return;
 
         if (main) main.hidden = true;
-        qsa(nav, ".mSub").forEach(function(s){ s.hidden = true; });
+        qsa(panel, ".mSub").forEach(function (s) {
+          s.hidden = true;
+        });
         sub.hidden = false;
       });
     });
 
-    qsa(nav, ".mBack").forEach(function(btn){
-      btn.addEventListener("click", function(){
-        // back buttons in this markup use data-back="main"
+    qsa(panel, ".mBack").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
         showMain();
       });
     });
 
-    // Prevent any stray hash-only navigation that some mobile buttons could trigger.
-    // If a button is mis-marked as <a href="#">, keep it inert.
-    qsa(nav, 'a[href="#"]').forEach(function(a){
-      a.addEventListener("click", function(e){ e.preventDefault(); });
+    // Guard against hash-only links
+    qsa(panel, 'a[href="#"]').forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+      });
     });
   }
 
-  if (document.readyState === "loading"){
+  if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initMobileNav);
   } else {
     initMobileNav();
