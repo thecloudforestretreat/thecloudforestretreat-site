@@ -139,144 +139,133 @@
   /* =========================
      Header behavior
      ========================= */
-  function initHeaderFromMount(mountEl) {
-    if (!mountEl) return;
+  function initHeaderFromMount(root){
+    if (!root) return;
 
-    var header =
-      mountEl.querySelector("[data-tcfr-header]") ||
-      mountEl.querySelector(".topbar") ||
-      mountEl.querySelector("header") ||
-      mountEl.firstElementChild;
+    // Support both "tcfr-*" and legacy header markup classes/ids
+    var burger = root.querySelector(".tcfr-burger") || root.querySelector(".hamburger");
+    var panel = root.querySelector(".tcfr-mobilePanel") || root.querySelector("#mobileNav");
+    var overlay = root.querySelector(".tcfr-overlay");
 
-    if (!header) return;
+    // If we have no mobile elements, nothing to bind
+    if (!burger || !panel) return;
 
-    // Sticky helper (purely visual)
-    function onScroll() {
-      header.classList.toggle("is-stuck", window.scrollY > 10);
-    }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    // Mobile menu compatibility (supports both the newer TCFR markup and your current deployed header markup)
-    var burger =
-      header.querySelector(".tcfr-burger") ||
-      header.querySelector(".hamburger") ||
-      header.querySelector('[aria-controls="mobileNav"]') ||
-      header.querySelector('[data-action="menu"]');
-
-    var panel =
-      header.querySelector(".tcfr-menuPanel") ||
-      header.querySelector("#mobileNav") ||
-      document.getElementById("mobileNav") ||
-      header.querySelector(".mNav");
-
-    var overlay =
-      header.querySelector(".tcfr-menuOverlay") ||
-      header.querySelector(".menuOverlay") ||
-      header.querySelector(".mOverlay");
-
-    function isOpen() {
-      if (!panel) return false;
-      return panel.hidden === false;
+    // Ensure overlay exists (some header versions do not include it)
+    if (!overlay){
+      overlay = document.createElement("div");
+      overlay.className = "tcfr-overlay";
+      overlay.hidden = true;
+      // Minimal inline styles so we are not dependent on CSS ordering/caches
+      overlay.style.position = "fixed";
+      overlay.style.inset = "0";
+      overlay.style.background = "rgba(0,0,0,0.22)";
+      overlay.style.zIndex = "9998";
+      overlay.style.backdropFilter = "blur(2px)";
+      overlay.style.webkitBackdropFilter = "blur(2px)";
+      document.body.appendChild(overlay);
     }
 
-    function resetDrilldown() {
-      if (!panel) return;
-      var main = panel.querySelector(".mMain");
-      var subs = panel.querySelectorAll(".mSub");
+    // Normalize ARIA
+    burger.setAttribute("aria-expanded", "false");
+    if (!burger.getAttribute("aria-controls")){
+      // best-effort: use existing id or assign one
+      if (!panel.id) panel.id = "tcfrMobileNav";
+      burger.setAttribute("aria-controls", panel.id);
+    }
+
+    // Normalize hidden state
+    if (typeof panel.hidden !== "boolean") panel.hidden = true;
+
+    function closeMenu(){
+      panel.hidden = true;
+      overlay.hidden = true;
+      burger.setAttribute("aria-expanded", "false");
+      document.documentElement.classList.remove("tcfr-navOpen");
+    }
+
+    function openMenu(){
+      panel.hidden = false;
+      overlay.hidden = false;
+      burger.setAttribute("aria-expanded", "true");
+      document.documentElement.classList.add("tcfr-navOpen");
+
+      // Always reset to main view if drill-down structure is present
+      var main = panel.querySelector(".mPanel") || panel.querySelector(".m-main");
+      var subs = panel.querySelectorAll(".mSub, .m-submenu");
       if (main) main.hidden = false;
       for (var i = 0; i < subs.length; i++) subs[i].hidden = true;
     }
 
-    function setOpen(open) {
-      if (!panel || !burger) return;
-
-      panel.hidden = !open;
-      panel.setAttribute("aria-hidden", open ? "false" : "true");
-      burger.setAttribute("aria-expanded", open ? "true" : "false");
-
-      header.classList.toggle("menu-open", open);
-      document.documentElement.classList.toggle("tcfr-menu-open", open);
-
-      if (overlay) overlay.hidden = !open;
-
-      if (!open) resetDrilldown();
+    function toggleMenu(){
+      if (panel.hidden) openMenu();
+      else closeMenu();
     }
 
-    function toggleMenu(e) {
-      if (e) {
+    // Avoid double-binding if includes are re-injected
+    if (burger.__tcfrBound) return;
+    burger.__tcfrBound = true;
+
+    burger.addEventListener("click", function(e){
+      e.preventDefault();
+      toggleMenu();
+    });
+
+    // Some iOS versions need touchstart to feel responsive
+    burger.addEventListener("touchstart", function(){ /* no-op: improves tap responsiveness */ }, { passive: true });
+
+    overlay.addEventListener("click", function(){ closeMenu(); });
+
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape") closeMenu();
+    });
+
+    // Close when clicking any link inside the panel
+    panel.addEventListener("click", function(e){
+      var a = e.target && (e.target.closest ? e.target.closest("a") : null);
+      if (a) closeMenu();
+    });
+
+    // Drill-down navigation (ExperienceEcuador-style or tcfr-style)
+    panel.addEventListener("click", function(e){
+      var nextBtn = e.target && (e.target.closest ? e.target.closest(".mNext, .m-next") : null);
+      var backBtn = e.target && (e.target.closest ? e.target.closest(".mBack, .m-back") : null);
+
+      if (nextBtn){
         e.preventDefault();
-        e.stopPropagation();
+        var target = nextBtn.getAttribute("data-target");
+        if (!target) return;
+
+        var main = panel.querySelector(".mPanel") || panel.querySelector(".m-main");
+        var sub = panel.querySelector(target);
+        if (!sub) return;
+
+        if (main) main.hidden = true;
+        sub.hidden = false;
+        return;
       }
-      setOpen(!isOpen());
-    }
 
-    function closeMenu() {
-      setOpen(false);
-    }
+      if (backBtn){
+        e.preventDefault();
+        var backTarget = backBtn.getAttribute("data-back");
+        // If backTarget is specified, go there; otherwise go to main
+        var main2 = panel.querySelector(".mPanel") || panel.querySelector(".m-main");
+        var subs2 = panel.querySelectorAll(".mSub, .m-submenu");
+        for (var j = 0; j < subs2.length; j++) subs2[j].hidden = true;
 
-    // If the markup isn't present, do nothing (prevents errors on pages without injected header)
-    if (burger && panel) {
-      // Ensure closed state on load
-      if (panel.hidden !== true && panel.hidden !== false) panel.hidden = true;
-      closeMenu();
+        if (backTarget){
+          var backView = panel.querySelector(backTarget);
+          if (backView){ backView.hidden = false; return; }
+        }
+        if (main2) main2.hidden = false;
+      }
+    });
 
-      burger.addEventListener("click", toggleMenu);
-
-      // Overlay closes menu
-      if (overlay) overlay.addEventListener("click", closeMenu);
-
-      // Click outside closes menu
-      document.addEventListener("click", function (e) {
-        if (!isOpen()) return;
-        var t = e.target;
-        if (!t) return;
-        if (panel.contains(t) || burger.contains(t)) return;
+    // If the viewport is resized to desktop, ensure menu is closed
+    window.addEventListener("resize", function(){
+      if (window.matchMedia && window.matchMedia("(min-width: 901px)").matches){
         closeMenu();
-      });
-
-      // Escape closes menu
-      document.addEventListener("keydown", function (e) {
-        if (!isOpen()) return;
-        if (e.key === "Escape") closeMenu();
-      });
-
-      // Drilldown submenus (supports .mNext + data-target and [data-back] back buttons)
-      panel.addEventListener("click", function (e) {
-        var t = e.target;
-        if (!t) return;
-
-        var next = t.closest ? t.closest(".mNext") : null;
-        if (next && next.getAttribute) {
-          var sel = next.getAttribute("data-target");
-          if (sel) {
-            var target = panel.querySelector(sel);
-            var main = panel.querySelector(".mMain");
-            if (target) {
-              if (main) main.hidden = true;
-              var subs = panel.querySelectorAll(".mSub");
-              for (var i = 0; i < subs.length; i++) subs[i].hidden = true;
-              target.hidden = false;
-            }
-          }
-          e.preventDefault();
-          return;
-        }
-
-        var back = t.closest ? t.closest("[data-back]") : null;
-        if (back) {
-          resetDrilldown();
-          e.preventDefault();
-          return;
-        }
-      });
-
-      // If switching to desktop, force-close mobile
-      window.addEventListener("resize", function () {
-        if (window.innerWidth >= 901) closeMenu();
-      });
-      window.addEventListener("orientationchange", closeMenu);
-    }
+      }
+    }, { passive: true });
   }
 
   /* =========================
