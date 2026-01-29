@@ -1,198 +1,239 @@
-/* /assets/js/site.js
-   TCFR: Header behaviors (mobile menu + submenus + language switch).
-   Defensive bindings: works with injected headers and avoids double-binding.
+/* TCFR site.js - Mobile menu + submenus (robust, no flicker)
+   Drop-in replacement for /assets/js/site.js
+
+   Key behaviors:
+   - Hamburger toggles mobile panel reliably (no document-click auto-close to avoid "open then close" flicker)
+   - Close via overlay click, close button, or ESC
+   - Submenus expand/collapse in-place on mobile (Rooms, Features)
+   - Uses [hidden] attribute as the single source of truth
 */
-(function(){
+
+(function () {
   "use strict";
 
-  function $(sel, root){ return (root || document).querySelector(sel); }
-  function $all(sel, root){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+  function qs(root, sel){ return (root || document).querySelector(sel); }
+  function qsa(root, sel){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 
-  function on(el, evt, fn, opts){
-    if (!el) return;
-    el.addEventListener(evt, fn, opts || false);
+  function ready(fn){
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
   }
 
-  function once(el, key){
-    if (!el) return false;
-    var attr = "data-once-" + key;
-    if (el.hasAttribute(attr)) return false;
-    el.setAttribute(attr, "1");
-    return true;
-  }
+  ready(function(){
+    // HEADER ROOT (injected into #siteHeader)
+    var headerRoot = qs(document, "#siteHeader") || document;
+    var headerEl = qs(headerRoot, "[data-tcfr-header]") || qs(headerRoot, ".tcfr-header") || qs(headerRoot, "header");
+    if (!headerEl) return;
 
-  function escId(id){ return String(id || "").replace(/[^a-zA-Z0-9_-]/g, ""); }
-
-  function setHidden(el, hidden){
-    if (!el) return;
-    if (hidden){
-      el.setAttribute("hidden", "");
-      el.setAttribute("aria-hidden", "true");
-    }else{
-      el.removeAttribute("hidden");
-      el.setAttribute("aria-hidden", "false");
-    }
-  }
-
-  function lockScroll(lock){
-    // Prevent background scrolling while the panel is open.
-    if (lock){
-      document.documentElement.classList.add("tcfr-menu-open");
-      document.body.classList.add("tcfr-menu-open");
-    }else{
-      document.documentElement.classList.remove("tcfr-menu-open");
-      document.body.classList.remove("tcfr-menu-open");
-    }
-  }
-
-  function initMobileSubmenus(panel){
-    if (!panel) return;
-
-    var groups = $all("button.tcfr-mGroup[aria-controls]", panel);
-
-    function getSub(group){
-      var id = group.getAttribute("aria-controls");
-      if (!id) return null;
-      // Submenus are inside the panel, so prefer scoped lookup.
-      return $("#" + escId(id), panel) || document.getElementById(id);
-    }
-
-    // Initialize states
-    groups.forEach(function(g){
-      if (!once(g, "tcfr-submenu")) return;
-
-      var sub = getSub(g);
-      // Default closed unless explicitly open
-      g.setAttribute("aria-expanded", g.getAttribute("aria-expanded") === "true" ? "true" : "false");
-      if (sub){
-        var shouldOpen = g.getAttribute("aria-expanded") === "true";
-        setHidden(sub, !shouldOpen);
-      }
-
-      g.addEventListener("click", function(e){
-        e.preventDefault();
-
-        var thisSub = getSub(g);
-        if (!thisSub) return;
-
-        var willOpen = thisSub.hasAttribute("hidden");
-        // Close others
-        groups.forEach(function(other){
-          if (other === g) return;
-          var otherSub = getSub(other);
-          other.setAttribute("aria-expanded", "false");
-          if (otherSub) setHidden(otherSub, true);
-        });
-
-        g.setAttribute("aria-expanded", willOpen ? "true" : "false");
-        setHidden(thisSub, !willOpen);
-      });
-    });
-  }
-
-  function initHeaderBehaviors(root){
-    // Root can be document (fallback) or the injected header container.
-    var burger = $("button.tcfr-burger[aria-controls]", root) || $(".tcfr-burger", root);
+    // Mobile panel + overlay + burger
+    var burger = qs(headerEl, ".tcfr-burger") || qs(headerEl, "[aria-controls][aria-label*='menu']");
     var panelId = burger ? burger.getAttribute("aria-controls") : null;
+    var panel = panelId ? document.getElementById(panelId) : qs(headerEl, ".tcfr-mobilePanel");
+    var overlay = qs(headerEl, ".tcfr-mobileOverlay") || qs(headerEl, "[data-overlay]");
 
-    var panel = panelId ? document.getElementById(panelId) : $("#tcfrMobilePanel", root) || document.getElementById("tcfrMobilePanel");
-    var overlay = $(".tcfr-mobileOverlay", root) || document.querySelector(".tcfr-mobileOverlay");
-    var closeBtn = panel ? $(".tcfr-mClose", panel) : null;
+    // Some builds may place overlay/panel as siblings inside header, so re-query globally if needed
+    if (!panel) panel = qs(document, ".tcfr-mobilePanel");
+    if (!overlay) overlay = qs(document, ".tcfr-mobileOverlay");
+
+    // Close button inside panel
+    var closeBtn = panel ? (qs(panel, "[data-action='close']") || qs(panel, ".tcfr-mClose") || qs(panel, "button[aria-label*='Close']")) : null;
 
     if (!burger || !panel) return;
 
-    if (!once(burger, "tcfr-menu")) return;
+    function isOpen(){
+      return panel.hidden === false;
+    }
 
-    // Ensure hidden by default
-    setHidden(overlay, true);
-    setHidden(panel, true);
-    burger.setAttribute("aria-expanded", "false");
-
-    function closeMenu(){
-      setHidden(overlay, true);
-      setHidden(panel, true);
-      burger.setAttribute("aria-expanded", "false");
-      lockScroll(false);
-      // Close any open submenus when closing panel
-      var openGroups = $all("button.tcfr-mGroup[aria-controls][aria-expanded='true']", panel);
-      openGroups.forEach(function(g){
-        g.setAttribute("aria-expanded", "false");
-        var id = g.getAttribute("aria-controls");
-        if (!id) return;
-        var sub = $("#" + escId(id), panel) || document.getElementById(id);
-        if (sub) setHidden(sub, true);
-      });
+    function lockScroll(on){
+      // Light-touch scroll lock that works well on iOS Safari
+      if (on){
+        document.documentElement.classList.add("tcfr-scroll-lock");
+        document.body.classList.add("tcfr-scroll-lock");
+      } else {
+        document.documentElement.classList.remove("tcfr-scroll-lock");
+        document.body.classList.remove("tcfr-scroll-lock");
+      }
     }
 
     function openMenu(){
-      setHidden(overlay, false);
-      setHidden(panel, false);
+      panel.hidden = false;
+      if (overlay) overlay.hidden = false;
       burger.setAttribute("aria-expanded", "true");
+      headerEl.setAttribute("data-menu-open", "true");
       lockScroll(true);
     }
 
+    function closeMenu(){
+      panel.hidden = true;
+      if (overlay) overlay.hidden = true;
+      burger.setAttribute("aria-expanded", "false");
+      headerEl.removeAttribute("data-menu-open");
+      lockScroll(false);
+      // collapse any open submenu sections for a clean next open
+      collapseAllSubmenus();
+    }
+
     function toggleMenu(){
-      var isOpen = burger.getAttribute("aria-expanded") === "true";
-      if (isOpen) closeMenu();
+      if (isOpen()) closeMenu();
       else openMenu();
     }
 
-    on(burger, "click", function(e){
-      e.preventDefault();
-      toggleMenu();
-    });
-
-    on(overlay, "click", function(e){
-      e.preventDefault();
-      closeMenu();
-    });
-
-    on(closeBtn, "click", function(e){
-      e.preventDefault();
-      closeMenu();
-    });
-
-    on(document, "keydown", function(e){
-      if (e.key === "Escape") closeMenu();
-    });
-
-    // Close menu on navigation within panel
-    on(panel, "click", function(e){
-      var a = e.target && e.target.closest ? e.target.closest("a") : null;
-      if (!a) return;
-      // Allow submenu toggles that might be anchors; our submenu toggles are buttons.
-      closeMenu();
-    });
-
-    // Initialize submenus
-    initMobileSubmenus(panel);
-
-    // Re-check submenus after injection changes (rare, but safe)
-    // This is cheap and prevents stale states.
-    setTimeout(function(){ initMobileSubmenus(panel); }, 0);
-
-    // Safety: if viewport grows past mobile, close panel
-    on(window, "resize", function(){
-      if (window.matchMedia && window.matchMedia("(min-width: 901px)").matches){
-        closeMenu();
+    // Prevent the "flicker" caused by other click handlers:
+    // Use pointerdown + click, and stop propagation.
+    function onBurgerActivate(e){
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
       }
-    }, { passive: true });
-  }
-
-  // If your site injects header/footer via head.js, wait for it.
-  function boot(){
-    // Try within #siteHeader first to avoid binding to stale markup.
-    var siteHeader = document.getElementById("siteHeader");
-    if (siteHeader){
-      initHeaderBehaviors(siteHeader);
+      toggleMenu();
     }
-    // Also attempt document fallback in case header is not injected.
-    initHeaderBehaviors(document);
-  }
 
-  if (document.readyState === "loading"){
-    document.addEventListener("DOMContentLoaded", boot);
-  }else{
-    boot();
-  }
+    burger.addEventListener("pointerdown", onBurgerActivate, { passive: false });
+    burger.addEventListener("click", onBurgerActivate, { passive: false });
+
+    if (overlay){
+      overlay.addEventListener("click", function(e){
+        e.preventDefault();
+        closeMenu();
+      });
+      overlay.addEventListener("touchstart", function(){ /* allow iOS tap */ }, { passive: true });
+    }
+
+    if (closeBtn){
+      closeBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        closeMenu();
+      });
+    }
+
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape" && isOpen()) closeMenu();
+    });
+
+    // Close if a navigation link is clicked (not submenu toggles)
+    if (panel){
+      panel.addEventListener("click", function(e){
+        var a = e.target && e.target.closest ? e.target.closest("a") : null;
+        if (!a) return;
+
+        // If it's a submenu toggle anchor, ignore
+        if (a.hasAttribute("data-subtoggle")) return;
+
+        // If it links to '#' only, ignore
+        var href = a.getAttribute("href") || "";
+        if (href === "#" || href === "#!") return;
+
+        closeMenu();
+      });
+    }
+
+    // --- Mobile submenus (Rooms / Features) ---
+    // Strategy:
+    // - In the mobile panel, parent items that have a submenu must be buttons or links with [data-subtoggle]
+    // - Their submenu container must have [data-submenu] and start hidden
+    // - We toggle hidden + aria-expanded and ensure only one submenu open at a time
+
+    function collapseAllSubmenus(){
+      if (!panel) return;
+      var toggles = qsa(panel, "[data-subtoggle]");
+      for (var i = 0; i < toggles.length; i++){
+        toggles[i].setAttribute("aria-expanded", "false");
+      }
+      var subs = qsa(panel, "[data-submenu]");
+      for (var j = 0; j < subs.length; j++){
+        subs[j].hidden = true;
+      }
+    }
+
+    function closeOtherSubmenus(exceptToggle){
+      if (!panel) return;
+      var toggles = qsa(panel, "[data-subtoggle]");
+      for (var i = 0; i < toggles.length; i++){
+        var t = toggles[i];
+        if (t === exceptToggle) continue;
+        t.setAttribute("aria-expanded", "false");
+      }
+      var subs = qsa(panel, "[data-submenu]");
+      for (var j = 0; j < subs.length; j++){
+        var sub = subs[j];
+        var ownerId = sub.getAttribute("data-owner");
+        if (!ownerId) continue;
+        if (exceptToggle && exceptToggle.id && ownerId === exceptToggle.id) continue;
+        sub.hidden = true;
+      }
+    }
+
+    function toggleSubmenu(toggleEl){
+      if (!panel || !toggleEl) return;
+
+      // Find submenu by aria-controls or by next sibling
+      var subId = toggleEl.getAttribute("aria-controls");
+      var sub = subId ? document.getElementById(subId) : null;
+      if (!sub) {
+        // fallback: look for data-submenu within same group
+        var group = toggleEl.closest("[data-subgroup]") || toggleEl.parentNode;
+        sub = group ? qs(group, "[data-submenu]") : null;
+      }
+      if (!sub) return;
+
+      // Ensure ownership linkage for closeOtherSubmenus
+      if (!toggleEl.id) toggleEl.id = "mSubToggle_" + Math.random().toString(36).slice(2);
+      if (!sub.getAttribute("data-owner")) sub.setAttribute("data-owner", toggleEl.id);
+
+      var expanded = toggleEl.getAttribute("aria-expanded") === "true";
+      closeOtherSubmenus(toggleEl);
+
+      if (expanded){
+        toggleEl.setAttribute("aria-expanded", "false");
+        sub.hidden = true;
+      } else {
+        toggleEl.setAttribute("aria-expanded", "true");
+        sub.hidden = false;
+      }
+    }
+
+    function wireSubmenus(){
+      if (!panel) return;
+
+      // Normalize: any element with class tcfr-mGroup that contains a submenu
+      // should have a toggle button/link with data-subtoggle.
+      var toggles = qsa(panel, "[data-subtoggle]");
+      for (var i = 0; i < toggles.length; i++){
+        (function(t){
+          // Make sure it behaves like a button
+          t.setAttribute("role", t.tagName.toLowerCase() === "button" ? "button" : "button");
+          if (!t.hasAttribute("aria-expanded")) t.setAttribute("aria-expanded", "false");
+
+          t.addEventListener("click", function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            toggleSubmenu(t);
+          });
+
+          t.addEventListener("pointerdown", function(e){
+            // prevents click-through/ghost click issues on iOS
+            e.preventDefault();
+          }, { passive: false });
+        })(toggles[i]);
+      }
+
+      // Default all submenus hidden on load
+      var subs = qsa(panel, "[data-submenu]");
+      for (var j = 0; j < subs.length; j++){
+        subs[j].hidden = true;
+      }
+    }
+
+    wireSubmenus();
+
+    // Ensure closed on first load (some builds cache open state)
+    closeMenu();
+
+    // Expose minimal debug helpers (optional)
+    window.__tcfrMenu = {
+      open: openMenu,
+      close: closeMenu,
+      toggle: toggleMenu
+    };
+  });
 })();
