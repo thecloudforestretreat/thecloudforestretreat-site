@@ -793,28 +793,28 @@ input:focus, select:focus, textarea:focus{
     </section>
 
 
-    <section class="card gReviews" aria-label="Guest reviews">
+    <section class="card gReviews" aria-label="Reseñas de huéspedes">
       <div class="gHead">
         <div>
-          <h3 class="gTitle">A los huespedes les encanta su estadia</h3>
-          <p class="gSub">Algunos de nuestros comentarios más recientes en Google. ¿Quieres ver todas las reseñas o dejar la tuya?</p>
+          <h3 class="gTitle">A los huéspedes les encanta su estadía</h3>
+          <p class="gSub">Algunos de nuestros comentarios más recientes en Google. ¿Quieres ver la lista completa o dejar la tuya?</p>
         </div>
         <div class="gBadge" aria-label="Google rating">
           <img class="gLogo" src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" loading="lazy" decoding="async" />
           <div class="gScoreRow">
             <span>5.0</span>
             <span class="gStars" aria-label="5 out of 5 stars">★★★★★</span>
-            <span class="gCount">(9 resenas)</span>
+            <span class="gCount">(9 reseñas)</span>
           </div>
         </div>
       </div>
 
-      <div class="gActions" aria-label="Review actions">
-        <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Leer resenas</a>
-        <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Escribir una resena</a>
+      <div class="gActions" aria-label="Acciones de reseñas">
+        <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Leer reseñas</a>
+        <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Escribir una reseña</a>
       </div>
 
-      <div class="gQuotes" aria-label="Review excerpts">
+      <div class="gQuotes" aria-label="Extractos de reseñas">
         <div class="gQuote">
           <p class="gQuoteText">"Un lugar fantástico para desconectarse y reconectar con la naturaleza. Esta experiencia única se puede personalizar tanto como quieras."</p>
           <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">V Arguello</span></p>
@@ -834,7 +834,7 @@ input:focus, select:focus, textarea:focus{
 <section class="card sideImageCard" aria-label="Booking image placeholder">
       <div class="sideImageFrame">
         <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="The Cloud Forest Retreat view" loading="lazy" decoding="async" />
-        <div class="sideImageCaption">Un lugar tranquilo para reconectar en el bosque nublado.</div>
+        <div class="sideImageCaption">Un lugar tranquilo para resetear en el bosque nublado.</div>
       </div>
     </section>
   </aside>
@@ -984,7 +984,7 @@ input:focus, select:focus, textarea:focus{
 
   function setSending(isSending){
     btn.disabled = isSending;
-    btn.textContent = isSending ? "Sending..." : "Submit request";
+    btn.textContent = isSending ? "Enviando..." : "Enviar solicitud";
   }
 
   function showSuccess(){
@@ -994,8 +994,8 @@ input:focus, select:focus, textarea:focus{
 
   function showError(msg){
     statusCard.classList.add("show");
-    statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
-    statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
+    statusCard.querySelector(".statusTitle").textContent = "Algo salió mal";
+    statusCard.querySelector(".statusText").textContent = msg || "Por favor, inténtalo de nuevo en un momento.";
     statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
@@ -1010,7 +1010,7 @@ input:focus, select:focus, textarea:focus{
     var fd = new FormData(form);
 
     if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
-      showError("Please fill out all required fields.");
+      showError("Por favor completa todos los campos obligatorios.");
       return;
     }
 
@@ -1028,7 +1028,7 @@ input:focus, select:focus, textarea:focus{
     })
     .catch(function(){
       setSending(false);
-      showError("We could not submit your request. Please try again.");
+      showError("No pudimos enviar tu solicitud. Por favor, inténtalo de nuevo.");
     });
   });
 })();
