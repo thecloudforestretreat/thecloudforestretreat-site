@@ -478,6 +478,155 @@ input:focus, select:focus, textarea:focus{
   .actionsRow{ gap: 12px; }
   .sideImageFrame{ aspect-ratio: 16 / 10; }
 }
+  
+/* Google reviews (booking) */
+.gReviews{
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.gReviews:before{
+  content:"";
+  position:absolute;
+  inset: -140px -140px auto auto;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+  pointer-events:none;
+}
+.gHead{
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.gTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--forest);
+}
+.gSub{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14.4px;
+  position: relative;
+}
+.gBadge{
+  position: relative;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+}
+.gLogo{
+  width: 28px;
+  height: 28px;
+  display:block;
+}
+.gScoreRow{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-weight: 900;
+  color: rgba(11,26,16,0.86);
+  font-size: 14px;
+}
+.gStars{
+  color: #FBBC05;
+  letter-spacing: 1px;
+  font-size: 14.5px;
+}
+.gCount{
+  font-weight: 800;
+  color: rgba(11,26,16,0.62);
+}
+.gActions{
+  position: relative;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.gBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  border: 1px solid rgba(13,89,37,0.18);
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+}
+.gBtn.outline{
+  background: rgba(255,255,255,0.64);
+  color: var(--forest2);
+}
+.gBtn.primary{
+  background: var(--orange);
+  color:#fff;
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 14px 30px rgba(224,100,58,0.22);
+}
+.gQuotes{
+  position: relative;
+  display:grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.gQuote{
+  border-radius: 16px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(245,245,220,0.78);
+  padding: 12px;
+}
+.gQuoteText{
+  margin: 0;
+  color: rgba(11,26,16,0.80);
+  font-weight: 650;
+  font-size: 14.4px;
+  line-height: 1.7;
+}
+.gQuoteMeta{
+  margin: 8px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(11,26,16,0.70);
+  font-weight: 900;
+  font-size: 12.6px;
+}
+.gQuoteStars{
+  color: #FBBC05;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1;
+}
+.gQuoteName{
+  color: rgba(11,26,16,0.72);
+}
+@media (max-width: 900px){
+  .gActions{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .gBtn{ width: 100%; }
+}
+
   </style>
 </head>
 <body>
@@ -643,7 +792,46 @@ input:focus, select:focus, textarea:focus{
       </p>
     </section>
 
-    <section class="card sideImageCard" aria-label="Booking image placeholder">
+
+    <section class="card gReviews" aria-label="Guest reviews">
+      <div class="gHead">
+        <div>
+          <h3 class="gTitle">Guests love their stay</h3>
+          <p class="gSub">A few recent Google review highlights. Want the full list or to leave your own?</p>
+        </div>
+        <div class="gBadge" aria-label="Google rating">
+          <img class="gLogo" src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" loading="lazy" decoding="async" />
+          <div class="gScoreRow">
+            <span>5.0</span>
+            <span class="gStars" aria-label="5 out of 5 stars">★★★★★</span>
+            <span class="gCount">(9 reviews)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gActions" aria-label="Review actions">
+        <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Read reviews</a>
+        <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Write a review</a>
+      </div>
+
+      <div class="gQuotes" aria-label="Review excerpts">
+        <div class="gQuote">
+          <p class="gQuoteText">"Fantastic place to disconnect and get in touch with nature. This unique experience can be as customized as you want."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">V Arguello</span></p>
+        </div>
+        <div class="gQuote">
+          <p class="gQuoteText">"Absolutely magical experience at the cloud forest retreat. The views are incredible. The hosts are attentive, friendly, and welcoming."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Abigail Martin</span></p>
+        </div>
+        <div class="gQuote">
+          <p class="gQuoteText">"Beautiful accommodations and meals with a lovely host and views that cannot be beat, highly recommend."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Pauline Witzke</span></p>
+        </div>
+      </div>
+    </section>
+
+
+<section class="card sideImageCard" aria-label="Booking image placeholder">
       <div class="sideImageFrame">
         <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="The Cloud Forest Retreat view" loading="lazy" decoding="async" />
         <div class="sideImageCaption">A calm place to reset in the cloud forest</div>
