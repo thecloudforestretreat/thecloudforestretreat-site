@@ -212,7 +212,7 @@
       box-shadow: none;
     }
 
-    /* Google Reviews badge (homepage) */
+    /* Google Reviews badge (match EN layout) */
     .tcfr-google-reviews{
       margin-top: 18px;
       padding: 14px;
@@ -229,13 +229,12 @@
       flex-wrap:wrap;
     }
 
-    /* Keep Google icon on the same line as the rating (match EN layout) */
-    .tcfr-google-badge{
+    .tcfr-google-left{
       display:flex;
       align-items:center;
       gap:12px;
       flex-wrap:nowrap;
-      min-width: 0;
+      min-width:0;
     }
 
     .tcfr-google-logo{
@@ -244,7 +243,7 @@
       flex: 0 0 auto;
     }
 
-    .tcfr-google-score{
+    .tcfr-google-rating{
       display:flex;
       align-items:center;
       gap:8px;
@@ -253,7 +252,7 @@
       font-size:14px;
     }
 
-    .tcfr-score-num{
+    .tcfr-rating-score{
       font-weight:700;
       color:#1f3d2b;
     }
@@ -265,7 +264,7 @@
       line-height:1;
     }
 
-    .tcfr-score-count{
+    .tcfr-review-count{
       color:#4b6b5a;
     }
 
@@ -581,14 +580,15 @@
           </div>
         </div>
 
+        <!-- Google Reviews Trust Block -->
         <section class="tcfr-google-reviews" aria-label="Resenas de Google">
           <div class="tcfr-google-reviews-inner">
-            <div class="tcfr-google-badge" aria-label="Google rating badge">
+            <div class="tcfr-google-left" aria-label="Google rating badge">
               <img src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" class="tcfr-google-logo" loading="lazy" decoding="async" />
-              <div class="tcfr-google-score">
-                <span class="tcfr-score-num">5.0</span>
+              <div class="tcfr-google-rating">
+                <span class="tcfr-rating-score">5.0</span>
                 <span class="tcfr-stars" aria-label="5 de 5 estrellas">★★★★★</span>
-                <span class="tcfr-score-count">(9 resenas)</span>
+                <span class="tcfr-review-count">(9 resenas)</span>
               </div>
             </div>
 
