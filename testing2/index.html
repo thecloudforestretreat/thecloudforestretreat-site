@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservas | The Cloud Forest Retreat</title>
+  <meta name="description" content="Solicita disponibilidad en The Cloud Forest Retreat cerca de Quito, Ecuador. Comparte tus fechas y preferencias y te responderemos con disponibilidad y los siguientes pasos." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/es/booking/" />
+  
+<link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/booking/" />
+  
+<link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/booking/" />
+  
+<link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/booking/" />
+  
+<meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="Reservas | The Cloud Forest Retreat" />
+  <meta property="og:description" content="Solicita disponibilidad en The Cloud Forest Retreat cerca de Quito, Ecuador. Comparte tus fechas y preferencias y te responderemos con disponibilidad y los siguientes pasos." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/es/booking/" />
+  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reservas | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Solicita disponibilidad en The Cloud Forest Retreat cerca de Quito, Ecuador. Comparte tus fechas y preferencias y te responderemos con disponibilidad y los siguientes pasos." />
+  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <script src="/assets/js/head.js" defer></script>
+  <style>
+    :root{
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
+      --forest: #0D5925;
+      --forest2: #0B2B12;
+      --orange: #E0643A;
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
+    }
+*{ box-sizing: border-box; }
+body{ margin: 0; }
+
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 18px 76px;
+}
+
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--glass2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+}
+
+.hero{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--glass);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
+
+/*
+  INNER PAGE HERO (Booking):
+  Shorter like Contacto/About, keeps subject visible and reduces scroll before the form.
+*/
+.heroMedia{
+  position: relative;
+  height: clamp(320px, 42vh, 520px);
+  background: rgba(0,0,0,0.10);
+}
+
+.heroMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+  display: block;
+  transform: scale(1.01);
+}
+
+.heroOverlay{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events: none;
+}
+
+.heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+  max-width: 860px;
+}
+
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(231,228,209,0.94);
+}
+
+.heroH1{
+  margin: 10px 0 8px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 4.2vw, 52px);
+  color: #fff;
+  text-shadow: 0 14px 40px rgba(0,0,0,0.34);
+}
+
+.heroP{
+  margin: 0;
+  color: rgba(231,228,209,0.94);
+  font-size: 15.8px;
+  line-height: 1.75;
+  font-weight: 650;
+  text-shadow: 0 10px 26px rgba(0,0,0,0.18);
+  max-width: 92ch;
+}
+
+.grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.pad{ padding: 14px; }
+
+.h2{
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1.08;
+}
+
+.hint{
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14.6px;
+}
+
+/* OTA (booking-site) module */
+.otaBlock{
+  margin-top: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.otaTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.otaHint{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.otaControls{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  max-width: 360px;
+}
+
+.otaGrid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+.otaBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(13,89,37,0.16);
+  background: rgba(245,245,220,0.78);
+  box-shadow: 0 10px 22px rgba(13,89,37,0.10);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 56px;
+}
+
+.otaBtn:hover{
+  transform: translateY(-1px);
+}
+
+.otaBtn:focus{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
+  border-color: rgba(224,100,58,0.45);
+}
+
+.otaBtn img{
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.otaBtn.is-disabled{
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.otaNote{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 650;
+  line-height: 1.6;
+  font-size: 13px;
+  max-width: 92ch;
+}
+
+
+.formGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field{ min-width: 0; }
+.full{ grid-column: 1 / -1; }
+
+label{
+  display: block;
+  font-weight: 900;
+  color: var(--forest2);
+  font-size: 13px;
+  margin: 0 0 6px;
+}
+
+input, select, textarea{
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(13,89,37,0.16);
+  background: rgba(255,255,255,0.62);
+  padding: 12px 12px;
+  color: var(--ink);
+  outline: none;
+}
+
+select{ padding-right: 40px; }
+
+textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus{
+  box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
+  border-color: rgba(224,100,58,0.45);
+}
+
+.req{
+  color: rgba(224,100,58,0.95);
+  font-weight: 900;
+  margin-left: 4px;
+}
+
+.actionsRow{
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.miniNote{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 72ch;
+}
+
+.submitBtn{
+  appearance: none;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: var(--orange);
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(224,100,58,0.22);
+  min-width: 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
+
+.sideStack{
+  display: grid;
+  gap: 14px;
+  align-items: start;
+}
+
+.sideCard{
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sideCard:before{
+  content:"";
+  position:absolute;
+  inset: -120px -120px auto auto;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.18), rgba(224,100,58,0) 62%);
+  pointer-events:none;
+}
+
+.sideTitle{
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--forest);
+  position: relative;
+}
+
+.sideP{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.6px;
+  position: relative;
+}
+
+.statusCard{
+  padding: 14px;
+  display: none;
+}
+.statusCard.show{ display: block; }
+
+.statusTitle{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  color: var(--forest);
+}
+
+.statusText{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.75;
+  font-weight: 650;
+  font-size: 14.6px;
+}
+
+.sideImageCard{
+  padding: 14px;
+}
+
+.sideImageFrame{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: #ccc;
+  box-shadow: var(--shadow);
+}
+
+.sideImageFrame img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  display: block;
+  transform: scale(1.01);
+}
+
+.sideImageFrame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.26));
+  pointer-events:none;
+}
+
+.sideImageCaption{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  color: rgba(255,255,255,0.96);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-shadow: 0 14px 40px rgba(0,0,0,0.40);
+  font-size: 13.5px;
+  z-index: 1;
+}
+
+@media (max-width: 900px){
+  .wrap{ padding: 12px 14px 64px; }
+
+  .heroMedia{ height: clamp(240px, 34vh, 340px); }
+  .heroMedia img{ object-position: center 62%; }
+
+  .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
+  .grid{ grid-template-columns: 1fr; }
+  .formGrid{ grid-template-columns: 1fr; }
+  .submitBtn{ width: 100%; }
+  .actionsRow{ gap: 12px; }
+  .sideImageFrame{ aspect-ratio: 16 / 10; }
+}
+  
+/* Google reviews (booking) */
+.gReviews{
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.gReviews:before{
+  content:"";
+  position:absolute;
+  inset: -140px -140px auto auto;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+  pointer-events:none;
+}
+.gHead{
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.gTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--forest);
+}
+.gSub{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14.4px;
+  position: relative;
+}
+.gBadge{
+  position: relative;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+}
+.gLogo{
+  width: 28px;
+  height: 28px;
+  display:block;
+}
+.gScoreRow{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-weight: 900;
+  color: rgba(11,26,16,0.86);
+  font-size: 14px;
+}
+.gStars{
+  color: #FBBC05;
+  letter-spacing: 1px;
+  font-size: 14.5px;
+}
+.gCount{
+  font-weight: 800;
+  color: rgba(11,26,16,0.62);
+}
+.gActions{
+  position: relative;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.gBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  border: 1px solid rgba(13,89,37,0.18);
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+}
+.gBtn.outline{
+  background: rgba(255,255,255,0.64);
+  color: var(--forest2);
+}
+.gBtn.primary{
+  background: var(--orange);
+  color:#fff;
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 14px 30px rgba(224,100,58,0.22);
+}
+.gQuotes{
+  position: relative;
+  display:grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.gQuote{
+  border-radius: 16px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(245,245,220,0.78);
+  padding: 12px;
+}
+.gQuoteText{
+  margin: 0;
+  color: rgba(11,26,16,0.80);
+  font-weight: 650;
+  font-size: 14.4px;
+  line-height: 1.7;
+}
+.gQuoteMeta{
+  margin: 8px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(11,26,16,0.70);
+  font-weight: 900;
+  font-size: 12.6px;
+}
+.gQuoteStars{
+  color: #FBBC05;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1;
+}
+.gQuoteName{
+  color: rgba(11,26,16,0.72);
+}
+@media (max-width: 900px){
+  .gActions{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .gBtn{ width: 100%; }
+}
+
+  </style>
+</head>
+<body>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Pagina de reservas">
+    <section class="hero" aria-label="Booking hero">
+      <div class="heroMedia" aria-label="Hero image">
+        <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
+        <div class="heroOverlay" aria-hidden="true"></div>
+        <div class="heroInner">
+          <div class="kicker">Solicitar disponibilidad</div>
+          <h1 class="heroH1">Reserva tu estadia</h1>
+          <p class="heroP">
+            Share your preferred travel dates, group size, and room preference. We will follow up quickly with availability and next steps.
+            If needed, we can also help arrange ground transportation from Quito or the airport.
+          </p>
+        </div>
+      </div>
+    </section>
+<section class="grid" aria-label="Booking form and details">
+  <section class="card pad" aria-label="Solicitud de reserva form">
+    <h2 class="h2">Booking Request</h2>
+    <p class="hint">
+      This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
+    </p>
+
+    
+    <div class="otaBlock" aria-label="Instant booking on partner sites">
+      <h3 class="otaTitle">Book instantly on a booking site</h3>
+      <p class="otaHint">
+        Choose a stay type, then pick a site. If you prefer, you can still send a direct booking request using the form below.
+      </p>
+
+      <div class="otaControls" aria-label="Tipo de estadia selection">
+        <label for="ota_room">Tipo de estadia</label>
+        <select id="ota_room" name="ota_room">
+          <option value="Entire house">Entire house</option>
+          <option value="Suite Panoramica">Suite Panoramica</option>
+          <option value="Sunrise Habitacion">Sunrise Habitacion</option>
+          <option value="Sunset Habitacion">Sunset Habitacion</option>
+        </select>
+      </div>
+
+      <div class="otaGrid" aria-label="Booking site links">
+        <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Airbnb">
+          <img src="/assets/images/pages/booking/tcfr_booking_airbnb.png" alt="Airbnb" loading="lazy" decoding="async" />
+        </a>
+        <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Vrbo">
+          <img src="/assets/images/pages/booking/tcfr_booking_vrbo.png" alt="Vrbo" loading="lazy" decoding="async" />
+        </a>
+        <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Expedia">
+          <img src="/assets/images/pages/booking/tcfr_booking_expedia.png" alt="Expedia" loading="lazy" decoding="async" />
+        </a>
+        <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Book on Booking.com (coming soon)" aria-disabled="true">
+          <img src="/assets/images/pages/booking/tcfr_booking_booking.png" alt="Booking.com" loading="lazy" decoding="async" />
+        </a>
+      </div>
+
+      <p class="otaNote">
+        On these sites we list the entire house and each room separately, so you can book the stay type that matches your trip.
+      </p>
+    </div>
+
+
+    <form id="tcfrBookingForm" aria-label="Booking form">
+      <div class="formGrid">
+        <div class="field">
+          <label for="first_name">Nombre <span class="req">*</span></label>
+          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Your first name" autocapitalize="words" inputmode="text" spellcheck="false" />
+        </div>
+
+        <div class="field">
+          <label for="last_name">Apellido <span class="req">*</span></label>
+          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Your last name" autocapitalize="words" inputmode="text" spellcheck="false" />
+        </div>
+
+        <div class="field">
+          <label for="email">Correo <span class="req">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+        </div>
+
+        <div class="field">
+          <label for="phone">Telefono number <span class="req">*</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Pais code + phone number" />
+        </div>
+
+        <div class="field">
+          <label for="number_of_days_interested">Number of days interested</label>
+          <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Example: 2 nights" />
+        </div>
+
+        <div class="field">
+          <label for="number_of_guests">Numero de huespedes</label>
+          <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Example: 2 adults" />
+        </div>
+
+        <div class="field">
+          <label for="room_preference">Habitacion preference</label>
+          <select id="room_preference" name="room_preference">
+            <option value="">Selecciona una habitacion</option>
+            <option value="Suite Panoramica">Suite Panoramica</option>
+            <option value="Sunrise Habitacion">Sunrise Habitacion</option>
+            <option value="Sunset Habitacion">Sunset Habitacion</option>
+            <option value="Entire house">Entire house</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="transportation_needed">Transportation needed (Quito/airport)</label>
+          <select id="transportation_needed" name="transportation_needed">
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="how_did_you_hear_about_us">How did you hear about us?</label>
+          <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
+            <option value="">Select</option>
+            <option value="Referral">Referral</option>
+            <option value="Instagram">Instagram</option>
+            <option value="TikTok">TikTok</option>
+            <option value="YouTube">YouTube</option>
+            <option value="Google Search">Google Search</option>
+            <option value="Google Maps">Google Maps</option>
+            <option value="Airbnb">Airbnb</option>
+            <option value="Vrbo">Vrbo</option>
+            <option value="Booking.com">Booking.com</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
+        </div>
+      </div>
+
+      <div class="actionsRow">
+        <p class="miniNote">
+          By submitting, you agree we may contact you by email or phone to confirm details.
+        </p>
+        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit Request</button>
+      </div>
+    </form>
+  </section>
+
+  <aside class="sideStack" aria-label="Booking details (right column)">
+    <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
+      <h3 class="statusTitle">Request sent</h3>
+      <p class="statusText">
+        Thank you. We received your booking inquiry and sent a confirmation email.
+        If you do not see it, please check your spam or promotions folder.
+      </p>
+    </section>
+
+    <section class="card sideCard" aria-label="Que pasa despues">
+      <h3 class="sideTitle">Que pasa despues</h3>
+      <p class="sideP">
+        We will reply with availability, pricing, and any recommendations to make your stay effortless.
+        If you selected transportation, we will include pickup options from Quito or the airport.
+      </p>
+    </section>
+
+
+    <section class="card gReviews" aria-label="Resenas de huespedes">
+      <div class="gHead">
+        <div>
+          <h3 class="gTitle">A los huespedes les encanta su estadia</h3>
+          <p class="gSub">A few recent Google review highlights. Want the full list or to leave your own?</p>
+        </div>
+        <div class="gBadge" aria-label="Google rating">
+          <img class="gLogo" src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" loading="lazy" decoding="async" />
+          <div class="gScoreRow">
+            <span>5.0</span>
+            <span class="gStars" aria-label="5 out of 5 stars">★★★★★</span>
+            <span class="gCount">(9 reviews)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gActions" aria-label="Review actions">
+        <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Leer resenas</a>
+        <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Escribir una resena</a>
+      </div>
+
+      <div class="gQuotes" aria-label="Review excerpts">
+        <div class="gQuote">
+          <p class="gQuoteText">"Lugar fantastico para desconectarse y conectar con la naturaleza. This unique experience can be as customized as you want."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">V Arguello</span></p>
+        </div>
+        <div class="gQuote">
+          <p class="gQuoteText">"Una experiencia absolutamente magica en The Cloud Forest Retreat. Las vistas son increibles y el clima fue perfecto. Los anfitriones son atentos, amables y muy acogedores."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Abigail Martin</span></p>
+        </div>
+        <div class="gQuote">
+          <p class="gQuoteText">"Hermosos alojamientos y comidas, con una anfitriona encantadora y vistas inigualables. Muy recomendado."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Pauline Witzke</span></p>
+        </div>
+      </div>
+    </section>
+
+
+<section class="card sideImageCard" aria-label="Booking image placeholder">
+      <div class="sideImageFrame">
+        <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="The Cloud Forest Retreat view" loading="lazy" decoding="async" />
+        <div class="sideImageCaption">A calm place to reset in the cloud forest</div>
+      </div>
+    </section>
+  </aside>
+</section>
+  </main>
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
+  <script>
+    (function(){
+      "use strict";
+  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec";
+
+
+  var OTA_LINKS = {
+    "Entire house": {
+      "airbnb": "https://airbnb.com/h/thecloudforestretreat-entire",
+      "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4506928vb?dateless=true&x_pwa=1&rfrr=HSR&pwa_ts=1769454869987&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=false&adults=2&regionId=3000388018&destination=Calacali%2C+Pichincha%2C+Ecuador&destType=MARKET&latLong=-0.001291%2C-78.51387&searchId=ea67ea52-0c68-4544-a28a-1061e36034cb&sort=RECOMMENDED&userIntent=&expediaPropertyId=114399386",
+      "expedia": "https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information",
+      "booking": ""
+    },
+    "Suite Panoramica": {
+      "airbnb": "https://airbnb.com/h/thecloudforestretreat-panoramic-suite",
+      "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522305vb",
+      "expedia": "https://www.expedia.com/Quito-Hotels-Luxurious-Panoramic-Suite-At-The-Cloud-Forest-Retreat-W-Views-Modern-Comforts.h114674195.Hotel-Information",
+      "booking": ""
+    },
+    "Sunrise Habitacion": {
+      "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunrise-room",
+      "vrbo": "https://www.vrbo.com/en-gb/p4522358vb",
+      "expedia": "https://www.expedia.com/Quito-Hotels-Sunrise-Habitacion-At-The-Cloud-Forest-Retreat.h114675896.Hotel-Information",
+      "booking": ""
+    },
+    "Sunset Habitacion": {
+      "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunset-room",
+      "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522308vb?dateless=true&x_pwa=1&rfrr=HSR&pwa_ts=1769454870000&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=false&adults=2&regionId=3000388018&destination=Calacali%2C+Pichincha%2C+Ecuador&destType=MARKET&latLong=-0.001291%2C-78.51387&searchId=ea67ea52-0c68-4544-a28a-1061e36034cb&sort=RECOMMENDED&userIntent=&expediaPropertyId=114674265",
+      "expedia": "https://www.expedia.com/Quito-Hotels-Sunset-Habitacion-At-The-Cloud-Forest-Retreat.h114674265.Hotel-Information",
+      "booking": ""
+    }
+  };
+
+  var otaHabitacion = document.getElementById("ota_room");
+  var roomPref = document.getElementById("room_preference");
+
+  var btnAirbnb = document.getElementById("ota_airbnb");
+  var btnVrbo = document.getElementById("ota_vrbo");
+  var btnExpedia = document.getElementById("ota_expedia");
+  var btnBooking = document.getElementById("ota_booking");
+
+  function setBtnHref(btn, href){
+    if (!btn) return;
+    if (href){
+      btn.href = href;
+      btn.classList.remove("is-disabled");
+      btn.removeAttribute("aria-disabled");
+      btn.setAttribute("target", "_blank");
+      btn.setAttribute("rel", "noopener noreferrer");
+    } else {
+      btn.href = "#";
+      btn.classList.add("is-disabled");
+      btn.setAttribute("aria-disabled", "true");
+      btn.removeAttribute("target");
+      btn.removeAttribute("rel");
+    }
+  }
+
+  function updateOtas(stayType){
+    var map = OTA_LINKS[stayType] || OTA_LINKS["Entire house"];
+    setBtnHref(btnAirbnb, map.airbnb);
+    setBtnHref(btnVrbo, map.vrbo);
+    setBtnHref(btnExpedia, map.expedia);
+    setBtnHref(btnBooking, map.booking);
+  }
+
+  function normalizeStayType(v){
+    var s = String(v || "").trim();
+    if (!s) return "Entire house";
+    if (s === "Entire house") return s;
+    if (s === "Suite Panoramica") return s;
+    if (s === "Sunrise Habitacion") return s;
+    if (s === "Sunset Habitacion") return s;
+    return "Entire house";
+  }
+
+  function syncFromHabitacionPreference(){
+    if (!roomPref || !otaHabitacion) return;
+    var v = normalizeStayType(roomPref.value || "Entire house");
+    otaHabitacion.value = v;
+    updateOtas(v);
+  }
+
+  function syncFromOtaSelector(){
+    if (!otaHabitacion || !roomPref) return;
+    var v = normalizeStayType(otaHabitacion.value || "Entire house");
+    otaHabitacion.value = v;
+    roomPref.value = v;
+    updateOtas(v);
+  }
+
+  if (otaHabitacion){
+    otaHabitacion.addEventListener("change", syncFromOtaSelector);
+  }
+  if (roomPref){
+    roomPref.addEventListener("change", syncFromHabitacionPreference);
+  }
+
+  if (roomPref && roomPref.value){
+    syncFromHabitacionPreference();
+  } else {
+    if (otaHabitacion) otaHabitacion.value = "Entire house";
+    updateOtas("Entire house");
+  }
+
+
+
+  function toTitleCase(s){
+    var t = String(s || "").trim();
+    if (!t) return "";
+    t = t.toLowerCase().replace(/\s+/g, " ");
+    var parts = t.split(" ");
+    for (var i = 0; i < parts.length; i++){
+      var w = parts[i];
+      if (!w) continue;
+      var hy = w.split("-");
+      for (var j = 0; j < hy.length; j++){
+        var seg = hy[j];
+        if (!seg) continue;
+        hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
+      }
+      parts[i] = hy.join("-");
+    }
+    return parts.join(" ");
+  }
+
+  var form = document.getElementById("tcfrBookingForm");
+  var btn = document.getElementById("tcfrSubmitBtn");
+  var statusCard = document.getElementById("tcfrStatusCard");
+
+  var first = document.getElementById("first_name");
+  var last = document.getElementById("last_name");
+
+  function bindTitleCase(el){
+    if (!el) return;
+    el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
+  }
+  bindTitleCase(first);
+  bindTitleCase(last);
+
+  function setSending(isSending){
+    btn.disabled = isSending;
+    btn.textContent = isSending ? "Sending..." : "Submit request";
+  }
+
+  function showSuccess(){
+    statusCard.classList.add("show");
+    statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function showError(msg){
+    statusCard.classList.add("show");
+    statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
+    statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
+    statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  if (!form || !btn || !statusCard) return;
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    if (first) first.value = toTitleCase(first.value);
+    if (last) last.value = toTitleCase(last.value);
+
+    var fd = new FormData(form);
+
+    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
+      showError("Please fill out all required fields.");
+      return;
+    }
+
+    setSending(true);
+
+    fetch(WEB_APP_URL, {
+      method: "POST",
+      body: fd,
+      mode: "no-cors"
+    })
+    .then(function(){
+      showSuccess();
+      form.reset();
+      setSending(false);
+    })
+    .catch(function(){
+      setSending(false);
+      showError("We could not submit your request. Please try again.");
+    });
+  });
+})();
+  </script>
+</body>
+</html>
