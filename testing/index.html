@@ -603,9 +603,21 @@ input:focus, select:focus, textarea:focus{
 }
 .gQuoteMeta{
   margin: 8px 0 0;
-  color: rgba(11,26,16,0.62);
-  font-weight: 800;
-  font-size: 12.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(11,26,16,0.70);
+  font-weight: 900;
+  font-size: 12.6px;
+}
+.gQuoteStars{
+  color: #FBBC05;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1;
+}
+.gQuoteName{
+  color: rgba(11,26,16,0.72);
 }
 @media (max-width: 900px){
   .gActions{
@@ -805,15 +817,15 @@ input:focus, select:focus, textarea:focus{
       <div class="gQuotes" aria-label="Review excerpts">
         <div class="gQuote">
           <p class="gQuoteText">"Fantastic place to disconnect and get in touch with nature. This unique experience can be as customized as you want."</p>
-          <p class="gQuoteMeta">V Arguello</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">V Arguello</span></p>
         </div>
         <div class="gQuote">
           <p class="gQuoteText">"Absolutely magical experience at the cloud forest retreat. The views are incredible. The hosts are attentive, friendly, and welcoming."</p>
-          <p class="gQuoteMeta">Abigail Martin</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Abigail Martin</span></p>
         </div>
         <div class="gQuote">
           <p class="gQuoteText">"Beautiful accommodations and meals with a lovely host and views that cannot be beat, highly recommend."</p>
-          <p class="gQuoteMeta">Pauline Witzke</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Pauline Witzke</span></p>
         </div>
       </div>
     </section>
