@@ -637,158 +637,158 @@ input:focus, select:focus, textarea:focus{
         <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
         <div class="heroOverlay" aria-hidden="true"></div>
         <div class="heroInner">
-          <div class="kicker">Request availability</div>
+          <div class="kicker">Solicitar disponibilidad</div>
           <h1 class="heroH1">Reservar tu estadia</h1>
           <p class="heroP">
-            Share your preferred travel dates, group size, and room preference. We will follow up quickly with availability and next steps.
-            If needed, we can also help arrange ground transportation from Quito or the airport.
+            Comparte tus fechas preferidas, el tamaño de tu grupo y tu preferencia de habitación. Te responderemos rápido con la disponibilidad y los siguientes pasos.
+            Si lo necesitas, también podemos ayudarte a coordinar transporte terrestre desde Quito o el aeropuerto.
           </p>
         </div>
       </div>
     </section>
-<section class="grid" aria-label="Booking form and details">
-  <section class="card pad" aria-label="Solicitud de reserva form">
-    <h2 class="h2">Booking Request</h2>
+<section class="grid" aria-label="Formulario de reservas y detalles">
+  <section class="card pad" aria-label="Formulario de solicitud de reserva">
+    <h2 class="h2">Solicitud de reserva</h2>
     <p class="hint">
-      This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
+      Este formulario le llega por email a nuestro equipo y te envía una confirmación. Los campos con asterisco son obligatorios.
     </p>
 
     
-    <div class="otaBlock" aria-label="Instant booking on partner sites">
-      <h3 class="otaTitle">Book instantly on a booking site</h3>
+    <div class="otaBlock" aria-label="Reserva inmediata en sitios aliados">
+      <h3 class="otaTitle">Reserva al instante en un sitio de reservas</h3>
       <p class="otaHint">
-        Choose a stay type, then pick a site. If you prefer, you can still send a direct booking request using the form below.
+        Elige el tipo de estadía y luego selecciona el sitio. Si prefieres, también puedes enviarnos una solicitud directa con el formulario de abajo.
       </p>
 
-      <div class="otaControls" aria-label="Stay type selection">
-        <label for="ota_room">Stay type</label>
+      <div class="otaControls" aria-label="Selección del tipo de estadía">
+        <label for="ota_room">Tipo de estadía</label>
         <select id="ota_room" name="ota_room">
-          <option value="Entire house">Entire house</option>
-          <option value="Suite Panoramica">Suite Panoramica</option>
-          <option value="Habitacion Amanecer">Habitacion Amanecer</option>
-          <option value="Habitacion Atardecer">Habitacion Atardecer</option>
+          <option value="Entire house">Casa completa</option>
+          <option value="Panoramic Suite">Suite panorámica</option>
+          <option value="Sunrise Room">Habitación Sunrise</option>
+          <option value="Sunset Room">Habitación Sunset</option>
         </select>
       </div>
 
-      <div class="otaGrid" aria-label="Booking site links">
-        <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Airbnb">
+      <div class="otaGrid" aria-label="Enlaces a sitios de reserva">
+        <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Airbnb">
           <img src="/assets/images/pages/booking/tcfr_booking_airbnb.png" alt="Airbnb" loading="lazy" decoding="async" />
         </a>
-        <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Vrbo">
+        <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Vrbo">
           <img src="/assets/images/pages/booking/tcfr_booking_vrbo.png" alt="Vrbo" loading="lazy" decoding="async" />
         </a>
-        <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Expedia">
+        <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Expedia">
           <img src="/assets/images/pages/booking/tcfr_booking_expedia.png" alt="Expedia" loading="lazy" decoding="async" />
         </a>
-        <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Book on Booking.com (coming soon)" aria-disabled="true">
+        <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Reservar en Booking.com (próximamente)" aria-disabled="true">
           <img src="/assets/images/pages/booking/tcfr_booking_booking.png" alt="Booking.com" loading="lazy" decoding="async" />
         </a>
       </div>
 
       <p class="otaNote">
-        On these sites we list the entire house and each room separately, so you can book the stay type that matches your trip.
+        En estos sitios publicamos la casa completa y cada habitación por separado, para que reserves el tipo de estadía que mejor se ajusta a tu viaje.
       </p>
     </div>
 
 
-    <form id="tcfrBookingForm" aria-label="Booking form">
+    <form id="tcfrBookingForm" aria-label="Formulario de reserva">
       <div class="formGrid">
         <div class="field">
           <label for="first_name">Nombre <span class="req">*</span></label>
-          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Your first name" autocapitalize="words" inputmode="text" spellcheck="false" />
+          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Tu nombre" autocapitalize="words" inputmode="text" spellcheck="false" />
         </div>
 
         <div class="field">
           <label for="last_name">Apellido <span class="req">*</span></label>
-          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Your last name" autocapitalize="words" inputmode="text" spellcheck="false" />
+          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Tu apellido" autocapitalize="words" inputmode="text" spellcheck="false" />
         </div>
 
         <div class="field">
-          <label for="email">Correo <span class="req">*</span></label>
-          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+          <label for="email">Email <span class="req">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="tucorreo@ejemplo.com" />
         </div>
 
         <div class="field">
-          <label for="phone">Telefono number <span class="req">*</span></label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
+          <label for="phone">Teléfono <span class="req">*</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Código de país + número" />
         </div>
 
         <div class="field">
-          <label for="number_of_days_interested">Cantidad de noches</label>
+          <label for="number_of_days_interested">Cantidad de días</label>
           <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Ejemplo: 2 noches" />
         </div>
 
         <div class="field">
-          <label for="number_of_guests">Cantidad de huespedes</label>
+          <label for="number_of_guests">Número de huéspedes</label>
           <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Ejemplo: 2 adultos" />
         </div>
 
         <div class="field">
-          <label for="room_preference">Preferencia de habitacion</label>
+          <label for="room_preference">Preferencia de habitación</label>
           <select id="room_preference" name="room_preference">
-            <option value="">Selecciona una habitacion</option>
-            <option value="Suite Panoramica">Suite Panoramica</option>
-            <option value="Habitacion Amanecer">Habitacion Amanecer</option>
-            <option value="Habitacion Atardecer">Habitacion Atardecer</option>
-            <option value="Entire house">Entire house</option>
+            <option value="">Elige una opción</option>
+            <option value="Panoramic Suite">Suite panorámica</option>
+            <option value="Sunrise Room">Habitación Sunrise</option>
+            <option value="Sunset Room">Habitación Sunset</option>
+            <option value="Entire house">Casa completa</option>
           </select>
         </div>
 
         <div class="field">
-          <label for="transportation_needed">Transportation needed (Quito/airport)</label>
+          <label for="transportation_needed">Necesitas transporte (Quito/aeropuerto)</label>
           <select id="transportation_needed" name="transportation_needed">
-            <option value="">Select</option>
-            <option value="Yes">Yes</option>
+            <option value="">Selecciona</option>
+            <option value="Yes">Sí</option>
             <option value="No">No</option>
           </select>
         </div>
 
         <div class="field full">
-          <label for="how_did_you_hear_about_us">How did you hear about us?</label>
+          <label for="how_did_you_hear_about_us">Cómo te enteraste de nosotros</label>
           <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
-            <option value="">Select</option>
-            <option value="Referral">Referral</option>
+            <option value="">Selecciona</option>
+            <option value="Referral">Recomendación</option>
             <option value="Instagram">Instagram</option>
             <option value="TikTok">TikTok</option>
             <option value="YouTube">YouTube</option>
-            <option value="Google Search">Google Search</option>
+            <option value="Google Search">Búsqueda en Google</option>
             <option value="Google Maps">Google Maps</option>
             <option value="Airbnb">Airbnb</option>
             <option value="Vrbo">Vrbo</option>
             <option value="Booking.com">Booking.com</option>
-            <option value="Other">Other</option>
+            <option value="Other">Otro</option>
           </select>
         </div>
 
         <div class="field full">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="Cuéntanos tus fechas ideales, tus preguntas y cualquier detalle importante."></textarea>
         </div>
       </div>
 
       <div class="actionsRow">
         <p class="miniNote">
-          By submitting, you agree we may contact you by email or phone to confirm details.
+          Al enviar, aceptas que podamos contactarte por email o teléfono para confirmar los detalles.
         </p>
-        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit Request</button>
+        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Enviar solicitud</button>
       </div>
     </form>
   </section>
 
-  <aside class="sideStack" aria-label="Booking details (right column)">
-    <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
-      <h3 class="statusTitle">Request sent</h3>
+  <aside class="sideStack" aria-label="Detalles de la reserva (columna derecha)">
+    <section id="tcfrStatusCard" class="card statusCard" aria-label="Estado del envío">
+      <h3 class="statusTitle">Solicitud enviada</h3>
       <p class="statusText">
-        Thank you. We received your booking inquiry and sent a confirmation email.
-        If you do not see it, please check your spam or promotions folder.
+        Gracias. Recibimos tu solicitud de reserva y te enviamos un email de confirmación.
+        Si no lo ves, revisa tu carpeta de spam o promociones.
       </p>
     </section>
 
-    <section class="card sideCard" aria-label="What happens next">
-      <h3 class="sideTitle">What happens next</h3>
+    <section class="card sideCard" aria-label="Qué pasa después">
+      <h3 class="sideTitle">Qué pasa después</h3>
       <p class="sideP">
-        We will reply with availability, pricing, and any recommendations to make your stay effortless.
-        If you selected transportation, we will include pickup options from Quito or the airport.
+        Te responderemos con disponibilidad, precios y recomendaciones para que tu estadía sea fácil.
+        Si seleccionaste transporte, te compartiremos opciones de recogida desde Quito o el aeropuerto.
       </p>
     </section>
 
