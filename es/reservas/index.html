@@ -4,27 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Reservas | The Cloud Forest Retreat</title>
-  <meta name="description" content="Solicita disponibilidad en The Cloud Forest Retreat cerca de Quito, Ecuador. Comparte tus fechas y preferencias y te responderemos con disponibilidad y los siguientes pasos." />
+  <meta name="description" content="Consulta disponibilidad y solicita tu reserva en The Cloud Forest Retreat. Revisa tarifas, elige tu habitacion y coordina tu estadia en el bosque nublado cerca de Mindo, Ecuador." />
   <meta name="robots" content="index,follow" />
-  <!-- Canonical + hreflang (PRODUCTION URLs) -->
-  <link rel="canonical" href="https://thecloudforestretreat.com/es/booking/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/booking/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/booking/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/booking/" />
-  <!-- Open Graph (PRODUCTION URLs) -->
+  <link rel="canonical" href="https://thecloudforestretreat.com/es/reservas/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
   <meta property="og:title" content="Reservas | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Solicita disponibilidad en The Cloud Forest Retreat cerca de Quito, Ecuador. Comparte tus fechas y preferencias y te responderemos con disponibilidad y los siguientes pasos." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/es/booking/" />
+  <meta property="og:description" content="Consulta disponibilidad y solicita tu reserva. Elige tu habitacion y planifica una estadia tranquila en el bosque nublado cerca de Mindo, Ecuador." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/es/reservas/" />
   <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat en Ecuador" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Reservas | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Solicita disponibilidad en The Cloud Forest Retreat cerca de Quito, Ecuador. Comparte tus fechas y preferencias y te responderemos con disponibilidad y los siguientes pasos." />
+  <meta name="twitter:description" content="Consulta disponibilidad y solicita tu reserva. Elige tu habitacion y planifica una estadia tranquila en el bosque nublado cerca de Mindo, Ecuador." />
   <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -483,18 +478,167 @@ input:focus, select:focus, textarea:focus{
   .actionsRow{ gap: 12px; }
   .sideImageFrame{ aspect-ratio: 16 / 10; }
 }
+  
+/* Google reviews (booking) */
+.gReviews{
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.gReviews:before{
+  content:"";
+  position:absolute;
+  inset: -140px -140px auto auto;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+  pointer-events:none;
+}
+.gHead{
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.gTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--forest);
+}
+.gSub{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14.4px;
+  position: relative;
+}
+.gBadge{
+  position: relative;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+}
+.gLogo{
+  width: 28px;
+  height: 28px;
+  display:block;
+}
+.gScoreRow{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-weight: 900;
+  color: rgba(11,26,16,0.86);
+  font-size: 14px;
+}
+.gStars{
+  color: #FBBC05;
+  letter-spacing: 1px;
+  font-size: 14.5px;
+}
+.gCount{
+  font-weight: 800;
+  color: rgba(11,26,16,0.62);
+}
+.gActions{
+  position: relative;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.gBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  border: 1px solid rgba(13,89,37,0.18);
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+}
+.gBtn.outline{
+  background: rgba(255,255,255,0.64);
+  color: var(--forest2);
+}
+.gBtn.primary{
+  background: var(--orange);
+  color:#fff;
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 14px 30px rgba(224,100,58,0.22);
+}
+.gQuotes{
+  position: relative;
+  display:grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.gQuote{
+  border-radius: 16px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(245,245,220,0.78);
+  padding: 12px;
+}
+.gQuoteText{
+  margin: 0;
+  color: rgba(11,26,16,0.80);
+  font-weight: 650;
+  font-size: 14.4px;
+  line-height: 1.7;
+}
+.gQuoteMeta{
+  margin: 8px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(11,26,16,0.70);
+  font-weight: 900;
+  font-size: 12.6px;
+}
+.gQuoteStars{
+  color: #FBBC05;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1;
+}
+.gQuoteName{
+  color: rgba(11,26,16,0.72);
+}
+@media (max-width: 900px){
+  .gActions{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .gBtn{ width: 100%; }
+}
+
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Página de reservas">
+  <main class="wrap" aria-label="Pagina de reservas">
     <section class="hero" aria-label="Hero de reservas">
-      <div class="heroMedia" aria-label="Imagen principal">
-        <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="Vista de The Cloud Forest Retreat" loading="eager" decoding="async" />
+      <div class="heroMedia" aria-label="Hero image">
+        <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
         <div class="heroOverlay" aria-hidden="true"></div>
         <div class="heroInner">
           <div class="kicker">Solicitar disponibilidad</div>
-          <h1 class="heroH1">Reserva tu estadía</h1>
+          <h1 class="heroH1">Reservar tu estadia</h1>
           <p class="heroP">
             Comparte tus fechas preferidas, el tamaño de tu grupo y tu preferencia de habitación. Te responderemos rápido con la disponibilidad y los siguientes pasos.
             Si lo necesitas, también podemos ayudarte a coordinar transporte terrestre desde Quito o el aeropuerto.
@@ -648,10 +792,49 @@ input:focus, select:focus, textarea:focus{
       </p>
     </section>
 
-    <section class="card sideImageCard" aria-label="Imagen de apoyo">
+
+    <section class="card gReviews" aria-label="Guest reviews">
+      <div class="gHead">
+        <div>
+          <h3 class="gTitle">A los huespedes les encanta su estadia</h3>
+          <p class="gSub">Algunos de nuestros comentarios más recientes en Google. ¿Quieres ver todas las reseñas o dejar la tuya?</p>
+        </div>
+        <div class="gBadge" aria-label="Google rating">
+          <img class="gLogo" src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" loading="lazy" decoding="async" />
+          <div class="gScoreRow">
+            <span>5.0</span>
+            <span class="gStars" aria-label="5 out of 5 stars">★★★★★</span>
+            <span class="gCount">(9 resenas)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gActions" aria-label="Review actions">
+        <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Leer resenas</a>
+        <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Escribir una resena</a>
+      </div>
+
+      <div class="gQuotes" aria-label="Review excerpts">
+        <div class="gQuote">
+          <p class="gQuoteText">"Un lugar fantástico para desconectarse y reconectar con la naturaleza. Esta experiencia única se puede personalizar tanto como quieras."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">V Arguello</span></p>
+        </div>
+        <div class="gQuote">
+          <p class="gQuoteText">"Una experiencia absolutamente mágica en The Cloud Forest Retreat. Las vistas son increíbles. Los anfitriones son atentos, amables y muy acogedores."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Abigail M.</span></p>
+        </div>
+        <div class="gQuote">
+          <p class="gQuoteText">"Alojamientos y comidas hermosas, con un anfitrión encantador y vistas inigualables. Totalmente recomendado."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Pauline W.</span></p>
+        </div>
+      </div>
+    </section>
+
+
+<section class="card sideImageCard" aria-label="Booking image placeholder">
       <div class="sideImageFrame">
-        <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="Vista de The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="sideImageCaption">Un lugar tranquilo para resetear en el bosque nublado</div>
+        <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="The Cloud Forest Retreat view" loading="lazy" decoding="async" />
+        <div class="sideImageCaption">Un lugar tranquilo para reconectar en el bosque nublado.</div>
       </div>
     </section>
   </aside>
@@ -672,19 +855,19 @@ input:focus, select:focus, textarea:focus{
       "expedia": "https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information",
       "booking": ""
     },
-    "Panoramic Suite": {
+    "Suite Panoramica": {
       "airbnb": "https://airbnb.com/h/thecloudforestretreat-panoramic-suite",
       "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522305vb",
       "expedia": "https://www.expedia.com/Quito-Hotels-Luxurious-Panoramic-Suite-At-The-Cloud-Forest-Retreat-W-Views-Modern-Comforts.h114674195.Hotel-Information",
       "booking": ""
     },
-    "Sunrise Room": {
+    "Habitacion Amanecer": {
       "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunrise-room",
       "vrbo": "https://www.vrbo.com/en-gb/p4522358vb",
       "expedia": "https://www.expedia.com/Quito-Hotels-Sunrise-Room-At-The-Cloud-Forest-Retreat.h114675896.Hotel-Information",
       "booking": ""
     },
-    "Sunset Room": {
+    "Habitacion Atardecer": {
       "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunset-room",
       "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522308vb?dateless=true&x_pwa=1&rfrr=HSR&pwa_ts=1769454870000&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=false&adults=2&regionId=3000388018&destination=Calacali%2C+Pichincha%2C+Ecuador&destType=MARKET&latLong=-0.001291%2C-78.51387&searchId=ea67ea52-0c68-4544-a28a-1061e36034cb&sort=RECOMMENDED&userIntent=&expediaPropertyId=114674265",
       "expedia": "https://www.expedia.com/Quito-Hotels-Sunset-Room-At-The-Cloud-Forest-Retreat.h114674265.Hotel-Information",
@@ -729,9 +912,9 @@ input:focus, select:focus, textarea:focus{
     var s = String(v || "").trim();
     if (!s) return "Entire house";
     if (s === "Entire house") return s;
-    if (s === "Panoramic Suite") return s;
-    if (s === "Sunrise Room") return s;
-    if (s === "Sunset Room") return s;
+    if (s === "Suite Panoramica") return s;
+    if (s === "Habitacion Amanecer") return s;
+    if (s === "Habitacion Atardecer") return s;
     return "Entire house";
   }
 
@@ -801,7 +984,7 @@ input:focus, select:focus, textarea:focus{
 
   function setSending(isSending){
     btn.disabled = isSending;
-    btn.textContent = isSending ? "Enviando..." : "Enviar solicitud";
+    btn.textContent = isSending ? "Sending..." : "Submit request";
   }
 
   function showSuccess(){
@@ -811,8 +994,8 @@ input:focus, select:focus, textarea:focus{
 
   function showError(msg){
     statusCard.classList.add("show");
-    statusCard.querySelector(".statusTitle").textContent = "Algo salió mal";
-    statusCard.querySelector(".statusText").textContent = msg || "Por favor intenta nuevamente en un momento.";
+    statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
+    statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
     statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
@@ -827,7 +1010,7 @@ input:focus, select:focus, textarea:focus{
     var fd = new FormData(form);
 
     if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
-      showError("Por favor completa todos los campos obligatorios.");
+      showError("Please fill out all required fields.");
       return;
     }
 
@@ -845,7 +1028,7 @@ input:focus, select:focus, textarea:focus{
     })
     .catch(function(){
       setSending(false);
-      showError("No pudimos enviar tu solicitud. Por favor intenta nuevamente.");
+      showError("We could not submit your request. Please try again.");
     });
   });
 })();
