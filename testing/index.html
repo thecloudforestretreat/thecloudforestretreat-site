@@ -215,7 +215,7 @@ margin:0;
       box-shadow: none;
     }
 
-    /* Google Reviews trust block (homepage) */
+    /* Google Reviews badge (homepage) */
     .tcfr-google-reviews{
       margin-top: 18px;
       padding: 14px;
@@ -225,140 +225,113 @@ margin:0;
     }
 
     .tcfr-google-reviews-inner{
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas:
-    "left tourism"
-    "actions tourism";
-  align-items: center;
-  gap: 12px 14px;
-}
+      display: grid;
+      grid-template-columns: auto 1fr 140px;
+      grid-template-areas: "left actions tourism";
+      align-items: center;
+      gap: 16px;
+    }
 
     .tcfr-google-left{
-  grid-area: left;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
+      grid-area: left;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
 
     .tcfr-google-logo{
-      width:34px;
-      height:34px;
+      width: 34px;
+      height: 34px;
       flex: 0 0 auto;
     }
 
     .tcfr-google-rating{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      flex-wrap:wrap;
-      min-width:0;
-      font-size:14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      flex-wrap: wrap;
     }
 
     .tcfr-rating-score{
-      font-weight:700;
-      color:#1f3d2b;
+      font-weight: 700;
+      color: #1f3d2b;
     }
 
     .tcfr-stars{
-      color:#FBBC05;
-      letter-spacing:1px;
-      font-size:15px;
-      line-height:1;
+      color: #FBBC05;
+      letter-spacing: 1px;
+      font-size: 15px;
+      line-height: 1;
     }
 
     .tcfr-review-count{
-      color:#4b6b5a;
+      color: #4b6b5a;
+      white-space: nowrap;
     }
 
     .tcfr-google-actions{
-  grid-area: actions;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.tcfr-tourism{
-  grid-area: tourism;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 6px;
-  min-width: 0;
-}
-.tcfr-tourismLogo{
-  display: block;
-  width: 104px;
-  height: auto;
-  max-width: 100%;
-}
-
-@media (max-width: 768px){
-.tcfr-google-reviews-inner{
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "left tourism"
-      "actions actions";
-    align-items: start;
-  }
-  .tcfr-tourism{
-    justify-content: flex-end;
-    padding-left: 0;
-  }
-  .tcfr-tourismLogo{
-    width: 88px;
-  }
-  .tcfr-google-actions{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .tcfr-google-actions .btn{
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-
-    .tcfr-google-actions a{
-      white-space: normal;
-      text-align: center;
+      grid-area: actions;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      min-width: 0;
     }
 
-    @media (max-width: 900px){
+    .tcfr-google-actions .btn{
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .tcfr-tourism{
+      grid-area: tourism;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tcfr-tourismLogo{
+      width: 112px;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px){
       .tcfr-google-reviews-inner{
-        flex-direction: column;
-        align-items: stretch;
+        grid-template-columns: 1fr 110px;
+        grid-template-areas:
+          "left tourism"
+          "actions actions";
+        align-items: center;
       }
-      .tcfr-google-left,
-      .tcfr-google-rating{
-        width: 100%;
-      }
+
       .tcfr-google-actions{
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        justify-content: space-between;
       }
-      .tcfr-google-actions a{
-        width: 100%;
-        justify-content: center;
-        font-size: 14px;
-        padding: 12px 12px;
+
+      .tcfr-google-actions .btn{
+        width: calc(50% - 6px);
+      }
+
+      .tcfr-tourismLogo{
+        width: 84px;
       }
     }
 
-    @media (max-width: 380px){
-      .tcfr-google-actions a{
-        font-size: 13px;
-        padding: 11px 10px;
-      }
-    }
 
-    .trustRow{
+
+.trustRow{
       margin-top: 14px;
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -373,6 +346,9 @@ margin:0;
       box-shadow: 0 14px 30px rgba(0,0,0,.10);
       min-width: 0;
     }
+
+    .trustRow .trustCard.fullRow{ grid-column: 1 / -1; }
+
 
     .trustTitle{
       margin: 0 0 6px;
@@ -602,34 +578,6 @@ margin:0;
       .heroCopy{ min-height: 520px; }
     }
   </style>
-
-<style>
-/* Reviews card centering refinement */
-.reviews-card {
-  display: flex;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-/* Desktop: give the logo breathing room and optical centering */
-@media (min-width: 901px) {
-  .reviews-card .ecuador-logo {
-    margin-right: 16px;
-  }
-}
-
-/* Mobile: pull logo slightly left so it feels centered */
-@media (max-width: 900px) {
-  .reviews-card {
-    gap: 16px;
-  }
-  .reviews-card .ecuador-logo {
-    margin-right: 0;
-    margin-left: -8px;
-  }
-}
-</style>
-
 </head>
 <body>
   <div id="siteHeader"></div>
@@ -672,11 +620,11 @@ margin:0;
               <span class="tcfr-stars" aria-label="5 out of 5 stars">★★★★★</span>
               <span class="tcfr-review-count">(9 reviews)</span>
             </div>
-          
-      <div class="tcfr-tourism" aria-label="Ecuador tourism logo">
-        <img class="tcfr-tourismLogo" src="/assets/images/logo_ecuador_tourism_01.png" alt="Ecuador tourism logo" loading="lazy" decoding="async" />
-      </div>
-</div>
+          </div>
+
+          <div class="tcfr-tourism" aria-label="Ecuador tourism logo">
+            <img src="/assets/images/logo_ecuador_tourism_01.png" alt="Ecuador tourism" class="tcfr-tourismLogo" loading="lazy" decoding="async" />
+          </div>
 
           <div class="tcfr-google-actions" aria-label="Google review actions">
             <a class="btn secondary" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Read reviews</a>
@@ -695,7 +643,12 @@ margin:0;
         <p class="trustTitle">Unforgettable views</p>
         <p class="trustText">Sunrise coffee, cloud forest panoramas, and quiet nights under the stars.</p>
       </div>
-    </div>
+    
+          <div class="trustCard fullRow">
+            <p class="trustTitle">Located about 2 hours from Quito</p>
+            <p class="trustText">We can help coordinate transportation for a smooth arrival.</p>
+          </div>
+</div>
   </div>
 </section>
 
