@@ -225,20 +225,22 @@ margin:0;
     }
 
     .tcfr-google-reviews-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-    }
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "left tourism"
+    "actions tourism";
+  align-items: center;
+  gap: 12px 14px;
+}
 
     .tcfr-google-left{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      flex-wrap:nowrap;
-      min-width:0;
-    }
+  grid-area: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
 
     .tcfr-google-logo{
       width:34px;
@@ -272,11 +274,54 @@ margin:0;
     }
 
     .tcfr-google-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
+  grid-area: actions;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tcfr-tourism{
+  grid-area: tourism;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 6px;
+  min-width: 0;
+}
+.tcfr-tourismLogo{
+  display: block;
+  width: 104px;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 768px){
+.tcfr-google-reviews-inner{
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "left tourism"
+      "actions actions";
+    align-items: start;
+  }
+  .tcfr-tourism{
+    justify-content: flex-end;
+    padding-left: 0;
+  }
+  .tcfr-tourismLogo{
+    width: 88px;
+  }
+  .tcfr-google-actions{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .tcfr-google-actions .btn{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 
     .tcfr-google-actions a{
       white-space: normal;
@@ -627,7 +672,11 @@ margin:0;
               <span class="tcfr-stars" aria-label="5 out of 5 stars">★★★★★</span>
               <span class="tcfr-review-count">(9 reviews)</span>
             </div>
-          </div>
+          
+      <div class="tcfr-tourism" aria-label="Ecuador tourism logo">
+        <img class="tcfr-tourismLogo" src="/assets/images/logo_ecuador_tourism_01.png" alt="Ecuador tourism logo" loading="lazy" decoding="async" />
+      </div>
+</div>
 
           <div class="tcfr-google-actions" aria-label="Google review actions">
             <a class="btn secondary" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Read reviews</a>
