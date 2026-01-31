@@ -272,31 +272,36 @@ margin:0;
     }
 
     .tcfr-google-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
+      display:grid;
+      grid-template-columns: 1fr 1fr 104px;
+      gap: 10px;
+      align-items: center;
+      justify-content: end;
     }
 
     .tcfr-google-actions a{
+      width: 100%;
       white-space: normal;
       text-align: center;
     }
 
     
     .tcfr-tourismLogo{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 38px;
-      padding-left: 2px;
+      width: 104px;
+      height: 54px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 0;
+      margin: 0;
     }
     .tcfr-tourismLogo img{
-      height: 38px;
+      max-width: 104px;
+      max-height: 54px;
       width: auto;
+      height: auto;
       object-fit: contain;
       display: block;
-      border-radius: 6px;
     }
 @media (max-width: 900px){
       .tcfr-google-reviews-inner{
@@ -308,26 +313,35 @@ margin:0;
         width: 100%;
       }
       .tcfr-google-actions{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
+      display:grid;
+      grid-template-columns: 1fr 1fr 104px;
+      gap: 10px;
+      align-items: center;
+      justify-content: end;
+    }
       .tcfr-google-actions a{
-        width: 100%;
-        justify-content: center;
-        font-size: 14px;
-        padding: 12px 12px;
-      }
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+    }
     
-      .tcfr-tourismLogo{ display:none; }
+      .tcfr-tourismLogo{
+      width: 104px;
+      height: 54px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 0;
+      margin: 0;
+    }
 }
 
     @media (max-width: 380px){
       .tcfr-google-actions a{
-        font-size: 13px;
-        padding: 11px 10px;
-      }
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+    }
     }
 
     .trustRow{
