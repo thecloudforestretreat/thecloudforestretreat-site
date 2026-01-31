@@ -61,11 +61,14 @@
     }
 
     *{ box-sizing:border-box; }
-    body{
-      margin:0;
+    
+    html{ overflow-x:hidden; }
+body{
+margin:0;
       background: var(--bg);
       color: var(--forest-2);
       font-family: var(--font-body);
+      overflow-x:hidden;
     }
 
     a{ color: inherit; text-decoration: none; }
@@ -210,6 +213,104 @@
       color: var(--forest-2);
       border-color: rgba(13,89,37,.18);
       box-shadow: none;
+    }
+
+    /* Google Reviews trust block (homepage) */
+    .tcfr-google-reviews{
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .tcfr-google-reviews-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .tcfr-google-left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:nowrap;
+      min-width:0;
+    }
+
+    .tcfr-google-logo{
+      width:34px;
+      height:34px;
+      flex: 0 0 auto;
+    }
+
+    .tcfr-google-rating{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      min-width:0;
+      font-size:14px;
+    }
+
+    .tcfr-rating-score{
+      font-weight:700;
+      color:#1f3d2b;
+    }
+
+    .tcfr-stars{
+      color:#FBBC05;
+      letter-spacing:1px;
+      font-size:15px;
+      line-height:1;
+    }
+
+    .tcfr-review-count{
+      color:#4b6b5a;
+    }
+
+    .tcfr-google-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .tcfr-google-actions a{
+      white-space: normal;
+      text-align: center;
+    }
+
+    @media (max-width: 900px){
+      .tcfr-google-reviews-inner{
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .tcfr-google-left,
+      .tcfr-google-rating{
+        width: 100%;
+      }
+      .tcfr-google-actions{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .tcfr-google-actions a{
+        width: 100%;
+        justify-content: center;
+        font-size: 14px;
+        padding: 12px 12px;
+      }
+    }
+
+    @media (max-width: 380px){
+      .tcfr-google-actions a{
+        font-size: 13px;
+        padding: 11px 10px;
+      }
     }
 
     .trustRow{
@@ -485,118 +586,30 @@
       <div class="heroCtas" aria-label="Primary actions">
         <a class="btn primary" href="/booking/">Book Your Stay</a>
         <a class="btn secondary" href="/rooms/">Explore Rooms</a>
-<!-- Google Reviews Trust Block -->
-<section class="tcfr-google-reviews">
-  <div class="tcfr-google-reviews-inner">
-    <div class="tcfr-google-left">
-      <img src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" class="tcfr-google-logo">
-      <div class="tcfr-google-rating">
-        <span class="tcfr-rating-score">5.0</span>
-        <span class="tcfr-stars" aria-label="5 out of 5 stars">
-          ★★★★★
-        </span>
-        <span class="tcfr-review-count">(9 reviews)</span>
+<a class="btn ghost" href="/features/">See Features</a>
       </div>
-    </div>
-    <div class="tcfr-google-actions">
-      <a href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener"
-         class="tcfr-btn tcfr-btn-outline">
-        Read reviews
-      </a>
-      <a href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener"
-         class="tcfr-btn tcfr-btn-primary">
-        Write a review
-      </a>
-    </div>
-  </div>
-</section>
-
-<style>
-.tcfr-google-reviews {
-  margin-top: 18px;
-  padding: 14px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.45);
-  border: 1px solid rgba(0,0,0,0.06);
-}
-.tcfr-google-reviews-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.tcfr-google-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.tcfr-google-logo {
-  width: 34px;
-  height: 34px;
-}
-.tcfr-google-rating {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-}
-.tcfr-rating-score {
-  font-weight: 700;
-  color: #1f3d2b;
-}
-.tcfr-stars {
-  color: #FBBC05;
-  letter-spacing: 1px;
-  font-size: 15px;
-}
-.tcfr-review-count {
-  color: #4b6b5a;
-}
-.tcfr-google-actions {
-  display: flex;
-  gap: 10px;
-}
-.tcfr-btn {
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.tcfr-btn-outline {
-  border: 1px solid #1f3d2b;
-  color: #1f3d2b;
-  background: transparent;
-}
-.tcfr-btn-outline:hover {
-  background: rgba(31,61,43,0.08);
-}
-.tcfr-btn-primary {
-  background: #e46a3a;
-  color: #fff;
-}
-.tcfr-btn-primary:hover {
-  background: #cf5c30;
-}
-@media (max-width: 768px) {
-  .tcfr-google-reviews-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .tcfr-google-actions {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-</style>
-
-        <a class="btn ghost" href="/features/">See Features</a>
       </div>
-    </div>
 
-    <div class="trustRow" aria-label="Trust and quick info">
+      <section class="tcfr-google-reviews" aria-label="Google reviews">
+        <div class="tcfr-google-reviews-inner">
+          <div class="tcfr-google-left" aria-label="Google rating badge">
+            <img src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" class="tcfr-google-logo" loading="lazy" decoding="async" />
+            <div class="tcfr-google-rating">
+              <span class="tcfr-rating-score">5.0</span>
+              <span class="tcfr-stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="tcfr-review-count">(9 reviews)</span>
+            </div>
+          </div>
+
+          <div class="tcfr-google-actions" aria-label="Google review actions">
+            <a class="btn secondary" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Read reviews</a>
+            <a class="btn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Write a review</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="trustRow" aria-label="Trust and quick info">
+
       <div class="trustCard">
         <p class="trustTitle">Easy planning</p>
         <p class="trustText">Clear check-in details, local guidance, and help planning activities.</p>
