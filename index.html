@@ -215,7 +215,8 @@ margin:0;
       box-shadow: none;
     }
 
-    /* Google Reviews trust block (homepage) */
+    
+    /* Google Reviews badge (homepage) */
     .tcfr-google-reviews{
       margin-top: 18px;
       padding: 14px;
@@ -225,93 +226,65 @@ margin:0;
     }
 
     .tcfr-google-reviews-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "left tourism"
+        "actions tourism";
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 10px;
     }
 
-    .tcfr-google-left{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      flex-wrap:nowrap;
-      min-width:0;
-    }
-
-    .tcfr-google-logo{
-      width:34px;
-      height:34px;
-      flex: 0 0 auto;
-    }
+    .tcfr-google-left{ grid-area: left; display:flex; align-items:center; gap: 12px; min-width: 0; }
+    .tcfr-google-logo{ width: 34px; height: 34px; flex: 0 0 auto; }
 
     .tcfr-google-rating{
       display:flex;
       align-items:center;
-      gap:8px;
-      flex-wrap:wrap;
-      min-width:0;
-      font-size:14px;
+      gap: 8px;
+      min-width: 0;
+      flex-wrap: wrap;
+      font-size: 14px;
     }
+    .tcfr-rating-score{ font-weight: 700; color: #1f3d2b; }
+    .tcfr-stars{ color: #FBBC05; letter-spacing: 1px; font-size: 15px; }
+    .tcfr-review-count{ color: #4b6b5a; }
 
-    .tcfr-rating-score{
-      font-weight:700;
-      color:#1f3d2b;
-    }
-
-    .tcfr-stars{
-      color:#FBBC05;
-      letter-spacing:1px;
-      font-size:15px;
-      line-height:1;
-    }
-
-    .tcfr-review-count{
-      color:#4b6b5a;
+    .tcfr-tourism{ grid-area: tourism; display:flex; align-items:center; justify-content:center; padding-right: 2px; }
+    .tcfr-tourismLogo{
+      width: 96px;
+      height: auto;
+      display:block;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,0.10));
     }
 
     .tcfr-google-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-
-    .tcfr-google-actions a{
-      white-space: normal;
-      text-align: center;
+      grid-area: actions;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     @media (max-width: 900px){
       .tcfr-google-reviews-inner{
-        flex-direction: column;
-        align-items: stretch;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "left tourism"
+          "actions actions";
       }
-      .tcfr-google-left,
-      .tcfr-google-rating{
-        width: 100%;
-      }
+      .tcfr-tourismLogo{ width: 78px; }
+
       .tcfr-google-actions{
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
       }
-      .tcfr-google-actions a{
-        width: 100%;
-        justify-content: center;
-        font-size: 14px;
-        padding: 12px 12px;
-      }
+      .tcfr-google-actions .btn{ width: 100%; justify-content:center; }
     }
 
-    @media (max-width: 380px){
-      .tcfr-google-actions a{
-        font-size: 13px;
-        padding: 11px 10px;
-      }
-    }
 
     .trustRow{
       margin-top: 14px;
@@ -602,6 +575,10 @@ margin:0;
               <span class="tcfr-stars" aria-label="5 out of 5 stars">★★★★★</span>
               <span class="tcfr-review-count">(9 reviews)</span>
             </div>
+          </div>
+
+          <div class="tcfr-tourism" aria-label="Ecuador tourism logo">
+            <img src="/assets/images/logo_ecuador_tourism_01.png" alt="Ecuador tourism" class="tcfr-tourismLogo" loading="lazy" decoding="async" />
           </div>
 
           <div class="tcfr-google-actions" aria-label="Google review actions">
