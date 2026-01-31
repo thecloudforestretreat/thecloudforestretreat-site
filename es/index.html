@@ -61,11 +61,14 @@
     }
 
     *{ box-sizing:border-box; }
-    body{
-      margin:0;
+    
+    html{ overflow-x:hidden; }
+body{
+margin:0;
       background: var(--bg);
       color: var(--forest-2);
       font-family: var(--font-body);
+      overflow-x:hidden;
     }
 
     a{ color: inherit; text-decoration: none; }
@@ -286,6 +289,9 @@
       align-items:center;
       justify-content:center;
       white-space: nowrap;
+    
+      white-space: nowrap;
+      text-align: center;
     }
 
     @media (max-width: 768px){
@@ -300,6 +306,15 @@
       .tcfr-google-actions .tcfr-google-btn{
         width: calc(50% - 5px);
       }
+    }
+@media (max-width: 520px){
+  .tcfr-google-actions{ grid-template-columns: 1fr; }
+  .tcfr-google-actions .tcfr-google-btn{ width: 100%; }
+}
+
+
+    @media (max-width: 380px){
+      .tcfr-google-actions .tcfr-google-btn{ font-size: 13px; padding: 11px 10px; }
     }
 
     .trustRow{
@@ -545,7 +560,37 @@
       .heroMedia{ min-height: 520px; }
       .heroCopy{ min-height: 520px; }
     }
-  </style>
+  
+
+/* TCFR MOBILE WIDTH FIX: google reviews row */
+@media (max-width: 900px){
+  .tcfr-google-reviews-inner{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tcfr-google-left,
+  .tcfr-google-badge,
+  .tcfr-google-rating{
+    width: 100%;
+  }
+  .tcfr-google-rating{
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .tcfr-google-actions{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .tcfr-google-actions a,
+  .tcfr-btn{
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* END TCFR MOBILE WIDTH FIX */
+</style>
 </head>
 <body>
   <div id="siteHeader"></div>
