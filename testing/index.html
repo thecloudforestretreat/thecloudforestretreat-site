@@ -215,6 +215,7 @@ margin:0;
       box-shadow: none;
     }
 
+    
     /* Google Reviews badge (homepage) */
     .tcfr-google-reviews{
       margin-top: 18px;
@@ -226,112 +227,66 @@ margin:0;
 
     .tcfr-google-reviews-inner{
       display: grid;
-      grid-template-columns: auto 1fr 140px;
-      grid-template-areas: "left actions tourism";
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "left tourism"
+        "actions tourism";
       align-items: center;
-      gap: 16px;
+      column-gap: 14px;
+      row-gap: 10px;
     }
 
-    .tcfr-google-left{
-      grid-area: left;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .tcfr-google-logo{
-      width: 34px;
-      height: 34px;
-      flex: 0 0 auto;
-    }
+    .tcfr-google-left{ grid-area: left; display:flex; align-items:center; gap: 12px; min-width: 0; }
+    .tcfr-google-logo{ width: 34px; height: 34px; flex: 0 0 auto; }
 
     .tcfr-google-rating{
-      display: flex;
-      align-items: center;
+      display:flex;
+      align-items:center;
       gap: 8px;
-      font-size: 14px;
+      min-width: 0;
       flex-wrap: wrap;
+      font-size: 14px;
     }
+    .tcfr-rating-score{ font-weight: 700; color: #1f3d2b; }
+    .tcfr-stars{ color: #FBBC05; letter-spacing: 1px; font-size: 15px; }
+    .tcfr-review-count{ color: #4b6b5a; }
 
-    .tcfr-rating-score{
-      font-weight: 700;
-      color: #1f3d2b;
-    }
-
-    .tcfr-stars{
-      color: #FBBC05;
-      letter-spacing: 1px;
-      font-size: 15px;
-      line-height: 1;
-    }
-
-    .tcfr-review-count{
-      color: #4b6b5a;
-      white-space: nowrap;
+    .tcfr-tourism{ grid-area: tourism; display:flex; align-items:center; justify-content:center; padding-right: 2px; }
+    .tcfr-tourismLogo{
+      width: 96px;
+      height: auto;
+      display:block;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,0.10));
     }
 
     .tcfr-google-actions{
       grid-area: actions;
       display: flex;
       gap: 10px;
-      justify-content: center;
-      align-items: center;
       flex-wrap: wrap;
-      min-width: 0;
-    }
-
-    .tcfr-google-actions .btn{
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 800;
-      white-space: nowrap;
-      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      line-height: 1;
     }
 
-    .tcfr-tourism{
-      grid-area: tourism;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .tcfr-tourismLogo{
-      width: 112px;
-      height: auto;
-      display: block;
-    }
-
-    @media (max-width: 768px){
+    @media (max-width: 900px){
       .tcfr-google-reviews-inner{
-        grid-template-columns: 1fr 110px;
+        grid-template-columns: 1fr auto;
         grid-template-areas:
           "left tourism"
           "actions actions";
-        align-items: center;
       }
+      .tcfr-tourismLogo{ width: 78px; }
 
       .tcfr-google-actions{
         width: 100%;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
       }
-
-      .tcfr-google-actions .btn{
-        width: calc(50% - 6px);
-      }
-
-      .tcfr-tourismLogo{
-        width: 84px;
-      }
+      .tcfr-google-actions .btn{ width: 100%; justify-content:center; }
     }
 
 
-
-.trustRow{
+    .trustRow{
       margin-top: 14px;
       display:grid;
       grid-template-columns: 1fr 1fr;
