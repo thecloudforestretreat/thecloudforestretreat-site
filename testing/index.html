@@ -290,7 +290,7 @@ margin:0;
       justify-content:center;
       white-space: nowrap;
     
-      white-space: normal;
+      white-space: nowrap;
       text-align: center;
     }
 
@@ -307,6 +307,11 @@ margin:0;
         width: calc(50% - 5px);
       }
     }
+@media (max-width: 520px){
+  .tcfr-google-actions{ grid-template-columns: 1fr; }
+  .tcfr-google-actions .tcfr-google-btn{ width: 100%; }
+}
+
 
     @media (max-width: 380px){
       .tcfr-google-actions .tcfr-google-btn{ font-size: 13px; padding: 11px 10px; }
