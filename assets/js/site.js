@@ -4,6 +4,7 @@
    - Initializes hamburger + mobile accordions
    - Sticky + scrolled state
    - GA4 loader: G-D3W4SP5MGX
+   - WhatsApp Smart CTA widget (EN/ES)
 
    Design goals:
    - Never inject a full HTML document into the header mount (prevents "duplicate page" bugs)
@@ -97,7 +98,6 @@
     if (lower.indexOf("<body") !== -1) return false;
 
     // Footer is optional. If you do not have one yet, we allow empty.
-    // If a footer exists, it should include a tcfr-footer class or data attribute later.
     return true;
   }
 
@@ -142,7 +142,10 @@
   function initHeaderFromMount(mountEl) {
     if (!mountEl) return;
 
-    var header = qs(mountEl, "[data-tcfr-header]") || qs(mountEl, ".tcfr-header") || qs(mountEl, "header");
+    var header =
+      qs(mountEl, "[data-tcfr-header]") ||
+      qs(mountEl, ".tcfr-header") ||
+      qs(mountEl, "header");
     if (!header) return;
 
     // The injected header fragment places the overlay + mobile panel as siblings of <header>
@@ -157,13 +160,22 @@
     header.style.top = "0";
     header.style.zIndex = "5000";
 
-    var burger = qs(header, "#tcfrBurger") || qs(header, ".tcfr-burger") || qs(header, "[data-controls]");
+    var burger =
+      qs(header, "#tcfrBurger") ||
+      qs(header, ".tcfr-burger") ||
+      qs(header, "[data-controls]");
     if (!burger) return;
 
     var closeBtn = qs(scope, ".tcfr-close") || qs(scope, "[data-action='close']");
 
-    var panelId = burger.getAttribute("data-controls") || burger.getAttribute("aria-controls") || "";
-    var panel = (panelId ? qs(scope, "#" + panelId) : null) || qs(scope, ".tcfr-mobilePanel") || qs(scope, "aside[aria-label='Mobile menu']");
+    var panelId =
+      burger.getAttribute("data-controls") ||
+      burger.getAttribute("aria-controls") ||
+      "";
+    var panel =
+      (panelId ? qs(scope, "#" + panelId) : null) ||
+      qs(scope, ".tcfr-mobilePanel") ||
+      qs(scope, "aside[aria-label='Mobile menu']");
     var overlay = qs(scope, ".tcfr-mobileOverlay") || qs(scope, "#tcfrMobileOverlay");
     if (!panel || !overlay) return;
 
@@ -266,6 +278,192 @@
   }
 
   /* =========================
+     WhatsApp Smart CTA (TCFR)
+     ========================= */
+  function tcfrNormalizePath(p) {
+    p = p || "/";
+    if (p.length > 1 && p.charAt(p.length - 1) !== "/") p = p + "/";
+    return p;
+  }
+  function tcfrIsSpanishPath(p) {
+    return p === "/es/" || p.indexOf("/es/") === 0;
+  }
+  function tcfrIsMobileLike() {
+    var byWidth = window.matchMedia && window.matchMedia("(max-width: 900px)").matches;
+    var byPointer = window.matchMedia && window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+    var byTouch = ("ontouchstart" in window) || (navigator && navigator.maxTouchPoints && navigator.maxTouchPoints > 0);
+    return !!(byWidth || byPointer || byTouch);
+  }
+  function tcfrGetInlineWaQuestions() {
+    var el = document.getElementById("tcfrWaQuestions");
+    if (!el) return null;
+    try {
+      return JSON.parse(el.textContent || el.innerText || "{}");
+    } catch (e) {
+      return null;
+    }
+  }
+  function tcfrSetImgForViewport(root) {
+    var img = root.querySelector(".tcfrWaImg");
+    if (!img) return;
+
+    var d = String(root.getAttribute("data-wa-img-desktop") || "");
+    var m = String(root.getAttribute("data-wa-img-mobile") || "");
+    var target = tcfrIsMobileLike() ? (m || d) : (d || m);
+
+    if (target && img.getAttribute("src") !== target) img.setAttribute("src", target);
+  }
+  function tcfrBuildLink(root, template) {
+    var numRaw = String(root.getAttribute("data-wa-number") || "");
+    var num = numRaw.replace(/[^\d]/g, "");
+    if (!num) return "";
+
+    var url = window.location.href;
+    var msg = String(template || "").replace("{url}", url);
+    return "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
+  }
+  function tcfrApplyCopy(root) {
+    var data = tcfrGetInlineWaQuestions();
+    if (!data) return;
+
+    var p = tcfrNormalizePath(window.location.pathname || "/");
+    var isEs = tcfrIsSpanishPath(p);
+
+    var row = isEs ? data.default_es : data.default_en;
+    if (!row) return;
+
+    var titleEl = root.querySelector(".tcfrWaTitle");
+    var actions = Array.prototype.slice.call(root.querySelectorAll(".tcfrWaAction"));
+
+    if (titleEl && row.title) titleEl.textContent = row.title;
+
+    if (actions.length >= 4) {
+      actions[0].textContent = row.q1 || actions[0].textContent;
+      actions[1].textContent = row.q2 || actions[1].textContent;
+      actions[2].textContent = row.q3 || actions[2].textContent;
+      actions[3].textContent = row.q4 || actions[3].textContent;
+
+      actions[0].setAttribute("data-wa-template", row.t1 || "");
+      actions[1].setAttribute("data-wa-template", row.t2 || "");
+      actions[2].setAttribute("data-wa-template", row.t3 || "");
+      actions[3].setAttribute("data-wa-template", row.t4 || "");
+    }
+  }
+  function initWhatsAppWidget(root) {
+    if (!root || root.__tcfrWaInit) return;
+    root.__tcfrWaInit = true;
+
+    var btn = root.querySelector(".tcfrWaBtn");
+    if (!btn) return;
+
+    var closeBtn = root.querySelector(".tcfrWaClose");
+    var backdrop = root.querySelector(".tcfrWaBackdrop");
+    var actions = Array.prototype.slice.call(root.querySelectorAll(".tcfrWaAction"));
+
+    tcfrApplyCopy(root);
+    tcfrSetImgForViewport(root);
+
+    function openPanel() {
+      root.classList.add("is-open");
+      btn.setAttribute("aria-expanded", "true");
+    }
+    function closePanel() {
+      root.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+    function goWhatsApp(template) {
+      var link = tcfrBuildLink(root, template);
+      if (!link) return;
+      window.location.href = link;
+    }
+
+    function onBtnClick(e) {
+      e.preventDefault();
+
+      // Mobile: tap directly to WhatsApp using the first action (availability)
+      if (tcfrIsMobileLike()) {
+        var data = tcfrGetInlineWaQuestions();
+        var p = tcfrNormalizePath(window.location.pathname || "/");
+        var row = tcfrIsSpanishPath(p) ? (data && data.default_es) : (data && data.default_en);
+        var t1 = row && row.t1 ? row.t1 : "Hi! I want to check availability.\n\nPage: {url}";
+        goWhatsApp(t1);
+        return;
+      }
+
+      if (root.classList.contains("is-open")) closePanel();
+      else openPanel();
+    }
+
+    btn.addEventListener("click", onBtnClick, { passive: false });
+    btn.addEventListener(
+      "touchstart",
+      function (e) {
+        if (!tcfrIsMobileLike()) return;
+        e.preventDefault();
+        e.stopPropagation();
+        onBtnClick(e);
+      },
+      { passive: false }
+    );
+
+    if (closeBtn) closeBtn.addEventListener("click", function (e) { e.preventDefault(); closePanel(); }, { passive: false });
+    if (backdrop) backdrop.addEventListener("click", function () { closePanel(); }, { passive: true });
+
+    actions.forEach(function (a) {
+      a.addEventListener(
+        "click",
+        function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Mobile: always go directly
+          if (tcfrIsMobileLike()) {
+            var tplM = a.getAttribute("data-wa-template") || "";
+            goWhatsApp(tplM);
+            return;
+          }
+
+          var template = a.getAttribute("data-wa-template") || "";
+          var link = tcfrBuildLink(root, template);
+          if (!link) return;
+
+          closePanel();
+          window.open(link, "_blank", "noopener,noreferrer");
+        },
+        { passive: false }
+      );
+    });
+
+    // Keep copy/image correct on resize
+    window.addEventListener("resize", function () {
+      tcfrApplyCopy(root);
+      tcfrSetImgForViewport(root);
+      if (tcfrIsMobileLike()) closePanel();
+    }, { passive: true });
+  }
+  function bootWhatsAppSoon() {
+    function bootNow() {
+      var nodes = document.querySelectorAll(".tcfrWaFab");
+      for (var i = 0; i < nodes.length; i++) initWhatsAppWidget(nodes[i]);
+    }
+
+    bootNow();
+    window.setTimeout(bootNow, 400);
+    window.setTimeout(bootNow, 1200);
+    window.setTimeout(bootNow, 2500);
+
+    if (!window.__TCFR_WA_OBSERVER__ && "MutationObserver" in window) {
+      window.__TCFR_WA_OBSERVER__ = new MutationObserver(function () {
+        bootNow();
+      });
+      window.__TCFR_WA_OBSERVER__.observe(document.documentElement || document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
+  }
+
+  /* =========================
      Boot
      ========================= */
   async function boot() {
@@ -288,6 +486,9 @@
 
     // Initialize behaviors AFTER injection
     initHeaderFromMount(headerMount);
+
+    // WhatsApp widget may appear after footer injection
+    bootWhatsAppSoon();
   }
 
   if (document.readyState === "loading") {
