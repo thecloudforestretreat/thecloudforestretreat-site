@@ -32,3 +32,82 @@
     </p>
   </div>
 </footer>
+
+<script type="application/json" id="tcfrWaQuestions">
+{
+  "version": 1,
+  "default_en": {
+    "title": "Chat with us on WhatsApp",
+    "q1": "Check availability",
+    "q2": "Book a reservation",
+    "q3": "Transportation",
+    "q4": "Questions",
+    "t1": "Hi! I want to check availability.\\n\\nPage: {url}",
+    "t2": "Hi! I want to book a reservation.\\n\\nPage: {url}",
+    "t3": "Hi! I have a transportation question.\\n\\nPage: {url}",
+    "t4": "Hi! I have a question.\\n\\nPage: {url}"
+  },
+  "default_es": {
+    "title": "Habla con nosotros por WhatsApp",
+    "q1": "Consultar disponibilidad",
+    "q2": "Reservar",
+    "q3": "Transporte",
+    "q4": "Preguntas",
+    "t1": "Hola. Quiero consultar disponibilidad.\\n\\nPagina: {url}",
+    "t2": "Hola. Quiero reservar.\\n\\nPagina: {url}",
+    "t3": "Hola. Tengo una pregunta sobre transporte.\\n\\nPagina: {url}",
+    "t4": "Hola. Tengo una pregunta.\\n\\nPagina: {url}"
+  }
+}
+</script>
+
+<!-- WhatsApp Smart CTA (TCFR) -->
+<div class="tcfrWaFab"
+     data-wa-number="593994031467"
+     data-wa-img-desktop="/assets/images/icons/tcfr_widget_whatsapp_03.png"
+     data-wa-img-mobile="/assets/images/icons/tcfr_widget_whatsapp_03.png"
+     aria-label="WhatsApp contact">
+  <button class="tcfrWaBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="WhatsApp">
+    <img class="tcfrWaImg"
+         src="/assets/images/icons/tcfr_widget_whatsapp_03.png"
+         alt="Chat on WhatsApp"
+         loading="lazy"
+         decoding="async">
+  </button>
+
+  <div class="tcfrWaBackdrop" tabindex="-1" aria-hidden="true"></div>
+
+  <div class="tcfrWaPanel" role="dialog" aria-label="WhatsApp options">
+    <div class="tcfrWaHead">
+      <div class="tcfrWaTitle">Chat with us on WhatsApp</div>
+      <button class="tcfrWaClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="tcfrWaActions">
+      <a class="tcfrWaAction" href="#" data-wa-template="Hi! I want to check availability. Page: {url}">Check availability</a>
+      <a class="tcfrWaAction" href="#" data-wa-template="Hi! I want to book a reservation. Page: {url}">Book a reservation</a>
+      <a class="tcfrWaAction" href="#" data-wa-template="Hi! I have a transportation question. Page: {url}">Transportation</a>
+      <a class="tcfrWaAction" href="#" data-wa-template="Hi! I have a question. Page: {url}">Questions</a>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Minimal widget styling (safe defaults) */
+.tcfrWaFab{position:fixed;right:18px;bottom:18px;z-index:6000}
+.tcfrWaBtn{border:0;background:transparent;padding:0;cursor:pointer}
+.tcfrWaImg{width:72px;height:72px;display:block}
+.tcfrWaBackdrop{position:fixed;inset:0;background:rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:opacity .18s ease}
+.tcfrWaPanel{position:fixed;right:18px;bottom:102px;width:min(320px,calc(100vw - 36px));background:#fff;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.18);transform:translateY(10px);opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;font-family:inherit}
+.tcfrWaHead{display:flex;align-items:center;justify-content:space-between;padding:14px 14px 10px 14px;border-bottom:1px solid rgba(0,0,0,.08)}
+.tcfrWaTitle{font-weight:800;font-size:14px}
+.tcfrWaClose{border:0;background:transparent;font-size:22px;line-height:1;cursor:pointer}
+.tcfrWaActions{display:flex;flex-direction:column;padding:10px}
+.tcfrWaAction{display:block;padding:11px 12px;border-radius:12px;text-decoration:none;color:inherit;font-weight:700;font-size:14px}
+.tcfrWaAction:hover{background:rgba(0,0,0,.04)}
+.tcfrWaFab.is-open .tcfrWaBackdrop{opacity:1;pointer-events:auto}
+.tcfrWaFab.is-open .tcfrWaPanel{opacity:1;pointer-events:auto;transform:translateY(0)}
+@media (max-width:900px){
+  /* Mobile: keep the button, but we will "tap-to-WhatsApp" (no panel) via JS */
+  .tcfrWaPanel,.tcfrWaBackdrop{display:none}
+}
+</style>
