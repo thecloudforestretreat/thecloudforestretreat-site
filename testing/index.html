@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reservas | The Cloud Forest Retreat</title>
-  <meta name="description" content="Consulta disponibilidad y solicita tu reserva en The Cloud Forest Retreat. Revisa tarifas, elige tu habitacion y coordina tu estadia en el bosque nublado cerca de Mindo, Ecuador." />
+  <title>Booking | The Cloud Forest Retreat</title>
+  <meta name="description" content="Request availability at The Cloud Forest Retreat outside of Quito, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/es/reservas/" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/booking/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Reservas | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Consulta disponibilidad y solicita tu reserva. Elige tu habitacion y planifica una estadia tranquila en el bosque nublado cerca de Mindo, Ecuador." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/es/reservas/" />
+  <meta property="og:title" content="Booking | The Cloud Forest Retreat" />
+  <meta property="og:description" content="Request availability at The Cloud Forest Retreat outside of Quito, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/booking/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Reservas | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Consulta disponibilidad y solicita tu reserva. Elige tu habitacion y planifica una estadia tranquila en el bosque nublado cerca de Mindo, Ecuador." />
+  <meta name="twitter:title" content="Booking | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Request availability at The Cloud Forest Retreat outside of Quito, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -628,211 +628,218 @@ input:focus, select:focus, textarea:focus{
 }
 
   </style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Pagina de reservas">
-    <section class="hero" aria-label="Hero de reservas">
+  <main class="wrap" aria-label="Booking page">
+    <section class="hero" aria-label="Booking hero">
       <div class="heroMedia" aria-label="Hero image">
         <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
         <div class="heroOverlay" aria-hidden="true"></div>
         <div class="heroInner">
-          <div class="kicker">Solicitar disponibilidad</div>
-          <h1 class="heroH1">Reservar tu estadia</h1>
+          <div class="kicker">Request availability</div>
+          <h1 class="heroH1">Book Your Stay</h1>
           <p class="heroP">
-            Comparte tus fechas preferidas, el tamaño de tu grupo y tu preferencia de habitación. Te responderemos rápido con la disponibilidad y los siguientes pasos.
-            A aproximadamente 2 horas de Quito. Podemos ayudar a coordinar el transporte para una llegada sin complicaciones.
+            Share your preferred travel dates, group size, and room preference. We will follow up quickly with availability and next steps.
+            If needed, we can also help arrange ground transportation from Quito or the airport.
           </p>
         </div>
       </div>
     </section>
-<section class="grid" aria-label="Formulario de reservas y detalles">
-  <section class="card pad" aria-label="Formulario de solicitud de reserva">
-    <h2 class="h2">Solicitud de reserva</h2>
+<section class="grid" aria-label="Booking form and details">
+  <section class="card pad" aria-label="Booking request form">
+    <h2 class="h2">Booking Request</h2>
     <p class="hint">
-      Este formulario le llega por email a nuestro equipo y te envía una confirmación. Los campos con asterisco son obligatorios.
+      This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
     </p>
 
     
-    <div class="otaBlock" aria-label="Reserva inmediata en sitios aliados">
-      <h3 class="otaTitle">Reserva al instante en un sitio de reservas</h3>
+    <div class="otaBlock" aria-label="Instant booking on partner sites">
+      <h3 class="otaTitle">Book instantly on a booking site</h3>
       <p class="otaHint">
-        Elige el tipo de estadía y luego selecciona el sitio. Si prefieres, también puedes enviarnos una solicitud directa con el formulario de abajo.
+        Choose a stay type, then pick a site. If you prefer, you can still send a direct booking request using the form below.
       </p>
 
-      <div class="otaControls" aria-label="Selección del tipo de estadía">
-        <label for="ota_room">Tipo de estadía</label>
+      <div class="otaControls" aria-label="Stay type selection">
+        <label for="ota_room">Stay type</label>
         <select id="ota_room" name="ota_room">
-          <option value="Entire house">Casa Completa</option>
-          <option value="Panoramic Suite">Suite Panorámica</option>
-          <option value="Sunrise Room">Habitación Amanecer</option>
-          <option value="Sunset Room">Habitación Atardecer</option>
+          <option value="Entire house">Entire house</option>
+          <option value="Panoramic Suite">Panoramic Suite</option>
+          <option value="Sunrise Room">Sunrise Room</option>
+          <option value="Sunset Room">Sunset Room</option>
         </select>
       </div>
 
-      <div class="otaGrid" aria-label="Enlaces a sitios de reserva">
-        <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Airbnb">
+      <div class="otaGrid" aria-label="Booking site links">
+        <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Airbnb">
           <img src="/assets/images/pages/booking/tcfr_booking_airbnb.png" alt="Airbnb" loading="lazy" decoding="async" />
         </a>
-        <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Vrbo">
+        <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Vrbo">
           <img src="/assets/images/pages/booking/tcfr_booking_vrbo.png" alt="Vrbo" loading="lazy" decoding="async" />
         </a>
-        <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Expedia">
+        <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Expedia">
           <img src="/assets/images/pages/booking/tcfr_booking_expedia.png" alt="Expedia" loading="lazy" decoding="async" />
         </a>
-        <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Reservar en Booking.com (próximamente)" aria-disabled="true">
+        <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Book on Booking.com (coming soon)" aria-disabled="true">
           <img src="/assets/images/pages/booking/tcfr_booking_booking.png" alt="Booking.com" loading="lazy" decoding="async" />
         </a>
       </div>
 
       <p class="otaNote">
-        En estos sitios publicamos la casa completa y cada habitación por separado, para que reserves el tipo de estadía que mejor se ajusta a tu viaje.
+        On these sites we list the entire house and each room separately, so you can book the stay type that matches your trip.
       </p>
     </div>
 
 
-    <form id="tcfrBookingForm" aria-label="Formulario de reserva">
+    <form id="tcfrBookingForm" aria-label="Booking form">
+          <input type="hidden" name="source_page" value="">
+          <input type="hidden" name="user_agent" value="">
       <div class="formGrid">
         <div class="field">
-          <label for="first_name">Nombre <span class="req">*</span></label>
-          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Tu nombre" autocapitalize="words" inputmode="text" spellcheck="false" />
+          <label for="first_name">First name <span class="req">*</span></label>
+          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Your first name" autocapitalize="words" inputmode="text" spellcheck="false" />
         </div>
 
         <div class="field">
-          <label for="last_name">Apellido <span class="req">*</span></label>
-          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Tu apellido" autocapitalize="words" inputmode="text" spellcheck="false" />
+          <label for="last_name">Last name <span class="req">*</span></label>
+          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Your last name" autocapitalize="words" inputmode="text" spellcheck="false" />
         </div>
 
         <div class="field">
           <label for="email">Email <span class="req">*</span></label>
-          <input id="email" name="email" type="email" autocomplete="email" required placeholder="tucorreo@ejemplo.com" />
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
         </div>
 
         <div class="field">
-          <label for="phone">Teléfono <span class="req">*</span></label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Código de país + número" />
+          <label for="phone">Phone number <span class="req">*</span></label>
+          <input id="phone" name="phone_number" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
         </div>
 
         <div class="field">
-          <label for="number_of_days_interested">Cantidad de días</label>
-          <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Ejemplo: 2 noches" />
+          <label for="number_of_days_interested">Number of days interested</label>
+          <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Example: 2 nights" />
         </div>
 
         <div class="field">
-          <label for="number_of_guests">Número de huéspedes</label>
-          <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Ejemplo: 2 adultos" />
+          <label for="number_of_guests">Number of guests</label>
+          <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Example: 2 adults" />
         </div>
 
         <div class="field">
-          <label for="room_preference">Preferencia de habitación</label>
+          <label for="room_preference">Room preference</label>
           <select id="room_preference" name="room_preference">
-            <option value="">Elige una opción</option>
-            <option value="Panoramic Suite">Suite Panorámica</option>
-            <option value="Sunrise Room">Habitación Amanecer</option>
-            <option value="Sunset Room">Habitación Atardecer</option>
-            <option value="Entire house">Casa completa</option>
+            <option value="">Select a room</option>
+            <option value="Panoramic Suite">Panoramic Suite</option>
+            <option value="Sunrise Room">Sunrise Room</option>
+            <option value="Sunset Room">Sunset Room</option>
+            <option value="Entire house">Entire house</option>
           </select>
         </div>
 
         <div class="field">
-          <label for="transportation_needed">Necesitas transporte (Quito/aeropuerto)</label>
+          <label for="transportation_needed">Transportation needed (Quito/airport)</label>
           <select id="transportation_needed" name="transportation_needed">
-            <option value="">Selecciona</option>
-            <option value="Yes">Sí</option>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
         </div>
 
         <div class="field full">
-          <label for="how_did_you_hear_about_us">Cómo te enteraste de nosotros</label>
+          <label for="how_did_you_hear_about_us">How did you hear about us?</label>
           <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
-            <option value="">Selecciona</option>
-            <option value="Referral">Recomendación</option>
+            <option value="">Select</option>
+            <option value="Referral">Referral</option>
             <option value="Instagram">Instagram</option>
             <option value="TikTok">TikTok</option>
             <option value="YouTube">YouTube</option>
-            <option value="Google Search">Búsqueda en Google</option>
+            <option value="Google Search">Google Search</option>
             <option value="Google Maps">Google Maps</option>
             <option value="Airbnb">Airbnb</option>
             <option value="Vrbo">Vrbo</option>
             <option value="Booking.com">Booking.com</option>
-            <option value="Other">Otro</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 
         <div class="field full">
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" placeholder="Cuéntanos tus fechas ideales, tus preguntas y cualquier detalle importante."></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Share your ideal dates, any questions, and anything we should know."></textarea>
         </div>
       </div>
 
       <div class="actionsRow">
         <p class="miniNote">
-          Al enviar, aceptas que podamos contactarte por email o teléfono para confirmar los detalles.
+          By submitting, you agree we may contact you by email or phone to confirm details.
         </p>
-        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Enviar solicitud</button>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
+
+        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit Request</button>
       </div>
     </form>
   </section>
 
-  <aside class="sideStack" aria-label="Detalles de la reserva (columna derecha)">
-    <section id="tcfrStatusCard" class="card statusCard" aria-label="Estado del envío">
-      <h3 class="statusTitle">Solicitud enviada</h3>
+  <aside class="sideStack" aria-label="Booking details (right column)">
+    <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
+      <h3 class="statusTitle">Request sent</h3>
       <p class="statusText">
-        Gracias. Recibimos tu solicitud de reserva y te enviamos un email de confirmación.
-        Si no lo ves, revisa tu carpeta de spam o promociones.
+        Thank you. We received your booking inquiry and sent a confirmation email.
+        If you do not see it, please check your spam or promotions folder.
       </p>
     </section>
 
-    <section class="card sideCard" aria-label="Qué pasa después">
-      <h3 class="sideTitle">Qué pasa después</h3>
+    <section class="card sideCard" aria-label="What happens next">
+      <h3 class="sideTitle">What happens next</h3>
       <p class="sideP">
-        Te responderemos con disponibilidad, precios y recomendaciones para que tu estadía sea fácil.
-        Si seleccionaste transporte, te compartiremos opciones de recogida desde Quito o el aeropuerto.
+        We will reply with availability, pricing, and any recommendations to make your stay effortless.
+        If you selected transportation, we will include pickup options from Quito or the airport.
       </p>
     </section>
-    
+
     <section class="card sideCard" aria-label="Getting here">
-      <h3 class="sideTitle">Cómo llegar</h3>
+      <h3 class="sideTitle">Getting here</h3>
       <p class="sideP">
-        A aproximadamente 2 horas de Quito. Podemos ayudar a coordinar el transporte para una llegada sin complicaciones.
+        Located about 2 hours from Quito. We can help coordinate transportation for a smooth arrival.
       </p>
     </section>
 
 
-    <section class="card gReviews" aria-label="Reseñas de huéspedes">
+
+
+    <section class="card gReviews" aria-label="Guest reviews">
       <div class="gHead">
         <div>
-          <h3 class="gTitle">A los huéspedes les encanta su estadía</h3>
-          <p class="gSub">Algunos de nuestros comentarios más recientes en Google. ¿Quieres ver la lista completa o dejar la tuya?</p>
+          <h3 class="gTitle">Guests love their stay</h3>
+          <p class="gSub">A few recent Google review highlights. Want the full list or to leave your own?</p>
         </div>
         <div class="gBadge" aria-label="Google rating">
           <img class="gLogo" src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" loading="lazy" decoding="async" />
           <div class="gScoreRow">
             <span>5.0</span>
             <span class="gStars" aria-label="5 out of 5 stars">★★★★★</span>
-            <span class="gCount">(9 reseñas)</span>
+            <span class="gCount">(9 reviews)</span>
           </div>
         </div>
       </div>
 
-      <div class="gActions" aria-label="Acciones de reseñas">
-        <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Leer reseñas</a>
-        <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Escribir una reseña</a>
+      <div class="gActions" aria-label="Review actions">
+        <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Read reviews</a>
+        <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Write a review</a>
       </div>
 
-      <div class="gQuotes" aria-label="Extractos de reseñas">
+      <div class="gQuotes" aria-label="Review excerpts">
         <div class="gQuote">
-          <p class="gQuoteText">"Un lugar fantástico para desconectarse y reconectar con la naturaleza. Esta experiencia única se puede personalizar tanto como quieras."</p>
+          <p class="gQuoteText">"Fantastic place to disconnect and get in touch with nature. This unique experience can be as customized as you want."</p>
           <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">V Arguello</span></p>
         </div>
         <div class="gQuote">
-          <p class="gQuoteText">"Una experiencia absolutamente mágica en The Cloud Forest Retreat. Las vistas son increíbles. Los anfitriones son atentos, amables y muy acogedores."</p>
-          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Abigail M.</span></p>
+          <p class="gQuoteText">"Absolutely magical experience at the cloud forest retreat. The views are incredible. The hosts are attentive, friendly, and welcoming."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Abigail Martin</span></p>
         </div>
         <div class="gQuote">
-          <p class="gQuoteText">"Alojamientos y comidas hermosas, con un anfitrión encantador y vistas inigualables. Totalmente recomendado."</p>
-          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Pauline W.</span></p>
+          <p class="gQuoteText">"Beautiful accommodations and meals with a lovely host and views that cannot be beat, highly recommend."</p>
+          <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Pauline Witzke</span></p>
         </div>
       </div>
     </section>
@@ -841,7 +848,7 @@ input:focus, select:focus, textarea:focus{
 <section class="card sideImageCard" aria-label="Booking image placeholder">
       <div class="sideImageFrame">
         <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="The Cloud Forest Retreat view" loading="lazy" decoding="async" />
-        <div class="sideImageCaption">Un lugar tranquilo para resetear en el bosque nublado.</div>
+        <div class="sideImageCaption">A calm place to reset in the cloud forest</div>
       </div>
     </section>
   </aside>
@@ -852,7 +859,7 @@ input:focus, select:focus, textarea:focus{
   <script>
     (function(){
       "use strict";
-  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzmdHVDkm2oDUTnhLt7kRYqutwoo3awboHA-THoBXzb9KglLJrxn4W_IrQnFfHgpeiArQ/exec";
+  const API_ENDPOINT = "/api/booking";
 
 
   var OTA_LINKS = {
@@ -862,19 +869,19 @@ input:focus, select:focus, textarea:focus{
       "expedia": "https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information",
       "booking": ""
     },
-    "Suite Panoramica": {
+    "Panoramic Suite": {
       "airbnb": "https://airbnb.com/h/thecloudforestretreat-panoramic-suite",
       "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522305vb",
       "expedia": "https://www.expedia.com/Quito-Hotels-Luxurious-Panoramic-Suite-At-The-Cloud-Forest-Retreat-W-Views-Modern-Comforts.h114674195.Hotel-Information",
       "booking": ""
     },
-    "Habitacion Amanecer": {
+    "Sunrise Room": {
       "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunrise-room",
       "vrbo": "https://www.vrbo.com/en-gb/p4522358vb",
       "expedia": "https://www.expedia.com/Quito-Hotels-Sunrise-Room-At-The-Cloud-Forest-Retreat.h114675896.Hotel-Information",
       "booking": ""
     },
-    "Habitacion Atardecer": {
+    "Sunset Room": {
       "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunset-room",
       "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522308vb?dateless=true&x_pwa=1&rfrr=HSR&pwa_ts=1769454870000&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=false&adults=2&regionId=3000388018&destination=Calacali%2C+Pichincha%2C+Ecuador&destType=MARKET&latLong=-0.001291%2C-78.51387&searchId=ea67ea52-0c68-4544-a28a-1061e36034cb&sort=RECOMMENDED&userIntent=&expediaPropertyId=114674265",
       "expedia": "https://www.expedia.com/Quito-Hotels-Sunset-Room-At-The-Cloud-Forest-Retreat.h114674265.Hotel-Information",
@@ -919,9 +926,9 @@ input:focus, select:focus, textarea:focus{
     var s = String(v || "").trim();
     if (!s) return "Entire house";
     if (s === "Entire house") return s;
-    if (s === "Suite Panoramica") return s;
-    if (s === "Habitacion Amanecer") return s;
-    if (s === "Habitacion Atardecer") return s;
+    if (s === "Panoramic Suite") return s;
+    if (s === "Sunrise Room") return s;
+    if (s === "Sunset Room") return s;
     return "Entire house";
   }
 
@@ -991,7 +998,7 @@ input:focus, select:focus, textarea:focus{
 
   function setSending(isSending){
     btn.disabled = isSending;
-    btn.textContent = isSending ? "Enviando..." : "Enviar solicitud";
+    btn.textContent = isSending ? "Sending..." : "Submit request";
   }
 
   function showSuccess(){
@@ -1001,43 +1008,72 @@ input:focus, select:focus, textarea:focus{
 
   function showError(msg){
     statusCard.classList.add("show");
-    statusCard.querySelector(".statusTitle").textContent = "Algo salió mal";
-    statusCard.querySelector(".statusText").textContent = msg || "Por favor, inténtalo de nuevo en un momento.";
+    statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
+    statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
     statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   if (!form || !btn || !statusCard) return;
 
-  form.addEventListener("submit", function(e){
+  form.addEventListener("submit", async function(e){
     e.preventDefault();
 
     if (first) first.value = toTitleCase(first.value);
     if (last) last.value = toTitleCase(last.value);
 
-    var fd = new FormData(form);
+    const fd = new FormData(form);
 
-    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone")){
-      showError("Por favor completa todos los campos obligatorios.");
+    // Page context for language + debugging
+    fd.set("source_page", window.location.pathname);
+    fd.set("user_agent", navigator.userAgent);
+
+    // Required fields
+    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("phone_number") || !fd.get("number_of_days_interested") || !fd.get("number_of_guests") || !fd.get("message")) {
+      showError("Please fill out all required fields.");
+      return;
+    }
+
+    // Turnstile token
+    const tsToken = fd.get("cf-turnstile-response");
+    if (!tsToken) {
+      showError("Please complete the security check and try again.");
       return;
     }
 
     setSending(true);
 
-    fetch(WEB_APP_URL, {
-      method: "POST",
-      body: fd,
-      mode: "no-cors"
-    })
-    .then(function(){
+    try {
+      const res = await fetch(API_ENDPOINT, {
+        method: "POST",
+        body: fd
+      });
+
+      let json = null;
+      try {
+        json = await res.json();
+      } catch (err) {
+        json = null;
+      }
+
+      if (!res.ok || !json || !json.ok) {
+        const msg = (json && (json.message || json.error)) ? (json.message || json.error) : "We could not submit your request. Please try again.";
+        throw new Error(msg);
+      }
+
       showSuccess();
       form.reset();
+
+      if (window.turnstile) {
+        try { window.turnstile.reset(); } catch (e) {}
+      }
+    } catch (err) {
+      showError((err && err.message) ? err.message : "We could not submit your request. Please try again.");
+    } finally {
       setSending(false);
-    })
-    .catch(function(){
-      setSending(false);
-      showError("No pudimos enviar tu solicitud. Por favor, inténtalo de nuevo.");
-    });
+    }
   });
+
+});
 })();
   </script>
 </body>
