@@ -1,3 +1,14 @@
+export async function onRequestGet() {
+  return json(
+    {
+      ok: false,
+      message:
+        "This endpoint only accepts POST. Your form or test is calling GET.",
+    },
+    405
+  );
+}
+
 export async function onRequestPost(context) {
   try {
     const { request, env } = context;
@@ -29,12 +40,10 @@ export async function onRequestPost(context) {
     const verifyOk = await verifyTurnstile(TURNSTILE_SECRET_KEY, token, ip);
     if (!verifyOk) return json({ ok: false, message: "Turnstile verification failed." }, 403);
 
-    // Forward to Apps Script (server-side inject cf_secret)
     const body = new URLSearchParams();
 
     body.set("cf_secret", TCFR_CF_GATE_SECRET);
 
-    // Normalize and forward fields for your Booking app script
     body.set("first_name", (data.first_name || "").toString());
     body.set("last_name", (data.last_name || "").toString());
     body.set("email", (data.email || "").toString());
@@ -46,30 +55,33 @@ export async function onRequestPost(context) {
     body.set("transportation_needed", (data.transportation_needed || "").toString());
     body.set("how_did_you_hear_about_us", (data.how_did_you_hear_about_us || "").toString());
 
-    // Use message_questions as your standardized field name going forward
     body.set("message_questions", (data.message_questions || data.message || "").toString());
 
     body.set("source_page", source_page);
     body.set("user_agent", ua);
     body.set("ip_best_effort", ip);
 
-    // Optional: pass language hint if you want based on URL
-    // body.set("lang", (data.lang || "").toString());
-
     const resp = await fetch(TCFR_BOOKING_WEBAPP_URL, {
       method: "POST",
       headers: { "content-type": "application/x-www-form-urlencoded;charset=UTF-8" },
-      body
+      body,
     });
 
-    // Apps Script usually returns 200 with text. We do not depend on it.
     const text = await resp.text();
 
     if (!resp.ok) {
-      return json({ ok: false, message: "Upstream error", upstream_status: resp.status, upstream_body: text.slice(0, 300) }, 502);
+      return json(
+        {
+          ok: false,
+          message: "Upstream error",
+          upstream_status: resp.status,
+          upstream_body: text.slice(0, 300),
+        },
+        502
+      );
     }
 
-    return json({ ok: true });
+    return json({ ok: true }, 200);
   } catch (err) {
     return json({ ok: false, message: "Server error." }, 500);
   }
@@ -84,7 +96,7 @@ async function verifyTurnstile(secret, responseToken, ip) {
   const r = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
     method: "POST",
     headers: { "content-type": "application/x-www-form-urlencoded;charset=UTF-8" },
-    body: form
+    body: form,
   });
 
   const j = await r.json();
@@ -96,7 +108,7 @@ function json(obj, status) {
     status,
     headers: {
       "content-type": "application/json; charset=utf-8",
-      "cache-control": "no-store"
-    }
+      "cache-control": "no-store",
+    },
   });
 }
