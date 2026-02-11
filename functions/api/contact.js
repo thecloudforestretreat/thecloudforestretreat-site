@@ -1,3 +1,14 @@
+export async function onRequestGet() {
+  return json(
+    {
+      ok: false,
+      message:
+        "This endpoint only accepts POST. Your form or test is calling GET.",
+    },
+    405
+  );
+}
+
 export async function onRequestPost(context) {
   try {
     const { request, env } = context;
@@ -47,16 +58,24 @@ export async function onRequestPost(context) {
     const resp = await fetch(TCFR_CONTACT_WEBAPP_URL, {
       method: "POST",
       headers: { "content-type": "application/x-www-form-urlencoded;charset=UTF-8" },
-      body
+      body,
     });
 
     const text = await resp.text();
 
     if (!resp.ok) {
-      return json({ ok: false, message: "Upstream error", upstream_status: resp.status, upstream_body: text.slice(0, 300) }, 502);
+      return json(
+        {
+          ok: false,
+          message: "Upstream error",
+          upstream_status: resp.status,
+          upstream_body: text.slice(0, 300),
+        },
+        502
+      );
     }
 
-    return json({ ok: true });
+    return json({ ok: true }, 200);
   } catch (err) {
     return json({ ok: false, message: "Server error." }, 500);
   }
@@ -71,7 +90,7 @@ async function verifyTurnstile(secret, responseToken, ip) {
   const r = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
     method: "POST",
     headers: { "content-type": "application/x-www-form-urlencoded;charset=UTF-8" },
-    body: form
+    body: form,
   });
 
   const j = await r.json();
@@ -83,7 +102,7 @@ function json(obj, status) {
     status,
     headers: {
       "content-type": "application/json; charset=utf-8",
-      "cache-control": "no-store"
-    }
+      "cache-control": "no-store",
+    },
   });
 }
