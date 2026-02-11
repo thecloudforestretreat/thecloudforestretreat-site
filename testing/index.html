@@ -692,7 +692,7 @@ input:focus, select:focus, textarea:focus{
     </div>
 
 
-    <form id="tcfrBookingForm" aria-label="Booking form">
+    <form id="tcfrBookingForm" method="post" action="javascript:void(0);" aria-label="Booking form">
           <input type="hidden" name="source_page" value="">
           <input type="hidden" name="user_agent" value="">
       <div class="formGrid">
@@ -713,7 +713,7 @@ input:focus, select:focus, textarea:focus{
 
         <div class="field">
           <label for="phone">Phone number <span class="req">*</span></label>
-          <input id="phone" name="phone_number" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Country code + phone number" />
         </div>
 
         <div class="field">
@@ -775,7 +775,7 @@ input:focus, select:focus, textarea:focus{
         </p>
           <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
 
-        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit Request</button>
+        <button id="tcfrSubmitBtn" class="submitBtn" type="button">Submit Request</button>
       </div>
     </form>
   </section>
@@ -1015,7 +1015,7 @@ input:focus, select:focus, textarea:focus{
 
   if (!form || !btn || !statusCard) return;
 
-  form.addEventListener("submit", async function(e){
+  form.addEventListener("submit", async function(e) {
     e.preventDefault();
 
     if (first) first.value = toTitleCase(first.value);
@@ -1073,6 +1073,7 @@ input:focus, select:focus, textarea:focus{
     }
   });
 
+});
 })();
   </script>
 </body>
