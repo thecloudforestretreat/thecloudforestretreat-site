@@ -692,7 +692,7 @@ input:focus, select:focus, textarea:focus{
     </div>
 
 
-    <form id="tcfrBookingForm" method="post" action="javascript:void(0);" aria-label="Booking form">
+    <form id="tcfrBookingForm" method="post" action="javascript:void(0);" aria-label="Booking form" onsubmit="return false;">
           <input type="hidden" name="source_page" value="">
           <input type="hidden" name="user_agent" value="">
       <div class="formGrid">
@@ -1015,8 +1015,8 @@ input:focus, select:focus, textarea:focus{
 
   if (!form || !btn || !statusCard) return;
 
-  form.addEventListener("submit", async function(e) {
-    e.preventDefault();
+    async function submitBooking(){
+    if (isSending) return;
 
     if (first) first.value = toTitleCase(first.value);
     if (last) last.value = toTitleCase(last.value);
@@ -1071,7 +1071,18 @@ input:focus, select:focus, textarea:focus{
     } finally {
       setSending(false);
     }
+  }
+
+  btn.addEventListener("click", submitBooking);
+
+  // Prevent Enter from triggering a full-page navigation in some browsers
+  form.addEventListener("keydown", function(ev){
+    if (ev.key === "Enter" && ev.target && ev.target.tagName !== "TEXTAREA"){
+      ev.preventDefault();
+      submitBooking();
+    }
   });
+
 
 });
 })();
