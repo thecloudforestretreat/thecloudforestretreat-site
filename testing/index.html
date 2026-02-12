@@ -738,7 +738,7 @@
                   <input id="date_start" name="date_start" type="date" required aria-label="Start date" />
                 </div>
                 <div class="field" style="margin:0;">
-                  <input id="date_end" name="date_end" type="date" required aria-label="End date" />
+                  <input id="date_end" name="date_end" type="date" aria-label="End date" />
                 </div>
               </div>
               <p class="dateHint">Select a start date and an optional end date. If your stay is one day, pick the same date for both.</p>
@@ -802,20 +802,18 @@
               By submitting, you agree we may contact you by email or phone to confirm details.
             </p>
             <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
-            <button id="tcfrSubmitBtn" class="submitBtn" type="button">Send Request</button>
+            <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Send Request</button>
+
+          <section id="tcfrStatusCard" class="statusCard" role="status" aria-live="polite">
+            <div class="statusTitle" id="tcfrStatusTitle">Your request has been sent.</div>
+            <div class="statusText" id="tcfrStatusText">We will email you a confirmation shortly.</div>
+          </section>
+
           </div>
         </form>
       </section>
 
       <aside class="sideStack" aria-label="Booking details (right column)">
-        <section id="tcfrStatusCard" class="card statusCard" aria-label="Submission status">
-          <h3 class="statusTitle">Request sent</h3>
-          <p class="statusText">
-            Thank you. We received your booking inquiry and sent a confirmation email.
-            If you do not see it, please check your spam or promotions folder.
-          </p>
-        </section>
-
         <section class="card sideCard" aria-label="What happens next">
           <h3 class="sideTitle">What happens next</h3>
           <p class="sideP">
@@ -1007,7 +1005,9 @@
 
       var form = document.getElementById("tcfrBookingForm");
       var btn = document.getElementById("tcfrSubmitBtn");
-      var statusCard = document.getElementById("tcfrStatusCard");
+      
+      form.addEventListener("submit", function(e){ e.preventDefault(); submitBooking(); });
+var statusCard = document.getElementById("tcfrStatusCard");
 
       var first = document.getElementById("first_name");
       var last = document.getElementById("last_name");
@@ -1043,20 +1043,17 @@
         btn.textContent = sending ? "Sending..." : "Send Request";
       }
 
-      function showSuccess(){
-        if (!statusCard) return;
+      function showSuccess() {
+        statusCard.classList.remove("error");
         statusCard.classList.add("show");
-        statusCard.querySelector(".statusTitle").textContent = "Success";
-        statusCard.querySelector(".statusText").textContent = "Thank you. We received your booking request and sent a confirmation email. If you do not see it, please check Spam or Promotions.";
-        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        statusTitle.textContent = "Your request has been sent.";
+        statusText.textContent = "We will email you a confirmation shortly.";
       }
 
-      function showError(msg){
-        if (!statusCard) return;
-        statusCard.classList.add("show");
-        statusCard.querySelector(".statusTitle").textContent = "Please check the form";
-        statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
-        statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      function showError(msg) {
+        statusCard.classList.add("show", "error");
+        statusTitle.textContent = "Something went wrong.";
+        statusText.textContent = msg || "Please try again in a moment.";
       }
 
       async function submitBooking(){
@@ -1132,7 +1129,7 @@
         }
       }
 
-      if (btn) btn.addEventListener("click", submitBooking);
+      if (btn) btn.addEventListener("click", function(e){ e.preventDefault(); submitBooking(); });
 
       if (form){
         form.addEventListener("keydown", function(ev){
