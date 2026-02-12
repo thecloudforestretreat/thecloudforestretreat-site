@@ -422,17 +422,11 @@ input:focus, select:focus, textarea:focus{
   .imageFrame{ aspect-ratio: 16 / 10; }
 }
   
-/* Contact form: Turnstile + inline status */
-.turnstileWrap{display:flex;align-items:center;justify-content:flex-start;margin:10px 0}
-.formStatus{margin-top:12px;padding:14px 14px;border-radius:14px;background:#e9f3e7;border:1px solid rgba(13,89,37,.18);color:#0b1a10;display:none}
-.formStatus.ok{display:block}
-.formStatus.err{display:block;background:#fff0f0;border-color:rgba(160,0,0,.25);color:#3b0b0b}
-.formStatus .statusTitle{font-weight:800;margin-bottom:6px}
-.formStatus .statusBody{color:#294034}
-.formStatus.err .statusBody{color:#5a2020}
-
-</style>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    .turnstileRow{margin-top:10px;margin-bottom:10px;}
+    .statusCard[hidden]{display:none;}
+    .statusCard.isError{border-color:rgba(185,28,28,.28);background:rgba(254,226,226,.55);}
+    .statusCard.isError .statusTitle{color:#991b1b;}
+  </style>
 </head>
 <body>
   <div id="siteHeader"></div>
@@ -509,14 +503,15 @@ input:focus, select:focus, textarea:focus{
         <p class="miniNote">
           By submitting, you agree we may contact you by email and, if provided, by phone.
         </p>
+        
+        <div class="turnstileRow">
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
+        </div>
         <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Submit</button>
       </div>
-    
-      <input type="hidden" name="source_page" id="source_page">
-      <input type="hidden" name="user_agent" id="user_agent">
     </form>
 
-    <section id="tcfrContactStatusCard" class="card statusCard" aria-label="Submission status">
+    <section id="tcfrContactStatusCard" class="card statusCard" aria-label="Submission status" hidden>
       <h3 class="statusTitle">Message sent</h3>
       <p class="statusText">
         Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.
@@ -558,172 +553,75 @@ input:focus, select:focus, textarea:focus{
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
+  
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script>
-    (function(){
+    (function () {
       "use strict";
-  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyau_y10RvNiQ-nLDlE35UbAWoplw_z17Efw_2ta_V87RbPty5OeBP5q2PMMwZ72SeenA/exec";
 
-  function toTitleCase(s){
-    var t = String(s || "").trim();
-    if (!t) return "";
-    t = t.toLowerCase().replace(/\s+/g, " ");
-    var parts = t.split(" ");
-    for (var i = 0; i < parts.length; i++){
-      var w = parts[i];
-      if (!w) continue;
-      var hy = w.split("-");
-      for (var j = 0; j < hy.length; j++){
-        var seg = hy[j];
-        if (!seg) continue;
-        hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
+      var form = document.getElementById("tcfrContactForm");
+      var btn = document.getElementById("tcfrContactSubmitBtn");
+      var card = document.getElementById("tcfrContactStatusCard");
+      var title = document.getElementById("tcfrContactStatusTitle");
+      var body = document.getElementById("tcfrContactStatusBody");
+
+      if (!form || !btn || !card || !title || !body) return;
+
+      function setStatus(isOk, t, m) {
+        card.hidden = false;
+        card.classList.toggle("isError", !isOk);
+        title.textContent = t;
+        body.textContent = m;
       }
-      parts[i] = hy.join("-");
-    }
-    return parts.join(" ");
-  }
 
-  var form = document.getElementById("tcfrContactForm");
-  var btn = document.getElementById("tcfrContactSubmitBtn");
-  var statusCard = document.getElementById("tcfrContactStatusCard");
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-  var first = document.getElementById("first_name");
-  var last = document.getElementById("last_name");
+        // Turnstile puts the token into a hidden field named "cf-turnstile-response"
+        var tokenEl = form.querySelector('[name="cf-turnstile-response"]');
+        var token = tokenEl ? String(tokenEl.value || "").trim() : "";
+        if (!token) {
+          setStatus(false, "Something went wrong", "Turnstile token missing. Please wait for the verification to load, then try again.");
+          return;
+        }
 
-  function bindTitleCase(el){
-    if (!el) return;
-    el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
-  }
-  bindTitleCase(first);
-  bindTitleCase(last);
+        btn.disabled = true;
+        var prev = btn.textContent;
+        btn.textContent = "Sending...";
 
-  function setSending(isSending){
-    btn.disabled = isSending;
-    btn.textContent = isSending ? "Sending..." : "Submit";
-  }
+        try {
+          var fd = new FormData(form);
+          fd.set("lang", "en");
+          fd.set("source_page", window.location.href);
+          fd.set("user_agent", navigator.userAgent);
 
-  function showError(msg){
-    statusCard.classList.add("show");
-    statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
-    statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
-    statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+          var res = await fetch("/api/contact", { method: "POST", body: fd });
+          var json;
+          try { json = await res.json(); } catch (err) { json = null; }
 
-  if (!form || !btn || !statusCard) return;
+          if (!res.ok || !json || !json.ok) {
+            var msg = (json && json.message) ? json.message : "Unable to send your message. Please try again.";
+            setStatus(false, "Something went wrong", msg);
+            return;
+          }
 
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
+          setStatus(true, "Message sent", "Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.");
 
-    if (first) first.value = toTitleCase(first.value);
-    if (last) last.value = toTitleCase(last.value);
-
-    var fd = new FormData(form);
-
-    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("message")){
-      showError("Please fill out all required fields.");
-      return;
-    }
-
-    setSending(true);
-
-    fetch(WEB_APP_URL, {
-      method: "POST",
-      body: fd,
-      mode: "no-cors"
-    })
-    .then(function(){
-      statusCard.classList.add("show");
-      statusCard.querySelector(".statusTitle").textContent = "Message sent";
-      statusCard.querySelector(".statusText").textContent = "Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.";
-      statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      form.reset();
-      setSending(false);
-    })
-    .catch(function(){
-      setSending(false);
-      showError("We could not submit your message. Please try again.");
-    });
-  });
-})();
+          // Optional: clear fields
+          form.reset();
+          if (window.turnstile && typeof window.turnstile.reset === "function") {
+            try { window.turnstile.reset(); } catch (err2) {}
+          }
+        } catch (err) {
+          setStatus(false, "Something went wrong", "Unable to send your message right now. Please try again.");
+        } finally {
+          btn.disabled = false;
+          btn.textContent = prev;
+        }
+      });
+    })();
   </script>
-
-<script>
-(function(){
-  var form = document.getElementById("tcfrContactForm");
-  var btn = document.getElementById("tcfrContactSubmitBtn");
-  var status = document.getElementById("tcfrContactStatus");
-  var sourcePage = document.getElementById("source_page");
-  var userAgent = document.getElementById("user_agent");
-
-  var API_ENDPOINT = "/api/contact";
-
-  function setSending(isSending){
-    if (!btn) return;
-    btn.disabled = !!isSending;
-    btn.textContent = isSending ? "Sending..." : "Send Message";
-  }
-
-  function clearStatus(){
-    if (!status) return;
-    status.className = "formStatus";
-    status.innerHTML = "";
-  }
-
-  function showSuccess(){
-    if (!status) return;
-    status.className = "formStatus ok";
-    status.innerHTML = '<div class="statusTitle">Message sent</div><div class="statusBody">We will email you a confirmation shortly.</div>';
-  }
-
-  function showError(msg){
-    if (!status) return;
-    status.className = "formStatus err";
-    status.innerHTML = '<div class="statusTitle">Something went wrong</div><div class="statusBody">' + (msg || "Please try again.") + "</div>";
-  }
-
-  async function handleSubmit(e){
-    if (e) e.preventDefault();
-    if (!form) return;
-
-    clearStatus();
-
-    if (sourcePage) sourcePage.value = window.location.href;
-    if (userAgent) userAgent.value = navigator.userAgent;
-
-    var fd = new FormData(form);
-
-    setSending(true);
-    try{
-      var res = await fetch(API_ENDPOINT, { method: "POST", body: fd });
-
-      var json = null;
-      try { json = await res.json(); } catch (e2) { json = null; }
-
-      if (!res.ok || !json || !json.ok){
-        var msg = (json && (json.message || json.error)) ? (json.message || json.error) : "We could not submit your message. Please try again.";
-        throw new Error(msg);
-      }
-
-      showSuccess();
-      form.reset();
-
-      if (sourcePage) sourcePage.value = window.location.href;
-      if (userAgent) userAgent.value = navigator.userAgent;
-
-      if (window.turnstile){
-        try { window.turnstile.reset(); } catch (e3) {}
-      }
-    } catch(err){
-      showError(err && err.message ? err.message : "We could not submit your message. Please try again.");
-    } finally {
-      setSending(false);
-    }
-  }
-
-  if (form){
-    form.addEventListener("submit", handleSubmit);
-  }
-})();
-</script>
 
 </body>
 </html>
