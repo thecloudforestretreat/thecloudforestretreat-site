@@ -1,137 +1,161 @@
-/**
- * /functions/api/contact.js
- *
- * Cloudflare Pages Function:
- * - Verifies Turnstile token
- * - Forwards sanitized fields to Google Apps Script Web App
- *
- * Required env vars in Cloudflare Pages:
- * - TURNSTILE_SECRET_KEY
- * - TCFR_CONTACT_WEBAPP_URL
- * - TCFR_CF_GATE_SECRET
- */
-
-function json(data, status = 200) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: {
-      "content-type": "application/json; charset=utf-8",
-      "cache-control": "no-store"
-    }
-  });
-}
-
-function bad(message, status = 400) {
-  return json({ ok: false, message }, status);
-}
-
-async function parseBody(request) {
-  const ct = request.headers.get("content-type") || "";
-
-  if (ct.includes("application/json")) {
-    try {
-      return await request.json();
-    } catch (e) {
-      return {};
-    }
-  }
-
-  // Default: form data
-  try {
-    const fd = await request.formData();
-    const obj = {};
-    for (const [k, v] of fd.entries()) obj[k] = v;
-    return obj;
-  } catch (e) {
-    return {};
-  }
-}
-
-function s(v) {
-  return (v == null) ? "" : String(v).trim();
-}
-
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  if (!env || !env.TURNSTILE_SECRET_KEY || !env.TCFR_CONTACT_WEBAPP_URL || !env.TCFR_CF_GATE_SECRET) {
-    return bad("Server config error: missing env vars.", 500);
-  }
-
-  const payload = await parseBody(request);
-
-  // Turnstile token
-  const token = s(payload["cf-turnstile-response"] || payload["cf_turnstile_response"] || payload["turnstile_token"]);
-  if (!token) return bad("Turnstile token missing.", 400);
-
-  // Verify Turnstile
   try {
-    const form = new FormData();
-    form.append("secret", env.TURNSTILE_SECRET_KEY);
-    form.append("response", token);
+    const origin = request.headers.get("Origin") || "";
+    const contentType = request.headers.get("content-type") || "";
+    const isForm =
+      contentType.includes("application/x-www-form-urlencoded") ||
+      contentType.includes("multipart/form-data");
 
-    const ip = request.headers.get("CF-Connecting-IP");
-    if (ip) form.append("remoteip", ip);
-
-    const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
-      method: "POST",
-      body: form
-    });
-
-    const verifyJson = await verifyRes.json();
-    if (!verifyJson || verifyJson.success !== true) {
-      return bad("Turnstile verification failed.", 403);
+    let data = {};
+    if (isForm) {
+      const form = await request.formData();
+      for (const [k, v] of form.entries()) data[k] = String(v || "");
+    } else {
+      data = await request.json().catch(() => ({}));
     }
-  } catch (e) {
-    return bad("Turnstile verification error.", 500);
-  }
 
-  // Collect + sanitize fields
-  const first_name = s(payload.first_name);
-  const last_name = s(payload.last_name);
-  const email = s(payload.email);
-  const phone = s(payload.phone);
-  const message = s(payload.message);
-  const how_did_you_hear_about_us = s(payload.how_did_you_hear_about_us);
-  const source_page = s(payload.source_page);
-  const user_agent = s(payload.user_agent);
-  const lang = s(payload.lang);
+    // Turnstile token (Cloudflare uses "cf-turnstile-response")
+    const token = String(
+      (data["cf-turnstile-response"] || data["turnstile_token"] || "")
+    ).trim();
 
-  if (!first_name || !last_name || !email || !message) {
-    return bad("Missing required fields.", 400);
-  }
+    if (!token) {
+      return json({ ok: false, message: "Turnstile token missing." }, 400, origin);
+    }
 
-  // Forward to Apps Script as form-urlencoded compatible
-  const forward = new URLSearchParams();
-  forward.set("cf_secret", env.TCFR_CF_GATE_SECRET);
-  forward.set("first_name", first_name);
-  forward.set("last_name", last_name);
-  forward.set("email", email);
-  forward.set("phone", phone);
-  forward.set("message", message);
-  forward.set("how_did_you_hear_about_us", how_did_you_hear_about_us);
-  forward.set("source_page", source_page);
-  forward.set("user_agent", user_agent);
-  forward.set("ip-best-effort", request.headers.get("CF-Connecting-IP") || "");
-  forward.set("lang", lang);
+    // Verify Turnstile
+    const verifyRes = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: new URLSearchParams({
+          secret: env.TURNSTILE_SECRET_KEY || "",
+          response: token,
+          remoteip: getIpBestEffort(request) || "",
+        }),
+      }
+    );
 
-  try {
-    const resp = await fetch(env.TCFR_CONTACT_WEBAPP_URL, {
+    const verifyJson = await verifyRes.json().catch(() => ({}));
+    if (!verifyJson.success) {
+      return json(
+        { ok: false, message: "Turnstile verification failed.", details: verifyJson },
+        403,
+        origin
+      );
+    }
+
+    // Normalize fields expected by Apps Script
+    const first_name = String(data.first_name || "").trim();
+    const last_name = String(data.last_name || "").trim();
+    const email = String(data.email || "").trim();
+    const phone = String(data.phone || data.phone_number || "").trim();
+    const message = String(data.message || "").trim();
+    const how_did_you_hear_about_us = String(data.how_did_you_hear_about_us || "").trim();
+
+    const source_page = String(data.source_page || request.url || "").trim();
+    const user_agent = String(data.user_agent || request.headers.get("User-Agent") || "").trim();
+    const ip_best_effort = getIpBestEffort(request) || "";
+
+    // Required checks (aligned with Apps Script)
+    if (!first_name || !last_name || !email || !message) {
+      return json(
+        {
+          ok: false,
+          message:
+            "Missing required fields. Please fill First Name, Last Name, Email, and Message.",
+        },
+        400,
+        origin
+      );
+    }
+
+    // Post to Apps Script Web App
+    // Prefer TCFR_CONTACT_WEBAPP_URL; fallback to TCFR_BOOKING_WEBAPP_URL if you reused one
+    const webAppUrl = env.TCFR_CONTACT_WEBAPP_URL || env.TCFR_BOOKING_WEBAPP_URL || "";
+    const cfSecret = env.TCFR_CF_GATE_SECRET || "";
+
+    if (!webAppUrl)
+      return json(
+        { ok: false, message: "Server misconfigured: TCFR_CONTACT_WEBAPP_URL missing." },
+        500,
+        origin
+      );
+    if (!cfSecret)
+      return json(
+        { ok: false, message: "Server misconfigured: TCFR_CF_GATE_SECRET missing." },
+        500,
+        origin
+      );
+
+    const body = new URLSearchParams();
+    body.set("cf_secret", cfSecret);
+
+    body.set("first_name", first_name);
+    body.set("last_name", last_name);
+    body.set("email", email);
+    body.set("phone", phone);
+    body.set("message", message);
+    body.set("how_did_you_hear_about_us", how_did_you_hear_about_us);
+
+    body.set("source_page", source_page);
+    body.set("user_agent", user_agent);
+    body.set("ip-best-effort", ip_best_effort);
+
+    // Optional language hint if you ever pass it from /es/
+    if (data.lang) body.set("lang", String(data.lang));
+
+    const upstream = await fetch(webAppUrl, {
       method: "POST",
       headers: { "content-type": "application/x-www-form-urlencoded;charset=UTF-8" },
-      body: forward.toString()
+      body,
     });
 
-    const txt = await resp.text();
-    let out = null;
-    try { out = JSON.parse(txt); } catch (e) { out = null; }
-
-    if (!resp.ok || !out || out.ok !== true) {
-      return bad((out && out.message) ? out.message : "Upstream error.", 502);
+    const upstreamText = await upstream.text();
+    let upstreamJson = {};
+    try {
+      upstreamJson = JSON.parse(upstreamText);
+    } catch (e) {
+      upstreamJson = { ok: false, message: "Apps Script returned non-JSON.", raw: upstreamText };
     }
 
-    return json({ ok: true, warning: out.warning || "" }, 200);
-  } catch (e) {
-    return bad("Unable to submit at this time.", 502);
+    const status = upstream.ok ? 200 : upstream.status || 500;
+    return json(upstreamJson, status, origin);
+  } catch (err) {
+    return json(
+      {
+        ok: false,
+        message: "Server error",
+        error: String(err && err.message ? err.message : err),
+      },
+      500
+    );
   }
+}
+
+function json(payload, status = 200, origin = "") {
+  const headers = {
+    "content-type": "application/json; charset=utf-8",
+    "cache-control": "no-store",
+    "access-control-allow-origin": origin || "*",
+    "access-control-allow-methods": "POST, OPTIONS",
+    "access-control-allow-headers": "Content-Type",
+  };
+  return new Response(JSON.stringify(payload), { status, headers });
+}
+
+function getIpBestEffort(request) {
+  return (
+    request.headers.get("CF-Connecting-IP") ||
+    request.headers.get("X-Forwarded-For") ||
+    request.headers.get("X-Real-IP") ||
+    ""
+  )
+    .split(",")[0]
+    .trim();
 }
