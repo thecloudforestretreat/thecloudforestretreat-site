@@ -562,53 +562,7 @@ input:focus, select:focus, textarea:focus{
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-  <script>
-(function () {
-  'use strict';
-
-  var API_URL = '/api/contact';
-
-  var form = document.getElementById('tcfrContactForm');
-  if (!form) return;
-
-  var firstNameEl = form.querySelector('input[name="first_name"]');
-  var lastNameEl = form.querySelector('input[name="last_name"]');
-  var emailEl = form.querySelector('input[name="email"]');
-  var phoneEl = form.querySelector('input[name="phone"]');
-  var msgEl = form.querySelector('textarea[name="message"]');
-  var heardEl = form.querySelector('select[name="how_did_you_hear_about_us"]');
-
-  var submitBtn = document.getElementById('tcfrContactSubmitBtn') || form.querySelector('button[type="submit"],input[type="submit"]');
-
-  var statusBox = document.getElementById('tcfrStatusBox');
-  var statusTitle = document.getElementById('tcfrStatusTitle');
-  var statusMsg = document.getElementById('tcfrStatusMsg');
-
-  function capFirst(s) {
-    s = String(s || '').trim();
-    if (!s) return '';
-    var lower = s.toLowerCase();
-    return lower.charAt(0).toUpperCase() + lower.slice(1);
-  }
-
-  function capSentenceStart(s) {
-    s = String(s || '');
-    if (!s.trim()) return '';
-    // Only capitalize the first character of the message (first word only).
-    s = s.replace(/^\s+/, '');
-    return s.charAt(0).toUpperCase() + s.slice(1);
-  }
-
-  function setStatus(type, title, msg){
-  if(!statusBox || !statusTitle || !statusMsg) return;
-  statusTitle.textContent = title || "";
-  statusMsg.textContent = msg || "";
-  statusBox.style.display = "block";
-  if(statusBox.hasAttribute("hidden")) statusBox.removeAttribute("hidden");
-  statusBox.classList.remove("isError","isSuccess");
-  statusBox.classList.add(type === "error" ? "isError" : "isSuccess");
-})();
-</script>
+  
 
 <script>
 (function(){
@@ -622,7 +576,7 @@ input:focus, select:focus, textarea:focus{
   var btn = document.getElementById('tcfrEnviarBtn') || document.getElementById('tcfrContactEnviarBtn');
   var sourcePageEl = form.querySelector('input[name="source_page"]');
   if(sourcePageEl){ sourcePageEl.value = window.location.href; }
-  var statusBox = document.getElementById('tcfrStatus');
+  var statusBox = document.getElementById('tcfrStatusBox');
   var statusTitle = document.getElementById('tcfrStatusTitle');
   var statusMsg = document.getElementById('tcfrStatusMsg');
 
@@ -645,15 +599,12 @@ input:focus, select:focus, textarea:focus{
 
   function setStatus(kind, title, msg){
     if(!statusBox) return;
+    statusBox.hidden = false;
     statusTitle.textContent = title || '';
     statusMsg.textContent = msg || '';
-    statusBox.hidden = false;
-    statusBox.classList.add('show');
-
-    statusBox.classList.remove('status--success','status--error','status--info');
-    if(kind === 'success') statusBox.classList.add('status--success');
-    else if(kind === 'error') statusBox.classList.add('status--error');
-    else statusBox.classList.add('status--info');
+    statusBox.style.borderColor = (kind === 'error') ? 'rgba(185,28,28,.25)' : 'rgba(13,89,37,.22)';
+    statusBox.style.background = (kind === 'error') ? 'rgba(254,226,226,.6)' : 'rgba(220,252,231,.55)';
+    statusTitle.style.color = (kind === 'error') ? '#991b1b' : '#0D5925';
   }
 
   function normalizeFields(){
@@ -671,7 +622,7 @@ input:focus, select:focus, textarea:focus{
     normalizeFields();
 
     if(btn){ btn.disabled = true; btn.textContent = 'Enviando...'; }
-    if(statusBox) statusBox.hidden = true; statusBox.classList.remove('show');
+    if(statusBox) statusBox.hidden = true;
 
     try{
       var fd = new FormData(form);
