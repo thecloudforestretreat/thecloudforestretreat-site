@@ -509,7 +509,7 @@ input:focus, select:focus, textarea:focus{
 
               <div id="tcfrStatusBox" class="statusCard" hidden>
                 <h3 id="tcfrStatusTitle" class="statusTitle">Mensaje enviado</h3>
-                <p id="tcfrStatusMsg" class="statusBody">Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.</p>
+                <p id="tcfrStatusBody" class="statusBody">Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.</p>
               </div>
       </div>
       <div class="actionsRow">
@@ -578,7 +578,7 @@ input:focus, select:focus, textarea:focus{
   if(sourcePageEl){ sourcePageEl.value = window.location.href; }
   var statusBox = document.getElementById('tcfrStatusBox');
   var statusTitle = document.getElementById('tcfrStatusTitle');
-  var statusMsg = document.getElementById('tcfrStatusMsg');
+  var statusMsg = document.getElementById('tcfrStatusBody');
 
   function capFirstOnly(s){
     s = (s || '').trim();
