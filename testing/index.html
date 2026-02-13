@@ -454,6 +454,10 @@ input:focus, select:focus, textarea:focus{
 
     <form id="tcfrContactForm" aria-label="Formulario de contacto">
       <input type="hidden" name="form_type" value="contact" />
+    <input type="hidden" name="lang" value="es">
+
+    <input type="hidden" name="cf_secret" value="TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c">
+
 
       <div class="formGrid">
         <div class="field">
@@ -606,5 +610,117 @@ input:focus, select:focus, textarea:focus{
 })();
 </script>
 
+<script>
+(function(){
+  var form = document.getElementById('tcfrContactForm');
+  if(!form) return;
+
+  var firstNameEl = document.getElementById('first_name');
+  var lastNameEl  = document.getElementById('last_name');
+  var messageEl   = document.getElementById('message');
+
+  var btn = document.getElementById('tcfrEnviarBtn') || document.getElementById('tcfrContactEnviarBtn');
+  var sourcePageEl = form.querySelector('input[name="source_page"]');
+  if(sourcePageEl){ sourcePageEl.value = window.location.href; }
+  var statusBox = document.getElementById('tcfrStatus');
+  var statusTitle = document.getElementById('tcfrStatusTitle');
+  var statusMsg = document.getElementById('tcfrStatusMsg');
+
+  function capFirstOnly(s){
+    s = (s || '').trim();
+    if(!s) return '';
+    s = s.toLowerCase();
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  function capMessageFirstChar(s){
+    s = String(s || '');
+    if(!s) return '';
+    // capitalize first non-space character
+    var i = 0;
+    while(i < s.length && /\s/.test(s.charAt(i))) i++;
+    if(i >= s.length) return s;
+    return s.slice(0,i) + s.charAt(i).toUpperCase() + s.slice(i+1);
+  }
+
+  function setStatus(kind, title, msg){
+    if(!statusBox) return;
+    statusBox.hidden = false;
+    statusTitle.textContent = title || '';
+    statusMsg.textContent = msg || '';
+    statusBox.style.borderColor = (kind === 'error') ? 'rgba(185,28,28,.25)' : 'rgba(13,89,37,.22)';
+    statusBox.style.background = (kind === 'error') ? 'rgba(254,226,226,.6)' : 'rgba(220,252,231,.55)';
+    statusTitle.style.color = (kind === 'error') ? '#991b1b' : '#0D5925';
+  }
+
+  function normalizeFields(){
+    if(firstNameEl) firstNameEl.value = capFirstOnly(firstNameEl.value);
+    if(lastNameEl)  lastNameEl.value  = capFirstOnly(lastNameEl.value);
+    if(messageEl)   messageEl.value   = capMessageFirstChar(messageEl.value);
+  }
+
+  if(firstNameEl) firstNameEl.addEventListener('blur', function(){ firstNameEl.value = capFirstOnly(firstNameEl.value); });
+  if(lastNameEl)  lastNameEl.addEventListener('blur', function(){ lastNameEl.value  = capFirstOnly(lastNameEl.value); });
+  if(messageEl)   messageEl.addEventListener('blur', function(){ messageEl.value   = capMessageFirstChar(messageEl.value); });
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    normalizeFields();
+
+    if(btn){ btn.disabled = true; btn.textContent = 'Enviando...'; }
+    if(statusBox) statusBox.hidden = true;
+
+    try{
+      var fd = new FormData(form);
+      var token = fd.get('cf-turnstile-response');
+      if(!token){
+        setStatus('error','Something went wrong','Turnstile token missing. Please complete the verification and try again.');
+        if(btn){ btn.disabled = false; btn.textContent = 'Enviar'; }
+        return;
+      }
+
+      var payload = {
+        cf_secret: fd.get('cf_secret') || '',
+        'cf-turnstile-response': token,
+        first_name: fd.get('first_name') || '',
+        last_name: fd.get('last_name') || '',
+        email: fd.get('email') || '',
+        phone: fd.get('phone') || '',
+        message: fd.get('message') || '',
+        how_did_you_hear_about_us: fd.get('how_did_you_hear_about_us') || '',
+        source_page: fd.get('source_page') || window.location.href,
+        lang: fd.get('lang') || 'en'
+      };
+
+      var res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(payload)
+      });
+
+      var data = await res.json().catch(function(){ return {}; });
+
+      if(!res.ok || !data.ok){
+        var msg = data && (data.message || data.error) ? (data.message || data.error) : 'Submission failed. Please try again.';
+        setStatus('error','Unable to send', msg);
+        if(btn){ btn.disabled = false; btn.textContent = 'Enviar'; }
+        return;
+      }
+
+      setStatus('success','Message sent','Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.');
+
+      // reset turnstile + keep inputs (optional). We'll keep values.
+      if(window.turnstile && typeof window.turnstile.reset === 'function'){
+        try{ window.turnstile.reset(); }catch(_e){}
+      }
+
+      if(btn){ btn.disabled = false; btn.textContent = 'Enviar'; }
+    }catch(err){
+      setStatus('error','Unable to send','Network error. Please try again.');
+      if(btn){ btn.disabled = false; btn.textContent = 'Enviar'; }
+    }
+  });
+})();
+</script>
 </body>
 </html>
