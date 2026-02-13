@@ -421,7 +421,31 @@ input:focus, select:focus, textarea:focus{
   .linkBtn{ width: 100%; min-width: 0; }
   .imageFrame{ aspect-ratio: 16 / 10; }
 }
-  </style>
+  
+  .turnstileRow{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:10px;
+  }
+  .statusBox{
+    margin-top:12px;
+    padding:12px 12px;
+    border-radius:14px;
+    border:1px solid rgba(17,24,39,.12);
+    background:rgba(255,255,255,.65);
+  }
+  .statusTitle{
+    font-weight:800;
+    margin:0 0 4px;
+  }
+  .statusMsg{
+    margin:0;
+    color:#233;
+  }
+</style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <div id="siteHeader"></div>
@@ -493,12 +517,24 @@ input:focus, select:focus, textarea:focus{
           </select>
         </div>
       </div>
+      <input type="hidden" name="form_type" value="contact">
+      <input type="hidden" name="cf_secret" value="TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c">
+      <input type="hidden" name="source_page" value="">
+      <input type="hidden" name="lang" value="en">
+
 
       <div class="actionsRow">
         <p class="miniNote">
           By submitting, you agree we may contact you by email and, if provided, by phone.
         </p>
-        <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Submit</button>
+        <div class="turnstileRow">
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
+          <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit</button>
+        </div>
+      </div>
+      <div id="tcfrStatus" class="statusBox" hidden>
+        <div class="statusTitle" id="tcfrStatusTitle"></div>
+        <div class="statusMsg" id="tcfrStatusMsg"></div>
       </div>
     </form>
 
@@ -545,91 +581,116 @@ input:focus, select:focus, textarea:focus{
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
   <script>
-    (function(){
-      "use strict";
-  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyau_y10RvNiQ-nLDlE35UbAWoplw_z17Efw_2ta_V87RbPty5OeBP5q2PMMwZ72SeenA/exec";
+(function(){
+  var form = document.getElementById('tcfrContactForm');
+  if(!form) return;
 
-  function toTitleCase(s){
-    var t = String(s || "").trim();
-    if (!t) return "";
-    t = t.toLowerCase().replace(/\s+/g, " ");
-    var parts = t.split(" ");
-    for (var i = 0; i < parts.length; i++){
-      var w = parts[i];
-      if (!w) continue;
-      var hy = w.split("-");
-      for (var j = 0; j < hy.length; j++){
-        var seg = hy[j];
-        if (!seg) continue;
-        hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
-      }
-      parts[i] = hy.join("-");
-    }
-    return parts.join(" ");
+  var firstNameEl = document.getElementById('first_name');
+  var lastNameEl  = document.getElementById('last_name');
+  var messageEl   = document.getElementById('message');
+
+  var btn = document.getElementById('tcfrSubmitBtn');
+  var sourcePageEl = form.querySelector('input[name="source_page"]');
+  if(sourcePageEl){ sourcePageEl.value = window.location.href; }
+  var statusBox = document.getElementById('tcfrStatus');
+  var statusTitle = document.getElementById('tcfrStatusTitle');
+  var statusMsg = document.getElementById('tcfrStatusMsg');
+
+  function capFirstOnly(s){
+    s = (s || '').trim();
+    if(!s) return '';
+    s = s.toLowerCase();
+    return s.charAt(0).toUpperCase() + s.slice(1);
   }
 
-  var form = document.getElementById("tcfrContactForm");
-  var btn = document.getElementById("tcfrContactSubmitBtn");
-  var statusCard = document.getElementById("tcfrContactStatusCard");
-
-  var first = document.getElementById("first_name");
-  var last = document.getElementById("last_name");
-
-  function bindTitleCase(el){
-    if (!el) return;
-    el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
-  }
-  bindTitleCase(first);
-  bindTitleCase(last);
-
-  function setSending(isSending){
-    btn.disabled = isSending;
-    btn.textContent = isSending ? "Sending..." : "Submit";
+  function capMessageFirstChar(s){
+    s = String(s || '');
+    if(!s) return '';
+    // capitalize first non-space character
+    var i = 0;
+    while(i < s.length && /\s/.test(s.charAt(i))) i++;
+    if(i >= s.length) return s;
+    return s.slice(0,i) + s.charAt(i).toUpperCase() + s.slice(i+1);
   }
 
-  function showError(msg){
-    statusCard.classList.add("show");
-    statusCard.querySelector(".statusTitle").textContent = "Something went wrong";
-    statusCard.querySelector(".statusText").textContent = msg || "Please try again in a moment.";
-    statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+  function setStatus(kind, title, msg){
+    if(!statusBox) return;
+    statusBox.hidden = false;
+    statusTitle.textContent = title || '';
+    statusMsg.textContent = msg || '';
+    statusBox.style.borderColor = (kind === 'error') ? 'rgba(185,28,28,.25)' : 'rgba(13,89,37,.22)';
+    statusBox.style.background = (kind === 'error') ? 'rgba(254,226,226,.6)' : 'rgba(220,252,231,.55)';
+    statusTitle.style.color = (kind === 'error') ? '#991b1b' : '#0D5925';
   }
 
-  if (!form || !btn || !statusCard) return;
+  function normalizeFields(){
+    if(firstNameEl) firstNameEl.value = capFirstOnly(firstNameEl.value);
+    if(lastNameEl)  lastNameEl.value  = capFirstOnly(lastNameEl.value);
+    if(messageEl)   messageEl.value   = capMessageFirstChar(messageEl.value);
+  }
 
-  form.addEventListener("submit", function(e){
+  if(firstNameEl) firstNameEl.addEventListener('blur', function(){ firstNameEl.value = capFirstOnly(firstNameEl.value); });
+  if(lastNameEl)  lastNameEl.addEventListener('blur', function(){ lastNameEl.value  = capFirstOnly(lastNameEl.value); });
+  if(messageEl)   messageEl.addEventListener('blur', function(){ messageEl.value   = capMessageFirstChar(messageEl.value); });
+
+  form.addEventListener('submit', async function(e){
     e.preventDefault();
+    normalizeFields();
 
-    if (first) first.value = toTitleCase(first.value);
-    if (last) last.value = toTitleCase(last.value);
+    if(btn){ btn.disabled = true; btn.textContent = 'Sending...'; }
+    if(statusBox) statusBox.hidden = true;
 
-    var fd = new FormData(form);
+    try{
+      var fd = new FormData(form);
+      var token = fd.get('cf-turnstile-response');
+      if(!token){
+        setStatus('error','Something went wrong','Turnstile token missing. Please complete the verification and try again.');
+        if(btn){ btn.disabled = false; btn.textContent = 'Submit'; }
+        return;
+      }
 
-    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("message")){
-      showError("Please fill out all required fields.");
-      return;
+      var payload = {
+        cf_secret: fd.get('cf_secret') || '',
+        'cf-turnstile-response': token,
+        first_name: fd.get('first_name') || '',
+        last_name: fd.get('last_name') || '',
+        email: fd.get('email') || '',
+        phone: fd.get('phone') || '',
+        message: fd.get('message') || '',
+        how_did_you_hear_about_us: fd.get('how_did_you_hear_about_us') || '',
+        source_page: fd.get('source_page') || window.location.href,
+        lang: fd.get('lang') || 'en'
+      };
+
+      var res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(payload)
+      });
+
+      var data = await res.json().catch(function(){ return {}; });
+
+      if(!res.ok || !data.ok){
+        var msg = data && (data.message || data.error) ? (data.message || data.error) : 'Submission failed. Please try again.';
+        setStatus('error','Unable to send', msg);
+        if(btn){ btn.disabled = false; btn.textContent = 'Submit'; }
+        return;
+      }
+
+      setStatus('success','Message sent','Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.');
+
+      // reset turnstile + keep inputs (optional). We'll keep values.
+      if(window.turnstile && typeof window.turnstile.reset === 'function'){
+        try{ window.turnstile.reset(); }catch(_e){}
+      }
+
+      if(btn){ btn.disabled = false; btn.textContent = 'Submit'; }
+    }catch(err){
+      setStatus('error','Unable to send','Network error. Please try again.');
+      if(btn){ btn.disabled = false; btn.textContent = 'Submit'; }
     }
-
-    setSending(true);
-
-    fetch(WEB_APP_URL, {
-      method: "POST",
-      body: fd,
-      mode: "no-cors"
-    })
-    .then(function(){
-      statusCard.classList.add("show");
-      statusCard.querySelector(".statusTitle").textContent = "Message sent";
-      statusCard.querySelector(".statusText").textContent = "Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.";
-      statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      form.reset();
-      setSending(false);
-    })
-    .catch(function(){
-      setSending(false);
-      showError("We could not submit your message. Please try again.");
-    });
   });
 })();
-  </script>
+</script>
 </body>
 </html>
