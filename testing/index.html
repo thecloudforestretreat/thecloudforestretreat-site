@@ -498,8 +498,7 @@ input:focus, select:focus, textarea:focus{
         <p class="miniNote">
           Al enviar, aceptas que podamos contactarte por email y, si lo proporcionas, por telefono.
         </p>
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
-            <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Enviar</button>
+        <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Enviar</button>
       </div>
     </form>
 
@@ -548,7 +547,8 @@ input:focus, select:focus, textarea:focus{
   <script>
     (function(){
       "use strict";
-  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyau_y10RvNiQ-nLDlE35UbAWoplw_z17Efw_2ta_V87RbPty5OeBP5q2PMMwZ72SeenA/exec";
+  var API_URL = "/api/contact";
+      var CF_SHARED_SECRET = "TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c";
 
   function toTitleCase(s){
     var t = String(s || "").trim();
@@ -597,31 +597,66 @@ input:focus, select:focus, textarea:focus{
 
   if (!form || !btn || !statusCard) return;
 
-  form.addEventListener("submit", function(e){
+  form.addEventListener("submit", async function(e){
     e.preventDefault();
 
-    if (first) first.value = toTitleCase(first.value);
-    if (last) last.value = toTitleCase(last.value);
-
-    var fd = new FormData(form);
-
-    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("message")){
-      showError("Por favor completa todos los campos obligatorios.");
-      return;
-    }
-
+    showStatus(""); // clear
     setSending(true);
 
-    fetch(WEB_APP_URL, {
-      method: "POST",
-      body: fd,
-      mode: "no-cors"
-    })
-    .then(function(){
-      statusCard.classList.add("show");
-      statusCard.querySelector(".statusTitle").textContent = "Mensaje enviado";
-      statusCard.querySelector(".statusText").textContent = "Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.";
-      statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    try {
+      var tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
+      var turnstileToken = tokenInput ? String(tokenInput.value || "").trim() : "";
+      if (!turnstileToken) {
+        showError("Por favor completa la verificacion anti-spam antes de enviar.");
+        setSending(false);
+        return;
+      }
+
+      var payload = {
+        cf_secret: CF_SHARED_SECRET,
+        "cf-turnstile-response": turnstileToken,
+        first_name: (form.first_name && form.first_name.value) ? form.first_name.value.trim() : "",
+        last_name: (form.last_name && form.last_name.value) ? form.last_name.value.trim() : "",
+        email: (form.email && form.email.value) ? form.email.value.trim() : "",
+        phone: (form.phone && form.phone.value) ? form.phone.value.trim() : "",
+        message: (form.message && form.message.value) ? form.message.value.trim() : "",
+        how_did_you_hear_about_us: (form.how_did_you_hear_about_us && form.how_did_you_hear_about_us.value) ? form.how_did_you_hear_about_us.value.trim() : "",
+        source_page: window.location.pathname,
+        user_agent: navigator.userAgent,
+        lang: "es"
+      };
+
+      var res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      var data = {};
+      try { data = await res.json(); } catch (err) { data = {}; }
+
+      if (!res.ok || !data || data.ok !== true) {
+        var msg = (data && data.message) ? data.message : "No pudimos enviar tu mensaje. Por favor intenta de nuevo.";
+        throw new Error(msg);
+      }
+
+      showSuccess();
+      form.reset();
+
+      // Reset Turnstile widget for another submission
+      try {
+        if (window.turnstile && typeof window.turnstile.reset === "function") {
+          var widget = form.querySelector(".cf-turnstile");
+          if (widget) window.turnstile.reset(widget);
+        }
+      } catch (err) {}
+
+      setSending(false);
+    } catch (err) {
+      setSending(false);
+      showError(err && err.message ? err.message : "No pudimos enviar tu mensaje. Por favor intenta de nuevo.");
+    }
+  });
       form.reset();
       setSending(false);
     })
@@ -632,6 +667,5 @@ input:focus, select:focus, textarea:focus{
   });
 })();
   </script>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
