@@ -571,7 +571,7 @@ input:focus, select:focus, textarea:focus{
   var lastNameEl  = document.getElementById('last_name');
   var messageEl   = document.getElementById('message');
 
-  var btn = document.getElementById('tcfrEnviarBtn');
+  var btn = document.getElementById('tcfrContactSubmitBtn');
   var sourcePageEl = form.querySelector('input[name="source_page"]');
   if(sourcePageEl){ sourcePageEl.value = window.location.href; }
   var statusBox = document.getElementById('tcfrStatusBox');
@@ -598,6 +598,7 @@ input:focus, select:focus, textarea:focus{
   function setStatus(kind, title, msg){
     if(!statusBox) return;
     statusBox.hidden = false;
+     statusBox.classList.add('show');
     statusTitle.textContent = title || '';
     statusMsg.textContent = msg || '';
     statusBox.style.borderColor = (kind === 'error') ? 'rgba(185,28,28,.25)' : 'rgba(13,89,37,.22)';
