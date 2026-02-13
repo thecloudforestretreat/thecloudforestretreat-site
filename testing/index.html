@@ -645,12 +645,15 @@ input:focus, select:focus, textarea:focus{
 
   function setStatus(kind, title, msg){
     if(!statusBox) return;
-    statusBox.hidden = false;
     statusTitle.textContent = title || '';
     statusMsg.textContent = msg || '';
-    statusBox.style.borderColor = (kind === 'error') ? 'rgba(185,28,28,.25)' : 'rgba(13,89,37,.22)';
-    statusBox.style.background = (kind === 'error') ? 'rgba(254,226,226,.6)' : 'rgba(220,252,231,.55)';
-    statusTitle.style.color = (kind === 'error') ? '#991b1b' : '#0D5925';
+    statusBox.hidden = false;
+    statusBox.classList.add('show');
+
+    statusBox.classList.remove('status--success','status--error','status--info');
+    if(kind === 'success') statusBox.classList.add('status--success');
+    else if(kind === 'error') statusBox.classList.add('status--error');
+    else statusBox.classList.add('status--info');
   }
 
   function normalizeFields(){
@@ -668,7 +671,7 @@ input:focus, select:focus, textarea:focus{
     normalizeFields();
 
     if(btn){ btn.disabled = true; btn.textContent = 'Enviando...'; }
-    if(statusBox) statusBox.hidden = true;
+    if(statusBox) statusBox.hidden = true; statusBox.classList.remove('show');
 
     try{
       var fd = new FormData(form);
