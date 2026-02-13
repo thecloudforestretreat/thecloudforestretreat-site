@@ -502,17 +502,12 @@ input:focus, select:focus, textarea:focus{
 
             <div class="turnstileRow">
         <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
-
-              <div id="tcfrStatus" class="statusCard" hidden>
-                <h3 id="tcfrStatusTitle" class="statusTitle">Mensaje enviado</h3>
-                <p id="tcfrStatusMsg" class="statusBody">Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.</p>
-              </div>
       </div>
       <div class="actionsRow">
         <p class="miniNote">
           Al enviar, aceptas que podamos contactarte por email y, si lo proporcionas, por telefono.
         </p>
-        <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Enviar</button>
+        <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit">Enviar</button>
       </div>
     </form>
 
@@ -559,121 +554,148 @@ input:focus, select:focus, textarea:focus{
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
   <script>
-(function() {
-  var form = document.getElementById('tcfrContactForm');
+(function(){
+  "use strict";
+
+  var API_URL = "/api/contact";
+  var CF_SHARED_SECRET = "TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c";
+
+  var form = document.getElementById("tcfrContactForm");
+  var statusCard = document.getElementById("tcfrContactStatusCard");
+  var statusTitle = document.getElementById("tcfrContactStatusTitle");
+  var statusBody = document.getElementById("tcfrContactStatusBody");
+  var submitBtn = document.getElementById("tcfrContactSubmitBtn");
+
+  if (statusCard) statusCard.style.display = "none";
+
+  function qs(sel, root){ return (root || document).querySelector(sel); }
+
+  function setSending(isSending){
+    if (!submitBtn) return;
+    submitBtn.disabled = !!isSending;
+    submitBtn.setAttribute("aria-busy", isSending ? "true" : "false");
+    submitBtn.textContent = isSending ? "Enviando..." : "Enviar";
+  }
+
+  // Capitalize ONLY the first letter of the whole value (not every word)
+  function capFirstOnly(value){
+    var s = String(value || "").trim();
+    if (!s) return "";
+    s = s.toLowerCase();
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  function capMessageFirstLetter(value){
+    var s = String(value || "").trim();
+    if (!s) return "";
+    s = s.toLowerCase();
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  // Inputs
+  var firstNameEl = qs('input[name="first_name"]', form);
+  var lastNameEl  = qs('input[name="last_name"]', form);
+  var messageEl   = qs('textarea[name="message"]', form);
+
+  if (firstNameEl) firstNameEl.addEventListener("blur", function(){ this.value = capFirstOnly(this.value); });
+  if (lastNameEl)  lastNameEl.addEventListener("blur", function(){ this.value = capFirstOnly(this.value); });
+  if (messageEl)   messageEl.addEventListener("blur", function(){ this.value = capMessageFirstLetter(this.value); });
+
+  function showSuccess(){
+    if (!statusCard || !statusTitle || !statusBody) return;
+    statusTitle.textContent = "Mensaje enviado";
+    statusBody.textContent = "Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.";
+    statusCard.style.display = "block";
+      try { statusCard.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+    statusCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function showError(msg){
+    if (!statusCard || !statusTitle || !statusBody) return;
+    statusTitle.textContent = "No se pudo enviar";
+    statusBody.textContent = msg || "Ocurrio un error. Por favor intenta de nuevo.";
+    statusCard.style.display = "block";
+      try { statusCard.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+    statusCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function collectPayload(){
+    var fd = new FormData(form);
+
+    // Make sure we send the secret gate to the Pages Function
+    fd.set("cf_secret", CF_SHARED_SECRET);
+
+    // Ensure language + source page are always present
+    if (!fd.get("lang")) fd.set("lang", "es");
+    if (!fd.get("source_page")) fd.set("source_page", window.location.pathname || "/es/contacto/");
+
+    // Best-effort UA (Apps Script expects user_agent)
+    fd.set("user_agent", navigator.userAgent || "");
+
+    // Turnstile response (Cloudflare injects hidden input named cf-turnstile-response)
+    var token = fd.get("cf-turnstile-response") || "";
+    if (!token) {
+      throw new Error("Turnstile token missing.");
+    }
+
+    // Apply capitalization rules before sending
+    if (fd.get("first_name")) fd.set("first_name", capFirstOnly(fd.get("first_name")));
+    if (fd.get("last_name")) fd.set("last_name", capFirstOnly(fd.get("last_name")));
+    if (fd.get("message")) fd.set("message", capMessageFirstLetter(fd.get("message")));
+
+    return fd;
+  }
+
   if (!form) return;
 
-  var btn = document.getElementById('tcfrSubmitBtn');
-  var statusBox = document.getElementById('tcfrStatus');
-  var statusTitle = document.getElementById('tcfrStatusTitle');
-  var statusMsg = document.getElementById('tcfrStatusMsg');
-
-  function showStatus(type, title, msg) {
-    if (!statusBox || !statusTitle || !statusMsg) return;
-    statusBox.hidden = false;
-    statusTitle.textContent = title || '';
-    statusMsg.textContent = msg || '';
-    statusBox.classList.remove('status-success', 'status-error');
-    statusBox.classList.add(type === 'error' ? 'status-error' : 'status-success');
-    statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
-  function hideStatus() {
-    if (statusBox) statusBox.hidden = true;
-  }
-
-  function capFirstOnly(s) {
-    s = String(s || '').trim();
-    if (!s) return '';
-    return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
-  }
-
-  function capMessageFirstWordOnly(s) {
-    s = String(s || '');
-    var trimmed = s.replace(/^\s+/, '');
-    if (!trimmed) return s;
-    // Capitalize first non-space char, keep rest exactly as typed
-    var i = s.search(/\S/);
-    if (i === -1) return s;
-    return s.slice(0, i) + s.charAt(i).toUpperCase() + s.slice(i + 1);
-  }
-
-  form.addEventListener('submit', async function(e) {
+  form.addEventListener("submit", function(e){
     e.preventDefault();
-    hideStatus();
 
-    if (btn) {
-      btn.disabled = true;
-      btn.dataset.originalText = btn.dataset.originalText || btn.textContent;
-      btn.textContent = 'Enviando...';
+    if (statusCard) statusCard.style.display = "none";
+
+    // Required fields check (same as EN)
+    var fn = firstNameEl ? firstNameEl.value.trim() : "";
+    var ln = lastNameEl ? lastNameEl.value.trim() : "";
+    var em = qs('input[name="email"]', form) ? qs('input[name="email"]', form).value.trim() : "";
+    var msg = messageEl ? messageEl.value.trim() : "";
+
+    if (!fn || !ln || !em || !msg) {
+      showError("Completa Nombre, Apellido, Email y Mensaje.");
+      return;
     }
 
+    setSending(true);
+
+    var fd;
     try {
-      // Ensure Turnstile completed
-      var ts = form.querySelector('input[name="cf-turnstile-response"]');
-      var token = ts ? String(ts.value || '').trim() : '';
-      if (!token) {
-        showStatus('error', 'Falta verificacion', 'Por favor completa la verificacion antes de enviar.');
-        if (btn) {
-          btn.disabled = false;
-          btn.textContent = btn.dataset.originalText || 'Enviar';
-        }
-        return;
-      }
-
-      var fd = new FormData(form);
-
-      // Apply the agreed auto-cap rules:
-      // - First letter of first name only
-      // - First letter of last name only
-      // - First letter of the first word in the message only
-      var fn = capFirstOnly(fd.get('first_name'));
-      var ln = capFirstOnly(fd.get('last_name'));
-      var msg = capMessageFirstWordOnly(fd.get('message'));
-
-      fd.set('first_name', fn);
-      fd.set('last_name', ln);
-      fd.set('message', msg);
-
-      // Make sure these are always present and full URL
-      fd.set('lang', 'es');
-      fd.set('source_page', window.location.href);
-
-      var payload = {};
-      fd.forEach(function(v, k) { payload[k] = v; });
-
-      var res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      var data = {};
-      try { data = await res.json(); } catch (err) { data = {}; }
-
-      if (!res.ok || !data || data.ok !== true) {
-        var m = (data && data.message) ? data.message : 'No se pudo enviar. Intentalo de nuevo.';
-        showStatus('error', 'Error', m);
-      } else {
-        showStatus(
-          'success',
-          'Mensaje enviado',
-          'Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.'
-        );
-        form.reset();
-        // Reset Turnstile for next submission
-        if (window.turnstile && typeof window.turnstile.reset === 'function') {
-          try { window.turnstile.reset(); } catch (e2) {}
-        }
-      }
+      fd = collectPayload();
     } catch (err) {
-      showStatus('error', 'Error', 'No se pudo enviar. Intentalo de nuevo.');
-    } finally {
-      if (btn) {
-        btn.disabled = false;
-        btn.textContent = btn.dataset.originalText || 'Enviar';
-      }
+      setSending(false);
+      showError(err && err.message ? err.message : "Turnstile token missing.");
+      return;
     }
+
+    fetch(API_URL, { method: "POST", body: fd })
+      .then(function(r){ return r.json().catch(function(){ return null; }); })
+      .then(function(data){
+        if (!data || data.ok !== true) {
+          var m = (data && (data.message || data.error)) ? (data.message || data.error) : "Ocurrio un error. Por favor intenta de nuevo.";
+          throw new Error(m);
+        }
+
+        // Reset form and Turnstile widget for the next submission
+        form.reset();
+        if (window.turnstile && typeof window.turnstile.reset === "function") {
+          try { window.turnstile.reset(); } catch (e) {}
+        }
+
+        setSending(false);
+        showSuccess();
+      })
+      .catch(function(err){
+        setSending(false);
+        showError(err && err.message ? err.message : "Ocurrio un error. Por favor intenta de nuevo.");
+      });
   });
 })();
 </script>
