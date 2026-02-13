@@ -421,7 +421,13 @@ input:focus, select:focus, textarea:focus{
   .linkBtn{ width: 100%; min-width: 0; }
   .imageFrame{ aspect-ratio: 16 / 10; }
 }
-  </style>
+  
+/* Turnstile row */
+.turnstileRow{display:flex;align-items:center;gap:14px;margin-top:12px;margin-bottom:10px;}
+.turnstileRow .cf-turnstile{transform:scale(0.95);transform-origin:left center;}
+@media (max-width: 640px){.turnstileRow{justify-content:flex-start;}.turnstileRow .cf-turnstile{transform:scale(0.9);}}
+</style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <div id="siteHeader"></div>
@@ -472,7 +478,7 @@ input:focus, select:focus, textarea:focus{
 
         <div class="field full">
           <label for="message">Mensaje <span class="req">*</span></label>
-          <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
+          <textarea id="message" name="message" required placeholder="Tu mensaje" autocapitalize="none"></textarea>
         </div>
 
         <div class="field full">
@@ -494,6 +500,9 @@ input:focus, select:focus, textarea:focus{
         </div>
       </div>
 
+            <div class="turnstileRow">
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
+      </div>
       <div class="actionsRow">
         <p class="miniNote">
           Al enviar, aceptas que podamos contactarte por email y, si lo proporcionas, por telefono.
@@ -545,91 +554,149 @@ input:focus, select:focus, textarea:focus{
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
   <script>
-    (function(){
-      "use strict";
-  var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyau_y10RvNiQ-nLDlE35UbAWoplw_z17Efw_2ta_V87RbPty5OeBP5q2PMMwZ72SeenA/exec";
+(function(){
+  "use strict";
 
-  function toTitleCase(s){
-    var t = String(s || "").trim();
-    if (!t) return "";
-    t = t.toLowerCase().replace(/\s+/g, " ");
-    var parts = t.split(" ");
-    for (var i = 0; i < parts.length; i++){
-      var w = parts[i];
-      if (!w) continue;
-      var hy = w.split("-");
-      for (var j = 0; j < hy.length; j++){
-        var seg = hy[j];
-        if (!seg) continue;
-        hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
-      }
-      parts[i] = hy.join("-");
-    }
-    return parts.join(" ");
-  }
+  var API_URL = "/api/contact";
+  var CF_SHARED_SECRET = "TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c";
 
   var form = document.getElementById("tcfrContactForm");
-  var btn = document.getElementById("tcfrContactSubmitBtn");
   var statusCard = document.getElementById("tcfrContactStatusCard");
+  var statusTitle = document.getElementById("tcfrContactStatusTitle");
+  var statusBody = document.getElementById("tcfrContactStatusBody");
+  var submitBtn = document.getElementById("tcfrContactSubmitBtn");
 
-  var first = document.getElementById("first_name");
-  var last = document.getElementById("last_name");
+  if (statusCard) statusCard.style.display = "none";
 
-  function bindTitleCase(el){
-    if (!el) return;
-    el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
-  }
-  bindTitleCase(first);
-  bindTitleCase(last);
+  function qs(sel, root){ return (root || document).querySelector(sel); }
 
   function setSending(isSending){
-    btn.disabled = isSending;
-    btn.textContent = isSending ? "Enviando..." : "Enviar";
+    if (!submitBtn) return;
+    submitBtn.disabled = !!isSending;
+    submitBtn.setAttribute("aria-busy", isSending ? "true" : "false");
+    submitBtn.textContent = isSending ? "Enviando..." : "Enviar";
+  }
+
+  // Capitalize ONLY the first letter of the whole value (not every word)
+  function capFirstOnly(value){
+    var s = String(value || "").trim();
+    if (!s) return "";
+    s = s.toLowerCase();
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  function capMessageFirstLetter(value){
+    var s = String(value || "").trim();
+    if (!s) return "";
+    s = s.toLowerCase();
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  // Inputs
+  var firstNameEl = qs('input[name="first_name"]', form);
+  var lastNameEl  = qs('input[name="last_name"]', form);
+  var messageEl   = qs('textarea[name="message"]', form);
+
+  if (firstNameEl) firstNameEl.addEventListener("blur", function(){ this.value = capFirstOnly(this.value); });
+  if (lastNameEl)  lastNameEl.addEventListener("blur", function(){ this.value = capFirstOnly(this.value); });
+  if (messageEl)   messageEl.addEventListener("blur", function(){ this.value = capMessageFirstLetter(this.value); });
+
+  function showSuccess(){
+    if (!statusCard || !statusTitle || !statusBody) return;
+    statusTitle.textContent = "Mensaje enviado";
+    statusBody.textContent = "Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.";
+    statusCard.style.display = "block";
+    statusCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
   function showError(msg){
-    statusCard.classList.add("show");
-    statusCard.querySelector(".statusTitle").textContent = "Algo salio mal";
-    statusCard.querySelector(".statusText").textContent = msg || "Por favor, intenta de nuevo en un momento.";
-    statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!statusCard || !statusTitle || !statusBody) return;
+    statusTitle.textContent = "No se pudo enviar";
+    statusBody.textContent = msg || "Ocurrio un error. Por favor intenta de nuevo.";
+    statusCard.style.display = "block";
+    statusCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
-  if (!form || !btn || !statusCard) return;
+  function collectPayload(){
+    var fd = new FormData(form);
+
+    // Make sure we send the secret gate to the Pages Function
+    fd.set("cf_secret", CF_SHARED_SECRET);
+
+    // Ensure language + source page are always present
+    if (!fd.get("lang")) fd.set("lang", "es");
+    if (!fd.get("source_page")) fd.set("source_page", window.location.pathname || "/es/contacto/");
+
+    // Best-effort UA (Apps Script expects user_agent)
+    fd.set("user_agent", navigator.userAgent || "");
+
+    // Turnstile response (Cloudflare injects hidden input named cf-turnstile-response)
+    var token = fd.get("cf-turnstile-response") || "";
+    if (!token) {
+      throw new Error("Turnstile token missing.");
+    }
+
+    // Apply capitalization rules before sending
+    if (fd.get("first_name")) fd.set("first_name", capFirstOnly(fd.get("first_name")));
+    if (fd.get("last_name")) fd.set("last_name", capFirstOnly(fd.get("last_name")));
+    if (fd.get("message")) fd.set("message", capMessageFirstLetter(fd.get("message")));
+
+    return fd;
+  }
+
+  if (!form) return;
 
   form.addEventListener("submit", function(e){
     e.preventDefault();
 
-    if (first) first.value = toTitleCase(first.value);
-    if (last) last.value = toTitleCase(last.value);
+    if (statusCard) statusCard.style.display = "none";
 
-    var fd = new FormData(form);
+    // Required fields check (same as EN)
+    var fn = firstNameEl ? firstNameEl.value.trim() : "";
+    var ln = lastNameEl ? lastNameEl.value.trim() : "";
+    var em = qs('input[name="email"]', form) ? qs('input[name="email"]', form).value.trim() : "";
+    var msg = messageEl ? messageEl.value.trim() : "";
 
-    if (!fd.get("first_name") || !fd.get("last_name") || !fd.get("email") || !fd.get("message")){
-      showError("Por favor completa todos los campos obligatorios.");
+    if (!fn || !ln || !em || !msg) {
+      showError("Completa Nombre, Apellido, Email y Mensaje.");
       return;
     }
 
     setSending(true);
 
-    fetch(WEB_APP_URL, {
-      method: "POST",
-      body: fd,
-      mode: "no-cors"
-    })
-    .then(function(){
-      statusCard.classList.add("show");
-      statusCard.querySelector(".statusTitle").textContent = "Mensaje enviado";
-      statusCard.querySelector(".statusText").textContent = "Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.";
-      statusCard.scrollIntoView({ behavior: "smooth", block: "start" });
-      form.reset();
+    var fd;
+    try {
+      fd = collectPayload();
+    } catch (err) {
       setSending(false);
-    })
-    .catch(function(){
-      setSending(false);
-      showError("No pudimos enviar tu mensaje. Por favor intenta de nuevo.");
-    });
+      showError(err && err.message ? err.message : "Turnstile token missing.");
+      return;
+    }
+
+    fetch(API_URL, { method: "POST", body: fd })
+      .then(function(r){ return r.json().catch(function(){ return null; }); })
+      .then(function(data){
+        if (!data || data.ok !== true) {
+          var m = (data && (data.message || data.error)) ? (data.message || data.error) : "Ocurrio un error. Por favor intenta de nuevo.";
+          throw new Error(m);
+        }
+
+        // Reset form and Turnstile widget for the next submission
+        form.reset();
+        if (window.turnstile && typeof window.turnstile.reset === "function") {
+          try { window.turnstile.reset(); } catch (e) {}
+        }
+
+        setSending(false);
+        showSuccess();
+      })
+      .catch(function(err){
+        setSending(false);
+        showError(err && err.message ? err.message : "Ocurrio un error. Por favor intenta de nuevo.");
+      });
   });
 })();
-  </script>
+</script>
+
 </body>
 </html>
