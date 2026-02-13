@@ -423,9 +423,8 @@ input:focus, select:focus, textarea:focus{
 }
   
 /* Turnstile row */
-.turnstileRow{display:flex;flex-wrap:wrap;align-items:flex-start;gap:14px;margin-top:12px;margin-bottom:10px;}
+.turnstileRow{display:flex;align-items:center;gap:14px;margin-top:12px;margin-bottom:10px;}
 .turnstileRow .cf-turnstile{transform:scale(0.95);transform-origin:left center;}
-#tcfrStatusBox{flex:1 1 100%;}
 @media (max-width: 640px){.turnstileRow{justify-content:flex-start;}.turnstileRow .cf-turnstile{transform:scale(0.9);}}
 </style>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -564,54 +563,6 @@ input:focus, select:focus, textarea:focus{
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
   <script>
-(function () {
-  'use strict';
-
-  var API_URL = '/api/contact';
-
-  var form = document.getElementById('tcfrContactForm');
-  if (!form) return;
-
-  var firstNameEl = form.querySelector('input[name="first_name"]');
-  var lastNameEl = form.querySelector('input[name="last_name"]');
-  var emailEl = form.querySelector('input[name="email"]');
-  var phoneEl = form.querySelector('input[name="phone"]');
-  var msgEl = form.querySelector('textarea[name="message"]');
-  var heardEl = form.querySelector('select[name="how_did_you_hear_about_us"]');
-
-  var submitBtn = document.getElementById('tcfrContactSubmitBtn') || form.querySelector('button[type="submit"],input[type="submit"]');
-
-  var statusBox = document.getElementById('tcfrStatusBox');
-  var statusTitle = document.getElementById('tcfrStatusTitle');
-  var statusMsg = document.getElementById('tcfrStatusMsg');
-
-  function capFirst(s) {
-    s = String(s || '').trim();
-    if (!s) return '';
-    var lower = s.toLowerCase();
-    return lower.charAt(0).toUpperCase() + lower.slice(1);
-  }
-
-  function capSentenceStart(s) {
-    s = String(s || '');
-    if (!s.trim()) return '';
-    // Only capitalize the first character of the message (first word only).
-    s = s.replace(/^\s+/, '');
-    return s.charAt(0).toUpperCase() + s.slice(1);
-  }
-
-  function setStatus(type, title, msg){
-  if(!statusBox || !statusTitle || !statusMsg) return;
-  statusTitle.textContent = title || "";
-  statusMsg.textContent = msg || "";
-  statusBox.style.display = "block";
-  if(statusBox.hasAttribute("hidden")) statusBox.removeAttribute("hidden");
-  statusBox.classList.remove("isError","isSuccess");
-  statusBox.classList.add(type === "error" ? "isError" : "isSuccess");
-})();
-</script>
-
-<script>
 (function(){
   var form = document.getElementById('tcfrContactForm');
   if(!form) return;
@@ -620,10 +571,10 @@ input:focus, select:focus, textarea:focus{
   var lastNameEl  = document.getElementById('last_name');
   var messageEl   = document.getElementById('message');
 
-  var btn = document.getElementById('tcfrEnviarBtn') || document.getElementById('tcfrContactEnviarBtn');
+  var btn = document.getElementById('tcfrEnviarBtn');
   var sourcePageEl = form.querySelector('input[name="source_page"]');
   if(sourcePageEl){ sourcePageEl.value = window.location.href; }
-  var statusBox = document.getElementById('tcfrStatus');
+  var statusBox = document.getElementById('tcfrStatusBox');
   var statusTitle = document.getElementById('tcfrStatusTitle');
   var statusMsg = document.getElementById('tcfrStatusMsg');
 
@@ -708,7 +659,7 @@ input:focus, select:focus, textarea:focus{
         return;
       }
 
-      setStatus('success','Message sent','Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.');
+      setStatus('success','Mensaje enviado','Gracias. Recibimos tu mensaje y te enviamos un email de confirmacion. Si no lo ves, revisa spam o promociones.');
 
       // reset turnstile + keep inputs (optional). We'll keep values.
       if(window.turnstile && typeof window.turnstile.reset === 'function'){
