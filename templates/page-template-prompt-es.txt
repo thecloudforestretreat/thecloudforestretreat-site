@@ -1,0 +1,54 @@
+PLANTILLA PAGE TCFR (ES)
+
+Estás creando una página base lista para producción para The Cloud Forest Retreat.
+
+ENTRADAS
+- URL: {{URL}}
+- Idioma: ES
+- Tipo de página: {{PAGE_TYPE}}
+- Palabra clave principal: {{KEYWORD_ES}}
+- Tipo de plantilla: page_template
+- Enlaces internos HACIA: {{INTERNAL_LINKS_TO}}
+- Enlaces internos DESDE: {{INTERNAL_LINKS_FROM}}
+- Prioridad SEO: {{SEO_PRIORITY}}
+- Notas: {{NOTES}}
+- URL alterna en inglés: {{EN_URL}}
+
+REGLAS GLOBALES
+- Entrega un documento HTML COMPLETO
+- Debe respetar el sistema visual actual de TCFR, los includes y las convenciones CSS
+- Usa:
+  - /assets/css/site.css
+  - /assets/css/header.css?v=3
+  - /assets/js/head.js?v=1
+  - /assets/js/site.js?v=3
+  - #siteHeader
+  - #siteFooter
+- Usa esta imagen como hero / placeholder:
+  /assets/images/pages/gallery/tcfr_gallery_01.jpg
+- Incluye canonical, hreflang, OG, Twitter, favicon, theme-color y structured data
+- Tono: premium, sereno, confiable y conectado con naturaleza
+- Español natural de Sudamérica
+- Evita guiones largos
+
+OBJETIVO
+Crear una página evergreen sólida que ayude tanto a UX como a SEO.
+
+ESTRUCTURA
+1. Banda superior / breadcrumb
+2. Hero con imagen y título
+3. Introducción
+4. 2 a 4 secciones de contenido
+5. Bloque de enlaces internos
+6. Banda CTA
+
+REGLAS SEO
+- Title: 55 a 65 caracteres aprox.
+- Meta description: 140 a 160 caracteres
+- H1 claro
+- WebPage schema
+- BreadcrumbList schema
+- hreflang entre inglés y español
+
+SALIDA
+Devuelve solo el archivo HTML completo.
