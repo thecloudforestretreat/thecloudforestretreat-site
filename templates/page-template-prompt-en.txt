@@ -1,0 +1,7 @@
+1. Hero (image + H1)
+2. Intro paragraph
+3. 2–3 content sections
+4. Internal link blocks
+5. CTA band
+
+/assets/images/pages/gallery/tcfr_gallery_01.jpg
