@@ -1,0 +1,32 @@
+HOW TO USE YOUR TCFR PAGE PROMPTS
+
+YES — for the prompt placeholder:
+
+Page topic: {{KEYWORD}}
+
+you do NOT paste the whole spreadsheet row into that one field.
+
+Instead, map the row into the prompt fields like this:
+
+Example spreadsheet row:
+/cloud-forest-lodge-near-quito/ | Landing Page | EN | NEW | cloud forest lodge near Quito | seo_template | /rooms/ | /booking/ | /features/activities/ | / | /blog/ | /rooms/ | VERY HIGH | Primary SEO landing page
+
+Use it like this:
+
+{{URL}} = /cloud-forest-lodge-near-quito/
+{{PAGE_TYPE}} = Landing Page
+{{KEYWORD}} = cloud forest lodge near Quito
+{{KEYWORD_ES}} = lodge bosque nublado cerca de Quito
+{{INTERNAL_LINKS_TO}} = /rooms/ | /booking/ | /features/activities/
+{{INTERNAL_LINKS_FROM}} = / | /blog/ | /rooms/
+{{SEO_PRIORITY}} = VERY HIGH
+{{NOTES}} = Primary SEO landing page
+{{ES_URL}} = /es/lodge-bosque-nublado-cerca-de-quito/
+{{EN_URL}} = /cloud-forest-lodge-near-quito/
+
+BEST PRACTICE
+- Use seo_template for landing / money pages
+- Use blog_template for /blog/ pages
+- Use page_template for evergreen core pages
+- Generate English and Spanish separately
+- Keep structure identical, only change the language and target URL pair
