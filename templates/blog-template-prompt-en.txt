@@ -1,0 +1,81 @@
+PLANTILLA BLOG TCFR (ES)
+
+Estás creando un artículo HTML listo para producción para The Cloud Forest Retreat usando el sistema actual del sitio.
+
+ENTRADAS
+- URL: {{URL}}
+- Idioma: ES
+- Tipo de página: Guía de blog
+- Palabra clave principal: {{KEYWORD_ES}}
+- Tipo de plantilla: blog_template
+- Enlaces internos HACIA: {{INTERNAL_LINKS_TO}}
+- Enlaces internos DESDE: {{INTERNAL_LINKS_FROM}}
+- Prioridad SEO: {{SEO_PRIORITY}}
+- Notas: {{NOTES}}
+- URL alterna en inglés: {{EN_URL}}
+
+REGLAS GLOBALES
+- Entrega un documento HTML COMPLETO
+- Debe respetar el sistema visual actual de TCFR y los includes del sitio
+- Usa:
+  - /assets/css/site.css
+  - /assets/css/header.css?v=3
+  - /assets/js/head.js?v=1
+  - /assets/js/site.js?v=3
+  - #siteHeader
+  - #siteFooter
+- Usa esta imagen como hero y placeholder:
+  /assets/images/pages/gallery/tcfr_gallery_01.jpg
+- Incluye canonical, hreflang, OG, Twitter, favicon, theme-color y structured data
+- Tono: útil, cálido, editorial, natural para viajeros
+- El artículo debe posicionar primero y luego llevar tráfico a reservas
+- Evita guiones largos
+
+OBJETIVO
+Captar tráfico informativo y llevar al lector hacia habitaciones, experiencias y reservas.
+
+ESTRUCTURA
+1. Hero
+   - Etiqueta de categoría
+   - H1
+   - 1 párrafo corto de resumen
+   - bloque opcional de lectura o accesos rápidos
+
+2. Introducción
+   - Respuesta inmediata a la intención de búsqueda
+   - Por qué esto importa para alguien que quiere quedarse cerca de Quito o en el bosque nublado
+
+3. Secciones principales
+   - 4 a 6 H2
+   - Párrafos escaneables
+   - Usa listas solo cuando aporten valor real
+   - Mantén un ángulo práctico de viaje
+
+4. Bloque de conexión con la estadía
+   - Explica por qué The Cloud Forest Retreat es relevante para este tema
+   - Enlaza de forma natural a /es/habitaciones/, /es/reservas/ y una página relacionada
+
+5. FAQ
+   - 3 a 5 preguntas breves
+   - Agrega FAQ schema si lo usas
+
+6. CTA final
+   - Invita a ver habitaciones o reservar
+
+REGLAS SEO
+- Title: 55 a 65 caracteres aprox.
+- Meta description: 140 a 160 caracteres
+- H1 alineado con la intención
+- Jerarquía limpia de headings
+- Agrega WebPage schema, BreadcrumbList schema y FAQ schema si corresponde
+- Usa la URL alterna en inglés en hreflang
+
+ENLACES INTERNOS
+Enlaza naturalmente a:
+- /es/habitaciones/
+- /es/reservas/
+- /es/caracteristicas/actividades/
+- al menos una página adicional de {{INTERNAL_LINKS_TO}}
+
+SALIDA
+Devuelve solo el archivo HTML completo.
