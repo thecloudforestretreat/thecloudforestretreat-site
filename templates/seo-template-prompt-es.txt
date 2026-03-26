@@ -1,30 +1,110 @@
-Eres un redactor experto en turismo y hospitalidad en Latinoamérica.
+PLANTILLA SEO TCFR (ES)
 
-Tema: {{KEYWORD_ES}}
+Estás creando una página HTML lista para producción para The Cloud Forest Retreat usando el sistema de diseño actual del sitio.
 
-Escribe en español natural de Sudamérica (Ecuador/Colombia neutral), NO español de España.
+ENTRADAS
+- URL: {{URL}}
+- Idioma: ES
+- Tipo de página: {{PAGE_TYPE}}
+- Palabra clave principal: {{KEYWORD_ES}}
+- Tipo de plantilla: seo_template
+- Enlaces internos HACIA: {{INTERNAL_LINKS_TO}}
+- Enlaces internos DESDE: {{INTERNAL_LINKS_FROM}}
+- Prioridad SEO: {{SEO_PRIORITY}}
+- Notas: {{NOTES}}
+- URL alterna en inglés: {{EN_URL}}
 
-ESTRUCTURA:
-1. Hero (emocional y atractivo)
-2. Introducción (contexto de ubicación)
-3. Experiencia (qué hace único el lugar)
-4. Actividades / naturaleza
-5. Diferenciación (por qué elegir este lugar)
-6. CTA (reserva o contacto)
+REGLAS GLOBALES
+- Entrega un documento HTML COMPLETO, no fragmentos
+- Debe respetar el sistema visual actual de TCFR, los includes del header/footer y las convenciones CSS
+- Usa:
+  - /assets/css/site.css
+  - /assets/css/header.css?v=3
+  - /assets/js/head.js?v=1
+  - /assets/js/site.js?v=3
+  - #siteHeader
+  - #siteFooter
+- Usa esta imagen como hero y placeholder:
+  /assets/images/pages/gallery/tcfr_gallery_01.jpg
+- Incluye:
+  - title
+  - meta description
+  - robots
+  - canonical
+  - hreflang (en, es, x-default)
+  - etiquetas OG
+  - Twitter tags
+  - favicon set
+  - theme-color
+  - structured data
+- El tono debe ser español natural de Sudamérica, no español de España
+- Mantén un tono premium, sereno, cercano a la naturaleza y sin sonar vendedor
+- Los enlaces internos deben integrarse de forma natural y también aparecer en bloques CTA
+- No inventes amenidades ni promesas no respaldadas por el posicionamiento real del lugar
+- Evita guiones largos
 
-REGLAS:
-- Lenguaje natural, no traducción literal
-- Evitar tono robótico o turístico genérico
-- Enfocar en experiencia, tranquilidad y naturaleza
-- Mantener fluidez SEO sin forzar keywords
+OBJETIVO
+Posicionar la página para la palabra clave principal y convertir visitas calificadas en exploración de habitaciones y reservas.
 
-Longitud: 800–1200 palabras
+ESTRUCTURA
+1. Hero
+   - Eyebrow
+   - H1 usando la palabra clave de forma natural
+   - 1 párrafo corto de apoyo
+   - 2 CTAs:
+     - Primario -> /es/reservas/
+     - Secundario -> /es/habitaciones/
+   - 2 a 3 pills de apoyo
+   - Imagen hero
 
-{{URL}} = /es/lodge-bosque-nublado-cerca-de-quito/
-{{PAGE_TYPE}} = Landing Page
-{{KEYWORD_ES}} = lodge bosque nublado cerca de Quito
-{{INTERNAL_LINKS_TO}} = /es/habitaciones/ | /es/reservas/ | /es/caracteristicas/actividades/
-{{INTERNAL_LINKS_FROM}} = /es/ | /es/blog/ | /es/habitaciones/
-{{SEO_PRIORITY}} = VERY HIGH
-{{NOTES}} = Página principal SEO en español
-{{EN_URL}} = /cloud-forest-lodge-near-quito/
+2. Introducción
+   - Por qué este tema importa
+   - Por qué el retreat encaja con esta intención de búsqueda
+   - Menciona cercanía a Quito si aplica
+
+3. Sección de experiencia
+   - 2 a 3 cards o bloques
+   - Explica qué hace especial la estadía
+   - Aprovecha oportunidades de enlazado interno
+
+4. Naturaleza / Actividades
+   - Conecta el tema con experiencias, entorno y naturaleza cercana
+   - Enlaza a /es/caracteristicas/actividades/ cuando aplique
+
+5. Por qué elegir esta estadía
+   - Posicionamiento claro frente a hospedajes genéricos
+   - Tono sereno, premium y basado en naturaleza
+   - Incluye 3 pruebas o razones breves
+
+6. Sección de enlaces internos
+   - Bloque corto que enlace a:
+     - /es/habitaciones/
+     - /es/reservas/
+     - /es/caracteristicas/actividades/
+     - una página adicional relevante si ayuda
+
+7. CTA final
+   - Enfocado en reserva
+   - CTA primario -> /es/reservas/
+   - CTA secundario -> /es/contacto/ o /es/habitaciones/
+
+REGLAS SEO
+- Title: 55 a 65 caracteres aprox.
+- Meta description: 140 a 160 caracteres
+- H1 alineado con la intención de búsqueda
+- Usa H2 y H3 limpios
+- Mantén el texto natural, sin sobreoptimizar
+- Agrega FAQ schema solo si realmente aporta
+- Agrega WebPage schema y BreadcrumbList schema
+- Usa la URL alterna en inglés en hreflang
+
+ESTILO
+- Elegante pero claro
+- Natural para viajeros
+- Español sudamericano fluido
+- Sin relleno robótico
+- Sin exageraciones
+- Sin keyword stuffing
+
+SALIDA
+Devuelve solo el archivo HTML completo.
