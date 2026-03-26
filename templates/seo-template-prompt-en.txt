@@ -1,36 +1,112 @@
-You are writing a high-converting SEO landing page for a premium eco-lodge in Ecuador.
+TCFR SEO TEMPLATE PROMPT (EN)
 
-Page topic: {{KEYWORD}}
+You are creating a production-ready HTML page for The Cloud Forest Retreat using the established site design system.
 
-Write in natural, premium English (US tone, travel-focused).
+INPUTS
+- URL: {{URL}}
+- Language: EN
+- Page Type: {{PAGE_TYPE}}
+- Primary Keyword: {{KEYWORD}}
+- Template Type: seo_template
+- Internal Links TO: {{INTERNAL_LINKS_TO}}
+- Internal Links FROM: {{INTERNAL_LINKS_FROM}}
+- SEO Priority: {{SEO_PRIORITY}}
+- Notes: {{NOTES}}
+- Spanish Alternate URL: {{ES_URL}}
 
-STRUCTURE:
-1. Hero section (headline + emotional hook)
-2. Intro (why this location matters)
-3. Experience section (what makes this lodge unique)
-4. Activities / nature section
-5. Why choose this over others (positioning)
-6. CTA section (booking intent)
+GLOBAL RULES
+- Output a FULL HTML document, not fragments
+- Match the current TCFR visual system, header/footer include system, and CSS conventions
+- Use:
+  - /assets/css/site.css
+  - /assets/css/header.css?v=3
+  - /assets/js/head.js?v=1
+  - /assets/js/site.js?v=3
+  - #siteHeader
+  - #siteFooter
+- Use this image as the page hero and section placeholder image:
+  /assets/images/pages/gallery/tcfr_gallery_01.jpg
+- Include:
+  - title
+  - meta description
+  - robots
+  - canonical
+  - hreflang (en, es, x-default)
+  - OG tags
+  - Twitter tags
+  - favicon set
+  - theme-color
+  - structured data
+- Match the existing TCFR tone:
+  premium, calm, nature-first, eco-luxury, close to Quito, not pushy
+- Internal links must be naturally embedded and also surfaced in CTA blocks
+- Use South America-friendly travel language only when relevant, but page language is English
+- Keep performance-friendly structure and readable spacing
+- Do not invent amenities or claims that are not supported by the property positioning
+- Avoid em dashes
 
-RULES:
-- Avoid generic filler
-- Use sensory language (nature, elevation, calm, escape)
-- Optimize for SEO but keep natural flow
-- Mention Quito proximity when relevant
-- Subtle luxury tone, not salesy
+PAGE GOAL
+Rank for the primary keyword and convert qualified visitors into room exploration and booking.
 
-Include internal linking anchors naturally for:
-- rooms
-- booking
-- activities
+PAGE STRUCTURE
+1. Hero
+   - Eyebrow
+   - H1 using the primary keyword naturally
+   - 1 short supporting paragraph
+   - 2 CTAs:
+     - Primary -> /booking/
+     - Secondary -> /rooms/
+   - 2 to 3 trust/support pills
+   - Hero image
 
-Length: 800–1200 words
+2. Intro Section
+   - Why this page topic matters
+   - Why the retreat is relevant to this search intent
+   - Mention Quito proximity if relevant
 
-{{URL}} = /cloud-forest-lodge-near-quito/
-{{PAGE_TYPE}} = Landing Page
-{{KEYWORD}} = cloud forest lodge near Quito
-{{INTERNAL_LINKS_TO}} = /rooms/ | /booking/ | /features/activities/
-{{INTERNAL_LINKS_FROM}} = / | /blog/ | /rooms/
-{{SEO_PRIORITY}} = VERY HIGH
-{{NOTES}} = Primary SEO landing page
-{{ES_URL}} = /es/lodge-bosque-nublado-cerca-de-quito/
+3. Experience Section
+   - 2 to 3 cards or split blocks
+   - Show what makes the stay distinctive
+   - Use strong internal linking opportunities
+
+4. Nature / Activities Section
+   - Connect the page topic to experiences, surroundings, and nearby nature
+   - Link to /features/activities/ when relevant
+
+5. Why Choose This Stay
+   - Clear positioning versus generic lodging
+   - Calm, premium, nature-based framing
+   - Include 3 concise proof points
+
+6. Internal Link Section
+   - Short curated block linking to:
+     - /rooms/
+     - /booking/
+     - /features/activities/
+     - one additional relevant page if useful
+
+7. Final CTA Band
+   - Booking-focused
+   - Primary CTA -> /booking/
+   - Secondary CTA -> /contact/ or /rooms/
+
+SEO RULES
+- Title: 55 to 65 characters
+- Meta description: 140 to 160 characters
+- H1 must align with keyword intent
+- Use H2s and H3s cleanly
+- Keep copy natural, not stuffed
+- Include FAQ schema if it genuinely improves the page
+- Add WebPage schema and BreadcrumbList schema
+- Use the provided Spanish alternate URL in hreflang
+
+COPY STYLE
+- Elegant but accessible
+- Travel-focused
+- Warm and specific
+- No generic AI filler
+- No exaggerated luxury language
+- No keyword stuffing
+
+OUTPUT
+Return only the complete HTML file.
