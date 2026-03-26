@@ -25,3 +25,12 @@ Include internal linking anchors naturally for:
 - activities
 
 Length: 800–1200 words
+
+{{URL}} = /cloud-forest-lodge-near-quito/
+{{PAGE_TYPE}} = Landing Page
+{{KEYWORD}} = cloud forest lodge near Quito
+{{INTERNAL_LINKS_TO}} = /rooms/ | /booking/ | /features/activities/
+{{INTERNAL_LINKS_FROM}} = / | /blog/ | /rooms/
+{{SEO_PRIORITY}} = VERY HIGH
+{{NOTES}} = Primary SEO landing page
+{{ES_URL}} = /es/lodge-bosque-nublado-cerca-de-quito/
