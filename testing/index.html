@@ -101,10 +101,7 @@
     }
 
     *{ box-sizing:border-box; }
-
-    body{
-      margin:0;
-    }
+    body{ margin:0; }
 
     .wrap{
       max-width: var(--max);
@@ -519,15 +516,15 @@
       }
 
       .heroMedia img{
-        object-position:center 38%;
-        transform:scale(1.02);
+        object-position:72% 42%;
+        transform:scale(1.08);
       }
 
       .heroCard{
         left:14px;
         right:14px;
         bottom:14px;
-        padding:15px 15px 14px;
+        padding:14px 14px 12px;
         border-radius:22px;
         max-width:none;
       }
@@ -538,29 +535,28 @@
       }
 
       .heroLead{
-        font-size:14px;
-        line-height:1.68;
+        font-size:13.5px;
+        line-height:1.6;
         max-width:none;
       }
 
       .heroActions{
-        flex-direction:column;
+        flex-direction:row;
         align-items:stretch;
       }
 
-      .heroActions .btn,
-      .ctaBtns .btn{
-        width:100%;
+      .heroActions .btn{
+        flex:1 1 calc(50% - 5px);
         justify-content:center;
       }
 
       .heroPills{
-        gap:8px;
+        gap:6px;
       }
 
       .heroPill{
-        font-size:12px;
-        padding:8px 12px;
+        font-size:11.5px;
+        padding:7px 10px;
       }
 
       .h2{
@@ -579,6 +575,11 @@
       .ctaBtns{
         width:100%;
       }
+
+      .ctaBtns .btn{
+        width:100%;
+        justify-content:center;
+      }
     }
 
     @media (max-width: 460px){
@@ -587,15 +588,24 @@
       }
 
       .heroMedia img{
-        object-position:center 34%;
+        object-position:74% 40%;
       }
 
       .heroCard{
-        padding:14px 14px 13px;
+        padding:14px 14px 12px;
       }
 
       .topActions .btn{
         flex:1 1 100%;
+      }
+
+      .heroActions{
+        flex-direction:column;
+      }
+
+      .heroActions .btn{
+        flex:1 1 100%;
+        width:100%;
       }
     }
   </style>
