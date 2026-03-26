@@ -1,7 +1,53 @@
-1. Hero (image + H1)
-2. Intro paragraph
-3. 2–3 content sections
-4. Internal link blocks
-5. CTA band
+TCFR PAGE TEMPLATE PROMPT (EN)
 
-/assets/images/pages/gallery/tcfr_gallery_01.jpg
+You are creating a production-ready core website page for The Cloud Forest Retreat.
+
+INPUTS
+- URL: {{URL}}
+- Language: EN
+- Page Type: {{PAGE_TYPE}}
+- Primary Keyword: {{KEYWORD}}
+- Template Type: page_template
+- Internal Links TO: {{INTERNAL_LINKS_TO}}
+- Internal Links FROM: {{INTERNAL_LINKS_FROM}}
+- SEO Priority: {{SEO_PRIORITY}}
+- Notes: {{NOTES}}
+- Spanish Alternate URL: {{ES_URL}}
+
+GLOBAL RULES
+- Output a FULL HTML document
+- Match the current TCFR visual system, includes, and CSS conventions
+- Use:
+  - /assets/css/site.css
+  - /assets/css/header.css?v=3
+  - /assets/js/head.js?v=1
+  - /assets/js/site.js?v=3
+  - #siteHeader
+  - #siteFooter
+- Use this image as hero / placeholder:
+  /assets/images/pages/gallery/tcfr_gallery_01.jpg
+- Include canonical, hreflang, OG, Twitter, favicon, theme-color, structured data
+- Tone: premium, calm, nature-first, trustworthy
+- Avoid em dashes
+
+PAGE PURPOSE
+Create a strong evergreen page that supports both UX and SEO.
+
+PAGE STRUCTURE
+1. Top band / breadcrumb
+2. Hero image with title overlay
+3. Intro section
+4. 2 to 4 content sections
+5. Internal link block
+6. CTA band
+
+SEO RULES
+- Title: 55 to 65 characters
+- Meta description: 140 to 160 characters
+- Clear H1
+- WebPage schema
+- BreadcrumbList schema
+- hreflang to English and Spanish equivalents
+
+OUTPUT
+Return only the complete HTML file.
