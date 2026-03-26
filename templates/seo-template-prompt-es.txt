@@ -19,3 +19,12 @@ REGLAS:
 - Mantener fluidez SEO sin forzar keywords
 
 Longitud: 800–1200 palabras
+
+{{URL}} = /es/lodge-bosque-nublado-cerca-de-quito/
+{{PAGE_TYPE}} = Landing Page
+{{KEYWORD_ES}} = lodge bosque nublado cerca de Quito
+{{INTERNAL_LINKS_TO}} = /es/habitaciones/ | /es/reservas/ | /es/caracteristicas/actividades/
+{{INTERNAL_LINKS_FROM}} = /es/ | /es/blog/ | /es/habitaciones/
+{{SEO_PRIORITY}} = VERY HIGH
+{{NOTES}} = Página principal SEO en español
+{{EN_URL}} = /cloud-forest-lodge-near-quito/
