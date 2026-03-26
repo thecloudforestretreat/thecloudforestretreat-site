@@ -25,7 +25,7 @@
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat near Quito, Ecuador" />
+  <meta property="og:image:alt" content="Cloud forest stay near Quito at The Cloud Forest Retreat" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cloud Forest Lodge Near Quito | The Cloud Forest Retreat" />
@@ -86,22 +86,25 @@
   <style>
     :root{
       --max: 1120px;
-      --r: 24px;
-      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --r-xl: 28px;
+      --r-lg: 22px;
       --line: rgba(11,26,16,0.12);
-      --glass: rgba(245,245,220,0.78);
-      --glass2: rgba(245,245,220,0.62);
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --panel: rgba(245,245,220,0.80);
+      --panel-soft: rgba(245,245,220,0.68);
+      --chip: rgba(255,255,255,0.62);
+      --chip-line: rgba(13,89,37,0.18);
       --ink: #0b1a10;
       --forest: #0D5925;
-      --forest2: #0B2B12;
-      --muted: rgba(11,26,16,0.72);
-      --accent: #E0643A;
-      --chipBg: rgba(255,255,255,0.62);
-      --chipLine: rgba(13,89,37,0.18);
+      --forest-deep: #0B2B12;
+      --muted: rgba(11,26,16,0.76);
     }
 
     *{ box-sizing:border-box; }
-    body{ margin:0; }
+
+    body{
+      margin:0;
+    }
 
     .wrap{
       max-width: var(--max);
@@ -109,62 +112,68 @@
       padding: 18px 18px 84px;
     }
 
-    .topBand{
-      margin-top: 14px;
+    .topBand,
+    .section,
+    .ctaBand{
       border: 1px solid var(--line);
-      border-radius: var(--r);
       box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      flex-wrap:wrap;
+      background: var(--panel);
       color: var(--ink);
     }
 
-    .crumbs{
-      display:inline-flex;
+    .topBand{
+      margin-top: 14px;
+      border-radius: var(--r-xl);
+      padding: 16px;
+      display:flex;
       align-items:center;
-      gap:8px;
-      font-weight:800;
-      font-size:13px;
-      color: rgba(11,26,16,0.75);
+      justify-content:space-between;
+      gap:12px;
       flex-wrap:wrap;
     }
+
+    .crumbs{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:8px;
+      font-size: 13px;
+      font-weight: 900;
+      color: rgba(11,26,16,0.74);
+      letter-spacing: -0.01em;
+    }
+
     .crumbs a{
-      color:inherit;
+      color: inherit;
       text-decoration:none;
     }
+
     .crumbs a:hover{
       text-decoration:underline;
       text-underline-offset:3px;
     }
 
-    .quickActions{
-      display:inline-flex;
-      gap:10px;
+    .topActions{
+      display:flex;
       flex-wrap:wrap;
+      gap:10px;
       align-items:center;
     }
 
     .hero{
       margin-top: 14px;
       border:1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
+      border-radius: var(--r-xl);
       overflow:hidden;
+      box-shadow: var(--shadow);
       position:relative;
-      color: var(--ink);
+      background:#24341f;
     }
 
     .heroMedia{
       position:relative;
+      min-height: 520px;
       overflow:hidden;
-      height: 420px;
-      background: rgba(0,0,0,0.10);
     }
 
     .heroMedia img{
@@ -173,168 +182,136 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      object-position:center 56%;
+      object-position:center 54%;
       display:block;
-      transform:scale(1.01);
+      transform:scale(1.015);
     }
 
     .heroShade{
       position:absolute;
       inset:0;
       background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+        radial-gradient(1200px 540px at 15% 12%, rgba(224,100,58,0.18), rgba(0,0,0,0) 55%),
+        linear-gradient(180deg, rgba(5,10,7,0.10), rgba(5,10,7,0.54));
       pointer-events:none;
     }
 
-    .heroInner{
+    .heroCard{
       position:absolute;
-      left:14px;
-      right:14px;
-      bottom:14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.26);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(6px);
-      padding:14px;
-      color: rgba(255,255,255,0.96);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-      max-width: 920px;
+      left:20px;
+      right:20px;
+      bottom:20px;
+      max-width:760px;
+      padding:18px 18px 16px;
+      border-radius:24px;
+      background:rgba(17,22,18,0.34);
+      border:1px solid rgba(255,255,255,0.18);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      box-shadow:0 18px 50px rgba(0,0,0,0.24);
+      color:rgba(255,255,255,0.97);
     }
 
-    .kicker{
+    .eyebrow{
       display:inline-flex;
       align-items:center;
       gap:8px;
+      font-size:12px;
       font-weight:900;
       letter-spacing:0.12em;
       text-transform:uppercase;
-      font-size:12px;
-      color: rgba(255,255,255,0.92);
+      color:rgba(255,255,255,0.92);
     }
 
-    .heroH1{
-      margin:8px 0 8px;
-      font-family: var(--font-head);
+    .hero h1{
+      margin:8px 0 10px;
+      font-family:var(--font-head);
+      font-size:clamp(34px, 4.4vw, 58px);
+      line-height:0.98;
+      letter-spacing:-0.04em;
       font-weight:900;
-      letter-spacing:-0.03em;
-      line-height:1.02;
-      font-size: clamp(32px, 4vw, 54px);
       color:#fff;
     }
 
     .heroLead{
       margin:0;
-      max-width: 80ch;
+      max-width:62ch;
+      font-size:16px;
+      line-height:1.72;
       font-weight:650;
-      line-height:1.74;
-      color: rgba(231,228,209,0.94);
-      font-size:15.7px;
+      color:rgba(255,255,255,0.92);
     }
 
-    .heroActions{
-      margin-top: 12px;
+    .heroActions,
+    .heroPills,
+    .ctaBtns,
+    .topActions{
       display:flex;
-      gap:10px;
       flex-wrap:wrap;
+      gap:10px;
       align-items:center;
     }
 
-    .pills{
-      margin-top:12px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
+    .heroActions,
+    .heroPills{
+      margin-top:14px;
     }
 
-    .pill{
+    .heroPill{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:9px 12px;
+      padding:9px 14px;
       border-radius:999px;
+      background:rgba(255,255,255,0.14);
       border:1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.14);
       color:#fff;
+      font-size:13px;
       font-weight:900;
-      font-size:12.6px;
-      letter-spacing:-0.01em;
       white-space:nowrap;
+      letter-spacing:-0.01em;
     }
 
     .section{
       margin-top:14px;
-      border:1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      color: var(--ink);
+      border-radius:var(--r-xl);
       overflow:hidden;
     }
 
-    .pad{ padding: 14px; }
-
-    .h2{
-      margin:0 0 10px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing:-0.02em;
-      font-weight:900;
-      font-size: 24px;
-      line-height:1.08;
+    .pad{
+      padding:16px;
     }
-
-    .h3{
-      margin:0 0 8px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing:-0.02em;
-      font-weight:900;
-      font-size: 20px;
-      line-height:1.1;
-    }
-
-    .p{
-      margin:0;
-      color: rgba(11,26,16,0.80);
-      line-height:1.78;
-      font-size:14.9px;
-      font-weight:650;
-    }
-
-    .p + .p{ margin-top:10px; }
 
     .split{
       display:grid;
-      grid-template-columns: 1.02fr 0.98fr;
+      grid-template-columns:1.02fr 0.98fr;
       gap:14px;
       align-items:stretch;
     }
 
     .mediaBox{
       position:relative;
-      min-height: 320px;
-      border-radius: 20px;
+      min-height:330px;
+      border-radius:22px;
       overflow:hidden;
       border:1px solid rgba(11,26,16,0.10);
-      background: rgba(0,0,0,0.10);
-      box-shadow: var(--shadow);
+      background:rgba(0,0,0,0.08);
+      box-shadow:var(--shadow);
     }
 
     .mediaBox img{
       width:100%;
       height:100%;
       object-fit:cover;
+      object-position:center 54%;
       display:block;
-      transform:scale(1.01);
     }
 
-    .mediaShade{
+    .mediaBox::after{
+      content:"";
       position:absolute;
       inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.24));
+      background:linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.20));
       pointer-events:none;
     }
 
@@ -343,102 +320,92 @@
       left:12px;
       right:12px;
       bottom:12px;
+      z-index:1;
       padding:10px 12px;
-      border-radius:14px;
-      background: rgba(245,245,220,0.92);
-      border:1px solid rgba(13,89,37,0.16);
-      color: var(--forest2);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-      font-weight:900;
+      border-radius:15px;
+      background:rgba(245,245,220,0.92);
+      border:1px solid rgba(13,89,37,0.14);
       font-size:13px;
-      letter-spacing:-0.01em;
+      font-weight:900;
+      color:var(--forest-deep);
+      box-shadow:0 14px 28px rgba(0,0,0,0.12);
     }
 
-    .cardGrid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-      align-items:stretch;
+    .h2{
+      margin:0 0 10px;
+      font-family:var(--font-head);
+      font-size:clamp(27px, 3vw, 42px);
+      line-height:1.02;
+      letter-spacing:-0.03em;
+      color:var(--forest);
+      font-weight:900;
     }
 
-    .miniCard{
-      border:1px solid rgba(11,26,16,0.10);
-      border-radius: 20px;
-      background: rgba(255,255,255,0.56);
-      box-shadow: 0 14px 30px rgba(13,89,37,0.10);
-      padding:14px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      min-width:0;
+    .h3{
+      margin:0 0 8px;
+      font-family:var(--font-head);
+      font-size:23px;
+      line-height:1.08;
+      letter-spacing:-0.02em;
+      color:var(--forest);
+      font-weight:900;
     }
 
-    .miniCard p{
+    .p{
       margin:0;
-      color: rgba(11,26,16,0.78);
-      line-height:1.72;
-      font-size:14.2px;
+      font-size:15px;
+      line-height:1.82;
+      color:var(--muted);
       font-weight:650;
     }
 
-    .proofs{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-      align-items:stretch;
+    .p + .p{
+      margin-top:10px;
     }
 
-    .proof{
+    .cardGrid,
+    .proofGrid,
+    .linkGrid{
+      display:grid;
+      gap:14px;
+      align-items:stretch;
+      grid-template-columns:repeat(3, 1fr);
+    }
+
+    .miniCard,
+    .proofCard,
+    .linkCard{
+      min-width:0;
+      border-radius:22px;
       border:1px solid rgba(11,26,16,0.10);
-      border-radius:20px;
-      background: rgba(255,255,255,0.56);
-      box-shadow: 0 14px 30px rgba(13,89,37,0.10);
+      background:rgba(255,255,255,0.56);
+      box-shadow:0 14px 30px rgba(13,89,37,0.10);
       padding:14px;
+    }
+
+    .miniCard,
+    .linkCard{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .proofCard{
       display:grid;
       gap:8px;
     }
 
-    .proofLabel{
+    .miniCard p,
+    .proofCard p,
+    .linkCard p{
       margin:0;
-      font-weight:900;
-      color: var(--forest2);
-      font-size:13px;
-      letter-spacing:0.08em;
-      text-transform:uppercase;
-    }
-
-    .proofText{
-      margin:0;
-      color: rgba(11,26,16,0.78);
-      line-height:1.7;
       font-size:14.2px;
+      line-height:1.74;
+      color:rgba(11,26,16,0.78);
       font-weight:650;
     }
 
-    .linkGrid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-      align-items:stretch;
-    }
-
-    .linkCard{
-      border:1px solid rgba(11,26,16,0.10);
-      border-radius:20px;
-      background: rgba(255,255,255,0.58);
-      box-shadow: 0 14px 30px rgba(13,89,37,0.10);
-      padding:14px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      min-width:0;
-    }
-
-    .linkCard a{
-      color:inherit;
-      text-decoration:none;
-    }
-
+    .proofLabel,
     .linkMeta{
       display:inline-flex;
       align-items:center;
@@ -446,125 +413,219 @@
       width:max-content;
       padding:7px 10px;
       border-radius:999px;
-      border:1px solid var(--chipLine);
-      background: var(--chipBg);
+      background:var(--chip);
+      border:1px solid var(--chip-line);
+      color:var(--forest-deep);
       font-size:12px;
       font-weight:900;
-      color: var(--forest2);
+      text-transform:uppercase;
+      letter-spacing:0.06em;
     }
 
     .linkTitle{
       margin:0;
-      font-family: var(--font-head);
-      color: var(--forest);
+      font-family:var(--font-head);
+      font-size:23px;
+      line-height:1.08;
       letter-spacing:-0.02em;
-      font-size:20px;
-      line-height:1.1;
+      color:var(--forest);
       font-weight:900;
     }
 
+    .linkTitle a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .linkTitle a:hover{
+      text-decoration:underline;
+      text-underline-offset:4px;
+    }
+
     .linkText{
-      margin:0;
-      color: rgba(11,26,16,0.78);
-      line-height:1.72;
-      font-size:14.2px;
-      font-weight:650;
       flex:1 1 auto;
     }
 
     .linkCta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      font-weight:900;
-      font-size:13px;
-      color: var(--forest2);
-      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
-      white-space:nowrap;
       width:max-content;
+      white-space:nowrap;
     }
 
     .ctaBand{
       margin-top:14px;
-      border-radius: var(--r);
-      border:1px solid rgba(11,26,16,0.12);
-      background: rgba(245,245,220,0.82);
-      box-shadow: var(--shadow);
+      border-radius:var(--r-xl);
       padding:16px;
       display:flex;
+      flex-wrap:wrap;
+      gap:14px;
       align-items:center;
       justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      color: var(--ink);
     }
 
-    .ctaBand h2{
+    .ctaCopy{
+      flex:1 1 520px;
+      min-width:0;
+    }
+
+    .ctaCopy h2{
       margin:0 0 6px;
-      font-family: var(--font-head);
-      color: var(--forest);
+      font-family:var(--font-head);
+      font-size:clamp(26px, 3vw, 42px);
+      line-height:1.03;
+      letter-spacing:-0.03em;
+      color:var(--forest);
       font-weight:900;
-      letter-spacing:-0.02em;
-      font-size:24px;
-      line-height:1.08;
     }
 
-    .ctaBand p{
+    .ctaCopy p{
       margin:0;
-      color: rgba(11,26,16,0.72);
+      font-size:15px;
+      line-height:1.78;
+      color:var(--muted);
       font-weight:650;
-      line-height:1.72;
-      max-width: 78ch;
+      max-width:72ch;
     }
 
-    .ctaBtns{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
+    @media (max-width: 980px){
+      .split,
+      .cardGrid,
+      .proofGrid,
+      .linkGrid{
+        grid-template-columns:1fr;
+      }
     }
 
-    @media (max-width: 900px){
-      .wrap{ padding:12px 14px 74px; }
-      .heroMedia{ height: 300px; }
-      .heroInner{ left:12px; right:12px; bottom:12px; }
-      .split{ grid-template-columns:1fr; }
-      .cardGrid{ grid-template-columns:1fr; }
-      .proofs{ grid-template-columns:1fr; }
-      .linkGrid{ grid-template-columns:1fr; }
+    @media (max-width: 760px){
+      .wrap{
+        padding:14px 14px 74px;
+      }
+
+      .topBand{
+        padding:14px;
+        gap:14px;
+      }
+
+      .topActions{
+        width:100%;
+      }
+
+      .topActions .btn{
+        flex:1 1 calc(50% - 5px);
+        justify-content:center;
+      }
+
+      .heroMedia{
+        min-height:440px;
+      }
+
+      .heroMedia img{
+        object-position:center 38%;
+        transform:scale(1.02);
+      }
+
+      .heroCard{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:15px 15px 14px;
+        border-radius:22px;
+        max-width:none;
+      }
+
+      .hero h1{
+        font-size:clamp(26px, 8vw, 40px);
+        line-height:1.02;
+      }
+
+      .heroLead{
+        font-size:14px;
+        line-height:1.68;
+        max-width:none;
+      }
+
+      .heroActions{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .heroActions .btn,
+      .ctaBtns .btn{
+        width:100%;
+        justify-content:center;
+      }
+
+      .heroPills{
+        gap:8px;
+      }
+
+      .heroPill{
+        font-size:12px;
+        padding:8px 12px;
+      }
+
+      .h2{
+        font-size:clamp(22px, 7vw, 34px);
+        line-height:1.05;
+      }
+
+      .h3{
+        font-size:21px;
+      }
+
+      .mediaBox{
+        min-height:260px;
+      }
+
+      .ctaBtns{
+        width:100%;
+      }
+    }
+
+    @media (max-width: 460px){
+      .heroMedia{
+        min-height:400px;
+      }
+
+      .heroMedia img{
+        object-position:center 34%;
+      }
+
+      .heroCard{
+        padding:14px 14px 13px;
+      }
+
+      .topActions .btn{
+        flex:1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
   <div id="siteHeader"></div>
 
-  <main class="wrap" aria-label="Cloud forest lodge near Quito page">
+  <main class="wrap" aria-label="Cloud Forest Lodge Near Quito page">
     <section class="topBand" aria-label="Page navigation and quick actions">
       <div class="crumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true">›</span>
         <span>Cloud Forest Lodge Near Quito</span>
       </div>
-      <div class="quickActions" aria-label="Quick actions">
+      <div class="topActions" aria-label="Quick actions">
         <a class="btn secondary" href="/rooms/">View Rooms</a>
         <a class="btn primary" href="/booking/">Book Your Stay</a>
       </div>
     </section>
 
     <section class="hero" aria-label="Landing page hero">
-      <div class="heroMedia" aria-label="Hero image">
+      <div class="heroMedia">
         <img src="/assets/images/pages/gallery/tcfr_gallery_01.jpg" alt="Cloud forest lodge near Quito at The Cloud Forest Retreat" loading="eager" decoding="async" />
         <div class="heroShade" aria-hidden="true"></div>
 
-        <div class="heroInner">
-          <div class="kicker">Nature stay near Quito</div>
-          <h1 class="heroH1">Cloud Forest Lodge Near Quito</h1>
+        <div class="heroCard">
+          <div class="eyebrow">Nature stay near Quito</div>
+          <h1>Cloud Forest Lodge Near Quito</h1>
           <p class="heroLead">
-            If you are looking for a cloud forest lodge near Quito, The Cloud Forest Retreat offers a calm, design-forward stay shaped by mountain air, natural beauty, and a slower rhythm that feels both restorative and memorable.
+            Discover a calm, design-forward stay shaped by mountain air, natural beauty, and a slower rhythm that feels restorative without feeling far from Quito.
           </p>
 
           <div class="heroActions" aria-label="Hero actions">
@@ -572,10 +633,10 @@
             <a class="btn secondary" href="/rooms/">Explore Rooms</a>
           </div>
 
-          <div class="pills" aria-label="Support highlights">
-            <span class="pill">Near Quito</span>
-            <span class="pill">Nature-first stay</span>
-            <span class="pill">Rooms, views, and quiet</span>
+          <div class="heroPills" aria-label="Support highlights">
+            <span class="heroPill">Near Quito</span>
+            <span class="heroPill">Nature-first stay</span>
+            <span class="heroPill">Rooms, views, and quiet</span>
           </div>
         </div>
       </div>
@@ -586,17 +647,16 @@
         <div>
           <h2 class="h2">A nature-based stay that feels close enough to reach and far enough to reset</h2>
           <p class="p">
-            Many travelers search for a cloud forest lodge near Quito because they want something more atmospheric than a standard city hotel and more comfortable than a rushed day trip. This is where the retreat fits naturally. It offers access to cloud forest scenery, open views, and the sense of staying inside the landscape rather than simply visiting it for a few hours.
+            Many travelers search for a cloud forest lodge near Quito because they want something more atmospheric than a standard city hotel and more comfortable than a rushed day trip. The Cloud Forest Retreat fits that intent naturally by offering a stay where scenery, quiet, and comfort are part of the experience itself.
           </p>
           <p class="p">
-            The location works especially well for travelers who want a short escape with a strong feeling of place. Whether you are planning a quiet couple’s stay, a restorative weekend, or a nature-centered stop within a broader Ecuador itinerary, the property combines scenery, calm, and easy next steps through its <a href="/rooms/">room options</a>, <a href="/features/activities/">activities</a>, and straightforward <a href="/booking/">booking</a> path.
+            This page is designed for travelers who want a short escape with a strong feeling of place. Whether you are planning a restorative weekend, a couple’s stay, or a nature-centered stop within a broader Ecuador itinerary, the retreat gives you an easy path into the most important next steps through its <a href="/rooms/">rooms</a>, nearby <a href="/features/activities/">activities</a>, and simple <a href="/booking/">booking</a> flow.
           </p>
         </div>
 
         <div class="mediaBox" aria-label="Intro image">
           <img src="/assets/images/pages/gallery/tcfr_gallery_01.jpg" alt="Mountain lodge atmosphere near Quito" loading="lazy" decoding="async" />
-          <div class="mediaShade" aria-hidden="true"></div>
-          <div class="mediaCap">A stay designed around scenery, quiet, and a strong sense of place</div>
+          <div class="mediaCap">A stay shaped by scenery, calm, and a stronger sense of place</div>
         </div>
       </div>
     </section>
@@ -605,24 +665,24 @@
       <div class="pad">
         <h2 class="h2">Why this lodge stands out for this search intent</h2>
         <div class="cardGrid">
-          <article class="miniCard" aria-label="Location advantage">
+          <article class="miniCard">
             <h3 class="h3">Easy to pair with Quito</h3>
             <p>
-              One of the biggest advantages of choosing a cloud forest lodge near Quito is flexibility. You get access to a more natural environment without committing to a long, complex transfer day. That makes the stay attractive for short trips, international arrivals, and travelers who want comfort without sacrificing immersion.
+              One of the biggest advantages of choosing a cloud forest lodge near Quito is flexibility. You get access to a more natural environment without committing to a long, complicated transfer day. That makes the stay appealing for short trips, international arrivals, and travelers who want comfort without losing immersion.
             </p>
           </article>
 
-          <article class="miniCard" aria-label="Atmosphere advantage">
-            <h3 class="h3">Calm is part of the experience</h3>
+          <article class="miniCard">
+            <h3 class="h3">Calm is part of the value</h3>
             <p>
-              The retreat is not positioned as a generic overnight stop. It is best understood as a quiet place to experience mountain light, fresh air, and a slower pace. That difference matters because it turns the property from a place to sleep into a meaningful part of the trip itself.
+              The retreat is not positioned as a generic overnight stop. It works best as a place to slow down, breathe deeply, and enjoy the cloud forest atmosphere as part of your trip, not as an afterthought between destinations.
             </p>
           </article>
 
-          <article class="miniCard" aria-label="Planning advantage">
-            <h3 class="h3">Simple next steps for travelers</h3>
+          <article class="miniCard">
+            <h3 class="h3">Simple next steps</h3>
             <p>
-              Visitors who arrive with different goals can still move easily through the site. Some will start by reviewing the <a href="/rooms/">rooms</a>, others will want to explore nearby <a href="/features/activities/">activities</a>, and high-intent travelers can move directly to the <a href="/booking/">booking page</a> without friction.
+              Visitors can move naturally through the site depending on what they need most. Some will begin by comparing the <a href="/rooms/">rooms</a>, others will want to explore nearby <a href="/features/activities/">activities</a>, and high-intent travelers can go directly to the <a href="/booking/">booking page</a>.
             </p>
           </article>
         </div>
@@ -631,19 +691,18 @@
 
     <section class="section" aria-label="Nature and activities">
       <div class="pad split">
-        <div class="mediaBox" aria-label="Nature image">
+        <div class="mediaBox">
           <img src="/assets/images/pages/gallery/tcfr_gallery_01.jpg" alt="Cloud forest setting and nearby activities" loading="lazy" decoding="async" />
-          <div class="mediaShade" aria-hidden="true"></div>
-          <div class="mediaCap">Nature access matters most when the stay itself supports the rhythm of the place</div>
+          <div class="mediaCap">Nature access matters more when the stay itself supports the pace of the place</div>
         </div>
 
         <div>
           <h2 class="h2">More than a room in the mountains</h2>
           <p class="p">
-            Travelers rarely search for a cloud forest lodge near Quito only because of the room itself. The real intent is broader. They want scenery, room to breathe, and the option to connect their stay with nearby experiences. That is why this page should naturally lead into the retreat’s <a href="/features/activities/">activities</a>, giving visitors a better understanding of how the property fits into a short or multi-day nature itinerary.
+            Travelers rarely search for a cloud forest lodge near Quito only because of the room itself. The real intent is broader. They want scenery, fresh air, and the option to connect a stay with meaningful experiences. That is why this page should lead naturally into the retreat’s <a href="/features/activities/">activities</a>, helping visitors understand how the property fits into a short or multi-day nature itinerary.
           </p>
           <p class="p">
-            Instead of separating the stay from the surroundings, the retreat encourages a more unified experience. You can slow down, enjoy the setting, and still keep your itinerary flexible. That balance is part of what makes the property appealing to travelers who are comparing it against standard lodging closer to the city.
+            Instead of separating the stay from the surroundings, the retreat encourages a more unified experience. You can slow down, enjoy the setting, and still keep your plans flexible. That balance is part of what makes the property appealing when compared with standard lodging closer to the city.
           </p>
         </div>
       </div>
@@ -652,26 +711,20 @@
     <section class="section" aria-label="Why choose this stay">
       <div class="pad">
         <h2 class="h2">Why choose this stay over a generic alternative</h2>
-        <div class="proofs">
-          <article class="proof" aria-label="Proof point one">
-            <p class="proofLabel">Positioning</p>
-            <p class="proofText">
-              This is a nature-first property, not a generic transit hotel. The experience is built around atmosphere, views, and a slower pace.
-            </p>
+        <div class="proofGrid">
+          <article class="proofCard">
+            <span class="proofLabel">Positioning</span>
+            <p>This is a nature-first property, not a generic transit hotel. The experience is built around atmosphere, views, and a slower pace.</p>
           </article>
 
-          <article class="proof" aria-label="Proof point two">
-            <p class="proofLabel">Practical value</p>
-            <p class="proofText">
-              It fits travelers who want a cloud forest setting without losing the practical value of being near Quito and easy to plan around.
-            </p>
+          <article class="proofCard">
+            <span class="proofLabel">Practical value</span>
+            <p>It fits travelers who want a cloud forest setting without losing the practical value of being near Quito and easy to plan around.</p>
           </article>
 
-          <article class="proof" aria-label="Proof point three">
-            <p class="proofLabel">Conversion path</p>
-            <p class="proofText">
-              Visitors can move naturally from inspiration to action by exploring <a href="/rooms/">rooms</a>, reviewing <a href="/features/activities/">activities</a>, and completing <a href="/booking/">booking</a>.
-            </p>
+          <article class="proofCard">
+            <span class="proofLabel">Next steps</span>
+            <p>Visitors can move from inspiration to action by exploring <a href="/rooms/">rooms</a>, reviewing <a href="/features/activities/">activities</a>, and completing <a href="/booking/">booking</a>.</p>
           </article>
         </div>
       </div>
@@ -681,44 +734,36 @@
       <div class="pad">
         <h2 class="h2">Plan the stay that fits your trip</h2>
         <div class="linkGrid">
-          <article class="linkCard" aria-label="Rooms card">
+          <article class="linkCard">
             <span class="linkMeta">Stay options</span>
             <h3 class="linkTitle"><a href="/rooms/">Explore the rooms</a></h3>
-            <p class="linkText">
-              Compare the spaces available at the retreat and find the option that best matches your pace, preferences, and style of stay.
-            </p>
-            <a class="linkCta" href="/rooms/">View Rooms</a>
+            <p class="linkText">Compare the spaces available at the retreat and find the option that best matches your pace, comfort preferences, and style of stay.</p>
+            <a class="btn secondary linkCta" href="/rooms/">View Rooms</a>
           </article>
 
-          <article class="linkCard" aria-label="Activities card">
+          <article class="linkCard">
             <span class="linkMeta">What to do</span>
             <h3 class="linkTitle"><a href="/features/activities/">See activities</a></h3>
-            <p class="linkText">
-              Understand how the retreat connects with nearby nature and experience planning, especially if your stay is part of a short Quito escape.
-            </p>
-            <a class="linkCta" href="/features/activities/">Explore Activities</a>
+            <p class="linkText">Understand how the retreat connects with nearby nature, local pace, and easy planning if your stay is part of a short Quito escape.</p>
+            <a class="btn secondary linkCta" href="/features/activities/">Explore Activities</a>
           </article>
 
-          <article class="linkCard" aria-label="Booking card">
+          <article class="linkCard">
             <span class="linkMeta">Next step</span>
             <h3 class="linkTitle"><a href="/booking/">Book your stay</a></h3>
-            <p class="linkText">
-              Ready to turn interest into a real trip? Move directly to the booking page and request the details for your planned dates.
-            </p>
-            <a class="linkCta" href="/booking/">Book Now</a>
+            <p class="linkText">Ready to move from research to real dates? Go directly to the booking page and start planning the stay that fits your trip.</p>
+            <a class="btn primary linkCta" href="/booking/">Book Now</a>
           </article>
         </div>
       </div>
     </section>
 
     <section class="ctaBand" aria-label="Bottom call to action">
-      <div>
+      <div class="ctaCopy">
         <h2>Looking for the right cloud forest lodge near Quito?</h2>
-        <p>
-          Start with the rooms if you want to compare your stay options, or go directly to booking if you already know the kind of quiet, nature-based retreat you want.
-        </p>
+        <p>Start with the rooms if you want to compare stay options, or move directly to booking if you already know the kind of calm, nature-based retreat you want.</p>
       </div>
-      <div class="ctaBtns" aria-label="CTA buttons">
+      <div class="ctaBtns">
         <a class="btn primary" href="/booking/">Book Your Stay</a>
         <a class="btn secondary" href="/rooms/">View Rooms</a>
         <a class="btn secondary" href="/features/activities/">See Activities</a>
@@ -727,7 +772,6 @@
   </main>
 
   <div id="siteFooter"></div>
-
   <script src="/assets/js/site.js?v=3"></script>
 </body>
 </html>
