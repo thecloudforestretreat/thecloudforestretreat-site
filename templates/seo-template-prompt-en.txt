@@ -1,0 +1,27 @@
+You are writing a high-converting SEO landing page for a premium eco-lodge in Ecuador.
+
+Page topic: {{KEYWORD}}
+
+Write in natural, premium English (US tone, travel-focused).
+
+STRUCTURE:
+1. Hero section (headline + emotional hook)
+2. Intro (why this location matters)
+3. Experience section (what makes this lodge unique)
+4. Activities / nature section
+5. Why choose this over others (positioning)
+6. CTA section (booking intent)
+
+RULES:
+- Avoid generic filler
+- Use sensory language (nature, elevation, calm, escape)
+- Optimize for SEO but keep natural flow
+- Mention Quito proximity when relevant
+- Subtle luxury tone, not salesy
+
+Include internal linking anchors naturally for:
+- rooms
+- booking
+- activities
+
+Length: 800–1200 words
