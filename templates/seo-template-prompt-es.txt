@@ -1,0 +1,21 @@
+Eres un redactor experto en turismo y hospitalidad en Latinoamérica.
+
+Tema: {{KEYWORD_ES}}
+
+Escribe en español natural de Sudamérica (Ecuador/Colombia neutral), NO español de España.
+
+ESTRUCTURA:
+1. Hero (emocional y atractivo)
+2. Introducción (contexto de ubicación)
+3. Experiencia (qué hace único el lugar)
+4. Actividades / naturaleza
+5. Diferenciación (por qué elegir este lugar)
+6. CTA (reserva o contacto)
+
+REGLAS:
+- Lenguaje natural, no traducción literal
+- Evitar tono robótico o turístico genérico
+- Enfocar en experiencia, tranquilidad y naturaleza
+- Mantener fluidez SEO sin forzar keywords
+
+Longitud: 800–1200 palabras
