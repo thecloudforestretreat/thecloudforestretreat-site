@@ -1,570 +1,600 @@
-/* ============================
-   Mindo Bird Watching
-   Global Brand Styles (v1.3)
-   Fonts: Playfair Display (headings) + Open Sans (body/UI)
-   Background: #C7DAAC site-wide
-   ============================ */
-
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap");
+/* mindotours + chocoandinotours
+   Shared site.css
+   Matches Mindo Bird Watching container width
+   Finalized homepage system
+*/
 
 :root{
-  /* Brand palette */
-  --bg: #C7DAAC;          /* site background (global) */
-  --forest: #0D5925;      /* primary */
-  --brown: #8B4513;       /* secondary */
-  --sky: #87CEEB;         /* optional accent */
-  --gold: #FFD700;        /* CTA accent */
-
-  /* Neutrals */
-  --ink: #071923;         /* primary text */
-  --muted: rgba(7,25,35,.72);
-  --card: rgba(255,255,255,.72);
-  --card-strong: rgba(255,255,255,.88);
-  --line: rgba(7,25,35,.14);
-
-  /* Radius + shadow */
-  --r: 18px;
-  --shadow: 0 18px 55px rgba(7,25,35,.10);
-
-  /* Typography */
-  --font-body: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-head: "Playfair Display", Georgia, "Times New Roman", serif;
-
-  /* Footer social icon sizing (NO bubbles) */
-  --social-icon-size: 36px; /* icon size */
-  --social-gap: 14px;       /* gap between icons */
-
-  /* Sticky header spacing */
-  --sticky-top: 16px;
+  --bg:#C7DAAC;
+  --forest:#0D5925;
+  --brown:#8B4513;
+  --gold:#FFD700;
+  --ink:#071923;
+  --muted:rgba(7,25,35,.72);
+  --card:rgba(255,255,255,.72);
+  --card-strong:rgba(255,255,255,.88);
+  --line:rgba(7,25,35,.14);
+  --r:18px;
+  --shadow:0 18px 55px rgba(7,25,35,.10);
+  --font-body:"Open Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-head:"Playfair Display",Georgia,"Times New Roman",serif;
 }
 
-/* Base reset */
-*{ box-sizing:border-box; }
-html, body{ height:100%; }
+*{box-sizing:border-box}
+html,body{height:100%}
 
 body{
   margin:0;
-  font-family: var(--font-body);
   background: var(--bg);
-  color: var(--ink);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* Links: remove default underline/blue */
-a{
-  color: inherit;
-  text-decoration: none;
+body.book-tour-page .page{
+  background:
+    linear-gradient(rgba(244,248,238,0.92), rgba(244,248,238,0.92)),
+    url('/assets/mt_park_page_02.jpg') center top / cover no-repeat;
 }
-a:visited{ color: inherit; }
-a:hover{ text-decoration: none; }
-a:focus-visible{
-  outline: 3px solid rgba(255,215,0,.35);
-  outline-offset: 3px;
-  border-radius: 10px;
+
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
 img{
-  max-width: 100%;
-  display: block;
+  max-width:100%;
+  display:block;
 }
 
-/* Layout helper */
 .container{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px;
+  max-width:1100px;
+  margin:0 auto;
+  padding:24px;
 }
 
-/* Text defaults */
-h1,h2,h3,h4,h5,h6{
-  font-family: var(--font-head);
-  color: var(--forest);
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
+.page{
+  margin-top:18px;
+  padding:26px;
 }
 
-p{
-  margin: 0 0 12px;
-  color: var(--muted);
-  line-height: 1.65;
+.card,
+.page.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  box-shadow:var(--shadow);
 }
 
-/* Cards */
-.card{
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  box-shadow: var(--shadow);
+.mobileHero{
+  display:none;
+  margin-top:12px;
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  background:rgba(255,255,255,.65);
+  box-shadow:var(--shadow);
+  overflow:hidden;
 }
 
-/* Buttons */
+.mobileHeroFrame{
+  width:100%;
+  aspect-ratio:16 / 9;
+  background:rgba(255,255,255,.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.mobileHeroFrame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.aboveFold{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.aboveFold .wx{order:1}
+.aboveFold .hero{order:2}
+
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap:20px;
+  align-items:stretch;
+}
+
+.heroMain{
+  min-width:0;
+}
+
+.hero h1{
+  margin:0 0 10px;
+  font-family:var(--font-head);
+  color:var(--forest);
+  letter-spacing:-0.02em;
+  line-height:1.02;
+  font-size:56px;
+}
+
+.hero p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.68;
+  font-size:18px;
+}
+
+.heroCtas{
+  margin-top:14px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:10px;
   padding:12px 14px;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  font-weight: 800;
-  background: var(--card-strong);
-  color: var(--ink);
-  cursor: pointer;
+  border-radius:14px;
+  border:1px solid var(--line);
+  font-weight:800;
+  background:var(--card-strong);
+  color:var(--ink);
+  cursor:pointer;
+  box-shadow:var(--shadow);
 }
 
 .btn.primary{
-  background: rgba(255,215,0,.22);
-  border-color: rgba(255,215,0,.55);
+  background:rgba(255,215,0,.22);
+  border-color:rgba(255,215,0,.55);
 }
 
 .btn.secondary{
-  background: rgba(13,89,37,.14);
-  border-color: rgba(13,89,37,.35);
+  background:rgba(13,89,37,.14);
+  border-color:rgba(13,89,37,.35);
 }
 
-/* Pills */
-.pill{
-  padding:10px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  color: var(--muted);
-  font-weight: 800;
-  font-size: 13px;
-  background: rgba(255,255,255,.55);
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  white-space: nowrap;
+.btn.ghost{
+  background:rgba(255,255,255,.55);
 }
 
-.pill.active{
-  background: rgba(13,89,37,.14);
-  border-color: rgba(13,89,37,.35);
-  color: var(--ink);
-}
-
-/* ============================
-   Global Header (APPROVED include)
-   Uses header.html classes:
-   .topbar .brand .right .lang .nav
-   .menuBtn #menuPanel .menuList
-   Plus sticky behavior (inside container)
-   ============================ */
-
-/* Sticky mount (keeps header sticky while scrolling) */
-#siteHeader{
-  position: sticky;
-  top: var(--sticky-top);
-  z-index: 2000;
-}
-
-/* If any ancestor sets overflow hidden, sticky can break.
-   We explicitly allow visible overflow on common wrappers. */
-html, body{ overflow-x: visible; }
-.container{ overflow: visible; }
-
-/* Header shell */
-.topbar{
+.ctaBand{
+  margin-top:14px;
+  border:1px dashed rgba(13,89,37,.35);
+  border-radius:16px;
+  background:rgba(255,255,255,.55);
+  padding:14px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:16px;
-  padding:14px 16px;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.ctaBand p{
+  margin:0;
+}
+
+.heroVisual{
+  min-width:0;
+}
+
+.heroImageCard{
+  height:100%;
+  min-height:340px;
+  margin:0;
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  background:var(--card-strong);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.heroImageCard img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.wx{
   border:1px solid var(--line);
   border-radius:var(--r);
   background:rgba(255,255,255,.65);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
-  position: relative; /* anchors menuPanel */
+  box-shadow:var(--shadow);
+  padding:14px;
+  margin:0;
 }
 
-/* Brand */
-.brand{
+.wxGrid{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:10px;
+  align-items:stretch;
+}
+
+.wxDay{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.55);
+  box-shadow:var(--shadow);
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-width:0;
+}
+
+.wxDayTop{
   display:flex;
   align-items:center;
-  gap:12px;
+  justify-content:space-between;
+  gap:8px;
+  min-width:0;
+}
+
+.wxPlace,
+.wxDow{
   font-weight:900;
-  color: var(--ink);
+  font-size:12.5px;
+  color:var(--ink);
+  letter-spacing:-0.01em;
   white-space:nowrap;
-  min-width: 0;
-}
-.brand img{
-  height:26px;
-  width:auto;
-  display:block;
-  flex:0 0 auto;
-  border-radius: 8px;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
-/* Right side (desktop) */
-.right{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-
-/* NOTE: header.css is the primary source of truth for header layout.
-   These base styles remain, desktop overrides are added at the bottom. */
-.nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  align-items:center;
-  justify-content:flex-end;
-}
-
-/* Language switch */
-.lang{
+.wxPlace{
   display:inline-flex;
   align-items:center;
-  gap:6px;
-  padding:6px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(255,255,255,.5);
+  gap:2px;
 }
-.lang a{
-  padding:8px 10px;
-  border-radius:999px;
-  font-weight:800;
+
+.wxPinDot{
+  font-size:14px;
+  line-height:1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.wxLine{
+  font-weight:900;
+  font-size:12.5px;
+  color:var(--ink);
+  letter-spacing:-0.01em;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  line-height:1.25;
+}
+
+.wxIcon{
+  font-size:18px;
+  line-height:1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:22px;
+  flex:0 0 auto;
+}
+
+.wxRain{
+  font-weight:900;
   font-size:12.5px;
   color:var(--muted);
-}
-.lang a.active{
-  background:rgba(13,89,37,.14);
-  border:1px solid rgba(13,89,37,.35);
-  color:var(--ink);
-}
-
-/* Hamburger (mobile) */
-.menuBtn{
-  display:none;
-  align-items:center;
-  justify-content:center;
-  width:44px;
-  height:44px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.65);
-  cursor:pointer;
-}
-.menuBtn svg{ width:22px; height:22px; }
-
-/* Mobile panel */
-.menuPanel{
-  display:none;
-  position:absolute;
-  right:12px;
-  top: calc(100% + 10px);
-  width: min(320px, calc(100vw - 24px));
-  background: rgba(255,255,255,.92);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  padding: 12px;
-  z-index: 2100;
-}
-.menuPanel .lang{
-  width:100%;
-  justify-content:center;
-  margin-bottom: 10px;
-  background: rgba(255,255,255,.75);
-}
-.menuList{
-  display:grid;
-  gap:10px;
-}
-.menuList a.pill{
-  display:flex;
-  justify-content:center;
-  width:100%;
-}
-
-/* Mobile behavior: hide desktop nav and show hamburger */
-@media (max-width:900px){
-  .right .lang,
-  .right .nav{ display:none; }
-  .menuBtn{ display:inline-flex; }
-  .menuPanel{ display:none; }
-  .menuPanel.is-open{ display:block; }
-}
-
-/* Optional: tighten sticky spacing on small screens */
-@media (max-width:520px){
-  :root{ --sticky-top: 12px; }
-  .container{ padding: 18px; }
-}
-
-/* ============================
-   Footer (NO bubbles, locked sizing)
-   ============================ */
-
-.footer{
-  text-align:center;
-  padding: 28px 0 10px;
-}
-
-.footer-social{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap: var(--social-gap);
-  flex-wrap:wrap;
-  margin-bottom: 14px;
-}
-
-/* IMPORTANT: remove container sizing/padding so Safari can’t blow it up */
-.footer-social a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 0;
-  margin: 0;
-  line-height: 0;
-  border: 0;
-  background: transparent;
-}
-
-/* IMPORTANT: lock size at IMG level */
-.footer-social img{
-  width: var(--social-icon-size);
-  height: var(--social-icon-size);
-  object-fit: contain;
-  display:block;
-}
-
-/* Bottom line: small logo + text centered */
-.footer-bottom{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
   display:flex;
   align-items:center;
   justify-content:center;
   gap:6px;
-  margin-top: 2px;
+  text-align:center;
 }
 
-.footer-bottom img{
-  height: 45px;
-  width:auto;
-  display:block;
+.wxNote{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.5;
 }
 
-.footer small{
+.wxNote[hidden]{display:none}
+
+.wxSkeleton .wxDay{
+  position:relative;
+  overflow:hidden;
+}
+
+.wxSkeleton .wxDay:before{
+  content:"";
+  position:absolute;
+  inset:-40% -60%;
+  background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.55), rgba(255,255,255,0));
+  transform:translateX(-40%);
+  animation:wxShimmer 1.35s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes wxShimmer{
+  0%{transform:translateX(-40%)}
+  100%{transform:translateX(40%)}
+}
+
+.section{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid var(--line);
+}
+
+.sectionHead{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.sectionHead h2{
+  margin:0;
+  font-family:var(--font-head);
+  color:var(--forest);
+  letter-spacing:-0.02em;
+  font-size:22px;
+}
+
+.mediaGrid,
+.mediaGridFour{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  align-items:start;
+}
+
+.mediaCard{
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  background:var(--card-strong);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  min-width:0;
+}
+
+.mediaFrame{
+  width:100%;
+  aspect-ratio:16 / 10;
+  background:rgba(255,255,255,.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.mediaFrame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.mediaBar{
+  padding:10px 12px;
+  border-top:1px solid var(--line);
+  background:rgba(255,255,255,.55);
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.mediaTitle{
+  margin:0;
+  font-weight:900;
+  color:var(--ink);
+  font-size:13.5px;
+  letter-spacing:-0.01em;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.65);
+  box-shadow:var(--shadow);
+  font-weight:900;
+  font-size:12.5px;
+  color:var(--ink);
+  line-height:1;
+  white-space:nowrap;
+}
+
+.tiles{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:12px;
+}
+
+.tile{
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  background:var(--card-strong);
+  box-shadow:var(--shadow);
+  padding:18px;
+  text-decoration:none;
+  color:inherit;
   display:block;
-  font-weight: 900;
-  color: rgba(7,25,35,.78);
+  min-height:150px;
+}
+
+.tile h3{
+  margin:0 0 6px;
+  font-family:var(--font-head);
+  color:var(--forest);
+  letter-spacing:-0.01em;
+  font-size:18px;
+}
+
+.tile p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+.photoRail{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.photo{
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  background:var(--card-strong);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.photo img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.photoCap{
+  padding:10px 12px;
+  border-top:1px solid var(--line);
+  background:rgba(255,255,255,.55);
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.45;
+}
+
+.siteFooter{
+  margin-top:28px;
+  padding:22px 18px;
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  background:var(--card-strong);
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+
+.footerInner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+
+.footerBrand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+}
+
+.footerMark{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+}
+
+.footerCopy,
+.footerLegal{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footerLinks{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.footerLinks a{
+  text-decoration:none;
+}
+
+@media (max-width:1180px){
+  .wxGrid{grid-template-columns:repeat(4,1fr)}
+}
+
+@media (max-width:980px){
+  .photoRail{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:900px){
+  .mobileHero{display:block}
+
+  .aboveFold .hero{order:1}
+  .aboveFold .wx{order:2}
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .mediaGrid,
+  .mediaGridFour,
+  .tiles,
+  .photoRail{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .photo img{
+    height:220px;
+  }
+
+  .wxGrid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .heroImageCard{
+    min-height:240px;
+  }
 }
 
 /* =========================================================
-   MBW Header Fix – Desktop ES overlap fix (EN/ES vs Inicio)
-   - Force real spacing so first nav pill cannot sit under lang
-   - Keep dropdowns working
+   TCFR global card CTA alignment fix
+   - Keeps link-card buttons bottom-aligned
+   - Does NOT change button colors, footer styles, or global CTA theme
+   - Uses !important so it can override page-level inline CSS
    ========================================================= */
 
-@media (min-width: 901px){
-  header.topbar[data-mbw-header] .right{
-    flex-wrap: nowrap;
-    min-width: 0;
-    gap: 14px; /* stronger separation than header.css */
-  }
-
-  header.topbar[data-mbw-header] .lang{
-    flex: 0 0 auto;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 3; /* keep lang above if anything collides */
-  }
-
-  header.topbar[data-mbw-header] nav.nav{
-    flex: 1 1 auto;
-    min-width: 0;
-    flex-wrap: nowrap;
-    overflow: visible; /* dropdowns must render outside nav */
-    position: relative;
-    z-index: 2;
-  }
-
-  /* THE ACTUAL FIX: push Inicio away from EN/ES on ES desktop */
-  header.topbar[data-mbw-header][data-current-lang="es"] nav.nav > a.pill:first-child{
-    margin-left: 12px; /* hard gap so it cannot overlap the lang pills */
-  }
+.linkGrid{
+  align-items:stretch !important;
 }
 
-/* WhatsApp Smart CTA (MBW) v3
-   Desktop size: change --mbwWaDeskW (e.g. 200px)
-*/
-
-.mbwWaBirdFab{
-  --mbwWaDeskW: 150px;
-  --mbwWaMobW: 110px;
-  position: fixed !important;
-  right: calc(12px + env(safe-area-inset-right)) !important;
-  bottom: calc(12px + env(safe-area-inset-bottom)) !important;
-  z-index: 2700 !important;
-  font-family: inherit;
+.linkGrid > .linkCard{
+  display:flex !important;
+  flex-direction:column !important;
+  min-height:100% !important;
 }
 
-.mbwWaBirdBtn{
-  border: 0;
-  padding: 0;
-  margin: 0;
-  background: transparent !important;
-  cursor: pointer;
-  border-radius: 18px;
-  -webkit-tap-highlight-color: transparent;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
+.linkGrid > .linkCard .linkText{
+  flex:1 1 auto !important;
 }
 
-.mbwWaBirdBtn:focus{
-  outline: none;
-}
-
-.mbwWaBirdBtn:focus-visible{
-  outline: 2px solid rgba(13, 89, 37, 0.35);
-  outline-offset: 4px;
-}
-
-.mbwWaBirdImg{
-  display: block;
-  width: var(--mbwWaDeskW);
-  height: auto;
-  user-select: none;
-  -webkit-user-drag: none;
-  filter: drop-shadow(0 14px 34px rgba(0, 0, 0, 0.18));
-}
-
-/* Backdrop below panel */
-.mbwWaBirdBackdrop{
-  position: fixed;
-  inset: 0;
-  background: rgba(2, 6, 23, 0.28);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 160ms ease;
-  z-index: 1;
-}
-
-.mbwWaBirdFab.is-open .mbwWaBirdBackdrop{
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Desktop menu */
-.mbwWaBirdPanel{
-  position: absolute;
-  right: 0;
-  bottom: calc(var(--mbwWaDeskW) + 18px);
-  width: 320px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
-  overflow: hidden;
-  transform: translateY(10px);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 160ms ease, transform 160ms ease;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  z-index: 2;
-}
-
-.mbwWaBirdFab.is-open .mbwWaBirdPanel{
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.mbwWaBirdHead{
-  padding: 12px 12px 10px;
-  background: #f3f6fb;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.mbwWaBirdTitle{
-  font-weight: 900;
-  font-size: 13px;
-  color: #0D5925;
-}
-
-.mbwWaBirdClose{
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  font-size: 22px;
-  line-height: 1;
-  color: #334155;
-  padding: 4px 8px;
-  border-radius: 10px;
-}
-
-.mbwWaBirdActions{
-  padding: 10px;
-  display: grid;
-  gap: 8px;
-}
-
-.mbwWaBirdAction{
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  padding: 12px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  color: #0D5925;
-  background: #ffffff;
-  font-weight: 900;
-  font-size: 13px;
-  line-height: 1.25;
-  white-space: normal;
-}
-
-/* Mobile-like: hide menu UI, keep button */
-@media (max-width: 900px), (hover: none) and (pointer: coarse){
-  .mbwWaBirdImg{ width: var(--mbwWaMobW); }
-  .mbwWaBirdPanel{ display: none !important; }
-  .mbwWaBirdBackdrop{ display: none !important; }
-}
-
-@media (max-width: 380px){
-  .mbwWaBirdFab{ --mbwWaMobW: 138px; }
-}
-
-/* WhatsApp Smart CTA – Forest Green Hover */
-.mbwWaBirdAction:hover{
-  background: rgba(13, 89, 37, 0.06);
-  color: #0D5925;
-}
-
-/* =========================================================
-   GLOBAL CARD CTA ALIGNMENT FIX
-   Keeps CTA buttons pinned to the bottom of equal-height cards
-   across page-level card grids.
-   ========================================================= */
-
-.linkCard,
-.guideCard,
-.infoCard,
-.miniCard{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.linkText,
-.guideText,
-.cardText{
-  flex: 1 1 auto;
-}
-
-.linkCta{
-  margin-top: auto;
-  align-self: flex-start;
+.linkGrid > .linkCard .linkCta{
+  margin-top:auto !important;
+  align-self:flex-start !important;
 }
