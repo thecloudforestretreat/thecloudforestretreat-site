@@ -363,3 +363,27 @@ p{
   margin-top: auto;
   align-self: flex-start;
 }
+
+
+/* =========================================================
+   TCFR global hero overlay text fix
+   - Ensures hero overlay copy stays white across generated pages
+   - Prevents global h1 / p rules from turning overlay text green or dark
+   - Scoped only to .heroCard so normal page typography is unchanged
+   ========================================================= */
+
+.heroCard{
+  color: rgba(255,255,255,0.97);
+}
+
+.heroCard h1,
+.heroCard h2,
+.heroCard h3,
+.heroCard h4,
+.heroCard p,
+.heroCard .heroLead,
+.heroCard .eyebrow,
+.heroCard .heroChip,
+.heroCard .miniChip{
+  color: inherit;
+}
