@@ -1,3 +1,4 @@
+
 /* /assets/css/site.css
    The Cloud Forest Retreat
    Brand tokens + global typography + base UI components
@@ -386,4 +387,102 @@ p{
 .heroCard .heroChip,
 .heroCard .miniChip{
   color: inherit;
+}
+
+
+/* =========================================================
+   TCFR global hero overlay consistency system
+   - Standardizes hero overlay text and CTA styling sitewide
+   - Scoped only to overlay content containers used in hero sections
+   - Does not affect header, footer, breadcrumb bands, or regular page buttons
+   - Uses !important intentionally to override per-page hero overrides
+   ========================================================= */
+
+.heroCard,
+.roomHeroInner{
+  --hero-overlay-title: rgba(255,255,255,0.98);
+  --hero-overlay-copy: rgba(231,228,209,0.92);
+  --hero-overlay-meta: rgba(231,228,209,0.90);
+  --hero-overlay-secondary-bg: rgba(245,245,220,0.82);
+  --hero-overlay-secondary-border: rgba(13,89,37,0.22);
+  --hero-overlay-secondary-text: var(--forest);
+}
+
+.heroCard,
+.roomHeroInner,
+.heroCard h1,
+.heroCard h2,
+.heroCard h3,
+.heroCard h4,
+.roomHeroInner h1,
+.roomHeroInner h2,
+.roomHeroInner h3,
+.roomHeroInner h4,
+.heroCard .heroLead,
+.roomHeroInner .roomLead,
+.heroCard .eyebrow,
+.roomHeroInner .roomKicker,
+.heroCard .heroChip,
+.heroCard .miniChip,
+.roomHeroInner .roomScrollHint{
+  color: inherit;
+}
+
+.heroCard,
+.roomHeroInner{
+  color: var(--hero-overlay-copy) !important;
+}
+
+.heroCard h1,
+.heroCard h2,
+.heroCard h3,
+.heroCard h4,
+.heroCard .heroTitle,
+.roomHeroInner h1,
+.roomHeroInner h2,
+.roomHeroInner h3,
+.roomHeroInner h4,
+.roomHeroInner .roomTitle{
+  color: var(--hero-overlay-title) !important;
+}
+
+.heroCard p,
+.heroCard .heroLead,
+.roomHeroInner p,
+.roomHeroInner .roomLead{
+  color: var(--hero-overlay-copy) !important;
+}
+
+.heroCard .eyebrow,
+.roomHeroInner .roomKicker,
+.heroCard .heroChip,
+.heroCard .miniChip,
+.roomHeroInner .roomScrollHint,
+.roomHeroInner .roomScrollDot{
+  color: var(--hero-overlay-meta) !important;
+}
+
+.roomHeroInner .roomScrollDot{
+  background: var(--hero-overlay-meta) !important;
+}
+
+.heroCard .btn.primary,
+.roomHeroInner .btn.primary{
+  background: var(--orange) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 16px 40px rgba(224,100,58,0.22) !important;
+}
+
+.heroCard .btn.secondary,
+.roomHeroInner .btn.secondary{
+  background: var(--hero-overlay-secondary-bg) !important;
+  border-color: var(--hero-overlay-secondary-border) !important;
+  color: var(--hero-overlay-secondary-text) !important;
+  box-shadow: 0 14px 30px rgba(13,89,37,0.10) !important;
+}
+
+.heroCard .btn.secondary:hover,
+.roomHeroInner .btn.secondary:hover{
+  filter: brightness(0.98);
 }
