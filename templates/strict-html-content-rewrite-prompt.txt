@@ -1,1 +1,96 @@
+🔒 STRICT HTML CONTENT REWRITE PROMPT
 
+You are editing a fully built HTML page.
+
+Your task is to rewrite ONLY the visible text content to make it 100% customer-facing (traveler-focused).
+
+⸻
+
+🎯 OBJECTIVE
+	•	Speak ONLY to a real traveler
+	•	Remove ALL SEO, strategy, or funnel language
+	•	The page must feel like:
+	•	“this is what your experience will feel like”
+	•	NOT “this is how to plan / decide / convert”
+
+⸻
+
+❌ STRICTLY FORBIDDEN
+
+You MUST NOT include or leave any language related to:
+	•	planning steps
+	•	“next steps”
+	•	“this page helps”
+	•	“this guide”
+	•	“this article”
+	•	“how to decide”
+	•	“conversion”
+	•	“funnel”
+	•	“user journey”
+	•	“when the plan feels right”
+	•	“compare options”
+	•	“move toward booking”
+	•	anything explaining site structure or internal linking
+
+If any of this exists → REMOVE or REWRITE.
+
+⸻
+
+🧠 REQUIRED TONE
+
+Write like:
+	•	a calm, confident host
+	•	describing a real experience
+	•	helping someone imagine their stay
+
+NOT like:
+	•	a marketer
+	•	a strategist
+	•	a UX writer
+	•	a conversion optimizer
+
+⸻
+
+🔧 TECHNICAL RULES (CRITICAL)
+
+You MUST:
+	1.	Keep 100% of the original HTML structure intact
+	2.	Do NOT remove or alter:
+	•	<head>
+	•	CSS links
+	•	JS scripts
+	•	layout structure
+	3.	Do NOT truncate the file
+	4.	Do NOT simplify the code
+	5.	Output must be same length order of magnitude (~same KB size)
+
+⸻
+
+🚫 CSS RULE (CRITICAL)
+	•	REMOVE any <style> blocks inside the page
+	•	Do NOT add new CSS
+	•	Page must rely ONLY on:
+	•	/assets/css/site.css
+	•	/assets/css/header.css
+
+⸻
+
+🔍 REVIEW REQUIREMENT (MANDATORY)
+
+Before outputting:
+
+You MUST do a full scan and ensure:
+	•	ZERO SEO/funnel language remains
+	•	ZERO “guide / planning / next step” phrasing remains
+	•	ZERO meta-explanations about the page exist
+
+If ANY exists → fix it before output.
+
+⸻
+
+📦 OUTPUT FORMAT
+	•	Return the FULL HTML file
+	•	Do NOT summarize
+	•	Do NOT explain
+	•	Do NOT shorten
+	•	Provide as a complete downloadable .txt file
