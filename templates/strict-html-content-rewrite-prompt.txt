@@ -1,96 +1,169 @@
-🔒 STRICT HTML CONTENT REWRITE PROMPT
+🔒 STRICT HTML CONTENT REWRITE PROMPT (CORRECTED)
 
 You are editing a fully built HTML page.
 
-Your task is to rewrite ONLY the visible text content to make it 100% customer-facing (traveler-focused).
+Your task is to rewrite ONLY the visible user-facing text content so the page becomes 100% customer-facing and traveler-focused.
 
-⸻
+You may be given:
+- a working reference page in one language
+- an incorrect target page in another language
+
+If so, the working reference page is the source of truth for structure, length, sectioning, and implementation style.
+
+---
 
 🎯 OBJECTIVE
-	•	Speak ONLY to a real traveler
-	•	Remove ALL SEO, strategy, or funnel language
-	•	The page must feel like:
-	•	“this is what your experience will feel like”
-	•	NOT “this is how to plan / decide / convert”
 
-⸻
+Rewrite the page so it speaks only to a real traveler.
 
-❌ STRICTLY FORBIDDEN
+The page must feel like:
+- “this is what your experience will feel like”
+- not “this is how to plan, decide, convert, or navigate the site”
 
-You MUST NOT include or leave any language related to:
-	•	planning steps
-	•	“next steps”
-	•	“this page helps”
-	•	“this guide”
-	•	“this article”
-	•	“how to decide”
-	•	“conversion”
-	•	“funnel”
-	•	“user journey”
-	•	“when the plan feels right”
-	•	“compare options”
-	•	“move toward booking”
-	•	anything explaining site structure or internal linking
+The result must sound like:
+- a calm, confident host
+- describing a real place and real experience
+- helping someone imagine their stay naturally
 
-If any of this exists → REMOVE or REWRITE.
+---
 
-⸻
+❌ STRICTLY FORBIDDEN LANGUAGE
+
+You MUST NOT include or leave any wording related to:
+
+- planning steps
+- next steps
+- this page helps
+- this guide
+- this article
+- how to decide
+- conversion
+- funnel
+- user journey
+- when the plan feels right
+- compare options
+- move toward booking
+- internal linking logic
+- site structure explanation
+- “if you are ready”
+- “if you are still deciding”
+- “this page connects to”
+- “this page points to”
+- “best next step”
+- “decision point”
+- “planning stage”
+
+If any of this exists, REMOVE or REWRITE it.
+
+---
 
 🧠 REQUIRED TONE
 
 Write like:
-	•	a calm, confident host
-	•	describing a real experience
-	•	helping someone imagine their stay
+- a calm, confident host
+- a premium travel brand
+- someone describing how the stay, arrival, setting, and experience feel
 
-NOT like:
-	•	a marketer
-	•	a strategist
-	•	a UX writer
-	•	a conversion optimizer
+Do NOT write like:
+- a marketer
+- a strategist
+- a UX writer
+- a conversion optimizer
+- a content planner
+- an SEO consultant
 
-⸻
+---
 
 🔧 TECHNICAL RULES (CRITICAL)
 
 You MUST:
-	1.	Keep 100% of the original HTML structure intact
-	2.	Do NOT remove or alter:
-	•	<head>
-	•	CSS links
-	•	JS scripts
-	•	layout structure
-	3.	Do NOT truncate the file
-	4.	Do NOT simplify the code
-	5.	Output must be same length order of magnitude (~same KB size)
 
-⸻
+1. Keep 100% of the original HTML structure intact
+2. Do NOT remove or alter:
+   - <head>
+   - schema blocks
+   - CSS links
+   - JS scripts
+   - layout structure
+   - classes
+   - wrappers
+   - image tags
+   - button structure
+   - section order
+3. Do NOT truncate the file
+4. Do NOT simplify the code
+5. Output must remain the same order of magnitude in file size
+6. Perform text replacement in-place, not a rebuild
+7. Preserve all non-visible technical elements unless explicitly told otherwise
 
-🚫 CSS RULE (CRITICAL)
-	•	REMOVE any <style> blocks inside the page
-	•	Do NOT add new CSS
-	•	Page must rely ONLY on:
-	•	/assets/css/site.css
-	•	/assets/css/header.css
+---
 
-⸻
+🧱 REFERENCE FILE RULE (MOST IMPORTANT)
+
+If a working reference page is provided, you MUST treat it as the implementation standard.
+
+That means:
+
+- match the working reference page’s structure
+- match its degree of completeness
+- match its file fullness
+- match its implementation pattern
+- do NOT remove anything from the target page that still exists in the working reference page
+
+If the reference page still contains:
+- inline <style> blocks
+- schema
+- meta blocks
+- repeated technical sections
+
+then you MUST preserve that same implementation style in the rewritten target page unless the user explicitly says otherwise.
+
+Do NOT apply abstract cleanup rules that would make the output diverge from the working reference file.
+
+---
+
+🚫 CSS RULE (CORRECTED)
+
+Do NOT invent CSS changes.
+
+Do NOT add CSS.
+
+Do NOT remove inline <style> blocks unless BOTH of these are true:
+1. the user explicitly asks for inline styles to be removed, and
+2. the working reference file also reflects that same no-inline-style approach
+
+If the working reference file still contains a page-level <style> block, KEEP it.
+
+---
 
 🔍 REVIEW REQUIREMENT (MANDATORY)
 
-Before outputting:
+Before outputting, ensure:
 
-You MUST do a full scan and ensure:
-	•	ZERO SEO/funnel language remains
-	•	ZERO “guide / planning / next step” phrasing remains
-	•	ZERO meta-explanations about the page exist
+- ZERO SEO/funnel language remains
+- ZERO “guide / planning / next step / decision” phrasing remains
+- ZERO meta-explanations about the page remain
+- the output matches the working reference file’s completeness
+- the file has not been shortened unintentionally
+- the output is a true in-place rewrite
 
-If ANY exists → fix it before output.
+If any fail, fix before output.
 
-⸻
+---
 
 📦 OUTPUT FORMAT
-	•	Return the FULL HTML file
-	•	Do NOT summarize
-	•	Do NOT explain
-	•	Do NOT shorten
-	•	Provide as a complete downloadable .txt file
+
+You MUST:
+- return one single final HTML file only
+- return the full file
+- do NOT summarize
+- do NOT explain
+- do NOT shorten
+- do NOT provide alternatives
+- provide it as a complete downloadable .txt file
+
+---
+
+✅ OPTIONAL LINE
+
+The working reference file overrides any abstract cleanup preference. Match the working file first, then rewrite the target page’s visible text only.
