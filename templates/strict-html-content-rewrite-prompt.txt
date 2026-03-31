@@ -1,76 +1,107 @@
-🔒 STRICT HTML CONTENT REWRITE PROMPT (CORRECTED)
+🔒 STRICT HTML CONTENT REWRITE PROMPT (ENHANCED - EXPERIENCE-ONLY VERSION)
 
 You are editing a fully built HTML page.
 
-Your task is to rewrite ONLY the visible user-facing text content so the page becomes 100% customer-facing and traveler-focused.
-
-You may be given:
-- a working reference page in one language
-- an incorrect target page in another language
-
-If so, the working reference page is the source of truth for structure, length, sectioning, and implementation style.
+Your task is to rewrite ONLY the visible user-facing text content so the page becomes 100% experiential, customer-facing, and traveler-focused.
 
 ---
 
 🎯 OBJECTIVE
 
-Rewrite the page so it speaks only to a real traveler.
+Rewrite the page so it feels like the reader is already there.
 
-The page must feel like:
-- “this is what your experience will feel like”
-- not “this is how to plan, decide, convert, or navigate the site”
+The page must:
+- place the reader inside the experience
+- describe what is seen, heard, and felt
+- reflect a real stay, not an explanation of a stay
 
-The result must sound like:
+The result must feel like:
 - a calm, confident host
-- describing a real place and real experience
-- helping someone imagine their stay naturally
+- describing a real place in real time
+- allowing the reader to imagine themselves there naturally
 
 ---
 
-❌ STRICTLY FORBIDDEN LANGUAGE
+🚫 CRITICAL LANGUAGE RULE (NEW - MOST IMPORTANT)
 
-You MUST NOT include or leave any wording related to:
+You MUST NOT write from an observer, analyst, or explanatory perspective.
 
-- planning steps
-- next steps
-- this page helps
-- this guide
-- this article
-- how to decide
-- conversion
-- funnel
-- user journey
-- when the plan feels right
-- compare options
-- move toward booking
-- internal linking logic
-- site structure explanation
-- “if you are ready”
-- “if you are still deciding”
-- “this page connects to”
-- “this page points to”
-- “best next step”
-- “decision point”
-- “planning stage”
+❌ NEVER WRITE:
+- “People who visit…”
+- “Travelers are looking for…”
+- “Guests often want…”
+- “This experience is about…”
+- “What makes this special is…”
+- “This allows you to…”
+- “This means that…”
+- “This helps…”
+- “This page…”
 
-If any of this exists, REMOVE or REWRITE it.
+These are ALL admin/SEO/explanatory language.
+
+---
+
+✅ REQUIRED WRITING MODE
+
+You MUST write ONLY in **direct experiential language**.
+
+Write as if:
+- the reader is already there
+- the moment is unfolding now
+
+Use:
+- sensory descriptions
+- natural observations
+- environmental details
+- emotional tone without explaining it
+
+---
+
+🔁 MENTAL TRANSFORMATION RULE
+
+Before writing any paragraph, convert:
+
+❌ Explanation → ✅ Experience
+
+Examples:
+
+❌ “People come here for quiet birdwatching”
+✅ “Birdsong carries through the trees, often before you even see movement in the canopy”
+
+❌ “This creates a calm atmosphere”
+✅ “The pace slows without effort, and time feels less structured”
+
+❌ “What makes the experience complete is…”
+✅ “Everything around you supports the moment”
+
+---
+
+🚫 INTERNAL / STRUCTURAL LANGUAGE BAN (EXPANDED)
+
+You MUST NOT include:
+
+- references to “pages” (fauna page, lodge page, etc.)
+- instructions like “go here”, “use this”, “explore this page”
+- explanations of what content connects to what
+- any site navigation logic in body text
+
+Links may remain, but the text around them must feel natural and experiential.
 
 ---
 
 🧠 REQUIRED TONE
 
 Write like:
-- a calm, confident host
-- a premium travel brand
-- someone describing how the stay, arrival, setting, and experience feel
+- a premium travel host
+- someone describing a real moment in a real place
+- someone grounded in the environment, not analyzing it
 
 Do NOT write like:
 - a marketer
+- an SEO writer
 - a strategist
 - a UX writer
-- a conversion optimizer
-- a content planner
-- an SEO consultant
+- a narrator explaining behavior
 
 ---
 
@@ -92,60 +123,38 @@ You MUST:
    - section order
 3. Do NOT truncate the file
 4. Do NOT simplify the code
-5. Output must remain the same order of magnitude in file size
-6. Perform text replacement in-place, not a rebuild
-7. Preserve all non-visible technical elements unless explicitly told otherwise
+5. Output must remain the same size range
+6. Perform text replacement in-place only
+7. Preserve all non-visible technical elements
 
 ---
 
 🧱 REFERENCE FILE RULE (MOST IMPORTANT)
 
-If a working reference page is provided, you MUST treat it as the implementation standard.
-
-That means:
-
-- match the working reference page’s structure
-- match its degree of completeness
-- match its file fullness
-- match its implementation pattern
-- do NOT remove anything from the target page that still exists in the working reference page
-
-If the reference page still contains:
-- inline <style> blocks
-- schema
-- meta blocks
-- repeated technical sections
-
-then you MUST preserve that same implementation style in the rewritten target page unless the user explicitly says otherwise.
-
-Do NOT apply abstract cleanup rules that would make the output diverge from the working reference file.
+If a working reference page is provided:
+- it is the absolute implementation standard
+- match its structure, depth, and completeness
+- do NOT remove anything that exists in the reference
 
 ---
 
-🚫 CSS RULE (CORRECTED)
+🚫 CSS RULE
 
-Do NOT invent CSS changes.
-
-Do NOT add CSS.
-
-Do NOT remove inline <style> blocks unless BOTH of these are true:
-1. the user explicitly asks for inline styles to be removed, and
-2. the working reference file also reflects that same no-inline-style approach
-
-If the working reference file still contains a page-level <style> block, KEEP it.
+- Do NOT add CSS
+- Do NOT remove CSS
+- Do NOT modify styles unless explicitly instructed
 
 ---
 
-🔍 REVIEW REQUIREMENT (MANDATORY)
+🔍 FINAL VALIDATION (MANDATORY)
 
-Before outputting, ensure:
+Before output, verify:
 
-- ZERO SEO/funnel language remains
-- ZERO “guide / planning / next step / decision” phrasing remains
-- ZERO meta-explanations about the page remain
-- the output matches the working reference file’s completeness
-- the file has not been shortened unintentionally
-- the output is a true in-place rewrite
+- ZERO “people / travelers / users” phrasing exists
+- ZERO explanatory or analytical language remains
+- ZERO internal linking logic is described
+- EVERY paragraph feels like a lived experience
+- The page reads like a place, not a guide
 
 If any fail, fix before output.
 
@@ -154,16 +163,17 @@ If any fail, fix before output.
 📦 OUTPUT FORMAT
 
 You MUST:
-- return one single final HTML file only
-- return the full file
-- do NOT summarize
+- return ONE complete HTML file
+- return FULL file (no truncation)
+- provide as downloadable .txt
 - do NOT explain
-- do NOT shorten
+- do NOT summarize
 - do NOT provide alternatives
-- provide it as a complete downloadable .txt file
 
 ---
 
-✅ OPTIONAL LINE
+✅ FINAL RULE
 
-The working reference file overrides any abstract cleanup preference. Match the working file first, then rewrite the target page’s visible text only.
+If a sentence explains the experience, rewrite it.
+
+Only describe what it feels like to be there.
