@@ -1,4 +1,4 @@
-🔒 STRICT HTML CONTENT REWRITE PROMPT (LOCKED V2 - EXPERIENCE-ONLY, ENFORCED)
+🔒 STRICT HTML CONTENT REWRITE PROMPT (LOCKED V3 – EXPERIENCE-ONLY, NON-INTERPRETIVE)
 
 You are editing a fully built HTML page.
 
@@ -39,13 +39,30 @@ You MUST NOT write from an observer, analyst, or explanatory perspective.
 - “This helps…”
 - “This creates…”
 - “This gives…”
+- “This makes…”
+- “This leads to…”
+- “This results in…”
 - “You can explore…”
 - “Check availability…”
 - “This page…”
 - “Lodge page…”
 - “Fauna page…”
 
-These are ALL admin, SEO, or explanatory language.
+---
+
+🚫 CAUSE → EFFECT BAN (NEW – CRITICAL)
+
+You MUST NOT explain WHY something feels a certain way.
+
+❌ NEVER WRITE:
+- “because…”
+- “so that…”
+- “which makes…”
+- “that creates…”
+- “that gives…”
+- “that leads to…”
+
+👉 If a sentence explains a result → DELETE or REWRITE
 
 ---
 
@@ -73,14 +90,31 @@ Before writing any paragraph:
 
 Examples:
 
-❌ “The appeal of this place comes from its calm atmosphere”
-✅ “Mist settles between the trees, and the forest moves at its own quiet pace”
+❌ “The forest creates a calm atmosphere”
+✅ “Mist settles between the trees, and everything moves at a slower pace”
 
-❌ “What makes the experience special is the setting”
-✅ “Everything around you supports the moment”
+❌ “That speed makes it memorable”
+✅ “The moment passes quickly, yet it stays longer than expected”
 
-❌ “This allows for slower observation”
-✅ “The forest slows you down without asking”
+❌ “This allows for quiet observation”
+✅ “The forest slows without asking”
+
+---
+
+🚫 SENTENCE STRUCTURE BAN
+
+Reject ANY sentence that follows:
+
+- “[Concept] is…”
+- “[Concept] comes from…”
+- “What makes [X]…”
+- “This creates…”
+- “This gives…”
+- “This allows…”
+- “This makes…”
+- “This leads to…”
+
+These are explanatory and MUST be rewritten.
 
 ---
 
@@ -92,8 +126,6 @@ You MUST NOT include:
 - instructions like “go here”, “use this”, “explore”
 - any explanation of site structure
 - any conversion or navigation guidance
-
-Links may remain, but surrounding text must feel natural and experiential.
 
 ---
 
@@ -132,20 +164,11 @@ You MUST:
 
 ---
 
-🧱 REFERENCE FILE RULE
-
-If a working reference page is provided:
-- it overrides all abstract rules
-- match its structure, depth, and completeness
-- do NOT remove anything that exists in the reference
-
----
-
 🚨 HARD FAILURE DETECTION (MANDATORY)
 
-Before returning output, you MUST scan the entire page.
+Before returning output, scan the entire page.
 
-If ANY of the following appear, you MUST rewrite again:
+If ANY appear → REWRITE:
 
 ❌ Words:
 - people
@@ -162,32 +185,14 @@ If ANY of the following appear, you MUST rewrite again:
 - this helps
 - this creates
 - this gives
-- you can explore
-- check availability
-- this page
-- lodge page
-- fauna page
-
----
-
-🚫 SENTENCE STRUCTURE BAN
-
-Reject ANY sentence that follows:
-
-- “[Concept] is…”
-- “[Concept] comes from…”
-- “What makes [X]…”
-- “This creates…”
-- “This gives…”
-- “This allows…”
-
-These are explanatory and MUST be rewritten.
+- this makes
+- this leads to
 
 ---
 
 ✅ REQUIRED TRANSFORMATION TEST
 
-For EACH paragraph, validate:
+For EACH paragraph:
 
 👉 Is this describing a moment, or explaining a concept?
 
