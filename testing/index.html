@@ -77,7 +77,7 @@
       border: 1px solid rgba(255,255,255,0.14);
       background: rgba(0,0,0,0.10);
       position: relative;
-      min-height: auto;
+      min-height: 520px;
     }
 
     .roomHeroMedia{
@@ -432,10 +432,10 @@
 
     .roomVideoFrame{
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 0.95fr 1.05fr;
       gap: 0;
       align-items: stretch;
-      min-height: auto;
+      min-height: 520px;
       background: var(--room-surface-2);
     }
 
@@ -550,6 +550,130 @@
       align-items: center;
     }
 
+
+    .storyMedia{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      box-shadow: 0 14px 34px rgba(13,89,37,0.10);
+      aspect-ratio: 4 / 5;
+      min-height: 0;
+    }
+
+    .storyMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .storySide{
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .storyFacts{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .storyNote{
+      margin: 0;
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,0.14);
+      background: rgba(255,255,255,0.62);
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+      color: rgba(11,26,16,0.78);
+      font-weight: 650;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 10px;
+    }
+
+    .relatedHint{
+      margin:0;
+      color:rgba(11,26,16,0.72);
+      font-weight:650;
+      font-size:13.2px;
+      line-height:1.55;
+      max-width:90ch;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .relatedTile{
+      border-radius:18px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      box-shadow:0 14px 30px rgba(0,0,0,0.10);
+      padding:14px;
+      min-height:132px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+      color:var(--room-ink);
+      text-decoration:none;
+    }
+
+    .relatedTileTitle{
+      margin:6px 0 0;
+      font-weight:900;
+      letter-spacing:-0.01em;
+      font-size:16px;
+      color:var(--forest);
+      line-height:1.2;
+    }
+
+    .relatedTileText{
+      margin:0;
+      color:rgba(11,26,16,0.78);
+      font-size:13.5px;
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(13,89,37,0.92);
+      font-weight:800;
+      font-size:12.5px;
+    }
+
+
     @media (max-width: 900px){
       .roomWrap{ padding: 10px 14px 58px; }
 
@@ -596,25 +720,10 @@
       }
 
       .roomTwoCol{ grid-template-columns: 1fr; }
+      .storyFacts{ grid-template-columns: 1fr; }
+      .relatedGrid{ grid-template-columns: 1fr; }
     }
   </style>
-
-<style>
-.roomVideoFrame{
-  align-items: start !important;
-}
-
-.roomVideoCopy{
-  justify-content: flex-start !important;
-}
-
-@media(min-width:900px){
-  .roomVideoFrame{
-    grid-template-columns: 1fr 1fr;
-  }
-}
-</style>
-
 </head>
 <body>
   <div id="siteHeader"></div>
@@ -744,28 +853,20 @@
       </div>
     </section>
 
-    <section class="roomSection" aria-label="Suite video moment">
-      <div class="roomSectionHead">
-        <section class="card"><div class="roomCardInner">
-<h2 class="roomH2">Morning in the Panoramic Suite</h2>
-        <p class="roomHint"></p>
-      </div>
+    
+    <section class="roomSection" aria-label="Morning in the Panoramic Suite">
+      <div class="roomCard">
+        <div class="roomSectionHead">
+          <h2 class="roomH2">Morning in the Panoramic Suite</h2>
+          <p class="roomHint">A slower start above the valley</p>
+        </div>
 
-      <div class="roomVideoCard">
-        <div class="roomVideoFrame">
-          <div class="roomVideoMedia" aria-label="Vertical video (YouTube Short)">
-            <div class="roomYt" aria-label="YouTube video">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/pokjiyuVNuY?autoplay=1&mute=1&loop=1&playlist=pokjiyuVNuY&controls=1&modestbranding=1&rel=0&playsinline=1"
-                title="Panoramic Suite video"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            </div>
+        <div class="roomTwoCol" aria-label="Morning suite story">
+          <div class="storyMedia" aria-label="Panoramic Suite morning photo">
+            <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_03.jpg" alt="Panoramic Suite morning light and valley-facing interior" loading="lazy" decoding="async" />
           </div>
 
-          <div class="roomVideoCopy" aria-label="Video story">
+          <div class="storySide" aria-label="Morning suite details">
             <p class="roomCopy">
               Mist drifting through the valley. Hummingbirds hovering near the terrace. The cloud forest waking up slowly.
               This is what mornings feel like here.
@@ -775,45 +876,135 @@
               "A suite designed to disappear into the landscape, so the view becomes the room, much like the setting seen throughout the <a href="/features/gallery/">cloud forest gallery</a>."
             </p>
 
-            <div class="roomMiniRow" aria-label="Video actions">
+            <div class="roomMiniRow" aria-label="Morning actions">
               <a class="btn primary" href="/booking/">Book This Suite</a>
               <a class="btn secondary" href="/contact/">Ask A Question</a>
             </div>
+
+            <div class="storyFacts" aria-label="Suite at a glance">
+              <div class="roomFeature">
+                <p class="roomFeatureTitle">Best for</p>
+                <p class="roomFeatureText">Couples, birders, photographers</p>
+              </div>
+              <div class="roomFeature">
+                <p class="roomFeatureTitle">Views</p>
+                <p class="roomFeatureText">Wide valley sunrise outlook</p>
+              </div>
+              <div class="roomFeature">
+                <p class="roomFeatureTitle">Feel</p>
+                <p class="roomFeatureText">Private, open, immersive</p>
+              </div>
+              <div class="roomFeature">
+                <p class="roomFeatureTitle">Why choose it</p>
+                <p class="roomFeatureText">Our most spacious view-first room</p>
+              </div>
+            </div>
+
+            <p class="storyNote">
+              A quick decision block for guests comparing room types, privacy, and atmosphere without needing to jump between the booking page, photo gallery, and room list.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="roomSection" aria-label="Who this suite is for">
-      <div class="roomSectionHead">
-        <section class="card"><div class="roomCardInner">
-<h2 class="roomH2">Who this suite is for</h2>
-        <p class="roomHint"></p>
-      </div>
-
-      <div class="roomTwoCol">
-        <div class="roomCard" aria-label="Perfect for">
-          <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">Perfect for</h3>
-          <ul class="roomList">
-            <li>Couples seeking privacy and a romantic setting</li>
-            <li>Birdwatchers and photographers chasing soft morning light</li>
-            <li>Solo travelers who want quiet, space, and nature immersion</li>
-            <li>Guests who want an open concept room with a view-first design and easy access to <a href="/cloud-forest-hiking-ecuador/">cloud forest hiking Ecuador</a></li>
-          </ul>
+      <div class="roomCard">
+        <div class="roomSectionHead">
+          <h2 class="roomH2">Who this suite is for</h2>
+          <p class="roomHint">A clearer fit before you book</p>
         </div>
 
-        <div class="roomCard" aria-label="Not ideal if">
-          <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">Not ideal if</h3>
-          <ul class="roomList">
-            <li>You prefer busy nightlife or an urban vibe</li>
-            <li>You want a stay centered around TV or indoor entertainment</li>
-            <li>You are looking for a fast-paced, activity-packed schedule all day</li>
-          </ul>
+        <div class="roomTwoCol">
+          <div class="roomFeature" aria-label="Perfect for" style="padding:16px;">
+            <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">Perfect for</h3>
+            <ul class="roomList">
+              <li>Couples seeking privacy and a romantic setting</li>
+              <li>Birdwatchers and photographers chasing soft morning light</li>
+              <li>Solo travelers who want quiet, space, and nature immersion</li>
+              <li>Guests who want an open concept room with a view-first design and easy access to <a href="/cloud-forest-hiking-ecuador/">cloud forest hiking Ecuador</a></li>
+            </ul>
+          </div>
+
+          <div class="roomFeature" aria-label="Not ideal if" style="padding:16px;">
+            <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">Not ideal if</h3>
+            <ul class="roomList">
+              <li>You prefer busy nightlife or an urban vibe</li>
+              <li>You want a stay centered around TV or indoor entertainment</li>
+              <li>You are looking for a fast-paced, activity-packed schedule all day</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roomSection" aria-label="Related panoramic suite links">
+      <div class="roomCard">
+        <div class="relatedHead">
+          <h2 class="roomH2">Explore more of your stay</h2>
+          <p class="relatedHint">Compare room styles, see the wider cloud forest setting, and follow the pages that help guests choose the stay that fits best.</p>
+        </div>
+
+        <div class="relatedGrid" aria-label="Related pages">
+          <a class="relatedTile" href="/rooms/sunrise-room/" aria-label="Sunrise Room">
+            <div>
+              <span class="tag">Room option</span>
+              <p class="relatedTileTitle">Sunrise Room</p>
+              <p class="relatedTileText">Compare this suite with a cozier room built around soft dawn light and slower mornings.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>View</span></div>
+          </a>
+
+          <a class="relatedTile" href="/rooms/sunset-room/" aria-label="Sunset Room">
+            <div>
+              <span class="tag">Room option</span>
+              <p class="relatedTileTitle">Sunset Room</p>
+              <p class="relatedTileText">See the warmer west-facing room made for quieter evenings and golden-hour views.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>View</span></div>
+          </a>
+
+          <a class="relatedTile" href="/features/gallery/" aria-label="Cloud forest gallery">
+            <div>
+              <span class="tag">Visual</span>
+              <p class="relatedTileTitle">Cloud forest gallery</p>
+              <p class="relatedTileText">Browse more of the atmosphere, views, and quiet details connected to the retreat.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>View</span></div>
+          </a>
+
+          <a class="relatedTile" href="/birdwatching-lodge-ecuador/" aria-label="Birdwatching lodge Ecuador">
+            <div>
+              <span class="tag">Birding</span>
+              <p class="relatedTileTitle">Birdwatching lodge Ecuador</p>
+              <p class="relatedTileText">See why this suite works so well for guests drawn to birds, mist, and early valley light.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Explore</span></div>
+          </a>
+
+          <a class="relatedTile" href="/where-to-stay-near-quito-nature/" aria-label="Where to stay near Quito nature">
+            <div>
+              <span class="tag">Planning</span>
+              <p class="relatedTileTitle">Where to stay near Quito nature</p>
+              <p class="relatedTileText">Use the broader planning guide to decide which kind of stay and room experience fits your trip.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Read</span></div>
+          </a>
+
+          <a class="relatedTile" href="/cloud-forest-quito-ecuador/" aria-label="Cloud forest Quito Ecuador">
+            <div>
+              <span class="tag">Destination</span>
+              <p class="relatedTileTitle">Cloud forest Quito Ecuador</p>
+              <p class="relatedTileText">Step back from the suite itself and see how the wider destination shapes the full experience.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Read</span></div>
+          </a>
         </div>
       </div>
     </section>
 
     <section class="roomBand" aria-label="Final call to action">
+
       <div>
         <p class="roomBandTitle">Ready to wake up above the cloud forest?</p>
         <p class="roomBandText">Check availability and book your stay in minutes. It also helps when deciding <a href="/where-to-stay-near-quito-nature/">where to stay near Quito nature</a>. If you have questions, contact us and we will help you plan.</p>
