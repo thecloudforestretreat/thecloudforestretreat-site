@@ -654,6 +654,88 @@
       align-items: center;
     }
 
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 10px;
+    }
+
+    .relatedHint{
+      margin:0;
+      color:rgba(11,26,16,0.72);
+      font-weight:650;
+      font-size:13.2px;
+      line-height:1.55;
+      max-width:90ch;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .relatedTile{
+      border-radius:18px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      box-shadow:0 14px 30px rgba(0,0,0,0.10);
+      padding:14px;
+      min-height:132px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+      color:var(--ink);
+      text-decoration:none;
+    }
+
+    .relatedTileTitle{
+      margin:6px 0 0;
+      font-weight:900;
+      letter-spacing:-0.01em;
+      font-size:16px;
+      color:var(--forest);
+      line-height:1.2;
+    }
+
+    .relatedTileText{
+      margin:0;
+      color:rgba(11,26,16,0.78);
+      font-size:13.5px;
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(13,89,37,0.92);
+      font-weight:800;
+      font-size:12.5px;
+    }
+
+
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
 
@@ -671,6 +753,7 @@
 
       .bathGrid{ grid-template-columns: 1fr; }
       .details{ grid-template-columns: 1fr; }
+      .relatedGrid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -861,7 +944,73 @@
     </section>
 
     <!-- CTA -->
-    <section class="ctaBand" aria-label="Llamado a la acción para reservar">
+    
+    <section class="details" aria-label="Enlaces relacionados habitación amanecer">
+      <article class="card detailCard" style="grid-column:1 / -1;">
+        <div class="relatedHead">
+          <h2 class="cardTitle" style="font-size:24px;">Explora más de tu estadía</h2>
+          <p class="relatedHint">Compara habitaciones, descubre el ambiente del bosque nublado y navega por páginas que te ayudan a elegir mejor tu experiencia.</p>
+        </div>
+
+        <div class="relatedGrid">
+          <a class="relatedTile" href="/es/habitaciones/suite-panoramica/">
+            <div>
+              <span class="tag">Habitación</span>
+              <p class="relatedTileTitle">Suite Panorámica</p>
+              <p class="relatedTileText">Compara esta habitación acogedora con la suite más amplia y las mejores vistas del valle.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/habitaciones/habitacion-atardecer/">
+            <div>
+              <span class="tag">Habitación</span>
+              <p class="relatedTileTitle">Habitación Atardecer</p>
+              <p class="relatedTileText">Descubre la opción orientada al oeste, ideal para tardes tranquilas y luz dorada.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/caracteristicas/galeria/">
+            <div>
+              <span class="tag">Galería</span>
+              <p class="relatedTileTitle">Galería del bosque</p>
+              <p class="relatedTileText">Explora imágenes del entorno, las vistas y los detalles que definen la experiencia.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/birdwatching-lodge-ecuador/">
+            <div>
+              <span class="tag">Aves</span>
+              <p class="relatedTileTitle">Lodge de aves Ecuador</p>
+              <p class="relatedTileText">Descubre por qué esta habitación es perfecta para mañanas con aves y naturaleza.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Explorar</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">
+            <div>
+              <span class="tag">Planificación</span>
+              <p class="relatedTileTitle">Dónde alojarse cerca de Quito</p>
+              <p class="relatedTileText">Guía completa para elegir el tipo de estancia ideal para tu viaje.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Leer</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/cloud-forest-quito-ecuador/">
+            <div>
+              <span class="tag">Destino</span>
+              <p class="relatedTileTitle">Bosque nublado Quito</p>
+              <p class="relatedTileText">Conoce el destino y cómo influye en toda la experiencia del lodge.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Leer</span></div>
+          </a>
+        </div>
+      </article>
+    </section>
+
+<section class="ctaBand" aria-label="Llamado a la acción para reservar">
       <div>
         <h2>¿Listo para despertar con el bosque nublado?</h2>
         <p>
