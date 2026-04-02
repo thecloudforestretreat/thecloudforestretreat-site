@@ -300,7 +300,92 @@
       font-weight:650;
     }
 
-    @media(max-width:900px){
+    
+    .relatedSection{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:12px;
+    }
+
+    .relatedHead h2{
+      margin:0;
+      font-family: var(--font-head);
+      color:var(--forest);
+      font-size:24px;
+      letter-spacing:-0.02em;
+      font-weight:900;
+      line-height:1.1;
+    }
+
+    .relatedHint{
+      margin:0;
+      color:rgba(11,26,16,0.72);
+      font-size:13.6px;
+      line-height:1.6;
+      font-weight:650;
+      max-width:58ch;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      align-items:stretch;
+    }
+
+    .relatedCard{
+      min-width:0;
+      border-radius:20px;
+      border:1px solid rgba(13,89,37,.16);
+      background:rgba(255,255,255,.60);
+      box-shadow:0 14px 30px rgba(0,0,0,.10);
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .relatedLabel{
+      display:inline-flex;
+      align-items:center;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.62);
+      border:1px solid rgba(13,89,37,.18);
+      font-size:12px;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    .relatedTitle{
+      margin:6px 0 0;
+      font-family: var(--font-head);
+      font-size:22px;
+      color:var(--forest);
+      font-weight:900;
+    }
+
+    .relatedText{
+      margin:0;
+      font-size:14.2px;
+      line-height:1.7;
+      color:rgba(11,26,16,.78);
+      flex:1;
+    }
+
+    .relatedFooter{
+      margin-top:auto;
+    }
+
+@media(max-width:900px){
       .wrap{ padding:12px 14px 64px; }
 
       .heroMedia{ min-height:280px; }
@@ -309,6 +394,7 @@
       .floraGrid{ grid-template-columns:1fr; }
       .floraCard{ grid-template-columns:1fr; }
       .floraImage{ min-height:240px; }
+      .relatedGrid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -443,55 +529,66 @@
 </article>
   </section>
 
-<section class="card" style="margin-top:14px;" aria-label="Related cloud forest pages">
-  <div style="padding:16px;">
-    <h2 style="margin:0 0 12px;font-family:var(--font-head);color:var(--forest);font-size:24px;font-weight:900;">Explore more of the cloud forest</h2>
+<section class="card relatedSection">
+  <div class="relatedHead">
+    <h2>Explore more of the cloud forest</h2>
+    <p class="relatedHint">Discover more about the ecosystem, wildlife, and surrounding landscapes.</p>
+  </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
-
-      <div style="background:rgba(255,255,255,.65);border:1px solid rgba(13,89,37,.16);border-radius:20px;padding:16px;">
-        <span class="tag">Landscape</span>
-        <h3 style="margin:8px 0 6px;font-size:17px;font-weight:900;">Pululahua crater</h3>
-        <p style="margin:0 0 10px;font-size:13.5px;">Explore one of the most unique volcanic landscapes near Quito.</p>
-        <a href="/features/pululahua/" class="btn small">Explore</a>
+  <div class="relatedGrid">
+    <article class="relatedCard">
+      <span class="relatedLabel">Landscape</span>
+      <h3 class="relatedTitle">Pululahua crater</h3>
+      <p class="relatedText">Explore one of the most unique volcanic landscapes near Quito.</p>
+      <div class="relatedFooter">
+        <a class="btn secondary" href="/features/pululahua/">Explore</a>
       </div>
+    </article>
 
-      <div style="background:rgba(255,255,255,.65);border:1px solid rgba(13,89,37,.16);border-radius:20px;padding:16px;">
-        <span class="tag">Visual</span>
-        <h3 style="margin:8px 0 6px;font-size:17px;font-weight:900;">Cloud forest gallery</h3>
-        <p style="margin:0 0 10px;font-size:13.5px;">See the atmosphere and biodiversity of the forest.</p>
-        <a href="/features/gallery/" class="btn small">View</a>
+    <article class="relatedCard">
+      <span class="relatedLabel">Visual</span>
+      <h3 class="relatedTitle">Cloud forest gallery</h3>
+      <p class="relatedText">See the atmosphere and biodiversity of the forest.</p>
+      <div class="relatedFooter">
+        <a class="btn secondary" href="/features/gallery/">View</a>
       </div>
+    </article>
 
-      <div style="background:rgba(255,255,255,.65);border:1px solid rgba(13,89,37,.16);border-radius:20px;padding:16px;">
-        <span class="tag">Ecosystem</span>
-        <h3 style="margin:8px 0 6px;font-size:17px;font-weight:900;">Rio Guayllabamba</h3>
-        <p style="margin:0 0 10px;font-size:13.5px;">Discover the valley ecosystem shaping the region.</p>
-        <a href="/features/rio-guayllabamba/" class="btn small">Explore</a>
+    <article class="relatedCard">
+      <span class="relatedLabel">Ecosystem</span>
+      <h3 class="relatedTitle">Rio Guayllabamba</h3>
+      <p class="relatedText">Discover the valley ecosystem shaping the region.</p>
+      <div class="relatedFooter">
+        <a class="btn secondary" href="/features/rio-guayllabamba/">Explore</a>
       </div>
+    </article>
 
-      <div style="background:rgba(255,255,255,.65);border:1px solid rgba(13,89,37,.16);border-radius:20px;padding:16px;">
-        <span class="tag">Food</span>
-        <h3 style="margin:8px 0 6px;font-size:17px;font-weight:900;">Local produce</h3>
-        <p style="margin:0 0 10px;font-size:13.5px;">Learn about edible plants and local ingredients.</p>
-        <a href="/features/produce/" class="btn small">Explore</a>
+    <article class="relatedCard">
+      <span class="relatedLabel">Food</span>
+      <h3 class="relatedTitle">Local produce</h3>
+      <p class="relatedText">Learn about edible plants and local ingredients.</p>
+      <div class="relatedFooter">
+        <a class="btn secondary" href="/features/produce/">Explore</a>
       </div>
+    </article>
 
-      <div style="background:rgba(255,255,255,.65);border:1px solid rgba(13,89,37,.16);border-radius:20px;padding:16px;">
-        <span class="tag">Wildlife</span>
-        <h3 style="margin:8px 0 6px;font-size:17px;font-weight:900;">Birds of the cloud forest</h3>
-        <p style="margin:0 0 10px;font-size:13.5px;">Understand the birdlife supported by this ecosystem.</p>
-        <a href="/birds-of-the-cloud-forest-ecuador/" class="btn small">Explore</a>
+    <article class="relatedCard">
+      <span class="relatedLabel">Wildlife</span>
+      <h3 class="relatedTitle">Birds of the cloud forest</h3>
+      <p class="relatedText">Understand the birdlife supported by this ecosystem.</p>
+      <div class="relatedFooter">
+        <a class="btn secondary" href="/birds-of-the-cloud-forest-ecuador/">Explore</a>
       </div>
+    </article>
 
-      <div style="background:rgba(255,255,255,.65);border:1px solid rgba(13,89,37,.16);border-radius:20px;padding:16px;">
-        <span class="tag">Guide</span>
-        <h3 style="margin:8px 0 6px;font-size:17px;font-weight:900;">Cloud forest Quito Ecuador</h3>
-        <p style="margin:0 0 10px;font-size:13.5px;">Get a full overview of the destination.</p>
-        <a href="/cloud-forest-quito-ecuador/" class="btn small">Read</a>
+    <article class="relatedCard">
+      <span class="relatedLabel">Guide</span>
+      <h3 class="relatedTitle">Cloud forest Quito Ecuador</h3>
+      <p class="relatedText">Get a full overview of the destination.</p>
+      <div class="relatedFooter">
+        <a class="btn secondary" href="/cloud-forest-quito-ecuador/">Read</a>
       </div>
-
-    </div>
+    </article>
   </div>
 </section>
 
