@@ -448,6 +448,103 @@
       transform: scale(1.05);
     }
 
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+    .relatedSection{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .relatedH2{
+      margin:0;
+      font-family: var(--font-head);
+      font-size:22px;
+      letter-spacing:-0.02em;
+      color: var(--forest);
+      font-weight:900;
+      line-height:1.1;
+    }
+
+    .relatedHint{
+      margin:0;
+      color: rgba(11,26,16,0.68);
+      font-weight:700;
+      font-size:13px;
+      line-height:1.4;
+      max-width:90ch;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .relatedTile{
+      border-radius:18px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      box-shadow:0 14px 30px rgba(0,0,0,0.10);
+      padding:14px;
+      min-height:132px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+      color:var(--ink);
+      text-decoration:none;
+    }
+
+    .relatedTileTitle{
+      margin:6px 0 0;
+      font-weight:900;
+      letter-spacing:-0.01em;
+      font-size:16px;
+      color:var(--forest);
+      line-height:1.2;
+    }
+
+    .relatedTileText{
+      margin:0;
+      color:rgba(11,26,16,0.78);
+      font-size:13.5px;
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(13,89,37,0.92);
+      font-weight:800;
+      font-size:12.5px;
+    }
+
+
     /* CTA BAND */
     .ctaBand{
       margin-top: 14px;
@@ -497,6 +594,7 @@
       .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
 
       .grid2{ grid-template-columns: 1fr; }
+      .relatedGrid{ grid-template-columns:1fr; }
       .hSlide{ aspect-ratio: 4 / 3; }
       .hArrow.prev{ left: 8px; }
       .hArrow.next{ right: 8px; }
@@ -642,6 +740,88 @@
         <div class="hDots" data-dots aria-label="Elegir una foto"></div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="card relatedSection" aria-label="Enlaces relacionados de Pululahua">
+  <div class="relatedHead">
+    <h2 class="relatedH2">Explora mas alrededor de Pululahua</h2>
+    <p class="relatedHint">Conecta la experiencia de la caldera con el bosque nublado, la vida silvestre y la parte practica de planificar tu estadia.</p>
+  </div>
+
+  <div class="relatedGrid" aria-label="Paginas relacionadas">
+    <a class="relatedTile" href="/es/bosque-nublado-quito-ecuador/" aria-label="Bosque nublado Quito Ecuador">
+      <div>
+        <span class="tag">Destino</span>
+        <p class="relatedTileTitle">Bosque nublado Quito Ecuador</p>
+        <p class="relatedTileText">Mira como Pululahua encaja dentro del entorno mas amplio del bosque nublado cerca de Quito.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Leer</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/caracteristicas/flora/" aria-label="Flora del bosque nublado">
+      <div>
+        <span class="tag">Flora</span>
+        <p class="relatedTileTitle">Flora del bosque nublado</p>
+        <p class="relatedTileText">Explora la vida vegetal que ayuda a dar forma a los mismos paisajes que ves alrededor de la caldera.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/caracteristicas/galeria/" aria-label="Galeria del bosque nublado">
+      <div>
+        <span class="tag">Visual</span>
+        <p class="relatedTileTitle">Galeria del bosque nublado</p>
+        <p class="relatedTileText">Descubre mas de la atmosfera, los paisajes y los momentos tranquilos conectados con esta region.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Ver</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/lodge-avistamiento-aves-ecuador/" aria-label="Lodge de avistamiento de aves en Ecuador">
+      <div>
+        <span class="tag">Aves</span>
+        <p class="relatedTileTitle">Lodge de avistamiento de aves en Ecuador</p>
+        <p class="relatedTileText">Combina las vistas del crater con aves y experiencias tranquilas conectadas con la naturaleza.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/distancia-quito-bosque-nublado/" aria-label="Distancia Quito bosque nublado">
+      <div>
+        <span class="tag">Planificacion</span>
+        <p class="relatedTileTitle">Distancia Quito bosque nublado</p>
+        <p class="relatedTileText">Agrega contexto practico de viaje al decidir como Pululahua encaja dentro de tu itinerario.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Leer</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/donde-alojarse-cerca-de-quito-naturaleza/" aria-label="Donde alojarse cerca de Quito naturaleza">
+      <div>
+        <span class="tag">Estadia</span>
+        <p class="relatedTileTitle">Donde alojarse cerca de Quito naturaleza</p>
+        <p class="relatedTileText">Entiende que tipo de estadia funciona mejor si buscas paisaje, naturaleza y acceso sencillo.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Leer</span>
+      </div>
+    </a>
   </div>
 </section>
 
