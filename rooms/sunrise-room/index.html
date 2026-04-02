@@ -654,6 +654,88 @@
       align-items: center;
     }
 
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 10px;
+    }
+
+    .relatedHint{
+      margin:0;
+      color:rgba(11,26,16,0.72);
+      font-weight:650;
+      font-size:13.2px;
+      line-height:1.55;
+      max-width:90ch;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .relatedTile{
+      border-radius:18px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      box-shadow:0 14px 30px rgba(0,0,0,0.10);
+      padding:14px;
+      min-height:132px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+      color:var(--ink);
+      text-decoration:none;
+    }
+
+    .relatedTileTitle{
+      margin:6px 0 0;
+      font-weight:900;
+      letter-spacing:-0.01em;
+      font-size:16px;
+      color:var(--forest);
+      line-height:1.2;
+    }
+
+    .relatedTileText{
+      margin:0;
+      color:rgba(11,26,16,0.78);
+      font-size:13.5px;
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(13,89,37,0.92);
+      font-weight:800;
+      font-size:12.5px;
+    }
+
+
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
 
@@ -671,6 +753,7 @@
 
       .bathGrid{ grid-template-columns: 1fr; }
       .details{ grid-template-columns: 1fr; }
+      .relatedGrid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -856,6 +939,72 @@
         <p class="quoteSub">
           The Sunrise Room is for guests who want to feel the cloud forest awaken, slowly and beautifully, right from their window.
         </p>
+      </article>
+    </section>
+
+
+    <section class="details" aria-label="Related sunrise room links">
+      <article class="card detailCard" style="grid-column:1 / -1;" aria-label="Explore more of your stay">
+        <div class="relatedHead">
+          <h2 class="cardTitle" style="font-size:24px;">Explore more of your stay</h2>
+          <p class="relatedHint">Compare room styles, browse the cloud forest atmosphere, and follow the pages that help guests choose the stay that fits best.</p>
+        </div>
+
+        <div class="relatedGrid" aria-label="Related pages">
+          <a class="relatedTile" href="/rooms/panoramic-suite/" aria-label="Panoramic Suite">
+            <div>
+              <span class="tag">Room option</span>
+              <p class="relatedTileTitle">Panoramic Suite</p>
+              <p class="relatedTileText">Compare this cozy dawn-facing room with the retreat’s most spacious suite and widest valley views.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>View</span></div>
+          </a>
+
+          <a class="relatedTile" href="/rooms/sunset-room/" aria-label="Sunset Room">
+            <div>
+              <span class="tag">Room option</span>
+              <p class="relatedTileTitle">Sunset Room</p>
+              <p class="relatedTileText">See the warmer west-facing room made for quiet evenings, golden-hour light, and slower sunsets.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>View</span></div>
+          </a>
+
+          <a class="relatedTile" href="/features/gallery/" aria-label="Cloud forest gallery">
+            <div>
+              <span class="tag">Visual</span>
+              <p class="relatedTileTitle">Cloud forest gallery</p>
+              <p class="relatedTileText">Browse more of the atmosphere, views, and quiet details connected to the retreat experience.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>View</span></div>
+          </a>
+
+          <a class="relatedTile" href="/birdwatching-lodge-ecuador/" aria-label="Birdwatching lodge Ecuador">
+            <div>
+              <span class="tag">Birding</span>
+              <p class="relatedTileTitle">Birdwatching lodge Ecuador</p>
+              <p class="relatedTileText">See why this room works so well for guests who want birdsong, dawn light, and slow mornings.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Explore</span></div>
+          </a>
+
+          <a class="relatedTile" href="/where-to-stay-near-quito-nature/" aria-label="Where to stay near Quito nature">
+            <div>
+              <span class="tag">Planning</span>
+              <p class="relatedTileTitle">Where to stay near Quito nature</p>
+              <p class="relatedTileText">Use the broader planning guide to decide which type of room and stay experience fits your trip.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Read</span></div>
+          </a>
+
+          <a class="relatedTile" href="/cloud-forest-quito-ecuador/" aria-label="Cloud forest Quito Ecuador">
+            <div>
+              <span class="tag">Destination</span>
+              <p class="relatedTileTitle">Cloud forest Quito Ecuador</p>
+              <p class="relatedTileText">Step back from the room itself and see how the wider destination shapes the full experience.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Read</span></div>
+          </a>
+        </div>
       </article>
     </section>
 
