@@ -656,6 +656,88 @@
       align-items: center;
     }
 
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 10px;
+    }
+
+    .relatedHint{
+      margin:0;
+      color:rgba(11,26,16,0.72);
+      font-weight:650;
+      font-size:13.2px;
+      line-height:1.55;
+      max-width:90ch;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .relatedTile{
+      border-radius:18px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      box-shadow:0 14px 30px rgba(0,0,0,0.10);
+      padding:14px;
+      min-height:132px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+      color:var(--ink);
+      text-decoration:none;
+    }
+
+    .relatedTileTitle{
+      margin:6px 0 0;
+      font-weight:900;
+      letter-spacing:-0.01em;
+      font-size:16px;
+      color:var(--forest);
+      line-height:1.2;
+    }
+
+    .relatedTileText{
+      margin:0;
+      color:rgba(11,26,16,0.78);
+      font-size:13.5px;
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(13,89,37,0.92);
+      font-weight:800;
+      font-size:12.5px;
+    }
+
+
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
 
@@ -673,6 +755,7 @@
 
       .bathGrid{ grid-template-columns: 1fr; }
       .details{ grid-template-columns: 1fr; }
+      .relatedGrid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -856,6 +939,72 @@
       <article class="card quoteCard" aria-label="Frase de la habitación">
         <p class="quoteText">"Primera fila para el brillo que se derrite detras de las montanas."</p>
         <p class="quoteSub">La Habitación Atardecer es para quien quiere que el dia termine despacio: luz calida, vistas silenciosas y el bosque en calma.</p>
+      </article>
+    </section>
+
+
+    <section class="details" aria-label="Enlaces relacionados de la habitación atardecer">
+      <article class="card detailCard" style="grid-column:1 / -1;" aria-label="Explora más de tu estadía">
+        <div class="relatedHead">
+          <h2 class="cardTitle" style="font-size:24px;">Explora más de tu estadía</h2>
+          <p class="relatedHint">Compara habitaciones, descubre el ambiente del bosque nublado y navega por páginas que te ayudan a elegir mejor tu experiencia.</p>
+        </div>
+
+        <div class="relatedGrid" aria-label="Páginas relacionadas">
+          <a class="relatedTile" href="/es/habitaciones/suite-panoramica/" aria-label="Suite Panorámica">
+            <div>
+              <span class="tag">Habitación</span>
+              <p class="relatedTileTitle">Suite Panorámica</p>
+              <p class="relatedTileText">Compara esta habitación orientada al oeste con la suite más amplia y las mejores vistas abiertas del valle.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/habitaciones/habitacion-amanecer/" aria-label="Habitación Amanecer">
+            <div>
+              <span class="tag">Habitación</span>
+              <p class="relatedTileTitle">Habitación Amanecer</p>
+              <p class="relatedTileText">Descubre la opción orientada al este, pensada para la primera luz del día, aves y mañanas lentas.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/caracteristicas/galeria/" aria-label="Galería del bosque nublado">
+            <div>
+              <span class="tag">Galería</span>
+              <p class="relatedTileTitle">Galería del bosque nublado</p>
+              <p class="relatedTileText">Explora imágenes del entorno, las vistas y los detalles que definen la experiencia del retreat.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/lodge-avistamiento-aves-ecuador/" aria-label="Lodge de avistamiento de aves en Ecuador">
+            <div>
+              <span class="tag">Aves</span>
+              <p class="relatedTileTitle">Lodge de avistamiento de aves en Ecuador</p>
+              <p class="relatedTileText">Mira por qué esta habitación funciona tan bien para quienes buscan aves, quietud y calma de hora dorada.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Explorar</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/donde-alojarse-cerca-de-quito-naturaleza/" aria-label="Dónde alojarse cerca de Quito naturaleza">
+            <div>
+              <span class="tag">Planificación</span>
+              <p class="relatedTileTitle">Dónde alojarse cerca de Quito naturaleza</p>
+              <p class="relatedTileText">Guía completa para elegir el tipo de estancia ideal según el ritmo y estilo de tu viaje.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Leer</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/bosque-nublado-quito-ecuador/" aria-label="Bosque nublado Quito Ecuador">
+            <div>
+              <span class="tag">Destino</span>
+              <p class="relatedTileTitle">Bosque nublado Quito Ecuador</p>
+              <p class="relatedTileText">Conoce el destino y cómo su paisaje amplio moldea toda la experiencia de la estadía.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Leer</span></div>
+          </a>
+        </div>
       </article>
     </section>
 
