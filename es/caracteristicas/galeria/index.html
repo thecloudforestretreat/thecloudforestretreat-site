@@ -276,6 +276,103 @@
       display:block;
     }
 
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,.16);
+      background:rgba(255,255,255,.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+    .relatedSection{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .relatedH2{
+      margin:0;
+      font-family: var(--font-head);
+      font-size:22px;
+      letter-spacing:-0.02em;
+      color: var(--forest);
+      font-weight:900;
+      line-height:1.1;
+    }
+
+    .relatedHint{
+      margin:0;
+      color: rgba(11,26,16,0.72);
+      font-size: 13.2px;
+      line-height: 1.55;
+      max-width: 90ch;
+      font-weight: 600;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .relatedTile{
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      padding: 14px;
+      min-height: 132px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .relatedTileTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 16px;
+      color: var(--forest);
+      line-height: 1.2;
+    }
+
+    .relatedTileText{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      font-size: 13.5px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      color: rgba(13,89,37,.92);
+      font-weight: 800;
+      font-size: 12.5px;
+    }
+
+
     @media(max-width:900px){
       .wrap{ padding:12px 14px 64px; }
 
@@ -287,6 +384,7 @@
       .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9{ grid-column: auto; }
 
       .videoStrip{ grid-template-columns:1fr; }
+      .relatedGrid{ grid-template-columns:1fr; }
       .sectionCard{ padding:14px; }
     }
   </style>
@@ -399,7 +497,83 @@
     </div>
   </section>
 </section>
-  </main>
+  
+<section class="card relatedSection" aria-label="Enlaces relacionados de galeria">
+  <div class="relatedHead">
+    <h2 class="relatedH2">Explora mas del bosque nublado</h2>
+    <p class="relatedHint">Descubre mas sobre la estadia, los paisajes cercanos y las experiencias de vida silvestre conectadas con la galeria.</p>
+  </div>
+
+  <div class="relatedGrid" aria-label="Paginas relacionadas">
+    <a class="relatedTile" href="/es/bosque-nublado-quito-ecuador/" aria-label="Bosque nublado Quito Ecuador">
+      <div>
+        <p class="relatedTileTitle">Bosque nublado Quito Ecuador</p>
+        <p class="relatedTileText">Obtiene una vista mas amplia del destino, el entorno y la atmosfera mas alla de las imagenes.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Destino</span>
+        <span>Leer</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/lodge-avistamiento-aves-ecuador/" aria-label="Lodge de avistamiento de aves Ecuador">
+      <div>
+        <p class="relatedTileTitle">Lodge de avistamiento de aves Ecuador</p>
+        <p class="relatedTileText">Mira como el retreat encaja con viajeros que buscan aves, mananas tranquilas y estadias conectadas con la naturaleza.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Aves</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/senderismo-bosque-nublado-ecuador/" aria-label="Senderismo bosque nublado Ecuador">
+      <div>
+        <p class="relatedTileTitle">Senderismo bosque nublado Ecuador</p>
+        <p class="relatedTileText">Conecta el lado visual de la estadia con senderos, paisajes y movimiento a traves del bosque.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Senderos</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/mejor-eco-lodge-quito/" aria-label="Mejor eco lodge Quito">
+      <div>
+        <p class="relatedTileTitle">Mejor eco lodge Quito</p>
+        <p class="relatedTileText">Entiende el lado eco-lodge de la experiencia y por que el entorno se siente mas calmo e inmersivo.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Eco stay</span>
+        <span>Leer</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/aves-del-bosque-nublado-ecuador/" aria-label="Aves del bosque nublado Ecuador">
+      <div>
+        <p class="relatedTileTitle">Aves del bosque nublado Ecuador</p>
+        <p class="relatedTileText">Explora la avifauna mas amplia que da al bosque tanto movimiento, color y sonido.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Fauna</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/distancia-quito-bosque-nublado/" aria-label="Distancia Quito bosque nublado">
+      <div>
+        <p class="relatedTileTitle">Distancia Quito bosque nublado</p>
+        <p class="relatedTileText">Suma la parte practica de la planificacion del viaje a la inspiracion visual de esta pagina.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Planificacion</span>
+        <span>Leer</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+</main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
 </body>
