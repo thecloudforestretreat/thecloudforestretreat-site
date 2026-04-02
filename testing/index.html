@@ -277,80 +277,21 @@
     }
 
     
-    .relatedSection{
-      margin-top:14px;
-      padding:16px;
-    }
-
-    .relatedHead{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:10px;
-    }
-
-    .relatedH2{
-      margin:0;
-      font-family: var(--font-head);
-      font-size:22px;
-      letter-spacing:-0.02em;
-      color: var(--forest);
-      font-weight:900;
-    }
-
-    .relatedHint{
-      margin:0;
-      color: rgba(11,26,16,0.72);
-      font-size:13.2px;
-      line-height:1.55;
-      max-width:90ch;
-      font-weight:600;
-    }
-
-    .relatedGrid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-      align-items:stretch;
-    }
-
-    .relatedTile{
-      border-radius:18px;
-      border:1px solid rgba(13,89,37,.16);
-      background:rgba(255,255,255,.60);
-      box-shadow:0 14px 30px rgba(0,0,0,.10);
-      padding:14px;
-      min-height:132px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      gap:10px;
-      text-decoration:none;
-      color:var(--ink);
-    }
-
-    .relatedTileTitle{
-      margin:0;
-      font-weight:900;
-      font-size:16px;
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(13,89,37,.10);
       color:var(--forest);
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-transform:uppercase;
     }
 
-    .relatedTileText{
-      margin:0;
-      font-size:13.5px;
-      line-height:1.6;
-      font-weight:600;
-      color:rgba(11,26,16,.78);
-    }
-
-    .relatedTileMeta{
-      display:flex;
-      justify-content:space-between;
-      font-size:12.5px;
-      font-weight:800;
+    .relatedTileMeta span:last-child{
+      font-weight:900;
+      color:var(--forest);
     }
 
 @media(max-width:900px){
@@ -476,83 +417,7 @@
     </div>
   </section>
 </section>
-  
-<section class="card relatedSection">
-  <div class="relatedHead">
-    <h2 class="relatedH2">Explora mas del bosque nublado</h2>
-    <p class="relatedHint">Conecta esta galeria con experiencias, naturaleza y planificacion del viaje.</p>
-  </div>
-
-  <div class="relatedGrid">
-    <a class="relatedTile" href="/es/bosque-nublado-quito-ecuador/">
-      <div>
-        <p class="relatedTileTitle">Bosque nublado Quito Ecuador</p>
-        <p class="relatedTileText">Una vista mas amplia del destino mas alla de las imagenes.</p>
-      </div>
-      <div class="relatedTileMeta">
-        <span class="tag">Destino</span>
-        <span>Leer</span>
-      </div>
-    </a>
-
-    <a class="relatedTile" href="/es/lodge-avistamiento-aves-ecuador/">
-      <div>
-        <p class="relatedTileTitle">Lodge de aves Ecuador</p>
-        <p class="relatedTileText">Descubre la experiencia enfocada en birdwatching.</p>
-      </div>
-      <div class="relatedTileMeta">
-        <span class="tag">Aves</span>
-        <span>Explorar</span>
-      </div>
-    </a>
-
-    <a class="relatedTile" href="/es/senderismo-bosque-nublado-ecuador/">
-      <div>
-        <p class="relatedTileTitle">Senderismo bosque nublado</p>
-        <p class="relatedTileText">Relaciona las imagenes con los senderos reales.</p>
-      </div>
-      <div class="relatedTileMeta">
-        <span class="tag">Senderos</span>
-        <span>Explorar</span>
-      </div>
-    </a>
-
-    <a class="relatedTile" href="/es/mejor-eco-lodge-quito/">
-      <div>
-        <p class="relatedTileTitle">Mejor eco lodge Quito</p>
-        <p class="relatedTileText">Entiende el lado eco del alojamiento.</p>
-      </div>
-      <div class="relatedTileMeta">
-        <span class="tag">Eco</span>
-        <span>Leer</span>
-      </div>
-    </a>
-
-    <a class="relatedTile" href="/es/aves-del-bosque-nublado-ecuador/">
-      <div>
-        <p class="relatedTileTitle">Aves del bosque nublado</p>
-        <p class="relatedTileText">Explora la vida silvestre del entorno.</p>
-      </div>
-      <div class="relatedTileMeta">
-        <span class="tag">Fauna</span>
-        <span>Explorar</span>
-      </div>
-    </a>
-
-    <a class="relatedTile" href="/es/distancia-quito-bosque-nublado/">
-      <div>
-        <p class="relatedTileTitle">Distancia Quito bosque nublado</p>
-        <p class="relatedTileText">Agrega contexto practico de viaje.</p>
-      </div>
-      <div class="relatedTileMeta">
-        <span class="tag">Viaje</span>
-        <span>Leer</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-</main>
+  </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
 </body>
