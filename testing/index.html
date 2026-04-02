@@ -434,8 +434,8 @@
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
       gap: 0;
-      align-items: stretch;
-      min-height: 520px;
+      align-items: start;
+      min-height: 0;
       background: var(--room-surface-2);
     }
 
@@ -474,7 +474,7 @@
       padding: 18px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 12px;
       color: var(--room-ink);
       min-width: 0;
@@ -551,11 +551,24 @@
     }
 
 
-    .relatedSection{
-      margin-top: 16px;
+    .tag{
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.16);
+      background: rgba(255,255,255,0.60);
+      font-weight: 900;
+      font-size: 12.2px;
+      color: var(--forest);
+      white-space: nowrap;
     }
 
-    .relatedSection .roomCard{
+    .relatedSection{
+      margin-top: 14px;
+    }
+
+    .relatedPad{
       padding: 16px;
     }
 
@@ -572,8 +585,8 @@
       margin: 0;
       font-family: var(--font-head);
       color: var(--forest);
-      letter-spacing: -0.02em;
       font-weight: 900;
+      letter-spacing: -0.02em;
       font-size: 22px;
       line-height: 1.1;
     }
@@ -585,19 +598,6 @@
       font-size: 13.2px;
       line-height: 1.55;
       max-width: 90ch;
-    }
-
-    .tag{
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.16);
-      background: rgba(255,255,255,0.60);
-      font-weight: 900;
-      font-size: 12.2px;
-      color: var(--forest);
-      white-space: nowrap;
     }
 
     .relatedGrid{
@@ -891,6 +891,90 @@
             <li>You want a stay centered around TV or indoor entertainment</li>
             <li>You are looking for a fast-paced, activity-packed schedule all day</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="card relatedSection" aria-label="Related panoramic suite links">
+      <div class="relatedPad">
+        <div class="relatedHead">
+          <h2 class="relatedH2">Explore more of your stay</h2>
+          <p class="relatedHint">Compare room styles, see the wider cloud forest setting, and follow the pages that help guests choose the stay that fits best.</p>
+        </div>
+
+        <div class="relatedGrid" aria-label="Related pages">
+          <a class="relatedTile" href="/rooms/sunrise-room/" aria-label="Sunrise Room">
+            <div>
+              <span class="tag">Room option</span>
+              <p class="relatedTileTitle">Sunrise Room</p>
+              <p class="relatedTileText">Compare this suite with a cozier room built around soft dawn light and slower mornings.</p>
+            </div>
+            <div class="relatedTileMeta">
+              <span></span>
+              <span>View</span>
+            </div>
+          </a>
+
+          <a class="relatedTile" href="/rooms/sunset-room/" aria-label="Sunset Room">
+            <div>
+              <span class="tag">Room option</span>
+              <p class="relatedTileTitle">Sunset Room</p>
+              <p class="relatedTileText">See the warmer west-facing room made for quieter evenings and golden-hour views.</p>
+            </div>
+            <div class="relatedTileMeta">
+              <span></span>
+              <span>View</span>
+            </div>
+          </a>
+
+          <a class="relatedTile" href="/features/gallery/" aria-label="Cloud forest gallery">
+            <div>
+              <span class="tag">Visual</span>
+              <p class="relatedTileTitle">Cloud forest gallery</p>
+              <p class="relatedTileText">Browse more of the atmosphere, views, and quiet details connected to the retreat.</p>
+            </div>
+            <div class="relatedTileMeta">
+              <span></span>
+              <span>View</span>
+            </div>
+          </a>
+
+          <a class="relatedTile" href="/birdwatching-lodge-ecuador/" aria-label="Birdwatching lodge Ecuador">
+            <div>
+              <span class="tag">Birding</span>
+              <p class="relatedTileTitle">Birdwatching lodge Ecuador</p>
+              <p class="relatedTileText">See why this suite works so well for guests drawn to birds, mist, and early valley light.</p>
+            </div>
+            <div class="relatedTileMeta">
+              <span></span>
+              <span>Explore</span>
+            </div>
+          </a>
+
+          <a class="relatedTile" href="/where-to-stay-near-quito-nature/" aria-label="Where to stay near Quito nature">
+            <div>
+              <span class="tag">Planning</span>
+              <p class="relatedTileTitle">Where to stay near Quito nature</p>
+              <p class="relatedTileText">Use the broader planning guide to decide which kind of stay and room experience fits your trip.</p>
+            </div>
+            <div class="relatedTileMeta">
+              <span></span>
+              <span>Read</span>
+            </div>
+          </a>
+
+          <a class="relatedTile" href="/cloud-forest-quito-ecuador/" aria-label="Cloud forest Quito Ecuador">
+            <div>
+              <span class="tag">Destination</span>
+              <p class="relatedTileTitle">Cloud forest Quito Ecuador</p>
+              <p class="relatedTileText">Step back from the suite itself and see how the wider destination shapes the full experience.</p>
+            </div>
+            <div class="relatedTileMeta">
+              <span></span>
+              <span>Read</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
