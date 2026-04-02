@@ -550,6 +550,151 @@
       align-items: center;
     }
 
+
+    .storyMedia{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      box-shadow: 0 14px 34px rgba(13,89,37,0.10);
+      aspect-ratio: 4 / 5;
+      min-height: 0;
+    }
+
+    .storyMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .storySide{
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .storyFacts{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .storyNote{
+      margin: 0;
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,0.14);
+      background: rgba(255,255,255,0.62);
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+      color: rgba(11,26,16,0.78);
+      font-weight: 650;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 10px;
+    }
+
+    .relatedHint{
+      margin:0;
+      color:rgba(11,26,16,0.72);
+      font-weight:650;
+      font-size:13.2px;
+      line-height:1.55;
+      max-width:90ch;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .relatedTile{
+      border-radius:18px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      box-shadow:0 14px 30px rgba(0,0,0,0.10);
+      padding:14px;
+      min-height:132px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+      color:var(--room-ink);
+      text-decoration:none;
+    }
+
+    .relatedTileTitle{
+      margin:6px 0 0;
+      font-weight:900;
+      letter-spacing:-0.01em;
+      font-size:16px;
+      color:var(--forest);
+      line-height:1.2;
+    }
+
+    .relatedTileText{
+      margin:0;
+      color:rgba(11,26,16,0.78);
+      font-size:13.5px;
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(13,89,37,0.92);
+      font-weight:800;
+      font-size:12.5px;
+    }
+
+    .roomCarouselInset{
+      margin: 0 10px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(13,89,37,0.14);
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+      background: rgba(255,255,255,0.38);
+    }
+
+    .roomCarouselInset .roomCarouselViewport{
+      margin: 10px 10px 0;
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,0.10);
+      overflow: hidden;
+      background: rgba(255,255,255,0.22);
+    }
+
+    .roomCarouselInset .roomCarouselNav{
+      padding: 10px 12px 12px;
+      border-top: 0;
+    }
+
+
     @media (max-width: 900px){
       .roomWrap{ padding: 10px 14px 58px; }
 
@@ -596,6 +741,17 @@
       }
 
       .roomTwoCol{ grid-template-columns: 1fr; }
+      .storyFacts{ grid-template-columns: 1fr; }
+      .relatedGrid{ grid-template-columns: 1fr; }
+      .roomCarouselInset{
+        margin: 0;
+      }
+      .roomCarouselInset .roomCarouselViewport{
+        margin: 8px 8px 0;
+      }
+      .roomCarouselInset .roomCarouselNav{
+        padding: 8px 10px 10px;
+      }
     }
   </style>
 </head>
@@ -693,12 +849,13 @@
     </section>
 
     <section class="roomSection" aria-label="Galeria de fotos">
-      <div class="roomSectionHead">
-        <h2 class="roomH2">Galeria de fotos</h2>
-        <p class="roomHint">Desliza en celular o usa flechas y puntos.</p>
-      </div>
+      <div class="roomCard">
+        <div class="roomSectionHead">
+          <h2 class="roomH2">Galeria de fotos</h2>
+          <p class="roomHint">Desliza en celular o usa flechas y puntos.</p>
+        </div>
 
-      <div class="roomCarousel" aria-label="Carrusel de la Suite Panoramica">
+        <div class="roomCarousel roomCarouselInset" aria-label="Carrusel de la Suite Panoramica">
         <div class="roomCarouselViewport" id="psCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
           <button class="roomCarArrow prev" type="button" data-action="prev" aria-label="Foto anterior">‹</button>
           <button class="roomCarArrow next" type="button" data-action="next" aria-label="Siguiente foto">›</button>
@@ -725,76 +882,161 @@
           <div class="roomCarouselDots" data-dots aria-label="Elegir una foto"></div>
         </div>
       </div>
+      </div>
     </section>
 
-    <section class="roomSection" aria-label="Video de la suite">
-      <div class="roomSectionHead">
-        <h2 class="roomH2">Una manana en la Suite Panoramica</h2>
-        <p class="roomHint"></p>
-      </div>
+    
+    <section class="roomSection" aria-label="Una manana en la Suite Panoramica">
+      <div class="roomCard">
+        <div class="roomSectionHead">
+          <h2 class="roomH2">Una manana en la Suite Panoramica</h2>
+          <p class="roomHint">Un comienzo mas lento sobre el valle</p>
+        </div>
 
-      <div class="roomVideoCard">
-        <div class="roomVideoFrame">
-          <div class="roomVideoMedia" aria-label="Video vertical (YouTube Short)">
-            <div class="roomYt" aria-label="Video de YouTube">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/pokjiyuVNuY?autoplay=1&mute=1&loop=1&playlist=pokjiyuVNuY&controls=1&modestbranding=1&rel=0&playsinline=1"
-                title="Video de la Suite Panoramica"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            </div>
+        <div class="roomTwoCol" aria-label="Historia de la suite en la manana">
+          <div class="storyMedia" aria-label="Foto de la manana en la Suite Panoramica">
+            <img src="/assets/images/pages/rooms/tcfr_rooms_ps_c_03.jpg" alt="Luz de la manana en la Suite Panoramica con vista al valle" loading="lazy" decoding="async" />
           </div>
 
-          <div class="roomVideoCopy" aria-label="Historia del video">
+          <div class="storySide" aria-label="Detalles de la suite en la manana">
             <p class="roomCopy">
               Neblina recorriendo el valle. Colibries cerca de la terraza. El bosque nublado despertando lento.
               Asi se sienten las mananas aqui.
             </p>
 
             <p class="roomQuote">
-              "Una suite pensada para desaparecer en el paisaje, para que la vista sea la habitación, igual que en la <a href="/es/caracteristicas/galeria/">galeria del bosque nublado</a>."
+              "Una suite pensada para desaparecer en el paisaje, para que la vista sea la habitacion, igual que en la <a href="/es/caracteristicas/galeria/">galeria del bosque nublado</a>."
             </p>
 
-            <div class="roomMiniRow" aria-label="Acciones del video">
+            <div class="roomMiniRow" aria-label="Acciones de la manana">
               <a class="btn primary" href="/booking/">Reservar esta suite</a>
               <a class="btn secondary" href="/contact/">Hacer una pregunta</a>
             </div>
+
+            <div class="storyFacts" aria-label="Suite de un vistazo">
+              <div class="roomFeature">
+                <p class="roomFeatureTitle">Ideal para</p>
+                <p class="roomFeatureText">Parejas, birdwatchers y fotografos</p>
+              </div>
+              <div class="roomFeature">
+                <p class="roomFeatureTitle">Vistas</p>
+                <p class="roomFeatureText">Amanecer amplio sobre el valle</p>
+              </div>
+              <div class="roomFeature">
+                <p class="roomFeatureTitle">Sensacion</p>
+                <p class="roomFeatureText">Privada, abierta e inmersiva</p>
+              </div>
+              <div class="roomFeature">
+                <p class="roomFeatureTitle">Por que elegirla</p>
+                <p class="roomFeatureText">Nuestra habitacion mas amplia centrada en la vista</p>
+              </div>
+            </div>
+
+            <p class="storyNote">
+              Un bloque rapido para comparar tipos de habitacion, privacidad y ambiente sin tener que saltar entre la reserva, la galeria y la lista de habitaciones.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="roomSection" aria-label="Para quien es esta suite">
-      <div class="roomSectionHead">
-        <h2 class="roomH2">Para quien es esta suite</h2>
-        <p class="roomHint"></p>
-      </div>
-
-      <div class="roomTwoCol">
-        <div class="roomCard" aria-label="Ideal para">
-          <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">Ideal para</h3>
-          <ul class="roomList">
-            <li>Parejas que buscan privacidad y un ambiente romantico</li>
-            <li>Birdwatchers y fotografos que persiguen la luz suave del amanecer</li>
-            <li>Viajeros en solitario que quieren silencio, espacio e inmersion en la naturaleza</li>
-            <li>Quienes quieren una habitación tipo loft con diseno centrado en la vista y acceso cercano al <a href="/es/senderismo-bosque-nublado-ecuador/">senderismo bosque nublado Ecuador</a></li>
-          </ul>
+      <div class="roomCard">
+        <div class="roomSectionHead">
+          <h2 class="roomH2">Para quien es esta suite</h2>
+          <p class="roomHint">Una decision mas clara antes de reservar</p>
         </div>
 
-        <div class="roomCard" aria-label="No es ideal si">
-          <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">No es ideal si</h3>
-          <ul class="roomList">
-            <li>Preferis vida nocturna y un ambiente urbano</li>
-            <li>Buscas una estadia centrada en TV o entretenimiento indoor</li>
-            <li>Querés un plan acelerado y lleno de actividades todo el dia</li>
-          </ul>
+        <div class="roomTwoCol">
+          <div class="roomFeature" aria-label="Ideal para" style="padding:16px;">
+            <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">Ideal para</h3>
+            <ul class="roomList">
+              <li>Parejas que buscan privacidad y un ambiente romantico</li>
+              <li>Birdwatchers y fotografos que persiguen la luz suave del amanecer</li>
+              <li>Viajeros en solitario que quieren silencio, espacio e inmersion en la naturaleza</li>
+              <li>Quienes quieren una habitacion tipo loft con diseno centrado en la vista y acceso cercano al <a href="/es/senderismo-bosque-nublado-ecuador/">senderismo bosque nublado Ecuador</a></li>
+            </ul>
+          </div>
+
+          <div class="roomFeature" aria-label="No es ideal si" style="padding:16px;">
+            <h3 class="roomH2" style="font-size:20px;margin-bottom:8px;">No es ideal si</h3>
+            <ul class="roomList">
+              <li>Preferis vida nocturna y un ambiente urbano</li>
+              <li>Buscas una estadia centrada en TV o entretenimiento indoor</li>
+              <li>Queres un plan acelerado y lleno de actividades todo el dia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roomSection" aria-label="Enlaces relacionados de la Suite Panoramica">
+      <div class="roomCard">
+        <div class="relatedHead">
+          <h2 class="roomH2">Explora mas de tu estadia</h2>
+          <p class="relatedHint">Compara estilos de habitacion, mira el entorno mas amplio del bosque nublado y sigue las paginas que ayudan a elegir la estadia que mejor encaja.</p>
+        </div>
+
+        <div class="relatedGrid" aria-label="Paginas relacionadas">
+          <a class="relatedTile" href="/es/habitaciones/habitacion-amanecer/" aria-label="Habitacion Amanecer">
+            <div>
+              <span class="tag">Opcion de habitacion</span>
+              <p class="relatedTileTitle">Habitacion Amanecer</p>
+              <p class="relatedTileText">Compara esta suite con una habitacion mas acogedora pensada para la luz suave del amanecer y mananas lentas.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/habitaciones/habitacion-atardecer/" aria-label="Habitacion Atardecer">
+            <div>
+              <span class="tag">Opcion de habitacion</span>
+              <p class="relatedTileTitle">Habitacion Atardecer</p>
+              <p class="relatedTileText">Mira la habitacion mas calida y orientada al oeste, hecha para tardes tranquilas y vistas de golden hour.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/caracteristicas/galeria/" aria-label="Galeria del bosque nublado">
+            <div>
+              <span class="tag">Visual</span>
+              <p class="relatedTileTitle">Galeria del bosque nublado</p>
+              <p class="relatedTileText">Explora mas del ambiente, las vistas y los detalles tranquilos conectados con el retreat.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Ver</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/lodge-avistamiento-aves-ecuador/" aria-label="Lodge de avistamiento de aves en Ecuador">
+            <div>
+              <span class="tag">Aves</span>
+              <p class="relatedTileTitle">Lodge de avistamiento de aves en Ecuador</p>
+              <p class="relatedTileText">Mira por que esta suite funciona tan bien para quienes buscan aves, neblina y luz temprana sobre el valle.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Explorar</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/donde-alojarse-cerca-de-quito-naturaleza/" aria-label="Donde alojarse cerca de Quito naturaleza">
+            <div>
+              <span class="tag">Planificacion</span>
+              <p class="relatedTileTitle">Donde alojarse cerca de Quito naturaleza</p>
+              <p class="relatedTileText">Usa la guia de planificacion mas amplia para decidir que tipo de estadia y de habitacion encaja mejor con tu viaje.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Leer</span></div>
+          </a>
+
+          <a class="relatedTile" href="/es/bosque-nublado-quito-ecuador/" aria-label="Bosque nublado Quito Ecuador">
+            <div>
+              <span class="tag">Destino</span>
+              <p class="relatedTileTitle">Bosque nublado Quito Ecuador</p>
+              <p class="relatedTileText">Da un paso atras desde la suite y mira como el destino mas amplio moldea toda la experiencia.</p>
+            </div>
+            <div class="relatedTileMeta"><span></span><span>Leer</span></div>
+          </a>
         </div>
       </div>
     </section>
 
     <section class="roomBand" aria-label="Llamado final a la accion">
+
       <div>
         <p class="roomBandTitle">Listo para despertar sobre el bosque nublado?</p>
         <p class="roomBandText">Revisa disponibilidad y reservá en minutos. Si tenes preguntas, escribinos y te ayudamos a planear. Tambien sirve para decidir <a href="/es/donde-alojarse-cerca-de-quito-naturaleza/">donde alojarse cerca de Quito naturaleza</a>.</p>
