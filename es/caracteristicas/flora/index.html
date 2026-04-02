@@ -320,6 +320,87 @@
       font-weight:650;
     }
 
+
+    .relatedSection{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .relatedH2{
+      margin:0;
+      font-family: var(--font-head);
+      font-size:22px;
+      letter-spacing:-0.02em;
+      color: var(--forest);
+      font-weight:900;
+    }
+
+    .relatedHint{
+      margin:0;
+      color: rgba(13,89,37,.92);
+      font-size: 13.2px;
+      line-height: 1.55;
+      max-width: 90ch;
+      font-weight: 600;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .relatedTile{
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      padding: 14px;
+      min-height: 132px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--forest-2);
+      text-decoration: none;
+    }
+
+    .relatedTileTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 16px;
+      color: var(--forest-2);
+    }
+
+    .relatedTileText{
+      margin: 0;
+      color: rgba(13,89,37,.94);
+      font-size: 13.5px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      color: rgba(13,89,37,.92);
+      font-weight: 800;
+      font-size: 12.5px;
+    }
+
     @media(max-width:900px){
       .wrap{ padding:12px 14px 64px; }
 
@@ -329,6 +410,7 @@
       .floraGrid{ grid-template-columns:1fr; }
       .floraCard{ grid-template-columns:1fr; }
       .floraImage{ min-height:240px; }
+      .relatedGrid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -467,7 +549,83 @@
         </div>
       </article>
     </section>
-  </main>
+  
+<section class="card relatedSection" aria-label="Paginas relacionadas del bosque nublado">
+  <div class="relatedHead">
+    <h2 class="relatedH2">Explora mas del bosque nublado</h2>
+    <p class="relatedHint">Descubre mas sobre el ecosistema, la vida silvestre y las experiencias que ayudan a definir el destino.</p>
+  </div>
+
+  <div class="relatedGrid" aria-label="Enlaces relacionados de flora">
+    <a class="relatedTile" href="/es/caracteristicas/pululahua/" aria-label="Pululahua">
+      <div>
+        <p class="relatedTileTitle">Pululahua</p>
+        <p class="relatedTileText">Explora uno de los paisajes mas singulares cerca de Quito que ayuda a definir la region.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Paisaje</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/caracteristicas/galeria/" aria-label="Galeria del bosque nublado">
+      <div>
+        <p class="relatedTileTitle">Galeria del bosque nublado</p>
+        <p class="relatedTileText">Observa de forma mas visual la atmosfera, la luz y la biodiversidad del bosque.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Visual</span>
+        <span>Ver</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/caracteristicas/rio-guayllabamba/" aria-label="Rio Guayllabamba">
+      <div>
+        <p class="relatedTileTitle">Rio Guayllabamba</p>
+        <p class="relatedTileText">Descubre el ecosistema del valle que ayuda a dar forma a este entorno de bosque nublado.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Ecosistema</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/caracteristicas/productos-locales/" aria-label="Productos locales">
+      <div>
+        <p class="relatedTileTitle">Productos locales</p>
+        <p class="relatedTileText">Conoce como las plantas comestibles y los ingredientes de temporada se conectan con el bosque.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Alimentos</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/aves-del-bosque-nublado-ecuador/" aria-label="Aves del bosque nublado">
+      <div>
+        <p class="relatedTileTitle">Aves del bosque nublado</p>
+        <p class="relatedTileText">Entiende mejor la vida de aves sostenida por este rico ecosistema vegetal.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Vida silvestre</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/es/bosque-nublado-quito-ecuador/" aria-label="Bosque nublado Quito Ecuador">
+      <div>
+        <p class="relatedTileTitle">Bosque nublado Quito Ecuador</p>
+        <p class="relatedTileText">Obtiene una vista mas amplia del destino y de como se siente la estadia.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Guia</span>
+        <span>Leer</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+</main>
 
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
