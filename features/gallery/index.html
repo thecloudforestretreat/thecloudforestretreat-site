@@ -276,7 +276,139 @@
       display:block;
     }
 
-    @media(max-width:900px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,.16);
+      background:rgba(255,255,255,.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+
+
+
+
+
+
+
+
+
+
+        .relatedSection{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .relatedH2{
+      margin:0;
+      font-family: var(--font-head);
+      font-size:22px;
+      letter-spacing:-0.02em;
+      color: var(--forest);
+      font-weight:900;
+    }
+
+    .relatedHint{
+      margin:0;
+      color: rgba(11,26,16,0.72);
+      font-size: 13.2px;
+      line-height: 1.55;
+      max-width: 90ch;
+      font-weight: 600;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .relatedTile{
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      padding: 14px;
+      min-height: 132px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .relatedTileTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 16px;
+      color: var(--forest);
+      line-height: 1.2;
+    }
+
+    .relatedTileText{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      font-size: 13.5px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      color: rgba(13,89,37,.92);
+      font-weight: 800;
+      font-size: 12.5px;
+    }
+
+@media(max-width:900px){
       .wrap{ padding:12px 14px 64px; }
 
       .heroMedia{ min-height:280px; }
@@ -287,8 +419,7 @@
       .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9{ grid-column: auto; }
 
       .videoStrip{ grid-template-columns:1fr; }
-      .sectionCard{ padding:14px; }
-    }
+  
   </style>
 </head>
 <body>
@@ -399,7 +530,86 @@
     </div>
   </section>
 </section>
-  </main>
+  
+  
+
+  
+<section class="card relatedSection" aria-label="Related gallery links">
+  <div class="relatedHead">
+    <h2 class="relatedH2">Explore more of the cloud forest</h2>
+    <p class="relatedHint">Discover more about the stay, surrounding landscapes, and wildlife experiences connected to the gallery.</p>
+  </div>
+
+  <div class="relatedGrid" aria-label="Related pages">
+    <a class="relatedTile" href="/cloud-forest-quito-ecuador/" aria-label="Cloud forest Quito Ecuador">
+      <div>
+        <p class="relatedTileTitle">Cloud forest Quito Ecuador</p>
+        <p class="relatedTileText">Get a broader feel for the destination, the setting, and the atmosphere beyond the images.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Destination</span>
+        <span>Read</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/birdwatching-lodge-ecuador/" aria-label="Birdwatching lodge Ecuador">
+      <div>
+        <p class="relatedTileTitle">Birdwatching lodge Ecuador</p>
+        <p class="relatedTileText">See how the retreat fits travelers looking for birdlife, quiet mornings, and nature-led stays.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Birding</span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/cloud-forest-hiking-ecuador/" aria-label="Cloud forest hiking Ecuador">
+      <div>
+        <p class="relatedTileTitle">Cloud forest hiking Ecuador</p>
+        <p class="relatedTileText">Connect the visual side of the stay with the trails, scenery, and movement through the forest.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Trails</span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/best-eco-lodge-quito/" aria-label="Best eco lodge Quito">
+      <div>
+        <p class="relatedTileTitle">Best eco lodge Quito</p>
+        <p class="relatedTileText">Understand the eco-lodge side of the experience and why the setting feels calmer and more immersive.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Eco stay</span>
+        <span>Read</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/birds-of-the-cloud-forest-ecuador/" aria-label="Birds of the cloud forest Ecuador">
+      <div>
+        <p class="relatedTileTitle">Birds of the cloud forest Ecuador</p>
+        <p class="relatedTileText">Explore the wider birdlife that gives the forest so much of its movement, color, and sound.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Wildlife</span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/quito-to-cloud-forest-distance/" aria-label="Quito to cloud forest distance">
+      <div>
+        <p class="relatedTileTitle">Quito to cloud forest distance</p>
+        <p class="relatedTileText">Add the practical side of travel planning to the visual inspiration shown throughout this page.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Planning</span>
+        <span>Read</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+</main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
 </body>
