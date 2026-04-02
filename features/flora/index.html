@@ -300,6 +300,87 @@
       font-weight:650;
     }
 
+
+    .relatedSection{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .relatedH2{
+      margin:0;
+      font-family: var(--font-head);
+      font-size:22px;
+      letter-spacing:-0.02em;
+      color: var(--forest);
+      font-weight:900;
+    }
+
+    .relatedHint{
+      margin:0;
+      color: rgba(13,89,37,.92);
+      font-size: 13.2px;
+      line-height: 1.55;
+      max-width: 90ch;
+      font-weight: 600;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .relatedTile{
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      padding: 14px;
+      min-height: 132px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--forest-2);
+      text-decoration: none;
+    }
+
+    .relatedTileTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 16px;
+      color: var(--forest-2);
+    }
+
+    .relatedTileText{
+      margin: 0;
+      color: rgba(13,89,37,.94);
+      font-size: 13.5px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      color: rgba(13,89,37,.92);
+      font-weight: 800;
+      font-size: 12.5px;
+    }
+
     @media(max-width:900px){
       .wrap{ padding:12px 14px 64px; }
 
@@ -309,6 +390,7 @@
       .floraGrid{ grid-template-columns:1fr; }
       .floraCard{ grid-template-columns:1fr; }
       .floraImage{ min-height:240px; }
+      .relatedGrid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -442,6 +524,82 @@
   </div>
 </article>
   </section>
+
+<section class="card relatedSection" aria-label="Related cloud forest pages">
+  <div class="relatedHead">
+    <h2 class="relatedH2">Explore more of the cloud forest</h2>
+    <p class="relatedHint">Discover more about the ecosystem, wildlife, and experiences that define your stay.</p>
+  </div>
+
+  <div class="relatedGrid" aria-label="Related flora links">
+    <a class="relatedTile" href="/features/pululahua/" aria-label="Pululahua crater">
+      <div>
+        <p class="relatedTileTitle">Pululahua crater</p>
+        <p class="relatedTileText">Explore one of the most unique landscapes near Quito that helps define the region.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Landscape</span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/features/gallery/" aria-label="Cloud forest gallery">
+      <div>
+        <p class="relatedTileTitle">Cloud forest gallery</p>
+        <p class="relatedTileText">See the atmosphere, light, and biodiversity of the forest more visually.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Visual</span>
+        <span>View</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/features/rio-guayllabamba/" aria-label="Rio Guayllabamba">
+      <div>
+        <p class="relatedTileTitle">Rio Guayllabamba</p>
+        <p class="relatedTileText">Discover the valley ecosystem that helps shape this cloud forest setting.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Ecosystem</span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/features/produce/" aria-label="Local produce">
+      <div>
+        <p class="relatedTileTitle">Local produce</p>
+        <p class="relatedTileText">Learn how edible plants and seasonal ingredients connect to the forest.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Food</span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/birds-of-the-cloud-forest-ecuador/" aria-label="Birds of the cloud forest">
+      <div>
+        <p class="relatedTileTitle">Birds of the cloud forest</p>
+        <p class="relatedTileText">Understand the birdlife supported by this rich plant ecosystem.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Wildlife</span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/cloud-forest-quito-ecuador/" aria-label="Cloud forest Quito Ecuador">
+      <div>
+        <p class="relatedTileTitle">Cloud forest Quito Ecuador</p>
+        <p class="relatedTileText">Get a broader overview of the destination and the feel of the stay.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span class="tag">Guide</span>
+        <span>Read</span>
+      </div>
+    </a>
+  </div>
+</section>
+
 </main>
 <div id="siteFooter"></div>
 <script src="/assets/js/site.js?v=3"></script>
