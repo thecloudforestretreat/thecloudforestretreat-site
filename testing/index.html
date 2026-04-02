@@ -723,6 +723,42 @@
       .storyFacts{ grid-template-columns: 1fr; }
       .relatedGrid{ grid-template-columns: 1fr; }
     }
+
+    .roomCarouselInset{
+      margin: 0 10px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(13,89,37,0.14);
+      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+      background: rgba(255,255,255,0.38);
+    }
+
+    .roomCarouselInset .roomCarouselViewport{
+      margin: 10px 10px 0;
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,0.10);
+      overflow: hidden;
+      background: rgba(255,255,255,0.22);
+    }
+
+    .roomCarouselInset .roomCarouselNav{
+      padding: 10px 12px 12px;
+      border-top: 0;
+    }
+
+    @media (max-width: 900px){
+      .roomCarouselInset{
+        margin: 0 0 0;
+      }
+
+      .roomCarouselInset .roomCarouselViewport{
+        margin: 8px 8px 0;
+      }
+
+      .roomCarouselInset .roomCarouselNav{
+        padding: 8px 10px 10px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -819,12 +855,13 @@
     </section>
 
     <section class="roomSection" aria-label="Photo gallery">
-      <div class="roomSectionHead">
-        <h2 class="roomH2">Photo gallery</h2>
-        <p class="roomHint">Swipe on mobile or use arrows and dots.</p>
-      </div>
+      <div class="roomCard">
+        <div class="roomSectionHead">
+          <h2 class="roomH2">Photo gallery</h2>
+          <p class="roomHint">Swipe on mobile or use arrows and dots.</p>
+        </div>
 
-      <div class="roomCarousel" aria-label="Panoramic Suite carousel">
+        <div class="roomCarousel roomCarouselInset" aria-label="Panoramic Suite carousel">
         <div class="roomCarouselViewport" id="psCarousel" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000">
           <button class="roomCarArrow prev" type="button" data-action="prev" aria-label="Previous photo">‹</button>
           <button class="roomCarArrow next" type="button" data-action="next" aria-label="Next photo">›</button>
@@ -850,6 +887,7 @@
         <div class="roomCarouselNav" aria-label="Carousel dots">
           <div class="roomCarouselDots" data-dots aria-label="Choose a photo"></div>
         </div>
+      </div>
       </div>
     </section>
 
