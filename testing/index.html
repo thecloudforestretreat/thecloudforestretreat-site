@@ -1,599 +1,835 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flora | Mindo Bird Watching</title>
-  <meta name="description" content="Explore cloud forest flora around The Cloud Forest Retreat: orchids, bromeliads, medicinal trees, edible plants, and native species in the Chocó Andino." />
+  <title>The Cloud Forest Retreat | Estadía de Eco-Lujo en la Montaña en Ecuador</title>
+  <meta name="description" content="Un bed and breakfast en las montañas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadías inolvidables en el bosque nublado." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/features/flora/" />
+  <!-- Canonical + hreflang (PRODUCTION URLs) -->
+  <link rel="canonical" href="https://thecloudforestretreat.com/es/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/" />
+  <!-- Open Graph (PRODUCTION URLs) -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Mindo Bird Watching" />
-  <meta property="og:title" content="Flora | Mindo Bird Watching" />
-  <meta property="og:description" content="Explore cloud forest flora around The Cloud Forest Retreat: orchids, bromeliads, medicinal trees, edible plants, and native species in the Chocó Andino." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/features/flora/" />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="The Cloud Forest Retreat | Estadía de Eco-Lujo en la Montaña en Ecuador" />
+  <meta property="og:description" content="Un bed and breakfast en las montañas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadías inolvidables en el bosque nublado." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/es/" />
   <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat in Ecuador's cloud forest" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat mountain view" />
+  <!-- Twitter (PRODUCTION URLs) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Flora | Mindo Bird Watching" />
-  <meta name="twitter:description" content="Explore cloud forest flora around The Cloud Forest Retreat: orchids, bromeliads, medicinal trees, edible plants, and native species in the Chocó Andino." />
+  <meta name="twitter:title" content="The Cloud Forest Retreat | Estadía de Eco-Lujo en la Montaña en Ecuador" />
+  <meta name="twitter:description" content="Un bed and breakfast en las montañas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadías inolvidables en el bosque nublado." />
   <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <!-- Favicons (approved root paths) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Global / shared CSS -->
   <link rel="stylesheet" href="/assets/css/site.css" />
-  <link rel="stylesheet" href="/assets/css/header.css" />
-  <script src="/assets/js/head.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/header.css?v=3" />
+  <!-- Head-only JS -->
+  <script src="/assets/js/head.js?v=1" defer></script>
   <style>
     :root{
-      --max: 1120px;
-      --r: 24px;
-      --shadow: 0 18px 55px rgba(13,89,37,0.16);
-      --line: rgba(11,26,16,0.12);
-      --glass: rgba(245,245,220,0.78);
-      --glass2: rgba(245,245,220,0.62);
-      --ink: #0b1a10;
+      --bg: #A1BFAA;
       --forest: #0D5925;
-      --muted: rgba(11,26,16,0.72);
+      --forest-2: #0B2B12;
+      --beige: #F5F5DC;
+      --orange: #E0643A;
+      --line: rgba(13,89,37,.18);
+      --card: rgba(245,245,220,.55);
+      --card2: rgba(245,245,220,.72);
+      --shadow: 0 18px 55px rgba(0,0,0,.14);
+      --r: 22px;
+      --max: 1180px;
+      --font-head: "Playfair Display", serif;
+      --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
 
-    body{ margin:0; }
     *{ box-sizing:border-box; }
+    
+    html{ overflow-x:hidden; }
+body{
+margin:0;
+      background: var(--bg);
+      color: var(--forest-2);
+      font-family: var(--font-body);
+      overflow-x:hidden;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width:100%; display:block; }
 
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 18px 18px 72px;
+      padding: 18px 16px 64px;
     }
 
-    .card{
-      background: var(--glass2);
-      border-radius: var(--r);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-    }
-
-    /* TOP BAND */
-    .topBand{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
-
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-      flex-wrap: wrap;
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
-
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    /* HERO (consistent style used across pages) */
     .hero{
-      margin-top:14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      overflow: hidden;
-      position: relative;
-      color: var(--ink);
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 16px;
+      align-items: stretch;
+      margin-top: 10px;
     }
 
     .heroMedia{
+      border-radius: var(--r);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.10);
+      min-height: 420px;
       position: relative;
-      height: 400px;
-      background: rgba(0,0,0,0.10);
     }
 
     .heroMedia img{
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
       transform: scale(1.01);
     }
 
-    .heroShade{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      pointer-events: none;
+    .heroOverlay{
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.34));
+      pointer-events:none;
     }
 
-    .heroInner{
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.30);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(6px);
-      padding: 14px;
-      color: rgba(255,255,255,0.96);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-      max-width: 860px;
+    .heroCopy{
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(13,89,37,.18);
+      background: var(--card2);
+      padding: 18px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 420px;
     }
 
     .kicker{
-      display: inline-flex;
-      align-items: center;
+      display:inline-flex;
+      align-items:center;
       gap: 8px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      font-weight: 800;
       font-size: 12px;
-      color: rgba(255,255,255,0.92);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: rgba(13,89,37,.92);
     }
 
-    .heroH1{
-      margin: 8px 0 6px;
+    .h1{
+      margin: 10px 0 10px;
       font-family: var(--font-head);
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1.02;
-      font-size: clamp(32px, 4vw, 54px);
-      color: #fff;
+      font-size: clamp(32px, 3.9vw, 50px);
+      color: var(--forest-2);
     }
 
-    .heroLead{
+    .sub{
       margin: 0;
-      max-width: 80ch;
-      font-weight: 650;
-      line-height: 1.7;
-      color: rgba(231,228,209,0.92);
-      font-size: 15.5px;
+      font-size: 15.8px;
+      line-height: 1.78;
+      color: rgba(13,89,37,.96);
+      max-width: 62ch;
+      font-weight: 600;
     }
 
-    /* INTRO */
-    .intro{
-      margin-top:14px;
-      padding:16px;
-    }
-
-    .intro p{
-      margin:0;
-      font-size:15.5px;
-      line-height:1.75;
-      color:rgba(11,26,16,0.78);
-      font-weight:650;
-      max-width: 90ch;
-    }
-
-    /* GRID */
-    .floraGrid{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:14px;
-      align-items: stretch;
-    }
-
-    .sectionBreak{
-      grid-column:1 / -1;
-      padding:16px;
-    }
-
-    .sectionBreak h2{
-      margin:0;
-      font-family: var(--font-head);
-      color:var(--forest);
-      font-size:24px;
-      letter-spacing:-0.02em;
-      font-weight: 900;
-      line-height: 1.1;
-    }
-
-    .sectionBreak p{
-      margin:8px 0 0;
-      color:rgba(11,26,16,0.70);
-      font-size:14.8px;
-      font-weight: 650;
-      line-height: 1.6;
-      max-width: 90ch;
-    }
-
-    .floraCard{
-      display:grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap:14px;
-      padding:14px;
-      align-items: stretch;
-    }
-
-    .floraImage{
-      border-radius:18px;
-      overflow:hidden;
-      background:#ccc;
-      min-height:260px;
-      border: 1px solid rgba(11,26,16,0.10);
-    }
-
-    .floraImage img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform: scale(1.01);
-    }
-
-    .floraBody{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-      min-width: 0;
-    }
-
-    .floraBody h3{
-      margin:0;
-      font-family: var(--font-head);
-      font-size:22px;
-      color:var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
-
-    .floraLatin{
-      font-size:13px;
-      font-style:italic;
-      color:rgba(11,26,16,0.55);
-      font-weight: 650;
-      margin-top: -4px;
-    }
-
-    .floraTags{
+    .pillRow{
+      margin-top: 14px;
       display:flex;
       flex-wrap:wrap;
-      gap:10px;
+      gap: 10px;
     }
 
-    .tag{
-      font-size:13px;
-      padding:9px 12px;
-      border-radius:999px;
-      border:1px solid rgba(13,89,37,0.18);
-      background:rgba(255,255,255,0.62);
-      font-weight:900;
-      color:#0b2b12;
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,.20);
+      background: rgba(255,255,255,.62);
+      color: var(--forest-2);
+      font-weight: 800;
+      font-size: 13px;
       white-space: nowrap;
-      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
     }
 
-    .floraText{
-      font-size:14.8px;
-      line-height:1.7;
-      color:rgba(11,26,16,0.78);
-      font-weight:650;
+    .heroCtas{
+      margin-top: 16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
     }
 
-    .floraNote{
-      font-size:13.2px;
-      color:rgba(11,26,16,0.68);
-      font-weight:650;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      border: 1px solid rgba(13,89,37,.18);
+      box-shadow: 0 14px 30px rgba(0,0,0,.12);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .btn.primary{
+      background: var(--orange);
+      color: #fff;
+      border-color: rgba(0,0,0,.10);
+      box-shadow: 0 14px 30px rgba(224,100,58,.26);
+    }
+
+    .btn.secondary{
+      background: rgba(255,255,255,.64);
+      color: var(--forest-2);
+    }
+
+    .btn.ghost{
+      background: transparent;
+      color: var(--forest-2);
+      border-color: rgba(13,89,37,.18);
+      box-shadow: none;
     }
 
     
-    .relatedSection{
-      margin-top:14px;
-      padding:16px;
+    /* Google Reviews badge (homepage) */
+    .tcfr-google-reviews{
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(0,0,0,0.06);
     }
 
-    .relatedHead{
+    .tcfr-google-reviews-inner{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "left tourism"
+        "actions tourism";
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 10px;
+    }
+
+    .tcfr-google-left{ grid-area: left; display:flex; align-items:center; gap: 12px; min-width: 0; }
+    .tcfr-google-logo{ width: 34px; height: 34px; flex: 0 0 auto; }
+
+    .tcfr-google-rating{
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      min-width: 0;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .tcfr-rating-score{ font-weight: 700; color: #1f3d2b; }
+    .tcfr-stars{ color: #FBBC05; letter-spacing: 1px; font-size: 15px; }
+    .tcfr-review-count{ color: #4b6b5a; }
+
+    .tcfr-tourism{ grid-area: tourism; display:flex; align-items:center; justify-content:center; padding-right: 2px; }
+    .tcfr-tourismLogo{
+      width: 96px;
+      height: auto;
+      display:block;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,0.10));
+    }
+
+    .tcfr-google-actions{
+      grid-area: actions;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @media (max-width: 900px){
+      .tcfr-google-reviews-inner{
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "left tourism"
+          "actions actions";
+      }
+      .tcfr-tourismLogo{ width: 78px; }
+
+      .tcfr-google-actions{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .tcfr-google-actions .btn{ width: 100%; justify-content:center; }
+    }
+
+
+    .trustRow{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .trustCard{
+      border-radius: 16px;
+      background: rgba(255,255,255,.60);
+      border: 1px solid rgba(13,89,37,.16);
+      padding: 12px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      min-width: 0;
+    }
+
+    .trustRow .trustCard.fullRow{ grid-column: 1 / -1; }
+
+
+    .trustTitle{
+      margin: 0 0 6px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 13.8px;
+      color: var(--forest-2);
+    }
+
+    .trustText{
+      margin: 0;
+      color: rgba(13,89,37,.92);
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .section{
+      margin-top: 18px;
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(13,89,37,.18);
+      background: var(--card);
+      padding: 18px;
+    }
+
+    .sectionHead{
       display:flex;
       align-items:flex-end;
       justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:12px;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
     }
 
-    .relatedHead h2{
-      margin:0;
+    .h2{
+      margin: 0;
       font-family: var(--font-head);
-      color:var(--forest);
-      font-size:24px;
-      letter-spacing:-0.02em;
-      font-weight:900;
-      line-height:1.1;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      color: var(--forest-2);
+      font-weight: 900;
     }
 
-    .relatedHint{
-      margin:0;
-      color:rgba(11,26,16,0.72);
-      font-size:13.6px;
-      line-height:1.6;
-      font-weight:650;
-      max-width:58ch;
+    .hint{
+      margin: 0;
+      color: rgba(13,89,37,.92);
+      font-size: 13.2px;
+      line-height: 1.55;
+      max-width: 90ch;
+      font-weight: 600;
     }
 
-    .relatedGrid{
+    .grid3{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:14px;
-      align-items:stretch;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
     }
 
-    .relatedCard{
-      min-width:0;
-      border-radius:20px;
-      border:1px solid rgba(13,89,37,.16);
-      background:rgba(255,255,255,.60);
-      box-shadow:0 14px 30px rgba(0,0,0,.10);
-      padding:16px;
+    .tile{
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      padding: 14px;
+      min-height: 132px;
       display:flex;
-      flex-direction:column;
-      gap:10px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--forest-2);
     }
 
-    .relatedLabel{
+    .tileTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 16px;
+      color: var(--forest-2);
+    }
+
+    .tileText{
+      margin: 0;
+      color: rgba(13,89,37,.94);
+      font-size: 13.5px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .tileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      color: rgba(13,89,37,.92);
+      font-weight: 800;
+      font-size: 12.5px;
+    }
+
+    .badge{
       display:inline-flex;
       align-items:center;
-      padding:7px 10px;
-      border-radius:999px;
-      background:rgba(255,255,255,.62);
-      border:1px solid rgba(13,89,37,.18);
-      font-size:12px;
-      font-weight:900;
-      text-transform:uppercase;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      font-weight: 900;
+      font-size: 12.2px;
+      color: var(--forest-2);
+      white-space: nowrap;
     }
 
-    .relatedTitle{
-      margin:6px 0 0;
+    .photoStrip{
+      margin-top: 12px;
+      display:grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    .photoCard{
+      border-radius: 18px;
+      overflow:hidden;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      min-height: 220px;
+      position: relative;
+    }
+
+    .photoCard img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photoCap{
+      position:absolute;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(245,245,220,.90);
+      border: 1px solid rgba(13,89,37,.16);
+      color: var(--forest-2);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 13px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.12);
+    }
+
+    .band{
+      margin-top: 18px;
+      border-radius: var(--r);
+      border: 1px solid rgba(13,89,37,.18);
+      box-shadow: var(--shadow);
+      background: rgba(245,245,220,.76);
+      padding: 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .bandTitle{
+      margin: 0 0 6px;
       font-family: var(--font-head);
-      font-size:22px;
-      color:var(--forest);
-      font-weight:900;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      color: var(--forest-2);
     }
 
-    .relatedText{
-      margin:0;
-      font-size:14.2px;
-      line-height:1.7;
-      color:rgba(11,26,16,.78);
-      flex:1;
+    .bandText{
+      margin: 0;
+      color: rgba(13,89,37,.94);
+      line-height: 1.6;
+      font-size: 13.8px;
+      max-width: 80ch;
+      font-weight: 600;
     }
 
-    .relatedFooter{
-      margin-top:auto;
+    .bandActions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
     }
 
-@media(max-width:900px){
-      .wrap{ padding:12px 14px 64px; }
+    @media (max-width: 900px){
+      .wrap{ padding: 10px 14px 54px; }
 
-      .heroMedia{ min-height:280px; }
-      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
+      .hero{ grid-template-columns: 1fr; gap: 12px; }
+      .heroMedia{ min-height: 290px; }
+      .heroCopy{ min-height: 0; }
 
-      .floraGrid{ grid-template-columns:1fr; }
-      .floraCard{ grid-template-columns:1fr; }
-      .floraImage{ min-height:240px; }
-      .relatedGrid{ grid-template-columns:1fr; }
+      .pillRow{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .pill{ width: 100%; }
+      .pillRow .pill:nth-child(4){
+        grid-column: 1 / -1;
+      }
+
+      .heroCtas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .heroCtas .btn{ width: 100%; }
+      .heroCtas .btn.ghost{
+        grid-column: 1 / -1;
+      }
+
+      .trustRow{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .photoStrip{ grid-template-columns: 1fr; }
+      .photoCard{ min-height: 210px; }
+    }
+
+    @media (min-width: 901px){
+      .heroMedia{ min-height: 520px; }
+      .heroCopy{ min-height: 520px; }
     }
   </style>
 </head>
 <body>
-<div id="siteHeader"></div>
-<main class="wrap" aria-label="Flora page">
-  <section class="topBand" aria-label="Page navigation">
-    <div class="crumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">›</span>
-      <a href="/features/">Features</a>
-      <span aria-hidden="true">›</span>
-      <span>Flora</span>
-    </div>
-    <div class="quickActions" aria-label="Quick actions">
-      <a class="btn secondary" href="/booking/">Check Availability</a>
-      <a class="btn primary" href="/contact/">Ask A Question</a>
-    </div>
-  </section>
-  <!-- HERO -->
-  <section class="hero" aria-label="Flora hero">
-    <div class="heroMedia" aria-label="Hero image">
-      <img src="/assets/images/pages/features/flora/tcfr_features_flora_hero.jpg" alt="Cloud forest vegetation" loading="eager" decoding="async" />
-      <div class="heroShade" aria-hidden="true"></div>
-      <div class="heroInner" aria-label="Hero content">
-        <div class="kicker">Orchids • Bromeliads • Native trees</div>
-        <h1 class="heroH1">Flora</h1>
-        <p class="heroLead">
-          A living field guide to the plants, trees, and botanical life that surround The Cloud Forest Retreat and shape the Chocó Andino ecosystem.
-        </p>
+  <div id="siteHeader"></div>
+  <main class="wrap" aria-label="Inicio de The Cloud Forest Retreat">
+    <section class="hero" aria-label="Hero">
+      <div class="heroMedia" aria-label="Mountain retreat view">
+        <img src="/assets/images/pages/home/tcfr_images_home_hero-02.jpg" alt="The Cloud Forest Retreat in the mountains of Ecuador" loading="eager" decoding="async" />
+        <div class="heroOverlay" aria-hidden="true"></div>
       </div>
+  <div class="heroCopy" aria-label="Welcome message">
+    <div>
+      <div class="kicker">Retiro de montaña de eco-lujo</div>
+      <h1 class="h1">Bienvenido a The Cloud Forest Retreat</h1>
+
+      <p class="sub">
+        Despierta sobre el valle con vistas impresionantes, aire fresco de montaña y mañanas tranquilas.
+        Un bed and breakfast escénico pensado para viajar sin prisa, rodeado de naturaleza y comodidad en el bosque nublado de Ecuador.
+      </p>
+
+      <div class="pillRow" aria-label="Destacados">
+        <span class="pill">Aves</span>
+        <span class="pill">Cascadas</span>
+        <span class="pill">Naturaleza</span>
+        <span class="pill">Bienestar</span>
+      </div>
+
+      <div class="heroCtas" aria-label="Primary actions">
+        <a class="btn primary" href="/es/reservas/">Reservar</a>
+        <a class="btn secondary" href="/es/habitaciones/">Habitaciones</a>
+<a class="btn ghost" href="/es/caracteristicas/">Caracteristicas</a>
+      </div>
+      </div>
+
+      <section class="tcfr-google-reviews" aria-label="Google reviews">
+        <div class="tcfr-google-reviews-inner">
+          <div class="tcfr-google-left" aria-label="Google rating badge">
+            <img src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" class="tcfr-google-logo" loading="lazy" decoding="async" />
+            <div class="tcfr-google-rating">
+              <span class="tcfr-rating-score">5.0</span>
+              <span class="tcfr-stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="tcfr-review-count">(9 resenas)</span>
+            </div>
+          </div>
+
+          <div class="tcfr-tourism" aria-label="Ecuador tourism logo">
+            <img src="/assets/images/logo_ecuador_tourism_01.png" alt="Ecuador tourism" class="tcfr-tourismLogo" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="tcfr-google-actions" aria-label="Google review actions">
+            <a class="btn secondary" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Leer resenas</a>
+            <a class="btn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Escribir una resena</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="trustRow" aria-label="Trust and quick info">
+
+      <div class="trustCard">
+        <p class="trustTitle">Planificacion facil</p>
+        <p class="trustText">Detalles claros de check-in, guias locales y ayuda para planear actividades.</p>
+      </div>
+      <div class="trustCard">
+        <p class="trustTitle">Vistas inolvidables</p>
+        <p class="trustText">Cafe al amanecer, panoramas del bosque nublado y noches tranquilas bajo las estrellas.</p>
+      </div>
+    
+          <div class="trustCard fullRow">
+            <p class="trustTitle">A aproximadamente 2 horas de Quito</p>
+            <p class="trustText">Podemos ayudar a coordinar el transporte para una llegada sin complicaciones.</p>
+          </div>
+</div>
+  </div>
+</section>
+
+<section class="section" aria-label="Experiences">
+  <div class="sectionHead">
+    <h2 class="h2">Vive el bosque nublado</h2>
+    <p class="hint">Elige tu ritmo. Llena tus dias de naturaleza, bienestar y paisajes espectaculares.</p>
+  </div>
+
+  <div class="grid3" aria-label="Experience tiles">
+    <a class="tile" href="/es/caracteristicas/actividades/" aria-label="Avistamiento de aves">
+      <div>
+        <p class="tileTitle">Avistamiento de aves</p>
+        <p class="tileText">Observa colibries, tucanes y especies del bosque nublado con guia local.</p>
+      </div>
+      <div class="tileMeta">
+        <span class="badge">Mejor al amanecer</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="tile" href="/es/caracteristicas/actividades/" aria-label="Cascadas">
+      <div>
+        <p class="tileTitle">Cascadas</p>
+        <p class="tileText">Caminatas cortas hacia cascadas con bruma y miradores perfectos para fotos y refrescarte.</p>
+      </div>
+      <div class="tileMeta">
+        <span class="badge">Senderos escenicos</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+
+    <a class="tile" href="/es/caracteristicas/amenidades/" aria-label="Amenities and wellness">
+      <div>
+        <p class="tileTitle">Bienestar</p>
+        <p class="tileText">Mananas sin prisa, confort que reconforta y espacio para resetear con la naturaleza alrededor.</p>
+      </div>
+      <div class="tileMeta">
+        <span class="badge">Recarga</span>
+        <span>Explorar</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="photoStrip" aria-label="Photo strip">
+    <div class="photoCard">
+      <img src="/assets/images/pages/home/tcfr_images_home_01.jpg" alt="Panoramic mountain view near the retreat" loading="lazy" decoding="async" />
+      <div class="photoCap">Vistas de montana que parecen irreales</div>
     </div>
-  </section>
-  <!-- INTRO -->
-  <section class="card intro" aria-label="Intro">
-    <p>
-      Ecuador's cloud forest is one of the most plant-rich environments on Earth, closely tied to experiences like <a href="/cloud-forest-hiking-ecuador/">cloud forest hiking Ecuador</a> where these species are encountered in context.
-      Around the retreat you will find edible fruits, medicinal trees, epiphytes that hold entire micro-ecosystems, all of which also support birdlife explored through <a href="/birdwatching-lodge-ecuador/">birdwatching lodge Ecuador</a> experiences,
-      and flowering species that feed birds, insects, and mammals alike. This connection between forest and stay becomes even clearer when considering <a href="/where-to-stay-near-quito-nature/">where to stay near Quito nature</a>.
+    <div class="photoCard">
+      <img src="/assets/images/pages/home/tcfr_images_home_02.jpg" alt="Cloud forest greenery and trails" loading="lazy" decoding="async" />
+      <div class="photoCap">Senderos del bosque nublado cerca</div>
+    </div>
+    <div class="photoCard">
+      <img src="/assets/images/pages/home/tcfr_images_home_03.jpg" alt="Cozy eco-luxury room interior" loading="lazy" decoding="async" />
+      <div class="photoCap">Curated for calm</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Planifica tu estadia cerca de Quito">
+  <div class="sectionHead">
+    <h2 class="h2">Planifica tu estadia en el bosque nublado cerca de Quito</h2>
+    <p class="hint">Empieza por las paginas que responden las preguntas mas importantes sobre donde alojarse, la experiencia del eco lodge y como se siente el bosque nublado cerca de Quito.</p>
+  </div>
+
+  <div class="grid3" aria-label="Planning tiles">
+    <a class="tile" href="/es/donde-alojarse-cerca-de-quito-naturaleza/" aria-label="Donde alojarse cerca de Quito naturaleza">
+      <div>
+        <p class="tileTitle">Donde alojarse cerca de Quito naturaleza</p>
+        <p class="tileText">Un punto de partida claro para elegir una estadia rodeada de bosque, aire mas fresco y un ritmo mas tranquilo cerca de Quito.</p>
+      </div>
+      <div class="tileMeta">
+        <span class="badge">Planificar estadia</span>
+        <span>Leer</span>
+      </div>
+    </a>
+
+    <a class="tile" href="/es/mejor-eco-lodge-quito/" aria-label="Mejor eco lodge Quito">
+      <div>
+        <p class="tileTitle">Mejor eco lodge Quito</p>
+        <p class="tileText">Descubre el lado eco lodge de la estadia, con naturaleza cercana, calma y una experiencia mas inmersiva en el bosque nublado.</p>
+      </div>
+      <div class="tileMeta">
+        <span class="badge">Eco lodge</span>
+        <span>Leer</span>
+      </div>
+    </a>
+
+    <a class="tile" href="/es/bosque-nublado-quito-ecuador/" aria-label="Bosque nublado Quito Ecuador">
+      <div>
+        <p class="tileTitle">Bosque nublado Quito Ecuador</p>
+        <p class="tileText">Acercate al entorno del bosque nublado, con niebla, montanas verdes y el cambio de ritmo que empieza apenas dejas la ciudad.</p>
+      </div>
+      <div class="tileMeta">
+        <span class="badge">Bosque nublado</span>
+        <span>Leer</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="section" aria-label="Rooms">
+  <div class="sectionHead">
+    <h2 class="h2">Accommodations crafted for calm</h2>
+    <p class="hint">Quiet nights, cozy details, and views you will want to wake up to.</p>
+  </div>
+
+  <div class="grid3" aria-label="Room tiles">
+    <a class="tile" href="/es/habitaciones/suite-panoramica/" aria-label="Suite Panoramica">
+      <div>
+        <p class="tileTitle">Suite Panoramica</p>
+        <p class="tileText">More space, elevated comfort, and the best angles for sunrise views.</p>
+      </div>
+      <div class="tileMeta"><span class="badge">Premium</span><span>View</span></div>
+    </a>
+
+    <a class="tile" href="/es/habitaciones/habitacion-amanecer/" aria-label="Habitacion Amanecer">
+      <div>
+        <p class="tileTitle">Habitacion Amanecer</p>
+        <p class="tileText">Warm, peaceful, and designed for slow mornings and mountain air.</p>
+      </div>
+      <div class="tileMeta"><span class="badge">Cozy</span><span>View</span></div>
+    </a>
+
+    <a class="tile" href="/es/habitaciones/habitacion-atardecer/" aria-label="Habitacion Atardecer">
+      <div>
+        <p class="tileTitle">Habitacion Atardecer</p>
+        <p class="tileText">A calm retreat for couples and quiet getaways, with soft evening light.</p>
+      </div>
+      <div class="tileMeta"><span class="badge">Relax</span><span>View</span></div>
+    </a>
+  </div>
+</section>
+
+<section class="band" aria-label="Booking call to action">
+  <div>
+    <p class="bandTitle">Listo para tu estadia en la montana?</p>
+    <p class="bandText">
+      Revisa disponibilidad, elige tus fechas y reserva en minutos. Si tienes preguntas, escribenos y te ayudamos a planificar.
     </p>
-  </section>
-  <!-- GRID -->
-  <section class="floraGrid" aria-label="Flora grid">
-<div class="sectionBreak card" aria-label="Plants and epiphytes header">
-  <h2>Plants and epiphytes</h2>
-  <p>Small but powerful species that feed wildlife and people alike, often seen throughout the <a href="/features/rio-guayllabamba/">Rio Guayllabamba</a> valley landscapes.</p>
-</div>
+  </div>
 
-<article class="card floraCard" aria-label="Guayabilla">
-  <div class="floraImage" aria-label="Guayabilla image">
-    <img src="/assets/images/pages/features/flora/tcfr_features_flora_guayabilla.jpg" alt="Guayabilla fruit" loading="lazy" decoding="async" />
+  <div class="bandActions" aria-label="Booking actions">
+    <a class="btn primary" href="/es/reservas/">Reservar</a>
+    <a class="btn secondary" href="/es/contacto/">Contacto</a>
   </div>
-  <div class="floraBody" aria-label="Guayabilla content">
-    <h3>Guayabilla</h3>
-    <div class="floraLatin">Acca sellowiana</div>
-    <div class="floraTags" aria-label="Guayabilla tags">
-      <span class="tag">Edible</span>
-      <span class="tag">Medicinal</span>
-    </div>
-    <div class="floraText">
-      Sweet-tart fruits enjoyed fresh or in jams. Fragrant flowers attract birds and insects.
-    </div>
-    <div class="floraNote">
-      Look for oval green fruits and soft pink-white flowers.
-    </div>
-  </div>
-</article>
-
-<article class="card floraCard" aria-label="Bromeliads">
-  <div class="floraImage" aria-label="Bromeliads image">
-    <img src="/assets/images/pages/features/flora/tcfr_features_flora_bromelias.jpg" alt="Bromeliad plant" loading="lazy" decoding="async" />
-  </div>
-  <div class="floraBody" aria-label="Bromeliads content">
-    <h3>Bromeliads</h3>
-    <div class="floraLatin">Bromeliaceae family</div>
-    <div class="floraTags" aria-label="Bromeliads tags">
-      <span class="tag">Wildlife habitat</span>
-      <span class="tag">Pollinators</span>
-    </div>
-    <div class="floraText">
-      Rosette-shaped plants that collect rainwater, creating miniature ecosystems for frogs and insects.
-    </div>
-    <div class="floraNote">
-      Often seen growing on trees or rocks.
-    </div>
-  </div>
-</article>
-
-<div class="sectionBreak card" aria-label="Trees header">
-  <h2>Trees of The Cloud Forest Retreat</h2>
-  <p>Foundational species that shape the landscape and climate, also visible across regions like <a href="/features/pululahua/">Pululahua</a> and broader ecosystems documented in our <a href="/features/gallery/">cloud forest gallery</a>.</p>
-</div>
-
-<article class="card floraCard" aria-label="Algarrobo">
-  <div class="floraImage" aria-label="Algarrobo image">
-    <img src="/assets/images/pages/features/flora/tcfr_features_flora_algarrobo.jpg" alt="Algarrobo tree" loading="lazy" decoding="async" />
-  </div>
-  <div class="floraBody" aria-label="Algarrobo content">
-    <h3>Algarrobo</h3>
-    <div class="floraLatin">Prosopis species</div>
-    <div class="floraTags" aria-label="Algarrobo tags">
-      <span class="tag">Edible pods</span>
-      <span class="tag">Drought-hardy</span>
-    </div>
-    <div class="floraText">
-      Produces nutrient-rich pods with a naturally sweet flavor, used by people and wildlife.
-    </div>
-    <div class="floraNote">
-      Key species for soil health and erosion control.
-    </div>
-  </div>
-</article>
-
-<article class="card floraCard" aria-label="Campeche">
-  <div class="floraImage" aria-label="Campeche image">
-    <img src="/assets/images/pages/features/flora/tcfr_features_flora_campeche.jpg" alt="Campeche yellow flowers" loading="lazy" decoding="async" />
-  </div>
-  <div class="floraBody" aria-label="Cholan content">
-    <h3>Cholan</h3>
-    <div class="floraLatin">Haematoxylum campechianum</div>
-    <div class="floraTags" aria-label="Campeche tags">
-      <span class="tag">Dye-producing</span>
-      <span class="tag">Medicinal</span>
-    </div>
-    <div class="floraText">
-      Fragrant yellow flower clusters adorn twisted branches and provide a vital nectar source for bees.
-    </div>
-    <div class="floraNote">
-      Famous for its deep purple heartwood dye but not for consumption. Handle with care.
-    </div>
-  </div>
-</article>
-  </section>
-
-<section class="card relatedSection">
+</section>
+  
+<section class="card relatedSection" aria-label="Related cloud forest pages">
   <div class="relatedHead">
-    <h2>Explore more of the cloud forest</h2>
-    <p class="relatedHint">Discover more about the ecosystem, wildlife, and surrounding landscapes.</p>
+    <h2 class="relatedH2">Explore more of the cloud forest</h2>
+    <p class="relatedHint">Discover more about the ecosystem, wildlife, and experiences that define the wider destination.</p>
   </div>
 
-  <div class="relatedGrid">
-    <article class="relatedCard">
-      <span class="relatedLabel">Landscape</span>
-      <h3 class="relatedTitle">Pululahua crater</h3>
-      <p class="relatedText">Explore one of the most unique volcanic landscapes near Quito.</p>
-      <div class="relatedFooter">
-        <a class="btn secondary" href="/features/pululahua/">Explore</a>
+  <div class="relatedGrid" aria-label="Related flora links">
+    <a class="relatedTile" href="/features/pululahua/" aria-label="Pululahua crater">
+      <div>
+        <p class="relatedTileTitle">Pululahua crater</p>
+        <p class="relatedTileText">Explore one of the most unique landscapes near Quito that helps define the region.</p>
       </div>
-    </article>
+      <div class="relatedTileMeta">
+        <span class="tag">Landscape</span>
+        <span>Explore</span>
+      </div>
+    </a>
 
-    <article class="relatedCard">
-      <span class="relatedLabel">Visual</span>
-      <h3 class="relatedTitle">Cloud forest gallery</h3>
-      <p class="relatedText">See the atmosphere and biodiversity of the forest.</p>
-      <div class="relatedFooter">
-        <a class="btn secondary" href="/features/gallery/">View</a>
+    <a class="relatedTile" href="/features/gallery/" aria-label="Cloud forest gallery">
+      <div>
+        <p class="relatedTileTitle">Cloud forest gallery</p>
+        <p class="relatedTileText">See the atmosphere, light, and biodiversity of the forest more visually.</p>
       </div>
-    </article>
+      <div class="relatedTileMeta">
+        <span class="tag">Visual</span>
+        <span>View</span>
+      </div>
+    </a>
 
-    <article class="relatedCard">
-      <span class="relatedLabel">Ecosystem</span>
-      <h3 class="relatedTitle">Rio Guayllabamba</h3>
-      <p class="relatedText">Discover the valley ecosystem shaping the region.</p>
-      <div class="relatedFooter">
-        <a class="btn secondary" href="/features/rio-guayllabamba/">Explore</a>
+    <a class="relatedTile" href="/features/rio-guayllabamba/" aria-label="Rio Guayllabamba">
+      <div>
+        <p class="relatedTileTitle">Rio Guayllabamba</p>
+        <p class="relatedTileText">Discover the valley ecosystem that helps shape this cloud forest setting.</p>
       </div>
-    </article>
+      <div class="relatedTileMeta">
+        <span class="tag">Ecosystem</span>
+        <span>Explore</span>
+      </div>
+    </a>
 
-    <article class="relatedCard">
-      <span class="relatedLabel">Food</span>
-      <h3 class="relatedTitle">Local produce</h3>
-      <p class="relatedText">Learn about edible plants and local ingredients.</p>
-      <div class="relatedFooter">
-        <a class="btn secondary" href="/features/produce/">Explore</a>
+    <a class="relatedTile" href="/features/produce/" aria-label="Local produce">
+      <div>
+        <p class="relatedTileTitle">Local produce</p>
+        <p class="relatedTileText">Learn how edible plants and seasonal ingredients connect to the forest.</p>
       </div>
-    </article>
+      <div class="relatedTileMeta">
+        <span class="tag">Food</span>
+        <span>Explore</span>
+      </div>
+    </a>
 
-    <article class="relatedCard">
-      <span class="relatedLabel">Wildlife</span>
-      <h3 class="relatedTitle">Birds of the cloud forest</h3>
-      <p class="relatedText">Understand the birdlife supported by this ecosystem.</p>
-      <div class="relatedFooter">
-        <a class="btn secondary" href="/birds-of-the-cloud-forest-ecuador/">Explore</a>
+    <a class="relatedTile" href="/birds-of-the-cloud-forest-ecuador/" aria-label="Birds of the cloud forest">
+      <div>
+        <p class="relatedTileTitle">Birds of the cloud forest</p>
+        <p class="relatedTileText">Understand the birdlife supported by this rich plant ecosystem.</p>
       </div>
-    </article>
+      <div class="relatedTileMeta">
+        <span class="tag">Wildlife</span>
+        <span>Explore</span>
+      </div>
+    </a>
 
-    <article class="relatedCard">
-      <span class="relatedLabel">Guide</span>
-      <h3 class="relatedTitle">Cloud forest Quito Ecuador</h3>
-      <p class="relatedText">Get a full overview of the destination.</p>
-      <div class="relatedFooter">
-        <a class="btn secondary" href="/cloud-forest-quito-ecuador/">Read</a>
+    <a class="relatedTile" href="/cloud-forest-quito-ecuador/" aria-label="Cloud forest Quito Ecuador">
+      <div>
+        <p class="relatedTileTitle">Cloud forest Quito Ecuador</p>
+        <p class="relatedTileText">Get a broader overview of the destination and the feel of the stay.</p>
       </div>
-    </article>
+      <div class="relatedTileMeta">
+        <span class="tag">Guide</span>
+        <span>Read</span>
+      </div>
+    </a>
   </div>
 </section>
 
 </main>
-<div id="siteFooter"></div>
-<script src="/assets/js/site.js?v=3"></script>
+  <div id="siteFooter"></div>
+  <script src="/assets/js/site.js?v=3"></script>
 </body>
 </html>
