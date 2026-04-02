@@ -448,6 +448,103 @@
       transform: scale(1.05);
     }
 
+
+    .relatedSection{
+      margin-top:14px;
+      padding:16px;
+    }
+
+    .relatedHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .relatedH2{
+      margin:0;
+      font-family: var(--font-head);
+      font-size:22px;
+      letter-spacing:-0.02em;
+      color: var(--forest);
+      font-weight:900;
+      line-height:1.1;
+    }
+
+    .relatedHint{
+      margin:0;
+      color: rgba(11,26,16,0.68);
+      font-weight:700;
+      font-size:13px;
+      line-height:1.4;
+      max-width:90ch;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      font-weight:900;
+      font-size:12.2px;
+      color:var(--forest);
+      white-space:nowrap;
+    }
+
+    .relatedGrid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .relatedTile{
+      border-radius:18px;
+      border:1px solid rgba(13,89,37,0.16);
+      background:rgba(255,255,255,0.60);
+      box-shadow:0 14px 30px rgba(0,0,0,0.10);
+      padding:14px;
+      min-height:132px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+      color:var(--ink);
+      text-decoration:none;
+    }
+
+    .relatedTileTitle{
+      margin:6px 0 0;
+      font-weight:900;
+      letter-spacing:-0.01em;
+      font-size:16px;
+      color:var(--forest);
+      line-height:1.2;
+    }
+
+    .relatedTileText{
+      margin:0;
+      color:rgba(11,26,16,0.78);
+      font-size:13.5px;
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .relatedTileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:rgba(13,89,37,0.92);
+      font-weight:800;
+      font-size:12.5px;
+    }
+
+
     /* CTA BAND */
     .ctaBand{
       margin-top: 14px;
@@ -497,6 +594,7 @@
       .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
 
       .grid2{ grid-template-columns: 1fr; }
+      .relatedGrid{ grid-template-columns:1fr; }
       .hSlide{ aspect-ratio: 4 / 3; }
       .hArrow.prev{ left: 8px; }
       .hArrow.next{ right: 8px; }
@@ -640,6 +738,88 @@
         <div class="hDots" data-dots aria-label="Choose a photo"></div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="card relatedSection" aria-label="Related Pululahua links">
+  <div class="relatedHead">
+    <h2 class="relatedH2">Explore more around Pululahua</h2>
+    <p class="relatedHint">Connect the caldera experience with cloud forest scenery, wildlife, and the practical side of planning your stay.</p>
+  </div>
+
+  <div class="relatedGrid" aria-label="Related pages">
+    <a class="relatedTile" href="/cloud-forest-quito-ecuador/" aria-label="Cloud forest Quito Ecuador">
+      <div>
+        <span class="tag">Destination</span>
+        <p class="relatedTileTitle">Cloud forest Quito Ecuador</p>
+        <p class="relatedTileText">See how Pululahua fits into the wider cloud forest setting near Quito.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Read</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/features/flora/" aria-label="Cloud forest flora">
+      <div>
+        <span class="tag">Flora</span>
+        <p class="relatedTileTitle">Cloud forest flora</p>
+        <p class="relatedTileText">Explore the plant life that helps shape the same landscapes seen around the caldera.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/features/gallery/" aria-label="Cloud forest gallery">
+      <div>
+        <span class="tag">Visual</span>
+        <p class="relatedTileTitle">Cloud forest gallery</p>
+        <p class="relatedTileText">View more of the atmosphere, scenery, and quiet moments connected to this region.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>View</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/birdwatching-lodge-ecuador/" aria-label="Birdwatching lodge Ecuador">
+      <div>
+        <span class="tag">Birding</span>
+        <p class="relatedTileTitle">Birdwatching lodge Ecuador</p>
+        <p class="relatedTileText">Pair crater views with birdlife and quieter nature-based experiences near the retreat.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Explore</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/quito-to-cloud-forest-distance/" aria-label="Quito to cloud forest distance">
+      <div>
+        <span class="tag">Planning</span>
+        <p class="relatedTileTitle">Quito to cloud forest distance</p>
+        <p class="relatedTileText">Add practical travel context when deciding how Pululahua fits into your trip.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Read</span>
+      </div>
+    </a>
+
+    <a class="relatedTile" href="/where-to-stay-near-quito-nature/" aria-label="Where to stay near Quito nature">
+      <div>
+        <span class="tag">Stay</span>
+        <p class="relatedTileTitle">Where to stay near Quito nature</p>
+        <p class="relatedTileText">Understand which kind of stay works best if you want nature, scenery, and easy access.</p>
+      </div>
+      <div class="relatedTileMeta">
+        <span></span>
+        <span>Read</span>
+      </div>
+    </a>
   </div>
 </section>
 
