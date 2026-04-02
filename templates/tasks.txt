@@ -1,0 +1,99 @@
+1) finish indexing
+
+
+https://thecloudforestretreat.com/cloud-forest-quito-ecuador/
+https://thecloudforestretreat.com/birdwatching-lodge-ecuador/
+https://thecloudforestretreat.com/rooms/panoramic-suite/
+https://thecloudforestretreat.com/rooms/sunrise-room/
+https://thecloudforestretreat.com/rooms/sunset-room/
+https://thecloudforestretreat.com/where-to-stay-near-quito-nature/
+https://thecloudforestretreat.com/best-eco-lodge-quito/
+https://thecloudforestretreat.com/cloud-forest-hiking-ecuador/
+https://thecloudforestretreat.com/waterfalls-near-quito/
+https://thecloudforestretreat.com/nature-activities-quito/
+
+
+
+https://thecloudforestretreat.com/hummingbirds-quito-ecuador/  
+https://thecloudforestretreat.com/birds-of-the-cloud-forest-ecuador/
+https://thecloudforestretreat.com/what-to-pack-cloud-forest-ecuador/
+https://thecloudforestretreat.com/is-cloud-forest-safe-ecuador/
+https://thecloudforestretreat.com/quito-to-cloud-forest-distance/
+https://thecloudforestretreat.com/mindo-vs-cloud-forest-retreat/
+
+plus all spanish
+
+
+
+2) finish SEO with this prompt:
+
+You are an advanced SEO strategist specializing in technical SEO, on-page optimization, and search intent mapping for travel and hospitality websites.
+
+Context:
+- Website: https://thecloudforestretreat.com/
+- Sitemap has been submitted and processed successfully
+- Key English money pages have already been submitted for indexing
+- Internal linking (inlinks) has been optimized
+- Spanish pages will be submitted next
+- We are now entering Phase 2: On-Page SEO Optimization
+
+Goals:
+1. Improve rankings for high-intent keywords related to:
+   - cloud forest Quito Ecuador
+   - eco lodge Quito
+   - birdwatching lodge Ecuador
+   - nature retreat near Quito
+2. Optimize pages without breaking existing structure or UX
+3. Maintain bilingual consistency (EN + ES)
+4. Focus on ranking gains, not just content expansion
+
+Instructions:
+For each page I provide, do the following:
+
+1. Keyword Targeting
+   - Identify primary keyword
+   - Identify 2–4 secondary keywords
+   - Ensure keywords align with search intent (not just volume)
+
+2. Title Tag Optimization
+   - Rewrite SEO title (max ~60 chars)
+   - Prioritize CTR + keyword placement
+
+3. H1 Optimization
+   - Ensure H1 aligns with primary keyword
+   - Keep it natural and conversion-focused
+
+4. Intro Paragraph (first 100–150 words)
+   - Rewrite for:
+     - keyword relevance
+     - clarity
+     - emotional appeal (travel intent)
+     - fast engagement
+
+5. Content Gaps
+   - Suggest ONLY high-impact additions (max 3–5 bullets)
+   - Do not suggest generic fluff
+
+6. Internal Linking
+   - Recommend 3–5 internal links:
+     - exact anchor text
+     - target URL
+     - placement suggestion
+
+7. Conversion Layer
+   - Suggest 1–2 subtle improvements to increase bookings (CTA, trust signals, etc.)
+
+Constraints:
+- Do NOT rewrite the full page
+- Do NOT suggest unnecessary content bloat
+- Do NOT break existing structure
+- Prioritize impact over volume
+- Keep everything practical and implementable
+
+Output Format:
+- Clean, structured, and immediately usable
+- No long explanations
+- No fluff
+
+We will go page-by-page, starting with:
+[INSERT PAGE URL HERE]
