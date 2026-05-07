@@ -430,56 +430,6 @@ input:focus, select:focus, textarea:focus{
 .turnstileRow .cf-turnstile{transform:scale(0.95);transform-origin:left center;}
 @media (max-width: 640px){.turnstileRow{justify-content:flex-start;}.turnstileRow .cf-turnstile{transform:scale(0.9);}}
 
-    /* Production guard: keep raw EN/ES fallback links in the DOM without showing duplicate language switch */
-    .rawLangLinks{
-      position:absolute !important;
-      width:1px !important;
-      height:1px !important;
-      padding:0 !important;
-      margin:-1px !important;
-      overflow:hidden !important;
-      clip:rect(0,0,0,0) !important;
-      white-space:nowrap !important;
-      border:0 !important;
-    }
-
-    #siteHeader .lang,
-    #siteHeader .langDesktop,
-    #siteHeader .language-switch,
-    #siteHeader [data-language-switch]{
-      display:inline-flex !important;
-      align-items:center;
-      gap:4px;
-      padding:5px;
-      border-radius:999px;
-      border:1px solid rgba(13,89,37,0.22);
-      background:rgba(255,255,255,0.26);
-      flex:0 0 auto;
-    }
-
-    #siteHeader .lang a,
-    #siteHeader .langDesktop a,
-    #siteHeader .language-switch a,
-    #siteHeader [data-language-switch] a{
-      display:inline-flex !important;
-      align-items:center;
-      justify-content:center;
-      min-width:34px;
-      height:34px;
-      padding:0 10px;
-      border-radius:999px;
-      color:#0D5925;
-      font-weight:900;
-      text-decoration:none;
-    }
-
-    #siteHeader .lang a[aria-current="page"],
-    #siteHeader .langDesktop a[aria-current="page"],
-    #siteHeader .language-switch a[aria-current="page"],
-    #siteHeader [data-language-switch] a[aria-current="page"]{
-      background:#0D5925 !important;
-      color:#ffffff !important;
-    }
 
 </style>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -607,28 +557,28 @@ input:focus, select:focus, textarea:focus{
         <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
 
               <div id="tcfrStatusBox" class="statusCard" hidden>
-                <h3 id="tcfrStatusTitle" class="statusTitle">Mensaje envíado</h3>
-                <p id="tcfrStatusMsg" class="statusBody">Gracias. Recibimos tu mensaje y te envíamos un email de confirmación. Si no lo ves, revisa spam o promociones.</p>
+                <h3 id="tcfrStatusTitle" class="statusTitle">Mensaje enviado</h3>
+                <p id="tcfrStatusMsg" class="statusBody">Gracias. Recibimos tu mensaje y te enviamos un email de confirmación. Si no lo ves, revisa spam o promociones.</p>
               </div>
       </div>
       <div class="actionsRow">
         <p class="miniNote">
-          Al envíar, aceptas que podamos contactarte por email y, si lo proporcionas, por teléfono.
+          Al enviar, aceptas que podamos contactarte por email y, si lo proporcionas, por teléfono.
         </p>
         <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit" data-analytics-event="form_submit_click" data-analytics-label="Enviar" data-analytics-location="contact_form" data-analytics-page-type="contact_page" data-analytics-form="contact_form">Enviar</button>
       </div>
     </form>
 
     <section id="tcfrContactStatusCard" class="card statusCard" aria-label="Estado del envío">
-      <h3 class="statusTitle">Mensaje envíado</h3>
+      <h3 class="statusTitle">Mensaje enviado</h3>
       <p class="statusText">
-        Gracias. Recibimos tu mensaje y te envíamos un email de confirmación. Si no lo ves, revisa spam o promociones.
+        Gracias. Recibimos tu mensaje y te enviamos un email de confirmación. Si no lo ves, revisa spam o promociones.
       </p>
     </section>
   </section>
 
-  <aside class="sideStack" aria-label="Accesos rapidos">
-    <section class="card sideCard" aria-label="Interes en reservar">
+  <aside class="sideStack" aria-label="Accesos rápidos">
+    <section class="card sideCard" aria-label="Interés en reservar">
       <h3 class="sideTitle">¿Quieres reservar?</h3>
       <p class="sideP">
         Si ya tienes fechas en mente, usa nuestro formulario de reserva y te responderemos con disponibilidad y los próximos pasos.
@@ -646,7 +596,7 @@ input:focus, select:focus, textarea:focus{
       </p>
       <div class="btnRow" aria-label="Botones de políticas">
         <a class="linkBtn" href="/es/politica-de-privacidad/" data-analytics-event="internal_link_click" data-analytics-label="Política de privacidad" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">Política de privacidad</a>
-        <a class="linkBtn" href="/es/términos-de-servicio/" data-analytics-event="internal_link_click" data-analytics-label="Términos de servicio" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">Términos de servicio</a>
+        <a class="linkBtn" href="/es/terminos-de-servicio/" data-analytics-event="internal_link_click" data-analytics-label="Términos de servicio" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">Términos de servicio</a>
       </div>
     </section>
 
@@ -661,118 +611,6 @@ input:focus, select:focus, textarea:focus{
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-  <script>
-(function(){
-  var form = document.getElementById('tcfrContactForm');
-  if(!form) return;
-
-  var firstNameEl = document.getElementById('first_name');
-  var lastNameEl  = document.getElementById('last_name');
-  var messageEl   = document.getElementById('message');
-
-  var btn = document.getElementById('tcfrContactSubmitBtn');
-  var sourcePageEl = form.querySelector('input[name="source_page"]');
-  if(sourcePageEl){ sourcePageEl.value = window.location.href; }
-  var statusBox = document.getElementById('tcfrStatusBox');
-  var statusTitle = document.getElementById('tcfrStatusTitle');
-  var statusMsg = document.getElementById('tcfrStatusMsg');
-
-  function capFirstOnly(s){
-    s = (s || '').trim();
-    if(!s) return '';
-    s = s.toLowerCase();
-    return s.charAt(0).toUpperCase() + s.slice(1);
-  }
-
-  function capMessageFirstChar(s){
-    s = String(s || '');
-    if(!s) return '';
-    // capitalize first non-space character
-    var i = 0;
-    while(i < s.length && /\s/.test(s.charAt(i))) i++;
-    if(i >= s.length) return s;
-    return s.slice(0,i) + s.charAt(i).toUpperCase() + s.slice(i+1);
-  }
-
-  function setStatus(kind, title, msg){
-    if(!statusBox) return;
-    statusBox.hidden = false;
-     statusBox.classList.add('show');
-    statusTitle.textContent = title || '';
-    statusMsg.textContent = msg || '';
-    statusBox.style.borderColor = (kind === 'error') ? 'rgba(185,28,28,.25)' : 'rgba(13,89,37,.22)';
-    statusBox.style.background = (kind === 'error') ? 'rgba(254,226,226,.6)' : 'rgba(220,252,231,.55)';
-    statusTitle.style.color = (kind === 'error') ? '#991b1b' : '#0D5925';
-  }
-
-  function normalizeFields(){
-    if(firstNameEl) firstNameEl.value = capFirstOnly(firstNameEl.value);
-    if(lastNameEl)  lastNameEl.value  = capFirstOnly(lastNameEl.value);
-    if(messageEl)   messageEl.value   = capMessageFirstChar(messageEl.value);
-  }
-
-  if(firstNameEl) firstNameEl.addEventListener('blur', function(){ firstNameEl.value = capFirstOnly(firstNameEl.value); });
-  if(lastNameEl)  lastNameEl.addEventListener('blur', function(){ lastNameEl.value  = capFirstOnly(lastNameEl.value); });
-  if(messageEl)   messageEl.addEventListener('blur', function(){ messageEl.value   = capMessageFirstChar(messageEl.value); });
-
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    normalizeFields();
-
-    if(btn){ btn.disabled = true; btn.textContent = 'Enviando...'; }
-    if(statusBox) statusBox.hidden = true;
-
-    try{
-      var fd = new FormData(form);
-      var token = fd.get('cf-turnstile-response');
-      if(!token){
-        setStatus('error','Algo salió mal','Falta la verificación de Turnstile. Complétala e intenta nuevamente.');
-        if(btn){ btn.disabled = false; btn.textContent = 'Enviar'; }
-        return;
-      }
-
-      var payload = {
-        cf_secret: fd.get('cf_secret') || '',
-        'cf-turnstile-response': token,
-        first_name: fd.get('first_name') || '',
-        last_name: fd.get('last_name') || '',
-        email: fd.get('email') || '',
-        phone: fd.get('phone') || '',
-        message: fd.get('message') || '',
-        how_did_you_hear_about_us: fd.get('how_did_you_hear_about_us') || '',
-        source_page: fd.get('source_page') || window.location.href,
-        lang: fd.get('lang') || 'es'
-      };
-
-      var res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(payload)
-      });
-
-      var data = await res.json().catch(function(){ return {}; });
-
-      if(!res.ok || !data.ok){
-        var msg = data && (data.message || data.error) ? (data.message || data.error) : 'Submission failed. Please try again.';
-        setStatus('error','No se pudo enviar', msg);
-        if(btn){ btn.disabled = false; btn.textContent = 'Enviar'; }
-        return;
-      }
-
-      setStatus('success','Mensaje envíado','Gracias. Recibimos tu mensaje y te envíamos un email de confirmación. Si no lo ves, revisa spam o promociones.');
-
-      // reset turnstile + keep inputs (optional). We'll keep values.
-      if(window.turnstile && typeof window.turnstile.reset === 'function'){
-        try{ window.turnstile.reset(); }catch(_e){}
-      }
-
-      if(btn){ btn.disabled = false; btn.textContent = 'Enviar'; }
-    }catch(err){
-      setStatus('error','No se pudo enviar','Error de red. Intenta nuevamente.');
-      if(btn){ btn.disabled = false; btn.textContent = 'Enviar'; }
-    }
-  });
-})();
-</script>
+  <script src="/assets/js/contact-form.js"></script>
 </body>
 </html>
