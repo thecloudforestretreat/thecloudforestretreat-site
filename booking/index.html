@@ -7,6 +7,9 @@
   <meta name="description" content="Request availability at The Cloud Forest Retreat outside of Quito, Ecuador. Share your dates and preferences and we will reply with availability and next steps." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/booking/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/booking/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/reservas/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/booking/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
@@ -635,16 +638,92 @@
       }
       .gBtn{ width: 100%; }
     }
+
+
+    /* Production guard: keep fallback language links available but not visible */
+    .rawLangLinks{
+      position:absolute !important;
+      width:1px !important;
+      height:1px !important;
+      padding:0 !important;
+      margin:-1px !important;
+      overflow:hidden !important;
+      clip:rect(0,0,0,0) !important;
+      white-space:nowrap !important;
+      border:0 !important;
+    }
   </style>
 
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LodgingBusiness", "Hotel"],
+        "@id": "https://thecloudforestretreat.com/#lodgingbusiness",
+        "name": "The Cloud Forest Retreat",
+        "url": "https://thecloudforestretreat.com/",
+        "description": "A scenic eco-luxury bed and breakfast in Ecuador's cloud forest near Quito with mountain views, nature, wellness, and peaceful accommodations.",
+        "image": "https://thecloudforestretreat.com/og-tcfr.jpg",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "EC",
+          "addressRegion": "Pichincha"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "9"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/booking/#webpage",
+        "url": "https://thecloudforestretreat.com/booking/",
+        "name": "Booking | The Cloud Forest Retreat",
+        "description": "Request availability at The Cloud Forest Retreat outside of Quito, Ecuador. Share your dates and preferences and we will reply with availability and next steps.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/"
+        },
+        "about": {"@id": "https://thecloudforestretreat.com/#lodgingbusiness"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://thecloudforestretreat.com/booking/#faq",
+        "inLanguage": "en",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I request availability?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Use the booking request form to share your preferred dates, group size, room preference, and transportation needs. The team will reply with availability and next steps."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can I book through partner sites?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. The page includes partner booking links for supported stay types, plus a direct request form if you prefer to contact the retreat team."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body>
-  <div id="siteHeader"></div>
+<body data-page-type="booking_page" data-page-language="en">
+  <div id="siteHeader" data-current-lang="en"></div>
+  <nav class="rawLangLinks" aria-label="Language switch">
+    <a href="https://thecloudforestretreat.com/booking/" lang="en" hreflang="en" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="booking_page" data-analytics-target-language="en">English</a>
+    <a href="https://thecloudforestretreat.com/es/reservas/" lang="es" hreflang="es" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="booking_page" data-analytics-target-language="es">Español</a>
+  </nav>
 
   <main class="wrap" aria-label="Booking page">
-    <section class="hero" aria-label="Booking hero">
+    <section class="hero" data-analytics-section="booking_hero" aria-label="Booking hero">
       <div class="heroMedia" aria-label="Hero image">
         <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="The Cloud Forest Retreat view" loading="eager" decoding="async" />
         <div class="heroOverlay" aria-hidden="true"></div>
@@ -659,14 +738,14 @@
       </div>
     </section>
 
-    <section class="grid" aria-label="Booking form and details">
+    <section class="grid" data-analytics-section="booking_form_details" aria-label="Booking form and details">
       <section class="card pad" aria-label="Booking request form">
         <h2 class="h2">Booking Request</h2>
         <p class="hint">
           This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
         </p>
 
-        <div class="otaBlock" aria-label="Instant booking on partner sites">
+        <div class="otaBlock" data-analytics-section="ota_booking_links" aria-label="Instant booking on partner sites">
           <h3 class="otaTitle">Book instantly on a booking site</h3>
           <p class="otaHint">
             Choose a stay type, then pick a site. If you prefer, you can still send a direct booking request using the form below.
@@ -683,16 +762,16 @@
           </div>
 
           <div class="otaGrid" aria-label="Booking site links">
-            <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Airbnb">
+            <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Airbnb" data-analytics-event="booking_cta_click" data-analytics-label="Airbnb" data-analytics-location="ota_booking_links" data-analytics-page-type="booking_page" data-analytics-cta-type="ota_booking">
               <img src="/assets/images/pages/booking/tcfr_booking_airbnb.png" alt="Airbnb" loading="lazy" decoding="async" />
             </a>
-            <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Vrbo">
+            <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Vrbo" data-analytics-event="booking_cta_click" data-analytics-label="Vrbo" data-analytics-location="ota_booking_links" data-analytics-page-type="booking_page" data-analytics-cta-type="ota_booking">
               <img src="/assets/images/pages/booking/tcfr_booking_vrbo.png" alt="Vrbo" loading="lazy" decoding="async" />
             </a>
-            <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Expedia">
+            <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Book on Expedia" data-analytics-event="booking_cta_click" data-analytics-label="Expedia" data-analytics-location="ota_booking_links" data-analytics-page-type="booking_page" data-analytics-cta-type="ota_booking">
               <img src="/assets/images/pages/booking/tcfr_booking_expedia.png" alt="Expedia" loading="lazy" decoding="async" />
             </a>
-            <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Book on Booking.com (coming soon)" aria-disabled="true">
+            <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Book on Booking.com (coming soon)" aria-disabled="true" data-analytics-event="booking_cta_click" data-analytics-label="Booking.com" data-analytics-location="ota_booking_links" data-analytics-page-type="booking_page" data-analytics-cta-type="ota_booking">
               <img src="/assets/images/pages/booking/tcfr_booking_booking.png" alt="Booking.com" loading="lazy" decoding="async" />
             </a>
           </div>
@@ -702,7 +781,7 @@
           </p>
         </div>
 
-        <form id="tcfrBookingForm" method="post" action="javascript:void(0);" aria-label="Booking form" onsubmit="return false;">
+        <form id="tcfrBookingForm" data-analytics-form="booking_request" data-analytics-event="booking_form_start" data-analytics-page-type="booking_page" method="post" action="javascript:void(0);" aria-label="Booking form" onsubmit="return false;">
           <input type="hidden" id="source_page" name="source_page" value="">
           <input type="hidden" id="user_agent" name="user_agent" value="">
           <input type="hidden" id="dates_of_visit" name="dates_of_visit" value="">
@@ -802,7 +881,7 @@
               By submitting, you agree we may contact you by email or phone to confirm details.
             </p>
             <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
-            <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Send Request</button>
+            <button id="tcfrSubmitBtn" class="submitBtn" type="submit" data-analytics-event="booking_form_submit_click" data-analytics-label="Booking request submit" data-analytics-location="booking_form" data-analytics-page-type="booking_page" data-analytics-cta-type="booking_form">Send Request</button>
 
           <section id="tcfrStatusCard" class="statusCard" role="status" aria-live="polite">
             <div class="statusTitle" id="tcfrStatusTitle">Your request has been sent.</div>
@@ -846,8 +925,8 @@
           </div>
 
           <div class="gActions" aria-label="Review actions">
-            <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener">Read reviews</a>
-            <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener">Write a review</a>
+            <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener" data-analytics-event="outbound_link_click" data-analytics-label="Booking page link" data-analytics-location="booking_page" data-analytics-page-type="booking_page">Read reviews</a>
+            <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener" data-analytics-event="outbound_link_click" data-analytics-label="Booking page link" data-analytics-location="booking_page" data-analytics-page-type="booking_page">Write a review</a>
           </div>
 
           <div class="gQuotes" aria-label="Review excerpts">
@@ -877,8 +956,6 @@
   </main>
 
   <div id="siteFooter"></div>
-
-  <script src="/assets/js/site.js?v=3"></script>
   <script>
     (function(){
       "use strict";
@@ -1145,5 +1222,6 @@ var statusCard = document.getElementById("tcfrStatusCard");
 
     })();
   </script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
