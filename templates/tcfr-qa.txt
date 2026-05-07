@@ -207,6 +207,49 @@ Recommended TCFR page types:
 
 ACCENT RULE
 Use South American Spanish accents correctly in all visible Spanish copy and metadata.
+
+MANDATORY SPANISH ACCENT QA STANDARD
+Spanish accent validation is a hard production blocker. A Spanish page must NOT be handed off as ready if visible Spanish copy, metadata, schema text, image alt text, aria-label text, form labels, placeholders, option labels, button text, status messages, validation messages, FAQ text, review text, or JSON-LD user-facing text contains missing or incorrect Spanish accents.
+
+Before returning any Spanish page, perform a dedicated accent pass across all user-facing Spanish strings, including strings inside JavaScript that appear in the UI. Do not limit this check to body copy.
+
+Common high-risk words that must be checked and corrected when used as Spanish text include, but are not limited to:
+- recomendacion -> recomendación
+- habitacion -> habitación
+- estadia -> estadía
+- telefono -> teléfono
+- numero -> número
+- codigo -> código
+- pais -> país
+- pagina -> página
+- confirmacion -> confirmación
+- opcion -> opción
+- dias -> días
+- huesped / huespedes -> huésped / huéspedes
+- panoramica -> panorámica
+- proximo / proximamente -> próximo / próximamente
+- tambien -> también
+- seleccion -> selección when noun, selecciona when imperative
+- busqueda -> búsqueda
+- resena / resenas -> reseña / reseñas
+- fantastico -> fantástico
+- magico / magica -> mágico / mágica
+- increible / increibles -> increíble / increíbles
+- unico / unica -> único / única
+- anfitrion -> anfitrión
+- facil -> fácil
+- despues -> después
+- que / como in questions or headings -> qué / cómo where grammatically required
+- mas when it means "more" -> más
+- si when it means "yes" -> sí
+- envio / enviar / enviado / enviada must be checked carefully: enviar and enviado/enviada do NOT take an accent; envío as a noun or first-person verb does.
+
+Do not add accents to technical identifiers, URLs, slugs, IDs, classes, data attributes, schema URLs, JavaScript variable/function names, analytics event names, page_type values, or asset paths.
+
+Final Spanish handoff requirement:
+- If any obvious missing-accent Spanish word remains in visible/user-facing text, do not mark the page ready.
+- Fix the page first, then return the complete corrected file.
+
 Preserve real accents in proper names on both EN and ES pages where the name officially uses them, including Chocó Andino, Pululahua where required by style, Río Guayllabamba, Ecuadorian place names, and room/region names if officially accented.
 Do not add accents to:
 - URLs
