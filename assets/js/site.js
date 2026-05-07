@@ -62,6 +62,217 @@
     });
   }
 
+  function getBodyData(name) {
+    var body = document.body;
+    if (!body) return "";
+    return String(body.getAttribute("data-" + name) || "").trim();
+  }
+
+  function getPageType() {
+    return getBodyData("page-type") || "unknown_page";
+  }
+
+  function getPageLanguage() {
+    return getBodyData("page-language") || (tcfrIsSpanishPath(window.location.pathname || "/") ? "es" : "en");
+  }
+
+  function cleanText(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function getLinkType(href) {
+    var value = String(href || "");
+    if (!value) return "unknown";
+    if (value.indexOf("mailto:") === 0) return "email";
+    if (value.indexOf("tel:") === 0) return "phone";
+    if (value.indexOf("https://wa.me/") === 0 || value.indexOf("whatsapp") !== -1) return "whatsapp";
+    if (value.indexOf("http://") === 0 || value.indexOf("https://") === 0) {
+      try {
+        var u = new URL(value, window.location.origin);
+        return u.origin === window.location.origin ? "internal" : "outbound";
+      } catch (e) {
+        return "outbound";
+      }
+    }
+    if (value.indexOf("/") === 0 || value.indexOf("#") === 0) return "internal";
+    return "unknown";
+  }
+
+  function trackEvent(name, params) {
+    if (!window.gtag || !name) return;
+    var base = {
+      page_type: getPageType(),
+      page_language: getPageLanguage(),
+      page_path: window.location.pathname || "/"
+    };
+    var payload = {};
+    var key;
+    for (key in base) payload[key] = base[key];
+    params = params || {};
+    for (key in params) {
+      if (params[key] !== "" && params[key] !== null && params[key] !== undefined) {
+        payload[key] = params[key];
+      }
+    }
+    window.gtag("event", name, payload);
+  }
+
+  function sendEnhancedPageView() {
+    if (window.__TCFR_PAGE_VIEW_ENHANCED_SENT__) return;
+    window.__TCFR_PAGE_VIEW_ENHANCED_SENT__ = true;
+
+    trackEvent("page_view_enhanced", {
+      page_title: document.title || "",
+      page_location: window.location.href || "",
+      page_referrer: document.referrer || ""
+    });
+  }
+
+  function initScrollDepth() {
+    if (window.__TCFR_SCROLL_DEPTH_INIT__) return;
+    window.__TCFR_SCROLL_DEPTH_INIT__ = true;
+
+    var marks = { 25: false, 50: false, 75: false, 90: false };
+
+    function measure() {
+      var doc = document.documentElement;
+      var body = document.body;
+      var scrollTop = window.pageYOffset || doc.scrollTop || body.scrollTop || 0;
+      var viewport = window.innerHeight || doc.clientHeight || 0;
+      var full = Math.max(
+        body.scrollHeight, doc.scrollHeight,
+        body.offsetHeight, doc.offsetHeight,
+        body.clientHeight, doc.clientHeight
+      );
+      var maxScrollable = Math.max(full - viewport, 1);
+      var pct = Math.round((scrollTop / maxScrollable) * 100);
+
+      [25, 50, 75, 90].forEach(function (mark) {
+        if (!marks[mark] && pct >= mark) {
+          marks[mark] = true;
+          trackEvent("scroll_depth", { percent_scrolled: mark });
+        }
+      });
+    }
+
+    measure();
+    window.addEventListener("scroll", measure, { passive: true });
+  }
+
+  function initAnalyticsClickTracking() {
+    if (window.__TCFR_ANALYTICS_CLICK_INIT__) return;
+    window.__TCFR_ANALYTICS_CLICK_INIT__ = true;
+
+    document.addEventListener("click", function (e) {
+      var el = e.target && e.target.closest ? e.target.closest("[data-analytics-event], a[href], button") : null;
+      if (!el) return;
+
+      var eventName = cleanText(el.getAttribute("data-analytics-event"));
+      var href = el.getAttribute && el.getAttribute("href");
+      var linkType = getLinkType(href);
+      var label = cleanText(el.getAttribute("data-analytics-label")) || cleanText(el.textContent);
+      var location = cleanText(el.getAttribute("data-analytics-location"));
+      var section = cleanText(el.getAttribute("data-analytics-section"));
+
+      if (!eventName && href) {
+        if (linkType === "internal") eventName = "internal_link_click";
+        else if (linkType === "outbound") eventName = "outbound_link_click";
+        else if (linkType === "whatsapp") eventName = "whatsapp_click";
+        else if (linkType === "email") eventName = "email_click";
+        else if (linkType === "phone") eventName = "phone_click";
+      }
+
+      if (!eventName) return;
+
+      var payload = {
+        event_label: label,
+        label: label,
+        link_text: label,
+        link_url: href || "",
+        link_type: linkType,
+        cta_label: label,
+        cta_location: location,
+        section_name: section,
+        analytics_room: cleanText(el.getAttribute("data-analytics-room")),
+        analytics_topic: cleanText(el.getAttribute("data-analytics-topic")),
+        analytics_cta_type: cleanText(el.getAttribute("data-analytics-cta-type")),
+        analytics_target_language: cleanText(el.getAttribute("data-analytics-target-language")),
+        analytics_form: cleanText(el.getAttribute("data-analytics-form"))
+      };
+
+      trackEvent(eventName, payload);
+    }, false);
+  }
+
+  function initFormTracking() {
+    if (window.__TCFR_FORM_TRACKING_INIT__) return;
+    window.__TCFR_FORM_TRACKING_INIT__ = true;
+
+    document.addEventListener("focusin", function (e) {
+      var form = e.target && e.target.form;
+      if (!form || form.__tcfrFormStarted) return;
+      form.__tcfrFormStarted = true;
+      trackEvent("form_start", {
+        form_name: cleanText(form.getAttribute("name")) || cleanText(form.id) || cleanText(form.getAttribute("data-analytics-form")) || "form"
+      });
+    });
+
+    document.addEventListener("submit", function (e) {
+      var form = e.target;
+      if (!form || form.tagName !== "FORM") return;
+      trackEvent("form_submit_success", {
+        form_name: cleanText(form.getAttribute("name")) || cleanText(form.id) || cleanText(form.getAttribute("data-analytics-form")) || "form"
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      var trigger = e.target && e.target.closest ? e.target.closest("[data-form-error-trigger]") : null;
+      if (!trigger) return;
+      trackEvent("form_submit_error", {
+        form_name: cleanText(trigger.getAttribute("data-analytics-form")) || "form",
+        error_context: cleanText(trigger.getAttribute("data-form-error-trigger")) || "unknown"
+      });
+    });
+  }
+
+  function initFaqTracking() {
+    if (window.__TCFR_FAQ_TRACKING_INIT__) return;
+    window.__TCFR_FAQ_TRACKING_INIT__ = true;
+
+    document.addEventListener("toggle", function (e) {
+      var el = e.target;
+      if (!el || el.tagName !== "DETAILS" || !el.open) return;
+      var summary = qs(el, "summary");
+      trackEvent("faq_expand", {
+        event_label: cleanText(summary && summary.textContent) || cleanText(el.getAttribute("data-analytics-label")) || "faq"
+      });
+    }, true);
+  }
+
+  function initSectionViewTracking() {
+    if (window.__TCFR_SECTION_VIEW_INIT__ || !("IntersectionObserver" in window)) return;
+    window.__TCFR_SECTION_VIEW_INIT__ = true;
+
+    var seen = {};
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var key = cleanText(el.getAttribute("data-analytics-section")) || cleanText(el.id);
+        if (!key || seen[key]) return;
+        seen[key] = true;
+        trackEvent("content_section_view", {
+          section_name: key,
+          event_label: key
+        });
+      });
+    }, { threshold: 0.5 });
+
+    qsa(document, "[data-analytics-section]").forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
   /* =========================
      Tiny DOM helpers
      ========================= */
@@ -374,6 +585,12 @@
     function goWhatsApp(template) {
       var link = tcfrBuildLink(root, template);
       if (!link) return;
+      trackEvent("whatsapp_click", {
+        event_label: "TCFR WhatsApp widget",
+        cta_location: "whatsapp_widget",
+        link_url: link,
+        link_type: "whatsapp"
+      });
       window.location.href = link;
     }
 
@@ -428,6 +645,12 @@
           if (!link) return;
 
           closePanel();
+          trackEvent("whatsapp_click", {
+            event_label: cleanText(a.textContent) || "TCFR WhatsApp action",
+            cta_location: "whatsapp_widget",
+            link_url: link,
+            link_type: "whatsapp"
+          });
           window.open(link, "_blank", "noopener,noreferrer");
         },
         { passive: false }
@@ -468,6 +691,12 @@
      ========================= */
   async function boot() {
     initGA4();
+    sendEnhancedPageView();
+    initScrollDepth();
+    initAnalyticsClickTracking();
+    initFormTracking();
+    initFaqTracking();
+    initSectionViewTracking();
 
     // IMPORTANT: Cloudflare Pages often uses "pretty URLs" and redirects *.html -> no extension.
     // We try both, and only inject when we confirm it is a fragment (not a full HTML doc).
