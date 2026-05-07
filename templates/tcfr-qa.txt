@@ -103,24 +103,26 @@ Spanish page pattern:
 
 
 VISUAL LANGUAGE SWITCH RULE
-The rawLangLinks block exists primarily for:
-- hreflang discoverability
-- accessibility
-- analytics tracking fallback
-- non-JS resilience
 
-It must NOT visually appear as a duplicate language switch in the page body.
+rawLangLinks must remain in the HTML directly under #siteHeader for accessibility, hreflang fallback, non-JS resilience, and analytics tracking.
+
+rawLangLinks must NOT appear as a duplicate visible language switch in the page body. It must be visually hidden while remaining available to screen readers and crawlers.
+
+The visible language switch must be the global header language pill on the right side of the injected header. Do not hide, remove, fade, or visually weaken the global header language switch.
+
+The active language pill in the global header must be clearly visible, with stronger contrast than the inactive language. The active language must not blend into the header background.
 
 Rules:
-- The visible EN/ES language selector belongs inside the injected global header on the right-hand side.
-- rawLangLinks must remain directly under #siteHeader in the HTML for structure, analytics, and fallback, but it should be visually hidden with the approved shared CSS utility pattern.
+- Keep class name exactly: rawLangLinks.
+- Keep rawLangLinks directly under #siteHeader.
 - Do not leave rawLangLinks visible in page content.
 - Do not position rawLangLinks on the left side of the layout.
 - Do not create a second visible language switch below the header.
-- Prefer central styling in /assets/css/site.css or /assets/css/header.css.
-- If a page must be self-contained for handoff, include the same approved visually-hidden rule in the page CSS until the shared CSS is updated.
+- The visible EN/ES switch belongs exclusively inside the injected global header on the right-hand side.
+- Styling should preferably be centralized in /assets/css/header.css or /assets/css/site.css.
+- If a page-level production guard is needed, it may only target #siteHeader language switch visibility/readability and rawLangLinks hiding.
 
-Approved visually-hidden pattern:
+Approved rawLangLinks hiding pattern:
 .rawLangLinks{
   position:absolute;
   width:1px;
@@ -133,16 +135,44 @@ Approved visually-hidden pattern:
   border:0;
 }
 
-The active visible EN/ES switch should remain exclusively in the injected global header component on the right-hand side.
+Approved global header language switch visibility pattern:
+#siteHeader .lang,
+#siteHeader .langDesktop,
+#siteHeader .language-switch,
+#siteHeader [data-language-switch]{
+  display:inline-flex !important;
+  align-items:center;
+  gap:4px;
+  padding:5px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,0.22);
+  background:rgba(255,255,255,0.26);
+  flex:0 0 auto;
+}
 
-Language switch rules:
-- Keep class name exactly: rawLangLinks
-- Use real anchor tags in raw HTML
-- Use hreflang on both links
-- Use aria-current="page" only on the active language
-- Track both links with language_switch_click
-- Keep the switch directly under #siteHeader
-- Prefer shared site.css for switch styling
+#siteHeader .lang a,
+#siteHeader .langDesktop a,
+#siteHeader .language-switch a,
+#siteHeader [data-language-switch] a{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:34px;
+  padding:0 10px;
+  border-radius:999px;
+  color:#0D5925;
+  font-weight:900;
+  text-decoration:none;
+}
+
+#siteHeader .lang a[aria-current="page"],
+#siteHeader .langDesktop a[aria-current="page"],
+#siteHeader .language-switch a[aria-current="page"],
+#siteHeader [data-language-switch] a[aria-current="page"]{
+  background:#0D5925 !important;
+  color:#ffffff !important;
+}
 
 BODY ATTRIBUTE STANDARD
 Every page must set:
