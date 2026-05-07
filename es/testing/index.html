@@ -34,6 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/footer.css" />
   <script src="/assets/js/head.js" defer></script>
   <style>
     :root{
@@ -141,13 +142,13 @@ body{ margin:0; }
   HERO INTERNO (Sobre):
   Más corto, consistente con Contacto y Reservas, manteniendo el foco visible.
 */
-.heroMedía{
+.heroMedia{
   position: relative;
   height: clamp(320px, 42vh, 520px);
   background: rgba(0,0,0,0.10);
 }
 
-.heroMedía img{
+.heroMedia img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -160,7 +161,7 @@ body{ margin:0; }
   position: absolute;
   inset: 0;
   background:
-    radíal-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
     linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
   pointer-events: none;
 }
@@ -284,7 +285,7 @@ body{ margin:0; }
   min-height: 0;
 }
 
-.storyMedíaSlot{
+.storyMediaSlot{
   margin-top: 12px;
   flex: 0 0 auto;
   display: block;
@@ -328,9 +329,9 @@ body{ margin:0; }
   z-index: 1;
 }
 
-.medíaCard{ position: relative; }
+.mediaCard{ position: relative; }
 
-.medíaInner{
+.mediaInner{
   padding: 14px;
   padding-bottom: 18px;
   display: grid;
@@ -412,7 +413,7 @@ body{ margin:0; }
   inset: -140px -140px auto auto;
   width: 320px;
   height: 320px;
-  background: radíal-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+  background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
   pointer-events: none;
 }
 .mini h3{
@@ -522,21 +523,36 @@ body{ margin:0; }
   align-items: center;
 }
 
-@medía (max-width: 900px){
+@media (max-width: 900px){
   .wrap{ padding: 12px 14px 64px; }
 
-  .heroMedía{ height: clamp(240px, 34vh, 340px); }
-  .heroMedía img{ object-position: center 62%; }
+  .heroMedia{ height: clamp(240px, 34vh, 340px); }
+  .heroMedia img{ object-position: center 62%; }
 
   .gridA{ grid-template-columns: 1fr; }
   .offerGrid{ grid-template-columns: 1fr; }
   .commitInner{ grid-template-columns: 1fr; }
   .imgBox{ min-height: 220px; }
-  .storyMedíaSlot{ min-height: 0; }
+  .storyMediaSlot{ min-height: 0; }
   .storySquare{ max-width: none; }
-  .medíaInner{ padding-bottom: 16px; }
+  .mediaInner{ padding-bottom: 16px; }
   .videoBox{ margin-bottom: 4px; }
 }
+
+/* Raw language links are kept for hreflang, accessibility, analytics, and non-JS fallback.
+   The visible language selector belongs in the injected global header on the right. */
+.rawLangLinks{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
   </style>
   <script type="application/ld+json">
 {
@@ -582,7 +598,7 @@ body{ margin:0; }
     <a href="https://thecloudforestretreat.com/es/sobre/" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="about_page" data-analytics-target-language="es">Español</a>
   </nav>
   <main class="wrap" aria-label="Página Sobre nosotros">
-    <section class="topBand" aria-label="Navegación de pagina" data-analytics-section="page_navigation">
+    <section class="topBand" aria-label="Navegación de página" data-analytics-section="page_navigation">
       <div class="crumbs" aria-label="Migas de pan">
         <a href="/es/" data-analytics-event="internal_link_click" data-analytics-label="Es" data-analytics-location="body_link" data-analytics-page-type="about_page">Inicio</a>
         <span aria-hidden="true">›</span>
@@ -594,11 +610,11 @@ body{ margin:0; }
       </div>
     </section>
 <section class="hero" aria-label="Hero Sobre nosotros" data-analytics-section="about_hero">
-  <div class="heroMedía" aria-label="Imagen hero">
+  <div class="heroMedia" aria-label="Imagen hero">
     <img src="/assets/images/pages/tcfr_assets_images_about_hero_01.jpg" alt="The Cloud Forest Retreat en Ecuador" loading="eager" decoding="async" />
     <div class="heroOverlay" aria-hidden="true"></div>
 
-    <div class="heroBadge" aria-label="Introduccion Sobre nosotros">
+    <div class="heroBadge" aria-label="Introducción Sobre nosotros">
       <div class="kicker">Eco-lodge en Ecuador</div>
       <h1 class="heroH1">Sobre nosotros</h1>
       <p class="heroLead">
@@ -654,7 +670,7 @@ body{ margin:0; }
         </p>
       </div>
 
-      <div class="storyMedíaSlot" aria-label="Imagen de nuestra historia">
+      <div class="storyMediaSlot" aria-label="Imagen de nuestra historia">
         <div class="storySquare" aria-label="Imagen historia">
           <img src="/assets/images/pages/tcfr_assets_images_about_02.jpg" alt="Vista del bosque nublado cerca de The Cloud Forest Retreat" loading="lazy" decoding="async" />
           <div class="storySquareCap">Un lugar tranquilo para resetear</div>
@@ -663,13 +679,13 @@ body{ margin:0; }
     </div>
   </article>
 
-  <aside class="card medíaCard" aria-label="Contenido visual">
+  <aside class="card mediaCard" aria-label="Contenido visual">
     <div class="cardHead">
       <h2 class="cardTitle">Un vistazo rápido</h2>
       <p class="cardHint"></p>
     </div>
 
-    <div class="medíaInner">
+    <div class="mediaInner">
       <div class="imgBox" aria-label="Imagen del lugar">
         <img src="/assets/images/pages/tcfr_about_01.jpg" alt="Entorno de The Cloud Forest Retreat en Ecuador" loading="lazy" decoding="async" />
         <div class="imgCap">Un lugar pensado para la calma</div>
@@ -681,7 +697,7 @@ body{ margin:0; }
           title="The Cloud Forest Retreat - video Sobre nosotros"
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-medía; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
       </div>
     </div>
@@ -707,17 +723,17 @@ body{ margin:0; }
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Comidas">
       <h3>Comida en el lugar</h3>
-      <p>Platos de la huerta a la mesa con ingredientes organicos de nuestros jardines y productores locales. Recolectar ingredientes puede ser una experiencia opcional.</p>
+      <p>Platos de la huerta a la mesa con ingredientes orgánicos de nuestros jardines y productores locales. Recolectar ingredientes puede ser una experiencia opcional.</p>
       <div class="tagRow" aria-label="Etiquetas">
         <span class="tag">Fresco</span>
         <span class="tag">Local</span>
-        <span class="tag">Organico</span>
+        <span class="tag">Orgánico</span>
       </div>
     </article>
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Bienestar">
       <h3>Bienestar a pedido</h3>
-      <p>Yoga, meditacion y sesiones holisticas disponibles a pedido para que podamos preparar la experiencia que quieres.</p>
+      <p>Yoga, meditación y sesiones holísticas disponibles a pedido para que podamos preparar la experiencia que quieres.</p>
       <div class="tagRow" aria-label="Etiquetas">
         <span class="tag">A pedido</span>
         <span class="tag">Restaurador</span>
