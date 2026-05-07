@@ -124,16 +124,22 @@ Rules:
 
 Approved rawLangLinks hiding pattern:
 .rawLangLinks{
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  white-space:nowrap;
-  border:0;
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
 }
+
+
+Implementation requirement:
+- Before handoff, verify rawLangLinks is visually hidden either by the loaded shared CSS or by a narrow page-level production guard.
+- If the current uploaded page would show rawLangLinks visibly without a global CSS update, include the narrow page-level production guard in the returned page file.
+- Do not hide the injected header language switch. Only hide rawLangLinks.
 
 Approved global header language switch visibility pattern:
 #siteHeader .lang,
@@ -331,6 +337,13 @@ Pages must reinforce the inlink/outlink strategy from the sitemap master where r
 - Support high-opportunity planning pages from commercial pages and blog content.
 - Support birding stay pages without turning TCFR into a specialist tour site.
 - Use contextual internal links, not random blocks of unrelated links.
+
+
+HTML VALIDITY CHECK
+Before handoff, verify:
+- CSS link tags are valid void elements and are not closed with </link>.
+- The head does not contain malformed wrapper markup around stylesheet links.
+- /assets/js/head.js may load in the head, but analytics must still remain centralized in /assets/js/site.js.
 
 OUTPUT REQUIREMENTS
 Return:
