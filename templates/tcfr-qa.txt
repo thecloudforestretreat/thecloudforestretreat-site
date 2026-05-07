@@ -295,3 +295,6 @@ QA CHECKLIST BEFORE HANDOFF
 - [ ] important internal links present
 - [ ] major CTAs present and tracked
 - [ ] page is production-safe and ready to go live
+
+
+Confirm that the page is ready to go live if so
