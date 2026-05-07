@@ -1,7 +1,12 @@
 /* /assets/js/contact-form.js
-   The Cloud Forest Retreat contact form handler
+   The Cloud Forest Retreat contact form handler v3
    CSP-safe external script. No inline JavaScript required.
-   v2: treats any 2xx response as success unless the API explicitly returns failure.
+
+   Important production behavior:
+   - Any HTTP 2xx response from /api/contact is treated as a successful submit.
+   - Non-2xx responses are treated as errors and display the backend message when available.
+   - This avoids false front-end failures when the API returns HTTP 200 with an empty,
+     text, or nonstandard JSON response.
 */
 (function(){
   "use strict";
@@ -103,6 +108,11 @@
     }
   }
 
+  function getBackendMessage(data, fallback){
+    if(!data) return fallback;
+    return data.message || data.error || data.detail || data.reason || fallback;
+  }
+
   function normalizeFields(form){
     var firstNameEl = form.querySelector("#first_name");
     var lastNameEl = form.querySelector("#last_name");
@@ -115,14 +125,12 @@
 
   async function readResponse(res){
     var contentType = res.headers.get("content-type") || "";
-
     if(contentType.indexOf("application/json") !== -1){
       return await res.json().catch(function(){ return {}; });
     }
 
     var text = await res.text().catch(function(){ return ""; });
     if(!text) return {};
-
     try{
       return JSON.parse(text);
     }catch(_err){
@@ -130,24 +138,10 @@
     }
   }
 
-  function getBackendMessage(data, fallback){
-    if(!data) return fallback;
-    return data.message || data.error || data.detail || data.reason || fallback;
-  }
-
-  function isExplicitFailure(data){
-    if(!data || typeof data !== "object") return false;
-    if(data.ok === false) return true;
-    if(data.success === false) return true;
-    if(String(data.status || "").toLowerCase() === "error") return true;
-    if(String(data.status || "").toLowerCase() === "failed") return true;
-    if(data.error) return true;
-    return false;
-  }
-
   ready(function(){
     var form = document.getElementById("tcfrContactForm");
-    if(!form) return;
+    if(!form || form.getAttribute("data-contact-form-bound") === "true") return;
+    form.setAttribute("data-contact-form-bound", "true");
 
     var lang = getLang(form);
     var copy = COPY[lang];
@@ -173,10 +167,13 @@
       event.preventDefault();
       event.stopPropagation();
 
-      if(!form.isConnected) return;
+      if(!form.isConnected){ return; }
+
       normalizeFields(form);
 
-      if(typeof form.reportValidity === "function" && !form.reportValidity()) return;
+      if(typeof form.reportValidity === "function" && !form.reportValidity()){
+        return;
+      }
 
       if(submitBtn){
         submitBtn.disabled = true;
@@ -219,7 +216,7 @@
           method: "POST",
           credentials: "same-origin",
           headers: {
-            "Accept": "application/json",
+            "Accept": "application/json, text/plain, */*",
             "Content-Type": "application/json"
           },
           body: JSON.stringify(payload)
@@ -227,12 +224,7 @@
 
         var data = await readResponse(res);
 
-        /* Important: many simple contact endpoints return HTTP 200/204 with an empty body.
-           That is success. Only treat the submission as failed when the HTTP status is not 2xx
-           or when the API explicitly returns a failure flag. */
-        var success = res.ok && !isExplicitFailure(data);
-
-        if(!success){
+        if(!res.ok){
           var backendMsg = getBackendMessage(data, copy.defaultError + " HTTP " + res.status + ".");
           setStatus(status, "error", copy.unableTitle, backendMsg);
           track("form_submit_error", {
@@ -244,6 +236,12 @@
           return;
         }
 
+        /*
+          IMPORTANT:
+          The production endpoint may return HTTP 200 with an empty body, plain text,
+          or nonstandard JSON. For this site, HTTP 2xx is the source of truth.
+          Do not require data.ok === true.
+        */
         setStatus(status, "success", copy.successTitle, copy.successMsg);
         track("form_submit_success", {
           event_label: "Contact form submitted",
