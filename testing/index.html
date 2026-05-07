@@ -8,7 +8,7 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/about/" />
   <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/about/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/sobre-nosotros/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/sobre/" />
   <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/about/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
@@ -34,6 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/footer.css" />
   <script src="/assets/js/head.js" defer></script>
   <style>
     :root{
@@ -540,6 +541,21 @@ body{ margin:0; }
   .mediaInner{ padding-bottom: 16px; }
   .videoBox{ margin-bottom: 4px; }
 }
+
+/* Raw language links are kept for hreflang, accessibility, analytics, and non-JS fallback.
+   The visible language selector belongs in the injected global header on the right. */
+.rawLangLinks{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
   </style>
   <script type="application/ld+json">
   {
@@ -589,7 +605,7 @@ body{ margin:0; }
   <div id="siteHeader" data-current-lang="en"></div>
   <nav class="rawLangLinks" aria-label="Language switch">
     <a href="https://thecloudforestretreat.com/about/" lang="en" hreflang="en" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="about_page" data-analytics-target-language="en">English</a>
-    <a href="https://thecloudforestretreat.com/es/sobre-nosotros/" lang="es" hreflang="es" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="about_page" data-analytics-target-language="es">Español</a>
+    <a href="https://thecloudforestretreat.com/es/sobre/" lang="es" hreflang="es" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="about_page" data-analytics-target-language="es">Español</a>
   </nav>
   <main class="wrap" aria-label="About page">
     <section class="topBand" aria-label="Page navigation" data-analytics-section="page_navigation">
@@ -818,6 +834,6 @@ body{ margin:0; }
 </section>
   </main>
   <div id="siteFooter"></div>
-  <script src="/assets/js/site.js?v=3"></script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
