@@ -8,22 +8,22 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/es/sobre/" />
   <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/about/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/sobre-nosotros/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/sobre/" />
   <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/about/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
   <meta property="og:title" content="Sobre nosotros | The Cloud Forest Retreat" />
   <meta property="og:description" content="Conoce nuestra historia, valores y la experiencia de un eco-lodge tranquilo en el bosque nublado cerca de Quito, Ecuador." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/es/sobre-nosotros/" />
-  <meta property="og:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:secure_url" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:url" content="https://thecloudforestretreat.com/es/sobre/" />
+  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="The Cloud Forest Retreat en Ecuador" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sobre nosotros | The Cloud Forest Retreat" />
   <meta name="twitter:description" content="Conoce nuestra historia, valores y la experiencia de un eco-lodge tranquilo en el bosque nublado cerca de Quito, Ecuador." />
-  <meta name="twitter:image" content="https://staging.thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -34,6 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/footer.css" />
   <script src="/assets/js/head.js" defer></script>
   <style>
     :root{
@@ -139,7 +140,7 @@ body{ margin:0; }
 
 /*
   HERO INTERNO (Sobre):
-  Mas corto, consistente con Contacto y Reservas, manteniendo el foco visible.
+  Más corto, consistente con Contacto y Reservas, manteniendo el foco visible.
 */
 .heroMedia{
   position: relative;
@@ -537,78 +538,173 @@ body{ margin:0; }
   .mediaInner{ padding-bottom: 16px; }
   .videoBox{ margin-bottom: 4px; }
 }
+
+/* Raw language links are kept for hreflang, accessibility, analytics, and non-JS fallback.
+   The visible language selector belongs in the injected global header on the right. */
+.rawLangLinks{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* Production guard: keep the injected header language switch visible and readable.
+   This mirrors the global header.css rule so the EN/ES pill never disappears or blends in. */
+#siteHeader .lang,
+#siteHeader .langDesktop,
+#siteHeader .language-switch,
+#siteHeader [data-language-switch]{
+  display:inline-flex !important;
+  align-items:center;
+  gap:4px;
+  padding:5px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,0.22);
+  background:rgba(255,255,255,0.26);
+  flex:0 0 auto;
+}
+
+#siteHeader .lang a,
+#siteHeader .langDesktop a,
+#siteHeader .language-switch a,
+#siteHeader [data-language-switch] a{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:34px;
+  padding:0 10px;
+  border-radius:999px;
+  color:#0D5925;
+  font-weight:900;
+  text-decoration:none;
+}
+
+#siteHeader .lang a[aria-current="page"],
+#siteHeader .langDesktop a[aria-current="page"],
+#siteHeader .language-switch a[aria-current="page"],
+#siteHeader [data-language-switch] a[aria-current="page"]{
+  background:#0D5925 !important;
+  color:#ffffff !important;
+}
+
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://thecloudforestretreat.com/es/sobre/#webpage",
+      "url": "https://thecloudforestretreat.com/es/sobre/",
+      "name": "Sobre nosotros | The Cloud Forest Retreat",
+      "description": "Conoce The Cloud Forest Retreat cerca de Quito, Ecuador: nuestra historia, valores de eco-lodge y una estadía tranquila en el bosque nublado.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://thecloudforestretreat.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thecloudforestretreat.com/es/sobre/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://thecloudforestretreat.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sobre nosotros",
+          "item": "https://thecloudforestretreat.com/es/sobre/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
-<body>
-  <div id="siteHeader"></div>
-  <main class="wrap" aria-label="Pagina Sobre nosotros">
-    <section class="topBand" aria-label="Navegacion de pagina">
+<body data-page-type="about_page" data-page-language="es">
+  <div id="siteHeader" data-current-lang="es"></div>
+  <nav class="rawLangLinks" aria-label="Selector de idioma">
+    <a href="https://thecloudforestretreat.com/about/" lang="en" hreflang="en" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="about_page" data-analytics-target-language="en">English</a>
+    <a href="https://thecloudforestretreat.com/es/sobre/" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="about_page" data-analytics-target-language="es">Español</a>
+  </nav>
+  <main class="wrap" aria-label="Página Sobre nosotros">
+    <section class="topBand" aria-label="Navegación de página" data-analytics-section="page_navigation">
       <div class="crumbs" aria-label="Migas de pan">
-        <a href="/es/">Inicio</a>
+        <a href="/es/" data-analytics-event="internal_link_click" data-analytics-label="Es" data-analytics-location="body_link" data-analytics-page-type="about_page">Inicio</a>
         <span aria-hidden="true">›</span>
         <span>Sobre nosotros</span>
       </div>
-      <div class="quickActions" aria-label="Acciones rapidas">
-        <a class="btn secondary" href="/es/habitaciones/">Explorar habitaciones</a>
-        <a class="btn primary" href="/es/reservas/">Reserva tu estadia</a>
+      <div class="quickActions" aria-label="Acciones rápidas">
+        <a class="btn secondary" href="/es/habitaciones/" data-analytics-event="room_cta_click" data-analytics-label="Es/Habitaciones" data-analytics-location="secondary_cta" data-analytics-page-type="about_page">Explorar habitaciones</a>
+        <a class="btn primary" href="/es/reservas/" data-analytics-event="booking_cta_click" data-analytics-label="Es/Reservas" data-analytics-location="primary_cta" data-analytics-page-type="about_page">Reserva tu estadía</a>
       </div>
     </section>
-<section class="hero" aria-label="Hero Sobre nosotros">
+<section class="hero" aria-label="Hero Sobre nosotros" data-analytics-section="about_hero">
   <div class="heroMedia" aria-label="Imagen hero">
     <img src="/assets/images/pages/tcfr_assets_images_about_hero_01.jpg" alt="The Cloud Forest Retreat en Ecuador" loading="eager" decoding="async" />
     <div class="heroOverlay" aria-hidden="true"></div>
 
-    <div class="heroBadge" aria-label="Introduccion Sobre nosotros">
+    <div class="heroBadge" aria-label="Introducción Sobre nosotros">
       <div class="kicker">Eco-lodge en Ecuador</div>
       <h1 class="heroH1">Sobre nosotros</h1>
       <p class="heroLead">
-        Escapate a The Cloud Forest Retreat, un eco-lodge tranquilo donde la sostenibilidad se encuentra con la serenidad.
-        Veni por las vistas, quedate por la calma y volve a casa sintiendote renovado.
+        Escápate a The Cloud Forest Retreat, un eco-lodge tranquilo donde la sostenibilidad se encuentra con la serenidad.
+        Ven por las vistas, quédate por la calma y vuelve a casa sintiéndote renovado.
       </p>
     </div>
   </div>
 </section>
 
-<section class="card" style="margin-top:14px;" aria-label="Resumen">
+<section class="card" style="margin-top:14px;" aria-label="Resumen" data-analytics-section="summary">
   <div class="cardHead">
     <h2 class="cardTitle">De un vistazo</h2>
     <p class="cardHint"></p>
   </div>
   <div class="pad">
     <p class="p">
-      En pleno Choco Andino de Pichincha (una region reconocida como Reserva de Biosfera por la UNESCO), nuestro refugio esta pensado para
-      mananas lentas, aire fresco y esa quietud que solo se encuentra en el bosque nublado.
+      En pleno Chocó Andino de Pichincha (una región reconocida como Reserva de Biosfera por la UNESCO), nuestro refugio está pensado para
+      mañanas lentas, aire fresco y esa quietud que solo se encuentra en el bosque nublado.
     </p>
     <div class="pillRow" aria-label="Destacados">
       <span class="pill"><strong>Entorno:</strong> bosque nublado</span>
       <span class="pill"><strong>Estilo:</strong> eco-lodge</span>
       <span class="pill"><strong>Ambiente:</strong> tranquilo y acogedor</span>
       <span class="pill"><strong>Ideal para:</strong> parejas, amigos, solo, familia</span>
-      <span class="pill"><strong>Tambien:</strong> camping disponible</span>
+      <span class="pill"><strong>También:</strong> camping disponible</span>
     </div>
   </div>
 </section>
 
-<section class="gridA" aria-label="Nuestra historia y contenido">
+<section class="gridA" aria-label="Nuestra historia y contenido" data-analytics-section="story_visual">
   <article class="card" aria-label="Nuestra historia">
     <div class="cardHead">
       <h2 class="cardTitle">Nuestra historia</h2>
-      <p class="cardHint">Como nacio este lugar</p>
+      <p class="cardHint">Cómo nació este lugar</p>
     </div>
 
     <div class="pad storyPad">
       <p class="p">
-        The Cloud Forest Retreat nacio de un amor profundo por la naturaleza y de una idea simple: crear un santuario donde puedas vivir
+        The Cloud Forest Retreat nació de un amor profundo por la naturaleza y de una idea simple: crear un santuario donde puedas vivir
         la magia del bosque nublado sin renunciar a la comodidad.
       </p>
       <p class="p">
-        Aqui la neblina se mueve por el valle, las aves cantan desde el dosel y cada vista te invita a bajar el ritmo.
+        Aquí la neblina se mueve por el valle, las aves cantan desde el dosel y cada vista te invita a bajar el ritmo.
         Ya sea que llegues por una escapada de fin de semana, un reseteo en solitario, un viaje con amigos o una aventura en familia,
-        el bosque te recibe tal como estas.
+        el bosque te recibe tal como estás.
       </p>
 
-      <div class="callout" aria-label="Sensacion principal">
-        <p class="calloutQuote">"Respira el bosque. Deja que el ruido se apague. Senti como el dia vuelve a ser tuyo."</p>
+      <div class="callout" aria-label="Sensación principal">
+        <p class="calloutQuote">"Respira el bosque. Deja que el ruido se apague. Siente como el día vuelve a ser tuyo."</p>
         <p>
           Creamos este refugio para quienes quieren reconectar: con la naturaleza, con sus seres queridos y consigo mismos.
         </p>
@@ -625,7 +721,7 @@ body{ margin:0; }
 
   <aside class="card mediaCard" aria-label="Contenido visual">
     <div class="cardHead">
-      <h2 class="cardTitle">Un vistazo rapido</h2>
+      <h2 class="cardTitle">Un vistazo rápido</h2>
       <p class="cardHint"></p>
     </div>
 
@@ -648,7 +744,7 @@ body{ margin:0; }
   </aside>
 </section>
 
-<section class="card" style="margin-top:14px;" aria-label="Lo que ofrecemos">
+<section class="card" style="margin-top:14px;" aria-label="Lo que ofrecemos" data-analytics-section="offerings">
   <div class="cardHead">
     <h2 class="cardTitle">Lo que ofrecemos</h2>
     <p class="cardHint">Comodidad, naturaleza y experiencias opcionales</p>
@@ -667,17 +763,17 @@ body{ margin:0; }
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Comidas">
       <h3>Comida en el lugar</h3>
-      <p>Platos de la huerta a la mesa con ingredientes organicos de nuestros jardines y productores locales. Recolectar ingredientes puede ser una experiencia opcional.</p>
+      <p>Platos de la huerta a la mesa con ingredientes orgánicos de nuestros jardines y productores locales. Recolectar ingredientes puede ser una experiencia opcional.</p>
       <div class="tagRow" aria-label="Etiquetas">
         <span class="tag">Fresco</span>
         <span class="tag">Local</span>
-        <span class="tag">Organico</span>
+        <span class="tag">Orgánico</span>
       </div>
     </article>
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Bienestar">
       <h3>Bienestar a pedido</h3>
-      <p>Yoga, meditacion y sesiones holisticas disponibles a pedido para que podamos preparar la experiencia que queres.</p>
+      <p>Yoga, meditación y sesiones holísticas disponibles a pedido para que podamos preparar la experiencia que quieres.</p>
       <div class="tagRow" aria-label="Etiquetas">
         <span class="tag">A pedido</span>
         <span class="tag">Restaurador</span>
@@ -697,7 +793,7 @@ body{ margin:0; }
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Zona de descanso">
       <h3>Zona de descanso junto al sendero</h3>
-      <p>Un punto simple para recargar en dias de mountain bike: agua, sombra y un lugar para respirar.</p>
+      <p>Un punto simple para recargar en días de mountain bike: agua, sombra y un lugar para respirar.</p>
       <div class="tagRow" aria-label="Etiquetas">
         <span class="tag">Bici</span>
         <span class="tag">Recarga</span>
@@ -706,8 +802,8 @@ body{ margin:0; }
     </article>
 
     <article class="card mini" style="background: rgba(255,255,255,0.55);" aria-label="Camping">
-      <h3>Tambien camping</h3>
-      <p>Preferis el bosque aun mas cerca? Tambien ofrecemos opciones de camping para quienes buscan una experiencia mas natural.</p>
+      <h3>También camping</h3>
+      <p>Prefieres el bosque aún más cerca? También ofrecemos opciones de camping para quienes buscan una experiencia más natural.</p>
       <div class="tagRow" aria-label="Etiquetas">
         <span class="tag">Simple</span>
         <span class="tag">Naturaleza primero</span>
@@ -717,30 +813,30 @@ body{ margin:0; }
   </div>
 </section>
 
-<section class="card" style="margin-top:14px;" aria-label="Nuestro compromiso">
+<section class="card" style="margin-top:14px;" aria-label="Nuestro compromiso" data-analytics-section="commitment">
   <div class="cardHead">
     <h2 class="cardTitle">Nuestro compromiso</h2>
-    <p class="cardHint">Sostenibilidad y conservacion</p>
+    <p class="cardHint">Sostenibilidad y conservación</p>
   </div>
 
   <div class="commitInner">
     <div class="commitBox" aria-label="Resumen del compromiso">
-      <h3>Disenado para cuidar lo que viniste a ver</h3>
+      <h3>Diseñado para cuidar lo que viniste a ver</h3>
       <p>
-        Estamos comprometidos con la sostenibilidad y con preservar la belleza natural del bosque nublado. Como parte de la region Choco Andino de Pichincha,
+        Estamos comprometidos con la sostenibilidad y con preservar la belleza natural del bosque nublado. Como parte de la región Chocó Andino de Pichincha,
         nos enorgullece proteger un ecosistema de importancia global.
       </p>
       <p>
-        Nuestras practicas se enfocan en minimizar el impacto y apoyar un futuro mas sano para el bosque y las comunidades conectadas a el.
+        Nuestras prácticas se enfocan en minimizar el impacto y apoyar un futuro más sano para el bosque y las comunidades conectadas a el.
       </p>
     </div>
 
     <div class="commitBox" aria-label="Practicas">
       <h3>Como reducimos nuestra huella</h3>
       <ul class="list" aria-label="Practicas de sostenibilidad">
-        <li>Decisiones de diseno eco-conscientes en toda la propiedad</li>
-        <li>Conciencia de energia y recursos (incluida energia solar cuando aplique)</li>
-        <li>Practicas de conservacion de agua</li>
+        <li>Decisiones de diseno ecoconscientes en toda la propiedad</li>
+        <li>Conciencia de energía y recursos (incluida energía solar cuando aplique)</li>
+        <li>Practicas de conservación de agua</li>
         <li>Compra local y cuidado responsable</li>
       </ul>
 
@@ -753,22 +849,22 @@ body{ margin:0; }
   </div>
 </section>
 
-<section class="ctaBand" aria-label="Llamado a la accion">
+<section class="ctaBand" aria-label="Llamado a la acción" data-analytics-section="final_cta">
   <div>
-    <h2>Listo para bajar el ritmo en el bosque nublado?</h2>
+    <h2>¿Listo para bajar el ritmo en el bosque nublado?</h2>
     <p>
-      Reserva tu estadia, preguntanos lo que necesites o contanos que tipo de viaje queres y te vamos a orientar hacia las mejores habitaciones y experiencias.
+      Reserva tu estadía, pregúntanos lo que necesites o cuéntanos que tipo de viaje quieres y te vamos a orientar hacia las mejores habitaciones y experiencias.
     </p>
   </div>
 
   <div class="ctaBtns" aria-label="Botones de CTA">
-    <a class="btn primary" href="/es/reservas/">Reserva tu estadia</a>
-    <a class="btn secondary" href="/es/contacto/">Hacer una pregunta</a>
-    <a class="btn secondary" href="/es/caracteristicas/">Explorar caracteristicas</a>
+    <a class="btn primary" href="/es/reservas/" data-analytics-event="booking_cta_click" data-analytics-label="Es/Reservas" data-analytics-location="primary_cta" data-analytics-page-type="about_page">Reserva tu estadía</a>
+    <a class="btn secondary" href="/es/contacto/" data-analytics-event="secondary_cta_click" data-analytics-label="Es/Contacto" data-analytics-location="secondary_cta" data-analytics-page-type="about_page">Hacer una pregunta</a>
+    <a class="btn secondary" href="/es/características/" data-analytics-event="internal_link_click" data-analytics-label="Es/Características" data-analytics-location="secondary_cta" data-analytics-page-type="about_page">Explorar características</a>
   </div>
 </section>
   </main>
   <div id="siteFooter"></div>
-  <script src="/assets/js/site.js?v=3"></script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
