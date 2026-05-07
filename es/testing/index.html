@@ -1,1 +1,832 @@
+<!DOCTYPE html>
 
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>The Cloud Forest Retreat | Estadía de Eco-Lujo en Ecuador</title>
+<meta content="Un bed and breakfast en las montañas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadías inolvidables en el bosque nublado." name="description"/>
+<meta content="index,follow" name="robots"/>
+<!-- Canonical + hreflang (PRODUCTION URLs) -->
+<link href="https://thecloudforestretreat.com/es/" rel="canonical"/>
+<link href="https://thecloudforestretreat.com/" hreflang="en" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/es/" hreflang="es" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/" hreflang="x-default" rel="alternate"/>
+<!-- Open Graph (PRODUCTION URLs) -->
+<meta content="website" property="og:type"/>
+<meta content="The Cloud Forest Retreat" property="og:site_name"/>
+<meta content="The Cloud Forest Retreat | Estadía de Eco-Lujo en Ecuador" property="og:title"/>
+<meta content="Un bed and breakfast en las montañas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadías inolvidables en el bosque nublado." property="og:description"/>
+<meta content="https://thecloudforestretreat.com/es/" property="og:url"/>
+<meta content="https://thecloudforestretreat.com/og-tcfr.jpg" property="og:image"/>
+<meta content="https://thecloudforestretreat.com/og-tcfr.jpg" property="og:image:secure_url"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="The Cloud Forest Retreat mountain view" property="og:image:alt"/>
+<!-- Twitter (PRODUCTION URLs) -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="The Cloud Forest Retreat | Estadía de Eco-Lujo en Ecuador" name="twitter:title"/>
+<meta content="Un bed and breakfast en las montañas de Ecuador con vistas impresionantes. Confort de eco-lujo, bienestar, naturaleza y estadías inolvidables en el bosque nublado." name="twitter:description"/>
+<meta content="https://thecloudforestretreat.com/og-tcfr.jpg" name="twitter:image"/>
+<!-- Favicons (approved root paths) -->
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#0D5925" name="theme-color"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Global / shared CSS -->
+<link href="/assets/css/site.css" rel="stylesheet">
+<link href="/assets/css/header.css?v=3" rel="stylesheet">
+<style>
+    :root{
+      --bg: #A1BFAA;
+      --forest: #0D5925;
+      --forest-2: #0B2B12;
+      --beige: #F5F5DC;
+      --orange: #E0643A;
+      --line: rgba(13,89,37,.18);
+      --card: rgba(245,245,220,.55);
+      --card2: rgba(245,245,220,.72);
+      --shadow: 0 18px 55px rgba(0,0,0,.14);
+      --r: 22px;
+      --max: 1180px;
+      --font-head: "Playfair Display", serif;
+      --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    
+    html{ overflow-x:hidden; }
+body{
+margin:0;
+      background: var(--bg);
+      color: var(--forest-2);
+      font-family: var(--font-body);
+      overflow-x:hidden;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width:100%; display:block; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 16px 64px;
+    }
+
+    .hero{
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 16px;
+      align-items: stretch;
+      margin-top: 10px;
+    }
+
+    .heroMedia{
+      border-radius: var(--r);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.10);
+      min-height: 420px;
+      position: relative;
+    }
+
+    .heroMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+    }
+
+    .heroOverlay{
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.34));
+      pointer-events:none;
+    }
+
+    .heroCopy{
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(13,89,37,.18);
+      background: var(--card2);
+      padding: 18px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 420px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: rgba(13,89,37,.92);
+    }
+
+    .h1{
+      margin: 10px 0 10px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(32px, 3.9vw, 50px);
+      color: var(--forest-2);
+    }
+
+    .sub{
+      margin: 0;
+      font-size: 15.8px;
+      line-height: 1.78;
+      color: rgba(13,89,37,.96);
+      max-width: 62ch;
+      font-weight: 600;
+    }
+
+    .pillRow{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,.20);
+      background: rgba(255,255,255,.62);
+      color: var(--forest-2);
+      font-weight: 800;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .heroCtas{
+      margin-top: 16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      border: 1px solid rgba(13,89,37,.18);
+      box-shadow: 0 14px 30px rgba(0,0,0,.12);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .btn.primary{
+      background: var(--orange);
+      color: #fff;
+      border-color: rgba(0,0,0,.10);
+      box-shadow: 0 14px 30px rgba(224,100,58,.26);
+    }
+
+    .btn.secondary{
+      background: rgba(255,255,255,.64);
+      color: var(--forest-2);
+    }
+
+    .btn.ghost{
+      background: transparent;
+      color: var(--forest-2);
+      border-color: rgba(13,89,37,.18);
+      box-shadow: none;
+    }
+
+    
+    /* Google Reviews badge (homepage) */
+    .tcfr-google-reviews{
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .tcfr-google-reviews-inner{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "left tourism"
+        "actions tourism";
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 10px;
+    }
+
+    .tcfr-google-left{ grid-area: left; display:flex; align-items:center; gap: 12px; min-width: 0; }
+    .tcfr-google-logo{ width: 34px; height: 34px; flex: 0 0 auto; }
+
+    .tcfr-google-rating{
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      min-width: 0;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .tcfr-rating-score{ font-weight: 700; color: #1f3d2b; }
+    .tcfr-stars{ color: #FBBC05; letter-spacing: 1px; font-size: 15px; }
+    .tcfr-review-count{ color: #4b6b5a; }
+
+    .tcfr-tourism{ grid-area: tourism; display:flex; align-items:center; justify-content:center; padding-right: 2px; }
+    .tcfr-tourismLogo{
+      width: 96px;
+      height: auto;
+      display:block;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,0.10));
+    }
+
+    .tcfr-google-actions{
+      grid-area: actions;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @media (max-width: 900px){
+      .tcfr-google-reviews-inner{
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "left tourism"
+          "actions actions";
+      }
+      .tcfr-tourismLogo{ width: 78px; }
+
+      .tcfr-google-actions{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .tcfr-google-actions .btn{ width: 100%; justify-content:center; }
+    }
+
+
+    .trustRow{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .trustCard{
+      border-radius: 16px;
+      background: rgba(255,255,255,.60);
+      border: 1px solid rgba(13,89,37,.16);
+      padding: 12px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      min-width: 0;
+    }
+
+    .trustRow .trustCard.fullRow{ grid-column: 1 / -1; }
+
+
+    .trustTitle{
+      margin: 0 0 6px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 13.8px;
+      color: var(--forest-2);
+    }
+
+    .trustText{
+      margin: 0;
+      color: rgba(13,89,37,.92);
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .section{
+      margin-top: 18px;
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(13,89,37,.18);
+      background: var(--card);
+      padding: 18px;
+    }
+
+    .sectionHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .h2{
+      margin: 0;
+      font-family: var(--font-head);
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      color: var(--forest-2);
+      font-weight: 900;
+    }
+
+    .hint{
+      margin: 0;
+      color: rgba(13,89,37,.92);
+      font-size: 13.2px;
+      line-height: 1.55;
+      max-width: 90ch;
+      font-weight: 600;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .tile{
+      border-radius: 18px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      padding: 14px;
+      min-height: 132px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--forest-2);
+    }
+
+    .tileTitle{
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 16px;
+      color: var(--forest-2);
+    }
+
+    .tileText{
+      margin: 0;
+      color: rgba(13,89,37,.94);
+      font-size: 13.5px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .tileMeta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      color: rgba(13,89,37,.92);
+      font-weight: 800;
+      font-size: 12.5px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      font-weight: 900;
+      font-size: 12.2px;
+      color: var(--forest-2);
+      white-space: nowrap;
+    }
+
+    .photoStrip{
+      margin-top: 12px;
+      display:grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    .photoCard{
+      border-radius: 18px;
+      overflow:hidden;
+      border: 1px solid rgba(13,89,37,.16);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      min-height: 220px;
+      position: relative;
+    }
+
+    .photoCard img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photoCap{
+      position:absolute;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(245,245,220,.90);
+      border: 1px solid rgba(13,89,37,.16);
+      color: var(--forest-2);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: 13px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.12);
+    }
+
+    .band{
+      margin-top: 18px;
+      border-radius: var(--r);
+      border: 1px solid rgba(13,89,37,.18);
+      box-shadow: var(--shadow);
+      background: rgba(245,245,220,.76);
+      padding: 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .bandTitle{
+      margin: 0 0 6px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      color: var(--forest-2);
+    }
+
+    .bandText{
+      margin: 0;
+      color: rgba(13,89,37,.94);
+      line-height: 1.6;
+      font-size: 13.8px;
+      max-width: 80ch;
+      font-weight: 600;
+    }
+
+    .bandActions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    @media (max-width: 900px){
+      .wrap{ padding: 10px 14px 54px; }
+
+      .hero{ grid-template-columns: 1fr; gap: 12px; }
+      .heroMedia{ min-height: 290px; }
+      .heroCopy{ min-height: 0; }
+
+      .pillRow{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .pill{ width: 100%; }
+      .pillRow .pill:nth-child(4){
+        grid-column: 1 / -1;
+      }
+
+      .heroCtas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .heroCtas .btn{ width: 100%; }
+      .heroCtas .btn.ghost{
+        grid-column: 1 / -1;
+      }
+
+      .trustRow{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .photoStrip{ grid-template-columns: 1fr; }
+      .photoCard{ min-height: 210px; }
+    }
+
+    @media (min-width: 901px){
+      .heroMedia{ min-height: 520px; }
+      .heroCopy{ min-height: 520px; }
+    }
+  </style>
+</link></link>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LodgingBusiness",
+        "Hotel"
+      ],
+      "@id": "https://thecloudforestretreat.com/es/#lodgingbusiness",
+      "name": "The Cloud Forest Retreat",
+      "url": "https://thecloudforestretreat.com/es/",
+      "description": "Un bed and breakfast de eco-lujo en el bosque nublado de Ecuador cerca de Quito, con vistas de montaña, naturaleza, bienestar y habitaciones tranquilas.",
+      "image": "https://thecloudforestretreat.com/og-tcfr.jpg",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EC",
+        "addressRegion": "Pichincha"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Cloud forest views",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Birdwatching nearby",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Waterfalls nearby",
+          "value": true
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "9"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thecloudforestretreat.com/#website",
+      "name": "The Cloud Forest Retreat",
+      "url": "https://thecloudforestretreat.com/",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thecloudforestretreat.com/es/#webpage",
+      "url": "https://thecloudforestretreat.com/es/",
+      "name": "The Cloud Forest Retreat | Estadía de Eco-Lujo en Ecuador",
+      "isPartOf": {
+        "@id": "https://thecloudforestretreat.com/#website"
+      },
+      "about": {
+        "@id": "https://thecloudforestretreat.com/es/#lodgingbusiness"
+      },
+      "inLanguage": "es"
+    }
+  ]
+}</script>
+</head>
+<body data-page-language="es" data-page-type="home_page">
+<div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="home_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/" hreflang="en" lang="en">English</a>
+  <a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="home_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/" hreflang="es" lang="es">Español</a>
+  </nav>
+  
+<main aria-label="Inicio de The Cloud Forest Retreat" class="wrap">
+<section aria-label="Hero" class="hero" data-analytics-section="hero">
+<div aria-label="Mountain retreat view" class="heroMedia">
+<img alt="The Cloud Forest Retreat in the mountains of Ecuador" decoding="async" loading="eager" src="/assets/images/pages/home/tcfr_images_home_hero-02.jpg"/>
+<div aria-hidden="true" class="heroOverlay"></div>
+</div>
+<div aria-label="Welcome message" class="heroCopy">
+<div>
+<div class="kicker">Retiro de montaña de eco-lujo</div>
+<h1 class="h1">Bienvenido a The Cloud Forest Retreat</h1>
+<p class="sub">
+        Despierta sobre el valle con vistas impresionantes, aire fresco de montaña y mañanas tranquilas.
+        Un bed and breakfast escénico pensado para viajar sin prisa, rodeado de naturaleza y comodidad en el bosque nublado de Ecuador.
+      </p>
+<div aria-label="Destacados" class="pillRow">
+<span class="pill">Aves</span>
+<span class="pill">Cascadas</span>
+<span class="pill">Naturaleza</span>
+<span class="pill">Bienestar</span>
+</div>
+<div aria-label="Primary actions" class="heroCtas">
+<a class="btn primary" data-analytics-cta-type="booking" data-analytics-event="hero_cta_click" data-analytics-label="Reservar" data-analytics-location="hero" data-analytics-page-type="home_page" href="/es/reservas/">Reservar</a>
+<a class="btn secondary" data-analytics-cta-type="rooms" data-analytics-event="secondary_cta_click" data-analytics-label="Explorar habitaciones" data-analytics-location="hero" data-analytics-page-type="home_page" href="/es/habitaciones/">Explorar habitaciones</a>
+<a class="btn ghost" data-analytics-cta-type="features" data-analytics-event="internal_link_click" data-analytics-label="Ver características" data-analytics-location="hero" data-analytics-page-type="home_page" href="/es/caracteristicas/">Ver características</a>
+</div>
+</div>
+<section aria-label="Google reviews" class="tcfr-google-reviews" data-analytics-section="google_reviews">
+<div class="tcfr-google-reviews-inner">
+<div aria-label="Google rating badge" class="tcfr-google-left">
+<img alt="Google Reviews" class="tcfr-google-logo" decoding="async" loading="lazy" src="/assets/images/icons/tcfr_logo_google_reviews.png"/>
+<div class="tcfr-google-rating">
+<span class="tcfr-rating-score">5.0</span>
+<span aria-label="5 out of 5 stars" class="tcfr-stars">★★★★★</span>
+<span class="tcfr-review-count">(9 reseñas)</span>
+</div>
+</div>
+<div aria-label="Ecuador tourism logo" class="tcfr-tourism">
+<img alt="Ecuador tourism" class="tcfr-tourismLogo" decoding="async" loading="lazy" src="/assets/images/logo_ecuador_tourism_01.png"/>
+</div>
+<div aria-label="Google review actions" class="tcfr-google-actions">
+<a class="btn secondary" data-analytics-cta-type="google_reviews" data-analytics-event="outbound_link_click" data-analytics-label="Leer reseñas" data-analytics-location="google_reviews" data-analytics-page-type="home_page" href="https://g.page/r/CQq5wBqKgv0DEAE" rel="noopener" target="_blank">Leer reseñas</a>
+<a class="btn primary" data-analytics-cta-type="google_reviews" data-analytics-event="outbound_link_click" data-analytics-label="Escribir una reseña" data-analytics-location="google_reviews" data-analytics-page-type="home_page" href="https://g.page/r/CQq5wBqKgv0DEAE/review" rel="noopener" target="_blank">Escribir una reseña</a>
+</div>
+</div>
+</section>
+<div aria-label="Trust and quick info" class="trustRow">
+<div class="trustCard">
+<p class="trustTitle">Planificación fácil</p>
+<p class="trustText">La llegada se siente clara y sin esfuerzo, con cada detalle listo desde el primer momento.</p>
+</div>
+<div class="trustCard">
+<p class="trustTitle">Vistas inolvidables</p>
+<p class="trustText">Café al amanecer, panoramas del bosque nublado y noches tranquilas bajo las estrellas.</p>
+</div>
+<div class="trustCard fullRow">
+<p class="trustTitle">A aproximadamente 2 horas de Quito</p>
+<p class="trustText">El trayecto se siente claro, con cada detalle resuelto antes de llegar.</p>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Experiences" class="section" data-analytics-section="experiences">
+<div class="sectionHead">
+<h2 class="h2">Vive el bosque nublado</h2>
+<p class="hint">Elige tu ritmo. Llena tus días de naturaleza, bienestar y paisajes espectaculares.</p>
+</div>
+<div aria-label="Experience tiles" class="grid3">
+<a aria-label="Avistamiento de aves" class="tile" data-analytics-event="nature_topic_click" data-analytics-label="Avistamiento de aves Colibríes, tucanes y especies del bosque nublado aparecen e" data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-topic="avistamiento_de_aves" href="/es/caracteristicas/actividades/">
+<div>
+<p class="tileTitle">Avistamiento de aves</p>
+<p class="tileText">Colibríes, tucanes y especies del bosque nublado aparecen entre los árboles.</p>
+</div>
+<div class="tileMeta">
+<span class="badge">Mejor al amanecer</span>
+<span>Explorar</span>
+</div>
+</a>
+<a aria-label="Cascadas" class="tile" data-analytics-event="nature_topic_click" data-analytics-label="Cascadas Caminatas cortas hacia cascadas con bruma y miradores perfectos para fo" data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-topic="cascadas" href="/es/caracteristicas/actividades/">
+<div>
+<p class="tileTitle">Cascadas</p>
+<p class="tileText">Caminatas cortas hacia cascadas con bruma y miradores perfectos para fotos y refrescarte.</p>
+</div>
+<div class="tileMeta">
+<span class="badge">Senderos escénicos</span>
+<span>Explorar</span>
+</div>
+</a>
+<a aria-label="Bienestar y comodidades" class="tile" data-analytics-event="internal_link_click" data-analytics-label="Bienestar Mañanas sin prisa, confort que reconforta y espacio para reconectar co" data-analytics-location="tile_grid" data-analytics-page-type="home_page" href="/es/caracteristicas/amenidades/">
+<div>
+<p class="tileTitle">Bienestar</p>
+<p class="tileText">Mañanas sin prisa, confort que reconforta y espacio para reconectar con la naturaleza alrededor.</p>
+</div>
+<div class="tileMeta">
+<span class="badge">Recarga</span>
+<span>Explorar</span>
+</div>
+</a>
+</div>
+<div aria-label="Photo strip" class="photoStrip">
+<div class="photoCard">
+<img alt="Panoramic mountain view near the retreat" decoding="async" loading="lazy" src="/assets/images/pages/home/tcfr_images_home_01.jpg"/>
+<div class="photoCap">Vistas de montaña que parecen irreales</div>
+</div>
+<div class="photoCard">
+<img alt="Cloud forest greenery and trails" decoding="async" loading="lazy" src="/assets/images/pages/home/tcfr_images_home_02.jpg"/>
+<div class="photoCap">Senderos del bosque nublado cerca</div>
+</div>
+<div class="photoCard">
+<img alt="Cozy eco-luxury room interior" decoding="async" loading="lazy" src="/assets/images/pages/home/tcfr_images_home_03.jpg"/>
+<div class="photoCap">Pensado para la calma</div>
+</div>
+</div>
+</section>
+<section aria-label="Planifica tu estadía cerca de Quito" class="section" data-analytics-section="planifica_tu_estad_a_cerca_de_quito">
+<div class="sectionHead">
+<h2 class="h2">Planifica tu estadía en el bosque nublado cerca de Quito</h2>
+<p class="hint">El entorno se revela poco a poco, entre niebla, montañas y momentos que se sienten distintos a la ciudad.</p>
+</div>
+<div aria-label="Planning tiles" class="grid3">
+<a aria-label="Dónde alojarse cerca de Quito naturaleza" class="tile" data-analytics-event="related_guide_click" data-analytics-label="Dónde alojarse cerca de Quito naturaleza Un punto de partida claro para elegir u" data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-topic="dónde_alojarse_cerca_de_quito_naturaleza" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">
+<div>
+<p class="tileTitle">Dónde alojarse cerca de Quito naturaleza</p>
+<p class="tileText">Un punto de partida claro para elegir una estadía rodeada de bosque, aire más fresco y un ritmo más tranquilo cerca de Quito.</p>
+</div>
+<div class="tileMeta">
+<span class="badge">Planificar estadía</span>
+<span>Leer</span>
+</div>
+</a>
+<a aria-label="Mejor eco lodge Quito" class="tile" data-analytics-event="related_guide_click" data-analytics-label="Mejor eco lodge Quito El lado eco lodge se revela entre la naturaleza cercana y " data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-topic="mejor_eco_lodge_quito" href="/es/mejor-eco-lodge-quito/">
+<div>
+<p class="tileTitle">Mejor eco lodge Quito</p>
+<p class="tileText">El lado eco lodge se revela entre la naturaleza cercana y la calma del entorno.</p>
+</div>
+<div class="tileMeta">
+<span class="badge">Eco lodge</span>
+<span>Leer</span>
+</div>
+</a>
+<a aria-label="Bosque nublado Quito Ecuador" class="tile" data-analytics-event="related_guide_click" data-analytics-label="Bosque nublado Quito Ecuador Acércate al entorno del bosque nublado, con niebla," data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-topic="bosque_nublado_quito_ecuador" href="/es/bosque-nublado-quito-ecuador/">
+<div>
+<p class="tileTitle">Bosque nublado Quito Ecuador</p>
+<p class="tileText">Acércate al entorno del bosque nublado, con niebla, montañas verdes y el cambio de ritmo que empieza apenas dejas la ciudad.</p>
+</div>
+<div class="tileMeta">
+<span class="badge">Bosque nublado</span>
+<span>Leer</span>
+</div>
+</a>
+</div>
+</section>
+<section aria-label="Habitaciones" class="section" data-analytics-section="habitaciones">
+<div class="sectionHead">
+<h2 class="h2">Habitaciones diseñadas para el descanso</h2>
+<p class="hint">Noches tranquilas, detalles acogedores y vistas que invitan a despertar sin prisa.</p>
+</div>
+<div aria-label="Tarjetas de habitaciones" class="grid3">
+<a aria-label="Suite Panorámica" class="tile" data-analytics-event="room_card_click" data-analytics-label="Suite Panorámica Más espacio, mayor confort y las mejores vistas del amanecer. P" data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-room="suite_panorámica" href="/es/habitaciones/suite-panoramica/">
+<div>
+<p class="tileTitle">Suite Panorámica</p>
+<p class="tileText">Más espacio, mayor confort y las mejores vistas del amanecer.</p>
+</div>
+<div class="tileMeta"><span class="badge">Premium</span><span>Vista</span></div>
+</a>
+<a aria-label="Habitación Amanecer" class="tile" data-analytics-event="room_card_click" data-analytics-label="Habitación Amanecer Acogedora, tranquila y pensada para mañanas sin prisa y aire" data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-room="habitación_amanecer" href="/es/habitaciones/habitacion-amanecer/">
+<div>
+<p class="tileTitle">Habitación Amanecer</p>
+<p class="tileText">Acogedora, tranquila y pensada para mañanas sin prisa y aire de montaña.</p>
+</div>
+<div class="tileMeta"><span class="badge">Acogedora</span><span>Vista</span></div>
+</a>
+<a aria-label="Habitación Atardecer" class="tile" data-analytics-event="room_card_click" data-analytics-label="Habitación Atardecer Un refugio sereno para parejas y escapadas tranquilas, con " data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-room="habitación_atardecer" href="/es/habitaciones/habitacion-atardecer/">
+<div>
+<p class="tileTitle">Habitación Atardecer</p>
+<p class="tileText">Un refugio sereno para parejas y escapadas tranquilas, con luz suave al atardecer.</p>
+</div>
+<div class="tileMeta"><span class="badge">Relax</span><span>Vista</span></div>
+</a>
+</div>
+</section>
+<section aria-label="Explora más páginas del bosque nublado" class="section" data-analytics-section="explora_m_s_p_ginas_del_bosque_nublado">
+<div class="sectionHead">
+<h2 class="h2">Explora más a fondo el bosque nublado</h2>
+<p class="hint">Descubre más sobre el ecosistema, la vida silvestre y las experiencias que dan forma a tu estadía.</p>
+</div>
+<div class="grid3">
+<a class="tile" data-analytics-event="nature_topic_click" data-analytics-label="Flora del bosque nublado Entiende la vida vegetal que define la atmósfera, el co" data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-topic="flora_del_bosque_nublado" href="/es/caracteristicas/flora/">
+<div>
+<p class="tileTitle">Flora del bosque nublado</p>
+<p class="tileText">Entiende la vida vegetal que define la atmósfera, el color y la biodiversidad del bosque.</p>
+</div>
+<div class="tileMeta"><span class="badge">Flora</span><span>Explorar</span></div>
+</a>
+<a class="tile" data-analytics-event="nature_topic_click" data-analytics-label="Cráter Pululahua Explora uno de los paisajes mas singulares cerca de Quito que d" data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-topic="cráter_pululahua" href="/es/caracteristicas/pululahua/">
+<div>
+<p class="tileTitle">Cráter Pululahua</p>
+<p class="tileText">Explora uno de los paisajes mas singulares cerca de Quito que da forma a la región.</p>
+</div>
+<div class="tileMeta"><span class="badge">Geografía</span><span>Explorar</span></div>
+</a>
+<a class="tile" data-analytics-event="related_guide_click" data-analytics-label="Distancia desde Quito Entiende el tiempo de viaje, el acceso y cómo se siente el" data-analytics-location="tile_grid" data-analytics-page-type="home_page" data-analytics-topic="distancia_desde_quito" href="/es/distancia-quito-bosque-nublado/">
+<div>
+<p class="tileTitle">Distancia desde Quito</p>
+<p class="tileText">Entiende el tiempo de viaje, el acceso y cómo se siente el trayecto hacia el bosque nublado.</p>
+</div>
+<div class="tileMeta"><span class="badge">Planificación</span><span>Leer</span></div>
+</a>
+</div>
+</section>
+<section aria-label="Booking call to action" class="band" data-analytics-section="booking_call_to_action">
+<div>
+<p class="bandTitle">¿Listo para tu estadía en la montaña?</p>
+<p class="bandText">
+      Las fechas se acomodan con facilidad, y la estadía toma forma en pocos momentos.
+    </p>
+</div>
+<div aria-label="Booking actions" class="bandActions">
+<a class="btn primary" data-analytics-cta-type="booking" data-analytics-event="booking_cta_click" data-analytics-label="Reservar" data-analytics-location="final_booking_band" data-analytics-page-type="home_page" href="/es/reservas/">Reservar</a>
+<a class="btn secondary" data-analytics-cta-type="contact" data-analytics-event="secondary_cta_click" data-analytics-label="Contacto" data-analytics-location="final_booking_band" data-analytics-page-type="home_page" href="/es/contacto/">Contacto</a>
+</div>
+</section>
+</main>
+<div id="siteFooter"></div><script src="/assets/js/site.js"></script>
+  
+
+</body>
+</html>
