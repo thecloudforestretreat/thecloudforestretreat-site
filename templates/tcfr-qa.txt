@@ -1,0 +1,297 @@
+Next, proceed to review, update and provide complete downloadable .txt files
+
+THE CLOUD FOREST RETREAT EN/ES PAGE QA + ANALYTICS TEMPLATE
+Strict Production Mode
+Production-Safe Global CSS and Centralized Analytics Enforcement
+
+Use this prompt when uploading an English page and its Spanish counterpart for thecloudforestretreat.com. The goal is to audit and fully update both HTML files so they are ready to go live. Return complete downloadable .txt files for both pages. Do not return partial snippets unless explicitly requested.
+
+PAGE INFORMATION
+- English Page URL:
+- Spanish Counterpart URL:
+- Language Pair: EN / ES
+- Page Type:
+- Priority:
+- Commercial / Conversion Priority:
+- Notes:
+
+STRICT MODE STANDARD
+This is a strict production QA workflow. Do not mark a page ready to go live unless the full checklist passes. If any item fails, clearly list the blocker and return corrected files whenever possible.
+
+CORE OPERATING PRINCIPLE
+Audit first. Fix only what is incorrect, missing, duplicated, conflicting, unsafe, or inconsistent with the approved TCFR architecture. Preserve working layout, SEO copy, image paths, page intent, and room/property details unless a change is required to pass QA.
+
+MOST IMPORTANT PRIORITIES
+1. Functional EN/ES language switch.
+2. Centralized analytics through /assets/js/site.js.
+3. Strong SEO accuracy without unnecessary title or description rewrites.
+4. Correct canonical, hreflang, Open Graph, Twitter, schema, and breadcrumbs where relevant.
+5. Global CSS usage wherever possible.
+6. Header/footer injection working correctly through TCFR site.js.
+7. Correct body data-page-type and data-page-language values.
+8. South American Spanish accents only in user-facing Spanish copy and metadata.
+9. No accented characters in technical paths, slugs, IDs, classes, data attributes, schema URLs, image paths, CSS paths, JS paths, or analytics event names.
+10. Important CTAs, booking actions, language switch links, and utility links tracked through shared data-analytics-* attributes.
+
+GLOBAL FILE ARCHITECTURE
+Analytics execution must be centralized in:
+/assets/js/site.js
+
+Approved shared styling stack:
+/assets/css/header.css
+/assets/css/footer.css
+/assets/css/site.css
+
+Page files should NOT duplicate analytics logic for:
+- GA4 loading
+- gtag initialization
+- page_view_enhanced
+- scroll_depth
+- click listeners for [data-analytics-event]
+- form tracking
+- FAQ tracking
+- content_section_view observers
+
+site.js responsibilities:
+- load GA4 with measurement ID G-D3W4SP5MGX
+- expose window.gtag
+- send page_view_enhanced
+- send scroll_depth at 25, 50, 75, and 90 percent
+- listen globally for [data-analytics-event] clicks
+- detect internal links, outbound links, WhatsApp links, email links, phone links, and CTA clicks
+- track language_switch_click
+- track form_start, form_submit_success, form_submit_error
+- track faq_expand
+- track content_section_view when sections declare data-analytics-section
+- include page_type and page_language in event payloads when available
+
+TCFR PAGE SHELL STANDARD
+Every bilingual page must include:
+<div id="siteHeader" data-current-lang="en"></div>
+or
+<div id="siteHeader" data-current-lang="es"></div>
+
+and:
+<div id="siteFooter"></div>
+
+TCFR pages should load site.js exactly once:
+<script src="/assets/js/site.js"></script>
+
+Rules:
+- Do not duplicate site.js includes.
+- Do not duplicate header/footer fragment loaders if site.js already handles injection.
+- Do not add page-level analytics scripts if site.js already covers them.
+- Use only one #siteHeader and one #siteFooter per page.
+
+LANGUAGE SWITCH STANDARD
+Every bilingual page must have raw EN/ES language links immediately after the site header container and before hero/main content.
+
+English page pattern:
+<div id="siteHeader" data-current-lang="en"></div>
+<nav class="rawLangLinks" aria-label="Language switch">
+  <a href="FULL_EN_URL" lang="en" hreflang="en" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="en">English</a>
+  <a href="FULL_ES_URL" lang="es" hreflang="es" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="es">Español</a>
+</nav>
+
+Spanish page pattern:
+<div id="siteHeader" data-current-lang="es"></div>
+<nav class="rawLangLinks" aria-label="Selector de idioma">
+  <a href="FULL_EN_URL" lang="en" hreflang="en" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="en">English</a>
+  <a href="FULL_ES_URL" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="es">Español</a>
+</nav>
+
+Language switch rules:
+- Keep class name exactly: rawLangLinks
+- Use real anchor tags in raw HTML
+- Use hreflang on both links
+- Use aria-current="page" only on the active language
+- Track both links with language_switch_click
+- Keep the switch directly under #siteHeader
+- Prefer shared site.css for switch styling
+
+BODY ATTRIBUTE STANDARD
+Every page must set:
+- data-page-type="VALUE"
+- data-page-language="en" or "es"
+
+Recommended TCFR page types:
+- home_page
+- booking_page
+- contact_page
+- rooms_hub
+- room_detail_page
+- room_support_page
+- features_hub
+- feature_detail_page
+- destination_support_page
+- gallery_page
+- money_page
+- planning_page
+- info_page
+- comparison_page
+- blog_hub
+- blog_article
+- about_page
+- legal_page
+
+ACCENT RULE
+Use South American Spanish accents correctly in all visible Spanish copy and metadata.
+Preserve real accents in proper names on both EN and ES pages where the name officially uses them, including Chocó Andino, Pululahua where required by style, Río Guayllabamba, Ecuadorian place names, and room/region names if officially accented.
+Do not add accents to:
+- URLs
+- slugs
+- image paths
+- file paths
+- CSS class names
+- IDs
+- data attributes
+- schema URLs
+- JavaScript identifiers
+- analytics event names
+- page_type values
+- asset folders
+
+SEO STANDARD
+Each page pair must be reviewed to reach the closest possible production-safe 9.5 SEO level.
+
+Verify:
+- unique, specific title tag
+- strong meta description tied to search intent
+- one clear H1
+- supporting H2 structure
+- canonical URL correct for each language
+- hreflang pair correct for each language
+- Open Graph title/description/url/image
+- Twitter card metadata
+- schema appropriate to the page
+- no mixed-language metadata
+- no English UI on Spanish pages
+- no Spanish UI on English pages
+
+Preferred schema by page type:
+- home_page: LodgingBusiness, Hotel, FAQPage
+- booking_page: LodgingBusiness, Hotel, FAQPage
+- rooms_hub: LodgingBusiness, Hotel
+- room_detail_page: Hotel or LodgingBusiness + FAQPage when useful
+- money_page: LodgingBusiness, FAQPage
+- planning_page: WebPage, FAQPage
+- info_page: WebPage, FAQPage
+- comparison_page: WebPage, FAQPage
+- blog_article: BlogPosting
+- about_page: AboutPage
+- contact_page: ContactPage
+
+CENTRAL ANALYTICS QA STANDARD
+All analytics should be implemented through:
+/assets/js/site.js
+
+Page files should provide:
+- correct body data-page-type and data-page-language
+- correct data-analytics-* attributes on tracked elements
+- correct rawLangLinks switch
+- correct canonical / hreflang / schema
+
+Before handoff, confirm:
+- [ ] /assets/js/site.js is loaded once
+- [ ] no conflicting page-level analytics script exists
+- [ ] important CTAs have data-analytics-event
+- [ ] room / stay / booking CTAs use clear CTA event names
+- [ ] internal links use internal_link_click unless page-type-specific
+- [ ] outbound links use outbound_link_click
+- [ ] WhatsApp links use whatsapp_click unless a more specific event is defined
+- [ ] email links use email_click
+- [ ] phone links use phone_click
+
+SITEWIDE ANALYTICS REQUIRED
+Confirm which apply on the page:
+- [ ] page_view_enhanced
+- [ ] language_switch_click
+- [ ] primary_cta_click
+- [ ] secondary_cta_click
+- [ ] internal_link_click
+- [ ] outbound_link_click
+- [ ] scroll_depth
+- [ ] form_start
+- [ ] form_submit_success
+- [ ] form_submit_error
+- [ ] faq_expand
+
+TCFR PAGE-TYPE-SPECIFIC ANALYTICS
+Money page / booking-focused page:
+- [ ] hero_cta_click
+- [ ] room_card_click
+- [ ] stay_comparison_click
+- [ ] booking_cta_click
+- [ ] booking_form_start
+
+Rooms / room detail:
+- [ ] room_gallery_click
+- [ ] room_cta_click
+- [ ] room_compare_click
+
+Planning / utility:
+- [ ] utility_cta_click
+- [ ] related_guide_click
+- [ ] packing_checklist_click
+- [ ] route_planning_click
+
+Blog / guide:
+- [ ] hero_cta_click
+- [ ] related_content_click
+- [ ] content_section_view
+- [ ] inline_recommendation_click
+- [ ] toc_click
+
+Birding / nature support:
+- [ ] nature_topic_click
+- [ ] birding_support_click
+- [ ] sister_site_click
+
+REQUIRED DATA ATTRIBUTES
+Add these where relevant:
+- data-analytics-event
+- data-analytics-label
+- data-analytics-location
+- data-analytics-page-type
+- data-analytics-target-language
+- data-analytics-room
+- data-analytics-topic
+- data-analytics-cta-type
+- data-analytics-form
+- data-analytics-section
+
+TCFR LINKING AND CONVERSION STANDARD
+Pages must reinforce the inlink/outlink strategy from the sitemap master where relevant.
+- Support booking pages from rooms, planning, and commercial pages.
+- Support high-opportunity planning pages from commercial pages and blog content.
+- Support birding stay pages without turning TCFR into a specialist tour site.
+- Use contextual internal links, not random blocks of unrelated links.
+
+OUTPUT REQUIREMENTS
+Return:
+1. Updated English page as a complete downloadable .txt file
+2. Updated Spanish page as a complete downloadable .txt file
+3. Short QA summary with:
+   - what was fixed
+   - any blockers
+   - analytics added or confirmed
+   - SEO issues corrected
+   - hreflang/canonical/language-switch status
+
+QA CHECKLIST BEFORE HANDOFF
+- [ ] EN/ES switch directly under #siteHeader
+- [ ] data-current-lang correct
+- [ ] body data-page-type correct
+- [ ] body data-page-language correct
+- [ ] site.js loaded once
+- [ ] no duplicate analytics logic
+- [ ] canonical correct
+- [ ] hreflang correct
+- [ ] metadata localized correctly
+- [ ] Spanish accents correct in visible Spanish copy
+- [ ] proper names preserve real accents
+- [ ] no accents added to technical identifiers
+- [ ] analytics attributes added to major tracked elements
+- [ ] important internal links present
+- [ ] major CTAs present and tracked
+- [ ] page is production-safe and ready to go live
