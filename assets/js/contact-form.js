@@ -1,6 +1,7 @@
 /* /assets/js/contact-form.js
    The Cloud Forest Retreat contact form handler
    CSP-safe external script. No inline JavaScript required.
+   v2: treats any 2xx response as success unless the API explicitly returns failure.
 */
 (function(){
   "use strict";
@@ -41,7 +42,7 @@
   function getLang(form){
     var input = form.querySelector('input[name="lang"]');
     var lang = input && input.value ? input.value : document.documentElement.lang || document.body.getAttribute("data-page-language") || "en";
-    lang = String(lang).toLowerCase().slice(0,2);
+    lang = String(lang).toLowerCase().slice(0, 2);
     return lang === "es" ? "es" : "en";
   }
 
@@ -61,7 +62,7 @@
     return s.slice(0, i) + s.charAt(i).toUpperCase() + s.slice(i + 1);
   }
 
-  function getStatusElements(lang){
+  function getStatusElements(){
     var statusBox = document.getElementById("tcfrStatus") || document.getElementById("tcfrStatusBox") || document.getElementById("tcfrContactStatusCard");
     var statusTitle = document.getElementById("tcfrStatusTitle");
     var statusMsg = document.getElementById("tcfrStatusMsg");
@@ -73,7 +74,7 @@
       statusMsg = statusBox.querySelector(".statusMsg") || statusBox.querySelector(".statusText") || statusBox.querySelector(".statusBody") || statusBox.querySelector("p");
     }
 
-    return { box: statusBox, title: statusTitle, msg: statusMsg, lang: lang };
+    return { box: statusBox, title: statusTitle, msg: statusMsg };
   }
 
   function setStatus(status, kind, title, msg){
@@ -102,11 +103,6 @@
     }
   }
 
-  function getBackendMessage(data, fallback){
-    if(!data) return fallback;
-    return data.message || data.error || data.detail || data.reason || fallback;
-  }
-
   function normalizeFields(form){
     var firstNameEl = form.querySelector("#first_name");
     var lastNameEl = form.querySelector("#last_name");
@@ -119,17 +115,34 @@
 
   async function readResponse(res){
     var contentType = res.headers.get("content-type") || "";
+
     if(contentType.indexOf("application/json") !== -1){
       return await res.json().catch(function(){ return {}; });
     }
 
     var text = await res.text().catch(function(){ return ""; });
     if(!text) return {};
+
     try{
       return JSON.parse(text);
     }catch(_err){
       return { message: text.slice(0, 300) };
     }
+  }
+
+  function getBackendMessage(data, fallback){
+    if(!data) return fallback;
+    return data.message || data.error || data.detail || data.reason || fallback;
+  }
+
+  function isExplicitFailure(data){
+    if(!data || typeof data !== "object") return false;
+    if(data.ok === false) return true;
+    if(data.success === false) return true;
+    if(String(data.status || "").toLowerCase() === "error") return true;
+    if(String(data.status || "").toLowerCase() === "failed") return true;
+    if(data.error) return true;
+    return false;
   }
 
   ready(function(){
@@ -138,7 +151,7 @@
 
     var lang = getLang(form);
     var copy = COPY[lang];
-    var status = getStatusElements(lang);
+    var status = getStatusElements();
     var submitBtn = form.querySelector('button[type="submit"]') || document.getElementById("tcfrSubmitBtn") || document.getElementById("tcfrContactSubmitBtn");
     var sourcePageEl = form.querySelector('input[name="source_page"]');
 
@@ -160,15 +173,10 @@
       event.preventDefault();
       event.stopPropagation();
 
-      if(!form.isConnected){
-        return;
-      }
-
+      if(!form.isConnected) return;
       normalizeFields(form);
 
-      if(typeof form.reportValidity === "function" && !form.reportValidity()){
-        return;
-      }
+      if(typeof form.reportValidity === "function" && !form.reportValidity()) return;
 
       if(submitBtn){
         submitBtn.disabled = true;
@@ -218,10 +226,14 @@
         });
 
         var data = await readResponse(res);
-        var success = res.ok && (data.ok === true || data.success === true || data.status === "success");
+
+        /* Important: many simple contact endpoints return HTTP 200/204 with an empty body.
+           That is success. Only treat the submission as failed when the HTTP status is not 2xx
+           or when the API explicitly returns a failure flag. */
+        var success = res.ok && !isExplicitFailure(data);
 
         if(!success){
-          var backendMsg = getBackendMessage(data, copy.defaultError);
+          var backendMsg = getBackendMessage(data, copy.defaultError + " HTTP " + res.status + ".");
           setStatus(status, "error", copy.unableTitle, backendMsg);
           track("form_submit_error", {
             event_label: backendMsg,
@@ -236,7 +248,8 @@
         track("form_submit_success", {
           event_label: "Contact form submitted",
           label: "Contact form submitted",
-          form_name: "contact_form"
+          form_name: "contact_form",
+          http_status: res.status
         });
 
         if(window.turnstile && typeof window.turnstile.reset === "function"){
