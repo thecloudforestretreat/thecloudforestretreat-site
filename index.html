@@ -40,8 +40,9 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <!-- Global / shared CSS -->
-<link href="/assets/css/site.css" rel="stylesheet">
-<link href="/assets/css/header.css?v=3" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css" />
+<link rel="stylesheet" href="/assets/css/header.css?v=3" />
+<script src="/assets/js/head.js?v=1" defer></script>
 <style>
     :root{
       --bg: #A1BFAA;
@@ -531,8 +532,60 @@ margin:0;
       .heroMedia{ min-height: 520px; }
       .heroCopy{ min-height: 520px; }
     }
+
+
+    /* Production guard: raw language links remain in the DOM but do not render as a duplicate visible switch. */
+    .rawLangLinks{
+      position:absolute !important;
+      width:1px !important;
+      height:1px !important;
+      padding:0 !important;
+      margin:-1px !important;
+      overflow:hidden !important;
+      clip:rect(0,0,0,0) !important;
+      white-space:nowrap !important;
+      border:0 !important;
+    }
+
+    /* Production guard: the visible language switch belongs in the injected global header. */
+    #siteHeader .lang,
+    #siteHeader .langDesktop,
+    #siteHeader .language-switch,
+    #siteHeader [data-language-switch]{
+      display:inline-flex !important;
+      align-items:center;
+      gap:4px;
+      padding:5px;
+      border-radius:999px;
+      border:1px solid rgba(13,89,37,0.22);
+      background:rgba(255,255,255,0.26);
+      flex:0 0 auto;
+    }
+
+    #siteHeader .lang a,
+    #siteHeader .langDesktop a,
+    #siteHeader .language-switch a,
+    #siteHeader [data-language-switch] a{
+      display:inline-flex !important;
+      align-items:center;
+      justify-content:center;
+      min-width:34px;
+      height:34px;
+      padding:0 10px;
+      border-radius:999px;
+      color:#0D5925;
+      font-weight:900;
+      text-decoration:none;
+    }
+
+    #siteHeader .lang a[aria-current="page"],
+    #siteHeader .langDesktop a[aria-current="page"],
+    #siteHeader .language-switch a[aria-current="page"],
+    #siteHeader [data-language-switch] a[aria-current="page"]{
+      background:#0D5925 !important;
+      color:#ffffff !important;
+    }
   </style>
-</link></link>
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -599,10 +652,10 @@ margin:0;
 }</script>
 </head>
 <body data-page-language="en" data-page-type="home_page">
-<div data-current-lang="en" id="siteHeader"></div><nav aria-label="Language switch" class="rawLangLinks"><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="home_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/" hreflang="en" lang="en">English</a>
-  <a data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="home_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/" hreflang="es" lang="es">Español</a>
+<div id="siteHeader" data-current-lang="en"></div>
+<nav aria-label="Language switch" class="rawLangLinks"><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="home_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/" hreflang="en" lang="en">English</a>
+  <a data-analytics-event="language_switch_click" data-analytics-label="Espanol" data-analytics-location="language_switch" data-analytics-page-type="home_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/" hreflang="es" lang="es">Español</a>
   </nav>
-  
 <main aria-label="The Cloud Forest Retreat home" class="wrap">
 <section aria-label="Hero" class="hero" data-analytics-section="hero">
 <div aria-label="Mountain retreat view" class="heroMedia">
@@ -825,7 +878,8 @@ margin:0;
 </div>
 </section>
 </main>
-<div id="siteFooter"></div><script src="/assets/js/site.js"></script>
+<div id="siteFooter"></div>
+<script src="/assets/js/site.js"></script>
   
 
 </body>
