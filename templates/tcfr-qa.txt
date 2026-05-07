@@ -100,6 +100,41 @@ Spanish page pattern:
   <a href="FULL_ES_URL" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="es">Español</a>
 </nav>
 
+
+
+VISUAL LANGUAGE SWITCH RULE
+The rawLangLinks block exists primarily for:
+- hreflang discoverability
+- accessibility
+- analytics tracking fallback
+- non-JS resilience
+
+It must NOT visually appear as a duplicate language switch in the page body.
+
+Rules:
+- The visible EN/ES language selector belongs inside the injected global header on the right-hand side.
+- rawLangLinks must remain directly under #siteHeader in the HTML for structure, analytics, and fallback, but it should be visually hidden with the approved shared CSS utility pattern.
+- Do not leave rawLangLinks visible in page content.
+- Do not position rawLangLinks on the left side of the layout.
+- Do not create a second visible language switch below the header.
+- Prefer central styling in /assets/css/site.css or /assets/css/header.css.
+- If a page must be self-contained for handoff, include the same approved visually-hidden rule in the page CSS until the shared CSS is updated.
+
+Approved visually-hidden pattern:
+.rawLangLinks{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+The active visible EN/ES switch should remain exclusively in the injected global header component on the right-hand side.
+
 Language switch rules:
 - Keep class name exactly: rawLangLinks
 - Use real anchor tags in raw HTML
@@ -279,7 +314,7 @@ Return:
    - hreflang/canonical/language-switch status
 
 QA CHECKLIST BEFORE HANDOFF
-- [ ] EN/ES switch directly under #siteHeader
+- [ ] rawLangLinks directly under #siteHeader and visually hidden from page body
 - [ ] data-current-lang correct
 - [ ] body data-page-type correct
 - [ ] body data-page-language correct
