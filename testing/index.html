@@ -556,6 +556,46 @@ body{ margin:0; }
   border:0;
 }
 
+/* Production guard: keep the injected header language switch visible and readable.
+   This mirrors the global header.css rule so the EN/ES pill never disappears or blends in. */
+#siteHeader .lang,
+#siteHeader .langDesktop,
+#siteHeader .language-switch,
+#siteHeader [data-language-switch]{
+  display:inline-flex !important;
+  align-items:center;
+  gap:4px;
+  padding:5px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,0.22);
+  background:rgba(255,255,255,0.26);
+  flex:0 0 auto;
+}
+
+#siteHeader .lang a,
+#siteHeader .langDesktop a,
+#siteHeader .language-switch a,
+#siteHeader [data-language-switch] a{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:34px;
+  padding:0 10px;
+  border-radius:999px;
+  color:#0D5925;
+  font-weight:900;
+  text-decoration:none;
+}
+
+#siteHeader .lang a[aria-current="page"],
+#siteHeader .langDesktop a[aria-current="page"],
+#siteHeader .language-switch a[aria-current="page"],
+#siteHeader [data-language-switch] a[aria-current="page"]{
+  background:#0D5925 !important;
+  color:#ffffff !important;
+}
+
   </style>
   <script type="application/ld+json">
   {
