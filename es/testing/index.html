@@ -1,421 +1,1170 @@
-Next, proceed to review, update and provide complete downloadable .txt files
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservas | The Cloud Forest Retreat</title>
+  <meta name="description" content="Consulta disponibilidad y solicita tu reserva en The Cloud Forest Retreat. Revisa tarifas, elige tu habitación y coordina tu estadía en el bosque nublado cerca de Mindo, Ecuador." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://thecloudforestretreat.com/es/reservas/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/booking/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/reservas/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/booking/" />
 
-THE CLOUD FOREST RETREAT EN/ES PAGE QA + ANALYTICS TEMPLATE
-Strict Production Mode
-Production-Safe Global CSS and Centralized Analytics Enforcement
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Cloud Forest Retreat" />
+  <meta property="og:title" content="Reservas | The Cloud Forest Retreat" />
+  <meta property="og:description" content="Consulta disponibilidad y solicita tu reserva. Elige tu habitación y planifica una estadía tranquila en el bosque nublado cerca de Mindo, Ecuador." />
+  <meta property="og:url" content="https://thecloudforestretreat.com/es/reservas/" />
+  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Cloud Forest Retreat en Ecuador" />
 
-Use this prompt when uploading an English page and its Spanish counterpart for thecloudforestretreat.com. The goal is to audit and fully update both HTML files so they are ready to go live. Return complete downloadable .txt files for both pages. Do not return partial snippets unless explicitly requested.
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reservas | The Cloud Forest Retreat" />
+  <meta name="twitter:description" content="Consulta disponibilidad y solicita tu reserva. Elige tu habitación y planifica una estadía tranquila en el bosque nublado cerca de Mindo, Ecuador." />
+  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
 
-PAGE INFORMATION
-- English Page URL:
-- Spanish Counterpart URL:
-- Language Pair: EN / ES
-- Page Type:
-- Priority:
-- Commercial / Conversion Priority:
-- Notes:
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0D5925" />
 
-STRICT MODE STANDARD
-This is a strict production QA workflow. Do not mark a page ready to go live unless the full checklist passes. If any item fails, clearly list the blocker and return corrected files whenever possible.
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-CORE OPERATING PRINCIPLE
-Audit first. Fix only what is incorrect, missing, duplicated, conflicting, unsafe, or inconsistent with the approved TCFR architecture. Preserve working layout, SEO copy, image paths, page intent, and room/property details unless a change is required to pass QA.
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <script src="/assets/js/head.js" defer></script>
 
-MOST IMPORTANT PRIORITIES
-1. Functional EN/ES language switch.
-2. Centralized analytics through /assets/js/site.js.
-3. Strong SEO accuracy without unnecessary title or description rewrites.
-4. Correct canonical, hreflang, Open Graph, Twitter, schema, and breadcrumbs where relevant.
-5. Global CSS usage wherever possible.
-6. Header/footer injection working correctly through TCFR site.js.
-7. Correct body data-page-type and data-page-language values.
-8. South American Spanish accents only in user-facing Spanish copy and metadata.
-9. No accented characters in technical paths, slugs, IDs, classes, data attributes, schema URLs, image paths, CSS paths, JS paths, or analytics event names.
-10. Important CTAs, booking actions, language switch links, and utility links tracked through shared data-analytics-* attributes.
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-GLOBAL FILE ARCHITECTURE
-Analytics execution must be centralized in:
-/assets/js/site.js
+  <style>
+    :root{
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
+      --forest: #0D5925;
+      --forest2: #0B2B12;
+      --orange: #E0643A;
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --muted: rgba(11,26,16,0.72);
+    }
+    *{ box-sizing: border-box; }
+    body{ margin: 0; }
 
-Approved shared styling stack:
-/assets/css/header.css
-/assets/css/footer.css
-/assets/css/site.css
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 76px;
+    }
 
-Page files should NOT duplicate analytics logic for:
-- GA4 loading
-- gtag initialization
-- page_view_enhanced
-- scroll_depth
-- click listeners for [data-analytics-event]
-- form tracking
-- FAQ tracking
-- content_section_view observers
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: var(--glass2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      color: var(--ink);
+      min-width: 0;
+    }
 
-site.js responsibilities:
-- load GA4 with measurement ID G-D3W4SP5MGX
-- expose window.gtag
-- send page_view_enhanced
-- send scroll_depth at 25, 50, 75, and 90 percent
-- listen globally for [data-analytics-event] clicks
-- detect internal links, outbound links, WhatsApp links, email links, phone links, and CTA clicks
-- track language_switch_click
-- track form_start, form_submit_success, form_submit_error
-- track faq_expand
-- track content_section_view when sections declare data-analytics-section
-- include page_type and page_language in event payloads when available
+    .hero{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      overflow: hidden;
+      position: relative;
+      color: var(--ink);
+    }
 
-TCFR PAGE SHELL STANDARD
-Every bilingual page must include:
-<div id="siteHeader" data-current-lang="en"></div>
-or
-<div id="siteHeader" data-current-lang="es"></div>
+    .heroMedia{
+      position: relative;
+      height: clamp(320px, 42vh, 520px);
+      background: rgba(0,0,0,0.10);
+    }
 
-and:
-<div id="siteFooter"></div>
+    .heroMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 58%;
+      display: block;
+      transform: scale(1.01);
+    }
 
-TCFR pages should load site.js exactly once:
-<script src="/assets/js/site.js"></script>
+    .heroOverlay{
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+      pointer-events: none;
+    }
 
-Rules:
-- Do not duplicate site.js includes.
-- Do not duplicate header/footer fragment loaders if site.js already handles injection.
-- Do not add page-level analytics scripts if site.js already covers them.
-- Use only one #siteHeader and one #siteFooter per page.
+    .heroInner{
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.30);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: rgba(255,255,255,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+      max-width: 860px;
+    }
 
-LANGUAGE SWITCH STANDARD
-Every bilingual page must have raw EN/ES language links immediately after the site header container and before hero/main content.
+    .kicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(231,228,209,0.94);
+    }
 
-English page pattern:
-<div id="siteHeader" data-current-lang="en"></div>
-<nav class="rawLangLinks" aria-label="Language switch">
-  <a href="FULL_EN_URL" lang="en" hreflang="en" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="en">English</a>
-  <a href="FULL_ES_URL" lang="es" hreflang="es" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="es">Español</a>
-</nav>
+    .heroH1{
+      margin: 10px 0 8px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(32px, 4.2vw, 52px);
+      color: #fff;
+      text-shadow: 0 14px 40px rgba(0,0,0,0.34);
+    }
 
-Spanish page pattern:
-<div id="siteHeader" data-current-lang="es"></div>
-<nav class="rawLangLinks" aria-label="Selector de idioma">
-  <a href="FULL_EN_URL" lang="en" hreflang="en" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="en">English</a>
-  <a href="FULL_ES_URL" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="es">Español</a>
-</nav>
+    .heroP{
+      margin: 0;
+      color: rgba(231,228,209,0.94);
+      font-size: 15.8px;
+      line-height: 1.75;
+      font-weight: 650;
+      text-shadow: 0 10px 26px rgba(0,0,0,0.18);
+      max-width: 92ch;
+    }
+
+    .grid{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .pad{ padding: 14px; }
+
+    .h2{
+      margin: 0 0 10px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 1.08;
+    }
+
+    .hint{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-weight: 650;
+      line-height: 1.7;
+      font-size: 14.6px;
+    }
+
+    .otaBlock{
+      margin-top: 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .otaTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .otaHint{
+      margin: 0;
+      color: rgba(11,26,16,0.72);
+      font-weight: 650;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .otaControls{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      max-width: 360px;
+    }
+
+    .otaGrid{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .otaBtn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(13,89,37,0.16);
+      background: rgba(245,245,220,0.78);
+      box-shadow: 0 10px 22px rgba(13,89,37,0.10);
+      text-decoration: none;
+      cursor: pointer;
+      min-height: 56px;
+    }
+
+    .otaBtn:hover{ transform: translateY(-1px); }
+
+    .otaBtn:focus{
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
+      border-color: rgba(224,100,58,0.45);
+    }
+
+    .otaBtn img{
+      max-width: 120px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .otaBtn.is-disabled{
+      opacity: 0.55;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .otaNote{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 650;
+      line-height: 1.6;
+      font-size: 13px;
+      max-width: 92ch;
+    }
+
+    .formGrid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .field{ min-width: 0; }
+    .full{ grid-column: 1 / -1; }
+
+    label{
+      display: block;
+      font-weight: 900;
+      color: var(--forest2);
+      font-size: 13px;
+      margin: 0 0 6px;
+    }
+
+    input, select, textarea{
+      width: 100%;
+      font-family: inherit;
+      font-size: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(13,89,37,0.16);
+      background: rgba(255,255,255,0.62);
+      padding: 12px 12px;
+      color: var(--ink);
+      outline: none;
+    }
+
+    select{ padding-right: 40px; }
+
+    textarea{
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus{
+      box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
+      border-color: rgba(224,100,58,0.45);
+    }
+
+    .req{
+      color: rgba(224,100,58,0.95);
+      font-weight: 900;
+      margin-left: 4px;
+    }
+
+    .dateRow{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .dateHint{
+      margin: 6px 0 0;
+      color: rgba(11,26,16,0.62);
+      font-weight: 650;
+      font-size: 12.6px;
+      line-height: 1.5;
+    }
+
+    .actionsRow{
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .miniNote{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 650;
+      font-size: 13px;
+      line-height: 1.6;
+      max-width: 72ch;
+    }
+
+    .submitBtn{
+      appearance: none;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: var(--orange);
+      color: #fff;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(224,100,58,0.22);
+      min-width: 180px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
+
+    .turnstileRow{
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      align-items: start;
+      justify-items: start;
+    }
+
+    .inlineStatus{
+      margin-top: 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(245,245,220,0.78);
+      padding: 12px;
+      display: none;
+    }
+    .inlineStatus.show{ display: block; }
+
+    .inlineTitle{
+      margin: 0 0 6px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      color: var(--forest);
+    }
+
+    .inlineText{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.7;
+      font-weight: 650;
+      font-size: 14.4px;
+    }
+
+    .sideStack{
+      display: grid;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .sideCard{
+      padding: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sideCard:before{
+      content:"";
+      position:absolute;
+      inset: -120px -120px auto auto;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle at center, rgba(224,100,58,0.18), rgba(224,100,58,0) 62%);
+      pointer-events:none;
+    }
+
+    .sideTitle{
+      margin: 0 0 8px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      line-height: 1.1;
+      color: var(--forest);
+      position: relative;
+    }
+
+    .sideP{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.75;
+      font-weight: 650;
+      font-size: 14.6px;
+      position: relative;
+    }
+
+    .sideImageCard{ padding: 14px; }
+
+    .sideImageFrame{
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: #ccc;
+      box-shadow: var(--shadow);
+    }
+
+    .sideImageFrame img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 50%;
+      display: block;
+      transform: scale(1.01);
+    }
+
+    .sideImageFrame::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.26));
+      pointer-events:none;
+    }
+
+    .sideImageCaption{
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      color: rgba(255,255,255,0.96);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      text-shadow: 0 14px 40px rgba(0,0,0,0.40);
+      font-size: 13.5px;
+      z-index: 1;
+    }
+
+    @media (max-width: 900px){
+      .wrap{ padding: 12px 14px 64px; }
+      .heroMedia{ height: clamp(240px, 34vh, 340px); }
+      .heroMedia img{ object-position: center 62%; }
+      .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
+      .grid{ grid-template-columns: 1fr; }
+      .formGrid{ grid-template-columns: 1fr; }
+      .dateRow{ grid-template-columns: 1fr; }
+      .submitBtn{ width: 100%; }
+      .actionsRow{ gap: 12px; }
+      .sideImageFrame{ aspect-ratio: 16 / 10; }
+    }
+
+    .gReviews{ padding: 14px; position: relative; overflow: hidden; }
+    .gReviews:before{
+      content:"";
+      position:absolute;
+      inset: -140px -140px auto auto;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
+      pointer-events:none;
+    }
+    .gHead{
+      position: relative;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .gTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      line-height: 1.1;
+      color: var(--forest);
+    }
+    .gSub{
+      margin: 0;
+      color: rgba(11,26,16,0.72);
+      font-weight: 650;
+      line-height: 1.7;
+      font-size: 14.4px;
+      position: relative;
+    }
+    .gBadge{
+      position: relative;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+    }
+    .gLogo{ width: 28px; height: 28px; display:block; }
+    .gScoreRow{
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-weight: 900;
+      color: rgba(11,26,16,0.86);
+      font-size: 14px;
+    }
+    .gStars{ color: #FBBC05; letter-spacing: 1px; font-size: 14.5px; }
+    .gCount{ font-weight: 800; color: rgba(11,26,16,0.62); }
+    .gActions{
+      position: relative;
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .gBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      border: 1px solid rgba(13,89,37,0.18);
+      line-height: 1;
+      text-decoration: none;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+    }
+    .gBtn.outline{ background: rgba(255,255,255,0.64); color: var(--forest2); }
+    .gBtn.primary{
+      background: var(--orange);
+      color:#fff;
+      border-color: rgba(0,0,0,0.08);
+      box-shadow: 0 14px 30px rgba(224,100,58,0.22);
+    }
+    .gQuotes{ position: relative; display:grid; gap: 10px; margin-top: 12px; }
+    .gQuote{
+      border-radius: 16px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(245,245,220,0.78);
+      padding: 12px;
+    }
+    .gQuoteText{
+      margin: 0;
+      color: rgba(11,26,16,0.80);
+      font-weight: 650;
+      font-size: 14.4px;
+      line-height: 1.7;
+    }
+    .gQuoteMeta{
+      margin: 8px 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(11,26,16,0.70);
+      font-weight: 900;
+      font-size: 12.6px;
+    }
+    .gQuoteStars{ color: #FBBC05; letter-spacing: 1px; font-size: 13px; line-height: 1; }
+    .gQuoteName{ color: rgba(11,26,16,0.72); }
+
+    @media (max-width: 900px){
+      .gActions{ display:grid; grid-template-columns: 1fr 1fr; }
+      .gBtn{ width: 100%; }
+    }
 
 
+    /* Production guard: keep fallback language links available but not visible */
+    .rawLangLinks{
+      position:absolute !important;
+      width:1px !important;
+      height:1px !important;
+      padding:0 !important;
+      margin:-1px !important;
+      overflow:hidden !important;
+      clip:rect(0,0,0,0) !important;
+      white-space:nowrap !important;
+      border:0 !important;
+    }
+  </style>
 
-VISUAL LANGUAGE SWITCH RULE
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LodgingBusiness", "Hotel"],
+        "@id": "https://thecloudforestretreat.com/es/#lodgingbusiness",
+        "name": "The Cloud Forest Retreat",
+        "url": "https://thecloudforestretreat.com/es/",
+        "description": "Un bed and breakfast de eco-lujo en el bosque nublado de Ecuador cerca de Quito, con vistas de montaña, naturaleza, bienestar y habitaciones tranquilas.",
+        "image": "https://thecloudforestretreat.com/og-tcfr.jpg",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "EC",
+          "addressRegion": "Pichincha"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "9"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/reservas/#webpage",
+        "url": "https://thecloudforestretreat.com/es/reservas/",
+        "name": "Reservas | The Cloud Forest Retreat",
+        "description": "Consulta disponibilidad y solicita tu reserva en The Cloud Forest Retreat. Revisa tarifas, elige tu habitación y coordina tu estadía en el bosque nublado cerca de Mindo, Ecuador.",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/"
+        },
+        "about": {"@id": "https://thecloudforestretreat.com/es/#lodgingbusiness"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://thecloudforestretreat.com/es/reservas/#faq",
+        "inLanguage": "es",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo solicito disponibilidad?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Usa el formulario de reserva para compartir tus fechas preferidas, tamaño del grupo, preferencia de habitación y necesidades de transporte. El equipo responderá con disponibilidad y los siguientes pasos."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo reservar en sitios aliados?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Sí. La página incluye enlaces a sitios de reserva aliados para los tipos de estadía disponibles, además del formulario directo si prefieres contactar al equipo."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
 
-rawLangLinks must remain in the HTML directly under #siteHeader for accessibility, hreflang fallback, non-JS resilience, and analytics tracking.
+<body data-page-type="booking_page" data-page-language="es">
+  <div id="siteHeader" data-current-lang="es"></div>
+  <nav class="rawLangLinks" aria-label="Selector de idioma">
+    <a href="https://thecloudforestretreat.com/booking/" lang="en" hreflang="en" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="booking_page" data-analytics-target-language="en">English</a>
+    <a href="https://thecloudforestretreat.com/es/reservas/" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="booking_page" data-analytics-target-language="es">Español</a>
+  </nav>
 
-rawLangLinks must NOT appear as a duplicate visible language switch in the page body. It must be visually hidden while remaining available to screen readers and crawlers.
+  <main class="wrap" aria-label="Página de reservas">
+    <section class="hero" data-analytics-section="booking_hero" aria-label="Hero de reservas">
+      <div class="heroMedia" aria-label="Imagen principal">
+        <img src="/assets/images/pages/tcfr_booking_hero.jpg" alt="Vista de The Cloud Forest Retreat" loading="eager" decoding="async" />
+        <div class="heroOverlay" aria-hidden="true"></div>
+        <div class="heroInner">
+          <div class="kicker">Solicitar disponibilidad</div>
+          <h1 class="heroH1">Reservar tu estadía</h1>
+          <p class="heroP">
+            Comparte tus fechas preferidas, el tamaño de tu grupo y tu preferencia de habitación. Te responderemos rápido con la disponibilidad y los siguientes pasos.
+            A aproximadamente 2 horas de Quito. Podemos ayudar a coordinar el transporte para una llegada sin complicaciones.
+          </p>
+        </div>
+      </div>
+    </section>
 
-The visible language switch must be the global header language pill on the right side of the injected header. Do not hide, remove, fade, or visually weaken the global header language switch.
+    <section class="grid" data-analytics-section="booking_form_details" aria-label="Formulario de reservas y detalles">
+      <section class="card pad" aria-label="Formulario de solicitud de reserva">
+        <h2 class="h2">Solicitud de reserva</h2>
+        <p class="hint">
+          Este formulario le llega por email a nuestro equipo y te envía una confirmación. Los campos con asterisco son obligatorios.
+        </p>
 
-The active language pill in the global header must be clearly visible, with stronger contrast than the inactive language. The active language must not blend into the header background.
+        <div class="otaBlock" data-analytics-section="ota_booking_links" aria-label="Reserva inmediata en sitios aliados">
+          <h3 class="otaTitle">Reserva al instante en un sitio de reservas</h3>
+          <p class="otaHint">
+            Elige el tipo de estadía y luego selecciona el sitio. Si prefieres, también puedes enviarnos una solicitud directa con el formulario de abajo.
+          </p>
 
-Rules:
-- Keep class name exactly: rawLangLinks.
-- Keep rawLangLinks directly under #siteHeader.
-- Do not leave rawLangLinks visible in page content.
-- Do not position rawLangLinks on the left side of the layout.
-- Do not create a second visible language switch below the header.
-- The visible EN/ES switch belongs exclusively inside the injected global header on the right-hand side.
-- Styling should preferably be centralized in /assets/css/header.css or /assets/css/site.css.
-- If a page-level production guard is needed, it may only target #siteHeader language switch visibility/readability and rawLangLinks hiding.
+          <div class="otaControls" aria-label="Selección del tipo de estadía">
+            <label for="ota_room">Tipo de estadía</label>
+            <select id="ota_room" name="ota_room">
+              <option value="Entire house">Casa completa</option>
+              <option value="Panoramic Suite">Suite panorámica</option>
+              <option value="Sunrise Room">Habitación amanecer</option>
+              <option value="Sunset Room">Habitación atardecer</option>
+            </select>
+          </div>
 
-Approved rawLangLinks hiding pattern:
-.rawLangLinks{
-  position:absolute !important;
-  width:1px !important;
-  height:1px !important;
-  padding:0 !important;
-  margin:-1px !important;
-  overflow:hidden !important;
-  clip:rect(0,0,0,0) !important;
-  white-space:nowrap !important;
-  border:0 !important;
-}
+          <div class="otaGrid" aria-label="Enlaces a sitios de reserva">
+            <a class="otaBtn" id="ota_airbnb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Airbnb" data-analytics-event="booking_cta_click" data-analytics-label="Airbnb" data-analytics-location="ota_booking_links" data-analytics-page-type="booking_page" data-analytics-cta-type="ota_booking">
+              <img src="/assets/images/pages/booking/tcfr_booking_airbnb.png" alt="Airbnb" loading="lazy" decoding="async" />
+            </a>
+            <a class="otaBtn" id="ota_vrbo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Vrbo" data-analytics-event="booking_cta_click" data-analytics-label="Vrbo" data-analytics-location="ota_booking_links" data-analytics-page-type="booking_page" data-analytics-cta-type="ota_booking">
+              <img src="/assets/images/pages/booking/tcfr_booking_vrbo.png" alt="Vrbo" loading="lazy" decoding="async" />
+            </a>
+            <a class="otaBtn" id="ota_expedia" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Expedia" data-analytics-event="booking_cta_click" data-analytics-label="Expedia" data-analytics-location="ota_booking_links" data-analytics-page-type="booking_page" data-analytics-cta-type="ota_booking">
+              <img src="/assets/images/pages/booking/tcfr_booking_expedia.png" alt="Expedia" loading="lazy" decoding="async" />
+            </a>
+            <a class="otaBtn is-disabled" id="ota_booking" href="#" aria-label="Reservar en Booking.com (próximamente)" aria-disabled="true" data-analytics-event="booking_cta_click" data-analytics-label="Booking.com" data-analytics-location="ota_booking_links" data-analytics-page-type="booking_page" data-analytics-cta-type="ota_booking">
+              <img src="/assets/images/pages/booking/tcfr_booking_booking.png" alt="Booking.com" loading="lazy" decoding="async" />
+            </a>
+          </div>
 
+          <p class="otaNote">
+            En estos sitios publicamos la casa completa y cada habitación por separado, para que reserves el tipo de estadía que mejor se ajusta a tu viaje.
+          </p>
+        </div>
 
-Implementation requirement:
-- Before handoff, verify rawLangLinks is visually hidden either by the loaded shared CSS or by a narrow page-level production guard.
-- If the current uploaded page would show rawLangLinks visibly without a global CSS update, include the narrow page-level production guard in the returned page file.
-- Do not hide the injected header language switch. Only hide rawLangLinks.
+        <form id="tcfrBookingForm" data-analytics-form="booking_request" data-analytics-event="booking_form_start" data-analytics-page-type="booking_page" aria-label="Formulario de reserva">
+          <div class="formGrid">
+            <div class="field">
+              <label for="first_name">Nombre <span class="req">*</span></label>
+              <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Tu nombre" autocapitalize="words" inputmode="text" spellcheck="false" />
+            </div>
 
-Approved global header language switch visibility pattern:
-#siteHeader .lang,
-#siteHeader .langDesktop,
-#siteHeader .language-switch,
-#siteHeader [data-language-switch]{
-  display:inline-flex !important;
-  align-items:center;
-  gap:4px;
-  padding:5px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,0.22);
-  background:rgba(255,255,255,0.26);
-  flex:0 0 auto;
-}
+            <div class="field">
+              <label for="last_name">Apellido <span class="req">*</span></label>
+              <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Tu apellido" autocapitalize="words" inputmode="text" spellcheck="false" />
+            </div>
 
-#siteHeader .lang a,
-#siteHeader .langDesktop a,
-#siteHeader .language-switch a,
-#siteHeader [data-language-switch] a{
-  display:inline-flex !important;
-  align-items:center;
-  justify-content:center;
-  min-width:34px;
-  height:34px;
-  padding:0 10px;
-  border-radius:999px;
-  color:#0D5925;
-  font-weight:900;
-  text-decoration:none;
-}
+            <div class="field">
+              <label for="email">Correo electrónico <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="tucorreo@ejemplo.com" />
+            </div>
 
-#siteHeader .lang a[aria-current="page"],
-#siteHeader .langDesktop a[aria-current="page"],
-#siteHeader .language-switch a[aria-current="page"],
-#siteHeader [data-language-switch] a[aria-current="page"]{
-  background:#0D5925 !important;
-  color:#ffffff !important;
-}
+            <div class="field">
+              <label for="phone">Teléfono <span class="req">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Código de país + número" />
+            </div>
 
-BODY ATTRIBUTE STANDARD
-Every page must set:
-- data-page-type="VALUE"
-- data-page-language="en" or "es"
+            <div class="field full">
+              <label>Fechas de visita <span class="req">*</span></label>
+              <div class="dateRow">
+                <div class="field">
+                  <input id="visit_start" name="visit_start" type="date" inputmode="numeric" autocomplete="off" required placeholder="YYYY-MM-DD" aria-label="Fecha de inicio (YYYY-MM-DD)" />
+                </div>
+                <div class="field">
+                  <input id="visit_end" name="visit_end" type="date" inputmode="numeric" autocomplete="off" placeholder="YYYY-MM-DD" aria-label="Fecha de fin (YYYY-MM-DD)" />
+                </div>
+              </div>
+              <p class="dateHint">Inicio es obligatorio. Fin es opcional. Si tu estadía es de un día, usa la misma fecha.</p>
+            </div>
 
-Recommended TCFR page types:
-- home_page
-- booking_page
-- contact_page
-- rooms_hub
-- room_detail_page
-- room_support_page
-- features_hub
-- feature_detail_page
-- destination_support_page
-- gallery_page
-- money_page
-- planning_page
-- info_page
-- comparison_page
-- blog_hub
-- blog_article
-- about_page
-- legal_page
+            <div class="field">
+              <label for="number_of_days_interested">Cantidad de días</label>
+              <input id="number_of_days_interested" name="number_of_days_interested" type="text" inputmode="numeric" placeholder="Ejemplo: 2 noches" />
+            </div>
 
-ACCENT RULE
-Use South American Spanish accents correctly in all visible Spanish copy and metadata.
+            <div class="field">
+              <label for="number_of_guests">Número de huéspedes</label>
+              <input id="number_of_guests" name="number_of_guests" type="text" inputmode="numeric" placeholder="Ejemplo: 2 adultos" />
+            </div>
 
-MANDATORY SPANISH ACCENT QA STANDARD
-Spanish accent validation is a hard production blocker. A Spanish page must NOT be handed off as ready if visible Spanish copy, metadata, schema text, image alt text, aria-label text, form labels, placeholders, option labels, button text, status messages, validation messages, FAQ text, review text, or JSON-LD user-facing text contains missing or incorrect Spanish accents.
+            <div class="field">
+              <label for="room_preference">Preferencia de habitación</label>
+              <select id="room_preference" name="room_preference">
+                <option value="">Elige una opción</option>
+                <option value="Panoramic Suite">Suite panorámica</option>
+                <option value="Sunrise Room">Habitación amanecer</option>
+                <option value="Sunset Room">Habitación atardecer</option>
+                <option value="Entire house">Casa completa</option>
+              </select>
+            </div>
 
-Before returning any Spanish page, perform a dedicated accent pass across all user-facing Spanish strings, including strings inside JavaScript that appear in the UI. Do not limit this check to body copy.
+            <div class="field">
+              <label for="transportation_needed">Necesitas transporte (Quito/aeropuerto)</label>
+              <select id="transportation_needed" name="transportation_needed">
+                <option value="">Selecciona</option>
+                <option value="Yes">Sí</option>
+                <option value="No">No</option>
+              </select>
+            </div>
 
-Common high-risk words that must be checked and corrected when used as Spanish text include, but are not limited to:
-- recomendacion -> recomendación
-- habitacion -> habitación
-- estadia -> estadía
-- telefono -> teléfono
-- numero -> número
-- codigo -> código
-- pais -> país
-- pagina -> página
-- confirmacion -> confirmación
-- opcion -> opción
-- dias -> días
-- huesped / huespedes -> huésped / huéspedes
-- panoramica -> panorámica
-- proximo / proximamente -> próximo / próximamente
-- tambien -> también
-- seleccion -> selección when noun, selecciona when imperative
-- busqueda -> búsqueda
-- resena / resenas -> reseña / reseñas
-- fantastico -> fantástico
-- magico / magica -> mágico / mágica
-- increible / increibles -> increíble / increíbles
-- unico / unica -> único / única
-- anfitrion -> anfitrión
-- facil -> fácil
-- despues -> después
-- que / como in questions or headings -> qué / cómo where grammatically required
-- mas when it means "more" -> más
-- si when it means "yes" -> sí
-- envio / enviar / enviado / enviada must be checked carefully: enviar and enviado/enviada do NOT take an accent; envío as a noun or first-person verb does.
+            <div class="field full">
+              <label for="how_did_you_hear_about_us">Cómo te enteraste de nosotros</label>
+              <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
+                <option value="">Selecciona</option>
+                <option value="Referral">Recomendación</option>
+                <option value="Instagram">Instagram</option>
+                <option value="TikTok">TikTok</option>
+                <option value="YouTube">YouTube</option>
+                <option value="Google Search">Búsqueda en Google</option>
+                <option value="Google Maps">Google Maps</option>
+                <option value="Airbnb">Airbnb</option>
+                <option value="Vrbo">Vrbo</option>
+                <option value="Booking.com">Booking.com</option>
+                <option value="Other">Otro</option>
+              </select>
+            </div>
 
-Do not add accents to technical identifiers, URLs, slugs, IDs, classes, data attributes, schema URLs, JavaScript variable/function names, analytics event names, page_type values, or asset paths.
+            <div class="field full">
+              <label for="message">Mensaje <span class="req">*</span></label>
+              <textarea id="message" name="message" required placeholder="Cuéntanos tus fechas ideales, tus preguntas y cualquier detalle importante."></textarea>
+            </div>
+          </div>
 
-Final Spanish handoff requirement:
-- If any obvious missing-accent Spanish word remains in visible/user-facing text, do not mark the page ready.
-- Fix the page first, then return the complete corrected file.
+          <div class="actionsRow">
+            <p class="miniNote">
+              Al enviar, aceptas que podamos contactarte por correo electrónico o teléfono para confirmar los detalles.
+            </p>
+            <button id="tcfrSubmitBtn" class="submitBtn" type="submit" data-analytics-event="booking_form_submit_click" data-analytics-label="Booking request submit" data-analytics-location="booking_form" data-analytics-page-type="booking_page" data-analytics-cta-type="booking_form">Enviar solicitud</button>
+          </div>
 
-Preserve real accents in proper names on both EN and ES pages where the name officially uses them, including Chocó Andino, Pululahua where required by style, Río Guayllabamba, Ecuadorian place names, and room/region names if officially accented.
-Do not add accents to:
-- URLs
-- slugs
-- image paths
-- file paths
-- CSS class names
-- IDs
-- data attributes
-- schema URLs
-- JavaScript identifiers
-- analytics event names
-- page_type values
-- asset folders
+          <div class="turnstileRow" aria-label="Verificación anti-spam">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
+          </div>
 
-SEO STANDARD
-Each page pair must be reviewed to reach the closest possible production-safe 9.5 SEO level.
+          <div id="tcfrInlineStatus" class="inlineStatus" aria-live="polite">
+            <div class="inlineTitle" id="tcfrInlineTitle">Solicitud enviada</div>
+            <p class="inlineText" id="tcfrInlineText">
+              Tu solicitud ha sido enviada. Te enviaremos un correo electrónico de confirmación pronto.
+            </p>
+          </div>
 
-Verify:
-- unique, specific title tag
-- strong meta description tied to search intent
-- one clear H1
-- supporting H2 structure
-- canonical URL correct for each language
-- hreflang pair correct for each language
-- Open Graph title/description/url/image
-- Twitter card metadata
-- schema appropriate to the page
-- no mixed-language metadata
-- no English UI on Spanish pages
-- no Spanish UI on English pages
+          <input type="hidden" id="source_page" name="source_page" value="" />
+          <input type="hidden" id="user_agent" name="user_agent" value="" />
+          <input type="hidden" id="lang" name="lang" value="es" />
+        </form>
+      </section>
 
-Preferred schema by page type:
-- home_page: LodgingBusiness, Hotel, FAQPage
-- booking_page: LodgingBusiness, Hotel, FAQPage
-- rooms_hub: LodgingBusiness, Hotel
-- room_detail_page: Hotel or LodgingBusiness + FAQPage when useful
-- money_page: LodgingBusiness, FAQPage
-- planning_page: WebPage, FAQPage
-- info_page: WebPage, FAQPage
-- comparison_page: WebPage, FAQPage
-- blog_article: BlogPosting
-- about_page: AboutPage
-- contact_page: ContactPage
+      <aside class="sideStack" aria-label="Detalles de la reserva (columna derecha)">
+        <section class="card sideCard" aria-label="Qué pasa después">
+          <h3 class="sideTitle">Qué pasa después</h3>
+          <p class="sideP">
+            Te responderemos con disponibilidad, precios y recomendaciones para que tu estadía sea fácil.
+            Si seleccionaste transporte, te compartiremos opciones de recogida desde Quito o el aeropuerto.
+          </p>
+        </section>
 
-CENTRAL ANALYTICS QA STANDARD
-All analytics should be implemented through:
-/assets/js/site.js
+        <section class="card sideCard" aria-label="Cómo llegar">
+          <h3 class="sideTitle">Cómo llegar</h3>
+          <p class="sideP">
+            A aproximadamente 2 horas de Quito. Podemos ayudar a coordinar el transporte para una llegada sin complicaciones.
+          </p>
+        </section>
 
-Page files should provide:
-- correct body data-page-type and data-page-language
-- correct data-analytics-* attributes on tracked elements
-- correct rawLangLinks switch
-- correct canonical / hreflang / schema
+        <section class="card gReviews" aria-label="Reseñas de huéspedes">
+          <div class="gHead">
+            <div>
+              <h3 class="gTitle">A los huéspedes les encanta su estadía</h3>
+              <p class="gSub">Algunos de nuestros comentarios más recientes en Google. ¿Quieres ver la lista completa o dejar la tuya?</p>
+            </div>
+            <div class="gBadge" aria-label="Calificación de Google">
+              <img class="gLogo" src="/assets/images/icons/tcfr_logo_google_reviews.png" alt="Google Reviews" loading="lazy" decoding="async" />
+              <div class="gScoreRow">
+                <span>5.0</span>
+                <span class="gStars" aria-label="5 out of 5 stars">★★★★★</span>
+                <span class="gCount">(9 reseñas)</span>
+              </div>
+            </div>
+          </div>
 
-Before handoff, confirm:
-- [ ] /assets/js/site.js is loaded once
-- [ ] no conflicting page-level analytics script exists
-- [ ] important CTAs have data-analytics-event
-- [ ] room / stay / booking CTAs use clear CTA event names
-- [ ] internal links use internal_link_click unless page-type-specific
-- [ ] outbound links use outbound_link_click
-- [ ] WhatsApp links use whatsapp_click unless a more specific event is defined
-- [ ] email links use email_click
-- [ ] phone links use phone_click
+          <div class="gActions" aria-label="Acciones de reseñas">
+            <a class="gBtn outline" href="https://g.page/r/CQq5wBqKgv0DEAE" target="_blank" rel="noopener" data-analytics-event="outbound_link_click" data-analytics-label="Booking page link" data-analytics-location="booking_page" data-analytics-page-type="booking_page">Leer reseñas</a>
+            <a class="gBtn primary" href="https://g.page/r/CQq5wBqKgv0DEAE/review" target="_blank" rel="noopener" data-analytics-event="outbound_link_click" data-analytics-label="Booking page link" data-analytics-location="booking_page" data-analytics-page-type="booking_page">Escribir una reseña</a>
+          </div>
 
-SITEWIDE ANALYTICS REQUIRED
-Confirm which apply on the page:
-- [ ] page_view_enhanced
-- [ ] language_switch_click
-- [ ] primary_cta_click
-- [ ] secondary_cta_click
-- [ ] internal_link_click
-- [ ] outbound_link_click
-- [ ] scroll_depth
-- [ ] form_start
-- [ ] form_submit_success
-- [ ] form_submit_error
-- [ ] faq_expand
+          <div class="gQuotes" aria-label="Extractos de reseñas">
+            <div class="gQuote">
+              <p class="gQuoteText">"Un lugar fantástico para desconectarse y reconectar con la naturaleza. Esta experiencia única se puede personalizar tanto como quieras."</p>
+              <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">V Arguello</span></p>
+            </div>
+            <div class="gQuote">
+              <p class="gQuoteText">"Una experiencia absolutamente mágica en The Cloud Forest Retreat. Las vistas son increíbles. Los anfitriones son atentos, amables y muy acogedores."</p>
+              <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Abigail M.</span></p>
+            </div>
+            <div class="gQuote">
+              <p class="gQuoteText">"Alojamientos y comidas hermosas, con un anfitrión encantador y vistas inigualables. Totalmente recomendado."</p>
+              <p class="gQuoteMeta"><span class="gQuoteStars" aria-hidden="true">★★★★★</span><span class="gQuoteName">Pauline W.</span></p>
+            </div>
+          </div>
+        </section>
 
-TCFR PAGE-TYPE-SPECIFIC ANALYTICS
-Money page / booking-focused page:
-- [ ] hero_cta_click
-- [ ] room_card_click
-- [ ] stay_comparison_click
-- [ ] booking_cta_click
-- [ ] booking_form_start
+        <section class="card sideImageCard" aria-label="Imagen de reservas">
+          <div class="sideImageFrame">
+            <img src="/assets/images/pages/tcfr_booking_01.jpg" alt="Vista de The Cloud Forest Retreat" loading="lazy" decoding="async" />
+            <div class="sideImageCaption">Un lugar tranquilo para resetear en el bosque nublado.</div>
+          </div>
+        </section>
+      </aside>
+    </section>
+  </main>
 
-Rooms / room detail:
-- [ ] room_gallery_click
-- [ ] room_cta_click
-- [ ] room_compare_click
+  <div id="siteFooter"></div>
 
-Planning / utility:
-- [ ] utility_cta_click
-- [ ] related_guide_click
-- [ ] packing_checklist_click
-- [ ] route_planning_click
+  <script>
+    (function(){
+      "use strict";
 
-Blog / guide:
-- [ ] hero_cta_click
-- [ ] related_content_click
-- [ ] content_section_view
-- [ ] inline_recommendation_click
-- [ ] toc_click
+      var API_URL = "/api/booking";
 
-Birding / nature support:
-- [ ] nature_topic_click
-- [ ] birding_support_click
-- [ ] sister_site_click
+      var OTA_LINKS = {
+        "Entire house": {
+          "airbnb": "https://airbnb.com/h/thecloudforestretreat-entire",
+          "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4506928vb?dateless=true&x_pwa=1&rfrr=HSR&pwa_ts=1769454869987&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=false&adults=2&regionId=3000388018&destination=Calacali%2C+Pichincha%2C+Ecuador&destType=MARKET&latLong=-0.001291%2C-78.51387&searchId=ea67ea52-0c68-4544-a28a-1061e36034cb&sort=RECOMMENDED&userIntent=&expediaPropertyId=114399386",
+          "expedia": "https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information",
+          "booking": ""
+        },
+        "Panoramic Suite": {
+          "airbnb": "https://airbnb.com/h/thecloudforestretreat-panoramic-suite",
+          "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522305vb",
+          "expedia": "https://www.expedia.com/Quito-Hotels-Luxurious-Panoramic-Suite-At-The-Cloud-Forest-Retreat-W-Views-Modern-Comforts.h114674195.Hotel-Information",
+          "booking": ""
+        },
+        "Sunrise Room": {
+          "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunrise-room",
+          "vrbo": "https://www.vrbo.com/en-gb/p4522358vb",
+          "expedia": "https://www.expedia.com/Quito-Hotels-Sunrise-Room-At-The-Cloud-Forest-Retreat.h114675896.Hotel-Information",
+          "booking": ""
+        },
+        "Sunset Room": {
+          "airbnb": "https://airbnb.com/h/thecloudforestreatreat-sunset-room",
+          "vrbo": "https://www.vrbo.com/en-au/holiday-rental/p4522308vb?dateless=true&x_pwa=1&rfrr=HSR&pwa_ts=1769454870000&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=false&adults=2&regionId=3000388018&destination=Calacali%2C+Pichincha%2C+Ecuador&destType=MARKET&latLong=-0.001291%2C-78.51387&searchId=ea67ea52-0c68-4544-a28a-1061e36034cb&sort=RECOMMENDED&userIntent=&expediaPropertyId=114674265",
+          "expedia": "https://www.expedia.com/Quito-Hotels-Sunset-Room-At-The-Cloud-Forest-Retreat.h114674265.Hotel-Information",
+          "booking": ""
+        }
+      };
 
-REQUIRED DATA ATTRIBUTES
-Add these where relevant:
-- data-analytics-event
-- data-analytics-label
-- data-analytics-location
-- data-analytics-page-type
-- data-analytics-target-language
-- data-analytics-room
-- data-analytics-topic
-- data-analytics-cta-type
-- data-analytics-form
-- data-analytics-section
+      var otaRoom = document.getElementById("ota_room");
+      var roomPref = document.getElementById("room_preference");
 
-TCFR LINKING AND CONVERSION STANDARD
-Pages must reinforce the inlink/outlink strategy from the sitemap master where relevant.
-- Support booking pages from rooms, planning, and commercial pages.
-- Support high-opportunity planning pages from commercial pages and blog content.
-- Support birding stay pages without turning TCFR into a specialist tour site.
-- Use contextual internal links, not random blocks of unrelated links.
+      var btnAirbnb = document.getElementById("ota_airbnb");
+      var btnVrbo = document.getElementById("ota_vrbo");
+      var btnExpedia = document.getElementById("ota_expedia");
+      var btnBooking = document.getElementById("ota_booking");
 
+      function setBtnHref(btn, href){
+        if (!btn) return;
+        if (href){
+          btn.href = href;
+          btn.classList.remove("is-disabled");
+          btn.removeAttribute("aria-disabled");
+          btn.setAttribute("target", "_blank");
+          btn.setAttribute("rel", "noopener noreferrer");
+        } else {
+          btn.href = "#";
+          btn.classList.add("is-disabled");
+          btn.setAttribute("aria-disabled", "true");
+          btn.removeAttribute("target");
+          btn.removeAttribute("rel");
+        }
+      }
 
-HTML VALIDITY CHECK
-Before handoff, verify:
-- CSS link tags are valid void elements and are not closed with </link>.
-- The head does not contain malformed wrapper markup around stylesheet links.
-- /assets/js/head.js may load in the head, but analytics must still remain centralized in /assets/js/site.js.
+      function updateOtas(stayType){
+        var map = OTA_LINKS[stayType] || OTA_LINKS["Entire house"];
+        setBtnHref(btnAirbnb, map.airbnb);
+        setBtnHref(btnVrbo, map.vrbo);
+        setBtnHref(btnExpedia, map.expedia);
+        setBtnHref(btnBooking, map.booking);
+      }
 
-OUTPUT REQUIREMENTS
-Return:
-1. Updated English page as a complete downloadable .txt file
-2. Updated Spanish page as a complete downloadable .txt file
-3. Short QA summary with:
-   - what was fixed
-   - any blockers
-   - analytics added or confirmed
-   - SEO issues corrected
-   - hreflang/canonical/language-switch status
+      function normalizeStayType(v){
+        var s = String(v || "").trim();
+        if (!s) return "Entire house";
+        if (OTA_LINKS[s]) return s;
+        return "Entire house";
+      }
 
-QA CHECKLIST BEFORE HANDOFF
-- [ ] rawLangLinks directly under #siteHeader and visually hidden from page body
-- [ ] data-current-lang correct
-- [ ] body data-page-type correct
-- [ ] body data-page-language correct
-- [ ] site.js loaded once
-- [ ] no duplicate analytics logic
-- [ ] canonical correct
-- [ ] hreflang correct
-- [ ] metadata localized correctly
-- [ ] Spanish accents correct in visible Spanish copy
-- [ ] proper names preserve real accents
-- [ ] no accents added to technical identifiers
-- [ ] analytics attributes added to major tracked elements
-- [ ] important internal links present
-- [ ] major CTAs present and tracked
-- [ ] page is production-safe and ready to go live
+      function syncFromRoomPreference(){
+        if (!roomPref || !otaRoom) return;
+        var v = normalizeStayType(roomPref.value || "Entire house");
+        otaRoom.value = v;
+        updateOtas(v);
+      }
 
+      function syncFromOtaSelector(){
+        if (!otaRoom || !roomPref) return;
+        var v = normalizeStayType(otaRoom.value || "Entire house");
+        otaRoom.value = v;
+        roomPref.value = v;
+        updateOtas(v);
+      }
 
-Confirm that the page is ready to go live if so
+      if (otaRoom) otaRoom.addEventListener("change", syncFromOtaSelector);
+      if (roomPref) roomPref.addEventListener("change", syncFromRoomPreference);
+
+      if (roomPref && roomPref.value){
+        syncFromRoomPreference();
+      } else {
+        if (otaRoom) otaRoom.value = "Entire house";
+        updateOtas("Entire house");
+      }
+
+      function toTitleCase(s){
+        var t = String(s || "").trim();
+        if (!t) return "";
+        t = t.toLowerCase().replace(/\s+/g, " ");
+        var parts = t.split(" ");
+        for (var i = 0; i < parts.length; i++){
+          var w = parts[i];
+          if (!w) continue;
+          var hy = w.split("-");
+          for (var j = 0; j < hy.length; j++){
+            var seg = hy[j];
+            if (!seg) continue;
+            hy[j] = seg.charAt(0).toUpperCase() + seg.slice(1);
+          }
+          parts[i] = hy.join("-");
+        }
+        return parts.join(" ");
+      }
+
+      function isIsoDate(s){
+        return /^\d{4}-\d{2}-\d{2}$/.test(String(s || "").trim());
+      }
+
+      function setSending(btn, isSending){
+        if (!btn) return;
+        btn.disabled = isSending;
+        btn.textContent = isSending ? "Enviando..." : "Enviar solicitud";
+      }
+
+      function showInlineSuccess(){
+        var box = document.getElementById("tcfrInlineStatus");
+        var title = document.getElementById("tcfrInlineTitle");
+        var text = document.getElementById("tcfrInlineText");
+        if (!box || !title || !text) return;
+
+        title.textContent = "Solicitud enviada";
+        text.textContent = "Tu solicitud ha sido enviada. Te enviaremos un correo electrónico de confirmación pronto.";
+        box.classList.add("show");
+        box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function showInlineError(msg){
+        var box = document.getElementById("tcfrInlineStatus");
+        var title = document.getElementById("tcfrInlineTitle");
+        var text = document.getElementById("tcfrInlineText");
+        if (!box || !title || !text) return;
+
+        title.textContent = "Algo salió mal";
+        text.textContent = msg || "Por favor, inténtalo de nuevo en un momento.";
+        box.classList.add("show");
+        box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      var form = document.getElementById("tcfrBookingForm");
+      var submitBtn = document.getElementById("tcfrSubmitBtn");
+
+      var first = document.getElementById("first_name");
+      var last = document.getElementById("last_name");
+      var sourcePage = document.getElementById("source_page");
+      var userAgent = document.getElementById("user_agent");
+
+      function bindTitleCase(el){
+        if (!el) return;
+        el.addEventListener("blur", function(){ el.value = toTitleCase(el.value); });
+      }
+      bindTitleCase(first);
+      bindTitleCase(last);
+
+      if (!form) return;
+
+      if (sourcePage) sourcePage.value = window.location.href;
+      if (userAgent) userAgent.value = navigator.userAgent || "";
+
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        if (first) first.value = toTitleCase(first.value);
+        if (last) last.value = toTitleCase(last.value);
+
+        var vStart = (document.getElementById("visit_start") || {}).value || "";
+        var vEnd = (document.getElementById("visit_end") || {}).value || "";
+
+        vStart = String(vStart).trim();
+        vEnd = String(vEnd).trim();
+
+        if (!form.first_name.value || !form.last_name.value || !form.email.value || !form.phone.value || !form.message.value){
+          showInlineError("Por favor, completa todos los campos obligatorios.");
+          return;
+        }
+
+        if (!isIsoDate(vStart)){
+          showInlineError("La fecha de inicio debe tener formato YYYY-MM-DD.");
+          return;
+        }
+        if (vEnd && !isIsoDate(vEnd)){
+          showInlineError("La fecha de fin debe tener formato YYYY-MM-DD (o déjala vacía).");
+          return;
+        }
+
+        if (!vEnd) vEnd = vStart;
+
+        var fd = new FormData(form);
+        fd.set("visit_start", vStart);
+        fd.set("visit_end", vEnd);
+
+        setSending(submitBtn, true);
+
+        fetch(API_URL, {
+          method: "POST",
+          body: fd
+        })
+        .then(function(res){
+          return res.json().catch(function(){ return { ok: false, message: "Respuesta inválida del servidor." }; });
+        })
+        .then(function(json){
+          setSending(submitBtn, false);
+          if (json && json.ok){
+            showInlineSuccess();
+          } else {
+            showInlineError((json && json.message) ? json.message : "No pudimos enviar tu solicitud. Por favor, inténtalo de nuevo.");
+          }
+        })
+        .catch(function(){
+          setSending(submitBtn, false);
+          showInlineError("No pudimos enviar tu solicitud. Por favor, inténtalo de nuevo.");
+        });
+      });
+    })();
+  </script>
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>
