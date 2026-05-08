@@ -7,6 +7,9 @@
   <meta name="description" content="Contact The Cloud Forest Retreat outside of Quito, Ecuador. Ask about availability, rooms, directions, and nearby nature experiences. We reply quickly." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thecloudforestretreat.com/contact/" />
+  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/contact/" />
+  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/contacto/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/contact/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Cloud Forest Retreat" />
   <meta property="og:title" content="Contact | The Cloud Forest Retreat" />
@@ -444,13 +447,58 @@ input:focus, select:focus, textarea:focus{
     margin:0;
     color:#233;
   }
+
+
 </style>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://thecloudforestretreat.com/contact/#webpage",
+      "url": "https://thecloudforestretreat.com/contact/",
+      "name": "Contact | The Cloud Forest Retreat",
+      "description": "Contact The Cloud Forest Retreat outside of Quito, Ecuador. Ask about availability, rooms, directions, and nearby nature experiences.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://thecloudforestretreat.com/#website"
+      },
+      "about": {
+        "@id": "https://thecloudforestretreat.com/#lodgingbusiness"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thecloudforestretreat.com/contact/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thecloudforestretreat.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://thecloudforestretreat.com/contact/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
-<body>
-  <div id="siteHeader"></div>
+<body data-page-type="contact_page" data-page-language="en">
+  <div id="siteHeader" data-current-lang="en"></div>
+  <nav class="rawLangLinks" aria-label="Language switch">
+    <a href="https://thecloudforestretreat.com/contact/" lang="en" hreflang="en" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="contact_page" data-analytics-target-language="en">English</a>
+    <a href="https://thecloudforestretreat.com/es/contacto/" lang="es" hreflang="es" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="contact_page" data-analytics-target-language="es">Español</a>
+  </nav>
   <main class="wrap" aria-label="Contact page">
-    <section class="hero" aria-label="Contact hero">
+    <section class="hero" aria-label="Contact hero" data-analytics-section="contact_hero">
       <div class="heroMedia" aria-label="Hero image">
         <img src="/assets/images/pages/tcfr_contact_hero.jpg" alt="The Cloud Forest Retreat in Mindo, Ecuador" loading="eager" decoding="async" />
         <div class="heroOverlay" aria-hidden="true"></div>
@@ -463,15 +511,17 @@ input:focus, select:focus, textarea:focus{
         </div>
       </div>
     </section>
-<section class="grid" aria-label="Contact form and links">
+<section class="grid" aria-label="Contact form and links" data-analytics-section="contact_form_links">
   <section class="card pad" aria-label="Contact form">
     <h2 class="h2">Send A Message</h2>
     <p class="hint">
       This form emails our team and sends you a confirmation. Fields marked with an asterisk are required.
     </p>
 
-    <form id="tcfrContactForm" aria-label="Contact form">
+    <form id="tcfrContactForm" aria-label="Contact form" data-analytics-form="contact_form" data-analytics-page-type="contact_page">
       <input type="hidden" name="form_type" value="contact" />
+      <input type="hidden" name="lang" value="en" />
+      <input type="hidden" name="source_page" value="" />
 
       <div class="formGrid">
         <div class="field">
@@ -517,10 +567,7 @@ input:focus, select:focus, textarea:focus{
           </select>
         </div>
       </div>
-      <input type="hidden" name="form_type" value="contact">
-      <input type="hidden" name="cf_secret" value="TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c">
-      <input type="hidden" name="source_page" value="">
-      <input type="hidden" name="lang" value="en">
+      <input type="hidden" name="cf_secret" value="TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c" />
 
 
       <div class="actionsRow">
@@ -529,7 +576,7 @@ input:focus, select:focus, textarea:focus{
         </p>
         <div class="turnstileRow">
           <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
-          <button id="tcfrSubmitBtn" class="submitBtn" type="submit">Submit</button>
+          <button id="tcfrSubmitBtn" class="submitBtn" type="submit" data-analytics-event="form_submit_click" data-analytics-label="Submit" data-analytics-location="contact_form" data-analytics-page-type="contact_page" data-analytics-form="contact_form">Submit</button>
         </div>
       </div>
       <div id="tcfrStatus" class="statusBox" hidden>
@@ -553,8 +600,8 @@ input:focus, select:focus, textarea:focus{
         If you already have dates in mind, use our booking request form and we will follow up with availability and next steps.
       </p>
       <div class="btnRow" aria-label="Booking and gallery buttons">
-        <a class="linkBtn primary" href="/booking">Go To Booking</a>
-        <a class="linkBtn" href="/features/gallery/">View Gallery</a>
+        <a class="linkBtn primary" href="/booking/" data-analytics-event="booking_cta_click" data-analytics-label="Go To Booking" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page" data-analytics-cta-type="booking">Go To Booking</a>
+        <a class="linkBtn" href="/features/gallery/" data-analytics-event="internal_link_click" data-analytics-label="View Gallery" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">View Gallery</a>
       </div>
     </section>
 
@@ -564,8 +611,8 @@ input:focus, select:focus, textarea:focus{
         Review our policies for privacy and terms of service.
       </p>
       <div class="btnRow" aria-label="Policy buttons">
-        <a class="linkBtn" href="/privacy-policy/">Privacy Policy</a>
-        <a class="linkBtn" href="/terms-of-service/">Terms of Service</a>
+        <a class="linkBtn" href="/privacy-policy/" data-analytics-event="internal_link_click" data-analytics-label="Privacy Policy" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">Privacy Policy</a>
+        <a class="linkBtn" href="/terms-of-service/" data-analytics-event="internal_link_click" data-analytics-label="Terms of Service" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">Terms of Service</a>
       </div>
     </section>
 
@@ -580,117 +627,6 @@ input:focus, select:focus, textarea:focus{
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/site.js?v=3"></script>
-  <script>
-(function(){
-  var form = document.getElementById('tcfrContactForm');
-  if(!form) return;
-
-  var firstNameEl = document.getElementById('first_name');
-  var lastNameEl  = document.getElementById('last_name');
-  var messageEl   = document.getElementById('message');
-
-  var btn = document.getElementById('tcfrSubmitBtn');
-  var sourcePageEl = form.querySelector('input[name="source_page"]');
-  if(sourcePageEl){ sourcePageEl.value = window.location.href; }
-  var statusBox = document.getElementById('tcfrStatus');
-  var statusTitle = document.getElementById('tcfrStatusTitle');
-  var statusMsg = document.getElementById('tcfrStatusMsg');
-
-  function capFirstOnly(s){
-    s = (s || '').trim();
-    if(!s) return '';
-    s = s.toLowerCase();
-    return s.charAt(0).toUpperCase() + s.slice(1);
-  }
-
-  function capMessageFirstChar(s){
-    s = String(s || '');
-    if(!s) return '';
-    // capitalize first non-space character
-    var i = 0;
-    while(i < s.length && /\s/.test(s.charAt(i))) i++;
-    if(i >= s.length) return s;
-    return s.slice(0,i) + s.charAt(i).toUpperCase() + s.slice(i+1);
-  }
-
-  function setStatus(kind, title, msg){
-    if(!statusBox) return;
-    statusBox.hidden = false;
-    statusTitle.textContent = title || '';
-    statusMsg.textContent = msg || '';
-    statusBox.style.borderColor = (kind === 'error') ? 'rgba(185,28,28,.25)' : 'rgba(13,89,37,.22)';
-    statusBox.style.background = (kind === 'error') ? 'rgba(254,226,226,.6)' : 'rgba(220,252,231,.55)';
-    statusTitle.style.color = (kind === 'error') ? '#991b1b' : '#0D5925';
-  }
-
-  function normalizeFields(){
-    if(firstNameEl) firstNameEl.value = capFirstOnly(firstNameEl.value);
-    if(lastNameEl)  lastNameEl.value  = capFirstOnly(lastNameEl.value);
-    if(messageEl)   messageEl.value   = capMessageFirstChar(messageEl.value);
-  }
-
-  if(firstNameEl) firstNameEl.addEventListener('blur', function(){ firstNameEl.value = capFirstOnly(firstNameEl.value); });
-  if(lastNameEl)  lastNameEl.addEventListener('blur', function(){ lastNameEl.value  = capFirstOnly(lastNameEl.value); });
-  if(messageEl)   messageEl.addEventListener('blur', function(){ messageEl.value   = capMessageFirstChar(messageEl.value); });
-
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    normalizeFields();
-
-    if(btn){ btn.disabled = true; btn.textContent = 'Sending...'; }
-    if(statusBox) statusBox.hidden = true;
-
-    try{
-      var fd = new FormData(form);
-      var token = fd.get('cf-turnstile-response');
-      if(!token){
-        setStatus('error','Something went wrong','Turnstile token missing. Please complete the verification and try again.');
-        if(btn){ btn.disabled = false; btn.textContent = 'Submit'; }
-        return;
-      }
-
-      var payload = {
-        cf_secret: fd.get('cf_secret') || '',
-        'cf-turnstile-response': token,
-        first_name: fd.get('first_name') || '',
-        last_name: fd.get('last_name') || '',
-        email: fd.get('email') || '',
-        phone: fd.get('phone') || '',
-        message: fd.get('message') || '',
-        how_did_you_hear_about_us: fd.get('how_did_you_hear_about_us') || '',
-        source_page: fd.get('source_page') || window.location.href,
-        lang: fd.get('lang') || 'en'
-      };
-
-      var res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(payload)
-      });
-
-      var data = await res.json().catch(function(){ return {}; });
-
-      if(!res.ok || !data.ok){
-        var msg = data && (data.message || data.error) ? (data.message || data.error) : 'Submission failed. Please try again.';
-        setStatus('error','Unable to send', msg);
-        if(btn){ btn.disabled = false; btn.textContent = 'Submit'; }
-        return;
-      }
-
-      setStatus('success','Message sent','Thank you. We received your message and sent a confirmation email. If you do not see it, please check your spam or promotions folder.');
-
-      // reset turnstile + keep inputs (optional). We'll keep values.
-      if(window.turnstile && typeof window.turnstile.reset === 'function'){
-        try{ window.turnstile.reset(); }catch(_e){}
-      }
-
-      if(btn){ btn.disabled = false; btn.textContent = 'Submit'; }
-    }catch(err){
-      setStatus('error','Unable to send','Network error. Please try again.');
-      if(btn){ btn.disabled = false; btn.textContent = 'Submit'; }
-    }
-  });
-})();
-</script>
+  <script src="/assets/js/contact-form.js?v=3"></script>
 </body>
 </html>
