@@ -482,3 +482,26 @@ Final handoff must include:
 - confirmation of inlinks/outlinks added or preserved
 - confirmation of related guide links added where relevant
 - confirmation of analytics coverage for those links
+
+
+VISUAL LAYERING QA STANDARD
+This section is mandatory for commercial hub pages, room hubs, feature hubs, and planning hubs.
+
+Layering rule:
+- Preserve the TCFR visual depth system: page background -> beige section/panel -> white or cream inner cards.
+- Text should not appear to float directly on the green page background unless intentionally used as a minimal divider or small label.
+- Commercial comparison areas must use a visible section container.
+- Card grids must use inner cards with clear surface contrast, border, radius, and spacing.
+- Related guide sections must be contained in a panel and each related guide must be an individual card.
+- Booking CTA bands must appear as contained surfaces with clear button hierarchy.
+
+Rooms hub visual requirements:
+- Hero uses one large image area and one copy panel inside the same card.
+- Room comparison lives inside a beige/cream panel.
+- Each room option is an inner white/cream card.
+- Best-fit guidance cards are separate inner cards.
+- Related planning guides are contained inside a panel and each guide is a card.
+- Bottom booking CTA is a contained card/band.
+
+Design blocker:
+- If section text appears directly on the background without a card/panel and does not match the approved design, do not mark ready.
