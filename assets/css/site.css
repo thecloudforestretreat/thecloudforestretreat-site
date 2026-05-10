@@ -508,12 +508,8 @@ p{
 
 
 /* =========================================================
-   TCFR Rooms Hub + SEO Graph Modules
-   Added for /rooms/ and /es/habitaciones/
-   Purpose:
-   - Keep Rooms Hub on global design system
-   - Avoid page-specific duplicate component styling
-   - Support room comparison, booking CTAs, and related guide interlinks
+   TCFR Rooms Hub Global Module
+   Restores layered visual system: background -> beige panel -> white cards
    ========================================================= */
 
 .rawLangLinks{
@@ -532,17 +528,19 @@ p{
   max-width: var(--container);
   margin: 0 auto;
   padding: 18px var(--pad) 64px;
+  color: var(--ink);
 }
 
 .roomsHero{
   display:grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(340px, .9fr);
+  grid-template-columns: minmax(0, 1.16fr) minmax(340px, .84fr);
   overflow:hidden;
+  padding:0;
 }
 
 .roomsHeroMedia{
-  min-height: 340px;
-  background: rgba(13,89,37,0.10);
+  min-height:340px;
+  background:rgba(13,89,37,0.10);
 }
 
 .roomsHeroMedia img{
@@ -553,50 +551,62 @@ p{
 }
 
 .roomsHeroCopy{
-  padding: 26px;
+  padding:28px;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  gap: 14px;
+  gap:14px;
+  background:rgba(245,245,220,0.42);
 }
 
 .roomsHeroCopy h1{
-  font-size: clamp(32px, 3.2vw, 44px);
-  margin-bottom: 4px;
+  font-size:clamp(34px,3.6vw,48px);
+  margin-bottom:4px;
 }
 
 .roomsHeroLead{
-  font-size: 15.5px;
-  line-height: 1.72;
-  color: var(--ink);
+  font-size:15.5px;
+  line-height:1.72;
+  color:var(--ink);
 }
 
 .roomsHeroActions,
 .roomsBandActions{
   display:flex;
   flex-wrap:wrap;
-  gap: 10px;
+  gap:10px;
   align-items:center;
 }
 
-.roomsComparisonHeader{
+.roomsPanel{
+  margin-top:22px;
+  padding:18px;
+  background:rgba(245,245,220,0.72);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+.roomsPanelHeader{
   display:flex;
   justify-content:space-between;
   align-items:flex-end;
-  gap: 14px;
+  gap:14px;
   flex-wrap:wrap;
   margin-bottom:14px;
 }
 
-.roomsComparisonHeader p{
-  font-size: 14px;
-  color: var(--muted);
+.roomsPanelHeader p{
+  font-size:14px;
+  line-height:1.58;
+  color:var(--muted);
 }
 
 .roomsGrid{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
   align-items:stretch;
 }
 
@@ -605,21 +615,26 @@ p{
   flex-direction:column;
   height:100%;
   overflow:hidden;
-  color: var(--ink);
+  color:var(--ink);
+  background:rgba(255,255,255,0.74);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 14px 34px rgba(13,89,37,0.12);
 }
 
 .roomCardGlobal:hover{
   text-decoration:none;
+  transform:translateY(-1px);
 }
 
 .roomCardGlobal img{
   width:100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio:16 / 10;
   object-fit:cover;
 }
 
 .roomCardBody{
-  padding: 15px;
+  padding:15px;
   display:flex;
   flex-direction:column;
   gap:10px;
@@ -627,62 +642,68 @@ p{
 }
 
 .roomCardBody h3{
-  font-size: 22px;
-  margin-bottom: 0;
+  font-size:22px;
+  margin-bottom:0;
 }
 
 .roomCardBody p{
-  font-size: 14px;
-  line-height: 1.65;
+  font-size:14px;
+  line-height:1.65;
+  color:var(--ink);
 }
 
 .roomPillRow{
   display:flex;
   flex-wrap:wrap;
-  gap: 8px;
+  gap:8px;
   margin-top:auto;
 }
 
 .roomPill{
   display:inline-flex;
   align-items:center;
-  padding: 7px 10px;
+  padding:7px 10px;
   border-radius:999px;
   border:1px solid rgba(13,89,37,0.16);
-  background:rgba(245,245,220,0.66);
+  background:rgba(245,245,220,0.72);
   color:var(--forest);
   font-size:12px;
   font-weight:800;
 }
 
-.roomCardGlobal .roomCardCta{
-  margin-top: 4px;
+.roomCardCta{
+  margin-top:4px;
   align-self:flex-start;
 }
 
 .roomsInfoGrid{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
 }
 
 .roomsInfoCard{
-  padding: 16px;
+  padding:16px;
   height:100%;
+  background:rgba(255,255,255,0.72);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 12px 30px rgba(13,89,37,0.10);
 }
 
 .roomsInfoCard h3{
-  font-size: 19px;
+  font-size:19px;
 }
 
 .roomsInfoCard p{
-  font-size: 14px;
+  font-size:14px;
+  line-height:1.62;
 }
 
 .roomsGuideGrid{
   display:grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
 }
 
 .roomsGuideCard{
@@ -691,38 +712,56 @@ p{
   gap:8px;
   height:100%;
   padding:14px;
+  background:rgba(255,255,255,0.72);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 12px 30px rgba(13,89,37,0.10);
+  color:var(--ink);
+}
+
+.roomsGuideCard:hover{
+  text-decoration:none;
+  transform:translateY(-1px);
 }
 
 .roomsGuideCard h3{
-  font-size: 17px;
+  font-size:17px;
   margin:0;
 }
 
 .roomsGuideCard p{
-  font-size: 13px;
+  font-size:13px;
   line-height:1.58;
   color:var(--muted);
 }
 
 .roomsGuideCard .linkCta{
   margin-top:auto;
+  font-size:13px;
+  font-weight:900;
+  color:var(--forest);
 }
 
 .roomsBand{
-  margin-top: 22px;
-  padding: 18px;
+  margin-top:22px;
+  padding:18px;
   display:flex;
   justify-content:space-between;
-  gap: 16px;
+  gap:16px;
   align-items:center;
   flex-wrap:wrap;
+  background:rgba(245,245,220,0.72);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
 }
 
 .roomsBand p{
   font-size:14px;
+  line-height:1.65;
 }
 
-@media (max-width: 1000px){
+@media(max-width:1000px){
   .roomsHero,
   .roomsGrid,
   .roomsInfoGrid{
@@ -735,25 +774,26 @@ p{
   }
 
   .roomsGuideGrid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 
-@media (max-width: 620px){
+@media(max-width:620px){
   .roomsHub{
-    padding: 12px var(--pad) 52px;
+    padding:12px var(--pad) 52px;
   }
 
   .roomsHeroCopy{
-    padding: 20px;
+    padding:20px;
   }
 
   .roomsGuideGrid{
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
   }
 
   .roomsHeroActions .btn,
-  .roomsBandActions .btn{
+  .roomsBandActions .btn,
+  .roomsPanelHeader .btn{
     width:100%;
   }
 }
