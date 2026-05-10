@@ -1,616 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contacto | The Cloud Forest Retreat</title>
-  <meta name="description" content="Contacta a The Cloud Forest Retreat cerca de Quito, Ecuador. Consulta disponibilidad, habitaciones, cómo llegar y experiencias de naturaleza cercanas. Respondemos rápido." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/es/contacto/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/contact/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/contacto/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/contact/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Contacto | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Contacta a The Cloud Forest Retreat cerca de Quito, Ecuador. Consulta disponibilidad, habitaciones, cómo llegar y experiencias de naturaleza cercanas. Respondemos rápido." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/es/contacto/" />
-  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat en Mindo, Ecuador" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contacto | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Contacta a The Cloud Forest Retreat cerca de Quito, Ecuador. Consulta disponibilidad, habitaciones, cómo llegar y experiencias de naturaleza cercanas. Respondemos rápido." />
-  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#0D5925" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/site.css" />
-  <link rel="stylesheet" href="/assets/css/header.css" />
-  <script src="/assets/js/head.js" defer></script>
-  <style>
-    :root{
-      --max: 1120px;
-      --r: 24px;
-      --shadow: 0 18px 55px rgba(13,89,37,0.16);
-      --line: rgba(11,26,16,0.12);
-      --forest: #0D5925;
-      --forest2: #0B2B12;
-      --orange: #E0643A;
-      --glass: rgba(245,245,220,0.78);
-      --glass2: rgba(245,245,220,0.62);
-      --ink: #0b1a10;
-      --muted: rgba(11,26,16,0.72);
-    }
-*{ box-sizing: border-box; }
-body{ margin: 0; }
-
-.wrap{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 18px 18px 76px;
-}
-
-.card{
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  background: var(--glass2);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  color: var(--ink);
-  min-width: 0;
-}
-
-.hero{
-  margin-top: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  box-shadow: var(--shadow);
-  background: var(--glass);
-  overflow: hidden;
-  position: relative;
-  color: var(--ink);
-}
-
-/*
-  INNER PAGE HERO: shorter, but protects the subject (house).
-  - Uses a capped viewport-based height (so it never becomes "the page")
-  - Includes a safe minimum so it still feels photographic
-  - Uses object-position to keep the house in view
-*/
-.heroMedia{
-  position: relative;
-  height: clamp(320px, 42vh, 520px);
-  background: rgba(0,0,0,0.10);
-}
-
-.heroMedia img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 58%;
-  display: block;
-  transform: scale(1.01);
-}
-
-.heroOverlay{
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-  pointer-events: none;
-}
-
-.heroInner{
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(0,0,0,0.30);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 14px;
-  color: rgba(255,255,255,0.96);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-  max-width: 860px;
-}
-
-.kicker{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 900;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(231,228,209,0.94);
-}
-
-.heroH1{
-  margin: 10px 0 8px;
-  font-family: var(--font-head);
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
-  font-size: clamp(32px, 4.2vw, 52px);
-  color: #fff;
-  text-shadow: 0 14px 40px rgba(0,0,0,0.34);
-}
-
-.heroP{
-  margin: 0;
-  color: rgba(231,228,209,0.94);
-  font-size: 15.8px;
-  line-height: 1.75;
-  font-weight: 650;
-  text-shadow: 0 10px 26px rgba(0,0,0,0.18);
-  max-width: 92ch;
-}
-
-.grid{
-  margin-top: 14px;
-  display: grid;
-  grid-template-columns: 1.12fr 0.88fr;
-  gap: 14px;
-  align-items: start;
-}
-
-.pad{ padding: 14px; }
-
-.h2{
-  margin: 0 0 10px;
-  font-family: var(--font-head);
-  color: var(--forest);
-  letter-spacing: -0.02em;
-  font-weight: 900;
-  font-size: 22px;
-  line-height: 1.08;
-}
-
-.hint{
-  margin: 0 0 12px;
-  color: var(--muted);
-  font-weight: 650;
-  line-height: 1.7;
-  font-size: 14.6px;
-}
-
-.formGrid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.field{ min-width: 0; }
-.full{ grid-column: 1 / -1; }
-
-label{
-  display: block;
-  font-weight: 900;
-  color: var(--forest2);
-  font-size: 13px;
-  margin: 0 0 6px;
-}
-
-input, select, textarea{
-  width: 100%;
-  font-family: inherit;
-  font-size: 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(13,89,37,0.16);
-  background: rgba(255,255,255,0.62);
-  padding: 12px 12px;
-  color: var(--ink);
-  outline: none;
-}
-
-select{ padding-right: 40px; }
-
-textarea{
-  min-height: 160px;
-  resize: vertical;
-}
-
-input:focus, select:focus, textarea:focus{
-  box-shadow: 0 0 0 4px rgba(224,100,58,0.18);
-  border-color: rgba(224,100,58,0.45);
-}
-
-.req{
-  color: rgba(224,100,58,0.95);
-  font-weight: 900;
-  margin-left: 4px;
-}
-
-.actionsRow{
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.miniNote{
-  margin: 0;
-  color: rgba(11,26,16,0.68);
-  font-weight: 650;
-  font-size: 13px;
-  line-height: 1.6;
-  max-width: 72ch;
-}
-
-.submitBtn{
-  appearance: none;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: var(--forest);
-  color: #fff;
-  border-radius: 999px;
-  padding: 12px 16px;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 0 14px 30px rgba(13,89,37,0.18);
-  min-width: 200px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.submitBtn[disabled]{ opacity: 0.7; cursor: not-allowed; }
-
-.sideStack{ display: grid; gap: 14px; }
-
-.sideCard{ padding: 14px; position: relative; overflow: hidden; }
-
-.sideCard:before{
-  content:"";
-  position:absolute;
-  inset: -120px -120px auto auto;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle at center, rgba(224,100,58,0.14), rgba(224,100,58,0) 62%);
-  pointer-events:none;
-}
-
-.sideTitle{
-  margin: 0 0 8px;
-  font-family: var(--font-head);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  font-size: 20px;
-  line-height: 1.1;
-  color: var(--forest);
-  position: relative;
-}
-
-.sideP{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  line-height: 1.75;
-  font-weight: 650;
-  font-size: 14.6px;
-  position: relative;
-}
-
-.btnRow{
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.linkBtn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.62);
-  color: rgba(11,26,16,0.90);
-  font-weight: 900;
-  font-size: 13.5px;
-  box-shadow: 0 12px 26px rgba(13,89,37,0.08);
-  cursor: pointer;
-  text-decoration: none;
-  min-width: 160px;
-}
-
-.linkBtn.primary{
-  background: var(--orange);
-  color: #fff;
-  border-color: rgba(0,0,0,0.08);
-  box-shadow: 0 14px 30px rgba(224,100,58,0.20);
-}
-
-.statusCard{
-  padding: 14px;
-  display: none;
-  margin-top: 12px;
-}
-.statusCard.show{ display: block; }
-
-.statusTitle{
-  margin: 0 0 6px;
-  font-family: var(--font-head);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  font-size: 20px;
-  color: var(--forest);
-}
-
-.statusText{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  line-height: 1.75;
-  font-weight: 650;
-  font-size: 14.6px;
-}
-
-.imageCard{
-  padding: 14px;
-}
-
-.imageFrame{
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 18px;
-  border: 1px solid rgba(11,26,16,0.10);
-  background: #ccc;
-  box-shadow: var(--shadow);
-}
-
-.imageFrame img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-}
-
-.imageFrame::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.28));
-  pointer-events:none;
-}
-
-.imageCaption{
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  color: rgba(255,255,255,0.96);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  text-shadow: 0 14px 40px rgba(0,0,0,0.40);
-  font-size: 14px;
-  z-index: 1;
-}
-
-@media (max-width: 900px){
-  .wrap{ padding: 12px 14px 64px; }
-
-  /*
-    Mobile inner page hero:
-    - Shorter so users reach the form quickly
-    - Adjust object-position to keep the house visible
-  */
-  .heroMedia{ height: clamp(240px, 34vh, 340px); }
-  .heroMedia img{ object-position: center 62%; }
-
-  .heroInner{ left: 12px; right: 12px; bottom: 12px; padding: 12px; max-width: none; }
-  .grid{ grid-template-columns: 1fr; }
-  .formGrid{ grid-template-columns: 1fr; }
-  .submitBtn{ width: 100%; }
-  .actionsRow{ gap: 12px; }
-  .linkBtn{ width: 100%; min-width: 0; }
-  .imageFrame{ aspect-ratio: 16 / 10; }
-}
-  
-/* Turnstile row */
-.turnstileRow{display:flex;align-items:center;gap:14px;margin-top:12px;margin-bottom:10px;}
-.turnstileRow .cf-turnstile{transform:scale(0.95);transform-origin:left center;}
-@media (max-width: 640px){.turnstileRow{justify-content:flex-start;}.turnstileRow .cf-turnstile{transform:scale(0.9);}}
-
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Habitaciones | The Cloud Forest Retreat</title>
+<meta name="description" content="Explora las habitaciones y espacios de descanso de The Cloud Forest Retreat, con vistas al bosque nublado, comodidad y tranquilidad cerca de Quito, Ecuador." />
+<link rel="canonical" href="https://thecloudforestretreat.com/es/habitaciones/" />
+<link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/rooms/" />
+<link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/habitaciones/" />
+<link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/rooms/" />
+<link rel="stylesheet" href="/assets/css/site.css" />
+<link rel="stylesheet" href="/assets/css/header.css?v=3" />
+<link rel="stylesheet" href="/assets/css/footer.css?v=3" />
+<script src="/assets/js/head.js?v=1" defer></script>
+<style>
+.rawLangLinks{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+.roomsPage{max-width:1180px;margin:0 auto;padding:18px 16px 64px;}
+.roomsHero,.roomsSection,.roomsBand{border:1px solid rgba(13,89,37,.18);border-radius:22px;background:rgba(245,245,220,.72);box-shadow:0 18px 55px rgba(0,0,0,.14);}
+.roomsHero{display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;}
+.roomsHeroMedia img{width:100%;height:100%;object-fit:cover;min-height:340px;}
+.roomsHeroCopy{padding:24px;display:flex;flex-direction:column;justify-content:center;gap:14px;}
+.roomsHero h1{margin:0;font-size:clamp(32px,3.2vw,42px);line-height:1.05;}
+.roomsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.roomsSection{margin-top:18px;padding:18px;}
+.roomCard{background:rgba(255,255,255,.68);border:1px solid rgba(13,89,37,.14);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;}
+.roomCard img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+.roomBody{padding:14px;display:flex;flex-direction:column;gap:10px;height:100%;}
+.roomMeta{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{border:1px solid rgba(13,89,37,.14);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:700;background:#fff;}
+.heroActions,.bandActions{display:flex;gap:10px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 16px;font-weight:800;border:1px solid rgba(13,89,37,.18);}
+.btnPrimary{background:#E0643A;color:#fff;}
+.btnSecondary{background:#fff;color:#0B2B12;}
+.roomsBand{margin-top:18px;padding:18px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;}
+@media(max-width:900px){.roomsHero,.roomsGrid{grid-template-columns:1fr;}}
 </style>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ContactPage",
-      "@id": "https://thecloudforestretreat.com/es/contacto/#webpage",
-      "url": "https://thecloudforestretreat.com/es/contacto/",
-      "name": "Contacto | The Cloud Forest Retreat",
-      "description": "Contacta a The Cloud Forest Retreat cerca de Quito, Ecuador. Consulta disponibilidad, habitaciones, cómo llegar y experiencias de naturaleza cercanas.",
-      "inLanguage": "es",
-      "isPartOf": {
-        "@id": "https://thecloudforestretreat.com/#website"
-      },
-      "about": {
-        "@id": "https://thecloudforestretreat.com/#lodgingbusiness"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://thecloudforestretreat.com/es/contacto/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Inicio",
-          "item": "https://thecloudforestretreat.com/es/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Contacto",
-          "item": "https://thecloudforestretreat.com/es/contacto/"
-        }
-      ]
-    }
-  ]
-}
-  </script>
 </head>
-<body data-page-type="contact_page" data-page-language="es">
-  <div id="siteHeader" data-current-lang="es"></div>
-  <nav class="rawLangLinks" aria-label="Selector de idioma">
-    <a href="https://thecloudforestretreat.com/contact/" lang="en" hreflang="en" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="contact_page" data-analytics-target-language="en">English</a>
-    <a href="https://thecloudforestretreat.com/es/contacto/" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="contact_page" data-analytics-target-language="es">Español</a>
-  </nav>
-  <main class="wrap" aria-label="Página de contacto">
-    <section class="hero" aria-label="Hero de contacto" data-analytics-section="contact_hero">
-      <div class="heroMedia" aria-label="Imagen principal">
-        <img src="/assets/images/pages/tcfr_contact_hero.jpg" alt="The Cloud Forest Retreat en Mindo, Ecuador" loading="eager" decoding="async" />
-        <div class="heroOverlay" aria-hidden="true"></div>
-        <div class="heroInner">
-          <div class="kicker">Contacto</div>
-          <h1 class="heroH1">Escríbenos</h1>
-          <p class="heroP">
-            Contacta a The Cloud Forest Retreat en Mindo, Ecuador. Escríbenos para reservas, consultas de viaje o ayuda personalizada para planificar tu estadía en el impresionante bosque nublado de Ecuador.
-          </p>
-        </div>
-      </div>
-    </section>
-<section class="grid" aria-label="Formulario y accesos" data-analytics-section="contact_form_links">
-  <section class="card pad" aria-label="Formulario de contacto">
-    <h2 class="h2">Envía un mensaje</h2>
-    <p class="hint">
-      Este formulario le envía un email a nuestro equipo y también te envía una confirmación. Los campos con asterisco son obligatorios.
-    </p>
-
-    <form id="tcfrContactForm" aria-label="Formulario de contacto" data-analytics-form="contact_form" data-analytics-page-type="contact_page">
-      <input type="hidden" name="form_type" value="contact" />
-      <input type="hidden" name="lang" value="es" />
-      <input type="hidden" name="source_page" value="" />
-
-    <input type="hidden" name="cf_secret" value="TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c" />
-
-
-      <div class="formGrid">
-        <div class="field">
-          <label for="first_name">Nombre <span class="req">*</span></label>
-          <input id="first_name" name="first_name" type="text" autocomplete="given-name" required placeholder="Tu nombre" autocapitalize="words" inputmode="text" spellcheck="false" />
-        </div>
-
-        <div class="field">
-          <label for="last_name">Apellido <span class="req">*</span></label>
-          <input id="last_name" name="last_name" type="text" autocomplete="family-name" required placeholder="Tu apellido" autocapitalize="words" inputmode="text" spellcheck="false" />
-        </div>
-
-        <div class="field">
-          <label for="email">Email <span class="req">*</span></label>
-          <input id="email" name="email" type="email" autocomplete="email" required placeholder="tu@ejemplo.com" />
-        </div>
-
-        <div class="field">
-          <label for="phone">Teléfono</label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Código de país + número" />
-        </div>
-
-        <div class="field full">
-          <label for="message">Mensaje <span class="req">*</span></label>
-          <textarea id="message" name="message" required placeholder="Tu mensaje" autocapitalize="none"></textarea>
-        </div>
-
-        <div class="field full">
-          <label for="how_did_you_hear_about_us">¿Cómo te enteraste de nosotros?</label>
-          <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
-            <option value="">Selecciona</option>
-            <option value="Referral">Recomendación</option>
-            <option value="Google Search">Búsqueda en Google</option>
-            <option value="Google Maps">Google Maps</option>
-            <option value="Instagram">Instagram</option>
-            <option value="TikTok">TikTok</option>
-            <option value="YouTube">YouTube</option>
-            <option value="TripAdvisor">TripAdvisor</option>
-            <option value="Airbnb">Airbnb</option>
-            <option value="Vrbo">Vrbo</option>
-            <option value="Booking.com">Booking.com</option>
-            <option value="Other">Otro</option>
-          </select>
-        </div>
-      </div>
-
-            <div class="turnstileRow">
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAACauNy6DfCUnIJhS"></div>
-
-              <div id="tcfrStatusBox" class="statusCard" hidden>
-                <h3 id="tcfrStatusTitle" class="statusTitle">Mensaje enviado</h3>
-                <p id="tcfrStatusMsg" class="statusBody">Gracias. Recibimos tu mensaje y te enviamos un email de confirmación. Si no lo ves, revisa spam o promociones.</p>
-              </div>
-      </div>
-      <div class="actionsRow">
-        <p class="miniNote">
-          Al enviar, aceptas que podamos contactarte por email y, si lo proporcionas, por teléfono.
-        </p>
-        <button id="tcfrContactSubmitBtn" class="submitBtn" type="submit" data-analytics-event="form_submit_click" data-analytics-label="Enviar" data-analytics-location="contact_form" data-analytics-page-type="contact_page" data-analytics-form="contact_form">Enviar</button>
-      </div>
-    </form>
-
-    <section id="tcfrContactStatusCard" class="card statusCard" aria-label="Estado del envío">
-      <h3 class="statusTitle">Mensaje enviado</h3>
-      <p class="statusText">
-        Gracias. Recibimos tu mensaje y te enviamos un email de confirmación. Si no lo ves, revisa spam o promociones.
-      </p>
-    </section>
-  </section>
-
-  <aside class="sideStack" aria-label="Accesos rápidos">
-    <section class="card sideCard" aria-label="Interés en reservar">
-      <h3 class="sideTitle">¿Quieres reservar?</h3>
-      <p class="sideP">
-        Si ya tienes fechas en mente, usa nuestro formulario de reserva y te responderemos con disponibilidad y los próximos pasos.
-      </p>
-      <div class="btnRow" aria-label="Botones de reserva y galería">
-        <a class="linkBtn primary" href="/es/reservas/" data-analytics-event="booking_cta_click" data-analytics-label="Ir a reservas" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page" data-analytics-cta-type="booking">Ir a reservas</a>
-        <a class="linkBtn" href="/es/caracteristicas/galeria/" data-analytics-event="internal_link_click" data-analytics-label="Ver galería" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">Ver galería</a>
-      </div>
-    </section>
-
-    <section class="card sideCard" aria-label="Políticas">
-      <h3 class="sideTitle">Políticas</h3>
-      <p class="sideP">
-        Revisa nuestras políticas de privacidad y términos de servicio.
-      </p>
-      <div class="btnRow" aria-label="Botones de políticas">
-        <a class="linkBtn" href="/es/politica-de-privacidad/" data-analytics-event="internal_link_click" data-analytics-label="Política de privacidad" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">Política de privacidad</a>
-        <a class="linkBtn" href="/es/terminos-de-servicio/" data-analytics-event="internal_link_click" data-analytics-label="Términos de servicio" data-analytics-location="contact_sidebar" data-analytics-page-type="contact_page">Términos de servicio</a>
-      </div>
-    </section>
-
-    <section class="card imageCard" aria-label="Imagen de contacto">
-      <div class="imageFrame">
-        <img src="/assets/images/pages/tcfr_contact_01.jpg" alt="Mañana en el bosque nublado en The Cloud Forest Retreat" loading="lazy" decoding="async" />
-        <div class="imageCaption">Bosque nublado de Mindo. Mañanas tranquilas, naturaleza de cerca.</div>
-      </div>
-    </section>
-  </aside>
+<body data-page-type="rooms_hub" data-page-language="es">
+<div id="siteHeader" data-current-lang="es"></div>
+<nav class="rawLangLinks" aria-label="Selector de idioma">
+<a href="https://thecloudforestretreat.com/rooms/" lang="en" hreflang="en" data-analytics-event="language_switch_click">English</a>
+<a href="https://thecloudforestretreat.com/es/habitaciones/" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click">Español</a>
+</nav>
+<main class="roomsPage">
+<section class="roomsHero" data-analytics-section="rooms_hero">
+<div class="roomsHeroMedia">
+<img src="/assets/images/pages/rooms/tcfr_images_rooms_hero.jpg" alt="Habitaciones en The Cloud Forest Retreat">
+</div>
+<div class="roomsHeroCopy">
+<div class="pill">Cerca de Quito • Estadía en bosque nublado</div>
+<h1>Habitaciones en The Cloud Forest Retreat</h1>
+<p>Explora espacios tranquilos diseñados para parejas, observadores de aves, viajeros de bienestar y escapadas de naturaleza cerca de Quito, Ecuador.</p>
+<div class="heroActions">
+<a class="btn btnPrimary" href="/es/reservas/" data-analytics-event="booking_cta_click">Reserva tu estadía</a>
+<a class="btn btnSecondary" href="/es/contacto/" data-analytics-event="primary_cta_click">Haz una pregunta</a>
+</div>
+</div>
 </section>
-  </main>
-  <div id="siteFooter"></div>
-  <script src="/assets/js/site.js?v=3"></script>
-  <script src="/assets/js/contact-form.js?v=3"></script>
+<section class="roomsSection" data-analytics-section="room_comparison">
+<h2>Elige la mejor habitación para tu viaje</h2>
+<p>Compara vistas, iluminación, ambiente y estilo para encontrar la mejor opción para tu estadía.</p>
+<div class="roomsGrid">
+<article class="roomCard">
+<img src="/assets/images/pages/rooms/tcfr_images_rooms_pano_01.jpg" alt="Suite Panorámica">
+<div class="roomBody">
+<h2>Suite Panorámica</h2>
+<p>Suite amplia con vistas panorámicas al bosque nublado y terraza privada.</p>
+<div class="roomMeta"><span class="pill">Mejores vistas</span><span class="pill">Terraza privada</span><span class="pill">Observación de aves</span></div>
+<a class="btn btnSecondary" href="/es/habitaciones/suite-panoramica/" data-analytics-event="room_card_click">Ver habitación</a>
+</div>
+</article>
+<article class="roomCard">
+<img src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg" alt="Habitación Amanecer">
+<div class="roomBody">
+<h2>Habitación Amanecer</h2>
+<p>Luz suave de la mañana, comodidad acogedora y ambiente tranquilo de bosque.</p>
+<div class="roomMeta"><span class="pill">Vista al amanecer</span><span class="pill">Estadía tranquila</span><span class="pill">Parejas</span></div>
+<a class="btn btnSecondary" href="/es/habitaciones/habitacion-amanecer/" data-analytics-event="room_card_click">Ver habitación</a>
+</div>
+</article>
+<article class="roomCard">
+<img src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg" alt="Habitación Atardecer">
+<div class="roomBody">
+<h2>Habitación Atardecer</h2>
+<p>Relájate con la luz del atardecer y un cierre tranquilo para tu día en la montaña.</p>
+<div class="roomMeta"><span class="pill">Luz de tarde</span><span class="pill">Naturaleza</span><span class="pill">Ambiente relajado</span></div>
+<a class="btn btnSecondary" href="/es/habitaciones/habitacion-atardecer/" data-analytics-event="room_card_click">Ver habitación</a>
+</div>
+</article>
+</div>
+</section>
+<section class="roomsBand" data-analytics-section="booking_cta">
+<div>
+<h2>¿Necesitas ayuda para elegir?</h2>
+<p>Cuéntanos tu estilo de viaje, las vistas que prefieres y el tipo de experiencia que buscas.</p>
+</div>
+<div class="bandActions">
+<a class="btn btnPrimary" href="/es/reservas/" data-analytics-event="booking_cta_click">Consultar disponibilidad</a>
+<a class="btn btnSecondary" href="/es/mejor-eco-lodge-quito/" data-analytics-event="internal_link_click">Por qué hospedarte aquí</a>
+</div>
+</section>
+</main>
+<div id="siteFooter"></div>
+<script src="/assets/js/site.js?v=3"></script>
 </body>
 </html>
