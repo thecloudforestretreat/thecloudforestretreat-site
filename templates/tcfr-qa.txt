@@ -419,3 +419,66 @@ QA CHECKLIST BEFORE HANDOFF
 
 
 Confirm that the page is ready to go live if so
+
+
+DESIGN SYSTEM QA STANDARD
+This section is mandatory before handoff.
+
+Global-first rule:
+- Use /assets/css/site.css, /assets/css/header.css, and /assets/css/footer.css as the primary design system.
+- Reuse existing global classes whenever possible: .container, .page, .card, .section, .btn, .btn.primary, .btn.secondary, .badge, .grid2, .linkGrid, .linkCard, .linkText, .linkCta.
+- Do not recreate global buttons, cards, typography, footer styling, social icons, header behavior, or container logic inside page-level CSS.
+- Page-level CSS is allowed only for layout structures unique to the page, and should be minimal.
+- If a page-specific pattern will be reused across pages, add it to site.css instead of embedding it in the page.
+
+Design system blockers:
+- Duplicate local .btn systems when global .btn already exists.
+- Duplicate local card systems when .card or reusable modules can be used.
+- Large local :root overrides that conflict with global tokens.
+- Page-specific font imports when global typography already exists.
+- Layout drift from established TCFR card, hero, button, and section patterns.
+
+SEO GRAPH AND INTERNAL LINKING QA STANDARD
+This section is mandatory before handoff.
+
+Every commercial or core page must support a strategic internal linking graph:
+- Link to direct conversion pages such as booking and contact.
+- Link to related commercial pages, room details, features, and planning pages.
+- Link to relevant blog or guide pages when they reinforce search intent.
+- Use contextual anchor text, not generic random link lists.
+- Add analytics tracking to each important internal link with internal_link_click, related_content_click, room_card_click, booking_cta_click, or another page-specific event.
+- Avoid linking to non-existent pages unless they are part of an approved launch batch and are clearly included in the sitemap plan.
+- Ensure EN pages only link to EN URLs, and ES pages only link to ES URLs except explicit language switches.
+
+Rooms hub required internal links:
+English:
+- /rooms/panoramic-suite/
+- /rooms/sunrise-room/
+- /rooms/sunset-room/
+- /rooms/common-areas/
+- /booking/
+- /contact/
+- /best-eco-lodge-quito/
+- /where-to-stay-near-quito-nature/
+- /cloud-forest-weekend-escape/
+- /what-makes-a-cloud-forest-stay-different/
+- /best-time-to-visit-ecuador-cloud-forest/
+
+Spanish:
+- /es/habitaciones/suite-panoramica/
+- /es/habitaciones/habitacion-amanecer/
+- /es/habitaciones/habitacion-atardecer/
+- /es/habitaciones/areas-comunes/
+- /es/reservas/
+- /es/contacto/
+- /es/mejor-eco-lodge-quito/
+- /es/donde-alojarse-cerca-de-quito-naturaleza/
+- /es/escapada-fin-de-semana-bosque-nublado/
+- /es/que-hace-diferente-estadia-bosque-nublado/
+- /es/mejor-epoca-visitar-bosque-nublado-ecuador/
+
+Final handoff must include:
+- confirmation of global CSS usage
+- confirmation of inlinks/outlinks added or preserved
+- confirmation of related guide links added where relevant
+- confirmation of analytics coverage for those links
