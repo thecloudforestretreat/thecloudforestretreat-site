@@ -416,6 +416,16 @@ QA CHECKLIST BEFORE HANDOFF
 - [ ] important internal links present
 - [ ] major CTAs present and tracked
 - [ ] page is production-safe and ready to go live
+ADDITIONAL LINKING CHECKLIST BEFORE HANDOFF
+- [ ] Page has appropriate body-level interlinks, not only header/footer links
+- [ ] Page links to the strongest relevant conversion path
+- [ ] Page links to relevant parent, child, sibling, or cluster pages
+- [ ] Related guide/blog links are present where useful
+- [ ] Important internal links have analytics attributes
+- [ ] EN content links only to EN URLs, except language switch
+- [ ] ES content links only to ES URLs, except language switch
+- [ ] Recommended source inlinks are listed if they cannot be edited in the current files
+- [ ] No links added to unapproved/non-existent pages
 
 
 Confirm that the page is ready to go live if so
@@ -482,6 +492,117 @@ Final handoff must include:
 - confirmation of inlinks/outlinks added or preserved
 - confirmation of related guide links added where relevant
 - confirmation of analytics coverage for those links
+
+
+INLINK, INTERLINK, AND SEO GRAPH ENFORCEMENT STANDARD
+This section is mandatory for every page pair before handoff.
+
+Definitions:
+- Inlinks: links from other TCFR pages that should point into the page being reviewed.
+- Interlinks: links from the page being reviewed to related TCFR pages.
+- Conversion links: links to booking, contact, room detail, feature detail, or high-intent commercial pages.
+- Support links: links to planning guides, blog articles, comparison pages, destination pages, or FAQ-style content that strengthens topical authority.
+
+Mandatory review steps:
+1. Identify the page's primary search intent.
+2. Identify the page's commercial role: booking driver, room selection, feature discovery, planning support, blog/support article, or legal/info page.
+3. Identify the page's topical cluster: rooms and stay, eco lodge near Quito, cloud forest escape, wellness/nature retreat, birding/nature stay, booking/contact, features/amenities, or destination/support.
+4. Check outbound interlinks from the page.
+5. Recommend or add missing high-value interlinks where relevant.
+6. Check expected inlinks from related pages, based on the sitemap master or launch batch.
+7. If inlinks cannot be edited in the current files, list exactly which source pages should link to the page.
+8. Add analytics attributes to important internal links.
+9. Confirm EN pages link to EN URLs and ES pages link to ES URLs, except rawLangLinks.
+10. Do not add links to non-existent pages unless the page is part of the approved launch batch and sitemap plan.
+
+Required internal link coverage by page type:
+
+Rooms hub:
+- room detail pages
+- common areas
+- booking
+- contact
+- related stay-planning guides
+- relevant feature pages
+
+Room detail pages:
+- rooms hub
+- booking
+- contact
+- common areas
+- related room alternatives
+- relevant features
+- related planning guides where useful
+
+Booking page:
+- rooms hub
+- contact
+- FAQ or policy/support pages
+- relevant rooms
+- relevant planning pages that reduce booking friction
+
+Feature hub:
+- feature detail pages
+- rooms hub
+- booking
+- relevant planning guides
+
+Feature detail pages:
+- features hub
+- rooms hub
+- booking
+- related feature pages
+- relevant guides
+
+Planning/comparison/money pages:
+- booking
+- rooms hub
+- contact
+- feature hub
+- directly related supporting guides
+- related commercial pages
+
+Blog/article pages:
+- at least 2 to 5 relevant commercial links when natural
+- at least 2 relevant support or related content links
+- booking or contact CTA when commercially appropriate
+- avoid forcing sales links if it harms the article intent
+
+Legal/policy pages:
+- booking or contact only where useful
+- do not over-optimize
+
+Internal link quality rules:
+- Use descriptive anchor text.
+- Avoid generic repeated anchors like "click here".
+- Avoid dumping unrelated links.
+- Prefer contextual links inside useful sections.
+- Related guide cards are allowed when the page is a hub or commercial page.
+- Footer/header links do not count as sufficient strategic internal links.
+- A page can pass only when the main body contains intentional internal links appropriate to the page type.
+
+Analytics rules for internal links:
+- Room card links: data-analytics-event="room_card_click"
+- Related guide links: data-analytics-event="related_content_click"
+- Booking links: data-analytics-event="booking_cta_click"
+- Contact/help links: data-analytics-event="primary_cta_click" or "contact_cta_click"
+- General internal links: data-analytics-event="internal_link_click"
+- Include data-analytics-label, data-analytics-location, and data-analytics-page-type on important links.
+
+Inlink recommendation output:
+If the current task only includes one page pair, include a short "Recommended source inlinks" note in the QA summary when relevant.
+
+The note should list:
+- pages that should link to this page
+- suggested anchor text
+- whether the link should be contextual, card-based, nav/menu, or CTA-based
+
+Blockers:
+- Commercial pages with no body-level links to booking/contact are not ready.
+- Hub pages with no links to their child/detail pages are not ready.
+- Support articles with no relevant links back to commercial pages are not ready when the article has commercial intent.
+- EN pages linking to ES URLs in normal page content, or ES pages linking to EN URLs in normal page content, are blockers unless it is the raw language switch.
+- Related guide links without analytics attributes should be fixed before handoff.
 
 
 VISUAL LAYERING QA STANDARD
