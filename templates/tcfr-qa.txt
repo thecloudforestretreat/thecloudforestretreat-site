@@ -677,3 +677,11 @@ Rooms hub visual requirements:
 
 Design blocker:
 - If section text appears directly on the background without a card/panel and does not match the approved design, do not mark ready.
+
+
+FINAL PRODUCTION VALIDATION
+- Confirm /assets/js/site.js loads exactly once.
+- Confirm exactly one #siteHeader and one #siteFooter exist.
+- Confirm EN pages only use EN body links except language switch.
+- Confirm ES pages only use ES body links except language switch.
+- Confirm rawLangLinks remains visually hidden.
