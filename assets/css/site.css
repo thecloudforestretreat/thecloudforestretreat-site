@@ -797,3 +797,411 @@ p{
     width:100%;
   }
 }
+
+
+/* =========================================================
+   TCFR Features Hub Global Module
+   Purpose:
+   - Move features hub layout out of page-level CSS
+   - Preserve global TCFR layering: page background -> beige panels -> inner cards
+   - Keep features pages consistent with Rooms Hub and other commercial hubs
+   ========================================================= */
+
+body[data-page-type="features_hub"] .wrap{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 18px var(--pad) 84px;
+}
+
+body[data-page-type="features_hub"] .topBand,
+body[data-page-type="features_hub"] .featuresPanel,
+body[data-page-type="features_hub"] .ctaBand{
+  background: rgba(245,245,220,0.72);
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+
+body[data-page-type="features_hub"] .topBand{
+  margin-top: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="features_hub"] .crumbs,
+body[data-page-type="features_hub"] .quickActions{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="features_hub"] .crumbs{
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+}
+
+body[data-page-type="features_hub"] .hero{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  box-shadow: var(--shadow);
+  background: rgba(245,245,220,0.72);
+  overflow: hidden;
+  position: relative;
+  color: var(--ink);
+}
+
+body[data-page-type="features_hub"] .heroMedia{
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  background: rgba(0,0,0,0.10);
+}
+
+body[data-page-type="features_hub"] .heroMedia img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+body[data-page-type="features_hub"] .heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events: none;
+}
+
+body[data-page-type="features_hub"] .heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.20);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+}
+
+body[data-page-type="features_hub"] .kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
+
+body[data-page-type="features_hub"] .heroH1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 3.8vw, 54px);
+  color: #fff;
+}
+
+body[data-page-type="features_hub"] .heroLead{
+  margin: 0;
+  max-width: 80ch;
+  font-weight: 600;
+  line-height: 1.7;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
+}
+
+body[data-page-type="features_hub"] .featuresPanel{
+  margin-top: 14px;
+  padding: 16px;
+}
+
+body[data-page-type="features_hub"] .filters{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="features_hub"] .filterLeft,
+body[data-page-type="features_hub"] .filterRight,
+body[data-page-type="features_hub"] .chips{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="features_hub"] .filterLabel{
+  font-weight: 900;
+  color: rgba(11,26,16,0.72);
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+body[data-page-type="features_hub"] .chip{
+  appearance: none;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 13px;
+  color: #0b2b12;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+  user-select: none;
+  white-space: nowrap;
+}
+
+body[data-page-type="features_hub"] .chip.is-active{
+  background: rgba(224,100,58,0.92);
+  border-color: rgba(0,0,0,0.10);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(224,100,58,0.18);
+}
+
+body[data-page-type="features_hub"] .sectionTitle{
+  margin: 18px 0 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.1;
+  color: var(--forest);
+}
+
+body[data-page-type="features_hub"] .sectionHint{
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14px;
+  max-width: 90ch;
+}
+
+body[data-page-type="features_hub"] .grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+body[data-page-type="features_hub"] .card{
+  border: 1px solid rgba(11,26,16,0.12);
+  border-radius: var(--r2);
+  background: rgba(245,245,220,0.72);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  color: var(--ink);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body[data-page-type="features_hub"] .card a{
+  color: inherit;
+  text-decoration: none;
+}
+
+body[data-page-type="features_hub"] .cardMedia{
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+
+body[data-page-type="features_hub"] .cardMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+body[data-page-type="features_hub"] .cardMediaShade{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.26));
+  pointer-events: none;
+}
+
+body[data-page-type="features_hub"] .cardTopBadge{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.96);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+body[data-page-type="features_hub"] .cardBody{
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  flex: 1 1 auto;
+}
+
+body[data-page-type="features_hub"] .cardTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+  color: var(--forest);
+}
+
+body[data-page-type="features_hub"] .cardText{
+  margin: 0;
+  color: rgba(11,26,16,0.78);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 14.8px;
+}
+
+body[data-page-type="features_hub"] .pillRow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+body[data-page-type="features_hub"] .pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: #0b2b12;
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+}
+
+body[data-page-type="features_hub"] .cardCtaRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="features_hub"] .cardCta{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  color: #0b2b12;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  box-shadow: 0 12px 28px rgba(13,89,37,0.10);
+  white-space: nowrap;
+}
+
+body[data-page-type="features_hub"] .card:hover .cardCta{
+  background: rgba(224,100,58,0.10);
+  border-color: rgba(224,100,58,0.30);
+}
+
+body[data-page-type="features_hub"] .card:hover .cardMedia img{
+  transform: scale(1.03);
+  transition: transform 260ms ease;
+}
+
+body[data-page-type="features_hub"] .ctaBand{
+  margin-top: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="features_hub"] .ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+body[data-page-type="features_hub"] .ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 80ch;
+}
+
+body[data-page-type="features_hub"] .ctaBtns{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+body[data-page-type="features_hub"] .is-hidden{
+  display:none !important;
+}
+
+@media (max-width: 900px){
+  body[data-page-type="features_hub"] .wrap{
+    padding: 12px var(--pad) 74px;
+  }
+
+  body[data-page-type="features_hub"] .heroMedia{
+    height: 280px;
+  }
+
+  body[data-page-type="features_hub"] .grid{
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page-type="features_hub"] .cardMedia{
+    aspect-ratio: 4 / 3;
+  }
+}
