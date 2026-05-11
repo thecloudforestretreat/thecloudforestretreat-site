@@ -739,3 +739,20 @@ Blockers:
 - rawLangLinks visible in page body.
 - Spanish accent blockers in visible Spanish copy, metadata, aria-labels, alt text, or JSON-LD user-facing text.
 - ES page linking to EN body URLs except rawLangLinks.
+
+AMENITIES FEATURE DETAIL QA ENFORCEMENT
+This section is mandatory for /features/amenities/ and /es/caracteristicas/amenidades/.
+
+Rules:
+- Amenities pages must use data-page-type="feature_detail_page".
+- Reusable amenities-specific layout styles must live in /assets/css/site.css, not in large page-level style blocks.
+- Page files must not ship with large inline CSS defining .gridA, .vShot, .sectionGrid, .uniqueInner, .cozyInner, .cozyMedia, or related reusable amenity layout classes.
+- The page must preserve the TCFR layered structure: page background -> beige/cream panels -> inner cards.
+- Spanish page must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, and ES-only body links.
+- CTAs to rooms, booking, contact, and related feature/planning pages must include data-analytics-* attributes.
+
+Blockers:
+- Spanish visible or metadata text with missing accents such as montanas, Caracteristicas, Pagina, Navegacion, mas, huesped, facil, cafe, area, or estadia.
+- ES page linking to EN URLs except rawLangLinks.
+- Large page-level CSS for reusable amenities layout.
+- Missing or duplicate /assets/js/site.js.
