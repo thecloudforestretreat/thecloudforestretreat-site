@@ -685,3 +685,11 @@ FINAL PRODUCTION VALIDATION
 - Confirm EN pages only use EN body links except language switch.
 - Confirm ES pages only use ES body links except language switch.
 - Confirm rawLangLinks remains visually hidden.
+
+
+MIXED LANGUAGE UI BLOCKER
+- English pages must not contain visible Spanish UI labels, pills, badges, CTA labels, or helper text except proper names and explicit language-switch labels.
+- Spanish pages must not contain visible English UI labels, pills, badges, CTA labels, or helper text except approved brand names.
+- Check room pills, badges, CTA labels, card labels, helper labels, FAQ toggles, and section labels specifically.
+- Example blocker:
+  English room card using "Luz de mañana" instead of "Morning light".
