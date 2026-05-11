@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Habitación Amanecer | Habitación hacia el este en el bosque nublado de Ecuador | The Cloud Forest Retreat</title>
-<meta content="Despierta con la primera luz en nuestra Habitación Amanecer en The Cloud Forest Retreat. Una habitación acogedora, orientada al este, con mañanas tranquilas, tonos suaves del amanecer y vistas al bosque nublado." name="description"/>
+<title>Habitación Atardecer | Vistas de Hora Dorada | The Cloud Forest Retreat</title>
+<meta content="Relájate con vistas de hora dorada en The Cloud Forest Retreat. La Habitación Atardecer es una estadía acogedora orientada al oeste, con luz cálida al final del día y calma del bosque nublado." name="description"/>
 <meta content="index,follow" name="robots"/>
 <!-- Canonical + hreflang (PRODUCTION URLs) -->
-<link href="https://thecloudforestretreat.com/rooms/sunrise-room/" rel="canonical"/>
-<link href="https://thecloudforestretreat.com/rooms/sunrise-room/" hreflang="en" rel="alternate"/>
-<link href="https://thecloudforestretreat.com/es/habitaciones/habitacion-amanecer/" hreflang="es" rel="alternate"/>
-<link href="https://thecloudforestretreat.com/rooms/sunrise-room/" hreflang="x-default" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/" rel="canonical"/>
+<link href="https://thecloudforestretreat.com/rooms/sunset-room/" hreflang="en" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/" hreflang="es" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/rooms/sunset-room/" hreflang="x-default" rel="alternate"/>
 <!-- Open Graph (PRODUCTION URLs) -->
 <meta content="website" property="og:type"/>
 <meta content="The Cloud Forest Retreat" property="og:site_name"/>
-<meta content="Habitación Amanecer | Habitación hacia el este en el bosque nublado de Ecuador" property="og:title"/>
-<meta content="Una habitación acogedora, orientada al este, para quienes se levantan temprano. Disfruta mañanas tranquilas, luz del amanecer y vistas al bosque nublado en The Cloud Forest Retreat." property="og:description"/>
-<meta content="https://thecloudforestretreat.com/rooms/sunrise-room/" property="og:url"/>
+<meta content="Habitación Atardecer | Vistas de Hora Dorada" property="og:title"/>
+<meta content="Relájate con vistas de hora dorada en The Cloud Forest Retreat. Una habitación acogedora orientada al oeste, con luz cálida y calma del bosque nublado." property="og:description"/>
+<meta content="https://thecloudforestretreat.com/es/habitaciones/habitación-atardecer/" property="og:url"/>
 <meta content="https://thecloudforestretreat.com/og-tcfr.jpg" property="og:image"/>
 <meta content="https://thecloudforestretreat.com/og-tcfr.jpg" property="og:image:secure_url"/>
 <meta content="image/jpeg" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="Vista de montaña en The Cloud Forest Retreat" property="og:image:alt"/>
+<meta content="Habitación Atardecer en The Cloud Forest Retreat" property="og:image:alt"/>
 <!-- Twitter (PRODUCTION URLs) -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Habitación Amanecer | Habitación hacia el este en el bosque nublado de Ecuador" name="twitter:title"/>
-<meta content="Una habitación acogedora, orientada al este, para quienes se levantan temprano, con mañanas tranquilas, luz del amanecer y vistas al bosque nublado en The Cloud Forest Retreat." name="twitter:description"/>
+<meta content="Habitación Atardecer | Vistas de Hora Dorada" name="twitter:title"/>
+<meta content="Una habitación acogedora orientada al oeste para amantes del atardecer: luz cálida, vistas tranquilas y calma del bosque nublado." name="twitter:description"/>
 <meta content="https://thecloudforestretreat.com/og-tcfr.jpg" name="twitter:image"/>
 <!-- Favicons (approved root paths) -->
 <link href="/favicon.ico" rel="icon" sizes="any"/>
@@ -41,8 +39,8 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <!-- Global / shared CSS -->
-<link href="/assets/css/site.css" rel="stylesheet">
-<link href="/assets/css/header.css?v=3" rel="stylesheet">
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<link href="/assets/css/header.css?v=3" rel="stylesheet"/>
 <!-- Head-only JS -->
 <script defer="" src="/assets/js/head.js?v=1"></script>
 <style>
@@ -52,8 +50,8 @@
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
 
-      --sunrise: #E0643A;
-      --sunriseSoft: rgba(224,100,58,0.12);
+      --sunset: #E0643A;
+      --sunsetSoft: rgba(224,100,58,0.14);
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
@@ -119,6 +117,7 @@
       overflow: hidden;
       color: var(--ink);
       min-width: 0;
+      position: relative;
     }
 
     .cardHead{
@@ -168,8 +167,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(900px 520px at 18% 12%, rgba(224,100,58,0.26), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.42));
+        radial-gradient(900px 520px at 80% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.46));
       pointer-events: none;
     }
 
@@ -214,7 +213,7 @@
       max-width: 70ch;
       font-weight: 600;
       line-height: 1.7;
-      color: rgba(255,255,255,0.92);
+      color: rgba(231,228,209,0.92);
       font-size: 15.5px;
     }
 
@@ -454,6 +453,7 @@
       line-height: 1.6;
     }
 
+    /* Shared bathroom section */
     .bathSection{
       margin-top: 14px;
     }
@@ -749,79 +749,156 @@
       .relatedGrid{ grid-template-columns: 1fr; }
     }
   </style>
-</link></link><style>.rawLangLinks{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}</style><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "LodgingBusiness", "name": "The Cloud Forest Retreat", "url": "https://thecloudforestretreat.com/"}, {"@type": "HotelRoom", "name": "Habitación Amanecer"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Para quién es ideal esta habitación?", "acceptedAnswer": {"@type": "Answer", "text": "Viajeros de naturaleza y personas que disfrutan despertar temprano."}}]}]}</script></head>
+<link href="/assets/css/footer.css?v=3" rel="stylesheet"/><style>
+.rawLangLinks{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
+}
+</style><meta content="es_EC" property="og:locale"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LodgingBusiness",
+        "Hotel"
+      ],
+      "@id": "https://thecloudforestretreat.com/#hotel",
+      "name": "The Cloud Forest Retreat",
+      "url": "https://thecloudforestretreat.com/",
+      "image": "https://thecloudforestretreat.com/og-tcfr.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EC",
+        "addressRegion": "Pichincha"
+      }
+    },
+    {
+      "@type": "HotelRoom",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/#room",
+      "name": "Habitación Atardecer",
+      "description": "Conoce la Habitación Atardecer en The Cloud Forest Retreat y elige una estadía tranquila en el bosque nublado con luz cálida cerca de Quito.",
+      "url": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/",
+      "isPartOf": {
+        "@id": "https://thecloudforestretreat.com/#hotel"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://thecloudforestretreat.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Habitaciones",
+          "item": "https://thecloudforestretreat.com/es/habitaciones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Habitación Atardecer",
+          "item": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Para quién es ideal la Habitación Atardecer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es ideal para parejas, viajeros de naturaleza y huéspedes que prefieren luz cálida de la tarde, vistas tranquilas y una estadía serena en el bosque nublado."
+          }
+        }
+      ]
+    }
+  ]
+}</script></head>
 <body data-page-language="es" data-page-type="room_detail_page">
-<div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-page-type="room_detail_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/rooms/sunrise-room/" hreflang="en" lang="en">English</a><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-page-type="room_detail_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/habitaciones/habitacion-amanecer/" hreflang="es" lang="es">Español</a></nav>
-<main aria-label="Página de la Habitación Amanecer" class="wrap">
-<section aria-label="Navegación de la habitación y acciones de reserva" class="topBand">
+<div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="room_detail_page" data-analytics-room="sunset_room" data-analytics-target-language="en" href="https://thecloudforestretreat.com/rooms/sunset-room/" hreflang="en" lang="en">English</a><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="room_detail_page" data-analytics-room="sunset_room" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/" hreflang="es" lang="es">Español</a></nav>
+<main aria-label="Página de la Habitación Atardecer" class="wrap">
+<section aria-label="Navegación de habitación y acciones de reserva" class="topBand" data-analytics-section="navegaci_n_de_habitaci_n_y_acciones_de_reserva">
 <div aria-label="Migas de pan" class="crumbs">
-<a data-analytics-event="internal_link_click" data-analytics-label="Inicio" data-analytics-page-type="room_detail_page" href="/">Inicio</a>
+<a data-analytics-event="internal_link_click" data-analytics-label="Inicio" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/">Inicio</a>
 <span aria-hidden="true">›</span>
-<a data-analytics-event="internal_link_click" data-analytics-label="Habitaciónes" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Habitaciónes</a>
+<a data-analytics-event="room_compare_click" data-analytics-label="Habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Habitaciones</a>
 <span aria-hidden="true">›</span>
-<span>Habitación Amanecer</span>
+<span>Habitación Atardecer</span>
 </div>
 <div aria-label="Acciones rápidas" class="quickActions">
-<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Comparar habitaciónes" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Comparar habitaciónes</a>
-<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Comparar habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Comparar habitaciones</a>
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
 </div>
 </section>
-<!-- OPTION A: Row 1 (Hero left, Video right, same height) -->
-<section aria-label="Hero y video de Amanecer" class="gridA">
-<article aria-label="Imagen hero" class="card">
-<div aria-label="Imagen hero de la Habitación Amanecer" class="heroMedia">
-<img alt="Habitación Amanecer con luz de la mañana y vistas al bosque nublado" decoding="async" loading="eager" src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg"/>
+<!-- Row 1 (Hero left, Video right, same height) -->
+<section aria-label="Hero y video de atardecer" class="gridA" data-analytics-section="hero_y_video_de_atardecer">
+<article aria-label="Imagen principal" class="card" data-analytics-section="imagen_principal">
+<div aria-label="Imagen hero de la Habitación Atardecer" class="heroMedia">
+<img alt="Habitación Atardecer con luz de la tarde y vistas del bosque nublado" decoding="async" loading="eager" src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg"/>
 <div aria-hidden="true" class="heroShade"></div>
 <div aria-label="Título de la habitación" class="heroTitleBadge">
-<div class="kicker">Hacia el este • Vistas de amanecer</div>
-<h1 class="heroH1">Habitación Amanecer</h1>
+<div class="kicker">Ventanas al oeste • Vistas de hora dorada</div>
+<h1 class="heroH1">Habitación Atardecer</h1>
 <p class="heroLead">
-              Despierta con luz dorada, canto de aves y una vista tranquila mientras tomas tu café, envuelta en la misma atmósfera descrita en <a data-analytics-event="internal_link_click" data-analytics-label="bosque nublado Quito Ecuador" data-analytics-page-type="room_detail_page" href="/es/bosque-nublado-quito-ecuador/">bosque nublado Quito Ecuador</a>.
-              Una habitación acogedora para quienes se levantan temprano y quieren vivir The Cloud Forest Retreat en su hora más mágica.
+              Cuando baja la luz, el bosque se vuelve ambar y el aire se calma. Disfruta una copa de vino o un te con vista mientras el sol se esconde detras de las montanas.
+              Una habitación tranquila y romantica para tardes lentas, dentro de la misma atmosfera del <a data-analytics-event="internal_link_click" data-analytics-label="bosque nublado Quito Ecuador" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/bosque-nublado-quito-ecuador/">bosque nublado Quito Ecuador</a>.
             </p>
 </div>
 </div>
 </article>
-<aside aria-label="Vista previa del video" class="card">
+<aside aria-label="Vista previa de video" class="card">
 <div class="cardHead">
-<h2 class="cardTitle">Un vistazo al amanecer</h2>
+<h2 class="cardTitle">Un vistazo al atardecer</h2>
 <p class="cardHint"></p>
 </div>
 <div aria-label="Contenido del video" class="videoCardInner">
-<div aria-label="Video de la Habitación Amanecer" class="ytFrame">
+<div aria-label="Video de la Habitación Atardecer" class="ytFrame">
 <div aria-label="Video de YouTube" class="ytBox">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/_VGh3YEdYl4?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=_VGh3YEdYl4&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" title="Video de la Habitación Amanecer"></iframe>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/1Djnf3UnF4g?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=1Djnf3UnF4g&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" title="Video de la Habitación Atardecer"></iframe>
 </div>
 </div>
 <div aria-label="Texto del video" class="videoMiniCopy">
-<p class="quote">"La primera luz del día, directo desde tus ventanas."</p>
-<p>
-              Si te encantan las mañanas tranquilas y los tonos suaves del amanecer, esta habitación te lo regala todos los días, especialmente para quienes buscan la experiencia de un <a data-analytics-event="internal_link_click" data-analytics-label="lodge de avistamiento de aves en Ecuador" data-analytics-page-type="room_detail_page" href="/es/lodge-avistamiento-aves-ecuador/">lodge de avistamiento de aves en Ecuador</a>.
-            </p>
+<p class="quote">"La hora dorada se vuelve una magia tranquila."</p>
+<p>Luz al oeste, ambiente suave y vistas hechas para bajar el ritmo, como en la <a data-analytics-event="internal_link_click" data-analytics-label="galeria del bosque nublado" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/caracteristicas/galeria/">galeria del bosque nublado</a>.</p>
 </div>
 </div>
 </aside>
 </section>
-<!-- OPTION A: Row 2 (Carousel left, Highlights right) -->
-<section aria-label="Galería y destacados de Amanecer" class="gridB">
-<article aria-label="Destacados en fotos" class="card">
+<!-- Row 2 (Carousel left, Highlights right) -->
+<section aria-label="Galeria y puntos destacados" class="gridB" data-analytics-section="galeria_y_puntos_destacados">
+<article aria-label="Destacados en fotos" class="card" data-analytics-section="destacados_en_fotos">
 <div class="cardHead">
 <h2 class="cardTitle">Destacados en fotos</h2>
 <p class="cardHint"></p>
 </div>
 <div class="miniCarouselPad">
-<div aria-label="Mini carrusel de Amanecer" class="miniCarousel">
-<div class="miniViewport" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000" id="srCarousel">
+<div aria-label="Mini carrusel de atardecer" class="miniCarousel">
+<div class="miniViewport" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000" id="ssCarousel">
 <button aria-label="Foto anterior" class="miniArrow prev" data-action="prev" type="button">‹</button>
 <button aria-label="Foto siguiente" class="miniArrow next" data-action="next" type="button">›</button>
 <div class="miniTrack" data-track="">
-<figure aria-label="Imagen Amanecer 1" class="miniSlide">
-<img alt="Destacado de la Habitación Sunrise 1" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_01.jpg"/>
-<figcaption class="miniCap">Luz dorada de la mañana</figcaption>
+<figure aria-label="Imagen de atardecer 1" class="miniSlide">
+<img alt="Habitación Atardecer - destacado 1" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg"/>
+<figcaption class="miniCap">Luz ambar al caer la tarde</figcaption>
 </figure>
-<figure aria-label="Imagen Amanecer 2" class="miniSlide">
-<img alt="Destacado de la Habitación Sunrise 2" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_images_rooms_sunrise_02.jpg"/>
-<figcaption class="miniCap">Café en calma con vista</figcaption>
+<figure aria-label="Imagen de atardecer 2" class="miniSlide">
+<img alt="Habitación Atardecer - destacado 2" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_02.jpg"/>
+<figcaption class="miniCap">Una vista hecha para atardeceres</figcaption>
 </figure>
 </div>
 </div>
@@ -833,55 +910,54 @@
 </article>
 <aside aria-label="Destacados y acciones" class="card">
 <div class="cardHead">
-<h2 class="cardTitle">Hecha para mañanas tranquilas</h2>
-<p class="cardHint">Simple, cálida, reparadora</p>
+<h2 class="cardTitle">Romantica, tranquila, inolvidable</h2>
+<p class="cardHint">La habitación que las parejas recuerdan</p>
 </div>
 <div class="rightStackPad">
 <p class="p">
-            La Habitación Amanecer mira hacia el este, así que el día comienza suave: neblina en el valle, aves en los árboles y luz cálida llenando el espacio, como en escenas que también aparecen en la <a data-analytics-event="internal_link_click" data-analytics-label="galería del bosque nublado" data-analytics-page-type="room_detail_page" href="/es/caracteristicas/galeria/">galería del bosque nublado</a>.
+            Luz suave, detalles hechos a mano y una vista al oeste que captura los ultimos colores del día.
+            La habitación perfecta para descansar despues de explorar el bosque nublado, ideal para quienes buscan un <a data-analytics-event="internal_link_click" data-analytics-label="lodge de avistamiento de aves en Ecuador" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/lodge-avistamiento-aves-ecuador/">lodge de avistamiento de aves en Ecuador</a>.
           </p>
 <div style="height:12px;"></div>
-<div aria-label="Destacados principales" class="pillRow">
-<span class="pill"><strong>Ideal para:</strong> madrugadores</span>
-<span class="pill"><strong>Vistas:</strong> amanecer al este</span>
-<span class="pill"><strong>Ambiente:</strong> acogedor y tranquilo</span>
-<span class="pill"><strong>Momento:</strong> café con vista</span>
+<div aria-label="Puntos clave" class="pillRow">
+<span class="pill"><strong>Ideal para:</strong> parejas</span>
+<span class="pill"><strong>Vistas:</strong> atardecer al oeste</span>
+<span class="pill"><strong>Ambiente:</strong> romantico y tranquilo</span>
+<span class="pill"><strong>Momento:</strong> vino o te al atardecer</span>
 </div>
 <div style="height:14px;"></div>
 <div aria-label="Acciones principales" class="tightCtas">
-<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
-<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Hacer una pregunta" data-analytics-page-type="room_detail_page" href="/es/contacto/">Hacer una pregunta</a>
-<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Ver todas las habitaciónes" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Ver todas las habitaciónes</a>
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
+<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Hacer una pregunta" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/contacto/">Hacer una pregunta</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Ver todas las Habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Ver todas las Habitaciones</a>
 </div>
-<div class="note">
-            Tip: esta es la habitación que convierte "un minutito más" en una hora.
-          </div>
+<div class="note">Tip: Si los atardeceres son tu ritual, esta es tu habitación, con acceso facil a <a data-analytics-event="internal_link_click" data-analytics-label="senderismo en el bosque nublado" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/senderismo-bosque-nublado-ecuador/">senderismo en el bosque nublado</a></div>
 </div>
 </aside>
 </section>
 <!-- SHARED BATHROOM (Sunrise + Sunset) -->
-<section aria-label="Baño compartido" class="bathSection">
-<article aria-label="Tarjeta de baño compartido" class="card">
+<section aria-label="Bano compartido" class="bathSection" data-analytics-section="bano_compartido">
+<article aria-label="Tarjeta de bano compartido" class="card" data-analytics-section="tarjeta_de_bano_compartido">
 <div class="cardHead">
-<h2 class="cardTitle">Baño completo compartido</h2>
+<h2 class="cardTitle">Bano completo compartido</h2>
 <p class="cardHint">Justo afuera de la habitación, en el pasillo</p>
 </div>
 <div class="bathPad">
-<div aria-label="Nota del baño" class="bathNotice">
-<p class="bathNoticeTitle">Acceso privado, compartido entre dos habitaciónes</p>
+<div aria-label="Nota del bano" class="bathNotice">
+<p class="bathNoticeTitle">Acceso privado, compartido entre dos habitaciones</p>
 <p class="bathNoticeText">
-              La Habitación Amanecer y la Habitación Sunset comparten un baño completo ubicado en el pasillo, justo afuera de tu puerta.
-              Está reservado únicamente para estas dos habitaciónes y queda a pocos pasos.
-              Lo dejamos muy claro para que sepas exactamente qué esperar.
+              La Habitación Amanecer y la Habitación Atardecer comparten un bano completo ubicado en el pasillo, justo afuera de tu puerta.
+              Es exclusivo para estas dos habitaciones y esta a solo unos pasos.
+              Lo dejamos claro para que sepas exactamente que esperar.
             </p>
 </div>
-<div aria-label="Fotos del baño" class="bathGrid">
-<figure aria-label="Foto del baño 1" class="bathShot">
-<img alt="Baño compartido, foto 1" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg"/>
-<figcaption class="bathCap">Baño completo, luminoso y limpio</figcaption>
+<div aria-label="Fotos del bano" class="bathGrid">
+<figure aria-label="Foto del bano 1" class="bathShot">
+<img alt="Foto del bano compartido 1" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg"/>
+<figcaption class="bathCap">Bano completo, luminoso y limpio</figcaption>
 </figure>
-<figure aria-label="Foto del baño 2" class="bathShot">
-<img alt="Baño compartido, foto 2" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg"/>
+<figure aria-label="Foto del bano 2" class="bathShot">
+<img alt="Foto del bano compartido 2" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg"/>
 <figcaption class="bathCap">Reservado para Amanecer y Atardecer</figcaption>
 </figure>
 </div>
@@ -889,104 +965,100 @@
 </article>
 </section>
 <!-- DETAILS -->
-<section aria-label="Detalles de la habitación" class="details">
-<article aria-label="Lo que te va a encantar" class="card detailCard">
+<section aria-label="Detalles de la habitación" class="details" data-analytics-section="detalles_de_la_habitaci_n">
+<article aria-label="Lo que te va a encantar" class="card detailCard" data-analytics-section="lo_que_te_va_a_encantar">
 <h3 class="detailH3">Lo que te va a encantar</h3>
 <ul class="detailList">
-<li>Orientación al este para ver el amanecer</li>
-<li>Detalles en madera y luz suave, bien relajante</li>
-<li>Ambiente tranquilo, ideal para recargar</li>
-<li>Base perfecta para avistamiento temprano y <a data-analytics-event="internal_link_click" data-analytics-label="senderismo en el bosque nublado" data-analytics-page-type="room_detail_page" href="/es/senderismo-bosque-nublado-ecuador/">senderismo en el bosque nublado</a></li>
+<li>Vistas al oeste para hora dorada y atardeceres</li>
+<li>Un espacio perfecto para vino, te y tardes lentas</li>
+<li>Luz ambiental suave y muebles hechos a mano</li>
+<li>Ambiente romantico y tranquilo para desconectarte de verdad</li>
 </ul>
 </article>
-<article aria-label="Frase de la habitación" class="card quoteCard">
-<p class="quoteText">"Despierta con un horizonte tocado por la primera luz del día."</p>
-<p class="quoteSub">
-          La Habitación Amanecer es para quienes quieren sentir cómo el bosque nublado despierta, lento y hermoso, desde su ventana.
-        </p>
+<article aria-label="Frase de la habitación" class="card quoteCard" data-analytics-section="frase_de_la_habitaci_n">
+<p class="quoteText">"Primera fila para el brillo que se derrite detras de las montanas."</p>
+<p class="quoteSub">La Habitación Atardecer es para quien quiere que el día termine despacio: luz cálida, vistas silenciosas y el bosque en calma.</p>
 </article>
 </section>
-<!-- CTA -->
-<section aria-label="Enlaces relacionados habitación amanecer" class="details">
-<article class="card detailCard" style="grid-column:1 / -1;">
+<section aria-label="Enlaces relacionados de la habitación atardecer" class="details" data-analytics-section="enlaces_relacionados_de_la_habitaci_n_atardecer">
+<article aria-label="Explora más de tu estadía" class="card detailCard" data-analytics-section="explora_m_s_de_tu_estad_a" style="grid-column:1 / -1;">
 <div class="relatedHead">
 <h2 class="cardTitle" style="font-size:24px;">Explora más de tu estadía</h2>
 <p class="relatedHint">Compara habitaciones, descubre el ambiente del bosque nublado y navega por páginas que te ayudan a elegir mejor tu experiencia.</p>
 </div>
-<div class="relatedGrid">
-<a class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Habitación Suite Panorámica Compara esta habitación acogedor" data-analytics-page-type="room_detail_page" href="/es/habitaciones/suite-panoramica/">
+<div aria-label="Páginas relacionadas" class="relatedGrid">
+<a aria-label="Suite Panorámica" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Habitación Suite Panorámica Compara esta habitación orientada al oeste con la su" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/suite-panoramica/">
 <div>
 <span class="tag">Habitación</span>
 <p class="relatedTileTitle">Suite Panorámica</p>
-<p class="relatedTileText">Compara esta habitación acogedora con la suite más amplia y las mejores vistas del valle.</p>
+<p class="relatedTileText">Compara esta habitación orientada al oeste con la suite más amplia y las mejores vistas abiertas del valle.</p>
 </div>
 <div class="relatedTileMeta"><span></span><span>Ver</span></div>
 </a>
-<a class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Habitación Habitación Atardecer Descubre la opción orientada" data-analytics-page-type="room_detail_page" href="/es/habitaciones/habitacion-atardecer/">
+<a aria-label="Habitación Amanecer" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Habitación Habitación Amanecer Descubre la opción orientada al este, pensada par" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/habitacion-amanecer/">
 <div>
 <span class="tag">Habitación</span>
-<p class="relatedTileTitle">Habitación Atardecer</p>
-<p class="relatedTileText">Descubre la opción orientada al oeste, ideal para tardes tranquilas y luz dorada.</p>
+<p class="relatedTileTitle">Habitación Amanecer</p>
+<p class="relatedTileText">Descubre la opción orientada al este, pensada para la primera luz del día, aves y mañanas lentas.</p>
 </div>
 <div class="relatedTileMeta"><span></span><span>Ver</span></div>
 </a>
-<a class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Galería Galería del bosque Explora imágenes del entorno, las" data-analytics-page-type="room_detail_page" href="/es/caracteristicas/galeria/">
+<a aria-label="Galería del bosque nublado" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Galería Galería del bosque nublado Explora imágenes del entorno, las vistas y lo" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/caracteristicas/galeria/">
 <div>
 <span class="tag">Galería</span>
-<p class="relatedTileTitle">Galería del bosque</p>
-<p class="relatedTileText">Explora imágenes del entorno, las vistas y los detalles que definen la experiencia.</p>
+<p class="relatedTileTitle">Galería del bosque nublado</p>
+<p class="relatedTileText">Explora imágenes del entorno, las vistas y los detalles que definen la experiencia del retreat.</p>
 </div>
 <div class="relatedTileMeta"><span></span><span>Ver</span></div>
 </a>
-<a class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Aves Lodge de aves Ecuador Descubre por qué esta habitación " data-analytics-page-type="room_detail_page" href="/es/lodge-avistamiento-aves-ecuador/">
+<a aria-label="Lodge de avistamiento de aves en Ecuador" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Aves Lodge de avistamiento de aves en Ecuador Mira por qué esta habitación funci" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/lodge-avistamiento-aves-ecuador/">
 <div>
 <span class="tag">Aves</span>
-<p class="relatedTileTitle">Lodge de aves Ecuador</p>
-<p class="relatedTileText">Descubre por qué esta habitación es perfecta para mañanas con aves y naturaleza.</p>
+<p class="relatedTileTitle">Lodge de avistamiento de aves en Ecuador</p>
+<p class="relatedTileText">Mira por qué esta habitación funciona tan bien para quienes buscan aves, quietud y calma de hora dorada.</p>
 </div>
 <div class="relatedTileMeta"><span></span><span>Explorar</span></div>
 </a>
-<a class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Planificación Dónde alojarse cerca de Quito Guía completa pa" data-analytics-page-type="room_detail_page" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">
+<a aria-label="Dónde alojarse cerca de Quito naturaleza" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Planificación Dónde alojarse cerca de Quito naturaleza Guía completa para elegir" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">
 <div>
 <span class="tag">Planificación</span>
-<p class="relatedTileTitle">Dónde alojarse cerca de Quito</p>
-<p class="relatedTileText">Guía completa para elegir el tipo de estancia ideal para tu viaje.</p>
+<p class="relatedTileTitle">Dónde alojarse cerca de Quito naturaleza</p>
+<p class="relatedTileText">Guía completa para elegir el tipo de estancia ideal según el ritmo y estilo de tu viaje.</p>
 </div>
 <div class="relatedTileMeta"><span></span><span>Leer</span></div>
 </a>
-<a class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Destino Bosque nublado Quito Conoce el destino y cómo influy" data-analytics-page-type="room_detail_page" href="/es/cloud-forest-quito-ecuador/">
+<a aria-label="Bosque nublado Quito Ecuador" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Destino Bosque nublado Quito Ecuador Conoce el destino y cómo su paisaje amplio " data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/bosque-nublado-quito-ecuador/">
 <div>
 <span class="tag">Destino</span>
-<p class="relatedTileTitle">Bosque nublado Quito</p>
-<p class="relatedTileText">Conoce el destino y cómo influye en toda la experiencia del lodge.</p>
+<p class="relatedTileTitle">Bosque nublado Quito Ecuador</p>
+<p class="relatedTileText">Conoce el destino y cómo su paisaje amplio moldea toda la experiencia de la estadía.</p>
 </div>
 <div class="relatedTileMeta"><span></span><span>Leer</span></div>
 </a>
 </div>
 </article>
 </section>
-<section aria-label="Llamado a la acción para reservar" class="ctaBand">
+<!-- CTA -->
+<section aria-label="Llamado a la accion para reservar" class="ctaBand" data-analytics-section="llamado_a_la_accion_para_reservar">
 <div>
-<h2>¿Listo para despertar con el bosque nublado?</h2>
-<p>
-          Revisa disponibilidad y reserva en minutos. También ayuda al decidir <a data-analytics-event="internal_link_click" data-analytics-label="donde alojarse cerca de Quito naturaleza" data-analytics-page-type="room_detail_page" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">donde alojarse cerca de Quito naturaleza</a>. Si estás decidiendo entre habitaciónes, compáralas lado a lado.
-        </p>
+<h2>Listo para perseguir el atardecer?</h2>
+<p>Revisa disponibilidad y reserva en minutos. Tambien ayuda al decidir <a data-analytics-event="internal_link_click" data-analytics-label="donde alojarse cerca de Quito naturaleza" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">donde alojarse cerca de Quito naturaleza</a>. Si estas eligiendo entre habitaciones, comparalas lado a lado.</p>
 </div>
-<div aria-label="Botones de llamada a la acción" class="ctaBtns">
-<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
-<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Comparar habitaciónes" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Comparar habitaciónes</a>
-<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Contacto" data-analytics-page-type="room_detail_page" href="/es/contacto/">Contacto</a>
+<div aria-label="Botones de CTA" class="ctaBtns">
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Comparar habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Comparar habitaciones</a>
+<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Contacto" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/contacto/">Contacto</a>
 </div>
 </section>
 </main>
 <div id="siteFooter"></div>
 <!-- TCFR global behavior: inject header/footer, GA, nav -->
-<script src="/assets/js/site.js?v=3"></script>
+<script src="/assets/js/site.js"></script>
 <script>
     (function(){
       "use strict";
 
-      var root = document.getElementById("srCarousel");
+      var root = document.getElementById("ssCarousel");
       if (!root) return;
 
       var track = root.querySelector("[data-track]");
