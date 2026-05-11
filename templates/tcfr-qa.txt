@@ -719,3 +719,23 @@ Features hub blockers:
 - ES body links pointing to EN /features/ child URLs.
 - Missing footer.css when footer rendering depends on shared styling.
 - Missing site.js or duplicate site.js.
+
+FEATURE DETAIL GLOBAL CSS ENFORCEMENT
+This section is mandatory for all /features/* and /es/caracteristicas/* detail pages.
+
+Rules:
+- Feature detail pages must use data-page-type="feature_detail_page".
+- Reusable feature detail layout styles must live in /assets/css/site.css.
+- Page files must not ship with large page-level layout CSS blocks defining .wrap, .hero, .activity, .media9x16, .grid, .card, .jumpBand, .chip, .pill, or .ctaBand.
+- Page-level CSS is allowed only for a narrow emergency guard if global CSS cannot be guaranteed.
+- Hero, jump links, activity cards, subcards, and CTA bands must follow the TCFR layered style: page background -> beige/cream panel -> inner cards.
+- Spanish feature detail pages must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, and body links.
+- English feature detail pages must not contain visible Spanish UI labels.
+- Spanish feature detail pages must not contain visible English UI labels except approved brand names and language switch labels.
+
+Blockers:
+- Missing /assets/js/site.js or duplicate site.js.
+- Missing #siteHeader, #siteFooter, body data-page-type, or body data-page-language.
+- rawLangLinks visible in page body.
+- Spanish accent blockers in visible Spanish copy, metadata, aria-labels, alt text, or JSON-LD user-facing text.
+- ES page linking to EN body URLs except rawLangLinks.
