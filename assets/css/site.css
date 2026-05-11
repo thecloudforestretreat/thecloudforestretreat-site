@@ -1644,3 +1644,276 @@ body[data-page-type="feature_detail_page"] .ctaBand p{
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================================
+   TCFR Amenities Feature Detail Add-on
+   Purpose:
+   - Keep Amenities detail layout in global CSS
+   - Reuse feature_detail_page shell while supporting amenity-specific sections
+   ========================================================= */
+
+body[data-page-type="feature_detail_page"] .gridA{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+body[data-page-type="feature_detail_page"] .vShot{
+  border-radius: var(--r2);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: var(--shadow);
+  background: rgba(0,0,0,0.10);
+  position: relative;
+  min-height: 560px;
+}
+
+body[data-page-type="feature_detail_page"] .vShot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+body[data-page-type="feature_detail_page"] .vShotShade,
+body[data-page-type="feature_detail_page"] .cozyShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(560px 420px at 14% 12%, rgba(224,100,58,0.16), rgba(0,0,0,0) 62%),
+    linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.30));
+  pointer-events: none;
+}
+
+body[data-page-type="feature_detail_page"] .vShotCap,
+body[data-page-type="feature_detail_page"] .cozyCap{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px;
+  color: rgba(231,228,209,0.92);
+  font-weight: 800;
+  line-height: 1.5;
+  box-shadow: 0 18px 55px rgba(0,0,0,0.22);
+}
+
+body[data-page-type="feature_detail_page"] .stack{
+  display: grid;
+  gap: 14px;
+}
+
+body[data-page-type="feature_detail_page"] .pad,
+body[data-page-type="feature_detail_page"] .sectionBody{
+  padding: 14px;
+}
+
+body[data-page-type="feature_detail_page"] .bigTitle,
+body[data-page-type="feature_detail_page"] .uniqueH{
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+body[data-page-type="feature_detail_page"] .bigTitle{
+  font-size: 24px;
+}
+
+body[data-page-type="feature_detail_page"] .uniqueH{
+  font-size: 22px;
+  position: relative;
+}
+
+body[data-page-type="feature_detail_page"] .tagPills,
+body[data-page-type="feature_detail_page"] .sigRow,
+body[data-page-type="feature_detail_page"] .miniCtas,
+body[data-page-type="feature_detail_page"] .ctaBtns{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+body[data-page-type="feature_detail_page"] .tagPills,
+body[data-page-type="feature_detail_page"] .sigRow,
+body[data-page-type="feature_detail_page"] .miniCtas{
+  margin-top: 12px;
+}
+
+body[data-page-type="feature_detail_page"] .tag,
+body[data-page-type="feature_detail_page"] .sig{
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+body[data-page-type="feature_detail_page"] .sectionGrid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+body[data-page-type="feature_detail_page"] .sectionCard:before,
+body[data-page-type="feature_detail_page"] .uniqueLeft:before{
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at center, rgba(224,100,58,0.14), rgba(224,100,58,0) 62%);
+  pointer-events: none;
+}
+
+body[data-page-type="feature_detail_page"] .sectionCard:before{
+  inset: -120px -120px auto auto;
+}
+
+body[data-page-type="feature_detail_page"] .uniqueLeft:before{
+  inset: -120px auto auto -120px;
+}
+
+body[data-page-type="feature_detail_page"] .sectionLead,
+body[data-page-type="feature_detail_page"] .promiseP,
+body[data-page-type="feature_detail_page"] .uniqueP{
+  margin: 0;
+  color: rgba(11,26,16,0.74);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 14.6px;
+  position: relative;
+}
+
+body[data-page-type="feature_detail_page"] .sectionLead{
+  margin-bottom: 12px;
+}
+
+body[data-page-type="feature_detail_page"] .listGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body[data-page-type="feature_detail_page"] .li{
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  border-radius: 16px;
+  padding: 10px 12px;
+  color: rgba(11,26,16,0.82);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.45;
+  position: relative;
+}
+
+body[data-page-type="feature_detail_page"] .unique,
+body[data-page-type="feature_detail_page"] .cozy{
+  margin-top: 14px;
+}
+
+body[data-page-type="feature_detail_page"] .uniqueInner,
+body[data-page-type="feature_detail_page"] .cozyInner{
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+body[data-page-type="feature_detail_page"] .uniqueLeft,
+body[data-page-type="feature_detail_page"] .uniqueRight,
+body[data-page-type="feature_detail_page"] .cozyCopy{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+body[data-page-type="feature_detail_page"] .uniqueRight,
+body[data-page-type="feature_detail_page"] .cozyCopy{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+body[data-page-type="feature_detail_page"] .promise{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--forest);
+}
+
+body[data-page-type="feature_detail_page"] .uniqueList{
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: rgba(11,26,16,0.82);
+  line-height: 1.85;
+  font-weight: 650;
+  font-size: 15px;
+  position: relative;
+}
+
+body[data-page-type="feature_detail_page"] .cozyMedia{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  position: relative;
+  min-height: 420px;
+}
+
+body[data-page-type="feature_detail_page"] .cozyMedia img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+@media (max-width: 900px){
+  body[data-page-type="feature_detail_page"] .gridA,
+  body[data-page-type="feature_detail_page"] .sectionGrid,
+  body[data-page-type="feature_detail_page"] .uniqueInner,
+  body[data-page-type="feature_detail_page"] .cozyInner{
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page-type="feature_detail_page"] .vShot{
+    min-height: 420px;
+  }
+
+  body[data-page-type="feature_detail_page"] .listGrid{
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page-type="feature_detail_page"] .cozyMedia{
+    min-height: 360px;
+  }
+}
