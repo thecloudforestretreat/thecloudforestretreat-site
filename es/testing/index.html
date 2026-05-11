@@ -1,128 +1,646 @@
-Next, proceed to review, update and provide complete downloadable .txt files
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Áreas Comunes | Espacios Compartidos Cerca de Quito | The Cloud Forest Retreat</title>
+<meta content="Descubre las áreas comunes, rincones de descanso, cocina compartida, baño de visitas y atmósfera tranquila de The Cloud Forest Retreat cerca de Quito." name="description"/>
+<meta content="index,follow" name="robots"/>
+<!-- Canonical + hreflang (PRODUCTION URLs) -->
+<link href="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" rel="canonical"/>
+<link href="https://thecloudforestretreat.com/rooms/common-areas/" hreflang="en" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" hreflang="es" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/rooms/common-areas/" hreflang="x-default" rel="alternate"/>
+<!-- Open Graph (PRODUCTION URLs) -->
+<meta content="website" property="og:type"/>
+<meta content="The Cloud Forest Retreat" property="og:site_name"/>
+<meta content="Áreas Comunes | Espacios Compartidos Cerca de Quito" property="og:title"/>
+<meta content="Explora la atmósfera compartida, las vistas, la cocina y el baño de visitas de The Cloud Forest Retreat." property="og:description"/>
+<meta content="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" property="og:url"/>
+<meta content="https://thecloudforestretreat.com/og-tcfr.jpg" property="og:image"/>
+<meta content="https://thecloudforestretreat.com/og-tcfr.jpg" property="og:image:secure_url"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Áreas comunes de The Cloud Forest Retreat" property="og:image:alt"/>
+<!-- Twitter (PRODUCTION URLs) -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Áreas Comunes | Espacios Compartidos Cerca de Quito" name="twitter:title"/>
+<meta content="Explora la atmósfera compartida, las vistas, la cocina y el baño de visitas de The Cloud Forest Retreat." name="twitter:description"/>
+<meta content="https://thecloudforestretreat.com/og-tcfr.jpg" name="twitter:image"/>
+<!-- Favicons (approved root paths) -->
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#0D5925" name="theme-color"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Global / shared CSS -->
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<link href="/assets/css/header.css?v=3" rel="stylesheet"/>
+<!-- Head-only JS -->
+<script defer="" src="/assets/js/head.js?v=1"></script>
+<!-- Structured data: WebPage + Breadcrumbs -->
+<style>
+    :root{
+      --max: 1120px;
+      --r: 24px;
+      --shadow: 0 18px 55px rgba(13,89,37,0.16);
+      --line: rgba(11,26,16,0.12);
 
-THE CLOUD FOREST RETREAT EN/ES PAGE QA + ANALYTICS TEMPLATE
-Strict Production Mode
-Production-Safe Global CSS and Centralized Analytics Enforcement
+      --glass: rgba(245,245,220,0.78);
+      --glass2: rgba(245,245,220,0.62);
+      --ink: #0b1a10;
+      --forest: #0D5925;
+      --muted: rgba(11,26,16,0.72);
 
-Use this prompt when uploading an English page and its Spanish counterpart for thecloudforestretreat.com. The goal is to audit and fully update both HTML files so they are ready to go live. Return complete downloadable .txt files for both pages. Do not return partial snippets unless explicitly requested.
+      --accent: #E0643A;
+      --accentSoft: rgba(224,100,58,0.14);
+    }
 
-PAGE INFORMATION
-- English Page URL:
-- Spanish Counterpart URL:
-- Language Pair: EN / ES
-- Page Type:
-- Priority:
-- Commercial / Conversion Priority:
-- Notes:
+    *{ box-sizing: border-box; }
+    body{ margin: 0; }
 
-STRICT MODE STANDARD
-This is a strict production QA workflow. Do not mark a page ready to go live unless the full checklist passes. If any item fails, clearly list the blocker and return corrected files whenever possible.
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px 76px;
+    }
 
-CORE OPERATING PRINCIPLE
-Audit first. Fix only what is incorrect, missing, duplicated, conflicting, unsafe, or inconsistent with the approved TCFR architecture. Preserve working layout, SEO copy, image paths, page intent, and room/property details unless a change is required to pass QA.
+    .topBand{
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      background: var(--glass);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
 
-MOST IMPORTANT PRIORITIES
-1. Functional EN/ES language switch.
-2. Centralized analytics through /assets/js/site.js.
-3. Strong SEO accuracy without unnecessary title or description rewrites.
-4. Correct canonical, hreflang, Open Graph, Twitter, schema, and breadcrumbs where relevant.
-5. Global CSS usage wherever possible.
-6. Header/footer injection working correctly through TCFR site.js.
-7. Correct body data-page-type and data-page-language values.
-8. South American Spanish accents only in user-facing Spanish copy and metadata.
-9. No accented characters in technical paths, slugs, IDs, classes, data attributes, schema URLs, image paths, CSS paths, JS paths, or analytics event names.
-10. Important CTAs, booking actions, language switch links, and utility links tracked through shared data-analytics-* attributes.
+    .crumbs{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgba(11,26,16,0.75);
+    }
+    .crumbs a{ color: inherit; text-decoration: none; }
+    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-GLOBAL FILE ARCHITECTURE
-Analytics execution must be centralized in:
-/assets/js/site.js
+    .quickActions{
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-Approved shared styling stack:
-/assets/css/header.css
-/assets/css/footer.css
-/assets/css/site.css
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: var(--glass2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      color: var(--ink);
+      min-width: 0;
+      position: relative;
+    }
 
-Page files should NOT duplicate analytics logic for:
-- GA4 loading
-- gtag initialization
-- page_view_enhanced
-- scroll_depth
-- click listeners for [data-analytics-event]
-- form tracking
-- FAQ tracking
-- content_section_view observers
+    .cardHead{
+      padding: 14px 14px 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
 
-site.js responsibilities:
-- load GA4 with measurement ID G-D3W4SP5MGX
-- expose window.gtag
-- send page_view_enhanced
-- send scroll_depth at 25, 50, 75, and 90 percent
-- listen globally for [data-analytics-event] clicks
-- detect internal links, outbound links, WhatsApp links, email links, phone links, and CTA clicks
-- track language_switch_click
-- track form_start, form_submit_success, form_submit_error
-- track faq_expand
-- track content_section_view when sections declare data-analytics-section
-- include page_type and page_language in event payloads when available
+    .cardTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      color: var(--forest);
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 1.1;
+    }
 
-TCFR PAGE SHELL STANDARD
-Every bilingual page must include:
-<div id="siteHeader" data-current-lang="en"></div>
-or
-<div id="siteHeader" data-current-lang="es"></div>
+    .cardHint{
+      margin: 0;
+      color: rgba(11,26,16,0.68);
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1.4;
+    }
 
-and:
-<div id="siteFooter"></div>
+    /* HERO */
+    .hero{
+      margin-top: 14px;
+    }
 
-TCFR pages should load site.js exactly once:
-<script src="/assets/js/site.js"></script>
+    .heroMedia{
+      position: relative;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: var(--shadow);
+      background: rgba(0,0,0,0.10);
+      height: 360px;
+    }
 
-Rules:
-- Do not duplicate site.js includes.
-- Do not duplicate header/footer fragment loaders if site.js already handles injection.
-- Do not add page-level analytics scripts if site.js already covers them.
-- Use only one #siteHeader and one #siteFooter per page.
+    .heroMedia img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+      display: block;
+    }
 
-LANGUAGE SWITCH STANDARD
-Every bilingual page must have raw EN/ES language links immediately after the site header container and before hero/main content.
+    .heroShade{
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(1000px 520px at 22% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.50));
+      pointer-events: none;
+    }
 
-English page pattern:
-<div id="siteHeader" data-current-lang="en"></div>
-<nav class="rawLangLinks" aria-label="Language switch">
-  <a href="FULL_EN_URL" lang="en" hreflang="en" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="en">English</a>
-  <a href="FULL_ES_URL" lang="es" hreflang="es" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="es">Español</a>
-</nav>
+    .heroBadge{
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      right: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.30);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      color: #fff;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.22);
+    }
 
-Spanish page pattern:
-<div id="siteHeader" data-current-lang="es"></div>
-<nav class="rawLangLinks" aria-label="Selector de idioma">
-  <a href="FULL_EN_URL" lang="en" hreflang="en" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="en">English</a>
-  <a href="FULL_ES_URL" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="PAGE_TYPE" data-analytics-target-language="es">Español</a>
-</nav>
+    .kicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(255,255,255,0.92);
+    }
 
+    .heroH1{
+      margin: 8px 0 6px;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      font-size: clamp(30px, 3.6vw, 48px);
+      color: #fff;
+    }
 
+    .heroLead{
+      margin: 0;
+      max-width: 80ch;
+      font-weight: 600;
+      line-height: 1.7;
+      color: rgba(231,228,209,0.92);
+      font-size: 15.5px;
+    }
 
-VISUAL LANGUAGE SWITCH RULE
+    .heroCtas{
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-rawLangLinks must remain in the HTML directly under #siteHeader for accessibility, hreflang fallback, non-JS resilience, and analytics tracking.
+    /* GRID OPTION A (Aligned rows to remove dead space) */
+    .gridRow{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 14px;
+      align-items: stretch;
+    }
 
-rawLangLinks must NOT appear as a duplicate visible language switch in the page body. It must be visually hidden while remaining available to screen readers and crawlers.
+    /* 9:16 MEDIA */
+    .ytFrame{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      min-height: 0;
+    }
 
-The visible language switch must be the global header language pill on the right side of the injected header. Do not hide, remove, fade, or visually weaken the global header language switch.
+    .ytBox{
+      width: min(420px, 100%);
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.18);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+      position: relative;
+    }
 
-The active language pill in the global header must be clearly visible, with stronger contrast than the inactive language. The active language must not blend into the header background.
+    .ytBox iframe{
+      position: absolute;
+      inset: 0;
+      width: 178%;
+      height: 100%;
+      left: -39%;
+      border: 0;
+      display: block;
+    }
 
-Rules:
-- Keep class name exactly: rawLangLinks.
-- Keep rawLangLinks directly under #siteHeader.
-- Do not leave rawLangLinks visible in page content.
-- Do not position rawLangLinks on the left side of the layout.
-- Do not create a second visible language switch below the header.
-- The visible EN/ES switch belongs exclusively inside the injected global header on the right-hand side.
-- Styling should preferably be centralized in /assets/css/header.css or /assets/css/site.css.
-- If a page-level production guard is needed, it may only target #siteHeader language switch visibility/readability and rawLangLinks hiding.
+    .vImageFrame{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
 
-Approved rawLangLinks hiding pattern:
+    .vImageBox{
+      width: min(420px, 100%);
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+      position: relative;
+    }
+
+    .vImageBox img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .mediaPad{ padding: 14px; }
+
+    .mediaStack{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .microCopy{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .microCopy p{
+      margin: 0;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.7;
+      font-weight: 650;
+      font-size: 13.8px;
+    }
+
+    .microCopy .quote{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+      line-height: 1.15;
+      color: var(--forest);
+    }
+
+    .pillRow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(13,89,37,0.18);
+      background: rgba(255,255,255,0.62);
+      color: var(--ink);
+      font-weight: 900;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .pill strong{
+      font-weight: 900;
+      color: var(--forest);
+    }
+
+    /* Living moments carousel (compact, 2 slides) */
+    .miniCarouselPad{ padding: 14px; }
+
+    .miniCarousel{
+      border-radius: 18px;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      overflow: hidden;
+    }
+
+    .miniViewport{
+      position: relative;
+      overflow: hidden;
+      background: rgba(0,0,0,0.08);
+    }
+
+    .miniTrack{
+      display: flex;
+      width: 100%;
+      transform: translateX(0);
+      transition: transform 420ms ease;
+      will-change: transform;
+    }
+
+    .miniSlide{
+      flex: 0 0 100%;
+      position: relative;
+      aspect-ratio: 9 / 16;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .miniSlideInner{
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+    }
+
+    .miniSlideInner img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .miniCap{
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      padding: 9px 11px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+    }
+
+    .miniArrow{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 44px;
+      width: 48px;
+      border-radius: 16px;
+      border: 1px solid rgba(245,245,220,0.45);
+      background: rgba(11,26,16,0.30);
+      color: rgba(231,228,209,0.96);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+      cursor: pointer;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      line-height: 1;
+      z-index: 3;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .miniArrow.prev{ left: 10px; }
+    .miniArrow.next{ right: 10px; }
+
+    .miniNav{
+      border-top: 1px solid rgba(11,26,16,0.12);
+      padding: 10px 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .miniDots{
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .miniDotBtn{
+      appearance: none;
+      border: 1px solid rgba(13,89,37,0.20);
+      background: rgba(255,255,255,0.72);
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      padding: 0;
+    }
+    .miniDotBtn.is-active{
+      background: rgba(224,100,58,0.95);
+      border-color: rgba(0,0,0,0.10);
+      box-shadow: 0 10px 22px rgba(224,100,58,0.18);
+      transform: scale(1.05);
+    }
+
+    /* Shared guest bathroom (full width) */
+    .gridFull{
+      margin-top: 14px;
+    }
+
+    .bathInner{
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .bathMedia{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .bathShot{
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(0,0,0,0.08);
+      min-height: 220px;
+      position: relative;
+    }
+
+    .bathShot img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .bathCap{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 9px 11px;
+      border-radius: 14px;
+      background: rgba(245,245,220,0.92);
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+    }
+
+    .bathCopy{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .bathTitle{
+      margin: 0;
+      font-family: var(--font-head);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 20px;
+      line-height: 1.15;
+      color: var(--forest);
+    }
+
+    .bathList{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.8;
+      font-weight: 650;
+      font-size: 14.6px;
+    }
+
+    .bathList li{ margin: 6px 0; }
+
+    /* CTA band */
+    .ctaBand{
+      margin-top: 14px;
+      border-radius: var(--r);
+      border: 1px solid rgba(11,26,16,0.12);
+      background: rgba(245,245,220,0.82);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--ink);
+    }
+
+    .ctaBand h2{
+      margin: 0 0 6px;
+      font-family: var(--font-head);
+      color: var(--forest);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .ctaBand p{
+      margin: 0;
+      color: rgba(11,26,16,0.72);
+      font-weight: 650;
+      line-height: 1.7;
+      max-width: 80ch;
+    }
+
+    .ctaBtns{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px){
+      .wrap{ padding: 12px 14px 64px; }
+
+      .heroMedia{ height: 300px; }
+
+      .gridRow{ grid-template-columns: 1fr; }
+
+      .ytFrame{ padding: 12px; }
+      .ytBox{ width: 100%; max-width: 100%; }
+
+      .vImageFrame{ padding: 12px; }
+      .vImageBox{ width: 100%; max-width: 100%; }
+
+      .miniSlide{ padding: 12px; }
+      .miniSlideInner{ max-width: 100%; }
+
+      .miniArrow.prev{ left: 8px; }
+      .miniArrow.next{ right: 8px; }
+
+      .bathInner{ grid-template-columns: 1fr; }
+      .bathMedia{ grid-template-columns: 1fr; }
+      .bathShot{ min-height: 220px; }
+    }
+  </style>
+<meta content="es_EC" property="og:locale"/><link href="/assets/css/footer.css?v=3" rel="stylesheet"/><style>
 .rawLangLinks{
   position:absolute !important;
   width:1px !important;
@@ -134,544 +652,453 @@ Approved rawLangLinks hiding pattern:
   white-space:nowrap !important;
   border:0 !important;
 }
-
-
-Implementation requirement:
-- Before handoff, verify rawLangLinks is visually hidden either by the loaded shared CSS or by a narrow page-level production guard.
-- If the current uploaded page would show rawLangLinks visibly without a global CSS update, include the narrow page-level production guard in the returned page file.
-- Do not hide the injected header language switch. Only hide rawLangLinks.
-
-Approved global header language switch visibility pattern:
-#siteHeader .lang,
-#siteHeader .langDesktop,
-#siteHeader .language-switch,
-#siteHeader [data-language-switch]{
-  display:inline-flex !important;
-  align-items:center;
-  gap:4px;
-  padding:5px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,0.22);
-  background:rgba(255,255,255,0.26);
-  flex:0 0 auto;
-}
-
-#siteHeader .lang a,
-#siteHeader .langDesktop a,
-#siteHeader .language-switch a,
-#siteHeader [data-language-switch] a{
-  display:inline-flex !important;
-  align-items:center;
-  justify-content:center;
-  min-width:34px;
-  height:34px;
-  padding:0 10px;
-  border-radius:999px;
-  color:#0D5925;
-  font-weight:900;
-  text-decoration:none;
-}
-
-#siteHeader .lang a[aria-current="page"],
-#siteHeader .langDesktop a[aria-current="page"],
-#siteHeader .language-switch a[aria-current="page"],
-#siteHeader [data-language-switch] a[aria-current="page"]{
-  background:#0D5925 !important;
-  color:#ffffff !important;
-}
-
-BODY ATTRIBUTE STANDARD
-Every page must set:
-- data-page-type="VALUE"
-- data-page-language="en" or "es"
-
-Recommended TCFR page types:
-- home_page
-- booking_page
-- contact_page
-- rooms_hub
-- room_detail_page
-- room_support_page
-- features_hub
-- feature_detail_page
-- destination_support_page
-- gallery_page
-- money_page
-- planning_page
-- info_page
-- comparison_page
-- blog_hub
-- blog_article
-- about_page
-- legal_page
-
-ACCENT RULE
-Use South American Spanish accents correctly in all visible Spanish copy and metadata.
-
-SPANISH ACCENT HARD-BLOCKER EXPANSION
-This section is mandatory and must be enforced before any Spanish page is marked ready.
-
-The following missing-accent words are explicit blockers when they appear in visible Spanish copy, metadata, alt text, aria-labels, captions, buttons, FAQ text, schema text, or any user-facing JavaScript string:
-
-- bano / Bano -> baño / Baño
-- banos / Banos -> baños / Baños
-- area / Area when used as Spanish noun -> área / Área
-- areas / Areas -> áreas / Áreas
-- montana / montanas -> montaña / montañas
-- corazon -> corazón
-- introduccion -> introducción
-- navegacion -> navegación
-- pagina -> página
-- despues -> después
-- mananas -> mañanas
-- cafe -> café
-- calido / calida -> cálido / cálida
-- comodo / comoda / comodos / comodas -> cómodo / cómoda / cómodos / cómodas
-- practica / practico -> práctica / práctico
-- huesped / huespedes -> huésped / huéspedes
-- facil -> fácil
-- ultimo / ultima -> último / última
-- compania -> compañía
-- tambien -> también
-- aqui / aca -> aquí / acá
-- que / como / donde in questions or headings -> qué / cómo / dónde when grammatically required
-- esta / estas when used as verb forms -> está / estás
-- mas when it means "more" -> más
-- si when it means "yes" -> sí
-
-Technical-path safeguard:
-- Never add accents to URLs, slugs, href paths, canonical URLs, hreflang URLs, og:url, schema URLs, image paths, CSS paths, JS paths, IDs, classes, data attributes, analytics event names, or page_type values.
-- If an accented URL appears, such as /áreas-comunes/, it is a production blocker and must be changed back to the approved ASCII slug.
-
-Attribute-level accent QA:
-- Check meta title, meta description, Open Graph, Twitter, image alt text, aria-labels, button text, form labels, placeholders, captions, JSON-LD user-facing text, and visible JavaScript-generated labels.
-- Do not only check paragraph body text.
-
-Required final Spanish scan:
-Before handoff, run a visible-text and user-facing-attribute search for these blocker strings:
-bano, Bano, areas, Areas, montanas, corazon, Introduccion, despues, mananas, cafe, calido, calida, comodo, comodas, practica, huesped, facil, compania, tambien, pagina, Pagina, navegacion, Navegacion.
-
-If any of these remain in user-facing Spanish text or user-facing attributes, do not mark ready. Fix first, then return the complete corrected file.
-
-Technical attribute note:
-- Accents must not be added to data attributes, IDs, classes, paths, or analytics values.
-- To avoid false positives, do not use accentless Spanish words like bano in technical values either. Use neutral ASCII alternatives such as banio or guest_bathroom in data-analytics-section values.
-
-MANDATORY SPANISH ACCENT QA STANDARD
-Spanish accent validation is a hard production blocker. A Spanish page must NOT be handed off as ready if visible Spanish copy, metadata, schema text, image alt text, aria-label text, form labels, placeholders, option labels, button text, status messages, validation messages, FAQ text, review text, or JSON-LD user-facing text contains missing or incorrect Spanish accents.
-
-Before returning any Spanish page, perform a dedicated accent pass across all user-facing Spanish strings, including strings inside JavaScript that appear in the UI. Do not limit this check to body copy.
-
-Common high-risk words that must be checked and corrected when used as Spanish text include, but are not limited to:
-- recomendacion -> recomendación
-- habitacion -> habitación
-- estadia -> estadía
-- telefono -> teléfono
-- numero -> número
-- codigo -> código
-- pais -> país
-- pagina -> página
-- confirmacion -> confirmación
-- opcion -> opción
-- dias -> días
-- huesped / huespedes -> huésped / huéspedes
-- panoramica -> panorámica
-- proximo / proximamente -> próximo / próximamente
-- tambien -> también
-- seleccion -> selección when noun, selecciona when imperative
-- busqueda -> búsqueda
-- resena / resenas -> reseña / reseñas
-- fantastico -> fantástico
-- magico / magica -> mágico / mágica
-- increible / increibles -> increíble / increíbles
-- unico / unica -> único / única
-- anfitrion -> anfitrión
-- facil -> fácil
-- despues -> después
-- que / como in questions or headings -> qué / cómo where grammatically required
-- mas when it means "more" -> más
-- si when it means "yes" -> sí
-- envio / enviar / enviado / enviada must be checked carefully: enviar and enviado/enviada do NOT take an accent; envío as a noun or first-person verb does.
-
-Do not add accents to technical identifiers, URLs, slugs, IDs, classes, data attributes, schema URLs, JavaScript variable/function names, analytics event names, page_type values, or asset paths.
-
-Final Spanish handoff requirement:
-- If any obvious missing-accent Spanish word remains in visible/user-facing text, do not mark the page ready.
-- Fix the page first, then return the complete corrected file.
-
-Preserve real accents in proper names on both EN and ES pages where the name officially uses them, including Chocó Andino, Pululahua where required by style, Río Guayllabamba, Ecuadorian place names, and room/region names if officially accented.
-Do not add accents to:
-- URLs
-- slugs
-- image paths
-- file paths
-- CSS class names
-- IDs
-- data attributes
-- schema URLs
-- JavaScript identifiers
-- analytics event names
-- page_type values
-- asset folders
-
-SEO STANDARD
-Each page pair must be reviewed to reach the closest possible production-safe 9.5 SEO level.
-
-Verify:
-- unique, specific title tag
-- strong meta description tied to search intent
-- one clear H1
-- supporting H2 structure
-- canonical URL correct for each language
-- hreflang pair correct for each language
-- Open Graph title/description/url/image
-- Twitter card metadata
-- schema appropriate to the page
-- no mixed-language metadata
-- no English UI on Spanish pages
-- no Spanish UI on English pages
-
-Preferred schema by page type:
-- home_page: LodgingBusiness, Hotel, FAQPage
-- booking_page: LodgingBusiness, Hotel, FAQPage
-- rooms_hub: LodgingBusiness, Hotel
-- room_detail_page: Hotel or LodgingBusiness + FAQPage when useful
-- money_page: LodgingBusiness, FAQPage
-- planning_page: WebPage, FAQPage
-- info_page: WebPage, FAQPage
-- comparison_page: WebPage, FAQPage
-- blog_article: BlogPosting
-- about_page: AboutPage
-- contact_page: ContactPage
-
-CENTRAL ANALYTICS QA STANDARD
-All analytics should be implemented through:
-/assets/js/site.js
-
-Page files should provide:
-- correct body data-page-type and data-page-language
-- correct data-analytics-* attributes on tracked elements
-- correct rawLangLinks switch
-- correct canonical / hreflang / schema
-
-Before handoff, confirm:
-- [ ] /assets/js/site.js is loaded once
-- [ ] no conflicting page-level analytics script exists
-- [ ] important CTAs have data-analytics-event
-- [ ] room / stay / booking CTAs use clear CTA event names
-- [ ] internal links use internal_link_click unless page-type-specific
-- [ ] outbound links use outbound_link_click
-- [ ] WhatsApp links use whatsapp_click unless a more specific event is defined
-- [ ] email links use email_click
-- [ ] phone links use phone_click
-
-SITEWIDE ANALYTICS REQUIRED
-Confirm which apply on the page:
-- [ ] page_view_enhanced
-- [ ] language_switch_click
-- [ ] primary_cta_click
-- [ ] secondary_cta_click
-- [ ] internal_link_click
-- [ ] outbound_link_click
-- [ ] scroll_depth
-- [ ] form_start
-- [ ] form_submit_success
-- [ ] form_submit_error
-- [ ] faq_expand
-
-TCFR PAGE-TYPE-SPECIFIC ANALYTICS
-Money page / booking-focused page:
-- [ ] hero_cta_click
-- [ ] room_card_click
-- [ ] stay_comparison_click
-- [ ] booking_cta_click
-- [ ] booking_form_start
-
-Rooms / room detail:
-- [ ] room_gallery_click
-- [ ] room_cta_click
-- [ ] room_compare_click
-
-Planning / utility:
-- [ ] utility_cta_click
-- [ ] related_guide_click
-- [ ] packing_checklist_click
-- [ ] route_planning_click
-
-Blog / guide:
-- [ ] hero_cta_click
-- [ ] related_content_click
-- [ ] content_section_view
-- [ ] inline_recommendation_click
-- [ ] toc_click
-
-Birding / nature support:
-- [ ] nature_topic_click
-- [ ] birding_support_click
-- [ ] sister_site_click
-
-REQUIRED DATA ATTRIBUTES
-Add these where relevant:
-- data-analytics-event
-- data-analytics-label
-- data-analytics-location
-- data-analytics-page-type
-- data-analytics-target-language
-- data-analytics-room
-- data-analytics-topic
-- data-analytics-cta-type
-- data-analytics-form
-- data-analytics-section
-
-TCFR LINKING AND CONVERSION STANDARD
-Pages must reinforce the inlink/outlink strategy from the sitemap master where relevant.
-- Support booking pages from rooms, planning, and commercial pages.
-- Support high-opportunity planning pages from commercial pages and blog content.
-- Support birding stay pages without turning TCFR into a specialist tour site.
-- Use contextual internal links, not random blocks of unrelated links.
-
-
-HTML VALIDITY CHECK
-Before handoff, verify:
-- CSS link tags are valid void elements and are not closed with </link>.
-- The head does not contain malformed wrapper markup around stylesheet links.
-- /assets/js/head.js may load in the head, but analytics must still remain centralized in /assets/js/site.js.
-
-OUTPUT REQUIREMENTS
-Return:
-1. Updated English page as a complete downloadable .txt file
-2. Updated Spanish page as a complete downloadable .txt file
-3. Short QA summary with:
-   - what was fixed
-   - any blockers
-   - analytics added or confirmed
-   - SEO issues corrected
-   - hreflang/canonical/language-switch status
-
-QA CHECKLIST BEFORE HANDOFF
-- [ ] rawLangLinks directly under #siteHeader and visually hidden from page body
-- [ ] data-current-lang correct
-- [ ] body data-page-type correct
-- [ ] body data-page-language correct
-- [ ] site.js loaded once
-- [ ] no duplicate analytics logic
-- [ ] canonical correct
-- [ ] hreflang correct
-- [ ] metadata localized correctly
-- [ ] Spanish accents correct in visible Spanish copy
-- [ ] proper names preserve real accents
-- [ ] no accents added to technical identifiers
-- [ ] analytics attributes added to major tracked elements
-- [ ] important internal links present
-- [ ] major CTAs present and tracked
-- [ ] page is production-safe and ready to go live
-ADDITIONAL LINKING CHECKLIST BEFORE HANDOFF
-- [ ] Page has appropriate body-level interlinks, not only header/footer links
-- [ ] Page links to the strongest relevant conversion path
-- [ ] Page links to relevant parent, child, sibling, or cluster pages
-- [ ] Related guide/blog links are present where useful
-- [ ] Important internal links have analytics attributes
-- [ ] EN content links only to EN URLs, except language switch
-- [ ] ES content links only to ES URLs, except language switch
-- [ ] Recommended source inlinks are listed if they cannot be edited in the current files
-- [ ] No links added to unapproved/non-existent pages
-
-
-Confirm that the page is ready to go live if so
-
-
-DESIGN SYSTEM QA STANDARD
-This section is mandatory before handoff.
-
-Global-first rule:
-- Use /assets/css/site.css, /assets/css/header.css, and /assets/css/footer.css as the primary design system.
-- Reuse existing global classes whenever possible: .container, .page, .card, .section, .btn, .btn.primary, .btn.secondary, .badge, .grid2, .linkGrid, .linkCard, .linkText, .linkCta.
-- Do not recreate global buttons, cards, typography, footer styling, social icons, header behavior, or container logic inside page-level CSS.
-- Page-level CSS is allowed only for layout structures unique to the page, and should be minimal.
-- If a page-specific pattern will be reused across pages, add it to site.css instead of embedding it in the page.
-
-Design system blockers:
-- Duplicate local .btn systems when global .btn already exists.
-- Duplicate local card systems when .card or reusable modules can be used.
-- Large local :root overrides that conflict with global tokens.
-- Page-specific font imports when global typography already exists.
-- Layout drift from established TCFR card, hero, button, and section patterns.
-
-SEO GRAPH AND INTERNAL LINKING QA STANDARD
-This section is mandatory before handoff.
-
-Every commercial or core page must support a strategic internal linking graph:
-- Link to direct conversion pages such as booking and contact.
-- Link to related commercial pages, room details, features, and planning pages.
-- Link to relevant blog or guide pages when they reinforce search intent.
-- Use contextual anchor text, not generic random link lists.
-- Add analytics tracking to each important internal link with internal_link_click, related_content_click, room_card_click, booking_cta_click, or another page-specific event.
-- Avoid linking to non-existent pages unless they are part of an approved launch batch and are clearly included in the sitemap plan.
-- Ensure EN pages only link to EN URLs, and ES pages only link to ES URLs except explicit language switches.
-
-Rooms hub required internal links:
-English:
-- /rooms/panoramic-suite/
-- /rooms/sunrise-room/
-- /rooms/sunset-room/
-- /rooms/common-areas/
-- /booking/
-- /contact/
-- /best-eco-lodge-quito/
-- /where-to-stay-near-quito-nature/
-- /cloud-forest-weekend-escape/
-- /what-makes-a-cloud-forest-stay-different/
-- /best-time-to-visit-ecuador-cloud-forest/
-
-Spanish:
-- /es/habitaciones/suite-panoramica/
-- /es/habitaciones/habitacion-amanecer/
-- /es/habitaciones/habitacion-atardecer/
-- /es/habitaciones/areas-comunes/
-- /es/reservas/
-- /es/contacto/
-- /es/mejor-eco-lodge-quito/
-- /es/donde-alojarse-cerca-de-quito-naturaleza/
-- /es/escapada-fin-de-semana-bosque-nublado/
-- /es/que-hace-diferente-estadia-bosque-nublado/
-- /es/mejor-epoca-visitar-bosque-nublado-ecuador/
-
-Final handoff must include:
-- confirmation of global CSS usage
-- confirmation of inlinks/outlinks added or preserved
-- confirmation of related guide links added where relevant
-- confirmation of analytics coverage for those links
-
-
-INLINK, INTERLINK, AND SEO GRAPH ENFORCEMENT STANDARD
-This section is mandatory for every page pair before handoff.
-
-Definitions:
-- Inlinks: links from other TCFR pages that should point into the page being reviewed.
-- Interlinks: links from the page being reviewed to related TCFR pages.
-- Conversion links: links to booking, contact, room detail, feature detail, or high-intent commercial pages.
-- Support links: links to planning guides, blog articles, comparison pages, destination pages, or FAQ-style content that strengthens topical authority.
-
-Mandatory review steps:
-1. Identify the page's primary search intent.
-2. Identify the page's commercial role: booking driver, room selection, feature discovery, planning support, blog/support article, or legal/info page.
-3. Identify the page's topical cluster: rooms and stay, eco lodge near Quito, cloud forest escape, wellness/nature retreat, birding/nature stay, booking/contact, features/amenities, or destination/support.
-4. Check outbound interlinks from the page.
-5. Recommend or add missing high-value interlinks where relevant.
-6. Check expected inlinks from related pages, based on the sitemap master or launch batch.
-7. If inlinks cannot be edited in the current files, list exactly which source pages should link to the page.
-8. Add analytics attributes to important internal links.
-9. Confirm EN pages link to EN URLs and ES pages link to ES URLs, except rawLangLinks.
-10. Do not add links to non-existent pages unless the page is part of the approved launch batch and sitemap plan.
-
-Required internal link coverage by page type:
-
-Rooms hub:
-- room detail pages
-- common areas
-- booking
-- contact
-- related stay-planning guides
-- relevant feature pages
-
-Room detail pages:
-- rooms hub
-- booking
-- contact
-- common areas
-- related room alternatives
-- relevant features
-- related planning guides where useful
-
-Booking page:
-- rooms hub
-- contact
-- FAQ or policy/support pages
-- relevant rooms
-- relevant planning pages that reduce booking friction
-
-Feature hub:
-- feature detail pages
-- rooms hub
-- booking
-- relevant planning guides
-
-Feature detail pages:
-- features hub
-- rooms hub
-- booking
-- related feature pages
-- relevant guides
-
-Planning/comparison/money pages:
-- booking
-- rooms hub
-- contact
-- feature hub
-- directly related supporting guides
-- related commercial pages
-
-Blog/article pages:
-- at least 2 to 5 relevant commercial links when natural
-- at least 2 relevant support or related content links
-- booking or contact CTA when commercially appropriate
-- avoid forcing sales links if it harms the article intent
-
-Legal/policy pages:
-- booking or contact only where useful
-- do not over-optimize
-
-Internal link quality rules:
-- Use descriptive anchor text.
-- Avoid generic repeated anchors like "click here".
-- Avoid dumping unrelated links.
-- Prefer contextual links inside useful sections.
-- Related guide cards are allowed when the page is a hub or commercial page.
-- Footer/header links do not count as sufficient strategic internal links.
-- A page can pass only when the main body contains intentional internal links appropriate to the page type.
-
-Analytics rules for internal links:
-- Room card links: data-analytics-event="room_card_click"
-- Related guide links: data-analytics-event="related_content_click"
-- Booking links: data-analytics-event="booking_cta_click"
-- Contact/help links: data-analytics-event="primary_cta_click" or "contact_cta_click"
-- General internal links: data-analytics-event="internal_link_click"
-- Include data-analytics-label, data-analytics-location, and data-analytics-page-type on important links.
-
-Inlink recommendation output:
-If the current task only includes one page pair, include a short "Recommended source inlinks" note in the QA summary when relevant.
-
-The note should list:
-- pages that should link to this page
-- suggested anchor text
-- whether the link should be contextual, card-based, nav/menu, or CTA-based
-
-Blockers:
-- Commercial pages with no body-level links to booking/contact are not ready.
-- Hub pages with no links to their child/detail pages are not ready.
-- Support articles with no relevant links back to commercial pages are not ready when the article has commercial intent.
-- EN pages linking to ES URLs in normal page content, or ES pages linking to EN URLs in normal page content, are blockers unless it is the raw language switch.
-- Related guide links without analytics attributes should be fixed before handoff.
-
-
-VISUAL LAYERING QA STANDARD
-This section is mandatory for commercial hub pages, room hubs, feature hubs, and planning hubs.
-
-Layering rule:
-- Preserve the TCFR visual depth system: page background -> beige section/panel -> white or cream inner cards.
-- Text should not appear to float directly on the green page background unless intentionally used as a minimal divider or small label.
-- Commercial comparison areas must use a visible section container.
-- Card grids must use inner cards with clear surface contrast, border, radius, and spacing.
-- Related guide sections must be contained in a panel and each related guide must be an individual card.
-- Booking CTA bands must appear as contained surfaces with clear button hierarchy.
-
-Rooms hub visual requirements:
-- Hero uses one large image area and one copy panel inside the same card.
-- Room comparison lives inside a beige/cream panel.
-- Each room option is an inner white/cream card.
-- Best-fit guidance cards are separate inner cards.
-- Related planning guides are contained inside a panel and each guide is a card.
-- Bottom booking CTA is a contained card/band.
-
-Design blocker:
-- If section text appears directly on the background without a card/panel and does not match the approved design, do not mark ready.
+</style><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/#webpage",
+      "name": "Áreas Comunes",
+      "url": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/",
+      "description": "Espacios compartidos, cocina acogedora, baño de visitas y vistas tranquilas en The Cloud Forest Retreat.",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué incluyen las áreas comunes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Incluyen espacios compartidos de descanso, cocina, vistas panorámicas y un baño de visitas para mayor comodidad."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://thecloudforestretreat.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Habitaciones",
+          "item": "https://thecloudforestretreat.com/es/habitaciones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Áreas Comunes",
+          "item": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/"
+        }
+      ]
+    }
+  ]
+}</script></head>
+<body data-page-language="es" data-page-type="room_support_page">
+<div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="room_support_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/rooms/common-areas/" hreflang="en" lang="en">English</a><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="room_support_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" hreflang="es" lang="es">Español</a></nav>
+<main aria-label="Página de Áreas comunes" class="wrap">
+<section aria-label="Navegación de Áreas comunes y acciones de reserva" class="topBand" data-analytics-section="navegacion_de_areas_comunes_y_acciones_de_reserva">
+<div aria-label="Migas de pan" class="crumbs">
+<a data-analytics-event="internal_link_click" data-analytics-label="Inicio" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/">Inicio</a>
+<span aria-hidden="true">›</span>
+<a data-analytics-event="room_compare_click" data-analytics-label="Habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/habitaciones/">Habitaciones</a>
+<span aria-hidden="true">›</span>
+<span>Áreas comunes</span>
+</div>
+<div aria-label="Acciones rápidas" class="quickActions">
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Comparar habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/habitaciones/">Comparar habitaciones</a>
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/reservas/">Reservar tu estadía</a>
+</div>
+</section>
+<!-- HERO -->
+<section aria-label="Hero de Áreas comunes" class="hero" data-analytics-section="hero_de_areas_comunes">
+<article aria-label="Tarjeta de imagen principal" class="card" data-analytics-section="tarjeta_de_imagen_principal">
+<div aria-label="Imagen principal de Áreas comunes" class="heroMedia">
+<img alt="Áreas comunes con vistas a las montañas y al bosque nublado" decoding="async" loading="eager" src="/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"/>
+<div aria-hidden="true" class="heroShade"></div>
+<div aria-label="Introducción de Áreas comunes" class="heroBadge">
+<div class="kicker">Espacios compartidos • Vistas • Cómodidad</div>
+<h1 class="heroH1">Áreas comunes</h1>
+<p class="heroLead">
+              Relájate y conecta en el corazón del refugio. Estos espacios compartidos están pensados para la cómodidad y la convivencia,
+              con rincones acogedores, vistas impresionantes y el ambiente perfecto para descansar, leer, cocinar o compartir historias después de un día en el <a data-analytics-event="internal_link_click" data-analytics-label="bosque nublado cerca de Quito" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/bosque-nublado-quito-ecuador/">bosque nublado cerca de Quito</a>.
+            </p>
+<div aria-label="Acciones del hero" class="heroCtas">
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/reservas/">Reservar tu estadía</a>
+<a class="btn secondary" data-analytics-event="secondary_cta_click" data-analytics-label="Hacer una consulta" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/contacto/">Hacer una consulta</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Ver todas las habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/habitaciones/">Ver todas las habitaciones</a>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- ROW 1: Kitchen video (left) aligned with Living moments + copy (right) -->
+<section aria-label="Video de cocina y momentos en la sala" class="gridRow" data-analytics-section="video_de_cocina_y_momentos_en_la_sala">
+<article aria-label="Tarjeta de video de cocina" class="card" data-analytics-section="tarjeta_de_video_de_cocina">
+<div class="cardHead">
+<h2 class="cardTitle">Momentos en la cocina</h2>
+<p class="cardHint"></p>
+</div>
+<div class="mediaPad">
+<div class="mediaStack">
+<div aria-label="Video vertical de cocina" class="ytFrame">
+<div aria-label="Video de cocina en YouTube" class="ytBox">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/lz7DEZKFkX8?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=lz7DEZKFkX8&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" title="Video de cocina de Áreas comunes"></iframe>
+</div>
+</div>
+<div aria-label="Texto de cocina" class="microCopy">
+<p class="quote">"Dónde empiezan las mañanas y se arma el plan."</p>
+<p>
+                Prepará un café, armá snacks para el día o disfrutá un desayuno lento con la vista.
+                La cocina es simple, práctica y hecha para viajar de verdad, especialmente para quienes planean <a data-analytics-event="internal_link_click" data-analytics-label="senderismo en el bosque nublado de Ecuador" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/senderismo-bosque-nublado-ecuador/">senderismo en el bosque nublado de Ecuador</a>.
+              </p>
+<div aria-label="Etiquetas de cocina" class="pillRow">
+<span class="pill"><strong>Ambiente:</strong> cálido y practico</span>
+<span class="pill"><strong>Ideal para:</strong> mañanas lentas</span>
+<span class="pill"><strong>Momento:</strong> café con vista</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside aria-label="Momentos en la sala y texto del día" class="card">
+<div class="cardHead">
+<h2 class="cardTitle">Dónde pasa el día</h2>
+<p class="cardHint"></p>
+</div>
+<div aria-label="Carrusel vertical de sala" class="miniCarouselPad">
+<div aria-label="Carrusel de sala" class="miniCarousel">
+<div class="miniViewport" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000" id="lrCarousel">
+<button aria-label="Imagen anterior" class="miniArrow prev" data-action="prev" type="button">‹</button>
+<button aria-label="Imagen siguiente" class="miniArrow next" data-action="next" type="button">›</button>
+<div class="miniTrack" data-track="">
+<figure aria-label="Imagen de sala 1" class="miniSlide">
+<div class="miniSlideInner">
+<img alt="Sala con asientos y luz de montana" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_living_room_01.jpeg"/>
+</div>
+<figcaption class="miniCap">Asientos cómodos, luz de montana</figcaption>
+</figure>
+<figure aria-label="Imagen de sala 2" class="miniSlide">
+<div class="miniSlideInner">
+<img alt="Rincon tranquilo de la sala para relajarse" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_living_room_02.jpeg"/>
+</div>
+<figcaption class="miniCap">Rincones tranquilos para desconectar</figcaption>
+</figure>
+</div>
+</div>
+<div aria-label="Puntos del carrusel" class="miniNav">
+<div aria-label="Elegí una imagen" class="miniDots" data-dots=""></div>
+</div>
+</div>
+</div>
+<div aria-label="Sección de texto de sala" class="mediaPad">
+<div aria-label="Texto ampliado de sala" class="microCopy">
+<p class="quote">"Un lugar calmo para recargar entre aventuras."</p>
+<p>
+              Este es el espacio al que volvés: después de cascadas, después de birding, después de que se apaga la última luz.
+              Dejá la mochila, respirá y dejá que el bosque nublado haga lo suyo, cómo en un <a data-analytics-event="internal_link_click" data-analytics-label="lodge de avistamiento de aves en Ecuador" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/lodge-avistamiento-aves-ecuador/">lodge de avistamiento de aves en Ecuador</a>.
+            </p>
+<p>
+              Leé, escribí, jugá cartas o simplemente mirá cómo el clima se mueve por el valle.
+              Si conocés a otro huésped, casi siempre pasa acá: natural y sin forzar.
+            </p>
+<div aria-label="Etiquetas de sala" class="pillRow">
+<span class="pill"><strong>Ideal para:</strong> descansar</span>
+<span class="pill"><strong>Ambiente:</strong> acogedor y silencioso</span>
+<span class="pill"><strong>Momento:</strong> charla al atardecer</span>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<!-- ROW 2: Kitchen photo (left) aligned with Living room video (right) -->
+<section aria-label="Foto de cocina y video de sala" class="gridRow" data-analytics-section="foto_de_cocina_y_video_de_sala">
+<article aria-label="Tarjeta de foto de cocina" class="card" data-analytics-section="tarjeta_de_foto_de_cocina">
+<div class="cardHead">
+<h2 class="cardTitle">Foto de la cocina</h2>
+<p class="cardHint"></p>
+</div>
+<div class="mediaPad">
+<div aria-label="Imagen vertical de cocina" class="vImageFrame">
+<div class="vImageBox">
+<img alt="Espacio de cocina en las áreas comunes" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_kitchen_03.jpg"/>
+</div>
+</div>
+<div style="height:12px;"></div>
+<div aria-label="Etiquetas de foto de cocina" class="pillRow">
+<span class="pill"><strong>Ver también:</strong> <a data-analytics-event="room_gallery_click" data-analytics-label="galería" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/caracteristicas/galeria/">galería</a></span>
+<span class="pill"><strong>Ideal para:</strong> preparar el desayuno</span>
+<span class="pill"><strong>Ambiente:</strong> simple y limpio</span>
+<span class="pill"><strong>Uso:</strong> cocina compartida</span>
+</div>
+</div>
+</article>
+<aside aria-label="Tarjeta de video de sala" class="card">
+<div class="cardHead">
+<h2 class="cardTitle">Video de la sala</h2>
+<p class="cardHint"></p>
+</div>
+<div class="mediaPad">
+<div class="mediaStack">
+<div aria-label="Video vertical de sala" class="ytFrame">
+<div aria-label="Video de sala en YouTube" class="ytBox">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/aPklWBKloRc?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=aPklWBKloRc&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" title="Video de sala de Áreas comunes"></iframe>
+</div>
+</div>
+<div aria-label="Texto del video de sala" class="microCopy">
+<p class="quote">"Acá vive la parte más suave del día."</p>
+<p>
+                Un espacio tranquilo y cómodo para bajar revoluciones, conectar y dejar que el bosque nublado te marque el ritmo.
+              </p>
+<div aria-label="Etiquetas de video de sala" class="pillRow">
+<span class="pill"><strong>Momento:</strong> fin del día</span>
+<span class="pill"><strong>Ambiente:</strong> reparador</span>
+<span class="pill"><strong>Ideal para:</strong> parejas y amigos</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</section>
+ Guest bathroom (common áreas) 
+<section aria-label="Sección de baño de visitas" class="gridFull" data-analytics-section="seccion_de_banio_de_visitas">
+<article aria-label="Tarjeta de baño de visitas" class="card" data-analytics-section="tarjeta_de_banio_de_visitas">
+<div class="cardHead">
+<h2 class="cardTitle">Baño de visitas</h2>
+<p class="cardHint">En las áreas comunes</p>
+</div>
+<div class="bathInner">
+<div aria-label="Fotos del baño de visitas" class="bathMedia">
+<figure aria-label="Imagen de baño 1" class="bathShot">
+<img alt="Baño de visitas cerca de la sala" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_half_bathroom_01.jpeg"/>
+<figcaption class="bathCap">Acceso fácil desde la sala</figcaption>
+</figure>
+<figure aria-label="Imagen de baño 2" class="bathShot">
+<img alt="Baño de visitas limpio con lo esencial" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_half_bathroom_02.jpeg"/>
+<figcaption class="bathCap">Limpio, con insumos y cómodo</figcaption>
+</figure>
+</div>
+<div aria-label="Detalles del baño de visitas" class="bathCopy">
+<p class="bathTitle">Cómodidad, justo dónde la necesitas</p>
+<ul class="bathList">
+<li>Baño de visitas ubicado en las áreas comunes</li>
+<li>Ideal entre comidas, descanso o momentos sociales</li>
+<li>Se mantiene limpio y con insumos esenciales</li>
+</ul>
+<div aria-label="Etiquetas del baño" class="pillRow">
+<span class="pill"><strong>Tipo:</strong> baño de visitas</span>
+<span class="pill"><strong>Acceso:</strong> áreas comunes</span>
+<span class="pill"><strong>Limpieza:</strong> insumos diarios</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- CTA -->
+<section aria-label="CTA de Áreas comunes" class="ctaBand" data-analytics-section="cta_de_areas_comunes">
+<div>
+<h2>¿Listo para disfrutar el bosque nublado en compañía?</h2>
+<p>
+          Reservá tu estadía y sentite en espacios calmos, cálidos y reales, ideal si estás buscando <a data-analytics-event="internal_link_click" data-analytics-label="dónde alojarse cerca de Quito naturaleza" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">dónde alojarse cerca de Quito naturaleza</a>. Si tenés preguntas sobre cómo está organizado el refugio, escribinos.
+        </p>
+</div>
+<div aria-label="Botones de CTA" class="ctaBtns">
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/reservas/">Reservar tu estadía</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Ver todas las habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/habitaciones/">Ver todas las habitaciones</a>
+<a class="btn secondary" data-analytics-event="secondary_cta_click" data-analytics-label="Contacto" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/contacto/">Contacto</a>
+</div>
+</section>
+</main>
+<div id="siteFooter"></div>
+<script src="/assets/js/site.js"></script>
+<script>
+    (function(){
+      "use strict";
+
+      function initMiniCarousel(rootId){
+        var root = document.getElementById(rootId);
+        if (!root) return;
+
+        var track = root.querySelector("[data-track]");
+        if (!track) return;
+
+        var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
+        var slides = track.children ? Array.prototype.slice.call(track.children) : [];
+        if (!slides.length) return;
+
+        var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2800");
+        var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
+
+        var index = 0;
+        var timer = null;
+        var resumeTimer = null;
+        var isPaused = false;
+
+        function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+
+        function setTransform(){
+          track.style.transform = "translateX(" + (-index * 100) + "%)";
+        }
+
+        function setActiveDot(){
+          if (!dotsWrap) return;
+          var btns = dotsWrap.querySelectorAll("button[data-dot]");
+          for (var i = 0; i < btns.length; i++){
+            btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
+          }
+        }
+
+        function goTo(i){
+          index = clamp(i, 0, slides.length - 1);
+          setTransform();
+          setActiveDot();
+        }
+
+        function next(){
+          var n = index + 1;
+          if (n >= slides.length) n = 0;
+          goTo(n);
+        }
+
+        function prev(){
+          var p = index - 1;
+          if (p < 0) p = slides.length - 1;
+          goTo(p);
+        }
+
+        function clearTimers(){
+          if (timer) { clearInterval(timer); timer = null; }
+          if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+        }
+
+        function startAutoplay(){
+          clearTimers();
+          if (autoplayMs < 1200) autoplayMs = 1200;
+          timer = setInterval(function(){
+            if (isPaused) return;
+            next();
+          }, autoplayMs);
+        }
+
+        function pauseTemporarily(){
+          isPaused = true;
+          if (resumeTimer) clearTimeout(resumeTimer);
+          resumeTimer = setTimeout(function(){
+            isPaused = false;
+          }, pauseAfterMs);
+        }
+
+        function buildDots(){
+          if (!dotsWrap) return;
+          dotsWrap.innerHTML = "";
+          for (var i = 0; i < slides.length; i++){
+            var b = document.createElement("button");
+            b.type = "button";
+            b.className = "miniDotBtn" + (i === 0 ? " is-active" : "");
+            b.setAttribute("data-dot", String(i));
+            b.setAttribute("aria-label", "Ir a la imagen " + (i + 1));
+            b.addEventListener("click", function(){
+              var n = Number(this.getAttribute("data-dot") || "0");
+              goTo(n);
+              pauseTemporarily();
+            });
+            dotsWrap.appendChild(b);
+          }
+        }
+
+        function bindArrows(){
+          var prevBtn = root.querySelector('button[data-action="prev"]');
+          var nextBtn = root.querySelector('button[data-action="next"]');
+
+          if (prevBtn){
+            prevBtn.addEventListener("click", function(){
+              prev();
+              pauseTemporarily();
+            });
+          }
+
+          if (nextBtn){
+            nextBtn.addEventListener("click", function(){
+              next();
+              pauseTemporarily();
+            });
+          }
+        }
+
+        function bindHoverPause(){
+          root.addEventListener("mouseenter", function(){ isPaused = true; });
+          root.addEventListener("mouseleave", function(){ isPaused = false; });
+          root.addEventListener("focusin", function(){ isPaused = true; });
+          root.addEventListener("focusout", function(){ isPaused = false; });
+        }
+
+        function bindTouchSwipe(){
+          var startX = 0;
+          var deltaX = 0;
+          var isDown = false;
+
+          function onDown(x){
+            isDown = true;
+            startX = x;
+            deltaX = 0;
+            pauseTemporarily();
+          }
+
+          function onMove(x){
+            if (!isDown) return;
+            deltaX = x - startX;
+          }
+
+          function onUp(){
+            if (!isDown) return;
+            isDown = false;
+
+            var threshold = 38;
+            if (Math.abs(deltaX) > threshold){
+              if (deltaX < 0) next();
+              else prev();
+            }
+            deltaX = 0;
+          }
+
+          root.addEventListener("touchstart", function(e){
+            if (!e.touches || !e.touches.length) return;
+            onDown(e.touches[0].clientX);
+          }, { passive: true });
+
+          root.addEventListener("touchmove", function(e){
+            if (!e.touches || !e.touches.length) return;
+            onMove(e.touches[0].clientX);
+          }, { passive: true });
+
+          root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
+          root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+        }
+
+        buildDots();
+        bindArrows();
+        bindHoverPause();
+        bindTouchSwipe();
+
+        goTo(0);
+        startAutoplay();
+
+        window.addEventListener("resize", function(){
+          setTransform();
+        }, { passive: true });
+      }
+
+      initMiniCarousel("lrCarousel");
+    })();
+  </script>
+</body>
+</html>
