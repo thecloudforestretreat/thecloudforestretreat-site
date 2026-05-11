@@ -208,6 +208,55 @@ Recommended TCFR page types:
 ACCENT RULE
 Use South American Spanish accents correctly in all visible Spanish copy and metadata.
 
+SPANISH ACCENT HARD-BLOCKER EXPANSION
+This section is mandatory and must be enforced before any Spanish page is marked ready.
+
+The following missing-accent words are explicit blockers when they appear in visible Spanish copy, metadata, alt text, aria-labels, captions, buttons, FAQ text, schema text, or any user-facing JavaScript string:
+
+- bano / Bano -> baño / Baño
+- banos / Banos -> baños / Baños
+- area / Area when used as Spanish noun -> área / Área
+- areas / Areas -> áreas / Áreas
+- montana / montanas -> montaña / montañas
+- corazon -> corazón
+- introduccion -> introducción
+- navegacion -> navegación
+- pagina -> página
+- despues -> después
+- mananas -> mañanas
+- cafe -> café
+- calido / calida -> cálido / cálida
+- comodo / comoda / comodos / comodas -> cómodo / cómoda / cómodos / cómodas
+- practica / practico -> práctica / práctico
+- huesped / huespedes -> huésped / huéspedes
+- facil -> fácil
+- ultimo / ultima -> último / última
+- compania -> compañía
+- tambien -> también
+- aqui / aca -> aquí / acá
+- que / como / donde in questions or headings -> qué / cómo / dónde when grammatically required
+- esta / estas when used as verb forms -> está / estás
+- mas when it means "more" -> más
+- si when it means "yes" -> sí
+
+Technical-path safeguard:
+- Never add accents to URLs, slugs, href paths, canonical URLs, hreflang URLs, og:url, schema URLs, image paths, CSS paths, JS paths, IDs, classes, data attributes, analytics event names, or page_type values.
+- If an accented URL appears, such as /áreas-comunes/, it is a production blocker and must be changed back to the approved ASCII slug.
+
+Attribute-level accent QA:
+- Check meta title, meta description, Open Graph, Twitter, image alt text, aria-labels, button text, form labels, placeholders, captions, JSON-LD user-facing text, and visible JavaScript-generated labels.
+- Do not only check paragraph body text.
+
+Required final Spanish scan:
+Before handoff, run a visible-text and user-facing-attribute search for these blocker strings:
+bano, Bano, areas, Areas, montanas, corazon, Introduccion, despues, mananas, cafe, calido, calida, comodo, comodas, practica, huesped, facil, compania, tambien, pagina, Pagina, navegacion, Navegacion.
+
+If any of these remain in user-facing Spanish text or user-facing attributes, do not mark ready. Fix first, then return the complete corrected file.
+
+Technical attribute note:
+- Accents must not be added to data attributes, IDs, classes, paths, or analytics values.
+- To avoid false positives, do not use accentless Spanish words like bano in technical values either. Use neutral ASCII alternatives such as banio or guest_bathroom in data-analytics-section values.
+
 MANDATORY SPANISH ACCENT QA STANDARD
 Spanish accent validation is a hard production blocker. A Spanish page must NOT be handed off as ready if visible Spanish copy, metadata, schema text, image alt text, aria-label text, form labels, placeholders, option labels, button text, status messages, validation messages, FAQ text, review text, or JSON-LD user-facing text contains missing or incorrect Spanish accents.
 
