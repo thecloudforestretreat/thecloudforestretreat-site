@@ -777,3 +777,19 @@ Blockers:
 - Spanish page with missing accents in visible text, metadata, aria-labels, alt text, or JSON-LD.
 - Accented technical URLs such as /características/.
 - ES page body links pointing to EN URLs except rawLangLinks.
+
+FEATURE DETAIL SPACING AND SYMMETRY QA ENFORCEMENT
+This section is mandatory for feature-detail pages after the global CSS refactor.
+
+Visual blockers:
+- Large empty card spaces caused by stretched right-column cards.
+- Tiny pill/chip/bubble labels that do not match TCFR button and badge scale.
+- Uneven first-content sections where one side has a tall image and the other side has sparse cards with excessive white space.
+- Feature-detail pages that technically use global CSS but still feel visually disconnected from the Features Hub or Rooms Hub.
+
+Required checks:
+- The first content panel after the hero must feel compact and balanced.
+- Pinned chips/tags/pills should use readable sizing and consistent padding.
+- Overview cards must not stretch into large empty blocks unless the content intentionally fills the space.
+- Feature panels should preserve the approved rhythm: heading + short helper text + balanced inner grid/cards.
+- CSS fixes for spacing and symmetry must be centralized in /assets/css/site.css, not patched page by page.
