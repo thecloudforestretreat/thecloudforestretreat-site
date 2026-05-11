@@ -701,3 +701,21 @@ FEATURES HUB QA ENFORCEMENT
 - Spanish body links must point to ES URLs only.
 - Features hub pages must include room, booking, and contact conversion paths.
 - Features hub pages must include analytics-ready related feature cards.
+
+FEATURES HUB GLOBAL CSS ENFORCEMENT
+This section is mandatory for /features/ and /es/caracteristicas/.
+
+Rules:
+- Features hub pages must not ship with large page-level layout CSS blocks.
+- Reusable feature hub layout styles must live in /assets/css/site.css.
+- Page files may keep only narrow one-off guards when absolutely necessary, such as rawLangLinks hiding if global CSS is not guaranteed.
+- The filters, section heading, and section hint must be wrapped inside a visible beige/cream panel so text does not float directly on the green background.
+- Feature cards must use a layered global pattern: page background -> beige/cream section surface -> card/grid content.
+- If a large inline style block defines .wrap, .hero, .grid, .card, .filters, .chip, .ctaBand, or similar hub layout classes, it is a blocker unless the task explicitly requests a self-contained page.
+
+Features hub blockers:
+- Text/filter controls floating directly on the page background.
+- ES canonical, og:url, schema URL, or breadcrumb pointing to the EN /features/ URL.
+- ES body links pointing to EN /features/ child URLs.
+- Missing footer.css when footer rendering depends on shared styling.
+- Missing site.js or duplicate site.js.
