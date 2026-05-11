@@ -80,452 +80,22 @@
     ]
   }
   </script>
-<style>
-    :root{
-      --max: 1120px;
-      --r: 24px;
-      --shadow: 0 18px 55px rgba(13,89,37,0.16);
-      --line: rgba(11,26,16,0.12);
-      --glass: rgba(245,245,220,0.78);
-      --glass2: rgba(245,245,220,0.62);
-      --ink: #0b1a10;
-      --forest: #0D5925;
-      --muted: rgba(11,26,16,0.72);
-
-      --chipBg: rgba(255,255,255,0.62);
-      --chipLine: rgba(13,89,37,0.18);
-    }
-
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
-
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px 18px 84px;
-    }
-
-    .topBand{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
-
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 13px;
-      color: rgba(11,26,16,0.75);
-    }
-    .crumbs a{ color: inherit; text-decoration: none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
-
-    .quickActions{
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .hero{
-      margin-top: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
-      background: var(--glass);
-      overflow: hidden;
-      position: relative;
-      color: var(--ink);
-    }
-
-    .heroMedia{
-      position: relative;
-      overflow: hidden;
-      height: 400px;
-      background: rgba(0,0,0,0.10);
-    }
-
-    .heroMedia img{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
-
-    .heroShade{
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      pointer-events: none;
-    }
-
-    .heroInner{
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.20);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(6px);
-      padding: 14px;
-      color: rgba(255,255,255,0.96);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-    }
-
-    .kicker{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: rgba(255,255,255,0.92);
-    }
-
-    .heroH1{
-      margin: 8px 0 6px;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-      font-size: clamp(32px, 3.8vw, 54px);
-      color: #fff;
-    }
-
-    .heroLead{
-      margin: 0;
-      max-width: 80ch;
-      font-weight: 600;
-      line-height: 1.7;
-      color: rgba(231,228,209,0.92);
-      font-size: 15.5px;
-    }
-
-    .filters{
-      margin-top: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .filterLeft{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      min-width: 0;
-    }
-
-    .filterLabel{
-      font-weight: 900;
-      color: rgba(11,26,16,0.72);
-      font-size: 13px;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
-
-    .chips{
-      display: inline-flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .chip{
-      appearance: none;
-      border: 1px solid var(--chipLine);
-      background: var(--chipBg);
-      border-radius: 999px;
-      padding: 10px 12px;
-      cursor: pointer;
-      font-weight: 900;
-      font-size: 13px;
-      color: #0b2b12;
-      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-      user-select: none;
-      white-space: nowrap;
-    }
-
-    .chip.is-active{
-      background: rgba(224,100,58,0.92);
-      border-color: rgba(0,0,0,0.10);
-      color: #fff;
-      box-shadow: 0 14px 30px rgba(224,100,58,0.18);
-    }
-
-    .filterRight{
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .grid{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items: stretch;
-    }
-
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--r);
-      background: var(--glass2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      color: var(--ink);
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card a{
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .cardMedia{
-      position: relative;
-      aspect-ratio: 16 / 10;
-      background: rgba(0,0,0,0.10);
-      overflow: hidden;
-    }
-
-    .cardMedia img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.01);
-    }
-
-    .cardMediaShade{
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.26));
-      pointer-events: none;
-    }
-
-    .cardTopBadge{
-      position: absolute;
-      left: 12px;
-      top: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.20);
-      background: rgba(0,0,0,0.30);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      color: rgba(255,255,255,0.96);
-      font-weight: 900;
-      font-size: 12px;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-    }
-
-    .cardBody{
-      padding: 14px;
-      display: grid;
-      gap: 10px;
-      flex: 1 1 auto;
-    }
-
-    .cardTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-      color: var(--forest);
-    }
-
-    .cardText{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      font-weight: 650;
-      line-height: 1.75;
-      font-size: 14.8px;
-    }
-
-    .pillRow{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      color: #0b2b12;
-      font-weight: 900;
-      font-size: 13px;
-      white-space: nowrap;
-      box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-    }
-
-    .cardCtaRow{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-top: 2px;
-      flex-wrap: wrap;
-    }
-
-    .cardCta{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 900;
-      color: #0b2b12;
-      font-size: 13px;
-      padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(13,89,37,0.18);
-      background: rgba(255,255,255,0.62);
-      box-shadow: 0 12px 28px rgba(13,89,37,0.10);
-      white-space: nowrap;
-    }
-
-    .card:hover .cardCta{
-      background: rgba(224,100,58,0.10);
-      border-color: rgba(224,100,58,0.30);
-    }
-
-    .card:hover .cardMedia img{
-      transform: scale(1.03);
-      transition: transform 260ms ease;
-    }
-
-    .sectionTitle{
-      margin: 18px 0 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-      color: var(--forest);
-    }
-
-    .sectionHint{
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-weight: 650;
-      line-height: 1.7;
-      font-size: 14px;
-      max-width: 90ch;
-    }
-
-    .ctaBand{
-      margin-top: 14px;
-      border-radius: var(--r);
-      border: 1px solid rgba(11,26,16,0.12);
-      background: rgba(245,245,220,0.82);
-      box-shadow: var(--shadow);
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
-
-    .ctaBand h2{
-      margin: 0 0 6px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 22px;
-      line-height: 1.1;
-    }
-
-    .ctaBand p{
-      margin: 0;
-      color: rgba(11,26,16,0.72);
-      font-weight: 650;
-      line-height: 1.7;
-      max-width: 80ch;
-    }
-
-    .ctaBtns{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .is-hidden{ display:none !important; }
-
-    @media (max-width: 900px){
-      .wrap{ padding: 12px 14px 74px; }
-      .heroMedia{ height: 280px; }
-      .grid{ grid-template-columns: 1fr; }
-      .cardMedia{ aspect-ratio: 4 / 3; }
-    }
-  </style>
-<link href="/assets/css/footer.css?v=3" rel="stylesheet"/><style>
-.rawLangLinks{
-  position:absolute !important;
-  width:1px !important;
-  height:1px !important;
-  padding:0 !important;
-  margin:-1px !important;
-  overflow:hidden !important;
-  clip:rect(0,0,0,0) !important;
-  white-space:nowrap !important;
-  border:0 !important;
-}
-</style></head>
+<link href="/assets/css/footer.css?v=3" rel="stylesheet"/></head>
 <body data-page-language="es" data-page-type="features_hub">
-<div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a href="https://thecloudforestretreat.com/features/" hreflang="en" lang="en">English</a><a aria-current="page" href="https://thecloudforestretreat.com/es/caracteristicas/" hreflang="es" lang="es">Español</a></nav>
+<div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="features_hub" data-analytics-target-language="en" href="https://thecloudforestretreat.com/features/" hreflang="en" lang="en">English</a><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="features_hub" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/caracteristicas/" hreflang="es" lang="es">Español</a></nav>
 <main aria-label="Página de características" class="wrap">
-<section aria-label="Navegación y accesos rápidos" class="topBand">
+<section aria-label="Navegación y accesos rápidos" class="topBand" data-analytics-section="navegaci_n_y_accesos_r_pidos">
 <div aria-label="Migas de pan" class="crumbs">
-<a href="/">Inicio</a>
+<a data-analytics-event="internal_link_click" data-analytics-label="Inicio" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/">Inicio</a>
 <span aria-hidden="true">›</span>
 <span>Características</span>
 </div>
 <div aria-label="Accesos rápidos" class="quickActions">
-<a class="btn secondary" href="/es/habitaciones/">Ver habitaciones</a>
-<a class="btn primary" href="/es/reservas/">Reservar</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Ver habitaciones" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/habitaciones/">Ver habitaciones</a>
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/reservas/">Reservar</a>
 </div>
 </section>
-<section aria-label="Hero de características" class="hero">
+<section aria-label="Hero de características" class="hero" data-analytics-section="hero_de_caracter_sticas">
 <div aria-label="Imagen principal" class="heroMedia">
 <img alt="Vista y alrededores de The Cloud Forest Retreat" decoding="async" loading="eager" src="/assets/images/pages/features/tcfr_features_hero_card_01.jpeg"/>
 <div aria-hidden="true" class="heroShade"></div>
@@ -537,8 +107,7 @@
           </p>
 </div>
 </div>
-</section>
-<section aria-label="Filtros de categorías" class="filters">
+</section><section aria-label="Features filters and overview" class="featuresPanel" data-analytics-section="features_filters_overview"><section aria-label="Filtros de categorías" class="filters" data-analytics-section="filtros_de_categor_as">
 <div class="filterLeft">
 <div class="filterLabel">Filtrar:</div>
 <div aria-label="Categorías" class="chips">
@@ -552,17 +121,15 @@
 </div>
 </div>
 <div aria-label="Enlaces rápidos" class="filterRight">
-<a class="btn secondary" href="/es/contacto/">Hacer una consulta</a>
+<a class="btn secondary" data-analytics-event="secondary_cta_click" data-analytics-label="Hacer una consulta" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/contacto/">Hacer una consulta</a>
 </div>
-</section>
-<h2 class="sectionTitle">Elige qué quieres explorar</h2>
-<p class="sectionHint">
+</section><h2 class="sectionTitle">Elige qué quieres explorar</h2><p class="sectionHint">
       Toca cualquier tarjeta para abrir la página completa del tema. Si no sabes por dónde empezar, comienza con Amenidades, Actividades y Atracciones.
-    </p>
-<section aria-label="Grilla de características" class="grid">
+    </p></section>
+<section aria-label="Grilla de características" class="grid" data-analytics-section="grilla_de_caracter_sticas">
 <!-- 1. AMENITIES -->
-<article aria-label="Tarjeta de amenidades" class="card" data-cat="essentials">
-<a aria-label="Abrir Amenidades" href="/es/caracteristicas/amenidades/">
+<article aria-label="Tarjeta de amenidades" class="card" data-analytics-section="tarjeta_de_amenidades" data-cat="essentials">
+<a aria-label="Abrir Amenidades" data-analytics-event="feature_card_click" data-analytics-label="Esenciales Amenidades Los detalles de comodidad que hacen que todo se sienta fác" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/amenidades/">
 <div aria-label="Imagen de amenidades" class="cardMedia">
 <img alt="Amenidades en The Cloud Forest Retreat" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_amenities_01.jpeg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -583,8 +150,8 @@
 </a>
 </article>
 <!-- 2. ACTIVITIES -->
-<article aria-label="Tarjeta de actividades" class="card" data-cat="activities">
-<a aria-label="Abrir Actividades" href="/es/caracteristicas/actividades/">
+<article aria-label="Tarjeta de actividades" class="card" data-analytics-section="tarjeta_de_actividades" data-cat="activities">
+<a aria-label="Abrir Actividades" data-analytics-event="feature_card_click" data-analytics-label="Actividades Actividades Qué puedes hacer mientras estás aquí: naturaleza tranqui" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/actividades/">
 <div aria-label="Imagen de actividades" class="cardMedia">
 <img alt="Actividades en y cerca del retiro" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_activities_01.jpg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -605,8 +172,8 @@
 </a>
 </article>
 <!-- 3. ATTRACTIONS -->
-<article aria-label="Tarjeta de atracciones" class="card" data-cat="attractions">
-<a aria-label="Abrir Atracciones" href="/es/caracteristicas/atracciones/">
+<article aria-label="Tarjeta de atracciones" class="card" data-analytics-section="tarjeta_de_atracciones" data-cat="attractions">
+<a aria-label="Abrir Atracciones" data-analytics-event="feature_card_click" data-analytics-label="Atracciones Atracciones Experiencias en y cerca de la propiedad que más gustan, " data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/atracciones/">
 <div aria-label="Imagen de atracciones" class="cardMedia">
 <img alt="Atracciones cerca del retiro" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_attractions_01.png"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -627,8 +194,8 @@
 </a>
 </article>
 <!-- 4. PRODUCE -->
-<article aria-label="Tarjeta de productos" class="card" data-cat="essentials">
-<a aria-label="Abrir Productos" href="/es/caracteristicas/productos/">
+<article aria-label="Tarjeta de productos" class="card" data-analytics-section="tarjeta_de_productos" data-cat="essentials">
+<a aria-label="Abrir Productos" data-analytics-event="feature_card_click" data-analytics-label="Esenciales Productos De huerta a la mesa es parte de la estadía. Ingredientes fr" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/productos/">
 <div aria-label="Imagen de productos" class="cardMedia">
 <img alt="Productos de huerta e ingredientes locales" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_produce_01.jpg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -649,8 +216,8 @@
 </a>
 </article>
 <!-- 5. FLORA -->
-<article aria-label="Tarjeta de flora" class="card" data-cat="nature">
-<a aria-label="Abrir Flora" href="/features/flora/">
+<article aria-label="Tarjeta de flora" class="card" data-analytics-section="tarjeta_de_flora" data-cat="nature">
+<a aria-label="Abrir Flora" data-analytics-event="feature_card_click" data-analytics-label="Naturaleza Flora Un mundo verde y vivo: orquídeas, musgo, árboles altos y la vid" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/flora/">
 <div aria-label="Imagen de flora" class="cardMedia">
 <img alt="Flora del bosque nublado" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_flora_01.jpg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -671,8 +238,8 @@
 </a>
 </article>
 <!-- 6. FAUNA -->
-<article aria-label="Tarjeta de fauna" class="card" data-cat="nature">
-<a aria-label="Abrir Fauna" href="/features/fauna/">
+<article aria-label="Tarjeta de fauna" class="card" data-analytics-section="tarjeta_de_fauna" data-cat="nature">
+<a aria-label="Abrir Fauna" data-analytics-event="feature_card_click" data-analytics-label="Naturaleza Fauna Canto de aves, movimiento entre los árboles y la sensación de q" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/fauna/">
 <div aria-label="Imagen de fauna" class="cardMedia">
 <img alt="Fauna del bosque nublado" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_fauna_02.jpg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -693,8 +260,8 @@
 </a>
 </article>
 <!-- 7. CHOCO ANDINO -->
-<article aria-label="Tarjeta de Choco Andino de Pichincha" class="card" data-cat="landscapes">
-<a aria-label="Abrir Choco Andino de Pichincha" href="/features/choco-andino-de-pichincha/">
+<article aria-label="Tarjeta de Choco Andino de Pichincha" class="card" data-analytics-section="tarjeta_de_choco_andino_de_pichincha" data-cat="landscapes">
+<a aria-label="Abrir Choco Andino de Pichincha" data-analytics-event="feature_card_click" data-analytics-label="Paisajes Choco Andino de Pichincha El contexto grande de tu estadía. Una región " data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/choco-andino-de-pichincha/">
 <div aria-label="Imagen de Choco Andino" class="cardMedia">
 <img alt="Región Choco Andino de Pichincha" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_choco_01.jpg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -715,8 +282,8 @@
 </a>
 </article>
 <!-- 8. RIO GUAYLLABAMBA -->
-<article aria-label="Tarjeta de Río Guayllabamba" class="card" data-cat="landscapes">
-<a aria-label="Abrir Río Guayllabamba" href="/features/rio-guayllabamba/">
+<article aria-label="Tarjeta de Río Guayllabamba" class="card" data-analytics-section="tarjeta_de_r_o_guayllabamba" data-cat="landscapes">
+<a aria-label="Abrir Río Guayllabamba" data-analytics-event="feature_card_click" data-analytics-label="Paisajes Río Guayllabamba Un hito natural cercano que define el valle. Una lectu" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/rio-guayllabamba/">
 <div aria-label="Imagen del Río Guayllabamba" class="cardMedia">
 <img alt="Paisaje del Río Guayllabamba" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_rio_01.jpg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -737,8 +304,8 @@
 </a>
 </article>
 <!-- 9. PULULAHUA -->
-<article aria-label="Tarjeta de Pululahua" class="card" data-cat="landscapes">
-<a aria-label="Abrir Pululahua" href="/features/pululahua/">
+<article aria-label="Tarjeta de Pululahua" class="card" data-analytics-section="tarjeta_de_pululahua" data-cat="landscapes">
+<a aria-label="Abrir Pululahua" data-analytics-event="feature_card_click" data-analytics-label="Paisajes Pululahua Un destino cercano, raro e inolvidable. Descubre qué lo hace " data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/pululahua/">
 <div aria-label="Imagen de Pululahua" class="cardMedia">
 <img alt="Caldera volcánica de Pululahua" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_pululahua_01.jpg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -759,8 +326,8 @@
 </a>
 </article>
 <!-- 10. GALLERY -->
-<article aria-label="Tarjeta de galería" class="card" data-cat="gallery">
-<a aria-label="Abrir Galería" href="/features/gallery/">
+<article aria-label="Tarjeta de galería" class="card" data-analytics-section="tarjeta_de_galer_a" data-cat="gallery">
+<a aria-label="Abrir Galería" data-analytics-event="feature_card_click" data-analytics-label="Galería Galería Un recorrido visual por el retiro y sus alrededores. Ideal si qu" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/caracteristicas/galeria/">
 <div aria-label="Imagen de galería" class="cardMedia">
 <img alt="Galería de fotos de The Cloud Forest Retreat" decoding="async" loading="lazy" src="/assets/images/pages/features/tcfr_features_card_gallery_01.jpg"/>
 <div aria-hidden="true" class="cardMediaShade"></div>
@@ -781,20 +348,20 @@
 </a>
 </article>
 </section>
-<section aria-label="Llamado a la acción final" class="ctaBand">
+<section aria-label="Llamado a la acción final" class="ctaBand" data-analytics-section="llamado_a_la_acci_n_final">
 <div>
 <h2>¿Quieres ayuda para decidir por dónde empezar?</h2>
 <p>Escríbenos y te recomendamos las mejores experiencias según tu tiempo, la temporada y tu nivel de energía.</p>
 </div>
 <div aria-label="Botones de acción" class="ctaBtns">
-<a class="btn primary" href="/es/contacto/">Contacto</a>
-<a class="btn secondary" href="/es/habitaciones/">Ver habitaciones</a>
-<a class="btn secondary" href="/es/reservas/">Reservar</a>
+<a class="btn primary" data-analytics-event="secondary_cta_click" data-analytics-label="Contacto" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/contacto/">Contacto</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Ver habitaciones" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/habitaciones/">Ver habitaciones</a>
+<a class="btn secondary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar" data-analytics-location="page_body" data-analytics-page-type="features_hub" href="/es/reservas/">Reservar</a>
 </div>
 </section>
 </main>
 <div id="siteFooter"></div>
-<script src="/assets/js/site.js?v=3"></script>
+<script src="/assets/js/site.js"></script>
 <script>
     (function(){
       "use strict";
