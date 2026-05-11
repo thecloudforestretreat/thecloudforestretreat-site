@@ -693,3 +693,11 @@ MIXED LANGUAGE UI BLOCKER
 - Check room pills, badges, CTA labels, card labels, helper labels, FAQ toggles, and section labels specifically.
 - Example blocker:
   English room card using "Luz de mañana" instead of "Morning light".
+
+
+FEATURES HUB QA ENFORCEMENT
+- Features hub pages must use data-page-type="features_hub".
+- Spanish features pages must use canonical, og:url, and schema URLs pointing to /es/caracteristicas/.
+- Spanish body links must point to ES URLs only.
+- Features hub pages must include room, booking, and contact conversion paths.
+- Features hub pages must include analytics-ready related feature cards.
