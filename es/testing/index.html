@@ -3,30 +3,30 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Habitación Atardecer | Vistas de Hora Dorada | The Cloud Forest Retreat</title>
-<meta content="Relájate con vistas de hora dorada en The Cloud Forest Retreat. La Habitación Atardecer es una estadía acogedora orientada al oeste, con luz cálida al final del día y calma del bosque nublado." name="description"/>
+<title>Áreas Comunes | Espacios Compartidos Cerca de Quito | The Cloud Forest Retreat</title>
+<meta content="Descubre las áreas comunes, rincones de descanso, cocina compartida y atmósfera tranquila de The Cloud Forest Retreat cerca de Quito." name="description"/>
 <meta content="index,follow" name="robots"/>
 <!-- Canonical + hreflang (PRODUCTION URLs) -->
-<link href="https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/" rel="canonical"/>
-<link href="https://thecloudforestretreat.com/rooms/sunset-room/" hreflang="en" rel="alternate"/>
-<link href="https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/" hreflang="es" rel="alternate"/>
-<link href="https://thecloudforestretreat.com/rooms/sunset-room/" hreflang="x-default" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" rel="canonical"/>
+<link href="https://thecloudforestretreat.com/rooms/common-areas/" hreflang="en" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" hreflang="es" rel="alternate"/>
+<link href="https://thecloudforestretreat.com/rooms/common-areas/" hreflang="x-default" rel="alternate"/>
 <!-- Open Graph (PRODUCTION URLs) -->
 <meta content="website" property="og:type"/>
 <meta content="The Cloud Forest Retreat" property="og:site_name"/>
-<meta content="Habitación Atardecer | Vistas de Hora Dorada" property="og:title"/>
-<meta content="Relájate con vistas de hora dorada en The Cloud Forest Retreat. Una habitación acogedora orientada al oeste, con luz cálida y calma del bosque nublado." property="og:description"/>
-<meta content="https://thecloudforestretreat.com/es/habitaciones/habitación-atardecer/" property="og:url"/>
+<meta content="Áreas Comunes | Espacios Compartidos Cerca de Quito" property="og:title"/>
+<meta content="Explora la atmósfera compartida, las vistas y los espacios comunes de The Cloud Forest Retreat." property="og:description"/>
+<meta content="https://thecloudforestretreat.com/es/habitaciones/áreas-comunes/" property="og:url"/>
 <meta content="https://thecloudforestretreat.com/og-tcfr.jpg" property="og:image"/>
 <meta content="https://thecloudforestretreat.com/og-tcfr.jpg" property="og:image:secure_url"/>
 <meta content="image/jpeg" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="Habitación Atardecer en The Cloud Forest Retreat" property="og:image:alt"/>
+<meta content="Áreas comunes de The Cloud Forest Retreat" property="og:image:alt"/>
 <!-- Twitter (PRODUCTION URLs) -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Habitación Atardecer | Vistas de Hora Dorada" name="twitter:title"/>
-<meta content="Una habitación acogedora orientada al oeste para amantes del atardecer: luz cálida, vistas tranquilas y calma del bosque nublado." name="twitter:description"/>
+<meta content="Áreas Comunes | Espacios Compartidos Cerca de Quito" name="twitter:title"/>
+<meta content="Explora la atmósfera compartida, las vistas y los espacios comunes de The Cloud Forest Retreat." name="twitter:description"/>
 <meta content="https://thecloudforestretreat.com/og-tcfr.jpg" name="twitter:image"/>
 <!-- Favicons (approved root paths) -->
 <link href="/favicon.ico" rel="icon" sizes="any"/>
@@ -39,10 +39,13 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <!-- Global / shared CSS -->
-<link href="/assets/css/site.css" rel="stylesheet"/>
-<link href="/assets/css/header.css?v=3" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet">
+<link href="/assets/css/header.css?v=3" rel="stylesheet">
 <!-- Head-only JS -->
 <script defer="" src="/assets/js/head.js?v=1"></script>
+<!-- Structured data: WebPage + Breadcrumbs -->
+
+
 <style>
     :root{
       --max: 1120px;
@@ -50,13 +53,14 @@
       --shadow: 0 18px 55px rgba(13,89,37,0.16);
       --line: rgba(11,26,16,0.12);
 
-      --sunset: #E0643A;
-      --sunsetSoft: rgba(224,100,58,0.14);
       --glass: rgba(245,245,220,0.78);
       --glass2: rgba(245,245,220,0.62);
       --ink: #0b1a10;
-      --muted: rgba(11,26,16,0.72);
       --forest: #0D5925;
+      --muted: rgba(11,26,16,0.72);
+
+      --accent: #E0643A;
+      --accentSoft: rgba(224,100,58,0.14);
     }
 
     *{ box-sizing: border-box; }
@@ -101,14 +105,6 @@
       align-items: center;
     }
 
-    .gridA{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 14px;
-      align-items: stretch;
-    }
-
     .card{
       border: 1px solid var(--line);
       border-radius: var(--r);
@@ -127,6 +123,8 @@
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
 
     .cardTitle{
@@ -136,6 +134,7 @@
       letter-spacing: -0.02em;
       font-weight: 900;
       font-size: 20px;
+      line-height: 1.1;
     }
 
     .cardHint{
@@ -143,6 +142,12 @@
       color: rgba(11,26,16,0.68);
       font-weight: 700;
       font-size: 13px;
+      line-height: 1.4;
+    }
+
+    /* HERO */
+    .hero{
+      margin-top: 14px;
     }
 
     .heroMedia{
@@ -152,7 +157,7 @@
       border: 1px solid rgba(255,255,255,0.22);
       box-shadow: var(--shadow);
       background: rgba(0,0,0,0.10);
-      height: 560px;
+      height: 360px;
     }
 
     .heroMedia img{
@@ -167,19 +172,19 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(900px 520px at 80% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.46));
+        radial-gradient(1000px 520px at 22% 18%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.50));
       pointer-events: none;
     }
 
-    .heroTitleBadge{
+    .heroBadge{
       position: absolute;
       left: 14px;
       bottom: 14px;
       right: 14px;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.28);
+      background: rgba(0,0,0,0.30);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       padding: 14px;
@@ -204,33 +209,42 @@
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1.02;
-      font-size: clamp(32px, 3.6vw, 50px);
+      font-size: clamp(30px, 3.6vw, 48px);
       color: #fff;
     }
 
     .heroLead{
       margin: 0;
-      max-width: 70ch;
+      max-width: 80ch;
       font-weight: 600;
       line-height: 1.7;
       color: rgba(231,228,209,0.92);
       font-size: 15.5px;
     }
 
-    .videoCardInner{
-      padding: 14px;
+    .heroCtas{
+      margin-top: 12px;
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      height: calc(560px - 56px);
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
+    /* GRID OPTION A (Aligned rows to remove dead space) */
+    .gridRow{
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    /* 9:16 MEDIA */
     .ytFrame{
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(11,26,16,0.10);
       background: rgba(255,255,255,0.55);
-      flex: 1 1 auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -259,7 +273,45 @@
       display: block;
     }
 
-    .videoMiniCopy{
+    .vImageFrame{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .vImageBox{
+      width: min(420px, 100%);
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+      position: relative;
+    }
+
+    .vImageBox img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .mediaPad{ padding: 14px; }
+
+    .mediaStack{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .microCopy{
       border-radius: 18px;
       border: 1px solid rgba(11,26,16,0.10);
       background: rgba(255,255,255,0.55);
@@ -268,7 +320,7 @@
       gap: 10px;
     }
 
-    .videoMiniCopy p{
+    .microCopy p{
       margin: 0;
       color: rgba(11,26,16,0.78);
       line-height: 1.7;
@@ -276,7 +328,7 @@
       font-size: 13.8px;
     }
 
-    .videoMiniCopy .quote{
+    .microCopy .quote{
       margin: 0;
       font-family: var(--font-head);
       font-weight: 900;
@@ -311,21 +363,7 @@
       color: var(--forest);
     }
 
-    .tightCtas{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .gridB{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 14px;
-      align-items: start;
-    }
-
+    /* Living moments carousel (compact, 2 slides) */
     .miniCarouselPad{ padding: 14px; }
 
     .miniCarousel{
@@ -352,12 +390,26 @@
     .miniSlide{
       flex: 0 0 100%;
       position: relative;
-      aspect-ratio: 16 / 10;
+      aspect-ratio: 9 / 16;
       margin: 0;
-      padding: 0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .miniSlide img{
+    .miniSlideInner{
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+    }
+
+    .miniSlideInner img{
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -366,9 +418,9 @@
 
     .miniCap{
       position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
       padding: 9px 11px;
       border-radius: 14px;
       background: rgba(245,245,220,0.92);
@@ -435,92 +487,37 @@
       transform: scale(1.05);
     }
 
-    .rightStackPad{ padding: 14px; }
-
-    .p{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      line-height: 1.75;
-      font-size: 14.8px;
-      font-weight: 650;
-    }
-
-    .note{
-      margin-top: 10px;
-      font-size: 13px;
-      color: rgba(11,26,16,0.68);
-      font-weight: 650;
-      line-height: 1.6;
-    }
-
-    /* Shared bathroom section */
-    .bathSection{
+    /* Shared guest bathroom (full width) */
+    .gridFull{
       margin-top: 14px;
     }
 
-    .bathPad{
+    .bathInner{
       padding: 14px;
       display: grid;
-      gap: 12px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+      align-items: stretch;
     }
 
-    .bathNotice{
-      border-radius: 18px;
-      border: 1px solid rgba(11,26,16,0.10);
-      background: rgba(255,255,255,0.60);
-      padding: 12px;
-      display: grid;
-      gap: 8px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bathNotice:before{
-      content:"";
-      position:absolute;
-      inset: -80px auto auto -80px;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.16), rgba(224,100,58,0) 62%);
-      pointer-events: none;
-    }
-
-    .bathNoticeTitle{
-      margin: 0;
-      font-family: var(--font-head);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-      line-height: 1.15;
-      color: var(--forest);
-      position: relative;
-    }
-
-    .bathNoticeText{
-      margin: 0;
-      color: rgba(11,26,16,0.78);
-      font-weight: 650;
-      line-height: 1.75;
-      font-size: 14px;
-      position: relative;
-      max-width: 95ch;
-    }
-
-    .bathGrid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .bathShot{
+    .bathMedia{
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(11,26,16,0.10);
       background: rgba(255,255,255,0.55);
-      box-shadow: 0 14px 34px rgba(13,89,37,0.10);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .bathShot{
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(0,0,0,0.08);
+      min-height: 220px;
       position: relative;
-      aspect-ratio: 4 / 3;
-      margin: 0;
     }
 
     .bathShot img{
@@ -535,78 +532,51 @@
       left: 10px;
       right: 10px;
       bottom: 10px;
+      padding: 9px 11px;
       border-radius: 14px;
       background: rgba(245,245,220,0.92);
-      border: 1px solid rgba(13,89,37,0.14);
-      padding: 10px 10px;
+      border: 1px solid rgba(13,89,37,0.16);
+      color: #0b2b12;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
       font-weight: 900;
-      color: rgba(11,26,16,0.88);
       font-size: 13px;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+      letter-spacing: -0.01em;
     }
 
-    .details{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items: start;
+    .bathCopy{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(11,26,16,0.10);
+      background: rgba(255,255,255,0.55);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
     }
 
-    .detailCard{ padding: 16px; }
-
-    .detailH3{
-      margin: 0 0 10px;
-      font-family: var(--font-head);
-      color: var(--forest);
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      font-size: 18px;
-    }
-
-    .detailList{
-      margin: 0;
-      padding-left: 18px;
-      color: rgba(11,26,16,0.82);
-      line-height: 1.85;
-      font-weight: 650;
-      font-size: 15px;
-    }
-
-    .quoteCard{
-      padding: 16px;
-      position: relative;
-    }
-
-    .quoteCard:before{
-      content:"";
-      position:absolute;
-      inset: -60px auto auto -60px;
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle at center, rgba(224,100,58,0.18), rgba(224,100,58,0) 62%);
-      pointer-events:none;
-    }
-
-    .quoteText{
+    .bathTitle{
       margin: 0;
       font-family: var(--font-head);
       font-weight: 900;
       letter-spacing: -0.02em;
       font-size: 20px;
-      line-height: 1.2;
+      line-height: 1.15;
       color: var(--forest);
-      position: relative;
     }
 
-    .quoteSub{
-      margin: 10px 0 0;
-      color: rgba(11,26,16,0.70);
+    .bathList{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(11,26,16,0.78);
+      line-height: 1.8;
       font-weight: 650;
-      line-height: 1.7;
-      position: relative;
+      font-size: 14.6px;
     }
 
+    .bathList li{ margin: 6px 0; }
+
+    /* CTA band */
     .ctaBand{
       margin-top: 14px;
       border-radius: var(--r);
@@ -647,109 +617,32 @@
       align-items: center;
     }
 
-
-    .relatedHead{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      margin:0 0 10px;
-    }
-
-    .relatedHint{
-      margin:0;
-      color:rgba(11,26,16,0.72);
-      font-weight:650;
-      font-size:13.2px;
-      line-height:1.55;
-      max-width:90ch;
-    }
-
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(13,89,37,0.16);
-      background:rgba(255,255,255,0.60);
-      font-weight:900;
-      font-size:12.2px;
-      color:var(--forest);
-      white-space:nowrap;
-    }
-
-    .relatedGrid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-      align-items:stretch;
-    }
-
-    .relatedTile{
-      border-radius:18px;
-      border:1px solid rgba(13,89,37,0.16);
-      background:rgba(255,255,255,0.60);
-      box-shadow:0 14px 30px rgba(0,0,0,0.10);
-      padding:14px;
-      min-height:132px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      gap:10px;
-      color:var(--ink);
-      text-decoration:none;
-    }
-
-    .relatedTileTitle{
-      margin:6px 0 0;
-      font-weight:900;
-      letter-spacing:-0.01em;
-      font-size:16px;
-      color:var(--forest);
-      line-height:1.2;
-    }
-
-    .relatedTileText{
-      margin:0;
-      color:rgba(11,26,16,0.78);
-      font-size:13.5px;
-      line-height:1.65;
-      font-weight:600;
-    }
-
-    .relatedTileMeta{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      color:rgba(13,89,37,0.92);
-      font-weight:800;
-      font-size:12.5px;
-    }
-
-
+    /* Mobile */
     @media (max-width: 900px){
       .wrap{ padding: 12px 14px 64px; }
 
-      .gridA{ grid-template-columns: 1fr; }
-      .heroMedia{ height: 380px; }
+      .heroMedia{ height: 300px; }
 
-      .videoCardInner{ height: auto; }
+      .gridRow{ grid-template-columns: 1fr; }
+
       .ytFrame{ padding: 12px; }
       .ytBox{ width: 100%; max-width: 100%; }
 
-      .gridB{ grid-template-columns: 1fr; }
-      .miniSlide{ aspect-ratio: 4 / 3; }
+      .vImageFrame{ padding: 12px; }
+      .vImageBox{ width: 100%; max-width: 100%; }
+
+      .miniSlide{ padding: 12px; }
+      .miniSlideInner{ max-width: 100%; }
+
       .miniArrow.prev{ left: 8px; }
       .miniArrow.next{ right: 8px; }
 
-      .bathGrid{ grid-template-columns: 1fr; }
-      .details{ grid-template-columns: 1fr; }
-      .relatedGrid{ grid-template-columns: 1fr; }
+      .bathInner{ grid-template-columns: 1fr; }
+      .bathMedia{ grid-template-columns: 1fr; }
+      .bathShot{ min-height: 220px; }
     }
   </style>
-<link href="/assets/css/footer.css?v=3" rel="stylesheet"/><style>
+</link></link><style>
 .rawLangLinks{
   position:absolute !important;
   width:1px !important;
@@ -765,33 +658,29 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": [
-        "LodgingBusiness",
-        "Hotel"
-      ],
-      "@id": "https://thecloudforestretreat.com/#hotel",
-      "name": "The Cloud Forest Retreat",
-      "url": "https://thecloudforestretreat.com/",
-      "image": "https://thecloudforestretreat.com/og-tcfr.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "EC",
-        "addressRegion": "Pichincha"
-      }
+      "@type": "WebPage",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/#webpage",
+      "name": "Áreas Comunes",
+      "url": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/",
+      "description": "Espacios compartidos, cocina acogedora y vistas tranquilas en The Cloud Forest Retreat."
     },
     {
-      "@type": "HotelRoom",
-      "@id": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/#room",
-      "name": "Habitación Atardecer",
-      "description": "Conoce la Habitación Atardecer en The Cloud Forest Retreat y elige una estadía tranquila en el bosque nublado con luz cálida cerca de Quito.",
-      "url": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/",
-      "isPartOf": {
-        "@id": "https://thecloudforestretreat.com/#hotel"
-      }
+      "@type": "FAQPage",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué incluyen las áreas comunes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Espacios compartidos de descanso, cocina, vistas panorámicas y áreas de comodidad para huéspedes."
+          }
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/#breadcrumb",
+      "@id": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -808,426 +697,408 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Habitación Atardecer",
-          "item": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Para quién es ideal la Habitación Atardecer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Es ideal para parejas, viajeros de naturaleza y huéspedes que prefieren luz cálida de la tarde, vistas tranquilas y una estadía serena en el bosque nublado."
-          }
+          "name": "Áreas Comunes",
+          "item": "https://thecloudforestretreat.com/es/habitaciones/areas-comunes/"
         }
       ]
     }
   ]
-}</script></head>
-<body data-page-language="es" data-page-type="room_detail_page">
-<div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="room_detail_page" data-analytics-room="sunset_room" data-analytics-target-language="en" href="https://thecloudforestretreat.com/rooms/sunset-room/" hreflang="en" lang="en">English</a><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="room_detail_page" data-analytics-room="sunset_room" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/habitaciones/habitacion-atardecer/" hreflang="es" lang="es">Español</a></nav>
-<main aria-label="Página de la Habitación Atardecer" class="wrap">
-<section aria-label="Navegación de habitación y acciones de reserva" class="topBand" data-analytics-section="navegaci_n_de_habitaci_n_y_acciones_de_reserva">
+}</script><link href="/assets/css/footer.css?v=3" rel="stylesheet"/></head>
+<body data-page-language="es" data-page-type="room_support_page">
+<div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="room_support_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/rooms/common-areas/" hreflang="en" lang="en">English</a><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="room_support_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" hreflang="es" lang="es">Español</a></nav>
+<main aria-label="Página de Áreas comunes" class="wrap">
+<section aria-label="Navegación de Áreas comunes y acciones de reserva" class="topBand" data-analytics-section="navegaci_n_de_reas_comunes_y_acciones_de_reserva">
 <div aria-label="Migas de pan" class="crumbs">
-<a data-analytics-event="internal_link_click" data-analytics-label="Inicio" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/">Inicio</a>
+<a data-analytics-event="internal_link_click" data-analytics-label="Inicio" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/">Inicio</a>
 <span aria-hidden="true">›</span>
-<a data-analytics-event="room_compare_click" data-analytics-label="Habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Habitaciones</a>
+<a data-analytics-event="room_compare_click" data-analytics-label="Habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/habitaciones/">Habitaciones</a>
 <span aria-hidden="true">›</span>
-<span>Habitación Atardecer</span>
+<span>Áreas comunes</span>
 </div>
 <div aria-label="Acciones rápidas" class="quickActions">
-<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Comparar habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Comparar habitaciones</a>
-<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Comparar habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/habitaciones/">Comparar habitaciones</a>
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/reservas/">Reservar tu estadía</a>
 </div>
 </section>
-<!-- Row 1 (Hero left, Video right, same height) -->
-<section aria-label="Hero y video de atardecer" class="gridA" data-analytics-section="hero_y_video_de_atardecer">
-<article aria-label="Imagen principal" class="card" data-analytics-section="imagen_principal">
-<div aria-label="Imagen hero de la Habitación Atardecer" class="heroMedia">
-<img alt="Habitación Atardecer con luz de la tarde y vistas del bosque nublado" decoding="async" loading="eager" src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg"/>
+<!-- HERO -->
+<section aria-label="Hero de Áreas comunes" class="hero" data-analytics-section="hero_de_reas_comunes">
+<article aria-label="Tarjeta de imagen principal" class="card" data-analytics-section="tarjeta_de_imagen_principal">
+<div aria-label="Imagen principal de Áreas comunes" class="heroMedia">
+<img alt="Áreas comunes con vistas a las montanas y al bosque nublado" decoding="async" loading="eager" src="/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"/>
 <div aria-hidden="true" class="heroShade"></div>
-<div aria-label="Título de la habitación" class="heroTitleBadge">
-<div class="kicker">Ventanas al oeste • Vistas de hora dorada</div>
-<h1 class="heroH1">Habitación Atardecer</h1>
+<div aria-label="Introduccion de Áreas comunes" class="heroBadge">
+<div class="kicker">Espacios compartidos • Vistas • Comodidad</div>
+<h1 class="heroH1">Áreas comunes</h1>
 <p class="heroLead">
-              Cuando baja la luz, el bosque se vuelve ambar y el aire se calma. Disfruta una copa de vino o un te con vista mientras el sol se esconde detras de las montanas.
-              Una habitación tranquila y romantica para tardes lentas, dentro de la misma atmosfera del <a data-analytics-event="internal_link_click" data-analytics-label="bosque nublado Quito Ecuador" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/bosque-nublado-quito-ecuador/">bosque nublado Quito Ecuador</a>.
+              Relájate y conecta en el corazon del refugio. Estos espacios compartidos están pensados para la comodidad y la convivencia,
+              con rincones acogedores, vistas impresionantes y el ambiente perfecto para descansar, leer, cocinar o compartir historias despues de un día en el <a data-analytics-event="internal_link_click" data-analytics-label="bosque nublado cerca de Quito" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/bosque-nublado-quito-ecuador/">bosque nublado cerca de Quito</a>.
             </p>
+<div aria-label="Acciones del hero" class="heroCtas">
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/reservas/">Reservar tu estadía</a>
+<a class="btn secondary" data-analytics-event="secondary_cta_click" data-analytics-label="Hacer una consulta" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/contacto/">Hacer una consulta</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Ver todas las habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/habitaciones/">Ver todas las habitaciones</a>
+</div>
 </div>
 </div>
 </article>
-<aside aria-label="Vista previa de video" class="card">
-<div class="cardHead">
-<h2 class="cardTitle">Un vistazo al atardecer</h2>
-<p class="cardHint"></p>
-</div>
-<div aria-label="Contenido del video" class="videoCardInner">
-<div aria-label="Video de la Habitación Atardecer" class="ytFrame">
-<div aria-label="Video de YouTube" class="ytBox">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/1Djnf3UnF4g?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=1Djnf3UnF4g&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" title="Video de la Habitación Atardecer"></iframe>
-</div>
-</div>
-<div aria-label="Texto del video" class="videoMiniCopy">
-<p class="quote">"La hora dorada se vuelve una magia tranquila."</p>
-<p>Luz al oeste, ambiente suave y vistas hechas para bajar el ritmo, como en la <a data-analytics-event="internal_link_click" data-analytics-label="galeria del bosque nublado" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/caracteristicas/galeria/">galeria del bosque nublado</a>.</p>
-</div>
-</div>
-</aside>
 </section>
-<!-- Row 2 (Carousel left, Highlights right) -->
-<section aria-label="Galeria y puntos destacados" class="gridB" data-analytics-section="galeria_y_puntos_destacados">
-<article aria-label="Destacados en fotos" class="card" data-analytics-section="destacados_en_fotos">
+<!-- ROW 1: Kitchen video (left) aligned with Living moments + copy (right) -->
+<section aria-label="Video de cocina y momentos en la sala" class="gridRow" data-analytics-section="video_de_cocina_y_momentos_en_la_sala">
+<article aria-label="Tarjeta de video de cocina" class="card" data-analytics-section="tarjeta_de_video_de_cocina">
 <div class="cardHead">
-<h2 class="cardTitle">Destacados en fotos</h2>
+<h2 class="cardTitle">Momentos en la cocina</h2>
 <p class="cardHint"></p>
 </div>
-<div class="miniCarouselPad">
-<div aria-label="Mini carrusel de atardecer" class="miniCarousel">
-<div class="miniViewport" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000" id="ssCarousel">
-<button aria-label="Foto anterior" class="miniArrow prev" data-action="prev" type="button">‹</button>
-<button aria-label="Foto siguiente" class="miniArrow next" data-action="next" type="button">›</button>
+<div class="mediaPad">
+<div class="mediaStack">
+<div aria-label="Video vertical de cocina" class="ytFrame">
+<div aria-label="Video de cocina en YouTube" class="ytBox">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/lz7DEZKFkX8?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=lz7DEZKFkX8&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" title="Video de cocina de Áreas comunes"></iframe>
+</div>
+</div>
+<div aria-label="Texto de cocina" class="microCopy">
+<p class="quote">"Donde empiezan las mananas y se arma el plan."</p>
+<p>
+                Prepará un cafe, armá snacks para el día o disfrutá un desayuno lento con la vista.
+                La cocina es simple, practica y hecha para viajar de verdad, especialmente para quienes planean <a data-analytics-event="internal_link_click" data-analytics-label="senderismo en el bosque nublado Ecuador" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/senderismo-bosque-nublado-ecuador/">senderismo en el bosque nublado Ecuador</a>.
+              </p>
+<div aria-label="Etiquetas de cocina" class="pillRow">
+<span class="pill"><strong>Ambiente:</strong> calido y practico</span>
+<span class="pill"><strong>Ideal para:</strong> mananas lentas</span>
+<span class="pill"><strong>Momento:</strong> cafe con vista</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside aria-label="Momentos en la sala y texto del día" class="card">
+<div class="cardHead">
+<h2 class="cardTitle">Donde pasa el día</h2>
+<p class="cardHint"></p>
+</div>
+<div aria-label="Carrusel vertical de sala" class="miniCarouselPad">
+<div aria-label="Carrusel de sala" class="miniCarousel">
+<div class="miniViewport" data-autoplay-ms="2800" data-pause-after-interaction-ms="9000" id="lrCarousel">
+<button aria-label="Imagen anterior" class="miniArrow prev" data-action="prev" type="button">‹</button>
+<button aria-label="Imagen siguiente" class="miniArrow next" data-action="next" type="button">›</button>
 <div class="miniTrack" data-track="">
-<figure aria-label="Imagen de atardecer 1" class="miniSlide">
-<img alt="Habitación Atardecer - destacado 1" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_01.jpg"/>
-<figcaption class="miniCap">Luz ambar al caer la tarde</figcaption>
+<figure aria-label="Imagen de sala 1" class="miniSlide">
+<div class="miniSlideInner">
+<img alt="Sala con asientos y luz de montana" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_living_room_01.jpeg"/>
+</div>
+<figcaption class="miniCap">Asientos comodos, luz de montana</figcaption>
 </figure>
-<figure aria-label="Imagen de atardecer 2" class="miniSlide">
-<img alt="Habitación Atardecer - destacado 2" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_images_rooms_sunset_02.jpg"/>
-<figcaption class="miniCap">Una vista hecha para atardeceres</figcaption>
+<figure aria-label="Imagen de sala 2" class="miniSlide">
+<div class="miniSlideInner">
+<img alt="Rincon tranquilo de la sala para relajarse" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_living_room_02.jpeg"/>
+</div>
+<figcaption class="miniCap">Rincones tranquilos para desconectar</figcaption>
 </figure>
 </div>
 </div>
 <div aria-label="Puntos del carrusel" class="miniNav">
-<div aria-label="Elegir una foto" class="miniDots" data-dots=""></div>
+<div aria-label="Elegí una imagen" class="miniDots" data-dots=""></div>
 </div>
 </div>
 </div>
-</article>
-<aside aria-label="Destacados y acciones" class="card">
-<div class="cardHead">
-<h2 class="cardTitle">Romantica, tranquila, inolvidable</h2>
-<p class="cardHint">La habitación que las parejas recuerdan</p>
+<div aria-label="Seccion de texto de sala" class="mediaPad">
+<div aria-label="Texto ampliado de sala" class="microCopy">
+<p class="quote">"Un lugar calmo para recargar entre aventuras."</p>
+<p>
+              Este es el espacio al que volvés: despues de cascadas, despues de birding, despues de que se apaga la ultima luz.
+              Dejá la mochila, respirá y dejá que el bosque nublado haga lo suyo, como en un <a data-analytics-event="internal_link_click" data-analytics-label="lodge de avistamiento de aves en Ecuador" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/lodge-avistamiento-aves-ecuador/">lodge de avistamiento de aves en Ecuador</a>.
+            </p>
+<p>
+              Leé, escribí, jugá cartas o simplemente mirá como el clima se mueve por el valle.
+              Si conocés a otro huesped, casi siempre pasa aca: natural y sin forzar.
+            </p>
+<div aria-label="Etiquetas de sala" class="pillRow">
+<span class="pill"><strong>Ideal para:</strong> descansar</span>
+<span class="pill"><strong>Ambiente:</strong> acogedor y silencioso</span>
+<span class="pill"><strong>Momento:</strong> charla al atardecer</span>
 </div>
-<div class="rightStackPad">
-<p class="p">
-            Luz suave, detalles hechos a mano y una vista al oeste que captura los ultimos colores del día.
-            La habitación perfecta para descansar despues de explorar el bosque nublado, ideal para quienes buscan un <a data-analytics-event="internal_link_click" data-analytics-label="lodge de avistamiento de aves en Ecuador" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/lodge-avistamiento-aves-ecuador/">lodge de avistamiento de aves en Ecuador</a>.
-          </p>
-<div style="height:12px;"></div>
-<div aria-label="Puntos clave" class="pillRow">
-<span class="pill"><strong>Ideal para:</strong> parejas</span>
-<span class="pill"><strong>Vistas:</strong> atardecer al oeste</span>
-<span class="pill"><strong>Ambiente:</strong> romantico y tranquilo</span>
-<span class="pill"><strong>Momento:</strong> vino o te al atardecer</span>
 </div>
-<div style="height:14px;"></div>
-<div aria-label="Acciones principales" class="tightCtas">
-<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
-<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Hacer una pregunta" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/contacto/">Hacer una pregunta</a>
-<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Ver todas las Habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Ver todas las Habitaciones</a>
-</div>
-<div class="note">Tip: Si los atardeceres son tu ritual, esta es tu habitación, con acceso facil a <a data-analytics-event="internal_link_click" data-analytics-label="senderismo en el bosque nublado" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/senderismo-bosque-nublado-ecuador/">senderismo en el bosque nublado</a></div>
 </div>
 </aside>
 </section>
-<!-- SHARED BATHROOM (Sunrise + Sunset) -->
-<section aria-label="Bano compartido" class="bathSection" data-analytics-section="bano_compartido">
-<article aria-label="Tarjeta de bano compartido" class="card" data-analytics-section="tarjeta_de_bano_compartido">
+<!-- ROW 2: Kitchen photo (left) aligned with Living room video (right) -->
+<section aria-label="Foto de cocina y video de sala" class="gridRow" data-analytics-section="foto_de_cocina_y_video_de_sala">
+<article aria-label="Tarjeta de foto de cocina" class="card" data-analytics-section="tarjeta_de_foto_de_cocina">
 <div class="cardHead">
-<h2 class="cardTitle">Bano completo compartido</h2>
-<p class="cardHint">Justo afuera de la habitación, en el pasillo</p>
+<h2 class="cardTitle">Foto de la cocina</h2>
+<p class="cardHint"></p>
 </div>
-<div class="bathPad">
-<div aria-label="Nota del bano" class="bathNotice">
-<p class="bathNoticeTitle">Acceso privado, compartido entre dos habitaciones</p>
-<p class="bathNoticeText">
-              La Habitación Amanecer y la Habitación Atardecer comparten un bano completo ubicado en el pasillo, justo afuera de tu puerta.
-              Es exclusivo para estas dos habitaciones y esta a solo unos pasos.
-              Lo dejamos claro para que sepas exactamente que esperar.
-            </p>
+<div class="mediaPad">
+<div aria-label="Imagen vertical de cocina" class="vImageFrame">
+<div class="vImageBox">
+<img alt="Espacio de cocina en las áreas comunes" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_kitchen_03.jpg"/>
 </div>
-<div aria-label="Fotos del bano" class="bathGrid">
-<figure aria-label="Foto del bano 1" class="bathShot">
-<img alt="Foto del bano compartido 1" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_02.jpg"/>
-<figcaption class="bathCap">Bano completo, luminoso y limpio</figcaption>
-</figure>
-<figure aria-label="Foto del bano 2" class="bathShot">
-<img alt="Foto del bano compartido 2" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_shared_bathroom_01.jpg"/>
-<figcaption class="bathCap">Reservado para Amanecer y Atardecer</figcaption>
-</figure>
+</div>
+<div style="height:12px;"></div>
+<div aria-label="Etiquetas de foto de cocina" class="pillRow">
+<span class="pill"><strong>Ver tambien:</strong> <a data-analytics-event="room_gallery_click" data-analytics-label="galeria" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/caracteristicas/galeria/">galeria</a></span>
+<span class="pill"><strong>Ideal para:</strong> preparar el desayuno</span>
+<span class="pill"><strong>Ambiente:</strong> simple y limpio</span>
+<span class="pill"><strong>Uso:</strong> cocina compartida</span>
 </div>
 </div>
 </article>
+<aside aria-label="Tarjeta de video de sala" class="card">
+<div class="cardHead">
+<h2 class="cardTitle">Video de la sala</h2>
+<p class="cardHint"></p>
+</div>
+<div class="mediaPad">
+<div class="mediaStack">
+<div aria-label="Video vertical de sala" class="ytFrame">
+<div aria-label="Video de sala en YouTube" class="ytBox">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/aPklWBKloRc?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=aPklWBKloRc&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" title="Video de sala de Áreas comunes"></iframe>
+</div>
+</div>
+<div aria-label="Texto del video de sala" class="microCopy">
+<p class="quote">"Aca vive la parte mas suave del día."</p>
+<p>
+                Un espacio tranquilo y comodo para bajar revoluciones, conectar y dejar que el bosque nublado te marque el ritmo.
+              </p>
+<div aria-label="Etiquetas de video de sala" class="pillRow">
+<span class="pill"><strong>Momento:</strong> fin del día</span>
+<span class="pill"><strong>Ambiente:</strong> reparador</span>
+<span class="pill"><strong>Ideal para:</strong> parejas y amigos</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
 </section>
-<!-- DETAILS -->
-<section aria-label="Detalles de la habitación" class="details" data-analytics-section="detalles_de_la_habitaci_n">
-<article aria-label="Lo que te va a encantar" class="card detailCard" data-analytics-section="lo_que_te_va_a_encantar">
-<h3 class="detailH3">Lo que te va a encantar</h3>
-<ul class="detailList">
-<li>Vistas al oeste para hora dorada y atardeceres</li>
-<li>Un espacio perfecto para vino, te y tardes lentas</li>
-<li>Luz ambiental suave y muebles hechos a mano</li>
-<li>Ambiente romantico y tranquilo para desconectarte de verdad</li>
+ Guest bathroom (common áreas) 
+<section aria-label="Seccion de baño de visitas" class="gridFull" data-analytics-section="seccion_de_ba_o_de_visitas">
+<article aria-label="Tarjeta de baño de visitas" class="card" data-analytics-section="tarjeta_de_ba_o_de_visitas">
+<div class="cardHead">
+<h2 class="cardTitle">Bano de visitas</h2>
+<p class="cardHint">En las áreas comunes</p>
+</div>
+<div class="bathInner">
+<div aria-label="Fotos del baño de visitas" class="bathMedia">
+<figure aria-label="Imagen de baño 1" class="bathShot">
+<img alt="Bano de visitas cerca de la sala" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_half_bathroom_01.jpeg"/>
+<figcaption class="bathCap">Acceso facil desde la sala</figcaption>
+</figure>
+<figure aria-label="Imagen de baño 2" class="bathShot">
+<img alt="Bano de visitas limpio con lo esencial" decoding="async" loading="lazy" src="/assets/images/pages/rooms/tcfr_rooms_common_area_half_bathroom_02.jpeg"/>
+<figcaption class="bathCap">Limpio, con insumos y comodo</figcaption>
+</figure>
+</div>
+<div aria-label="Detalles del baño de visitas" class="bathCopy">
+<p class="bathTitle">Comodidad, justo donde la necesitas</p>
+<ul class="bathList">
+<li>Bano de visitas ubicado en las áreas comunes</li>
+<li>Ideal entre comidas, descanso o momentos sociales</li>
+<li>Se mantiene limpio y con insumos esenciales</li>
 </ul>
-</article>
-<article aria-label="Frase de la habitación" class="card quoteCard" data-analytics-section="frase_de_la_habitaci_n">
-<p class="quoteText">"Primera fila para el brillo que se derrite detras de las montanas."</p>
-<p class="quoteSub">La Habitación Atardecer es para quien quiere que el día termine despacio: luz cálida, vistas silenciosas y el bosque en calma.</p>
-</article>
-</section>
-<section aria-label="Enlaces relacionados de la habitación atardecer" class="details" data-analytics-section="enlaces_relacionados_de_la_habitaci_n_atardecer">
-<article aria-label="Explora más de tu estadía" class="card detailCard" data-analytics-section="explora_m_s_de_tu_estad_a" style="grid-column:1 / -1;">
-<div class="relatedHead">
-<h2 class="cardTitle" style="font-size:24px;">Explora más de tu estadía</h2>
-<p class="relatedHint">Compara habitaciones, descubre el ambiente del bosque nublado y navega por páginas que te ayudan a elegir mejor tu experiencia.</p>
+<div aria-label="Etiquetas del baño" class="pillRow">
+<span class="pill"><strong>Tipo:</strong> baño de visitas</span>
+<span class="pill"><strong>Acceso:</strong> áreas comunes</span>
+<span class="pill"><strong>Limpieza:</strong> insumos a díario</span>
 </div>
-<div aria-label="Páginas relacionadas" class="relatedGrid">
-<a aria-label="Suite Panorámica" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Habitación Suite Panorámica Compara esta habitación orientada al oeste con la su" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/suite-panoramica/">
-<div>
-<span class="tag">Habitación</span>
-<p class="relatedTileTitle">Suite Panorámica</p>
-<p class="relatedTileText">Compara esta habitación orientada al oeste con la suite más amplia y las mejores vistas abiertas del valle.</p>
 </div>
-<div class="relatedTileMeta"><span></span><span>Ver</span></div>
-</a>
-<a aria-label="Habitación Amanecer" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Habitación Habitación Amanecer Descubre la opción orientada al este, pensada par" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/habitacion-amanecer/">
-<div>
-<span class="tag">Habitación</span>
-<p class="relatedTileTitle">Habitación Amanecer</p>
-<p class="relatedTileText">Descubre la opción orientada al este, pensada para la primera luz del día, aves y mañanas lentas.</p>
-</div>
-<div class="relatedTileMeta"><span></span><span>Ver</span></div>
-</a>
-<a aria-label="Galería del bosque nublado" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Galería Galería del bosque nublado Explora imágenes del entorno, las vistas y lo" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/caracteristicas/galeria/">
-<div>
-<span class="tag">Galería</span>
-<p class="relatedTileTitle">Galería del bosque nublado</p>
-<p class="relatedTileText">Explora imágenes del entorno, las vistas y los detalles que definen la experiencia del retreat.</p>
-</div>
-<div class="relatedTileMeta"><span></span><span>Ver</span></div>
-</a>
-<a aria-label="Lodge de avistamiento de aves en Ecuador" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Aves Lodge de avistamiento de aves en Ecuador Mira por qué esta habitación funci" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/lodge-avistamiento-aves-ecuador/">
-<div>
-<span class="tag">Aves</span>
-<p class="relatedTileTitle">Lodge de avistamiento de aves en Ecuador</p>
-<p class="relatedTileText">Mira por qué esta habitación funciona tan bien para quienes buscan aves, quietud y calma de hora dorada.</p>
-</div>
-<div class="relatedTileMeta"><span></span><span>Explorar</span></div>
-</a>
-<a aria-label="Dónde alojarse cerca de Quito naturaleza" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Planificación Dónde alojarse cerca de Quito naturaleza Guía completa para elegir" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">
-<div>
-<span class="tag">Planificación</span>
-<p class="relatedTileTitle">Dónde alojarse cerca de Quito naturaleza</p>
-<p class="relatedTileText">Guía completa para elegir el tipo de estancia ideal según el ritmo y estilo de tu viaje.</p>
-</div>
-<div class="relatedTileMeta"><span></span><span>Leer</span></div>
-</a>
-<a aria-label="Bosque nublado Quito Ecuador" class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Destino Bosque nublado Quito Ecuador Conoce el destino y cómo su paisaje amplio " data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/bosque-nublado-quito-ecuador/">
-<div>
-<span class="tag">Destino</span>
-<p class="relatedTileTitle">Bosque nublado Quito Ecuador</p>
-<p class="relatedTileText">Conoce el destino y cómo su paisaje amplio moldea toda la experiencia de la estadía.</p>
-</div>
-<div class="relatedTileMeta"><span></span><span>Leer</span></div>
-</a>
 </div>
 </article>
 </section>
 <!-- CTA -->
-<section aria-label="Llamado a la accion para reservar" class="ctaBand" data-analytics-section="llamado_a_la_accion_para_reservar">
+<section aria-label="CTA de Áreas comunes" class="ctaBand" data-analytics-section="cta_de_reas_comunes">
 <div>
-<h2>Listo para perseguir el atardecer?</h2>
-<p>Revisa disponibilidad y reserva en minutos. Tambien ayuda al decidir <a data-analytics-event="internal_link_click" data-analytics-label="donde alojarse cerca de Quito naturaleza" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/donde-alojarse-cerca-de-quito-naturaleza/">donde alojarse cerca de Quito naturaleza</a>. Si estas eligiendo entre habitaciones, comparalas lado a lado.</p>
+<h2>Listo para disfrutar el bosque nublado, en compania?</h2>
+<p>
+          Reservá tu estadía y sentite en espacios calmos, calidos y reales, ideal si estas buscando <a data-analytics-event="internal_link_click" data-analytics-label="donde alojarse cerca de Quito naturaleza" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/donde-alojarse-cerca-de-quito-naturaleza/">donde alojarse cerca de Quito naturaleza</a>. Si tenes preguntas sobre como esta organizado el refugio, escribinos.
+        </p>
 </div>
 <div aria-label="Botones de CTA" class="ctaBtns">
-<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/reservas/">Reservar tu estadía</a>
-<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Comparar habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/habitaciones/">Comparar habitaciones</a>
-<a class="btn secondary" data-analytics-event="internal_link_click" data-analytics-label="Contacto" data-analytics-location="page_body" data-analytics-page-type="room_detail_page" href="/es/contacto/">Contacto</a>
+<a class="btn primary" data-analytics-event="booking_cta_click" data-analytics-label="Reservar tu estadía" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/reservas/">Reservar tu estadía</a>
+<a class="btn secondary" data-analytics-event="room_compare_click" data-analytics-label="Ver todas las habitaciones" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/habitaciones/">Ver todas las habitaciones</a>
+<a class="btn secondary" data-analytics-event="secondary_cta_click" data-analytics-label="Contacto" data-analytics-location="page_body" data-analytics-page-type="room_support_page" href="/es/contacto/">Contacto</a>
 </div>
 </section>
 </main>
 <div id="siteFooter"></div>
-<!-- TCFR global behavior: inject header/footer, GA, nav -->
 <script src="/assets/js/site.js"></script>
 <script>
     (function(){
       "use strict";
 
-      var root = document.getElementById("ssCarousel");
-      if (!root) return;
+      function initMiniCarousel(rootId){
+        var root = document.getElementById(rootId);
+        if (!root) return;
 
-      var track = root.querySelector("[data-track]");
-      var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
-      if (!track) return;
+        var track = root.querySelector("[data-track]");
+        if (!track) return;
 
-      var slides = track.children ? Array.prototype.slice.call(track.children) : [];
-      if (!slides.length) return;
+        var dotsWrap = root.parentNode ? root.parentNode.querySelector("[data-dots]") : null;
+        var slides = track.children ? Array.prototype.slice.call(track.children) : [];
+        if (!slides.length) return;
 
-      var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2800");
-      var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
+        var autoplayMs = Number(root.getAttribute("data-autoplay-ms") || "2800");
+        var pauseAfterMs = Number(root.getAttribute("data-pause-after-interaction-ms") || "9000");
 
-      var index = 0;
-      var timer = null;
-      var resumeTimer = null;
-      var isPaused = false;
+        var index = 0;
+        var timer = null;
+        var resumeTimer = null;
+        var isPaused = false;
 
-      function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+        function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
 
-      function setTransform(){
-        track.style.transform = "translateX(" + (-index * 100) + "%)";
-      }
-
-      function setActiveDot(){
-        if (!dotsWrap) return;
-        var btns = dotsWrap.querySelectorAll("button[data-dot]");
-        for (var i = 0; i < btns.length; i++){
-          btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
-        }
-      }
-
-      function goTo(i){
-        index = clamp(i, 0, slides.length - 1);
-        setTransform();
-        setActiveDot();
-      }
-
-      function next(){
-        var n = index + 1;
-        if (n >= slides.length) n = 0;
-        goTo(n);
-      }
-
-      function prev(){
-        var p = index - 1;
-        if (p < 0) p = slides.length - 1;
-        goTo(p);
-      }
-
-      function clearTimers(){
-        if (timer) { clearInterval(timer); timer = null; }
-        if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
-      }
-
-      function startAutoplay(){
-        clearTimers();
-        if (autoplayMs < 1200) autoplayMs = 1200;
-        timer = setInterval(function(){
-          if (isPaused) return;
-          next();
-        }, autoplayMs);
-      }
-
-      function pauseTemporarily(){
-        isPaused = true;
-        if (resumeTimer) clearTimeout(resumeTimer);
-        resumeTimer = setTimeout(function(){
-          isPaused = false;
-        }, pauseAfterMs);
-      }
-
-      function buildDots(){
-        if (!dotsWrap) return;
-        dotsWrap.innerHTML = "";
-        for (var i = 0; i < slides.length; i++){
-          var b = document.createElement("button");
-          b.type = "button";
-          b.className = "miniDotBtn" + (i === 0 ? " is-active" : "");
-          b.setAttribute("data-dot", String(i));
-          b.setAttribute("aria-label", "Ir a la foto " + (i + 1));
-          b.addEventListener("click", function(){
-            var n = Number(this.getAttribute("data-dot") || "0");
-            goTo(n);
-            pauseTemporarily();
-          });
-          dotsWrap.appendChild(b);
-        }
-      }
-
-      function bindArrows(){
-        var prevBtn = root.querySelector('button[data-action="prev"]');
-        var nextBtn = root.querySelector('button[data-action="next"]');
-
-        if (prevBtn){
-          prevBtn.addEventListener("click", function(){
-            prev();
-            pauseTemporarily();
-          });
+        function setTransform(){
+          track.style.transform = "translateX(" + (-index * 100) + "%)";
         }
 
-        if (nextBtn){
-          nextBtn.addEventListener("click", function(){
-            next();
-            pauseTemporarily();
-          });
-        }
-      }
-
-      function bindHoverPause(){
-        root.addEventListener("mouseenter", function(){ isPaused = true; });
-        root.addEventListener("mouseleave", function(){ isPaused = false; });
-        root.addEventListener("focusin", function(){ isPaused = true; });
-        root.addEventListener("focusout", function(){ isPaused = false; });
-      }
-
-      function bindTouchSwipe(){
-        var startX = 0;
-        var deltaX = 0;
-        var isDown = false;
-
-        function onDown(x){
-          isDown = true;
-          startX = x;
-          deltaX = 0;
-          pauseTemporarily();
-        }
-
-        function onMove(x){
-          if (!isDown) return;
-          deltaX = x - startX;
-        }
-
-        function onUp(){
-          if (!isDown) return;
-          isDown = false;
-
-          var threshold = 38;
-          if (Math.abs(deltaX) > threshold){
-            if (deltaX < 0) next();
-            else prev();
+        function setActiveDot(){
+          if (!dotsWrap) return;
+          var btns = dotsWrap.querySelectorAll("button[data-dot]");
+          for (var i = 0; i < btns.length; i++){
+            btns[i].classList.toggle("is-active", Number(btns[i].getAttribute("data-dot")) === index);
           }
-          deltaX = 0;
         }
 
-        root.addEventListener("touchstart", function(e){
-          if (!e.touches || !e.touches.length) return;
-          onDown(e.touches[0].clientX);
-        }, { passive: true });
+        function goTo(i){
+          index = clamp(i, 0, slides.length - 1);
+          setTransform();
+          setActiveDot();
+        }
 
-        root.addEventListener("touchmove", function(e){
-          if (!e.touches || !e.touches.length) return;
-          onMove(e.touches[0].clientX);
-        }, { passive: true });
+        function next(){
+          var n = index + 1;
+          if (n >= slides.length) n = 0;
+          goTo(n);
+        }
 
-        root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
-        root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+        function prev(){
+          var p = index - 1;
+          if (p < 0) p = slides.length - 1;
+          goTo(p);
+        }
+
+        function clearTimers(){
+          if (timer) { clearInterval(timer); timer = null; }
+          if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+        }
+
+        function startAutoplay(){
+          clearTimers();
+          if (autoplayMs < 1200) autoplayMs = 1200;
+          timer = setInterval(function(){
+            if (isPaused) return;
+            next();
+          }, autoplayMs);
+        }
+
+        function pauseTemporarily(){
+          isPaused = true;
+          if (resumeTimer) clearTimeout(resumeTimer);
+          resumeTimer = setTimeout(function(){
+            isPaused = false;
+          }, pauseAfterMs);
+        }
+
+        function buildDots(){
+          if (!dotsWrap) return;
+          dotsWrap.innerHTML = "";
+          for (var i = 0; i < slides.length; i++){
+            var b = document.createElement("button");
+            b.type = "button";
+            b.className = "miniDotBtn" + (i === 0 ? " is-active" : "");
+            b.setAttribute("data-dot", String(i));
+            b.setAttribute("aria-label", "Ir a la imagen " + (i + 1));
+            b.addEventListener("click", function(){
+              var n = Number(this.getAttribute("data-dot") || "0");
+              goTo(n);
+              pauseTemporarily();
+            });
+            dotsWrap.appendChild(b);
+          }
+        }
+
+        function bindArrows(){
+          var prevBtn = root.querySelector('button[data-action="prev"]');
+          var nextBtn = root.querySelector('button[data-action="next"]');
+
+          if (prevBtn){
+            prevBtn.addEventListener("click", function(){
+              prev();
+              pauseTemporarily();
+            });
+          }
+
+          if (nextBtn){
+            nextBtn.addEventListener("click", function(){
+              next();
+              pauseTemporarily();
+            });
+          }
+        }
+
+        function bindHoverPause(){
+          root.addEventListener("mouseenter", function(){ isPaused = true; });
+          root.addEventListener("mouseleave", function(){ isPaused = false; });
+          root.addEventListener("focusin", function(){ isPaused = true; });
+          root.addEventListener("focusout", function(){ isPaused = false; });
+        }
+
+        function bindTouchSwipe(){
+          var startX = 0;
+          var deltaX = 0;
+          var isDown = false;
+
+          function onDown(x){
+            isDown = true;
+            startX = x;
+            deltaX = 0;
+            pauseTemporarily();
+          }
+
+          function onMove(x){
+            if (!isDown) return;
+            deltaX = x - startX;
+          }
+
+          function onUp(){
+            if (!isDown) return;
+            isDown = false;
+
+            var threshold = 38;
+            if (Math.abs(deltaX) > threshold){
+              if (deltaX < 0) next();
+              else prev();
+            }
+            deltaX = 0;
+          }
+
+          root.addEventListener("touchstart", function(e){
+            if (!e.touches || !e.touches.length) return;
+            onDown(e.touches[0].clientX);
+          }, { passive: true });
+
+          root.addEventListener("touchmove", function(e){
+            if (!e.touches || !e.touches.length) return;
+            onMove(e.touches[0].clientX);
+          }, { passive: true });
+
+          root.addEventListener("touchend", function(){ onUp(); }, { passive: true });
+          root.addEventListener("touchcancel", function(){ onUp(); }, { passive: true });
+        }
+
+        buildDots();
+        bindArrows();
+        bindHoverPause();
+        bindTouchSwipe();
+
+        goTo(0);
+        startAutoplay();
+
+        window.addEventListener("resize", function(){
+          setTransform();
+        }, { passive: true });
       }
 
-      buildDots();
-      bindArrows();
-      bindHoverPause();
-      bindTouchSwipe();
-
-      goTo(0);
-      startAutoplay();
-
-      window.addEventListener("resize", function(){
-        setTransform();
-      }, { passive: true });
+      initMiniCarousel("lrCarousel");
     })();
   </script>
 </body>
