@@ -756,3 +756,24 @@ Blockers:
 - ES page linking to EN URLs except rawLangLinks.
 - Large page-level CSS for reusable amenities layout.
 - Missing or duplicate /assets/js/site.js.
+
+UNIFIED FEATURE DETAIL VISUAL QA ENFORCEMENT
+This section is mandatory for /features/* and /es/caracteristicas/* detail pages.
+
+Rules:
+- Feature detail pages must visually match the approved Features Hub and Rooms Hub design family.
+- Do not preserve old one-off structures if they make a page look like a patch job.
+- Use the shared global feature detail module in /assets/css/site.css.
+- Page files must avoid large inline CSS blocks and must not define reusable layout systems locally.
+- Approved layering is mandatory: site background -> beige/cream panel -> inner white/cream cards.
+- Hero overlays must preserve readable white/light text and must not appear overly dark or visually disconnected.
+- Feature pages should use consistent panels, card grids, related links, and CTA bands.
+- Avoid one-off class systems that do not map to global modules unless they are intentionally added to /assets/css/site.css.
+
+Blockers:
+- Text directly floating on the green background outside a deliberate panel.
+- Large page-level CSS defining reusable layout.
+- A feature detail page visually inconsistent with the Features Hub card rhythm.
+- Spanish page with missing accents in visible text, metadata, aria-labels, alt text, or JSON-LD.
+- Accented technical URLs such as /características/.
+- ES page body links pointing to EN URLs except rawLangLinks.
