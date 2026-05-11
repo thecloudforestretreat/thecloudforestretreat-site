@@ -1205,3 +1205,442 @@ body[data-page-type="features_hub"] .is-hidden{
     aspect-ratio: 4 / 3;
   }
 }
+
+
+/* =========================================================
+   TCFR Feature Detail Global Module
+   Purpose:
+   - Move feature detail layout out of page-level CSS
+   - Preserve global TCFR layering: page background -> beige panels -> inner cards
+   - Reused by Activities, Amenities, Attractions, Produce, Gallery, and related feature pages
+   ========================================================= */
+
+body[data-page-type="feature_detail_page"] .wrap{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 18px var(--pad) 76px;
+}
+
+body[data-page-type="feature_detail_page"] .topBand,
+body[data-page-type="feature_detail_page"] .hero,
+body[data-page-type="feature_detail_page"] .jumpBand,
+body[data-page-type="feature_detail_page"] .card,
+body[data-page-type="feature_detail_page"] .ctaBand{
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  box-shadow: var(--shadow);
+  background: rgba(245,245,220,0.72);
+  color: var(--ink);
+}
+
+body[data-page-type="feature_detail_page"] .topBand{
+  margin-top: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="feature_detail_page"] .crumbs,
+body[data-page-type="feature_detail_page"] .quickActions,
+body[data-page-type="feature_detail_page"] .chipRow,
+body[data-page-type="feature_detail_page"] .pillRow,
+body[data-page-type="feature_detail_page"] .ctaRow{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="feature_detail_page"] .crumbs{
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(11,26,16,0.75);
+}
+
+body[data-page-type="feature_detail_page"] .hero{
+  margin-top: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+body[data-page-type="feature_detail_page"] .heroMedia{
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  background: rgba(0,0,0,0.10);
+}
+
+body[data-page-type="feature_detail_page"] .heroMedia img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+body[data-page-type="feature_detail_page"] .heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events: none;
+}
+
+body[data-page-type="feature_detail_page"] .heroInner{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 14px;
+  color: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
+}
+
+body[data-page-type="feature_detail_page"] .kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+}
+
+body[data-page-type="feature_detail_page"] .heroH1{
+  margin: 8px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 3.8vw, 54px);
+  color: #fff;
+}
+
+body[data-page-type="feature_detail_page"] .heroLead{
+  margin: 0;
+  max-width: 80ch;
+  font-weight: 650;
+  line-height: 1.75;
+  color: rgba(231,228,209,0.92);
+  font-size: 15.5px;
+}
+
+body[data-page-type="feature_detail_page"] .jumpBand{
+  margin-top: 14px;
+  padding: 14px;
+}
+
+body[data-page-type="feature_detail_page"] .jumpTitle{
+  margin: 0 0 10px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 14px;
+  color: rgba(11,26,16,0.78);
+}
+
+body[data-page-type="feature_detail_page"] .chip,
+body[data-page-type="feature_detail_page"] .pill,
+body[data-page-type="feature_detail_page"] .badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.18);
+  background: rgba(255,255,255,0.62);
+  color: #0b2b12;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+}
+
+body[data-page-type="feature_detail_page"] .chip{
+  padding: 10px 12px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+body[data-page-type="feature_detail_page"] .chip:hover{
+  background: rgba(224,100,58,0.10);
+  border-color: rgba(224,100,58,0.30);
+}
+
+body[data-page-type="feature_detail_page"] .grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+body[data-page-type="feature_detail_page"] .card{
+  overflow: hidden;
+  min-width: 0;
+  position: relative;
+}
+
+body[data-page-type="feature_detail_page"] .cardHead{
+  padding: 14px 14px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+body[data-page-type="feature_detail_page"] .h2{
+  margin: 0;
+  font-family: var(--font-head);
+  color: var(--forest);
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+body[data-page-type="feature_detail_page"] .hint{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+body[data-page-type="feature_detail_page"] .activity{
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+body[data-page-type="feature_detail_page"] .media9x16{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body[data-page-type="feature_detail_page"] .media9x16 .frame{
+  width: min(420px, 100%);
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.10);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.14);
+  position: relative;
+}
+
+body[data-page-type="feature_detail_page"] .media9x16 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+body[data-page-type="feature_detail_page"] .body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+body[data-page-type="feature_detail_page"] .titleRow{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="feature_detail_page"] .h3{
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 26px;
+  line-height: 1.08;
+  color: var(--forest);
+}
+
+body[data-page-type="feature_detail_page"] .p{
+  margin: 0;
+  color: rgba(11,26,16,0.80);
+  line-height: 1.75;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+body[data-page-type="feature_detail_page"] .badge{
+  padding: 8px 10px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body[data-page-type="feature_detail_page"] .pill{
+  gap: 8px;
+  padding: 9px 12px;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+body[data-page-type="feature_detail_page"] .pill strong{
+  font-weight: 900;
+  color: var(--forest);
+}
+
+body[data-page-type="feature_detail_page"] .subCard{
+  border-radius: 18px;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.55);
+  padding: 12px;
+}
+
+body[data-page-type="feature_detail_page"] .subTitle{
+  margin: 0 0 8px;
+  font-weight: 900;
+  color: #0b2b12;
+  letter-spacing: -0.01em;
+  font-size: 14px;
+}
+
+body[data-page-type="feature_detail_page"] .list{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(11,26,16,0.78);
+  line-height: 1.8;
+  font-weight: 650;
+  font-size: 14.6px;
+}
+
+body[data-page-type="feature_detail_page"] .list li{
+  margin: 6px 0;
+}
+
+body[data-page-type="feature_detail_page"] .schedule{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+body[data-page-type="feature_detail_page"] .slot{
+  border-radius: 16px;
+  border: 1px solid rgba(13,89,37,0.14);
+  background: rgba(245,245,220,0.62);
+  padding: 10px;
+  box-shadow: 0 12px 28px rgba(13,89,37,0.08);
+}
+
+body[data-page-type="feature_detail_page"] .slotTop{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="feature_detail_page"] .slotName{
+  margin: 0;
+  font-weight: 900;
+  color: #0b2b12;
+  font-size: 13.5px;
+  letter-spacing: -0.01em;
+}
+
+body[data-page-type="feature_detail_page"] .slotTime{
+  margin: 0;
+  font-weight: 900;
+  color: rgba(11,26,16,0.72);
+  font-size: 12.8px;
+}
+
+body[data-page-type="feature_detail_page"] .slotNote{
+  margin: 6px 0 0;
+  color: rgba(11,26,16,0.74);
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+body[data-page-type="feature_detail_page"] .note{
+  margin: 0;
+  color: rgba(11,26,16,0.68);
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+body[data-page-type="feature_detail_page"] .ctaBand{
+  margin-top: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="feature_detail_page"] .ctaBand h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  color: var(--forest);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+body[data-page-type="feature_detail_page"] .ctaBand p{
+  margin: 0;
+  color: rgba(11,26,16,0.72);
+  font-weight: 650;
+  line-height: 1.7;
+  max-width: 80ch;
+}
+
+@media (max-width: 900px){
+  body[data-page-type="feature_detail_page"] .wrap{
+    padding: 12px var(--pad) 64px;
+  }
+
+  body[data-page-type="feature_detail_page"] .heroMedia{
+    height: 280px;
+  }
+
+  body[data-page-type="feature_detail_page"] .activity{
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page-type="feature_detail_page"] .media9x16{
+    min-height: 0;
+    padding: 12px;
+  }
+
+  body[data-page-type="feature_detail_page"] .media9x16 .frame{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body[data-page-type="feature_detail_page"] .schedule{
+    grid-template-columns: 1fr;
+  }
+}
