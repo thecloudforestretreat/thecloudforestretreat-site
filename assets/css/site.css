@@ -1212,7 +1212,8 @@ body[data-page-type="features_hub"] .is-hidden{
    Purpose:
    - Make feature detail pages visually match Features Hub and Rooms Hub
    - Global-first: no large page-level layout CSS
-   - Layering: page background -> beige panels -> inner cards
+   - Layering: page background -> beige panels -> compact inner cards
+   - Fixes Amenities spacing, symmetry, chip sizing, and card rhythm
    ========================================================= */
 
 body[data-page-type="feature_detail_page"] .wrap{
@@ -1240,7 +1241,7 @@ body[data-page-type="feature_detail_page"] .topBand{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -1288,7 +1289,7 @@ body[data-page-type="feature_detail_page"] .heroShade{
   inset: 0;
   background:
     radial-gradient(920px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.48));
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.42));
   pointer-events: none;
 }
 
@@ -1299,7 +1300,7 @@ body[data-page-type="feature_detail_page"] .heroInner{
   bottom: 14px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(0,0,0,0.26);
+  background: rgba(0,0,0,0.24);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(6px);
   padding: 16px;
@@ -1356,39 +1357,9 @@ body[data-page-type="feature_detail_page"] .heroInner .lead{
   color: rgba(231,228,209,0.92);
 }
 
-body[data-page-type="feature_detail_page"] .pillRow{
-  margin-top: 12px;
-}
-
-body[data-page-type="feature_detail_page"] .pill,
-body[data-page-type="feature_detail_page"] .tag,
-body[data-page-type="feature_detail_page"] .chip{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.62);
-  color: #0b2b12;
-  font-weight: 900;
-  white-space: nowrap;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .pill{
-  padding: 9px 12px;
-  font-size: 13px;
-}
-
-body[data-page-type="feature_detail_page"] .heroInner .pill{
-  border-color: rgba(245,245,220,0.28);
-  background: rgba(245,245,220,0.82);
-  color: var(--forest);
-}
-
 body[data-page-type="feature_detail_page"] .featurePanel{
   margin-top: 14px;
-  padding: 16px;
+  padding: 18px;
 }
 
 body[data-page-type="feature_detail_page"] .featurePanelHeader{
@@ -1422,21 +1393,23 @@ body[data-page-type="feature_detail_page"] .cardHint{
   margin: 0;
   color: rgba(11,26,16,0.70);
   font-weight: 650;
-  line-height: 1.7;
+  line-height: 1.65;
   font-size: 14px;
 }
 
+/* Compact, symmetrical first content block */
 body[data-page-type="feature_detail_page"] .featureSplit{
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 14px;
-  align-items: stretch;
+  align-items: start;
 }
 
 body[data-page-type="feature_detail_page"] .featurePhoto{
   position: relative;
   overflow: hidden;
-  min-height: 380px;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
   border-radius: 18px;
   border: 1px solid rgba(11,26,16,0.10);
   background: rgba(255,255,255,0.55);
@@ -1469,13 +1442,16 @@ body[data-page-type="feature_detail_page"] .featurePhotoCaption{
 
 body[data-page-type="feature_detail_page"] .featureCopyStack{
   display: grid;
+  grid-template-columns: 1fr;
   gap: 14px;
+  align-content: start;
+  align-items: start;
 }
 
 body[data-page-type="feature_detail_page"] .innerCard,
 body[data-page-type="feature_detail_page"] .amenityCard,
 body[data-page-type="feature_detail_page"] .relatedFeatureCard{
-  background: rgba(255,255,255,0.72);
+  background: rgba(255,255,255,0.74);
   border: 1px solid rgba(11,26,16,0.12);
   border-radius: var(--r);
   box-shadow: 0 12px 30px rgba(13,89,37,0.10);
@@ -1483,7 +1459,8 @@ body[data-page-type="feature_detail_page"] .relatedFeatureCard{
 }
 
 body[data-page-type="feature_detail_page"] .innerCard{
-  padding: 14px;
+  padding: 16px;
+  min-height: 0;
 }
 
 body[data-page-type="feature_detail_page"] .innerCard p,
@@ -1491,18 +1468,66 @@ body[data-page-type="feature_detail_page"] .amenityCard p,
 body[data-page-type="feature_detail_page"] .relatedFeatureCard p{
   color: rgba(11,26,16,0.78);
   font-size: 14.8px;
-  line-height: 1.75;
+  line-height: 1.65;
   font-weight: 650;
 }
 
+/* Larger, more consistent chips/pills */
+body[data-page-type="feature_detail_page"] .pillRow{
+  margin-top: 12px;
+}
+
+body[data-page-type="feature_detail_page"] .pill,
+body[data-page-type="feature_detail_page"] .tag,
+body[data-page-type="feature_detail_page"] .chip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,89,37,0.20);
+  background: rgba(245,245,220,0.78);
+  color: var(--forest);
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
+  line-height: 1.1;
+}
+
+body[data-page-type="feature_detail_page"] .pill{
+  padding: 9px 14px;
+  font-size: 13.5px;
+}
+
+body[data-page-type="feature_detail_page"] .tag,
+body[data-page-type="feature_detail_page"] .chip{
+  padding: 10px 14px;
+  font-size: 13.5px;
+}
+
+body[data-page-type="feature_detail_page"] .heroInner .pill{
+  border-color: rgba(245,245,220,0.32);
+  background: rgba(245,245,220,0.86);
+  color: var(--forest);
+}
+
+/* Make tag rows compact instead of creating large blank card space */
+body[data-page-type="feature_detail_page"] .innerCard .pillRow{
+  gap: 9px;
+  margin-top: 12px;
+  align-items: flex-start;
+}
+
+/* Amenity cards: equal, compact, readable */
 body[data-page-type="feature_detail_page"] .amenityGrid{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+  align-items: stretch;
 }
 
 body[data-page-type="feature_detail_page"] .amenityCard{
-  padding: 14px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -1529,23 +1554,25 @@ body[data-page-type="feature_detail_page"] .amenityList{
 
 body[data-page-type="feature_detail_page"] .amenityList li{
   border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(245,245,220,0.62);
+  background: rgba(245,245,220,0.70);
   border-radius: 14px;
-  padding: 9px 10px;
+  padding: 10px 11px;
   color: rgba(11,26,16,0.82);
-  font-weight: 750;
-  font-size: 13.5px;
-  line-height: 1.45;
+  font-weight: 800;
+  font-size: 13.8px;
+  line-height: 1.35;
 }
 
+/* Related cards */
 body[data-page-type="feature_detail_page"] .relatedFeatureGrid{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+  align-items: stretch;
 }
 
 body[data-page-type="feature_detail_page"] .relatedFeatureCard{
-  padding: 14px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1566,7 +1593,7 @@ body[data-page-type="feature_detail_page"] .linkCta{
 
 body[data-page-type="feature_detail_page"] .ctaBand{
   margin-top: 14px;
-  padding: 16px;
+  padding: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1588,7 +1615,7 @@ body[data-page-type="feature_detail_page"] .ctaBand p{
   margin: 0;
   color: rgba(11,26,16,0.72);
   font-weight: 650;
-  line-height: 1.7;
+  line-height: 1.65;
   max-width: 80ch;
 }
 
@@ -1608,8 +1635,12 @@ body[data-page-type="feature_detail_page"] .ctaBand p{
     grid-template-columns: 1fr;
   }
 
+  body[data-page-type="feature_detail_page"] .featurePanel{
+    padding: 14px;
+  }
+
   body[data-page-type="feature_detail_page"] .featurePhoto{
-    min-height: 320px;
+    aspect-ratio: 4 / 3;
   }
 
   body[data-page-type="feature_detail_page"] .quickActions .btn,
