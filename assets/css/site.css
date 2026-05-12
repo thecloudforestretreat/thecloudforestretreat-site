@@ -2940,3 +2940,202 @@ body[data-page-type="feature_detail_page"] .faunaRelatedCard p{
   body[data-page-type="feature_detail_page"] .carouselBtn.prev{ left:12px; }
   body[data-page-type="feature_detail_page"] .carouselBtn.next{ right:12px; }
 }
+
+
+/* =========================================================
+   TCFR Flora Feature Detail Global Module
+   Purpose:
+   - Global-first layout for flora / plant-life feature detail pages
+   - Removes page-level dependency for flora cards, section breaks, and related links
+   - Preserves TCFR layering: page background -> beige panels -> inner cards
+   ========================================================= */
+
+body[data-page-type="feature_detail_page"] .intro{
+  margin-top:14px;
+  padding:18px;
+}
+
+body[data-page-type="feature_detail_page"] .intro p{
+  margin:0;
+  font-size:15.5px;
+  line-height:1.72;
+  color:rgba(11,26,16,0.78);
+  max-width:90ch;
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .floraGrid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="feature_detail_page"] .sectionBreak{
+  grid-column:1 / -1;
+  padding:16px;
+  background:rgba(245,245,220,0.72);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+body[data-page-type="feature_detail_page"] .sectionBreak h2{
+  margin:0;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-size:24px;
+  letter-spacing:-0.02em;
+  font-weight:900;
+  line-height:1.1;
+}
+
+body[data-page-type="feature_detail_page"] .sectionBreak p{
+  margin:8px 0 0;
+  color:rgba(11,26,16,0.70);
+  font-size:14.8px;
+  font-weight:650;
+  line-height:1.6;
+  max-width:90ch;
+}
+
+body[data-page-type="feature_detail_page"] .floraCard{
+  display:grid;
+  grid-template-columns:0.95fr 1.05fr;
+  gap:14px;
+  padding:14px;
+  align-items:stretch;
+  background:rgba(255,255,255,0.74);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 12px 30px rgba(13,89,37,0.10);
+  color:var(--ink);
+  overflow:hidden;
+}
+
+body[data-page-type="feature_detail_page"] .floraImage{
+  border-radius:18px;
+  overflow:hidden;
+  min-height:260px;
+  background:rgba(0,0,0,0.08);
+  border:1px solid rgba(11,26,16,0.10);
+}
+
+body[data-page-type="feature_detail_page"] .floraImage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.01);
+}
+
+body[data-page-type="feature_detail_page"] .floraBody{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:10px;
+  min-width:0;
+}
+
+body[data-page-type="feature_detail_page"] .floraBody h3{
+  margin:0;
+  font-family:var(--font-head);
+  font-size:22px;
+  color:var(--forest);
+  font-weight:900;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+}
+
+body[data-page-type="feature_detail_page"] .floraLatin{
+  font-size:13px;
+  font-style:italic;
+  color:rgba(11,26,16,0.55);
+  font-weight:650;
+  margin-top:-4px;
+}
+
+body[data-page-type="feature_detail_page"] .floraTags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+body[data-page-type="feature_detail_page"] .floraText{
+  font-size:14.8px;
+  line-height:1.7;
+  color:rgba(11,26,16,0.78);
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .floraNote{
+  font-size:13.2px;
+  color:rgba(11,26,16,0.68);
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedGrid,
+body[data-page-type="feature_detail_page"] .relatedGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedCard,
+body[data-page-type="feature_detail_page"] .relatedTile{
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  height:100%;
+  min-height:142px;
+  background:rgba(255,255,255,0.74);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 12px 30px rgba(13,89,37,0.10);
+  color:var(--ink);
+  text-decoration:none;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedCard h3,
+body[data-page-type="feature_detail_page"] .relatedTileTitle{
+  margin:0;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-size:20px;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedCard p,
+body[data-page-type="feature_detail_page"] .relatedTileText{
+  margin:0;
+  color:rgba(11,26,16,0.78);
+  font-size:14.8px;
+  line-height:1.65;
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedCard .linkCta,
+body[data-page-type="feature_detail_page"] .relatedTileMeta{
+  margin-top:auto;
+  color:var(--forest);
+  font-weight:900;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+  body[data-page-type="feature_detail_page"] .floraGrid,
+  body[data-page-type="feature_detail_page"] .floraCard,
+  body[data-page-type="feature_detail_page"] .floraRelatedGrid,
+  body[data-page-type="feature_detail_page"] .relatedGrid{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="feature_detail_page"] .floraImage{
+    min-height:240px;
+  }
+}
