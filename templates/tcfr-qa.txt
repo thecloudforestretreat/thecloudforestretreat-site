@@ -854,3 +854,23 @@ Required checks:
 - Booking CTA must remain prominent and intentional.
 - If a second CTA exists after sources, it must have a distinct purpose and not look like a duplicate.
 - All spacing fixes must live in /assets/css/site.css, not page-level CSS.
+
+FAUNA FEATURE DETAIL QA ENFORCEMENT
+This section is mandatory for /features/fauna/ and /es/caracteristicas/fauna/.
+
+Rules:
+- Fauna pages must use data-page-type="feature_detail_page".
+- Reusable fauna-specific layout styles must live in /assets/css/site.css.
+- Page files must not ship with large inline CSS defining .faunaGrid, .faunaCard, .faunaImage, .carouselWrap, .carouselTrack, .videoStrip, .videoCard, .topBand, or .hero.
+- The page must preserve the TCFR visual layering: page background -> beige/cream panel -> inner cards.
+- English and Spanish metadata must use The Cloud Forest Retreat branding, not Mindo Bird Watching.
+- Spanish page must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, and ES-only body links.
+- Wildlife pages must link to relevant birding/nature support pages and at least one conversion path.
+- Carousel and video controls must include analytics attributes where practical.
+
+Blockers:
+- Missing or duplicate /assets/js/site.js.
+- Large page-level CSS for reusable fauna layout.
+- Spanish visible or metadata text with missing accents such as mamiferos, unicos, colibries, region, caracteristicas, Pagina, Navegacion, mas, guia, fotografia, or observacion.
+- Mixed-language UI such as Hummingaves on Spanish pages.
+- ES page linking to EN URLs except rawLangLinks.
