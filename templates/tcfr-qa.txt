@@ -837,3 +837,20 @@ Blockers:
 - Large page-level CSS for reusable destination layout.
 - Spanish visible or metadata text with missing accents such as Pagina, Navegacion, Caracteristicas, estadia, montana, orquideas, region, hectareas, habitats, mamiferos, Ano, Area, Donde, Por que.
 - ES page linking to EN URLs except rawLangLinks.
+
+DESTINATION SUPPORT SPACING QA ENFORCEMENT
+This section is mandatory for destination-support pages.
+
+Visual blockers:
+- Related cards, sources, and CTA panels stacking with inconsistent vertical rhythm.
+- Final CTA panels looking like duplicated or random sections.
+- Related cards with uneven height or misaligned CTA anchors.
+- Sources block visually competing with primary booking CTA.
+- Lower-page panels that do not follow the approved rhythm: related panel -> booking CTA -> sources -> optional final contextual CTA.
+
+Required checks:
+- Related cards must have aligned titles, text, and CTA anchors on desktop.
+- Sources must be visually secondary and compact.
+- Booking CTA must remain prominent and intentional.
+- If a second CTA exists after sources, it must have a distinct purpose and not look like a duplicate.
+- All spacing fixes must live in /assets/css/site.css, not page-level CSS.
