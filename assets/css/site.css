@@ -2592,3 +2592,112 @@ body[data-page-type="destination_support_page"] .ctaBand p{
     width: 100%;
   }
 }
+
+
+/* =========================================================
+   TCFR Destination Support Spacing Lock
+   Purpose:
+   - Fix lower-page rhythm for related links, CTA, sources, and final conversion blocks
+   - Prevent stacked panels from looking patched or uneven
+   ========================================================= */
+
+body[data-page-type="destination_support_page"] .destinationPanel,
+body[data-page-type="destination_support_page"] .ctaBand,
+body[data-page-type="destination_support_page"] .card{
+  margin-top: 14px;
+}
+
+body[data-page-type="destination_support_page"] .relatedDestinationGrid{
+  margin-top: 0;
+}
+
+body[data-page-type="destination_support_page"] .relatedDestinationCard{
+  min-height: 148px;
+  justify-content: flex-start;
+}
+
+body[data-page-type="destination_support_page"] .relatedDestinationCard h3{
+  min-height: 26px;
+}
+
+body[data-page-type="destination_support_page"] .relatedDestinationCard p{
+  min-height: 58px;
+}
+
+body[data-page-type="destination_support_page"] .relatedDestinationCard .linkCta{
+  padding-top: 4px;
+}
+
+body[data-page-type="destination_support_page"] .ctaBand{
+  min-height: 132px;
+  align-items: center;
+}
+
+body[data-page-type="destination_support_page"] .ctaBand + .card,
+body[data-page-type="destination_support_page"] .card + .ctaBand,
+body[data-page-type="destination_support_page"] .destinationPanel + .ctaBand{
+  margin-top: 16px;
+}
+
+body[data-page-type="destination_support_page"] .sourcesPad{
+  padding: 16px;
+}
+
+body[data-page-type="destination_support_page"] .sourcesList{
+  margin-top: 10px;
+}
+
+body[data-page-type="destination_support_page"] .sourcesNote{
+  margin-top: 10px;
+}
+
+body[data-page-type="destination_support_page"] .card[aria-label*="Source"],
+body[data-page-type="destination_support_page"] .card[aria-label*="Sources"],
+body[data-page-type="destination_support_page"] .card[aria-label*="Fuente"],
+body[data-page-type="destination_support_page"] .card[aria-label*="Fuentes"]{
+  background: rgba(245,245,220,0.66);
+}
+
+body[data-page-type="destination_support_page"] .card[aria-label*="Source"] .cardHead,
+body[data-page-type="destination_support_page"] .card[aria-label*="Sources"] .cardHead,
+body[data-page-type="destination_support_page"] .card[aria-label*="Fuente"] .cardHead,
+body[data-page-type="destination_support_page"] .card[aria-label*="Fuentes"] .cardHead{
+  padding-bottom: 0;
+}
+
+body[data-page-type="destination_support_page"] .card[aria-label*="Source"] .cardHint,
+body[data-page-type="destination_support_page"] .card[aria-label*="Sources"] .cardHint,
+body[data-page-type="destination_support_page"] .card[aria-label*="Fuente"] .cardHint,
+body[data-page-type="destination_support_page"] .card[aria-label*="Fuentes"] .cardHint{
+  text-align: right;
+}
+
+body[data-page-type="destination_support_page"] main.wrap > .destinationPanel:last-of-type,
+body[data-page-type="destination_support_page"] main.wrap > .ctaBand:last-of-type{
+  margin-bottom: 0;
+}
+
+/* If a page already has a legacy final CTA after sources, make it look intentional */
+body[data-page-type="destination_support_page"] .sourcesBlock + .ctaBand,
+body[data-page-type="destination_support_page"] .card + .ctaBand:last-of-type{
+  background: rgba(245,245,220,0.78);
+}
+
+@media (max-width: 900px){
+  body[data-page-type="destination_support_page"] .relatedDestinationCard,
+  body[data-page-type="destination_support_page"] .ctaBand{
+    min-height: 0;
+  }
+
+  body[data-page-type="destination_support_page"] .relatedDestinationCard h3,
+  body[data-page-type="destination_support_page"] .relatedDestinationCard p{
+    min-height: 0;
+  }
+
+  body[data-page-type="destination_support_page"] .card[aria-label*="Source"] .cardHint,
+  body[data-page-type="destination_support_page"] .card[aria-label*="Sources"] .cardHint,
+  body[data-page-type="destination_support_page"] .card[aria-label*="Fuente"] .cardHint,
+  body[data-page-type="destination_support_page"] .card[aria-label*="Fuentes"] .cardHint{
+    text-align: left;
+  }
+}
