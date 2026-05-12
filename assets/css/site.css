@@ -3496,3 +3496,343 @@ body[data-page-type="feature_detail_page"] .produceBottomCta p{
     width:100%;
   }
 }
+
+
+/* =========================================================
+   TCFR Pululahua Destination Support Global Module
+   Purpose:
+   - Global-first layout for Pululahua destination support pages
+   - Removes page-level dependency for split grids, carousel, related cluster, and CTA
+   - Preserves TCFR layering: page background -> beige panels -> inner cards
+   ========================================================= */
+
+body[data-page-type="destination_support_page"] .grid2{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:1.12fr 0.88fr;
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="destination_support_page"] .pad{
+  padding:14px;
+}
+
+body[data-page-type="destination_support_page"] .p{
+  margin:0;
+  color:rgba(11,26,16,0.78);
+  line-height:1.78;
+  font-size:14.9px;
+  font-weight:650;
+}
+
+body[data-page-type="destination_support_page"] .p + .p{
+  margin-top:10px;
+}
+
+body[data-page-type="destination_support_page"] .list{
+  margin:10px 0 0;
+  padding-left:18px;
+  color:rgba(11,26,16,0.78);
+  line-height:1.85;
+  font-weight:650;
+  font-size:14.6px;
+}
+
+body[data-page-type="destination_support_page"] .list li{
+  margin:6px 0;
+}
+
+body[data-page-type="destination_support_page"] .noteBox{
+  border-radius:18px;
+  border:1px solid rgba(11,26,16,0.10);
+  background:rgba(255,255,255,0.55);
+  padding:14px;
+  margin-top:12px;
+}
+
+body[data-page-type="destination_support_page"] .noteTitle{
+  margin:0 0 8px;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-weight:900;
+  letter-spacing:-0.02em;
+  font-size:18px;
+  line-height:1.15;
+}
+
+body[data-page-type="destination_support_page"] .noteBox p{
+  margin:0;
+  color:rgba(11,26,16,0.78);
+  line-height:1.75;
+  font-weight:650;
+  font-size:14.4px;
+}
+
+body[data-page-type="destination_support_page"] .carouselPad{
+  padding:14px;
+}
+
+body[data-page-type="destination_support_page"] .hCarousel{
+  border-radius:18px;
+  border:1px solid rgba(11,26,16,0.10);
+  background:rgba(255,255,255,0.55);
+  overflow:hidden;
+}
+
+body[data-page-type="destination_support_page"] .hViewport{
+  position:relative;
+  overflow:hidden;
+  background:rgba(0,0,0,0.08);
+}
+
+body[data-page-type="destination_support_page"] .hTrack{
+  display:flex;
+  width:100%;
+  transform:translateX(0);
+  transition:transform 420ms ease;
+  will-change:transform;
+}
+
+body[data-page-type="destination_support_page"] .hSlide{
+  flex:0 0 100%;
+  position:relative;
+  aspect-ratio:16 / 9;
+  margin:0;
+  padding:0;
+}
+
+body[data-page-type="destination_support_page"] .hSlide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.01);
+}
+
+body[data-page-type="destination_support_page"] .hCap{
+  position:absolute;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  padding:9px 11px;
+  border-radius:14px;
+  background:rgba(245,245,220,0.92);
+  border:1px solid rgba(13,89,37,0.16);
+  color:#0b2b12;
+  box-shadow:0 14px 30px rgba(0,0,0,0.14);
+  font-weight:900;
+  font-size:13px;
+  letter-spacing:-0.01em;
+}
+
+body[data-page-type="destination_support_page"] .hArrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  height:46px;
+  width:52px;
+  border-radius:16px;
+  border:1px solid rgba(245,245,220,0.45);
+  background:rgba(11,26,16,0.30);
+  color:rgba(231,228,209,0.96);
+  box-shadow:0 18px 55px rgba(0,0,0,0.20);
+  cursor:pointer;
+  user-select:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  line-height:1;
+  z-index:3;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+
+body[data-page-type="destination_support_page"] .hArrow.prev{ left:10px; }
+body[data-page-type="destination_support_page"] .hArrow.next{ right:10px; }
+
+body[data-page-type="destination_support_page"] .hNav{
+  border-top:1px solid rgba(11,26,16,0.12);
+  padding:10px 12px;
+  display:flex;
+  justify-content:center;
+}
+
+body[data-page-type="destination_support_page"] .hDots{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+body[data-page-type="destination_support_page"] .hDotBtn{
+  appearance:none;
+  border:1px solid rgba(13,89,37,0.20);
+  background:rgba(255,255,255,0.72);
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  cursor:pointer;
+  padding:0;
+}
+
+body[data-page-type="destination_support_page"] .hDotBtn.is-active{
+  background:rgba(224,100,58,0.95);
+  border-color:rgba(0,0,0,0.10);
+  box-shadow:0 10px 22px rgba(224,100,58,0.18);
+  transform:scale(1.05);
+}
+
+body[data-page-type="destination_support_page"] .tag{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,0.16);
+  background:rgba(255,255,255,0.60);
+  font-weight:900;
+  font-size:12.2px;
+  color:var(--forest);
+  white-space:nowrap;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedPanel{
+  margin-top:18px;
+  padding:18px;
+  background:rgba(245,245,220,0.72);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedHeader{
+  margin-bottom:14px;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedHeader h2{
+  margin:0;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-size:clamp(22px,2.4vw,30px);
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  font-weight:900;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedHeader p{
+  margin:6px 0 0;
+  color:rgba(11,26,16,0.70);
+  font-size:14.5px;
+  line-height:1.65;
+  font-weight:650;
+  max-width:82ch;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedCard{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-height:145px;
+  padding:16px;
+  background:rgba(255,255,255,0.76);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 12px 30px rgba(13,89,37,0.10);
+  color:var(--ink);
+  text-decoration:none;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedCard h3{
+  margin:0;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-size:20px;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedCard p{
+  margin:0;
+  color:rgba(11,26,16,0.78);
+  font-size:14px;
+  line-height:1.62;
+  font-weight:650;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaRelatedCard span{
+  margin-top:auto;
+  align-self:flex-start;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:32px;
+  padding:8px 11px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,0.18);
+  background:rgba(245,245,220,0.78);
+  color:var(--forest);
+  font-weight:900;
+  font-size:12.5px;
+  line-height:1.1;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaBottomCta{
+  margin-top:18px;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  background:rgba(245,245,220,0.72);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+body[data-page-type="destination_support_page"] .pululahuaBottomCta h2{
+  margin:0 0 6px;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-weight:900;
+  font-size:22px;
+  line-height:1.1;
+}
+
+body[data-page-type="destination_support_page"] .pululahuaBottomCta p{
+  margin:0;
+  color:rgba(11,26,16,0.72);
+  font-size:14.8px;
+  line-height:1.65;
+  font-weight:650;
+  max-width:80ch;
+}
+
+@media(max-width:900px){
+  body[data-page-type="destination_support_page"] .grid2,
+  body[data-page-type="destination_support_page"] .pululahuaRelatedGrid{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="destination_support_page"] .hSlide{
+    aspect-ratio:4 / 3;
+  }
+
+  body[data-page-type="destination_support_page"] .hArrow.prev{ left:8px; }
+  body[data-page-type="destination_support_page"] .hArrow.next{ right:8px; }
+
+  body[data-page-type="destination_support_page"] .pululahuaBottomCta .btn{
+    width:100%;
+  }
+}
