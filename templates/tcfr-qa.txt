@@ -874,3 +874,22 @@ Blockers:
 - Spanish visible or metadata text with missing accents such as mamiferos, unicos, colibries, region, caracteristicas, Pagina, Navegacion, mas, guia, fotografia, or observacion.
 - Mixed-language UI such as Hummingaves on Spanish pages.
 - ES page linking to EN URLs except rawLangLinks.
+
+FLORA FEATURE DETAIL QA ENFORCEMENT
+This section is mandatory for /features/flora/ and /es/caracteristicas/flora/.
+
+Rules:
+- Flora pages must use data-page-type="feature_detail_page".
+- Reusable flora-specific layout styles must live in /assets/css/site.css.
+- Page files must not ship with large inline CSS defining .floraGrid, .floraCard, .floraImage, .sectionBreak, .relatedGrid, .relatedTile, .topBand, or .hero.
+- The page must preserve the TCFR visual layering: page background -> beige/cream panel -> inner cards.
+- English and Spanish metadata must use The Cloud Forest Retreat branding, not Mindo Bird Watching.
+- Spanish page must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, and ES-only body links.
+- Flora pages must link to relevant cloud forest, hiking, biodiversity, rooms, and booking support pages.
+- Plant and place names should preserve correct accents in visible copy, including Chocó Andino, Río Guayllabamba, orquídeas, árboles, epífitas, and galería where used.
+
+Blockers:
+- Missing or duplicate /assets/js/site.js.
+- Large page-level CSS for reusable flora layout.
+- Spanish visible or metadata text with missing accents such as orquideas, arboles, botanica, guia, mamiferos, tambien, estadia, mas, donde, pequenos, epifitas, Rio, galeria, sequia, erosion, aromaticas, pagina, navegacion, or caracteristicas.
+- ES page linking to EN URLs except rawLangLinks.
