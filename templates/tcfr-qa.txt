@@ -909,3 +909,24 @@ Blockers:
 - Explore more / Explora más cards appearing directly under flora cards without a contained section rhythm.
 - Related cards split into two visually disconnected grids.
 - Old relatedSection or relatedTile markup left in flora pages after the global floraClusterPanel pattern is added.
+
+GALLERY PAGE QA ENFORCEMENT
+This section is mandatory for /features/gallery/ and /es/caracteristicas/galeria/.
+
+Rules:
+- Gallery pages must use data-page-type="gallery_page".
+- Reusable gallery layout styles must live in /assets/css/site.css.
+- Page files must not ship with large inline CSS defining .wrap, .hero, .sectionCard, .galleryGrid, .galleryImg, .videoStrip, .videoCard, .relatedSection, .relatedGrid, or .galleryRelatedPanel.
+- Gallery pages must be conversion-supporting visual pages, not image dumps.
+- Gallery pages must include body-level links to rooms, common areas, booking, and at least one relevant feature or cloud forest guide.
+- English pages must use TCFR branding and EN URLs.
+- Spanish pages must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, and ES body links.
+- Spanish visible text and user-facing attributes must use accents correctly, including Galería, imágenes, navegación, página, acciones rápidas, estadía, mañanas, atmósfera, panorámica, vegetación, habitación, and sección.
+- Video embeds may use youtube-nocookie, but analytics metadata should still be present on the section and important surrounding links.
+
+Blockers:
+- Mindo Bird Watching branding in title, og:site_name, og:title, or Twitter title.
+- Staging image URLs in Open Graph/Twitter metadata.
+- Large page-level CSS for reusable gallery layout.
+- ES page linking to EN URLs except rawLangLinks.
+- rawLangLinks visible in page body.
