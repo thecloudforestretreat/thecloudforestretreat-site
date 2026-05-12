@@ -1768,3 +1768,267 @@ body[data-page-type="feature_detail_page"] .chip{
     min-height: 0 !important;
   }
 }
+
+
+/* =========================================================
+   TCFR Attractions Feature Detail Global Module
+   Purpose:
+   - Move Attractions page layout out of page-level CSS
+   - Match the global feature-detail visual system
+   - Support featured attraction cards, image carousel, videos, and contained CTA bands
+   ========================================================= */
+
+body[data-page-type="feature_detail_page"] .intro{
+  margin-top:14px;
+  padding:18px;
+}
+
+body[data-page-type="feature_detail_page"] .intro p{
+  margin:0;
+  font-size:15.5px;
+  line-height:1.72;
+  color:rgba(11,26,16,0.78);
+  max-width:90ch;
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .featureGrid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="feature_detail_page"] .featureCard{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  overflow:hidden;
+  background:rgba(255,255,255,0.74);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 12px 30px rgba(13,89,37,0.10);
+  color:var(--ink);
+}
+
+body[data-page-type="feature_detail_page"] .featureImage{
+  position:relative;
+  aspect-ratio:16/10;
+  background:rgba(0,0,0,0.10);
+  overflow:hidden;
+}
+
+body[data-page-type="feature_detail_page"] .featureImage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.01);
+}
+
+body[data-page-type="feature_detail_page"] .featureBody{
+  padding:16px;
+  display:grid;
+  grid-template-rows:auto minmax(96px,auto) auto;
+  gap:12px;
+  flex:1 1 auto;
+}
+
+body[data-page-type="feature_detail_page"] .featureBody h2{
+  margin:0;
+  font-family:var(--font-head);
+  font-size:22px;
+  color:var(--forest);
+  letter-spacing:-0.02em;
+  font-weight:900;
+  line-height:1.1;
+}
+
+body[data-page-type="feature_detail_page"] .featureBody p{
+  margin:0;
+  font-size:14.8px;
+  line-height:1.65;
+  color:rgba(11,26,16,0.78);
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:flex-start;
+}
+
+body[data-page-type="feature_detail_page"] .tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  font-size:14px;
+  padding:10px 15px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,0.20);
+  background:rgba(245,245,220,0.78);
+  font-weight:900;
+  color:var(--forest);
+  white-space:nowrap;
+  box-shadow:0 10px 26px rgba(13,89,37,0.10);
+  line-height:1.15;
+}
+
+body[data-page-type="feature_detail_page"] .carousel{
+  margin-top:14px;
+  padding:16px;
+  position:relative;
+}
+
+body[data-page-type="feature_detail_page"] .h2{
+  margin:0 0 12px;
+  font-family:var(--font-head);
+  color:var(--forest);
+  letter-spacing:-0.02em;
+  font-weight:900;
+  font-size:22px;
+  line-height:1.1;
+}
+
+body[data-page-type="feature_detail_page"] .carouselViewport{
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid rgba(11,26,16,0.10);
+  background:rgba(255,255,255,0.55);
+}
+
+body[data-page-type="feature_detail_page"] .carouselTrack{
+  display:flex;
+  transition:transform 0.4s ease;
+  will-change:transform;
+}
+
+body[data-page-type="feature_detail_page"] .carouselItem{
+  flex:0 0 100%;
+  aspect-ratio:16/9;
+  background:rgba(0,0,0,0.10);
+}
+
+body[data-page-type="feature_detail_page"] .carouselItem img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+body[data-page-type="feature_detail_page"] .carouselBtn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.45);
+  color:#fff;
+  border:0;
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 16px 40px rgba(0,0,0,0.18);
+}
+
+body[data-page-type="feature_detail_page"] .carouselBtn.prev{ left:20px; }
+body[data-page-type="feature_detail_page"] .carouselBtn.next{ right:20px; }
+
+body[data-page-type="feature_detail_page"] .videoRow{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  align-items:start;
+}
+
+body[data-page-type="feature_detail_page"] .videoCard{
+  border-radius:var(--r2);
+  overflow:hidden;
+  border:1px solid rgba(11,26,16,0.10);
+  box-shadow:var(--shadow);
+  background:rgba(255,255,255,0.55);
+}
+
+body[data-page-type="feature_detail_page"] .videoWrap{
+  width:100%;
+  aspect-ratio:9/16;
+  position:relative;
+  background:#000;
+}
+
+body[data-page-type="feature_detail_page"] .videoWrap iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+
+body[data-page-type="feature_detail_page"] .note{
+  margin-top:14px;
+  padding:16px;
+  text-align:center;
+  font-size:14px;
+  color:rgba(11,26,16,0.65);
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .attractionRelatedGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="feature_detail_page"] .attractionRelatedCard{
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  height:100%;
+  background:rgba(255,255,255,0.74);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 12px 30px rgba(13,89,37,0.10);
+  color:var(--ink);
+}
+
+body[data-page-type="feature_detail_page"] .attractionRelatedCard h3{
+  margin:0;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-size:20px;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+}
+
+body[data-page-type="feature_detail_page"] .attractionRelatedCard p{
+  margin:0;
+  color:rgba(11,26,16,0.78);
+  font-size:14.8px;
+  line-height:1.65;
+  font-weight:650;
+}
+
+@media(max-width:900px){
+  body[data-page-type="feature_detail_page"] .featureGrid,
+  body[data-page-type="feature_detail_page"] .videoRow,
+  body[data-page-type="feature_detail_page"] .attractionRelatedGrid{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="feature_detail_page"] .featureBody{
+    grid-template-rows:auto auto auto;
+  }
+
+  body[data-page-type="feature_detail_page"] .carouselBtn.prev{ left:12px; }
+  body[data-page-type="feature_detail_page"] .carouselBtn.next{ right:12px; }
+}
