@@ -811,3 +811,29 @@ Blockers:
 - Large page-level CSS for reusable attraction layout.
 - Spanish visible or metadata text with missing accents such as Pagina, Navegacion, Caracteristicas, rios, rio, mas, atraccion, escenico, faciles, or guia.
 - ES page linking to EN URLs except rawLangLinks.
+
+DESTINATION SUPPORT PAGE QA ENFORCEMENT
+This section is mandatory for regional authority pages such as Chocó Andino, Pululahua, cloud forest geography, biodiversity, and nature-context support pages.
+
+Rules:
+- Destination-support pages must use data-page-type="destination_support_page".
+- Reusable destination-support layout styles must live in /assets/css/site.css.
+- Page files must not ship with large inline CSS defining .wrap, .topBand, .hero, .gridA, .gridB, .card, .mapFrame, .miniCarousel, .pill, .ctaBand, or related reusable layout systems.
+- The page must preserve the approved TCFR visual layering: site background -> beige/cream panels -> inner cards.
+- Regional authority pages must not drift into encyclopedia-only content. They must connect the destination context back to the property, rooms, booking, and nature-stay experience.
+- Spanish pages must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, body links, and South American Spanish accents in all visible/user-facing copy.
+- Technical URLs and slugs must remain ASCII-only, for example /es/caracteristicas/choco-andino-de-pichincha/.
+
+Required links:
+- Parent feature hub
+- Booking/reservations
+- Rooms/habitaciones
+- Related feature pages such as fauna, flora, Pululahua, attractions, cloud forest, or birdwatching pages where relevant
+
+Blockers:
+- Missing or duplicate /assets/js/site.js.
+- Missing rawLangLinks directly under #siteHeader.
+- Missing body data-page-type or data-page-language.
+- Large page-level CSS for reusable destination layout.
+- Spanish visible or metadata text with missing accents such as Pagina, Navegacion, Caracteristicas, estadia, montana, orquideas, region, hectareas, habitats, mamiferos, Ano, Area, Donde, Por que.
+- ES page linking to EN URLs except rawLangLinks.
