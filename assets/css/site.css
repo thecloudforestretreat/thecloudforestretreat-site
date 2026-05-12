@@ -2946,8 +2946,8 @@ body[data-page-type="feature_detail_page"] .faunaRelatedCard p{
    TCFR Flora Feature Detail Global Module
    Purpose:
    - Global-first layout for flora / plant-life feature detail pages
-   - Removes page-level dependency for flora cards, section breaks, and related links
    - Preserves TCFR layering: page background -> beige panels -> inner cards
+   - Fixes related cluster so it does not look pasted into the page
    ========================================================= */
 
 body[data-page-type="feature_detail_page"] .intro{
@@ -3076,23 +3076,58 @@ body[data-page-type="feature_detail_page"] .floraNote{
   font-weight:650;
 }
 
-body[data-page-type="feature_detail_page"] .floraRelatedGrid,
-body[data-page-type="feature_detail_page"] .relatedGrid{
+/* Flora related cluster: one intentional contained section, not pasted cards */
+body[data-page-type="feature_detail_page"] .floraClusterPanel{
+  margin-top:18px;
+  padding:18px;
+  background:rgba(245,245,220,0.72);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+body[data-page-type="feature_detail_page"] .floraClusterHeader{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:14px;
+}
+
+body[data-page-type="feature_detail_page"] .floraClusterHeader h2{
+  margin:0;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-size:clamp(22px,2.4vw,30px);
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  font-weight:900;
+}
+
+body[data-page-type="feature_detail_page"] .floraClusterHeader p{
+  margin:6px 0 0;
+  color:rgba(11,26,16,0.70);
+  font-size:14.5px;
+  line-height:1.65;
+  font-weight:650;
+  max-width:82ch;
+}
+
+body[data-page-type="feature_detail_page"] .floraClusterPrimary{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:14px;
   align-items:stretch;
 }
 
-body[data-page-type="feature_detail_page"] .floraRelatedCard,
-body[data-page-type="feature_detail_page"] .relatedTile{
-  padding:16px;
+body[data-page-type="feature_detail_page"] .floraClusterCard{
   display:flex;
   flex-direction:column;
   gap:8px;
-  height:100%;
-  min-height:142px;
-  background:rgba(255,255,255,0.74);
+  min-height:150px;
+  padding:16px;
+  background:rgba(255,255,255,0.76);
   border:1px solid rgba(11,26,16,0.12);
   border-radius:var(--r);
   box-shadow:0 12px 30px rgba(13,89,37,0.10);
@@ -3100,8 +3135,8 @@ body[data-page-type="feature_detail_page"] .relatedTile{
   text-decoration:none;
 }
 
-body[data-page-type="feature_detail_page"] .floraRelatedCard h3,
-body[data-page-type="feature_detail_page"] .relatedTileTitle{
+body[data-page-type="feature_detail_page"] .floraClusterCard h3,
+body[data-page-type="feature_detail_page"] .floraMiniCard h3{
   margin:0;
   font-family:var(--font-head);
   color:var(--forest);
@@ -3110,32 +3145,114 @@ body[data-page-type="feature_detail_page"] .relatedTileTitle{
   letter-spacing:-0.02em;
 }
 
-body[data-page-type="feature_detail_page"] .floraRelatedCard p,
-body[data-page-type="feature_detail_page"] .relatedTileText{
+body[data-page-type="feature_detail_page"] .floraClusterCard p,
+body[data-page-type="feature_detail_page"] .floraMiniCard p{
   margin:0;
   color:rgba(11,26,16,0.78);
+  font-size:14px;
+  line-height:1.62;
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .floraClusterCard span,
+body[data-page-type="feature_detail_page"] .floraMiniCard span{
+  margin-top:auto;
+  align-self:flex-start;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:32px;
+  padding:8px 11px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,0.18);
+  background:rgba(245,245,220,0.78);
+  color:var(--forest);
+  font-weight:900;
+  font-size:12.5px;
+  line-height:1.1;
+}
+
+body[data-page-type="feature_detail_page"] .floraClusterSecondary{
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(11,26,16,0.12);
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  align-items:stretch;
+}
+
+body[data-page-type="feature_detail_page"] .floraMiniCard{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-height:136px;
+  padding:14px;
+  background:rgba(255,255,255,0.58);
+  border:1px solid rgba(11,26,16,0.10);
+  border-radius:16px;
+  color:var(--ink);
+  text-decoration:none;
+  box-shadow:0 10px 24px rgba(13,89,37,0.08);
+}
+
+body[data-page-type="feature_detail_page"] .floraMiniCard h3{
+  font-size:18px;
+}
+
+body[data-page-type="feature_detail_page"] .floraMiniCard p{
+  font-size:13.5px;
+}
+
+body[data-page-type="feature_detail_page"] .floraBottomCta{
+  margin-top:18px;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  background:rgba(245,245,220,0.72);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+body[data-page-type="feature_detail_page"] .floraBottomCta h2{
+  margin:0 0 6px;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-weight:900;
+  font-size:22px;
+  line-height:1.1;
+}
+
+body[data-page-type="feature_detail_page"] .floraBottomCta p{
+  margin:0;
+  color:rgba(11,26,16,0.72);
   font-size:14.8px;
   line-height:1.65;
   font-weight:650;
 }
 
-body[data-page-type="feature_detail_page"] .floraRelatedCard .linkCta,
-body[data-page-type="feature_detail_page"] .relatedTileMeta{
-  margin-top:auto;
-  color:var(--forest);
-  font-weight:900;
-  font-size:13px;
-}
-
 @media(max-width:900px){
   body[data-page-type="feature_detail_page"] .floraGrid,
   body[data-page-type="feature_detail_page"] .floraCard,
-  body[data-page-type="feature_detail_page"] .floraRelatedGrid,
-  body[data-page-type="feature_detail_page"] .relatedGrid{
+  body[data-page-type="feature_detail_page"] .floraClusterPrimary,
+  body[data-page-type="feature_detail_page"] .floraClusterSecondary{
     grid-template-columns:1fr;
   }
 
   body[data-page-type="feature_detail_page"] .floraImage{
     min-height:240px;
+  }
+
+  body[data-page-type="feature_detail_page"] .floraClusterPanel{
+    padding:14px;
+  }
+
+  body[data-page-type="feature_detail_page"] .floraBottomCta .btn{
+    width:100%;
   }
 }
