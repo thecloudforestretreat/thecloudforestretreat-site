@@ -929,3 +929,24 @@ Blockers:
 - Large page-level CSS for reusable produce layout.
 - Missing #siteHeader, #siteFooter, rawLangLinks, body data-page-type, body data-page-language, or /assets/js/site.js.
 - Missing body-level booking/contact conversion links.
+
+PULULAHUA DESTINATION SUPPORT QA ENFORCEMENT
+This section is mandatory for /features/pululahua/ and /es/caracteristicas/pululahua/.
+
+Rules:
+- Pululahua pages must use data-page-type="destination_support_page".
+- Reusable Pululahua destination layout styles must live in /assets/css/site.css.
+- Page files must not ship with large inline CSS defining .grid2, .hCarousel, .hViewport, .hTrack, .hSlide, .relatedSection, .relatedGrid, .relatedTile, .pululahuaRelatedPanel, or .pululahuaBottomCta.
+- The page must frame Pululahua as a near-Quito landscape and route-planning support page tied to a stay at The Cloud Forest Retreat.
+- Do not let the page become a generic volcano facts page with no retreat, booking, route, or nearby-nature connection.
+- English page must link to features, attractions, waterfalls near Quito, weekend getaway from Quito, booking, and rooms where relevant.
+- Spanish page must link to the equivalent ES pages only, except rawLangLinks.
+- Spanish visible text and user-facing attributes must use accents correctly, including excursión, volcánica, montaña, Qué, cómo, características, página, navegación, rápidas, estadía, cráter, rápido, años, relación, más, también, aquí, día, fácil, útil, práctico, único, región, Chocó Andino, and Río Guayllabamba where used.
+- Technical paths and URLs must remain ASCII-only: /es/caracteristicas/pululahua/.
+
+Blockers:
+- ES canonical or og:url pointing to EN URL.
+- ES body links pointing to EN URLs except rawLangLinks.
+- Large page-level CSS for reusable Pululahua layout.
+- Missing #siteHeader, #siteFooter, rawLangLinks, body data-page-type, body data-page-language, or /assets/js/site.js.
+- Missing body-level booking/reservation conversion link.
