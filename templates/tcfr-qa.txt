@@ -910,23 +910,22 @@ Blockers:
 - Related cards split into two visually disconnected grids.
 - Old relatedSection or relatedTile markup left in flora pages after the global floraClusterPanel pattern is added.
 
-GALLERY PAGE QA ENFORCEMENT
-This section is mandatory for /features/gallery/ and /es/caracteristicas/galeria/.
+LOCAL PRODUCE FEATURE DETAIL QA ENFORCEMENT
+This section is mandatory for /features/produce/ and /es/caracteristicas/productos-locales/.
 
 Rules:
-- Gallery pages must use data-page-type="gallery_page".
-- Reusable gallery layout styles must live in /assets/css/site.css.
-- Page files must not ship with large inline CSS defining .wrap, .hero, .sectionCard, .galleryGrid, .galleryImg, .videoStrip, .videoCard, .relatedSection, .relatedGrid, or .galleryRelatedPanel.
-- Gallery pages must be conversion-supporting visual pages, not image dumps.
-- Gallery pages must include body-level links to rooms, common areas, booking, and at least one relevant feature or cloud forest guide.
-- English pages must use TCFR branding and EN URLs.
-- Spanish pages must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, and ES body links.
-- Spanish visible text and user-facing attributes must use accents correctly, including Galería, imágenes, navegación, página, acciones rápidas, estadía, mañanas, atmósfera, panorámica, vegetación, habitación, and sección.
-- Video embeds may use youtube-nocookie, but analytics metadata should still be present on the section and important surrounding links.
+- Local produce pages must use data-page-type="feature_detail_page".
+- Reusable produce-specific layout styles must live in /assets/css/site.css.
+- Page files must not ship with large inline CSS defining .produceGrid, .produceItem, .highlight, .highlightImage, .highlightText, .spotlight, .spotGrid, .spotItem, .produceRelatedPanel, or .produceBottomCta.
+- The page must preserve the TCFR visual layering: page background -> beige/cream panel -> image cards and inner cards.
+- The page must clearly connect produce and garden-to-table meals back to the stay experience, not present as a generic agriculture page.
+- Spanish page must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, and ES-only body links.
+- Spanish visible text and user-facing attributes must use accents correctly, including orgánico, dedicación, aquí, relación, selección, intención, conexión, estadía, también, atmósfera, cítricos, café, tomate de árbol, menús, según, cómo, mañana, máxima, menú, esté, Río Guayllabamba, ácido, página, navegación, características, galería, and introducción.
+- Produce pages must link to features hub, booking/reservations, contact, flora, amenities, gallery, and at least one relevant planning or weekend guide.
 
 Blockers:
-- Mindo Bird Watching branding in title, og:site_name, og:title, or Twitter title.
-- Staging image URLs in Open Graph/Twitter metadata.
-- Large page-level CSS for reusable gallery layout.
-- ES page linking to EN URLs except rawLangLinks.
-- rawLangLinks visible in page body.
+- ES canonical or og:url pointing to /features/produce/.
+- ES body links pointing to EN URLs except rawLangLinks.
+- Large page-level CSS for reusable produce layout.
+- Missing #siteHeader, #siteFooter, rawLangLinks, body data-page-type, body data-page-language, or /assets/js/site.js.
+- Missing body-level booking/contact conversion links.
