@@ -2946,8 +2946,8 @@ body[data-page-type="feature_detail_page"] .faunaRelatedCard p{
    TCFR Flora Feature Detail Global Module
    Purpose:
    - Global-first layout for flora / plant-life feature detail pages
+   - Removes page-level dependency for flora cards, section breaks, and related links
    - Preserves TCFR layering: page background -> beige panels -> inner cards
-   - Fixes related cluster so it does not look pasted into the page
    ========================================================= */
 
 body[data-page-type="feature_detail_page"] .intro{
@@ -3076,10 +3076,91 @@ body[data-page-type="feature_detail_page"] .floraNote{
   font-weight:650;
 }
 
-/* Flora related cluster: one intentional contained section, not pasted cards */
-body[data-page-type="feature_detail_page"] .floraClusterPanel{
-  margin-top:18px;
-  padding:18px;
+body[data-page-type="feature_detail_page"] .floraRelatedGrid,
+body[data-page-type="feature_detail_page"] .relatedGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedCard,
+body[data-page-type="feature_detail_page"] .relatedTile{
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  height:100%;
+  min-height:142px;
+  background:rgba(255,255,255,0.74);
+  border:1px solid rgba(11,26,16,0.12);
+  border-radius:var(--r);
+  box-shadow:0 12px 30px rgba(13,89,37,0.10);
+  color:var(--ink);
+  text-decoration:none;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedCard h3,
+body[data-page-type="feature_detail_page"] .relatedTileTitle{
+  margin:0;
+  font-family:var(--font-head);
+  color:var(--forest);
+  font-size:20px;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedCard p,
+body[data-page-type="feature_detail_page"] .relatedTileText{
+  margin:0;
+  color:rgba(11,26,16,0.78);
+  font-size:14.8px;
+  line-height:1.65;
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .floraRelatedCard .linkCta,
+body[data-page-type="feature_detail_page"] .relatedTileMeta{
+  margin-top:auto;
+  color:var(--forest);
+  font-weight:900;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+  body[data-page-type="feature_detail_page"] .floraGrid,
+  body[data-page-type="feature_detail_page"] .floraCard,
+  body[data-page-type="feature_detail_page"] .floraRelatedGrid,
+  body[data-page-type="feature_detail_page"] .relatedGrid{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="feature_detail_page"] .floraImage{
+    min-height:240px;
+  }
+}
+
+
+/* =========================================================
+   TCFR Gallery Page Global Module
+   Purpose:
+   - Global-first layout for gallery pages
+   - Removes page-level dependency for gallery grids, video strips, and related cards
+   - Preserves TCFR layering: page background -> beige panels -> visual cards
+   ========================================================= */
+
+body[data-page-type="gallery_page"] .wrap{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:18px var(--pad) 76px;
+  color:var(--ink);
+}
+
+body[data-page-type="gallery_page"] .topBand,
+body[data-page-type="gallery_page"] .hero,
+body[data-page-type="gallery_page"] .sectionCard,
+body[data-page-type="gallery_page"] .galleryRelatedPanel,
+body[data-page-type="gallery_page"] .galleryBottomCta{
   background:rgba(245,245,220,0.72);
   border:1px solid var(--line);
   border-radius:var(--r2);
@@ -3087,15 +3168,242 @@ body[data-page-type="feature_detail_page"] .floraClusterPanel{
   color:var(--ink);
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterHeader{
+body[data-page-type="gallery_page"] .topBand{
+  margin-top:14px;
+  padding:14px;
   display:flex;
-  align-items:flex-end;
+  align-items:center;
   justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="gallery_page"] .crumbs,
+body[data-page-type="gallery_page"] .quickActions,
+body[data-page-type="gallery_page"] .ctaBtns{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="gallery_page"] .crumbs{
+  font-weight:800;
+  font-size:13px;
+  color:rgba(11,26,16,0.75);
+}
+
+body[data-page-type="gallery_page"] .crumbs a{
+  color:inherit;
+  text-decoration:none;
+}
+
+body[data-page-type="gallery_page"] .hero{
+  margin-top:14px;
+  overflow:hidden;
+  position:relative;
+}
+
+body[data-page-type="gallery_page"] .heroMedia{
+  position:relative;
+  min-height:400px;
+  background:rgba(0,0,0,0.10);
+}
+
+body[data-page-type="gallery_page"] .heroMedia img{
+  width:100%;
+  height:100%;
+  min-height:400px;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.01);
+}
+
+body[data-page-type="gallery_page"] .heroShade{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
+  pointer-events:none;
+}
+
+body[data-page-type="gallery_page"] .heroInner{
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:14px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.22);
+  background:rgba(0,0,0,0.30);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(6px);
+  padding:14px;
+  color:rgba(255,255,255,0.96);
+  box-shadow:0 18px 55px rgba(0,0,0,0.20);
+  max-width:860px;
+}
+
+body[data-page-type="gallery_page"] .kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:900;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  font-size:12px;
+  color:rgba(255,255,255,0.92);
+}
+
+body[data-page-type="gallery_page"] .heroH1{
+  margin:8px 0 6px;
+  font-family:var(--font-head);
+  font-weight:900;
+  letter-spacing:-0.03em;
+  line-height:1.02;
+  font-size:clamp(32px,4vw,54px);
+  color:#fff;
+}
+
+body[data-page-type="gallery_page"] .heroLead{
+  margin:0;
+  max-width:80ch;
+  font-weight:650;
+  line-height:1.7;
+  color:rgba(231,228,209,0.92);
+  font-size:15.5px;
+}
+
+body[data-page-type="gallery_page"] .heroLead a{
+  color:#fff;
+  font-weight:900;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+body[data-page-type="gallery_page"] .sectionCard{
+  margin-top:14px;
+  padding:16px;
+}
+
+body[data-page-type="gallery_page"] .sectionTitle{
+  margin:0;
+  font-family:var(--font-head);
+  font-weight:900;
+  letter-spacing:-0.02em;
+  font-size:22px;
+  line-height:1.1;
+  color:var(--forest);
+}
+
+body[data-page-type="gallery_page"] .sectionHint{
+  margin:8px 0 0;
+  color:rgba(11,26,16,0.72);
+  font-weight:650;
+  line-height:1.7;
+  font-size:14px;
+  max-width:90ch;
+}
+
+body[data-page-type="gallery_page"] .sectionHint a{
+  color:var(--forest);
+  font-weight:900;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+body[data-page-type="gallery_page"] .galleryGrid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
   gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="gallery_page"] .galleryImg{
+  border-radius:18px;
+  overflow:hidden;
+  background:rgba(0,0,0,0.10);
+  border:1px solid rgba(11,26,16,0.10);
+  box-shadow:0 14px 30px rgba(13,89,37,0.12);
+  position:relative;
+  min-height:240px;
+}
+
+body[data-page-type="gallery_page"] .galleryImg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.01);
+}
+
+body[data-page-type="gallery_page"] .g1,
+body[data-page-type="gallery_page"] .g2,
+body[data-page-type="gallery_page"] .g3{
+  grid-column:span 4;
+  min-height:320px;
+}
+
+body[data-page-type="gallery_page"] .g4,
+body[data-page-type="gallery_page"] .g6{
+  grid-column:span 3;
+  min-height:260px;
+}
+
+body[data-page-type="gallery_page"] .g5{
+  grid-column:span 6;
+  min-height:260px;
+}
+
+body[data-page-type="gallery_page"] .g7,
+body[data-page-type="gallery_page"] .g8,
+body[data-page-type="gallery_page"] .g9{
+  grid-column:span 4;
+  min-height:280px;
+}
+
+body[data-page-type="gallery_page"] .videoStrip{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+body[data-page-type="gallery_page"] .videoCard{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(11,26,16,0.10);
+  box-shadow:0 14px 30px rgba(13,89,37,0.12);
+  background:rgba(255,255,255,0.55);
+}
+
+body[data-page-type="gallery_page"] .videoWrap{
+  width:100%;
+  aspect-ratio:9/16;
+  position:relative;
+  background:#000;
+}
+
+body[data-page-type="gallery_page"] .videoWrap iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+
+body[data-page-type="gallery_page"] .galleryRelatedPanel{
+  margin-top:18px;
+  padding:18px;
+}
+
+body[data-page-type="gallery_page"] .galleryRelatedHeader{
   margin-bottom:14px;
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterHeader h2{
+body[data-page-type="gallery_page"] .galleryRelatedHeader h2{
   margin:0;
   font-family:var(--font-head);
   color:var(--forest);
@@ -3105,7 +3413,7 @@ body[data-page-type="feature_detail_page"] .floraClusterHeader h2{
   font-weight:900;
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterHeader p{
+body[data-page-type="gallery_page"] .galleryRelatedHeader p{
   margin:6px 0 0;
   color:rgba(11,26,16,0.70);
   font-size:14.5px;
@@ -3114,18 +3422,18 @@ body[data-page-type="feature_detail_page"] .floraClusterHeader p{
   max-width:82ch;
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterPrimary{
+body[data-page-type="gallery_page"] .galleryRelatedGrid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:14px;
   align-items:stretch;
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterCard{
+body[data-page-type="gallery_page"] .galleryRelatedCard{
   display:flex;
   flex-direction:column;
   gap:8px;
-  min-height:150px;
+  min-height:145px;
   padding:16px;
   background:rgba(255,255,255,0.76);
   border:1px solid rgba(11,26,16,0.12);
@@ -3135,8 +3443,7 @@ body[data-page-type="feature_detail_page"] .floraClusterCard{
   text-decoration:none;
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterCard h3,
-body[data-page-type="feature_detail_page"] .floraMiniCard h3{
+body[data-page-type="gallery_page"] .galleryRelatedCard h3{
   margin:0;
   font-family:var(--font-head);
   color:var(--forest);
@@ -3145,8 +3452,7 @@ body[data-page-type="feature_detail_page"] .floraMiniCard h3{
   letter-spacing:-0.02em;
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterCard p,
-body[data-page-type="feature_detail_page"] .floraMiniCard p{
+body[data-page-type="gallery_page"] .galleryRelatedCard p{
   margin:0;
   color:rgba(11,26,16,0.78);
   font-size:14px;
@@ -3154,8 +3460,7 @@ body[data-page-type="feature_detail_page"] .floraMiniCard p{
   font-weight:650;
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterCard span,
-body[data-page-type="feature_detail_page"] .floraMiniCard span{
+body[data-page-type="gallery_page"] .galleryRelatedCard span{
   margin-top:auto;
   align-self:flex-start;
   display:inline-flex;
@@ -3172,39 +3477,7 @@ body[data-page-type="feature_detail_page"] .floraMiniCard span{
   line-height:1.1;
 }
 
-body[data-page-type="feature_detail_page"] .floraClusterSecondary{
-  margin-top:14px;
-  padding-top:14px;
-  border-top:1px solid rgba(11,26,16,0.12);
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:12px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .floraMiniCard{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  min-height:136px;
-  padding:14px;
-  background:rgba(255,255,255,0.58);
-  border:1px solid rgba(11,26,16,0.10);
-  border-radius:16px;
-  color:var(--ink);
-  text-decoration:none;
-  box-shadow:0 10px 24px rgba(13,89,37,0.08);
-}
-
-body[data-page-type="feature_detail_page"] .floraMiniCard h3{
-  font-size:18px;
-}
-
-body[data-page-type="feature_detail_page"] .floraMiniCard p{
-  font-size:13.5px;
-}
-
-body[data-page-type="feature_detail_page"] .floraBottomCta{
+body[data-page-type="gallery_page"] .galleryBottomCta{
   margin-top:18px;
   padding:18px;
   display:flex;
@@ -3212,14 +3485,9 @@ body[data-page-type="feature_detail_page"] .floraBottomCta{
   align-items:center;
   gap:16px;
   flex-wrap:wrap;
-  background:rgba(245,245,220,0.72);
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  color:var(--ink);
 }
 
-body[data-page-type="feature_detail_page"] .floraBottomCta h2{
+body[data-page-type="gallery_page"] .galleryBottomCta h2{
   margin:0 0 6px;
   font-family:var(--font-head);
   color:var(--forest);
@@ -3228,31 +3496,54 @@ body[data-page-type="feature_detail_page"] .floraBottomCta h2{
   line-height:1.1;
 }
 
-body[data-page-type="feature_detail_page"] .floraBottomCta p{
+body[data-page-type="gallery_page"] .galleryBottomCta p{
   margin:0;
   color:rgba(11,26,16,0.72);
   font-size:14.8px;
   line-height:1.65;
   font-weight:650;
+  max-width:80ch;
 }
 
 @media(max-width:900px){
-  body[data-page-type="feature_detail_page"] .floraGrid,
-  body[data-page-type="feature_detail_page"] .floraCard,
-  body[data-page-type="feature_detail_page"] .floraClusterPrimary,
-  body[data-page-type="feature_detail_page"] .floraClusterSecondary{
+  body[data-page-type="gallery_page"] .wrap{
+    padding:12px var(--pad) 64px;
+  }
+
+  body[data-page-type="gallery_page"] .heroMedia,
+  body[data-page-type="gallery_page"] .heroMedia img{
+    min-height:280px;
+  }
+
+  body[data-page-type="gallery_page"] .heroInner{
+    left:12px;
+    right:12px;
+    bottom:12px;
+    padding:12px;
+    max-width:none;
+  }
+
+  body[data-page-type="gallery_page"] .galleryGrid,
+  body[data-page-type="gallery_page"] .videoStrip,
+  body[data-page-type="gallery_page"] .galleryRelatedGrid{
     grid-template-columns:1fr;
   }
 
-  body[data-page-type="feature_detail_page"] .floraImage{
+  body[data-page-type="gallery_page"] .g1,
+  body[data-page-type="gallery_page"] .g2,
+  body[data-page-type="gallery_page"] .g3,
+  body[data-page-type="gallery_page"] .g4,
+  body[data-page-type="gallery_page"] .g5,
+  body[data-page-type="gallery_page"] .g6,
+  body[data-page-type="gallery_page"] .g7,
+  body[data-page-type="gallery_page"] .g8,
+  body[data-page-type="gallery_page"] .g9{
+    grid-column:auto;
     min-height:240px;
   }
 
-  body[data-page-type="feature_detail_page"] .floraClusterPanel{
-    padding:14px;
-  }
-
-  body[data-page-type="feature_detail_page"] .floraBottomCta .btn{
+  body[data-page-type="gallery_page"] .galleryBottomCta .btn,
+  body[data-page-type="gallery_page"] .quickActions .btn{
     width:100%;
   }
 }
