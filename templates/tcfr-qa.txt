@@ -893,3 +893,19 @@ Blockers:
 - Large page-level CSS for reusable flora layout.
 - Spanish visible or metadata text with missing accents such as orquideas, arboles, botanica, guia, mamiferos, tambien, estadia, mas, donde, pequenos, epifitas, Rio, galeria, sequia, erosion, aromaticas, pagina, navegacion, or caracteristicas.
 - ES page linking to EN URLs except rawLangLinks.
+
+FLORA RELATED CLUSTER VISUAL QA ENFORCEMENT
+This section is mandatory for /features/flora/ and /es/caracteristicas/flora/.
+
+Rules:
+- The related cloud forest links must appear as one intentional contained section, not as a pasted card block.
+- Primary related links should be grouped separately from secondary support links.
+- The section must use the global floraClusterPanel, floraClusterPrimary, floraClusterSecondary, floraClusterCard, and floraMiniCard pattern from /assets/css/site.css.
+- Do not mix old relatedSection, relatedGrid, relatedTile, floraRelatedGrid, and floraClusterPanel patterns on the same page.
+- The bottom booking CTA must be visually separate from the related cluster and must not duplicate the related cards.
+- Fixes for this pattern must live in /assets/css/site.css, not page-level CSS.
+
+Blockers:
+- Explore more / Explora más cards appearing directly under flora cards without a contained section rhythm.
+- Related cards split into two visually disconnected grids.
+- Old relatedSection or relatedTile markup left in flora pages after the global floraClusterPanel pattern is added.
