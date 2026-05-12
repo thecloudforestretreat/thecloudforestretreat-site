@@ -390,9 +390,29 @@ body{ margin: 0; }
   .contentGrid{ grid-template-columns: 1fr; }
 }
   </style>
+
+<style>
+.rawLangLinks{
+position:absolute !important;
+width:1px !important;
+height:1px !important;
+padding:0 !important;
+margin:-1px !important;
+overflow:hidden !important;
+clip:rect(0,0,0,0) !important;
+white-space:nowrap !important;
+border:0 !important;
+}
+</style>
+
 </head>
-<body>
-  <div id="siteHeader"></div>
+<body data-page-language="en" data-page-type="legal_page">
+  <div id="siteHeader" data-current-lang="en"></div>
+<nav class="rawLangLinks" aria-label="Language switch">
+  <a href="https://thecloudforestretreat.com/privacy-policy/" lang="en" hreflang="en" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="legal_page" data-analytics-target-language="en">English</a>
+  <a href="https://thecloudforestretreat.com/es/politica-de-privacidad/" lang="es" hreflang="es" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="legal_page" data-analytics-target-language="es">Español</a>
+</nav>
+
   <main class="wrap" aria-label="Privacy Policy page">
     <section class="topBand" aria-label="Page navigation">
       <div class="crumbs" aria-label="Breadcrumb">
