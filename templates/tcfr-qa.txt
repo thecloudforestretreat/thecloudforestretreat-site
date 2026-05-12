@@ -793,3 +793,21 @@ Required checks:
 - Overview cards must not stretch into large empty blocks unless the content intentionally fills the space.
 - Feature panels should preserve the approved rhythm: heading + short helper text + balanced inner grid/cards.
 - CSS fixes for spacing and symmetry must be centralized in /assets/css/site.css, not patched page by page.
+
+ATTRACTIONS FEATURE DETAIL QA ENFORCEMENT
+This section is mandatory for /features/attractions/ and /es/caracteristicas/atracciones/.
+
+Rules:
+- Attractions pages must use data-page-type="feature_detail_page".
+- Reusable attraction-specific layout styles must live in /assets/css/site.css.
+- Page files must not ship with large inline CSS defining .featureGrid, .featureCard, .carousel, .carouselTrack, .videoRow, .videoCard, .topBand, or .hero.
+- The page must preserve the TCFR visual layering: page background -> beige/cream panel -> inner cards.
+- Spanish page must use ES canonical, hreflang, og:url, schema URLs, breadcrumbs, and ES-only body links.
+- Attraction pages must include links to the feature hub, booking/contact, and related attraction/planning pages.
+- Carousel/video controls must include analytics attributes where practical.
+
+Blockers:
+- Missing or duplicate /assets/js/site.js.
+- Large page-level CSS for reusable attraction layout.
+- Spanish visible or metadata text with missing accents such as Pagina, Navegacion, Caracteristicas, rios, rio, mas, atraccion, escenico, faciles, or guia.
+- ES page linking to EN URLs except rawLangLinks.
