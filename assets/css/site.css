@@ -3836,3 +3836,503 @@ body[data-page-type="destination_support_page"] .pululahuaBottomCta p{
     width:100%;
   }
 }
+
+/* =========================================================
+   TCFR Money Page Global Module
+   Purpose:
+   - Moves reusable commercial/money page layout out of page-level CSS
+   - Preserves TCFR layering: page background -> beige panels -> inner cards
+   - Supports pages such as best eco lodge Quito, cloud forest stay pages,
+     nature retreat pages, and similar commercial landing pages
+   ========================================================= */
+
+body[data-page-type="money_page"] .wrap{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 18px var(--pad) 84px;
+  color: var(--ink);
+}
+
+body[data-page-type="money_page"] .topBand,
+body[data-page-type="money_page"] .section,
+body[data-page-type="money_page"] .ctaBand{
+  background: rgba(245,245,220,0.72);
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+
+body[data-page-type="money_page"] .topBand{
+  margin-top: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body[data-page-type="money_page"] .crumbs{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 900;
+  color: rgba(11,26,16,0.74);
+  letter-spacing: -0.01em;
+}
+
+body[data-page-type="money_page"] .crumbs a{
+  color: inherit;
+  text-decoration: none;
+}
+
+body[data-page-type="money_page"] .topActions,
+body[data-page-type="money_page"] .heroActions,
+body[data-page-type="money_page"] .heroMeta,
+body[data-page-type="money_page"] .ctaBtns,
+body[data-page-type="money_page"] .introList{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+body[data-page-type="money_page"] .hero{
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: relative;
+  background: #24341f;
+}
+
+body[data-page-type="money_page"] .heroMedia{
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+body[data-page-type="money_page"] .heroMedia img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 54%;
+  display: block;
+  transform: scale(1.015);
+}
+
+body[data-page-type="money_page"] .heroShade{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 540px at 15% 12%, rgba(224,100,58,0.16), rgba(0,0,0,0) 55%),
+    linear-gradient(180deg, rgba(5,10,7,0.12), rgba(5,10,7,0.56));
+  pointer-events: none;
+}
+
+body[data-page-type="money_page"] .heroCard{
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  max-width: 790px;
+  padding: 18px 18px 16px;
+  border-radius: var(--r2);
+  background: rgba(17,22,18,0.34);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.24);
+  color: rgba(255,255,255,0.97);
+}
+
+body[data-page-type="money_page"] .eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.35;
+  padding-top: 2px;
+}
+
+body[data-page-type="money_page"] .hero h1{
+  margin: 8px 0 10px;
+  font-family: var(--font-head);
+  font-size: clamp(36px,4.8vw,62px);
+  line-height: 0.97;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+  color: #fff;
+}
+
+body[data-page-type="money_page"] .heroLead{
+  margin: 0;
+  max-width: 64ch;
+  font-size: 16px;
+  line-height: 1.72;
+  font-weight: 650;
+  color: rgba(255,255,255,0.92);
+}
+
+body[data-page-type="money_page"] .heroActions,
+body[data-page-type="money_page"] .heroMeta{
+  margin-top: 14px;
+}
+
+body[data-page-type="money_page"] .heroChip,
+body[data-page-type="money_page"] .miniChip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+body[data-page-type="money_page"] .section{
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+body[data-page-type="money_page"] .pad{
+  padding: 16px;
+}
+
+body[data-page-type="money_page"] .answerBox,
+body[data-page-type="money_page"] .card,
+body[data-page-type="money_page"] .linkCard{
+  border-radius: var(--r);
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(255,255,255,0.56);
+  box-shadow: 0 14px 30px rgba(13,89,37,0.10);
+  padding: 14px;
+  color: var(--ink);
+}
+
+body[data-page-type="money_page"] .split{
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+body[data-page-type="money_page"] .mediaBox{
+  position: relative;
+  min-height: 330px;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid rgba(11,26,16,0.10);
+  background: rgba(0,0,0,0.08);
+  box-shadow: var(--shadow);
+}
+
+body[data-page-type="money_page"] .mediaBox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 54%;
+  display: block;
+}
+
+body[data-page-type="money_page"] .mediaBox::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.20));
+  pointer-events: none;
+}
+
+body[data-page-type="money_page"] .mediaCap{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  padding: 10px 12px;
+  border-radius: 15px;
+  background: rgba(245,245,220,0.92);
+  border: 1px solid rgba(13,89,37,0.14);
+  font-size: 13px;
+  font-weight: 900;
+  color: #0B2B12;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+body[data-page-type="money_page"] .h2{
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  font-size: clamp(28px,3vw,44px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--forest);
+  font-weight: 900;
+}
+
+body[data-page-type="money_page"] .h3{
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  font-size: 24px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  font-weight: 900;
+}
+
+body[data-page-type="money_page"] .p{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.82;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+body[data-page-type="money_page"] .p + .p{
+  margin-top: 10px;
+}
+
+body[data-page-type="money_page"] .grid3{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3,1fr);
+  align-items: stretch;
+}
+
+body[data-page-type="money_page"] .grid2{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2,1fr);
+  align-items: stretch;
+}
+
+body[data-page-type="money_page"] .cardTag,
+body[data-page-type="money_page"] .linkMeta{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(13,89,37,0.18);
+  color: #0B2B12;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+body[data-page-type="money_page"] .cardText,
+body[data-page-type="money_page"] .linkText{
+  margin: 0;
+  font-size: 14.2px;
+  line-height: 1.74;
+  color: rgba(11,26,16,0.78);
+  font-weight: 650;
+}
+
+body[data-page-type="money_page"] .linkGrid{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3,1fr);
+  align-items: stretch;
+}
+
+body[data-page-type="money_page"] .linkTitle{
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: 23px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  font-weight: 900;
+}
+
+body[data-page-type="money_page"] .linkTitle a{
+  color: inherit;
+  text-decoration: none;
+}
+
+body[data-page-type="money_page"] .linkCta{
+  width: max-content;
+  white-space: nowrap;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+body[data-page-type="money_page"] .ctaBand{
+  margin-top: 14px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body[data-page-type="money_page"] .ctaCopy{
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+body[data-page-type="money_page"] .ctaCopy h2{
+  margin: 0 0 6px;
+  font-family: var(--font-head);
+  font-size: clamp(26px,3vw,42px);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  color: var(--forest);
+  font-weight: 900;
+}
+
+body[data-page-type="money_page"] .ctaCopy p{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.78;
+  color: var(--muted);
+  font-weight: 650;
+  max-width: 72ch;
+}
+
+@media (max-width: 980px){
+  body[data-page-type="money_page"] .split,
+  body[data-page-type="money_page"] .grid3,
+  body[data-page-type="money_page"] .grid2,
+  body[data-page-type="money_page"] .linkGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px){
+  body[data-page-type="money_page"] .wrap{
+    padding: 14px var(--pad) 74px;
+  }
+
+  body[data-page-type="money_page"] .topBand{
+    padding: 14px;
+    gap: 14px;
+  }
+
+  body[data-page-type="money_page"] .topActions{
+    width: 100%;
+  }
+
+  body[data-page-type="money_page"] .topActions .btn{
+    flex: 1 1 calc(50% - 5px);
+    justify-content: center;
+  }
+
+  body[data-page-type="money_page"] .heroMedia{
+    min-height: 560px;
+  }
+
+  body[data-page-type="money_page"] .heroMedia img{
+    object-position: 72% 42%;
+    transform: scale(1.08);
+  }
+
+  body[data-page-type="money_page"] .heroCard{
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    max-width: none;
+    padding: 20px 14px 12px;
+    border-radius: var(--r);
+  }
+
+  body[data-page-type="money_page"] .hero h1{
+    font-size: clamp(28px,8vw,42px);
+    line-height: 1.02;
+  }
+
+  body[data-page-type="money_page"] .heroLead{
+    font-size: 13.5px;
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  body[data-page-type="money_page"] .heroActions{
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  body[data-page-type="money_page"] .heroActions .btn{
+    flex: 1 1 calc(50% - 5px);
+    justify-content: center;
+  }
+
+  body[data-page-type="money_page"] .heroMeta{
+    gap: 6px;
+  }
+
+  body[data-page-type="money_page"] .heroChip,
+  body[data-page-type="money_page"] .miniChip{
+    font-size: 11.5px;
+    padding: 7px 10px;
+  }
+
+  body[data-page-type="money_page"] .h2{
+    font-size: clamp(22px,7vw,34px);
+    line-height: 1.05;
+  }
+
+  body[data-page-type="money_page"] .h3{
+    font-size: 21px;
+  }
+
+  body[data-page-type="money_page"] .mediaBox{
+    min-height: 260px;
+  }
+
+  body[data-page-type="money_page"] .ctaBtns{
+    width: 100%;
+  }
+
+  body[data-page-type="money_page"] .ctaBtns .btn{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 460px){
+  body[data-page-type="money_page"] .heroMedia{
+    min-height: 540px;
+  }
+
+  body[data-page-type="money_page"] .heroMedia img{
+    object-position: 74% 40%;
+  }
+
+  body[data-page-type="money_page"] .heroCard{
+    padding: 20px 14px 12px;
+  }
+
+  body[data-page-type="money_page"] .topActions .btn{
+    flex: 1 1 100%;
+  }
+
+  body[data-page-type="money_page"] .heroActions{
+    flex-direction: column;
+  }
+
+  body[data-page-type="money_page"] .heroActions .btn{
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
