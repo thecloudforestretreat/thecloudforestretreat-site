@@ -717,7 +717,6 @@
 <link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body data-page-language="en" data-page-type="booking_page">
 <div data-current-lang="en" id="siteHeader"></div><nav aria-label="Language switch" class="rawLangLinks"><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="booking_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/booking/" hreflang="en" lang="en">English</a><a data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="booking_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/reservas/" hreflang="es" lang="es">Español</a></nav>
-
 <main aria-label="Booking page" class="wrap">
 <section aria-label="Booking hero" class="hero" data-analytics-section="booking_hero">
 <div aria-label="Hero image" class="heroMedia">
@@ -778,16 +777,16 @@
 <div class="formGrid">
 <div class="field">
 <label for="first_name">First name <span class="req">*</span></label>
-<input autocapitalize="words" autocomplete="given-name" id="first_name" inputmode="text" name="first_name" placeholder="First name" required="" spellcheck="false" type="text">
-</input></div>
+<input autocapitalize="words" autocomplete="given-name" id="first_name" inputmode="text" name="first_name" placeholder="First name" required="" spellcheck="false" type="text"/>
+</div>
 <div class="field">
 <label for="last_name">Last name <span class="req">*</span></label>
-<input autocapitalize="words" autocomplete="family-name" id="last_name" inputmode="text" name="last_name" placeholder="Last name" required="" spellcheck="false" type="text">
-</input></div>
+<input autocapitalize="words" autocomplete="family-name" id="last_name" inputmode="text" name="last_name" placeholder="Last name" required="" spellcheck="false" type="text"/>
+</div>
 <div class="field">
 <label for="email">Email <span class="req">*</span></label>
-<input autocomplete="email" id="email" name="email" placeholder="you@example.com" required="" type="email">
-</input></div>
+<input autocomplete="email" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+</div>
 <div class="field">
 <label for="phone_number">Phone number <span class="req">*</span></label>
 <input autocomplete="tel" id="phone_number" inputmode="tel" name="phone_number" placeholder="Country code + phone number" required="" type="tel"/>
@@ -799,10 +798,10 @@
 </div>
 <div class="dateRow" style="margin-top:6px;">
 <div class="field" style="margin:0;">
-<input aria-label="Start date" id="date_start" name="date_start" required="" type="date"/>
+<input aria-label="Start date" data-date-guard="today-or-later" id="date_start" min="" name="date_start" required="" type="date"/>
 </div>
 <div class="field" style="margin:0;">
-<input aria-label="End date" id="date_end" name="date_end" type="date"/>
+<input aria-label="End date" data-date-guard="start-date-or-later" id="date_end" min="" name="date_end" type="date"/>
 </div>
 </div>
 <p class="dateHint">Select a start date and an optional end date. If your stay is one day, pick the same date for both.</p>
@@ -1191,6 +1190,46 @@ var statusCard = document.getElementById("tcfrStatusCard");
 
     })();
   </script>
+<script>
+(function(){
+  function pad(n){ return String(n).padStart(2, '0'); }
+  function todayISO(){
+    var d = new Date();
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
+  function initDateGuards(){
+    var today = todayISO();
 
-<script src="/assets/js/site.js"></script></body>
+    var start = document.getElementById('date_start') || document.getElementById('visit_start');
+    var end = document.getElementById('date_end') || document.getElementById('visit_end');
+
+    if(start){
+      start.setAttribute('min', today);
+      if(start.value && start.value < today){ start.value = today; }
+    }
+
+    if(end){
+      end.setAttribute('min', today);
+      if(end.value && end.value < today){ end.value = ''; }
+    }
+
+    if(start && end){
+      var syncEndMin = function(){
+        var minDate = start.value || today;
+        end.setAttribute('min', minDate);
+        if(end.value && end.value < minDate){ end.value = minDate; }
+      };
+      start.addEventListener('change', syncEndMin);
+      start.addEventListener('input', syncEndMin);
+      syncEndMin();
+    }
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initDateGuards);
+  }else{
+    initDateGuards();
+  }
+})();
+</script><script src="/assets/js/site.js"></script></body>
 </html>
