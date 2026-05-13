@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thecloudforestretreat.com/</loc>
@@ -321,16 +321,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thecloudforestretreat.com/romantic-getaway-quito/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://thecloudforestretreat.com/wellness-retreat-quito/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://thecloudforestretreat.com/cloud-forest-quito-ecuador/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -477,6 +467,36 @@
   </url>
   <url>
     <loc>https://thecloudforestretreat.com/es/donde-alojarse-cerca-de-quito-naturaleza/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecloudforestretreat.com/cloud-forest-weekend-escape/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecloudforestretreat.com/es/escapada-fin-de-semana-bosque-nublado/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecloudforestretreat.com/what-makes-a-cloud-forest-stay-different/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecloudforestretreat.com/es/que-hace-diferente-estadia-bosque-nublado/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecloudforestretreat.com/best-time-to-visit-ecuador-cloud-forest/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecloudforestretreat.com/es/mejor-epoca-visitar-bosque-nublado-ecuador/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
