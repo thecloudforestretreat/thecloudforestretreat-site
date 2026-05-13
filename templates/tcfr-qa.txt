@@ -33,6 +33,83 @@ MOST IMPORTANT PRIORITIES
 9. No accented characters in technical paths, slugs, IDs, classes, data attributes, schema URLs, image paths, CSS paths, JS paths, or analytics event names.
 10. Important CTAs, booking actions, language switch links, and utility links tracked through shared data-analytics-* attributes.
 
+
+
+GLOBAL HERO SYSTEM ENFORCEMENT
+This section is mandatory and exists to prevent visual drift between room pages, money pages, feature pages, planning pages, and hubs.
+
+All hero sections must lean on the centralized hero system in:
+/assets/css/site.css
+
+Approved global hero class families:
+- .hero
+- .heroMedia
+- .heroShade
+- .heroCard
+- .heroInner
+- .heroH1
+- .heroLead
+- .heroActions
+- .heroMeta
+- .heroChip
+- .roomHero
+- .roomHeroMedia
+- .roomHeroOverlay
+- .roomHeroInner
+- .roomKicker
+- .roomTitle
+- .roomLead
+- .roomHeroActions
+- .roomScrollHint
+- .roomScrollDot
+
+The following hero behaviors must be controlled globally:
+- hero height
+- hero border radius
+- hero shadow
+- hero image crop and object-position defaults
+- overlay gradient
+- glass overlay panel
+- overlay typography
+- hero H1 size and line-height
+- hero lead size and line-height
+- CTA spacing
+- hero chip/pill styling
+- mobile hero height
+- mobile overlay spacing
+- mobile CTA stacking
+
+Page files must NOT define large page-level CSS for:
+- .hero
+- .heroMedia
+- .heroShade
+- .heroCard
+- .heroInner
+- .heroH1
+- .heroLead
+- .roomHero
+- .roomHeroMedia
+- .roomHeroOverlay
+- .roomHeroInner
+- .roomTitle
+- .roomLead
+- .roomHeroActions
+
+Allowed page-level CSS is limited to:
+- zero page-level CSS preferred
+- a very narrow emergency production guard only when shared CSS is not available
+- one-off image crop variables or modifier classes only when absolutely necessary
+
+Strict blocker:
+- If a page contains a large inline <style> block redefining hero layout, hero typography, overlay panel, buttons, spacing, shadows, or responsive hero rules, the page is NOT ready to go live.
+- Move the reusable hero CSS into /assets/css/site.css, remove the page-level hero CSS, and return the full corrected page and global CSS file.
+
+Final hero QA before handoff:
+- Check that page hero text visually matches the global TCFR hero system.
+- Check that room pages, feature pages, and money pages use the same overlay typography and CTA rhythm.
+- Check that the page has no large inline hero CSS.
+- Check that any remaining inline CSS is either absent or narrowly justified.
+
 GLOBAL FILE ARCHITECTURE
 Analytics execution must be centralized in:
 /assets/js/site.js
