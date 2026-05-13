@@ -772,10 +772,10 @@
 <label>Fechas de visita <span class="req">*</span></label>
 <div class="dateRow">
 <div class="field">
-<input aria-label="Fecha de inicio (YYYY-MM-DD)" autocomplete="off" id="visit_start" inputmode="numeric" name="visit_start" placeholder="YYYY-MM-DD" required="" type="date"/>
+<input aria-label="Fecha de inicio (YYYY-MM-DD)" autocomplete="off" data-date-guard="today-or-later" id="visit_start" inputmode="numeric" min="" name="visit_start" placeholder="YYYY-MM-DD" required="" type="date"/>
 </div>
 <div class="field">
-<input aria-label="Fecha de fin (YYYY-MM-DD)" autocomplete="off" id="visit_end" inputmode="numeric" name="visit_end" placeholder="YYYY-MM-DD" type="date"/>
+<input aria-label="Fecha de fin (YYYY-MM-DD)" autocomplete="off" data-date-guard="start-date-or-later" id="visit_end" inputmode="numeric" min="" name="visit_end" placeholder="YYYY-MM-DD" type="date"/>
 </div>
 </div>
 <p class="dateHint">Inicio es obligatorio. Fin es opcional. Si tu estadía es de un día, usa la misma fecha.</p>
@@ -1132,5 +1132,46 @@
       });
     })();
   </script>
-<script src="/assets/js/site.js"></script></body>
+<script>
+(function(){
+  function pad(n){ return String(n).padStart(2, '0'); }
+  function todayISO(){
+    var d = new Date();
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
+  function initDateGuards(){
+    var today = todayISO();
+
+    var start = document.getElementById('date_start') || document.getElementById('visit_start');
+    var end = document.getElementById('date_end') || document.getElementById('visit_end');
+
+    if(start){
+      start.setAttribute('min', today);
+      if(start.value && start.value < today){ start.value = today; }
+    }
+
+    if(end){
+      end.setAttribute('min', today);
+      if(end.value && end.value < today){ end.value = ''; }
+    }
+
+    if(start && end){
+      var syncEndMin = function(){
+        var minDate = start.value || today;
+        end.setAttribute('min', minDate);
+        if(end.value && end.value < minDate){ end.value = minDate; }
+      };
+      start.addEventListener('change', syncEndMin);
+      start.addEventListener('input', syncEndMin);
+      syncEndMin();
+    }
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initDateGuards);
+  }else{
+    initDateGuards();
+  }
+})();
+</script><script src="/assets/js/site.js"></script></body>
 </html>
