@@ -250,6 +250,105 @@ p{
 }
 
 /* =========================================================
+   TCFR Core Global Utilities
+   Purpose:
+   - Shared behavior only
+   - No page-specific overrides
+   - Keeps fallback links, link-card CTA alignment, and overlay hero text stable
+   ========================================================= */
+
+.rawLangLinks{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
+}
+
+.linkGrid{
+  align-items:stretch;
+}
+
+.linkGrid .linkCard{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.linkGrid .linkText{
+  flex:1 1 auto;
+}
+
+.linkGrid .linkCta{
+  margin-top:auto;
+  align-self:flex-start;
+}
+
+.heroCard,
+.roomHeroInner{
+  --hero-overlay-title:rgba(255,255,255,0.98);
+  --hero-overlay-copy:rgba(231,228,209,0.92);
+  --hero-overlay-meta:rgba(231,228,209,0.90);
+  --hero-overlay-secondary-bg:rgba(245,245,220,0.82);
+  --hero-overlay-secondary-border:rgba(13,89,37,0.22);
+  --hero-overlay-secondary-text:var(--forest);
+  color:var(--hero-overlay-copy);
+}
+
+.heroCard h1,
+.heroCard h2,
+.heroCard h3,
+.heroCard h4,
+.heroCard .heroTitle,
+.roomHeroInner h1,
+.roomHeroInner h2,
+.roomHeroInner h3,
+.roomHeroInner h4,
+.roomHeroInner .roomTitle{
+  color:var(--hero-overlay-title);
+}
+
+.heroCard p,
+.heroCard .heroLead,
+.roomHeroInner p,
+.roomHeroInner .roomLead{
+  color:var(--hero-overlay-copy);
+}
+
+.heroCard .eyebrow,
+.roomHeroInner .roomKicker,
+.heroCard .heroChip,
+.heroCard .miniChip,
+.roomHeroInner .roomScrollHint,
+.roomHeroInner .roomScrollDot{
+  color:var(--hero-overlay-meta);
+}
+
+.roomHeroInner .roomScrollDot{
+  background:var(--hero-overlay-meta);
+}
+
+.heroCard .btn.primary,
+.roomHeroInner .btn.primary{
+  background:var(--orange);
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 16px 40px rgba(224,100,58,0.22);
+}
+
+.heroCard .btn.secondary,
+.roomHeroInner .btn.secondary{
+  background:var(--hero-overlay-secondary-bg);
+  border-color:var(--hero-overlay-secondary-border);
+  color:var(--hero-overlay-secondary-text);
+  box-shadow:0 14px 30px rgba(13,89,37,0.10);
+}
+
+/* =========================================================
    TCFR Footer (used by /assets/includes/footer.html)
    - Social icon row + copyright line
    - Matches TCFR palette and looks good on mobile + desktop
@@ -337,715 +436,22 @@ p{
   }
 }
 
-
-/* =========================================================
-   TCFR global card CTA alignment fix
-   - Minimal patch added to the last known good site.css
-   - Keeps page CTA buttons bottom-aligned inside equal-height link cards
-   - Does not change button colors, footer styles, or other global UI
-   ========================================================= */
-
-.linkGrid{
-  align-items: stretch;
-}
-
-.linkGrid .linkCard{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.linkGrid .linkText{
-  flex: 1 1 auto;
-}
-
-.linkGrid .linkCta{
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-
-/* =========================================================
-   TCFR global hero overlay text fix
-   - Ensures hero overlay copy stays white across generated pages
-   - Prevents global h1 / p rules from turning overlay text green or dark
-   - Scoped only to .heroCard so normal page typography is unchanged
-   ========================================================= */
-
-.heroCard{
-  color: rgba(255,255,255,0.97);
-}
-
-.heroCard h1,
-.heroCard h2,
-.heroCard h3,
-.heroCard h4,
-.heroCard p,
-.heroCard .heroLead,
-.heroCard .eyebrow,
-.heroCard .heroChip,
-.heroCard .miniChip{
-  color: inherit;
-}
-
-
-/* =========================================================
-   TCFR global hero overlay consistency system
-   - Standardizes hero overlay text and CTA styling sitewide
-   - Scoped only to overlay content containers used in hero sections
-   - Does not affect header, footer, breadcrumb bands, or regular page buttons
-   - Uses !important intentionally to override per-page hero overrides
-   ========================================================= */
-
-.heroCard,
-.roomHeroInner{
-  --hero-overlay-title: rgba(255,255,255,0.98);
-  --hero-overlay-copy: rgba(231,228,209,0.92);
-  --hero-overlay-meta: rgba(231,228,209,0.90);
-  --hero-overlay-secondary-bg: rgba(245,245,220,0.82);
-  --hero-overlay-secondary-border: rgba(13,89,37,0.22);
-  --hero-overlay-secondary-text: var(--forest);
-}
-
-.heroCard,
-.roomHeroInner,
-.heroCard h1,
-.heroCard h2,
-.heroCard h3,
-.heroCard h4,
-.roomHeroInner h1,
-.roomHeroInner h2,
-.roomHeroInner h3,
-.roomHeroInner h4,
-.heroCard .heroLead,
-.roomHeroInner .roomLead,
-.heroCard .eyebrow,
-.roomHeroInner .roomKicker,
-.heroCard .heroChip,
-.heroCard .miniChip,
-.roomHeroInner .roomScrollHint{
-  color: inherit;
-}
-
-.heroCard,
-.roomHeroInner{
-  color: var(--hero-overlay-copy) !important;
-}
-
-.heroCard h1,
-.heroCard h2,
-.heroCard h3,
-.heroCard h4,
-.heroCard .heroTitle,
-.roomHeroInner h1,
-.roomHeroInner h2,
-.roomHeroInner h3,
-.roomHeroInner h4,
-.roomHeroInner .roomTitle{
-  color: var(--hero-overlay-title) !important;
-}
-
-.heroCard p,
-.heroCard .heroLead,
-.roomHeroInner p,
-.roomHeroInner .roomLead{
-  color: var(--hero-overlay-copy) !important;
-}
-
-.heroCard .eyebrow,
-.roomHeroInner .roomKicker,
-.heroCard .heroChip,
-.heroCard .miniChip,
-.roomHeroInner .roomScrollHint,
-.roomHeroInner .roomScrollDot{
-  color: var(--hero-overlay-meta) !important;
-}
-
-.roomHeroInner .roomScrollDot{
-  background: var(--hero-overlay-meta) !important;
-}
-
-.heroCard .btn.primary,
-.roomHeroInner .btn.primary{
-  background: var(--orange) !important;
-  color: #ffffff !important;
-  border-color: transparent !important;
-  box-shadow: 0 16px 40px rgba(224,100,58,0.22) !important;
-}
-
-.heroCard .btn.secondary,
-.roomHeroInner .btn.secondary{
-  background: var(--hero-overlay-secondary-bg) !important;
-  border-color: var(--hero-overlay-secondary-border) !important;
-  color: var(--hero-overlay-secondary-text) !important;
-  box-shadow: 0 14px 30px rgba(13,89,37,0.10) !important;
-}
-
-.heroCard .btn.secondary:hover,
-.roomHeroInner .btn.secondary:hover{
-  filter: brightness(0.98);
-}
-
-/* =========================================================
-   TCFR raw language fallback visibility guard
-   - rawLangLinks stays in the DOM for hreflang/accessibility/analytics fallback
-   - Prevents duplicate visible "English Español" text below the header
-   - The visible language switch remains in the injected global header
-   ========================================================= */
-
-.rawLangLinks{
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0,0,0,0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
-
-
-
 /* =========================================================
    TCFR Homepage Global Module
    Purpose:
-   - Makes the homepage fully global-system driven
-   - Supports / and /es/ homepage files without page-level CSS
-   - Uses the same TCFR tokens, cards, buttons, spacing, and responsive system
-   - Safe to reuse for staging, production, and future homepage refreshes
+   - Stable approved homepage system
+   - No page-level CSS required
+   - Acts as the visual reference for rooms and future hub pages
    ========================================================= */
 
 body[data-page-type="home_page"] .wrap{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 28px var(--pad) 84px;
-  color: var(--ink);
-}
-
-body[data-page-type="home_page"] .hero{
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-  gap: 18px;
-  align-items: stretch;
-  margin-top: 8px;
-}
-
-body[data-page-type="home_page"] .heroMedia,
-body[data-page-type="home_page"] .heroCopy{
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  background: rgba(245,245,220,0.72);
-  color: var(--ink);
-}
-
-body[data-page-type="home_page"] .heroMedia{
-  position: relative;
-  min-height: 620px;
-  isolation: isolate;
-}
-
-body[data-page-type="home_page"] .heroMedia img{
-  width: 100%;
-  height: 100%;
-  min-height: 620px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-body[data-page-type="home_page"] .heroOverlay{
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    radial-gradient(720px 420px at 20% 18%, rgba(224,100,58,0.12), rgba(0,0,0,0) 58%),
-    linear-gradient(180deg, rgba(0,0,0,0.00), rgba(0,0,0,0.08));
-}
-
-body[data-page-type="home_page"] .heroCopy{
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 18px;
-}
-
-body[data-page-type="home_page"] .kicker,
-body[data-page-type="home_page"] .eyebrow,
-body[data-page-type="home_page"] .heroKicker{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  padding: 0;
-  background: transparent;
-  color: #0D5925;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  line-height: 1.2;
-  text-transform: uppercase;
-  width: fit-content;
-  text-shadow: none;
-}
-
-body[data-page-type="home_page"] .h1{
-  margin: 0;
-  color: var(--forest);
-  font-family: var(--font-head);
-  font-size: clamp(44px, 5vw, 72px);
-  font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 0.96;
-}
-
-body[data-page-type="home_page"] .sub{
-  margin-top: 16px;
-  color: rgba(11,26,16,0.78);
-  font-size: 16px;
-  font-weight: 750;
-  line-height: 1.72;
-  max-width: 66ch;
-}
-
-body[data-page-type="home_page"] .pillRow{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  margin-top: 18px;
-}
-
-body[data-page-type="home_page"] .pill{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.60);
-  color: var(--forest);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.1;
-  white-space: nowrap;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="home_page"] .heroCtas,
-body[data-page-type="home_page"] .bandActions{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-body[data-page-type="home_page"] .tcfr-google-reviews{
-  margin-top: 6px;
-  padding: 0;
-}
-
-body[data-page-type="home_page"] .tcfr-google-reviews-inner{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 14px;
-  align-items: center;
-  padding: 16px;
-  border-radius: var(--r);
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.54);
-  box-shadow: 0 12px 30px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="home_page"] .tcfr-google-left{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-body[data-page-type="home_page"] .tcfr-google-logo{
-  width: 34px;
-  height: 34px;
-  max-width: 34px;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
-
-body[data-page-type="home_page"] .tcfr-google-rating{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 7px;
-  color: var(--ink);
-  font-size: 14px;
-  font-weight:800;
-}
-
-body[data-page-type="home_page"] .tcfr-rating-score{
-  color: var(--forest);
-  font-weight: 800;
-}
-
-body[data-page-type="home_page"] .tcfr-stars{
-  color: #F4B840;
-  letter-spacing: 0.04em;
-  font-size: 14px;
-  line-height: 1;
-}
-
-body[data-page-type="home_page"] .tcfr-review-count{
-  color: rgba(11,26,16,0.70);
-  font-weight: 800;
-}
-
-body[data-page-type="home_page"] .tcfr-tourism{
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-body[data-page-type="home_page"] .tcfr-tourismLogo{
-  width: 82px;
-  max-width: 82px;
-  height: auto;
-  object-fit: contain;
-}
-
-body[data-page-type="home_page"] .tcfr-google-actions{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  align-items: center;
-  grid-column: 1 / 2;
-}
-
-body[data-page-type="home_page"] .tcfr-google-actions .btn{
-  min-height: 40px;
-  padding: 10px 13px;
-  font-size: 13px;
-}
-
-body[data-page-type="home_page"] .trustRow{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-body[data-page-type="home_page"] .trustCard{
-  padding: 14px;
-  border-radius: var(--r);
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.54);
-  box-shadow: 0 12px 30px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="home_page"] .trustCard.fullRow{
-  grid-column: 1 / -1;
-}
-
-body[data-page-type="home_page"] .trustTitle{
-  margin: 0 0 5px;
-  color: var(--forest);
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.25;
-}
-
-body[data-page-type="home_page"] .trustText{
-  margin: 0;
-  color: rgba(11,26,16,0.72);
-  font-size: 13.5px;
-  font-weight: 700;
-  line-height: 1.55;
-}
-
-body[data-page-type="home_page"] .section{
-  margin-top: 22px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  background: rgba(245,245,220,0.72);
-  color: var(--ink);
-}
-
-body[data-page-type="home_page"] .sectionHead{
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-
-body[data-page-type="home_page"] .h2{
-  margin: 0;
-  color: var(--forest);
-  font-family: var(--font-head);
-  font-size: clamp(24px, 2.6vw, 34px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.04;
-}
-
-body[data-page-type="home_page"] .hint{
-  margin: 0;
-  color: rgba(11,26,16,0.72);
-  font-size: 14px;
-  font-weight: 750;
-  line-height: 1.62;
-  max-width: 68ch;
-}
-
-body[data-page-type="home_page"] .grid3{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  align-items: stretch;
-}
-
-body[data-page-type="home_page"] .tile{
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  height: 100%;
-  min-width: 0;
-  padding: 16px;
-  border-radius: var(--r);
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.62);
-  color: var(--ink);
-  box-shadow: 0 12px 30px rgba(13,89,37,0.10);
-  text-decoration: none;
-  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
-}
-
-body[data-page-type="home_page"] .tile:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,0.74);
-  border-color: rgba(13,89,37,0.20);
-  text-decoration: none;
-}
-
-body[data-page-type="home_page"] .tileTitle{
-  margin: 0 0 6px;
-  color: var(--forest);
-  font-family: var(--font-head);
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-body[data-page-type="home_page"] .tileText{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  font-size: 14.4px;
-  font-weight: 700;
-  line-height: 1.65;
-}
-
-body[data-page-type="home_page"] .tileMeta{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-top: auto;
-  color: var(--forest);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-body[data-page-type="home_page"] .photoStrip{
-  margin-top: 14px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-body[data-page-type="home_page"] .photoCard{
-  position: relative;
-  min-height: 220px;
-  overflow: hidden;
-  border-radius: var(--r);
-  border: 1px solid rgba(11,26,16,0.10);
-  box-shadow: 0 12px 30px rgba(13,89,37,0.10);
-  background: rgba(0,0,0,0.10);
-}
-
-body[data-page-type="home_page"] .photoCard img{
-  width: 100%;
-  height: 100%;
-  min-height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-body[data-page-type="home_page"] .photoCap{
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.20);
-  background: rgba(0,0,0,0.32);
-  color: rgba(255,255,255,0.96);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.3;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-body[data-page-type="home_page"] .band{
-  margin-top: 22px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-  border-radius: var(--r2);
-  border: 1px solid var(--line);
-  background: rgba(245,245,220,0.72);
-  box-shadow: var(--shadow);
-  color: var(--ink);
-}
-
-body[data-page-type="home_page"] .bandTitle{
-  margin: 0 0 6px;
-  color: var(--forest);
-  font-family: var(--font-head);
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-body[data-page-type="home_page"] .bandText{
-  margin: 0;
-  color: rgba(11,26,16,0.72);
-  font-size: 14.5px;
-  font-weight: 700;
-  line-height: 1.62;
-  max-width: 74ch;
-}
-
-body[data-page-type="home_page"] .bandActions{
-  margin-top: 0;
-  flex: 0 0 auto;
-}
-
-@media (max-width: 1020px){
-  body[data-page-type="home_page"] .hero{
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="home_page"] .heroMedia,
-  body[data-page-type="home_page"] .heroMedia img{
-    min-height: 420px;
-  }
-
-  body[data-page-type="home_page"] .heroCopy{
-    padding: 22px;
-  }
-
-  body[data-page-type="home_page"] .grid3,
-  body[data-page-type="home_page"] .photoStrip{
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="home_page"] .photoCard,
-  body[data-page-type="home_page"] .photoCard img{
-    min-height: 260px;
-  }
-}
-
-@media (max-width: 640px){
-  body[data-page-type="home_page"] .wrap{
-    padding: 16px var(--pad) 64px;
-  }
-
-  body[data-page-type="home_page"] .heroMedia,
-  body[data-page-type="home_page"] .heroMedia img{
-    min-height: 320px;
-  }
-
-  body[data-page-type="home_page"] .heroCopy,
-  body[data-page-type="home_page"] .section,
-  body[data-page-type="home_page"] .band{
-    padding: 16px;
-  }
-
-  body[data-page-type="home_page"] .h1{
-    font-size: clamp(36px, 13vw, 52px);
-  }
-
-  body[data-page-type="home_page"] .tcfr-google-reviews-inner{
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="home_page"] .tcfr-tourism{
-    grid-column: auto;
-    grid-row: auto;
-    justify-content: flex-start;
-  }
-
-  body[data-page-type="home_page"] .tcfr-tourismLogo{
-    width: 74px;
-    max-width: 74px;
-  }
-
-  body[data-page-type="home_page"] .tcfr-google-actions,
-  body[data-page-type="home_page"] .heroCtas,
-  body[data-page-type="home_page"] .bandActions{
-    width: 100%;
-  }
-
-  body[data-page-type="home_page"] .tcfr-google-actions .btn,
-  body[data-page-type="home_page"] .heroCtas .btn,
-  body[data-page-type="home_page"] .bandActions .btn{
-    width: 100%;
-  }
-
-  body[data-page-type="home_page"] .trustRow{
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="home_page"] .trustCard.fullRow{
-    grid-column: auto;
-  }
-}
-
-/* =========================================================
-   TCFR Rooms Hub Global Module
-   Production global-system implementation
-   Purpose:
-   - Rooms hub is managed by global CSS only
-   - No page-level visual styling required
-   - Matches approved homepage hero, panels, cards, typography, buttons, and labels
-   - Room-specific rules below control layout and content structure only
-   ========================================================= */
-
-.roomsHub{
   max-width:var(--container);
   margin:0 auto;
   padding:28px var(--pad) 84px;
   color:var(--ink);
 }
 
-.roomsHero{
+body[data-page-type="home_page"] .hero{
   display:grid;
   grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
   gap:18px;
@@ -1053,8 +459,8 @@ body[data-page-type="home_page"] .bandActions{
   margin-top:8px;
 }
 
-.roomsHeroMedia,
-.roomsHeroCopy{
+body[data-page-type="home_page"] .heroMedia,
+body[data-page-type="home_page"] .heroCopy{
   border:1px solid var(--line);
   border-radius:var(--r2);
   box-shadow:var(--shadow);
@@ -1063,22 +469,32 @@ body[data-page-type="home_page"] .bandActions{
   color:var(--ink);
 }
 
-.roomsHeroMedia{
-  min-height:420px;
+body[data-page-type="home_page"] .heroMedia{
   position:relative;
+  min-height:620px;
   isolation:isolate;
 }
 
-.roomsHeroMedia img{
+body[data-page-type="home_page"] .heroMedia img{
   width:100%;
   height:100%;
-  min-height:420px;
+  min-height:620px;
   object-fit:cover;
   object-position:center;
   display:block;
 }
 
-.roomsHeroCopy{
+body[data-page-type="home_page"] .heroOverlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:
+    radial-gradient(720px 420px at 20% 18%, rgba(224,100,58,.12), rgba(0,0,0,0) 58%),
+    linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.08));
+}
+
+body[data-page-type="home_page"] .heroCopy{
   padding:28px;
   display:flex;
   flex-direction:column;
@@ -1088,13 +504,14 @@ body[data-page-type="home_page"] .bandActions{
   text-align:left;
 }
 
-.roomsHeroCopy .badge,
-.roomsHeroCopy .kicker,
-.roomsHeroCopy .eyebrow{
+body[data-page-type="home_page"] .kicker,
+body[data-page-type="home_page"] .eyebrow,
+body[data-page-type="home_page"] .heroKicker{
   display:inline-flex;
   align-items:center;
   justify-content:flex-start;
   width:fit-content;
+  max-width:100%;
   margin:0 0 12px;
   padding:0;
   border:0;
@@ -1112,6 +529,537 @@ body[data-page-type="home_page"] .bandActions{
   text-shadow:none;
 }
 
+body[data-page-type="home_page"] .h1{
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:clamp(44px,5vw,72px);
+  font-weight:800;
+  letter-spacing:-.045em;
+  line-height:.96;
+  text-align:left;
+}
+
+body[data-page-type="home_page"] .sub{
+  margin:0;
+  max-width:66ch;
+  color:rgba(11,26,16,.78);
+  font-size:16px;
+  font-weight:750;
+  line-height:1.72;
+  text-align:left;
+}
+
+body[data-page-type="home_page"] .pillRow,
+body[data-page-type="home_page"] .heroCtas,
+body[data-page-type="home_page"] .bandActions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+}
+
+body[data-page-type="home_page"] .pillRow,
+body[data-page-type="home_page"] .heroCtas{
+  margin-top:0;
+}
+
+body[data-page-type="home_page"] .pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:9px 14px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,.18);
+  background:rgba(255,255,255,.60);
+  color:var(--forest);
+  font-size:13px;
+  font-weight:800;
+  line-height:1.1;
+  white-space:nowrap;
+  box-shadow:0 10px 26px rgba(13,89,37,.10);
+}
+
+body[data-page-type="home_page"] .tcfr-google-reviews{
+  margin-top:0;
+  padding:0;
+  width:100%;
+}
+
+body[data-page-type="home_page"] .tcfr-google-reviews-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:14px;
+  align-items:center;
+  padding:16px;
+  border-radius:var(--r);
+  border:1px solid rgba(11,26,16,.10);
+  background:rgba(255,255,255,.54);
+  box-shadow:0 12px 30px rgba(13,89,37,.10);
+}
+
+body[data-page-type="home_page"] .tcfr-google-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+
+body[data-page-type="home_page"] .tcfr-google-logo{
+  width:34px;
+  height:34px;
+  max-width:34px;
+  object-fit:contain;
+  flex:0 0 auto;
+}
+
+body[data-page-type="home_page"] .tcfr-google-rating{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:7px;
+  color:var(--ink);
+  font-size:14px;
+  font-weight:800;
+}
+
+body[data-page-type="home_page"] .tcfr-rating-score{
+  color:var(--forest);
+  font-weight:800;
+}
+
+body[data-page-type="home_page"] .tcfr-stars{
+  color:#F4B840;
+  letter-spacing:.04em;
+  font-size:14px;
+  line-height:1;
+}
+
+body[data-page-type="home_page"] .tcfr-review-count{
+  color:rgba(11,26,16,.70);
+  font-weight:800;
+}
+
+body[data-page-type="home_page"] .tcfr-tourism{
+  grid-column:2;
+  grid-row:1 / span 2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+body[data-page-type="home_page"] .tcfr-tourismLogo{
+  width:82px;
+  max-width:82px;
+  height:auto;
+  object-fit:contain;
+}
+
+body[data-page-type="home_page"] .tcfr-google-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  align-items:center;
+  grid-column:1 / 2;
+}
+
+body[data-page-type="home_page"] .tcfr-google-actions .btn{
+  min-height:40px;
+  padding:10px 13px;
+  font-size:13px;
+}
+
+body[data-page-type="home_page"] .trustRow{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  width:100%;
+}
+
+body[data-page-type="home_page"] .trustCard{
+  padding:14px;
+  border-radius:var(--r);
+  border:1px solid rgba(11,26,16,.10);
+  background:rgba(255,255,255,.54);
+  box-shadow:0 12px 30px rgba(13,89,37,.10);
+}
+
+body[data-page-type="home_page"] .trustCard.fullRow{
+  grid-column:1 / -1;
+}
+
+body[data-page-type="home_page"] .trustTitle{
+  margin:0 0 5px;
+  color:var(--forest);
+  font-size:14px;
+  font-weight:800;
+  line-height:1.25;
+}
+
+body[data-page-type="home_page"] .trustText{
+  margin:0;
+  color:rgba(11,26,16,.72);
+  font-size:13.5px;
+  font-weight:700;
+  line-height:1.55;
+}
+
+body[data-page-type="home_page"] .section{
+  margin-top:22px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  background:rgba(245,245,220,.72);
+  color:var(--ink);
+}
+
+body[data-page-type="home_page"] .sectionHead{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+body[data-page-type="home_page"] .h2{
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:clamp(24px,2.6vw,34px);
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.04;
+  text-align:left;
+}
+
+body[data-page-type="home_page"] .hint{
+  margin:0;
+  max-width:68ch;
+  color:rgba(11,26,16,.72);
+  font-size:14px;
+  font-weight:750;
+  line-height:1.62;
+  text-align:left;
+}
+
+body[data-page-type="home_page"] .grid3{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="home_page"] .tile{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  height:100%;
+  min-width:0;
+  padding:16px;
+  border-radius:var(--r);
+  border:1px solid rgba(11,26,16,.10);
+  background:rgba(255,255,255,.62);
+  color:var(--ink);
+  box-shadow:0 12px 30px rgba(13,89,37,.10);
+  text-decoration:none;
+  transition:transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+body[data-page-type="home_page"] .tile:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.74);
+  border-color:rgba(13,89,37,.20);
+  text-decoration:none;
+}
+
+body[data-page-type="home_page"] .tileTitle{
+  margin:0 0 6px;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:21px;
+  font-weight:800;
+  letter-spacing:-.02em;
+  line-height:1.1;
+}
+
+body[data-page-type="home_page"] .tileText{
+  margin:0;
+  color:rgba(11,26,16,.78);
+  font-size:14.4px;
+  font-weight:700;
+  line-height:1.65;
+}
+
+body[data-page-type="home_page"] .tileMeta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:auto;
+  color:var(--forest);
+  font-size:13px;
+  font-weight:800;
+}
+
+body[data-page-type="home_page"] .photoStrip{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+
+body[data-page-type="home_page"] .photoCard{
+  position:relative;
+  min-height:220px;
+  overflow:hidden;
+  border-radius:var(--r);
+  border:1px solid rgba(11,26,16,.10);
+  box-shadow:0 12px 30px rgba(13,89,37,.10);
+  background:rgba(0,0,0,.10);
+}
+
+body[data-page-type="home_page"] .photoCard img{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+body[data-page-type="home_page"] .photoCap{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.20);
+  background:rgba(0,0,0,.32);
+  color:rgba(255,255,255,.96);
+  font-size:13px;
+  font-weight:800;
+  line-height:1.3;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+body[data-page-type="home_page"] .band{
+  margin-top:22px;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+  border-radius:var(--r2);
+  border:1px solid var(--line);
+  background:rgba(245,245,220,.72);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+body[data-page-type="home_page"] .bandTitle{
+  margin:0 0 6px;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:24px;
+  font-weight:800;
+  line-height:1.1;
+  letter-spacing:-.02em;
+}
+
+body[data-page-type="home_page"] .bandText{
+  margin:0;
+  max-width:74ch;
+  color:rgba(11,26,16,.72);
+  font-size:14.5px;
+  font-weight:700;
+  line-height:1.62;
+}
+
+body[data-page-type="home_page"] .bandActions{
+  margin-top:0;
+  flex:0 0 auto;
+}
+
+@media(max-width:1020px){
+  body[data-page-type="home_page"] .hero{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="home_page"] .heroMedia,
+  body[data-page-type="home_page"] .heroMedia img{
+    min-height:420px;
+  }
+
+  body[data-page-type="home_page"] .heroCopy{
+    padding:22px;
+  }
+
+  body[data-page-type="home_page"] .grid3,
+  body[data-page-type="home_page"] .photoStrip{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="home_page"] .photoCard,
+  body[data-page-type="home_page"] .photoCard img{
+    min-height:260px;
+  }
+}
+
+@media(max-width:640px){
+  body[data-page-type="home_page"] .wrap{
+    padding:16px var(--pad) 64px;
+  }
+
+  body[data-page-type="home_page"] .heroMedia,
+  body[data-page-type="home_page"] .heroMedia img{
+    min-height:320px;
+  }
+
+  body[data-page-type="home_page"] .heroCopy,
+  body[data-page-type="home_page"] .section,
+  body[data-page-type="home_page"] .band{
+    padding:16px;
+  }
+
+  body[data-page-type="home_page"] .h1{
+    font-size:clamp(36px,13vw,52px);
+  }
+
+  body[data-page-type="home_page"] .tcfr-google-reviews-inner{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="home_page"] .tcfr-tourism{
+    grid-column:auto;
+    grid-row:auto;
+    justify-content:flex-start;
+  }
+
+  body[data-page-type="home_page"] .tcfr-tourismLogo{
+    width:74px;
+    max-width:74px;
+  }
+
+  body[data-page-type="home_page"] .tcfr-google-actions,
+  body[data-page-type="home_page"] .heroCtas,
+  body[data-page-type="home_page"] .bandActions{
+    width:100%;
+  }
+
+  body[data-page-type="home_page"] .tcfr-google-actions .btn,
+  body[data-page-type="home_page"] .heroCtas .btn,
+  body[data-page-type="home_page"] .bandActions .btn{
+    width:100%;
+  }
+
+  body[data-page-type="home_page"] .trustRow{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="home_page"] .trustCard.fullRow{
+    grid-column:auto;
+  }
+}
+
+/* =========================================================
+   TCFR Rooms Hub Global Module
+   Purpose:
+   - Global CSS managed rooms hub
+   - Mirrors approved homepage surfaces and typography
+   - Room-specific rules are limited to layout and content structure
+   ========================================================= */
+
+body[data-page-type="room_index"] .roomsHub,
+.roomsHub{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:28px var(--pad) 84px;
+  color:var(--ink);
+}
+
+body[data-page-type="room_index"] .roomsHero,
+.roomsHero{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:18px;
+  align-items:stretch;
+  margin-top:8px;
+}
+
+body[data-page-type="room_index"] .roomsHeroMedia,
+body[data-page-type="room_index"] .roomsHeroCopy,
+.roomsHeroMedia,
+.roomsHeroCopy{
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  background:rgba(245,245,220,.72);
+  color:var(--ink);
+}
+
+body[data-page-type="room_index"] .roomsHeroMedia,
+.roomsHeroMedia{
+  min-height:420px;
+  position:relative;
+  isolation:isolate;
+}
+
+body[data-page-type="room_index"] .roomsHeroMedia img,
+.roomsHeroMedia img{
+  width:100%;
+  height:100%;
+  min-height:420px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+body[data-page-type="room_index"] .roomsHeroCopy,
+.roomsHeroCopy{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:18px;
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .roomsHeroCopy .badge,
+body[data-page-type="room_index"] .roomsHeroCopy .kicker,
+body[data-page-type="room_index"] .roomsHeroCopy .eyebrow,
+.roomsHeroCopy .badge,
+.roomsHeroCopy .kicker,
+.roomsHeroCopy .eyebrow{
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:fit-content;
+  max-width:100%;
+  margin:0 0 12px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  color:var(--forest);
+  font-family:var(--font-body);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  line-height:1.2;
+  text-transform:uppercase;
+  text-align:left;
+  text-shadow:none;
+}
+
+body[data-page-type="room_index"] .roomsHeroCopy h1,
 .roomsHeroCopy h1{
   margin:0;
   max-width:10.5ch;
@@ -1121,8 +1069,10 @@ body[data-page-type="home_page"] .bandActions{
   font-weight:800;
   letter-spacing:-.045em;
   line-height:.96;
+  text-align:left;
 }
 
+body[data-page-type="room_index"] .roomsHeroLead,
 .roomsHeroLead{
   margin:0;
   max-width:66ch;
@@ -1130,8 +1080,11 @@ body[data-page-type="home_page"] .bandActions{
   font-size:16px;
   font-weight:750;
   line-height:1.72;
+  text-align:left;
 }
 
+body[data-page-type="room_index"] .roomsHeroActions,
+body[data-page-type="room_index"] .roomsBandActions,
 .roomsHeroActions,
 .roomsBandActions{
   display:flex;
@@ -1141,6 +1094,8 @@ body[data-page-type="home_page"] .bandActions{
   margin-top:4px;
 }
 
+body[data-page-type="room_index"] .roomsPanel,
+body[data-page-type="room_index"] .roomsBand,
 .roomsPanel,
 .roomsBand{
   margin-top:22px;
@@ -1152,6 +1107,7 @@ body[data-page-type="home_page"] .bandActions{
   color:var(--ink);
 }
 
+body[data-page-type="room_index"] .roomsPanelHeader,
 .roomsPanelHeader{
   display:flex;
   align-items:flex-end;
@@ -1161,6 +1117,8 @@ body[data-page-type="home_page"] .bandActions{
   margin-bottom:14px;
 }
 
+body[data-page-type="room_index"] .roomsPanelHeader h2,
+body[data-page-type="room_index"] .roomsBand h2,
 .roomsPanelHeader h2,
 .roomsBand h2{
   margin:0;
@@ -1170,8 +1128,11 @@ body[data-page-type="home_page"] .bandActions{
   font-weight:800;
   letter-spacing:-.03em;
   line-height:1.04;
+  text-align:left;
 }
 
+body[data-page-type="room_index"] .roomsPanelHeader p,
+body[data-page-type="room_index"] .roomsBand p,
 .roomsPanelHeader p,
 .roomsBand p{
   margin:0;
@@ -1180,8 +1141,10 @@ body[data-page-type="home_page"] .bandActions{
   font-size:14px;
   font-weight:750;
   line-height:1.62;
+  text-align:left;
 }
 
+body[data-page-type="room_index"] .roomsGrid,
 .roomsGrid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -1189,6 +1152,7 @@ body[data-page-type="home_page"] .bandActions{
   align-items:stretch;
 }
 
+body[data-page-type="room_index"] .roomsInfoGrid,
 .roomsInfoGrid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -1196,6 +1160,7 @@ body[data-page-type="home_page"] .bandActions{
   align-items:stretch;
 }
 
+body[data-page-type="room_index"] .roomsGuideGrid,
 .roomsGuideGrid{
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
@@ -1203,6 +1168,9 @@ body[data-page-type="home_page"] .bandActions{
   align-items:stretch;
 }
 
+body[data-page-type="room_index"] .roomCardGlobal,
+body[data-page-type="room_index"] .roomsInfoCard,
+body[data-page-type="room_index"] .roomsGuideCard,
 .roomCardGlobal,
 .roomsInfoCard,
 .roomsGuideCard{
@@ -1221,6 +1189,8 @@ body[data-page-type="home_page"] .bandActions{
   transition:transform 140ms ease, background 140ms ease, border-color 140ms ease;
 }
 
+body[data-page-type="room_index"] .roomCardGlobal:hover,
+body[data-page-type="room_index"] .roomsGuideCard:hover,
 .roomCardGlobal:hover,
 .roomsGuideCard:hover{
   transform:translateY(-1px);
@@ -1229,6 +1199,7 @@ body[data-page-type="home_page"] .bandActions{
   text-decoration:none;
 }
 
+body[data-page-type="room_index"] .roomCardGlobal img,
 .roomCardGlobal img{
   width:100%;
   aspect-ratio:16 / 10;
@@ -1236,6 +1207,9 @@ body[data-page-type="home_page"] .bandActions{
   display:block;
 }
 
+body[data-page-type="room_index"] .roomCardBody,
+body[data-page-type="room_index"] .roomsInfoCard,
+body[data-page-type="room_index"] .roomsGuideCard,
 .roomCardBody,
 .roomsInfoCard,
 .roomsGuideCard{
@@ -1243,12 +1217,16 @@ body[data-page-type="home_page"] .bandActions{
   gap:10px;
 }
 
+body[data-page-type="room_index"] .roomCardBody,
 .roomCardBody{
   display:flex;
   flex-direction:column;
   height:100%;
 }
 
+body[data-page-type="room_index"] .roomCardBody h3,
+body[data-page-type="room_index"] .roomsInfoCard h3,
+body[data-page-type="room_index"] .roomsGuideCard h3,
 .roomCardBody h3,
 .roomsInfoCard h3,
 .roomsGuideCard h3{
@@ -1259,8 +1237,12 @@ body[data-page-type="home_page"] .bandActions{
   font-weight:800;
   letter-spacing:-.02em;
   line-height:1.1;
+  text-align:left;
 }
 
+body[data-page-type="room_index"] .roomCardBody p,
+body[data-page-type="room_index"] .roomsInfoCard p,
+body[data-page-type="room_index"] .roomsGuideCard p,
 .roomCardBody p,
 .roomsInfoCard p,
 .roomsGuideCard p{
@@ -1269,8 +1251,10 @@ body[data-page-type="home_page"] .bandActions{
   font-size:14.4px;
   font-weight:700;
   line-height:1.65;
+  text-align:left;
 }
 
+body[data-page-type="room_index"] .roomPillRow,
 .roomPillRow{
   display:flex;
   flex-wrap:wrap;
@@ -1279,6 +1263,7 @@ body[data-page-type="home_page"] .bandActions{
   margin-top:auto;
 }
 
+body[data-page-type="room_index"] .roomPill,
 .roomPill{
   display:inline-flex;
   align-items:center;
@@ -1297,18 +1282,22 @@ body[data-page-type="home_page"] .bandActions{
   box-shadow:0 10px 26px rgba(13,89,37,.10);
 }
 
+body[data-page-type="room_index"] .roomCardCta,
+body[data-page-type="room_index"] .roomsGuideCard .linkCta,
 .roomCardCta,
 .roomsGuideCard .linkCta{
   margin-top:auto;
   align-self:flex-start;
 }
 
+body[data-page-type="room_index"] .roomsGuideCard .linkCta,
 .roomsGuideCard .linkCta{
   color:var(--forest);
   font-size:13px;
   font-weight:800;
 }
 
+body[data-page-type="room_index"] .roomsBand,
 .roomsBand{
   display:flex;
   align-items:center;
@@ -1317,64 +1306,85 @@ body[data-page-type="home_page"] .bandActions{
   flex-wrap:wrap;
 }
 
+body[data-page-type="room_index"] .roomsBandActions,
 .roomsBandActions{
   margin-top:0;
   flex:0 0 auto;
 }
 
 @media(max-width:1020px){
+  body[data-page-type="room_index"] .roomsHero,
   .roomsHero{
     grid-template-columns:1fr;
   }
 
+  body[data-page-type="room_index"] .roomsHeroMedia,
+  body[data-page-type="room_index"] .roomsHeroMedia img,
   .roomsHeroMedia,
   .roomsHeroMedia img{
     min-height:420px;
   }
 
+  body[data-page-type="room_index"] .roomsHeroCopy,
   .roomsHeroCopy{
     padding:22px;
   }
 
+  body[data-page-type="room_index"] .roomsGrid,
+  body[data-page-type="room_index"] .roomsInfoGrid,
   .roomsGrid,
   .roomsInfoGrid{
     grid-template-columns:1fr;
   }
 
+  body[data-page-type="room_index"] .roomsGuideGrid,
   .roomsGuideGrid{
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 
 @media(max-width:640px){
+  body[data-page-type="room_index"] .roomsHub,
   .roomsHub{
     padding:16px var(--pad) 64px;
   }
 
+  body[data-page-type="room_index"] .roomsHeroMedia,
+  body[data-page-type="room_index"] .roomsHeroMedia img,
   .roomsHeroMedia,
   .roomsHeroMedia img{
     min-height:320px;
   }
 
+  body[data-page-type="room_index"] .roomsHeroCopy,
+  body[data-page-type="room_index"] .roomsPanel,
+  body[data-page-type="room_index"] .roomsBand,
   .roomsHeroCopy,
   .roomsPanel,
   .roomsBand{
     padding:16px;
   }
 
+  body[data-page-type="room_index"] .roomsHeroCopy h1,
   .roomsHeroCopy h1{
     font-size:clamp(36px,13vw,52px);
   }
 
+  body[data-page-type="room_index"] .roomsGuideGrid,
   .roomsGuideGrid{
     grid-template-columns:1fr;
   }
 
+  body[data-page-type="room_index"] .roomsHeroActions,
+  body[data-page-type="room_index"] .roomsBandActions,
   .roomsHeroActions,
   .roomsBandActions{
     width:100%;
   }
 
+  body[data-page-type="room_index"] .roomsHeroActions .btn,
+  body[data-page-type="room_index"] .roomsBandActions .btn,
+  body[data-page-type="room_index"] .roomsPanelHeader .btn,
   .roomsHeroActions .btn,
   .roomsBandActions .btn,
   .roomsPanelHeader .btn{
@@ -5631,232 +5641,5 @@ body[data-page-type="room_detail_page"] .roomCtaActions{
   body[data-page-type] .roomScrollHint{
     font-size: 11.5px;
     padding: 7px 10px;
-  }
-}
-
-/* =========================================================
-   TCFR Production Design System Lock
-   Purpose:
-   - Final cascade layer for production
-   - Keeps page modules layout-only
-   - Locks shared visual system across homepage, rooms, feature hubs, detail pages, and future pages
-   - Uses weight 800 exactly for display, section, and card headings
-   ========================================================= */
-
-:root{
-  --tcfr-panel-bg:rgba(245,245,220,.72);
-  --tcfr-card-bg:rgba(255,255,255,.62);
-  --tcfr-card-bg-hover:rgba(255,255,255,.74);
-
-  --tcfr-display-weight:800;
-  --tcfr-section-weight:800;
-  --tcfr-card-heading-weight:800;
-  --tcfr-body-weight:700;
-  --tcfr-body-strong-weight:750;
-
-  --tcfr-display-size:clamp(44px,5vw,72px);
-  --tcfr-section-size:clamp(24px,2.6vw,34px);
-  --tcfr-card-title-size:21px;
-
-  --tcfr-display-line:.96;
-  --tcfr-section-line:1.04;
-  --tcfr-card-line:1.1;
-
-  --tcfr-display-tracking:-.045em;
-  --tcfr-section-tracking:-.03em;
-  --tcfr-card-tracking:-.02em;
-
-  --tcfr-kicker-size:12px;
-  --tcfr-kicker-weight:800;
-  --tcfr-kicker-tracking:.12em;
-}
-
-/* Hidden fallback language links */
-.rawLangLinks{
-  position:absolute !important;
-  width:1px !important;
-  height:1px !important;
-  padding:0 !important;
-  margin:-1px !important;
-  overflow:hidden !important;
-  clip:rect(0,0,0,0) !important;
-  white-space:nowrap !important;
-  border:0 !important;
-}
-
-/* Shared display heading system */
-body[data-page-type="home_page"] .h1,
-body[data-page-type="home_page"] .heroCopy h1,
-.roomsHeroCopy h1,
-body[data-page-type="room_index"] .roomsHeroCopy h1{
-  margin:0 !important;
-  color:var(--forest) !important;
-  font-family:var(--font-head) !important;
-  font-size:var(--tcfr-display-size) !important;
-  font-weight:800 !important;
-  letter-spacing:var(--tcfr-display-tracking) !important;
-  line-height:var(--tcfr-display-line) !important;
-  text-align:left !important;
-}
-
-/* Shared section heading system */
-body[data-page-type="home_page"] .h2,
-body[data-page-type="home_page"] .sectionHead h2,
-.roomsPanelHeader h2,
-.roomsBand h2,
-body[data-page-type="features_hub"] .sectionTitle,
-body[data-page-type="feature_detail_page"] .sectionTitle,
-body[data-page-type="feature_detail_page"] .panelTitle{
-  margin:0 !important;
-  color:var(--forest) !important;
-  font-family:var(--font-head) !important;
-  font-size:var(--tcfr-section-size) !important;
-  font-weight:800 !important;
-  letter-spacing:var(--tcfr-section-tracking) !important;
-  line-height:var(--tcfr-section-line) !important;
-  text-align:left !important;
-}
-
-/* Shared card heading system */
-body[data-page-type="home_page"] .tileTitle,
-.roomCardBody h3,
-.roomsInfoCard h3,
-.roomsGuideCard h3,
-body[data-page-type="features_hub"] .cardTitle,
-body[data-page-type="feature_detail_page"] .amenityCard h3,
-body[data-page-type="feature_detail_page"] .relatedFeatureCard h3{
-  margin:0 0 6px !important;
-  color:var(--forest) !important;
-  font-family:var(--font-head) !important;
-  font-size:var(--tcfr-card-title-size) !important;
-  font-weight:800 !important;
-  letter-spacing:var(--tcfr-card-tracking) !important;
-  line-height:var(--tcfr-card-line) !important;
-  text-align:left !important;
-}
-
-/* Shared eyebrow/kicker system */
-body[data-page-type="home_page"] .kicker,
-body[data-page-type="home_page"] .eyebrow,
-body[data-page-type="home_page"] .heroKicker,
-.roomsHeroCopy .badge,
-.roomsHeroCopy .kicker,
-.roomsHeroCopy .eyebrow{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:flex-start !important;
-  width:fit-content !important;
-  max-width:100% !important;
-  margin:0 0 12px !important;
-  padding:0 !important;
-  border:0 !important;
-  border-radius:0 !important;
-  background:transparent !important;
-  box-shadow:none !important;
-  color:var(--forest) !important;
-  font-family:var(--font-body) !important;
-  font-size:var(--tcfr-kicker-size) !important;
-  font-weight:800 !important;
-  letter-spacing:var(--tcfr-kicker-tracking) !important;
-  line-height:1.2 !important;
-  text-align:left !important;
-  text-transform:uppercase !important;
-  text-shadow:none !important;
-}
-
-/* Shared panel/card surfaces */
-body[data-page-type="home_page"] .section,
-body[data-page-type="home_page"] .band,
-.roomsPanel,
-.roomsBand{
-  background:var(--tcfr-panel-bg) !important;
-  border:1px solid var(--line) !important;
-  border-radius:var(--r2) !important;
-  box-shadow:var(--shadow) !important;
-  color:var(--ink) !important;
-}
-
-body[data-page-type="home_page"] .tile,
-body[data-page-type="home_page"] .trustCard,
-.roomCardGlobal,
-.roomsInfoCard,
-.roomsGuideCard{
-  background:var(--tcfr-card-bg) !important;
-  border:1px solid rgba(11,26,16,.10) !important;
-  border-radius:var(--r) !important;
-  box-shadow:0 12px 30px rgba(13,89,37,.10) !important;
-  color:var(--ink) !important;
-}
-
-/* Shared body rhythm */
-body[data-page-type="home_page"] .sub,
-.roomsHeroLead{
-  color:rgba(11,26,16,.78) !important;
-  font-size:16px !important;
-  font-weight:750 !important;
-  line-height:1.72 !important;
-  text-align:left !important;
-}
-
-body[data-page-type="home_page"] .hint,
-.roomsPanelHeader p,
-.roomsBand p{
-  color:rgba(11,26,16,.72) !important;
-  font-size:14px !important;
-  font-weight:750 !important;
-  line-height:1.62 !important;
-  text-align:left !important;
-}
-
-/* Shared pill system */
-body[data-page-type="home_page"] .pill,
-.roomPill{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  min-height:34px !important;
-  padding:8px 12px !important;
-  border-radius:999px !important;
-  border:1px solid rgba(13,89,37,.18) !important;
-  background:rgba(255,255,255,.60) !important;
-  color:var(--forest) !important;
-  font-family:var(--font-body) !important;
-  font-size:13px !important;
-  font-weight:800 !important;
-  line-height:1.1 !important;
-  white-space:nowrap !important;
-  box-shadow:0 10px 26px rgba(13,89,37,.10) !important;
-}
-
-/* Rooms inherits homepage hero content behavior */
-.roomsHeroCopy{
-  align-items:flex-start !important;
-  text-align:left !important;
-}
-
-.roomsHeroCopy h1{
-  max-width:10.5ch !important;
-}
-
-/* Keep room cards from becoming newspaper columns when content varies */
-.roomCardBody,
-.roomsInfoCard,
-.roomsGuideCard{
-  min-width:0 !important;
-  overflow:visible !important;
-}
-
-.roomsGrid > *,
-.roomsInfoGrid > *,
-.roomsGuideGrid > *{
-  min-width:0 !important;
-}
-
-/* Responsive lock */
-@media(max-width:640px){
-  body[data-page-type="home_page"] .h1,
-  body[data-page-type="home_page"] .heroCopy h1,
-  .roomsHeroCopy h1{
-    font-size:clamp(36px,13vw,52px) !important;
   }
 }
