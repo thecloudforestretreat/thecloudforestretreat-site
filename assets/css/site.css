@@ -1,59 +1,123 @@
 /* /assets/css/site.css
    The Cloud Forest Retreat
-   Brand tokens + global typography + base UI components
+   Production global CSS system
+   Last updated: 2026-05-21
+
+   Structure:
+   1. Tokens
+   2. Base
+   3. Layout helpers
+   4. Typography
+   5. Buttons
+   6. Pills and labels
+   7. Forms
+   8. Global hero, panel, card, grid, and CTA systems
+   9. Header/footer support
+   10. Homepage module
+   11. Rooms module
+   12. Features hub module
+   13. Feature detail module
+   14. Responsive rules
+
+   Rule:
+   Page modules should control layout only where possible.
+   Shared surfaces, typography, buttons, cards, pills, and rhythm belong to the global system.
 */
 
+/* =========================================================
+   1. Tokens
+   ========================================================= */
+
 :root{
-  /* Brand colors */
-  --bg: #A1BFAA;            /* site background */
-  --text: #E7E4D1;          /* light text on dark surfaces */
-  --forest: #0D5925;        /* primary green */
-  --orange: #E0643A;        /* CTA accent */
-  --beige: #F5F5DC;         /* soft surface */
-  --gray: #D3D3D3;          /* borders */
-  --gold: #FFD700;          /* luxury accent */
-  --sky: #87CEEB;           /* secondary accent */
+  --bg:#A1BFAA;
+  --text:#E7E4D1;
+  --forest:#0D5925;
+  --orange:#E0643A;
+  --beige:#F5F5DC;
+  --gray:#D3D3D3;
+  --gold:#FFD700;
+  --sky:#87CEEB;
 
-  /* Practical neutrals */
-  --ink: #0b1a10;           /* dark readable text on light surfaces */
-  --muted: rgba(11,26,16,0.70);
-  --mutedOnDark: rgba(231,228,209,0.80);
+  --ink:#0b1a10;
+  --muted:rgba(11,26,16,.70);
+  --muted-strong:rgba(11,26,16,.78);
+  --muted-soft:rgba(11,26,16,.62);
+  --muted-on-dark:rgba(231,228,209,.84);
 
-  /* Typography */
-  --font-head: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-head:"Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
-  /* Layout */
-  --container: 1120px;
-  --pad: 18px;
+  --container:1120px;
+  --pad:18px;
 
-  /* Radius + shadow */
-  --r: 18px;
-  --r2: 24px;
-  --line: rgba(11,26,16,0.12);
-  --shadow: 0 18px 55px rgba(13,89,37,0.16);
+  --r:18px;
+  --r2:24px;
+  --btn-r:14px;
 
-  /* Buttons */
-  --btn-r: 14px;
-  --btn-pad-y: 12px;
-  --btn-pad-x: 14px;
+  --line:rgba(11,26,16,.12);
+  --line-strong:rgba(13,89,37,.20);
 
-  /* Focus */
-  --focus: 0 0 0 4px rgba(224,100,58,0.25);
+  --shadow:0 18px 55px rgba(13,89,37,.16);
+  --shadow-card:0 12px 30px rgba(13,89,37,.10);
+  --shadow-pill:0 10px 26px rgba(13,89,37,.10);
+  --focus:0 0 0 4px rgba(224,100,58,.25);
+
+  --surface-panel:rgba(245,245,220,.72);
+  --surface-card:rgba(255,255,255,.62);
+  --surface-card-hover:rgba(255,255,255,.74);
+  --surface-pill:rgba(255,255,255,.60);
+
+  --display-size:clamp(44px,5vw,72px);
+  --display-size-mobile:clamp(36px,13vw,52px);
+  --display-line:.96;
+  --display-track:-.045em;
+  --display-weight:800;
+
+  --section-size:clamp(24px,2.6vw,34px);
+  --section-line:1.04;
+  --section-track:-.03em;
+  --section-weight:800;
+
+  --card-title-size:21px;
+  --card-title-line:1.1;
+  --card-title-track:-.02em;
+  --card-title-weight:800;
+
+  --body-size:16px;
+  --body-line:1.72;
+  --body-weight:700;
+  --body-strong-weight:750;
+
+  --small-size:13px;
+  --kicker-size:12px;
+  --kicker-track:.12em;
+  --kicker-weight:800;
+
+  --gap:14px;
+  --gap-lg:18px;
+  --panel-pad:18px;
+  --card-pad:16px;
 }
 
-*{ box-sizing:border-box; }
+/* =========================================================
+   2. Base
+   ========================================================= */
 
-html, body{
-  height:100%;
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  min-height:100%;
 }
 
 body{
   margin:0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
-  line-height: 1.6;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  line-height:1.6;
 }
 
 img{
@@ -62,211 +126,64 @@ img{
 }
 
 a{
-  color: inherit;
-  text-decoration: none;
+  color:inherit;
+  text-decoration:none;
 }
 
 a:hover{
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration:underline;
+  text-underline-offset:3px;
 }
 
-/* Container helpers */
-.container{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--pad);
+button,
+input,
+select,
+textarea{
+  font:inherit;
 }
 
-/* Page spacing */
-.page{
-  padding: 26px;
-  margin-top: 18px;
-}
-
-.card{
-  background: rgba(245,245,220,0.72); /* beige surface with soft transparency */
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  color: var(--ink); /* readable on beige */
-}
-
-.section{
-  margin-top: 22px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(11,26,16,0.12);
-}
-
-/* Typography */
-h1, h2, h3, h4{
-  font-family: var(--font-head);
-  color: var(--forest);
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
-  line-height: 1.08;
-}
-
-h1{
-  font-size: clamp(34px, 4.6vw, 56px);
-}
-
-h2{
-  font-size: clamp(22px, 2.4vw, 30px);
-}
-
-h3{
-  font-size: 18px;
-}
-
-p{
-  margin: 0;
-  color: var(--ink);
-  font-size: 16px;
-  line-height: 1.75;
-  max-width: 90ch;
-}
-
-.small{
-  font-size: 13px;
-  color: var(--muted);
-}
-
-/* On-dark text helpers */
-.onDark{
-  color: var(--text);
-}
-.onDark .muted{
-  color: var(--mutedOnDark);
-}
-
-/* Buttons */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap: 10px;
-  padding: var(--btn-pad-y) var(--btn-pad-x);
-  border-radius: var(--btn-r);
-  font-weight: 800;
-  font-family: var(--font-body);
-  font-size: 14px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
-  white-space: nowrap;
-}
-
-.btn:active{
-  transform: scale(0.99);
-}
-
-.btn:focus{
-  outline: none;
-  box-shadow: var(--focus);
-}
-
-.btn.primary{
-  background: var(--orange);
-  color: #ffffff;
-  box-shadow: 0 16px 40px rgba(224,100,58,0.22);
-}
-
-.btn.primary:hover{
-  filter: brightness(0.97);
-}
-
-.btn.secondary{
-  background: rgba(245,245,220,0.70);
-  border-color: rgba(13,89,37,0.22);
-  color: var(--forest);
-}
-
-.btn.secondary:hover{
-  filter: brightness(0.98);
-}
-
-.btn.ghost{
-  background: transparent;
-  border-color: rgba(231,228,209,0.40);
-  color: var(--text);
-}
-
-.btn.ghost:hover{
-  background: rgba(231,228,209,0.10);
-}
-
-/* Pills / badges */
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(245,245,220,0.60);
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-  font-weight: 800;
-  font-size: 12.5px;
-  color: var(--forest);
-}
-
-/* Inputs (for booking/contact later) */
-.input, .select, .textarea{
-  width: 100%;
-  border-radius: 14px;
-  border: 1px solid rgba(13,89,37,0.20);
-  background: rgba(245,245,220,0.85);
-  padding: 12px 12px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink);
-  outline: none;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-  font-family: var(--font-body);
-}
-
-.textarea{
-  min-height: 120px;
-  resize: vertical;
-}
-
-.input:focus, .select:focus, .textarea:focus{
-  box-shadow: var(--focus);
-  border-color: rgba(224,100,58,0.35);
-}
-
-/* Simple layout utilities */
-.grid2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-@media (max-width: 900px){
-  .page{ padding: 18px; }
-  .grid2{ grid-template-columns: 1fr; }
+:focus-visible{
+  outline:none;
+  box-shadow:var(--focus);
 }
 
 /* =========================================================
-   TCFR Core Global Utilities
-   Purpose:
-   - Shared behavior only
-   - No page-specific overrides
-   - Keeps fallback links, link-card CTA alignment, and overlay hero text stable
+   3. Layout helpers
    ========================================================= */
 
-.rawLangLinks{
-  position:absolute !important;
-  width:1px !important;
-  height:1px !important;
-  padding:0 !important;
-  margin:-1px !important;
-  overflow:hidden !important;
-  clip:rect(0,0,0,0) !important;
-  white-space:nowrap !important;
-  border:0 !important;
+.container,
+.wrap,
+.roomsHub,
+body[data-page-type="home_page"] .wrap,
+body[data-page-type="features_hub"] .wrap,
+body[data-page-type="feature_detail_page"] .wrap{
+  max-width:var(--container);
+  margin:0 auto;
+  padding-left:var(--pad);
+  padding-right:var(--pad);
+}
+
+.page{
+  padding:26px;
+  margin-top:18px;
+}
+
+.grid2{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:var(--gap);
+}
+
+.grid3,
+body[data-page-type="home_page"] .grid3,
+.roomsGrid,
+.roomsInfoGrid,
+.amenityGrid,
+.relatedFeatureGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:var(--gap);
+  align-items:stretch;
 }
 
 .linkGrid{
@@ -288,13 +205,387 @@ p{
   align-self:flex-start;
 }
 
+/* =========================================================
+   4. Typography
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4{
+  margin:0 0 10px;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-weight:800;
+  letter-spacing:-.02em;
+  line-height:1.08;
+}
+
+h1{
+  font-size:clamp(34px,4.6vw,56px);
+}
+
+h2{
+  font-size:clamp(22px,2.4vw,30px);
+}
+
+h3{
+  font-size:18px;
+}
+
+p{
+  margin:0;
+  max-width:90ch;
+  color:var(--ink);
+  font-size:var(--body-size);
+  line-height:1.75;
+}
+
+.small{
+  font-size:var(--small-size);
+  color:var(--muted);
+}
+
+.tcfr-display,
+body[data-page-type="home_page"] .h1,
+body[data-page-type="home_page"] .heroCopy h1,
+.roomsHeroCopy h1{
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--display-size);
+  font-weight:var(--display-weight);
+  letter-spacing:var(--display-track);
+  line-height:var(--display-line);
+  text-align:left;
+}
+
+.tcfr-section-title,
+body[data-page-type="home_page"] .h2,
+body[data-page-type="home_page"] .sectionHead h2,
+.roomsPanelHeader h2,
+.roomsBand h2,
+body[data-page-type="features_hub"] .sectionTitle,
+body[data-page-type="feature_detail_page"] .sectionTitle,
+body[data-page-type="feature_detail_page"] .panelTitle{
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--section-size);
+  font-weight:var(--section-weight);
+  letter-spacing:var(--section-track);
+  line-height:var(--section-line);
+  text-align:left;
+}
+
+.tcfr-card-title,
+body[data-page-type="home_page"] .tileTitle,
+.roomCardBody h3,
+.roomsInfoCard h3,
+.roomsGuideCard h3,
+body[data-page-type="features_hub"] .cardTitle,
+body[data-page-type="feature_detail_page"] .amenityCard h3,
+body[data-page-type="feature_detail_page"] .relatedFeatureCard h3{
+  margin:0 0 6px;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--card-title-size);
+  font-weight:var(--card-title-weight);
+  letter-spacing:var(--card-title-track);
+  line-height:var(--card-title-line);
+  text-align:left;
+}
+
+.tcfr-lead,
+body[data-page-type="home_page"] .sub,
+.roomsHeroLead{
+  margin:0;
+  max-width:66ch;
+  color:var(--muted-strong);
+  font-size:16px;
+  font-weight:var(--body-strong-weight);
+  line-height:1.72;
+  text-align:left;
+}
+
+.tcfr-intro,
+body[data-page-type="home_page"] .hint,
+.roomsPanelHeader p,
+.roomsBand p,
+body[data-page-type="features_hub"] .sectionHint,
+body[data-page-type="feature_detail_page"] .sectionHint,
+body[data-page-type="feature_detail_page"] .panelHint,
+body[data-page-type="feature_detail_page"] .cardHint{
+  margin:0;
+  max-width:68ch;
+  color:rgba(11,26,16,.72);
+  font-size:14px;
+  font-weight:var(--body-strong-weight);
+  line-height:1.62;
+  text-align:left;
+}
+
+/* =========================================================
+   5. Buttons
+   ========================================================= */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 14px;
+  min-height:44px;
+  border-radius:var(--btn-r);
+  border:1px solid transparent;
+  font-family:var(--font-body);
+  font-size:14px;
+  font-weight:800;
+  line-height:1.1;
+  cursor:pointer;
+  user-select:none;
+  white-space:nowrap;
+  transition:transform 120ms ease, filter 120ms ease, box-shadow 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.btn:hover{
+  text-decoration:none;
+}
+
+.btn:active{
+  transform:scale(.99);
+}
+
+.btn.primary{
+  background:var(--orange);
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 16px 40px rgba(224,100,58,.22);
+}
+
+.btn.primary:hover{
+  filter:brightness(.97);
+}
+
+.btn.secondary{
+  background:rgba(245,245,220,.70);
+  border-color:rgba(13,89,37,.22);
+  color:var(--forest);
+  box-shadow:0 14px 30px rgba(13,89,37,.08);
+}
+
+.btn.secondary:hover{
+  filter:brightness(.98);
+}
+
+.btn.ghost{
+  background:transparent;
+  border-color:rgba(231,228,209,.40);
+  color:var(--text);
+}
+
+.btn.ghost:hover{
+  background:rgba(231,228,209,.10);
+}
+
+/* =========================================================
+   6. Pills and labels
+   ========================================================= */
+
+.badge,
+.pill,
+.roomPill,
+.tag,
+.chip,
+.miniChip,
+.heroChip{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:34px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(13,89,37,.18);
+  background:var(--surface-pill);
+  color:var(--forest);
+  font-family:var(--font-body);
+  font-size:13px;
+  font-weight:800;
+  line-height:1.1;
+  white-space:nowrap;
+  box-shadow:var(--shadow-pill);
+}
+
+.tcfr-kicker,
+.kicker,
+.eyebrow,
+.heroKicker,
+body[data-page-type="home_page"] .kicker,
+body[data-page-type="home_page"] .eyebrow,
+body[data-page-type="home_page"] .heroKicker,
+.roomsHeroCopy .badge,
+.roomsHeroCopy .kicker,
+.roomsHeroCopy .eyebrow{
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:fit-content;
+  max-width:100%;
+  min-height:0;
+  margin:0 0 12px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  color:var(--forest);
+  font-family:var(--font-body);
+  font-size:var(--kicker-size);
+  font-weight:var(--kicker-weight);
+  letter-spacing:var(--kicker-track);
+  line-height:1.2;
+  text-align:left;
+  text-transform:uppercase;
+  text-shadow:none;
+}
+
+/* =========================================================
+   7. Forms
+   ========================================================= */
+
+.input,
+.select,
+.textarea{
+  width:100%;
+  border-radius:14px;
+  border:1px solid rgba(13,89,37,.20);
+  background:rgba(245,245,220,.85);
+  padding:12px;
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:15px;
+  font-weight:600;
+  outline:none;
+  box-shadow:var(--shadow-pill);
+}
+
+.textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus{
+  box-shadow:var(--focus);
+  border-color:rgba(224,100,58,.35);
+}
+
+/* =========================================================
+   8. Global hero, panel, card, grid, and CTA systems
+   ========================================================= */
+
+.tcfr-panel,
+.card,
+body[data-page-type="home_page"] .section,
+body[data-page-type="home_page"] .band,
+.roomsPanel,
+.roomsBand,
+body[data-page-type="features_hub"] .topBand,
+body[data-page-type="features_hub"] .featuresPanel,
+body[data-page-type="features_hub"] .ctaBand,
+body[data-page-type="feature_detail_page"] .topBand,
+body[data-page-type="feature_detail_page"] .hero,
+body[data-page-type="feature_detail_page"] .featurePanel,
+body[data-page-type="feature_detail_page"] .jumpBand,
+body[data-page-type="feature_detail_page"] .ctaBand{
+  background:var(--surface-panel);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+.tcfr-card,
+body[data-page-type="home_page"] .tile,
+body[data-page-type="home_page"] .trustCard,
+.roomCardGlobal,
+.roomsInfoCard,
+.roomsGuideCard,
+body[data-page-type="feature_detail_page"] .innerCard,
+body[data-page-type="feature_detail_page"] .amenityCard,
+body[data-page-type="feature_detail_page"] .relatedFeatureCard{
+  background:var(--surface-card);
+  border:1px solid rgba(11,26,16,.10);
+  border-radius:var(--r);
+  box-shadow:var(--shadow-card);
+  color:var(--ink);
+}
+
+.tcfr-card-hover,
+body[data-page-type="home_page"] .tile,
+.roomCardGlobal,
+.roomsGuideCard,
+body[data-page-type="feature_detail_page"] .relatedFeatureCard{
+  text-decoration:none;
+  transition:transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.tcfr-card-hover:hover,
+body[data-page-type="home_page"] .tile:hover,
+.roomCardGlobal:hover,
+.roomsGuideCard:hover,
+body[data-page-type="feature_detail_page"] .relatedFeatureCard:hover{
+  transform:translateY(-1px);
+  background:var(--surface-card-hover);
+  border-color:rgba(13,89,37,.20);
+  text-decoration:none;
+}
+
+.tcfr-hero-grid,
+body[data-page-type="home_page"] .hero,
+.roomsHero{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:var(--gap-lg);
+  align-items:stretch;
+  margin-top:8px;
+}
+
+.tcfr-hero-media,
+.tcfr-hero-copy,
+body[data-page-type="home_page"] .heroMedia,
+body[data-page-type="home_page"] .heroCopy,
+.roomsHeroMedia,
+.roomsHeroCopy{
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  background:var(--surface-panel);
+  color:var(--ink);
+}
+
+.tcfr-hero-copy,
+body[data-page-type="home_page"] .heroCopy,
+.roomsHeroCopy{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:18px;
+  text-align:left;
+}
+
 .heroCard,
 .roomHeroInner{
-  --hero-overlay-title:rgba(255,255,255,0.98);
-  --hero-overlay-copy:rgba(231,228,209,0.92);
-  --hero-overlay-meta:rgba(231,228,209,0.90);
-  --hero-overlay-secondary-bg:rgba(245,245,220,0.82);
-  --hero-overlay-secondary-border:rgba(13,89,37,0.22);
+  --hero-overlay-title:rgba(255,255,255,.98);
+  --hero-overlay-copy:rgba(231,228,209,.92);
+  --hero-overlay-meta:rgba(231,228,209,.90);
+  --hero-overlay-secondary-bg:rgba(245,245,220,.82);
+  --hero-overlay-secondary-border:rgba(13,89,37,.22);
   --hero-overlay-secondary-text:var(--forest);
   color:var(--hero-overlay-copy);
 }
@@ -337,7 +628,6 @@ p{
   background:var(--orange);
   color:#fff;
   border-color:transparent;
-  box-shadow:0 16px 40px rgba(224,100,58,0.22);
 }
 
 .heroCard .btn.secondary,
@@ -345,128 +635,117 @@ p{
   background:var(--hero-overlay-secondary-bg);
   border-color:var(--hero-overlay-secondary-border);
   color:var(--hero-overlay-secondary-text);
-  box-shadow:0 14px 30px rgba(13,89,37,0.10);
+}
+
+.sectionHead,
+.roomsPanelHeader,
+body[data-page-type="feature_detail_page"] .featurePanelHeader{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:var(--gap);
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.heroCtas,
+.bandActions,
+.roomsHeroActions,
+.roomsBandActions,
+.ctaBtns,
+.quickActions,
+.pillRow,
+.roomPillRow,
+.chipRow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+}
+
+.rawLangLinks{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
 }
 
 /* =========================================================
-   TCFR Footer (used by /assets/includes/footer.html)
-   - Social icon row + copyright line
-   - Matches TCFR palette and looks good on mobile + desktop
-========================================================= */
+   9. Footer support
+   ========================================================= */
 
 .tcfr-footer{
-  margin-top: 28px;
-  padding: 18px 0 26px;
+  margin-top:28px;
+  padding:18px 0 26px;
 }
 
 .tcfr-footerShell{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-  display: grid;
-  gap: 14px;
-  justify-items: center;
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 var(--pad);
+  display:grid;
+  gap:14px;
+  justify-items:center;
 }
 
 .tcfr-social{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 14px 16px;
-  border-radius: 999px;
-  background: rgba(245,245,220,0.62);
-  border: 1px solid rgba(11,26,16,0.12);
-  box-shadow: 0 14px 34px rgba(13,89,37,0.10);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  padding:14px 16px;
+  border-radius:999px;
+  background:rgba(245,245,220,.62);
+  border:1px solid rgba(11,26,16,.12);
+  box-shadow:0 14px 34px rgba(13,89,37,.10);
 }
 
 .tcfr-social a{
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  border: 1px solid rgba(13,89,37,0.14);
-  background: rgba(255,255,255,0.45);
-  transition: transform 140ms ease, filter 140ms ease, background 140ms ease;
+  width:44px;
+  height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:14px;
+  border:1px solid rgba(13,89,37,.14);
+  background:rgba(255,255,255,.45);
+  transition:transform 140ms ease, filter 140ms ease, background 140ms ease;
 }
 
 .tcfr-social a:hover{
-  text-decoration: none;
-  transform: translateY(-1px);
-  filter: brightness(0.98);
-  background: rgba(255,255,255,0.58);
-}
-
-.tcfr-social a:focus{
-  outline: none;
-  box-shadow: var(--focus);
+  text-decoration:none;
+  transform:translateY(-1px);
+  filter:brightness(.98);
+  background:rgba(255,255,255,.58);
 }
 
 .tcfr-social img{
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-  display: block;
+  width:22px;
+  height:22px;
+  object-fit:contain;
 }
 
 .tcfr-footerCopy{
-  margin: 0;
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.5;
-  color: rgba(11,26,16,0.72);
-  font-weight: 700;
-}
-
-@media (max-width: 420px){
-  .tcfr-social{
-    width: calc(100% - (var(--pad) * 2));
-    border-radius: 22px;
-    padding: 12px;
-  }
-  .tcfr-social a{
-    width: 46px;
-    height: 46px;
-  }
-  .tcfr-social img{
-    width: 23px;
-    height: 23px;
-  }
+  margin:0;
+  text-align:center;
+  font-size:13px;
+  line-height:1.5;
+  color:rgba(11,26,16,.72);
+  font-weight:700;
 }
 
 /* =========================================================
-   TCFR Homepage Global Module
-   Purpose:
-   - Stable approved homepage system
-   - No page-level CSS required
-   - Acts as the visual reference for rooms and future hub pages
+   10. Homepage module
    ========================================================= */
 
 body[data-page-type="home_page"] .wrap{
-  max-width:var(--container);
-  margin:0 auto;
-  padding:28px var(--pad) 84px;
-  color:var(--ink);
-}
-
-body[data-page-type="home_page"] .hero{
-  display:grid;
-  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
-  gap:18px;
-  align-items:stretch;
-  margin-top:8px;
-}
-
-body[data-page-type="home_page"] .heroMedia,
-body[data-page-type="home_page"] .heroCopy{
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  background:rgba(245,245,220,.72);
-  color:var(--ink);
+  padding-top:28px;
+  padding-bottom:84px;
 }
 
 body[data-page-type="home_page"] .heroMedia{
@@ -481,7 +760,6 @@ body[data-page-type="home_page"] .heroMedia img{
   min-height:620px;
   object-fit:cover;
   object-position:center;
-  display:block;
 }
 
 body[data-page-type="home_page"] .heroOverlay{
@@ -492,93 +770,6 @@ body[data-page-type="home_page"] .heroOverlay{
   background:
     radial-gradient(720px 420px at 20% 18%, rgba(224,100,58,.12), rgba(0,0,0,0) 58%),
     linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.08));
-}
-
-body[data-page-type="home_page"] .heroCopy{
-  padding:28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
-  gap:18px;
-  text-align:left;
-}
-
-body[data-page-type="home_page"] .kicker,
-body[data-page-type="home_page"] .eyebrow,
-body[data-page-type="home_page"] .heroKicker{
-  display:inline-flex;
-  align-items:center;
-  justify-content:flex-start;
-  width:fit-content;
-  max-width:100%;
-  margin:0 0 12px;
-  padding:0;
-  border:0;
-  border-radius:0;
-  background:transparent;
-  box-shadow:none;
-  color:var(--forest);
-  font-family:var(--font-body);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.12em;
-  line-height:1.2;
-  text-transform:uppercase;
-  text-align:left;
-  text-shadow:none;
-}
-
-body[data-page-type="home_page"] .h1{
-  margin:0;
-  color:var(--forest);
-  font-family:var(--font-head);
-  font-size:clamp(44px,5vw,72px);
-  font-weight:800;
-  letter-spacing:-.045em;
-  line-height:.96;
-  text-align:left;
-}
-
-body[data-page-type="home_page"] .sub{
-  margin:0;
-  max-width:66ch;
-  color:rgba(11,26,16,.78);
-  font-size:16px;
-  font-weight:750;
-  line-height:1.72;
-  text-align:left;
-}
-
-body[data-page-type="home_page"] .pillRow,
-body[data-page-type="home_page"] .heroCtas,
-body[data-page-type="home_page"] .bandActions{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:10px;
-}
-
-body[data-page-type="home_page"] .pillRow,
-body[data-page-type="home_page"] .heroCtas{
-  margin-top:0;
-}
-
-body[data-page-type="home_page"] .pill{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:38px;
-  padding:9px 14px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,.18);
-  background:rgba(255,255,255,.60);
-  color:var(--forest);
-  font-size:13px;
-  font-weight:800;
-  line-height:1.1;
-  white-space:nowrap;
-  box-shadow:0 10px 26px rgba(13,89,37,.10);
 }
 
 body[data-page-type="home_page"] .tcfr-google-reviews{
@@ -596,7 +787,7 @@ body[data-page-type="home_page"] .tcfr-google-reviews-inner{
   border-radius:var(--r);
   border:1px solid rgba(11,26,16,.10);
   background:rgba(255,255,255,.54);
-  box-shadow:0 12px 30px rgba(13,89,37,.10);
+  box-shadow:var(--shadow-card);
 }
 
 body[data-page-type="home_page"] .tcfr-google-left{
@@ -679,10 +870,6 @@ body[data-page-type="home_page"] .trustRow{
 
 body[data-page-type="home_page"] .trustCard{
   padding:14px;
-  border-radius:var(--r);
-  border:1px solid rgba(11,26,16,.10);
-  background:rgba(255,255,255,.54);
-  box-shadow:0 12px 30px rgba(13,89,37,.10);
 }
 
 body[data-page-type="home_page"] .trustCard.fullRow{
@@ -707,49 +894,7 @@ body[data-page-type="home_page"] .trustText{
 
 body[data-page-type="home_page"] .section{
   margin-top:22px;
-  padding:18px;
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  background:rgba(245,245,220,.72);
-  color:var(--ink);
-}
-
-body[data-page-type="home_page"] .sectionHead{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-bottom:14px;
-}
-
-body[data-page-type="home_page"] .h2{
-  margin:0;
-  color:var(--forest);
-  font-family:var(--font-head);
-  font-size:clamp(24px,2.6vw,34px);
-  font-weight:800;
-  letter-spacing:-.03em;
-  line-height:1.04;
-  text-align:left;
-}
-
-body[data-page-type="home_page"] .hint{
-  margin:0;
-  max-width:68ch;
-  color:rgba(11,26,16,.72);
-  font-size:14px;
-  font-weight:750;
-  line-height:1.62;
-  text-align:left;
-}
-
-body[data-page-type="home_page"] .grid3{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
+  padding:var(--panel-pad);
 }
 
 body[data-page-type="home_page"] .tile{
@@ -758,36 +903,12 @@ body[data-page-type="home_page"] .tile{
   gap:14px;
   height:100%;
   min-width:0;
-  padding:16px;
-  border-radius:var(--r);
-  border:1px solid rgba(11,26,16,.10);
-  background:rgba(255,255,255,.62);
-  color:var(--ink);
-  box-shadow:0 12px 30px rgba(13,89,37,.10);
-  text-decoration:none;
-  transition:transform 140ms ease, background 140ms ease, border-color 140ms ease;
-}
-
-body[data-page-type="home_page"] .tile:hover{
-  transform:translateY(-1px);
-  background:rgba(255,255,255,.74);
-  border-color:rgba(13,89,37,.20);
-  text-decoration:none;
-}
-
-body[data-page-type="home_page"] .tileTitle{
-  margin:0 0 6px;
-  color:var(--forest);
-  font-family:var(--font-head);
-  font-size:21px;
-  font-weight:800;
-  letter-spacing:-.02em;
-  line-height:1.1;
+  padding:var(--card-pad);
 }
 
 body[data-page-type="home_page"] .tileText{
   margin:0;
-  color:rgba(11,26,16,.78);
+  color:var(--muted-strong);
   font-size:14.4px;
   font-weight:700;
   line-height:1.65;
@@ -817,7 +938,7 @@ body[data-page-type="home_page"] .photoCard{
   overflow:hidden;
   border-radius:var(--r);
   border:1px solid rgba(11,26,16,.10);
-  box-shadow:0 12px 30px rgba(13,89,37,.10);
+  box-shadow:var(--shadow-card);
   background:rgba(0,0,0,.10);
 }
 
@@ -826,7 +947,6 @@ body[data-page-type="home_page"] .photoCard img{
   height:100%;
   min-height:220px;
   object-fit:cover;
-  display:block;
 }
 
 body[data-page-type="home_page"] .photoCap{
@@ -854,11 +974,6 @@ body[data-page-type="home_page"] .band{
   justify-content:space-between;
   gap:18px;
   flex-wrap:wrap;
-  border-radius:var(--r2);
-  border:1px solid var(--line);
-  background:rgba(245,245,220,.72);
-  box-shadow:var(--shadow);
-  color:var(--ink);
 }
 
 body[data-page-type="home_page"] .bandTitle{
@@ -885,122 +1000,14 @@ body[data-page-type="home_page"] .bandActions{
   flex:0 0 auto;
 }
 
-@media(max-width:1020px){
-  body[data-page-type="home_page"] .hero{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="home_page"] .heroMedia,
-  body[data-page-type="home_page"] .heroMedia img{
-    min-height:420px;
-  }
-
-  body[data-page-type="home_page"] .heroCopy{
-    padding:22px;
-  }
-
-  body[data-page-type="home_page"] .grid3,
-  body[data-page-type="home_page"] .photoStrip{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="home_page"] .photoCard,
-  body[data-page-type="home_page"] .photoCard img{
-    min-height:260px;
-  }
-}
-
-@media(max-width:640px){
-  body[data-page-type="home_page"] .wrap{
-    padding:16px var(--pad) 64px;
-  }
-
-  body[data-page-type="home_page"] .heroMedia,
-  body[data-page-type="home_page"] .heroMedia img{
-    min-height:320px;
-  }
-
-  body[data-page-type="home_page"] .heroCopy,
-  body[data-page-type="home_page"] .section,
-  body[data-page-type="home_page"] .band{
-    padding:16px;
-  }
-
-  body[data-page-type="home_page"] .h1{
-    font-size:clamp(36px,13vw,52px);
-  }
-
-  body[data-page-type="home_page"] .tcfr-google-reviews-inner{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="home_page"] .tcfr-tourism{
-    grid-column:auto;
-    grid-row:auto;
-    justify-content:flex-start;
-  }
-
-  body[data-page-type="home_page"] .tcfr-tourismLogo{
-    width:74px;
-    max-width:74px;
-  }
-
-  body[data-page-type="home_page"] .tcfr-google-actions,
-  body[data-page-type="home_page"] .heroCtas,
-  body[data-page-type="home_page"] .bandActions{
-    width:100%;
-  }
-
-  body[data-page-type="home_page"] .tcfr-google-actions .btn,
-  body[data-page-type="home_page"] .heroCtas .btn,
-  body[data-page-type="home_page"] .bandActions .btn{
-    width:100%;
-  }
-
-  body[data-page-type="home_page"] .trustRow{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="home_page"] .trustCard.fullRow{
-    grid-column:auto;
-  }
-}
-
 /* =========================================================
-   TCFR Rooms Hub Global Module
-   Purpose:
-   - Global CSS managed rooms hub
-   - Mirrors approved homepage surfaces and typography
-   - Room-specific rules are limited to layout and content structure
+   11. Rooms module
    ========================================================= */
 
 body[data-page-type="room_index"] .roomsHub,
 .roomsHub{
-  max-width:var(--container);
-  margin:0 auto;
-  padding:28px var(--pad) 84px;
-  color:var(--ink);
-}
-
-body[data-page-type="room_index"] .roomsHero,
-.roomsHero{
-  display:grid;
-  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
-  gap:18px;
-  align-items:stretch;
-  margin-top:8px;
-}
-
-body[data-page-type="room_index"] .roomsHeroMedia,
-body[data-page-type="room_index"] .roomsHeroCopy,
-.roomsHeroMedia,
-.roomsHeroCopy{
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  background:rgba(245,245,220,.72);
-  color:var(--ink);
+  padding-top:28px;
+  padding-bottom:84px;
 }
 
 body[data-page-type="room_index"] .roomsHeroMedia,
@@ -1017,81 +1024,11 @@ body[data-page-type="room_index"] .roomsHeroMedia img,
   min-height:420px;
   object-fit:cover;
   object-position:center;
-  display:block;
-}
-
-body[data-page-type="room_index"] .roomsHeroCopy,
-.roomsHeroCopy{
-  padding:28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
-  gap:18px;
-  text-align:left;
-}
-
-body[data-page-type="room_index"] .roomsHeroCopy .badge,
-body[data-page-type="room_index"] .roomsHeroCopy .kicker,
-body[data-page-type="room_index"] .roomsHeroCopy .eyebrow,
-.roomsHeroCopy .badge,
-.roomsHeroCopy .kicker,
-.roomsHeroCopy .eyebrow{
-  display:inline-flex;
-  align-items:center;
-  justify-content:flex-start;
-  width:fit-content;
-  max-width:100%;
-  margin:0 0 12px;
-  padding:0;
-  border:0;
-  border-radius:0;
-  background:transparent;
-  box-shadow:none;
-  color:var(--forest);
-  font-family:var(--font-body);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.12em;
-  line-height:1.2;
-  text-transform:uppercase;
-  text-align:left;
-  text-shadow:none;
 }
 
 body[data-page-type="room_index"] .roomsHeroCopy h1,
 .roomsHeroCopy h1{
-  margin:0;
   max-width:10.5ch;
-  color:var(--forest);
-  font-family:var(--font-head);
-  font-size:clamp(44px,5vw,72px);
-  font-weight:800;
-  letter-spacing:-.045em;
-  line-height:.96;
-  text-align:left;
-}
-
-body[data-page-type="room_index"] .roomsHeroLead,
-.roomsHeroLead{
-  margin:0;
-  max-width:66ch;
-  color:rgba(11,26,16,.78);
-  font-size:16px;
-  font-weight:750;
-  line-height:1.72;
-  text-align:left;
-}
-
-body[data-page-type="room_index"] .roomsHeroActions,
-body[data-page-type="room_index"] .roomsBandActions,
-.roomsHeroActions,
-.roomsBandActions{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:10px;
-  margin-top:4px;
 }
 
 body[data-page-type="room_index"] .roomsPanel,
@@ -1099,65 +1036,17 @@ body[data-page-type="room_index"] .roomsBand,
 .roomsPanel,
 .roomsBand{
   margin-top:22px;
-  padding:18px;
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  background:rgba(245,245,220,.72);
-  color:var(--ink);
-}
-
-body[data-page-type="room_index"] .roomsPanelHeader,
-.roomsPanelHeader{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-bottom:14px;
-}
-
-body[data-page-type="room_index"] .roomsPanelHeader h2,
-body[data-page-type="room_index"] .roomsBand h2,
-.roomsPanelHeader h2,
-.roomsBand h2{
-  margin:0;
-  color:var(--forest);
-  font-family:var(--font-head);
-  font-size:clamp(24px,2.6vw,34px);
-  font-weight:800;
-  letter-spacing:-.03em;
-  line-height:1.04;
-  text-align:left;
-}
-
-body[data-page-type="room_index"] .roomsPanelHeader p,
-body[data-page-type="room_index"] .roomsBand p,
-.roomsPanelHeader p,
-.roomsBand p{
-  margin:0;
-  max-width:68ch;
-  color:rgba(11,26,16,.72);
-  font-size:14px;
-  font-weight:750;
-  line-height:1.62;
-  text-align:left;
+  padding:var(--panel-pad);
 }
 
 body[data-page-type="room_index"] .roomsGrid,
 .roomsGrid{
-  display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
 }
 
 body[data-page-type="room_index"] .roomsInfoGrid,
 .roomsInfoGrid{
-  display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
 }
 
 body[data-page-type="room_index"] .roomsGuideGrid,
@@ -1180,23 +1069,6 @@ body[data-page-type="room_index"] .roomsGuideCard,
   min-width:0;
   overflow:hidden;
   padding:0;
-  border-radius:var(--r);
-  border:1px solid rgba(11,26,16,.10);
-  background:rgba(255,255,255,.62);
-  color:var(--ink);
-  box-shadow:0 12px 30px rgba(13,89,37,.10);
-  text-decoration:none;
-  transition:transform 140ms ease, background 140ms ease, border-color 140ms ease;
-}
-
-body[data-page-type="room_index"] .roomCardGlobal:hover,
-body[data-page-type="room_index"] .roomsGuideCard:hover,
-.roomCardGlobal:hover,
-.roomsGuideCard:hover{
-  transform:translateY(-1px);
-  background:rgba(255,255,255,.74);
-  border-color:rgba(13,89,37,.20);
-  text-decoration:none;
 }
 
 body[data-page-type="room_index"] .roomCardGlobal img,
@@ -1204,7 +1076,6 @@ body[data-page-type="room_index"] .roomCardGlobal img,
   width:100%;
   aspect-ratio:16 / 10;
   object-fit:cover;
-  display:block;
 }
 
 body[data-page-type="room_index"] .roomCardBody,
@@ -1213,7 +1084,7 @@ body[data-page-type="room_index"] .roomsGuideCard,
 .roomCardBody,
 .roomsInfoCard,
 .roomsGuideCard{
-  padding:16px;
+  padding:var(--card-pad);
   gap:10px;
 }
 
@@ -1224,22 +1095,6 @@ body[data-page-type="room_index"] .roomCardBody,
   height:100%;
 }
 
-body[data-page-type="room_index"] .roomCardBody h3,
-body[data-page-type="room_index"] .roomsInfoCard h3,
-body[data-page-type="room_index"] .roomsGuideCard h3,
-.roomCardBody h3,
-.roomsInfoCard h3,
-.roomsGuideCard h3{
-  margin:0 0 6px;
-  color:var(--forest);
-  font-family:var(--font-head);
-  font-size:21px;
-  font-weight:800;
-  letter-spacing:-.02em;
-  line-height:1.1;
-  text-align:left;
-}
-
 body[data-page-type="room_index"] .roomCardBody p,
 body[data-page-type="room_index"] .roomsInfoCard p,
 body[data-page-type="room_index"] .roomsGuideCard p,
@@ -1247,39 +1102,15 @@ body[data-page-type="room_index"] .roomsGuideCard p,
 .roomsInfoCard p,
 .roomsGuideCard p{
   margin:0;
-  color:rgba(11,26,16,.78);
+  color:var(--muted-strong);
   font-size:14.4px;
   font-weight:700;
   line-height:1.65;
-  text-align:left;
 }
 
 body[data-page-type="room_index"] .roomPillRow,
 .roomPillRow{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  align-items:center;
   margin-top:auto;
-}
-
-body[data-page-type="room_index"] .roomPill,
-.roomPill{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:34px;
-  padding:8px 12px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,.18);
-  background:rgba(255,255,255,.60);
-  color:var(--forest);
-  font-family:var(--font-body);
-  font-size:13px;
-  font-weight:800;
-  line-height:1.1;
-  white-space:nowrap;
-  box-shadow:0 10px 26px rgba(13,89,37,.10);
 }
 
 body[data-page-type="room_index"] .roomCardCta,
@@ -1312,4334 +1143,718 @@ body[data-page-type="room_index"] .roomsBandActions,
   flex:0 0 auto;
 }
 
+/* =========================================================
+   12. Features hub module
+   ========================================================= */
+
+body[data-page-type="features_hub"] .wrap{
+  padding-top:18px;
+  padding-bottom:84px;
+}
+
+body[data-page-type="features_hub"] .topBand{
+  margin-top:14px;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="features_hub"] .crumbs,
+body[data-page-type="features_hub"] .quickActions{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="features_hub"] .crumbs{
+  font-weight:800;
+  font-size:13px;
+  color:rgba(11,26,16,.75);
+}
+
+body[data-page-type="features_hub"] .hero{
+  margin-top:14px;
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  background:var(--surface-panel);
+  overflow:hidden;
+  position:relative;
+  color:var(--ink);
+}
+
+body[data-page-type="features_hub"] .heroMedia{
+  position:relative;
+  overflow:hidden;
+  height:400px;
+  background:rgba(0,0,0,.10);
+}
+
+body[data-page-type="features_hub"] .heroMedia img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.01);
+}
+
+body[data-page-type="features_hub"] .heroShade{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.44));
+  pointer-events:none;
+}
+
+body[data-page-type="features_hub"] .heroInner{
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:14px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(0,0,0,.20);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(6px);
+  padding:14px;
+  color:rgba(255,255,255,.96);
+  box-shadow:0 18px 55px rgba(0,0,0,.20);
+}
+
+body[data-page-type="features_hub"] .heroInner .kicker{
+  color:rgba(255,255,255,.92);
+}
+
+body[data-page-type="features_hub"] .heroH1{
+  margin:8px 0 6px;
+  color:#fff;
+  font-family:var(--font-head);
+  font-size:clamp(32px,3.8vw,54px);
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.02;
+}
+
+body[data-page-type="features_hub"] .heroLead{
+  margin:0;
+  max-width:80ch;
+  color:var(--muted-on-dark);
+  font-size:15.5px;
+  font-weight:600;
+  line-height:1.7;
+}
+
+body[data-page-type="features_hub"] .featuresPanel{
+  margin-top:14px;
+  padding:16px;
+}
+
+body[data-page-type="features_hub"] .filters{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="features_hub"] .filterLeft,
+body[data-page-type="features_hub"] .filterRight,
+body[data-page-type="features_hub"] .chips{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="features_hub"] .filterLabel{
+  font-weight:800;
+  color:rgba(11,26,16,.72);
+  font-size:13px;
+  letter-spacing:-.01em;
+  white-space:nowrap;
+}
+
+body[data-page-type="features_hub"] .chip{
+  appearance:none;
+  cursor:pointer;
+  color:#0b2b12;
+}
+
+body[data-page-type="features_hub"] .chip.is-active{
+  background:rgba(224,100,58,.92);
+  border-color:rgba(0,0,0,.10);
+  color:#fff;
+  box-shadow:0 14px 30px rgba(224,100,58,.18);
+}
+
+body[data-page-type="features_hub"] .grid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="features_hub"] .card{
+  overflow:hidden;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+
+body[data-page-type="features_hub"] .cardMedia{
+  position:relative;
+  aspect-ratio:16 / 10;
+  background:rgba(0,0,0,.10);
+  overflow:hidden;
+}
+
+body[data-page-type="features_hub"] .cardMedia img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.01);
+}
+
+body[data-page-type="features_hub"] .cardMediaShade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.26));
+  pointer-events:none;
+}
+
+body[data-page-type="features_hub"] .cardTopBadge{
+  position:absolute;
+  left:12px;
+  top:12px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.20);
+  background:rgba(0,0,0,.30);
+  color:rgba(255,255,255,.96);
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+body[data-page-type="features_hub"] .cardBody{
+  padding:14px;
+  display:grid;
+  gap:10px;
+  flex:1 1 auto;
+}
+
+body[data-page-type="features_hub"] .cardText{
+  margin:0;
+  color:var(--muted-strong);
+  font-weight:650;
+  line-height:1.75;
+  font-size:14.8px;
+}
+
+body[data-page-type="features_hub"] .cardCtaRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:2px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="features_hub"] .cardCta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(13,89,37,.18);
+  background:rgba(255,255,255,.62);
+  color:#0b2b12;
+  font-weight:800;
+  font-size:13px;
+  box-shadow:0 12px 28px rgba(13,89,37,.10);
+  white-space:nowrap;
+}
+
+body[data-page-type="features_hub"] .card:hover .cardCta{
+  background:rgba(224,100,58,.10);
+  border-color:rgba(224,100,58,.30);
+}
+
+body[data-page-type="features_hub"] .card:hover .cardMedia img{
+  transform:scale(1.03);
+  transition:transform 260ms ease;
+}
+
+body[data-page-type="features_hub"] .ctaBand{
+  margin-top:14px;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="features_hub"] .ctaBand h2{
+  font-size:22px;
+}
+
+body[data-page-type="features_hub"] .ctaBand p{
+  margin:0;
+  max-width:80ch;
+  color:rgba(11,26,16,.72);
+  font-weight:650;
+  line-height:1.7;
+}
+
+body[data-page-type="features_hub"] .is-hidden{
+  display:none;
+}
+
+/* =========================================================
+   13. Feature detail module
+   ========================================================= */
+
+body[data-page-type="feature_detail_page"] .wrap{
+  padding-top:18px;
+  padding-bottom:76px;
+  color:var(--ink);
+}
+
+body[data-page-type="feature_detail_page"] .topBand{
+  margin-top:14px;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="feature_detail_page"] .crumbs{
+  font-weight:800;
+  font-size:13px;
+  color:rgba(11,26,16,.75);
+}
+
+body[data-page-type="feature_detail_page"] .hero{
+  margin-top:14px;
+  overflow:hidden;
+  position:relative;
+}
+
+body[data-page-type="feature_detail_page"] .heroMedia{
+  position:relative;
+  overflow:hidden;
+  min-height:400px;
+  background:rgba(0,0,0,.10);
+}
+
+body[data-page-type="feature_detail_page"] .heroMedia img{
+  width:100%;
+  height:100%;
+  min-height:400px;
+  object-fit:cover;
+  transform:scale(1.01);
+}
+
+body[data-page-type="feature_detail_page"] .heroShade{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(920px 520px at 18% 14%, rgba(224,100,58,.22), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.42));
+  pointer-events:none;
+}
+
+body[data-page-type="feature_detail_page"] .heroInner{
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:14px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(0,0,0,.24);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(6px);
+  padding:16px;
+  color:rgba(255,255,255,.96);
+  box-shadow:0 18px 55px rgba(0,0,0,.20);
+}
+
+body[data-page-type="feature_detail_page"] .heroInner .kicker{
+  color:rgba(255,255,255,.92);
+}
+
+body[data-page-type="feature_detail_page"] .heroH1,
+body[data-page-type="feature_detail_page"] .h1{
+  margin:8px 0 6px;
+  color:#fff;
+  font-family:var(--font-head);
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.02;
+  font-size:clamp(32px,3.8vw,54px);
+}
+
+body[data-page-type="feature_detail_page"] .heroLead,
+body[data-page-type="feature_detail_page"] .lead{
+  margin:0;
+  max-width:80ch;
+  color:var(--muted-on-dark);
+  font-size:15.5px;
+  font-weight:650;
+  line-height:1.7;
+}
+
+body[data-page-type="feature_detail_page"] .featurePanel{
+  margin-top:14px;
+  padding:18px;
+}
+
+body[data-page-type="feature_detail_page"] .featureSplit{
+  display:grid;
+  grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+  gap:14px;
+  align-items:stretch;
+}
+
+body[data-page-type="feature_detail_page"] .featurePhoto{
+  position:relative;
+  overflow:hidden;
+  min-height:0;
+  aspect-ratio:4 / 3;
+  border-radius:18px;
+  border:1px solid rgba(11,26,16,.10);
+  background:rgba(255,255,255,.55);
+  box-shadow:var(--shadow-card);
+}
+
+body[data-page-type="feature_detail_page"] .featurePhoto img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.01);
+}
+
+body[data-page-type="feature_detail_page"] .featurePhotoCaption{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  padding:12px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(0,0,0,.26);
+  color:rgba(231,228,209,.94);
+  font-weight:800;
+  line-height:1.5;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+body[data-page-type="feature_detail_page"] .featureCopyStack{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  align-content:start;
+  align-items:start;
+}
+
+body[data-page-type="feature_detail_page"] .innerCard{
+  padding:16px;
+  min-height:0;
+}
+
+body[data-page-type="feature_detail_page"] .innerCard p,
+body[data-page-type="feature_detail_page"] .amenityCard p,
+body[data-page-type="feature_detail_page"] .relatedFeatureCard p{
+  color:var(--muted-strong);
+  font-size:14.8px;
+  line-height:1.65;
+  font-weight:650;
+}
+
+body[data-page-type="feature_detail_page"] .pillRow{
+  margin-top:12px;
+}
+
+body[data-page-type="feature_detail_page"] .heroInner .pill{
+  border-color:rgba(245,245,220,.32);
+  background:rgba(245,245,220,.86);
+  color:var(--forest);
+}
+
+body[data-page-type="feature_detail_page"] .innerCard .pillRow{
+  gap:9px;
+  margin-top:12px;
+  align-items:flex-start;
+}
+
+body[data-page-type="feature_detail_page"] .amenityCard{
+  padding:18px;
+  display:grid;
+  grid-template-rows:auto minmax(96px,auto) 1fr;
+  gap:12px;
+  height:100%;
+}
+
+body[data-page-type="feature_detail_page"] .amenityCard h3{
+  min-height:28px;
+  display:flex;
+  align-items:flex-start;
+}
+
+body[data-page-type="feature_detail_page"] .amenityCard p{
+  min-height:96px;
+  margin:0;
+  font-size:15px;
+  font-weight:700;
+  line-height:1.62;
+}
+
+body[data-page-type="feature_detail_page"] .amenityList{
+  align-self:start;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+body[data-page-type="feature_detail_page"] .amenityList li{
+  min-height:42px;
+  display:flex;
+  align-items:center;
+  padding:11px 13px;
+  border-radius:14px;
+  border:1px solid rgba(13,89,37,.18);
+  background:rgba(245,245,220,.78);
+  color:rgba(11,26,16,.82);
+  font-size:14px;
+  font-weight:800;
+  line-height:1.25;
+}
+
+body[data-page-type="feature_detail_page"] .relatedFeatureCard{
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  height:100%;
+}
+
+body[data-page-type="feature_detail_page"] .linkCta{
+  margin-top:auto;
+  color:var(--forest);
+  font-weight:800;
+  font-size:13px;
+}
+
+body[data-page-type="feature_detail_page"] .ctaBand{
+  margin-top:14px;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+body[data-page-type="feature_detail_page"] .ctaBand h2{
+  font-size:22px;
+}
+
+body[data-page-type="feature_detail_page"] .ctaBand p{
+  margin:0;
+  max-width:80ch;
+  color:rgba(11,26,16,.72);
+  font-weight:650;
+  line-height:1.65;
+}
+
+/* =========================================================
+   14. Responsive rules
+   ========================================================= */
+
 @media(max-width:1020px){
-  body[data-page-type="room_index"] .roomsHero,
+  body[data-page-type="home_page"] .hero,
   .roomsHero{
     grid-template-columns:1fr;
   }
 
-  body[data-page-type="room_index"] .roomsHeroMedia,
-  body[data-page-type="room_index"] .roomsHeroMedia img,
+  body[data-page-type="home_page"] .heroMedia,
+  body[data-page-type="home_page"] .heroMedia img,
   .roomsHeroMedia,
   .roomsHeroMedia img{
     min-height:420px;
   }
 
-  body[data-page-type="room_index"] .roomsHeroCopy,
+  body[data-page-type="home_page"] .heroCopy,
   .roomsHeroCopy{
     padding:22px;
   }
 
-  body[data-page-type="room_index"] .roomsGrid,
-  body[data-page-type="room_index"] .roomsInfoGrid,
+  body[data-page-type="home_page"] .grid3,
+  body[data-page-type="home_page"] .photoStrip,
   .roomsGrid,
   .roomsInfoGrid{
     grid-template-columns:1fr;
   }
 
-  body[data-page-type="room_index"] .roomsGuideGrid,
+  body[data-page-type="home_page"] .photoCard,
+  body[data-page-type="home_page"] .photoCard img{
+    min-height:260px;
+  }
+
   .roomsGuideGrid{
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 
-@media(max-width:640px){
-  body[data-page-type="room_index"] .roomsHub,
-  .roomsHub{
-    padding:16px var(--pad) 64px;
+@media(max-width:900px){
+  .page{
+    padding:18px;
   }
 
-  body[data-page-type="room_index"] .roomsHeroMedia,
-  body[data-page-type="room_index"] .roomsHeroMedia img,
+  .grid2{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="features_hub"] .wrap,
+  body[data-page-type="feature_detail_page"] .wrap{
+    padding-top:12px;
+    padding-bottom:64px;
+  }
+
+  body[data-page-type="features_hub"] .heroMedia{
+    height:280px;
+  }
+
+  body[data-page-type="features_hub"] .grid,
+  body[data-page-type="feature_detail_page"] .featureSplit,
+  body[data-page-type="feature_detail_page"] .amenityGrid,
+  body[data-page-type="feature_detail_page"] .relatedFeatureGrid{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="features_hub"] .cardMedia{
+    aspect-ratio:4 / 3;
+  }
+
+  body[data-page-type="feature_detail_page"] .heroMedia,
+  body[data-page-type="feature_detail_page"] .heroMedia img{
+    min-height:320px;
+  }
+
+  body[data-page-type="feature_detail_page"] .featurePanel{
+    padding:14px;
+  }
+}
+
+@media(max-width:640px){
+  body[data-page-type="home_page"] .wrap,
+  .roomsHub{
+    padding-top:16px;
+    padding-bottom:64px;
+  }
+
+  body[data-page-type="home_page"] .heroMedia,
+  body[data-page-type="home_page"] .heroMedia img,
   .roomsHeroMedia,
   .roomsHeroMedia img{
     min-height:320px;
   }
 
-  body[data-page-type="room_index"] .roomsHeroCopy,
-  body[data-page-type="room_index"] .roomsPanel,
-  body[data-page-type="room_index"] .roomsBand,
+  body[data-page-type="home_page"] .heroCopy,
+  body[data-page-type="home_page"] .section,
+  body[data-page-type="home_page"] .band,
   .roomsHeroCopy,
   .roomsPanel,
   .roomsBand{
     padding:16px;
   }
 
-  body[data-page-type="room_index"] .roomsHeroCopy h1,
+  body[data-page-type="home_page"] .h1,
   .roomsHeroCopy h1{
-    font-size:clamp(36px,13vw,52px);
+    font-size:var(--display-size-mobile);
   }
 
-  body[data-page-type="room_index"] .roomsGuideGrid,
+  body[data-page-type="home_page"] .tcfr-google-reviews-inner{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="home_page"] .tcfr-tourism{
+    grid-column:auto;
+    grid-row:auto;
+    justify-content:flex-start;
+  }
+
+  body[data-page-type="home_page"] .tcfr-tourismLogo{
+    width:74px;
+    max-width:74px;
+  }
+
+  body[data-page-type="home_page"] .tcfr-google-actions,
+  body[data-page-type="home_page"] .heroCtas,
+  body[data-page-type="home_page"] .bandActions,
+  .roomsHeroActions,
+  .roomsBandActions,
+  body[data-page-type="feature_detail_page"] .quickActions,
+  body[data-page-type="feature_detail_page"] .ctaBtns{
+    width:100%;
+  }
+
+  body[data-page-type="home_page"] .tcfr-google-actions .btn,
+  body[data-page-type="home_page"] .heroCtas .btn,
+  body[data-page-type="home_page"] .bandActions .btn,
+  .roomsHeroActions .btn,
+  .roomsBandActions .btn,
+  .roomsPanelHeader .btn,
+  body[data-page-type="feature_detail_page"] .quickActions .btn,
+  body[data-page-type="feature_detail_page"] .ctaBtns .btn{
+    width:100%;
+  }
+
+  body[data-page-type="home_page"] .trustRow,
   .roomsGuideGrid{
     grid-template-columns:1fr;
   }
 
-  body[data-page-type="room_index"] .roomsHeroActions,
-  body[data-page-type="room_index"] .roomsBandActions,
-  .roomsHeroActions,
-  .roomsBandActions{
-    width:100%;
+  body[data-page-type="home_page"] .trustCard.fullRow{
+    grid-column:auto;
   }
-
-  body[data-page-type="room_index"] .roomsHeroActions .btn,
-  body[data-page-type="room_index"] .roomsBandActions .btn,
-  body[data-page-type="room_index"] .roomsPanelHeader .btn,
-  .roomsHeroActions .btn,
-  .roomsBandActions .btn,
-  .roomsPanelHeader .btn{
-    width:100%;
-  }
-}
-
-/* =========================================================
-   TCFR Features Hub Global Module
-   Purpose:
-   - Move features hub layout out of page-level CSS
-   - Preserve global TCFR layering: page background -> beige panels -> inner cards
-   - Keep features pages consistent with Rooms Hub and other commercial hubs
-   ========================================================= */
-
-body[data-page-type="features_hub"] .wrap{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 18px var(--pad) 84px;
-}
-
-body[data-page-type="features_hub"] .topBand,
-body[data-page-type="features_hub"] .featuresPanel,
-body[data-page-type="features_hub"] .ctaBand{
-  background: rgba(245,245,220,0.72);
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  color: var(--ink);
-}
-
-body[data-page-type="features_hub"] .topBand{
-  margin-top: 14px;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="features_hub"] .crumbs,
-body[data-page-type="features_hub"] .quickActions{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="features_hub"] .crumbs{
-  font-weight: 800;
-  font-size: 13px;
-  color: rgba(11,26,16,0.75);
-}
-
-body[data-page-type="features_hub"] .hero{
-  margin-top: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  background: rgba(245,245,220,0.72);
-  overflow: hidden;
-  position: relative;
-  color: var(--ink);
-}
-
-body[data-page-type="features_hub"] .heroMedia{
-  position: relative;
-  overflow: hidden;
-  height: 400px;
-  background: rgba(0,0,0,0.10);
-}
-
-body[data-page-type="features_hub"] .heroMedia img{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-}
-
-body[data-page-type="features_hub"] .heroShade{
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-  pointer-events: none;
-}
-
-body[data-page-type="features_hub"] .heroInner{
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(0,0,0,0.20);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 14px;
-  color: rgba(255,255,255,0.96);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-}
-
-body[data-page-type="features_hub"] .kicker{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(255,255,255,0.92);
-}
-
-body[data-page-type="features_hub"] .heroH1{
-  margin: 8px 0 6px;
-  font-family: var(--font-head);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
-  font-size: clamp(32px, 3.8vw, 54px);
-  color: #fff;
-}
-
-body[data-page-type="features_hub"] .heroLead{
-  margin: 0;
-  max-width: 80ch;
-  font-weight: 600;
-  line-height: 1.7;
-  color: rgba(231,228,209,0.92);
-  font-size: 15.5px;
-}
-
-body[data-page-type="features_hub"] .featuresPanel{
-  margin-top: 14px;
-  padding: 16px;
-}
-
-body[data-page-type="features_hub"] .filters{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="features_hub"] .filterLeft,
-body[data-page-type="features_hub"] .filterRight,
-body[data-page-type="features_hub"] .chips{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="features_hub"] .filterLabel{
-  font-weight: 800;
-  color: rgba(11,26,16,0.72);
-  font-size: 13px;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-
-body[data-page-type="features_hub"] .chip{
-  appearance: none;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.62);
-  border-radius: 999px;
-  padding: 10px 12px;
-  cursor: pointer;
-  font-weight: 800;
-  font-size: 13px;
-  color: #0b2b12;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-  user-select: none;
-  white-space: nowrap;
-}
-
-body[data-page-type="features_hub"] .chip.is-active{
-  background: rgba(224,100,58,0.92);
-  border-color: rgba(0,0,0,0.10);
-  color: #fff;
-  box-shadow: 0 14px 30px rgba(224,100,58,0.18);
-}
-
-body[data-page-type="features_hub"] .sectionTitle{
-  margin: 18px 0 0;
-  font-family: var(--font-head);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: clamp(22px, 2.4vw, 30px);
-  line-height: 1.1;
-  color: var(--forest);
-}
-
-body[data-page-type="features_hub"] .sectionHint{
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-weight: 650;
-  line-height: 1.7;
-  font-size: 14px;
-  max-width: 90ch;
-}
-
-body[data-page-type="features_hub"] .grid{
-  margin-top: 14px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  align-items: stretch;
-}
-
-body[data-page-type="features_hub"] .card{
-  border: 1px solid rgba(11,26,16,0.12);
-  border-radius: var(--r2);
-  background: rgba(245,245,220,0.72);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  color: var(--ink);
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-body[data-page-type="features_hub"] .card a{
-  color: inherit;
-  text-decoration: none;
-}
-
-body[data-page-type="features_hub"] .cardMedia{
-  position: relative;
-  aspect-ratio: 16 / 10;
-  background: rgba(0,0,0,0.10);
-  overflow: hidden;
-}
-
-body[data-page-type="features_hub"] .cardMedia img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-}
-
-body[data-page-type="features_hub"] .cardMediaShade{
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.26));
-  pointer-events: none;
-}
-
-body[data-page-type="features_hub"] .cardTopBadge{
-  position: absolute;
-  left: 12px;
-  top: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.20);
-  background: rgba(0,0,0,0.30);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: rgba(255,255,255,0.96);
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-}
-
-body[data-page-type="features_hub"] .cardBody{
-  padding: 14px;
-  display: grid;
-  gap: 10px;
-  flex: 1 1 auto;
-}
-
-body[data-page-type="features_hub"] .cardTitle{
-  margin: 0;
-  font-family: var(--font-head);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: 22px;
-  line-height: 1.1;
-  color: var(--forest);
-}
-
-body[data-page-type="features_hub"] .cardText{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  font-weight: 650;
-  line-height: 1.75;
-  font-size: 14.8px;
-}
-
-body[data-page-type="features_hub"] .pillRow{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-
-body[data-page-type="features_hub"] .pill{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.62);
-  color: #0b2b12;
-  font-weight: 800;
-  font-size: 13px;
-  white-space: nowrap;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="features_hub"] .cardCtaRow{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-top: 2px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="features_hub"] .cardCta{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  color: #0b2b12;
-  font-size: 13px;
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.62);
-  box-shadow: 0 12px 28px rgba(13,89,37,0.10);
-  white-space: nowrap;
-}
-
-body[data-page-type="features_hub"] .card:hover .cardCta{
-  background: rgba(224,100,58,0.10);
-  border-color: rgba(224,100,58,0.30);
-}
-
-body[data-page-type="features_hub"] .card:hover .cardMedia img{
-  transform: scale(1.03);
-  transition: transform 260ms ease;
-}
-
-body[data-page-type="features_hub"] .ctaBand{
-  margin-top: 14px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="features_hub"] .ctaBand h2{
-  margin: 0 0 6px;
-  font-family: var(--font-head);
-  color: var(--forest);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: 22px;
-  line-height: 1.1;
-}
-
-body[data-page-type="features_hub"] .ctaBand p{
-  margin: 0;
-  color: rgba(11,26,16,0.72);
-  font-weight: 650;
-  line-height: 1.7;
-  max-width: 80ch;
-}
-
-body[data-page-type="features_hub"] .ctaBtns{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-body[data-page-type="features_hub"] .is-hidden{
-  display:none !important;
-}
-
-@media (max-width: 900px){
-  body[data-page-type="features_hub"] .wrap{
-    padding: 12px var(--pad) 74px;
-  }
-
-  body[data-page-type="features_hub"] .heroMedia{
-    height: 280px;
-  }
-
-  body[data-page-type="features_hub"] .grid{
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="features_hub"] .cardMedia{
-    aspect-ratio: 4 / 3;
-  }
-}
-
-
-/* =========================================================
-   TCFR Unified Feature Detail Module
-   Purpose:
-   - Make feature detail pages visually match Features Hub and Rooms Hub
-   - Global-first: no large page-level layout CSS
-   - Layering: page background -> beige panels -> compact inner cards
-   - Fixes Amenities spacing, symmetry, chip sizing, and card rhythm
-   ========================================================= */
-
-body[data-page-type="feature_detail_page"] .wrap{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 18px var(--pad) 76px;
-  color: var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .topBand,
-body[data-page-type="feature_detail_page"] .hero,
-body[data-page-type="feature_detail_page"] .featurePanel,
-body[data-page-type="feature_detail_page"] .jumpBand,
-body[data-page-type="feature_detail_page"] .ctaBand{
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  background: rgba(245,245,220,0.72);
-  color: var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .topBand{
-  margin-top: 14px;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="feature_detail_page"] .crumbs,
-body[data-page-type="feature_detail_page"] .quickActions,
-body[data-page-type="feature_detail_page"] .chipRow,
-body[data-page-type="feature_detail_page"] .pillRow,
-body[data-page-type="feature_detail_page"] .ctaBtns{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="feature_detail_page"] .crumbs{
-  font-weight: 800;
-  font-size: 13px;
-  color: rgba(11,26,16,0.75);
-}
-
-body[data-page-type="feature_detail_page"] .hero{
-  margin-top: 14px;
-  overflow: hidden;
-  position: relative;
-}
-
-body[data-page-type="feature_detail_page"] .heroMedia{
-  position: relative;
-  overflow: hidden;
-  min-height: 400px;
-  background: rgba(0,0,0,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .heroMedia img{
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .heroShade{
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(920px 520px at 18% 14%, rgba(224,100,58,0.22), rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.42));
-  pointer-events: none;
-}
-
-body[data-page-type="feature_detail_page"] .heroInner{
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(0,0,0,0.24);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 16px;
-  color: rgba(255,255,255,0.96);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-}
-
-body[data-page-type="feature_detail_page"] .kicker{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(255,255,255,0.92);
-}
-
-body[data-page-type="feature_detail_page"] .heroH1,
-body[data-page-type="feature_detail_page"] .h1{
-  margin: 8px 0 6px;
-  font-family: var(--font-head);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
-  font-size: clamp(32px, 3.8vw, 54px);
-  color: #fff;
-}
-
-body[data-page-type="feature_detail_page"] .heroLead,
-body[data-page-type="feature_detail_page"] .lead{
-  margin: 0;
-  max-width: 80ch;
-  font-weight: 650;
-  line-height: 1.7;
-  color: rgba(231,228,209,0.92);
-  font-size: 15.5px;
-}
-
-body[data-page-type="feature_detail_page"] .heroInner p,
-body[data-page-type="feature_detail_page"] .heroInner h1,
-body[data-page-type="feature_detail_page"] .heroInner h2,
-body[data-page-type="feature_detail_page"] .heroInner h3{
-  color: inherit;
-}
-
-body[data-page-type="feature_detail_page"] .heroInner .heroH1,
-body[data-page-type="feature_detail_page"] .heroInner .h1{
-  color: #fff;
-}
-
-body[data-page-type="feature_detail_page"] .heroInner .heroLead,
-body[data-page-type="feature_detail_page"] .heroInner .lead{
-  color: rgba(231,228,209,0.92);
-}
-
-body[data-page-type="feature_detail_page"] .featurePanel{
-  margin-top: 14px;
-  padding: 18px;
-}
-
-body[data-page-type="feature_detail_page"] .featurePanelHeader{
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-
-body[data-page-type="feature_detail_page"] .sectionTitle,
-body[data-page-type="feature_detail_page"] .panelTitle,
-body[data-page-type="feature_detail_page"] .cardTitle{
-  margin: 0;
-  font-family: var(--font-head);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--forest);
-  line-height: 1.1;
-}
-
-body[data-page-type="feature_detail_page"] .sectionTitle,
-body[data-page-type="feature_detail_page"] .panelTitle{
-  font-size: clamp(22px, 2.4vw, 30px);
-}
-
-body[data-page-type="feature_detail_page"] .sectionHint,
-body[data-page-type="feature_detail_page"] .panelHint,
-body[data-page-type="feature_detail_page"] .cardHint{
-  margin: 0;
-  color: rgba(11,26,16,0.70);
-  font-weight: 650;
-  line-height: 1.65;
-  font-size: 14px;
-}
-
-/* Compact, symmetrical first content block */
-body[data-page-type="feature_detail_page"] .featureSplit{
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 14px;
-  align-items: start;
-}
-
-body[data-page-type="feature_detail_page"] .featurePhoto{
-  position: relative;
-  overflow: hidden;
-  min-height: 0;
-  aspect-ratio: 4 / 3;
-  border-radius: 18px;
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.55);
-  box-shadow: 0 12px 30px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .featurePhoto img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .featurePhotoCaption{
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(0,0,0,0.26);
-  color: rgba(231,228,209,0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 12px;
-  font-weight: 800;
-  line-height: 1.5;
-}
-
-body[data-page-type="feature_detail_page"] .featureCopyStack{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  align-content: start;
-  align-items: start;
-}
-
-body[data-page-type="feature_detail_page"] .innerCard,
-body[data-page-type="feature_detail_page"] .amenityCard,
-body[data-page-type="feature_detail_page"] .relatedFeatureCard{
-  background: rgba(255,255,255,0.74);
-  border: 1px solid rgba(11,26,16,0.12);
-  border-radius: var(--r);
-  box-shadow: 0 12px 30px rgba(13,89,37,0.10);
-  color: var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .innerCard{
-  padding: 16px;
-  min-height: 0;
-}
-
-body[data-page-type="feature_detail_page"] .innerCard p,
-body[data-page-type="feature_detail_page"] .amenityCard p,
-body[data-page-type="feature_detail_page"] .relatedFeatureCard p{
-  color: rgba(11,26,16,0.78);
-  font-size: 14.8px;
-  line-height: 1.65;
-  font-weight: 650;
-}
-
-/* Larger, more consistent chips/pills */
-body[data-page-type="feature_detail_page"] .pillRow{
-  margin-top: 12px;
-}
-
-body[data-page-type="feature_detail_page"] .pill,
-body[data-page-type="feature_detail_page"] .tag,
-body[data-page-type="feature_detail_page"] .chip{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 34px;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.20);
-  background: rgba(245,245,220,0.78);
-  color: var(--forest);
-  font-weight: 800;
-  white-space: nowrap;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-  line-height: 1.1;
-}
-
-body[data-page-type="feature_detail_page"] .pill{
-  padding: 9px 14px;
-  font-size: 13.5px;
-}
-
-body[data-page-type="feature_detail_page"] .tag,
-body[data-page-type="feature_detail_page"] .chip{
-  padding: 10px 14px;
-  font-size: 13.5px;
-}
-
-body[data-page-type="feature_detail_page"] .heroInner .pill{
-  border-color: rgba(245,245,220,0.32);
-  background: rgba(245,245,220,0.86);
-  color: var(--forest);
-}
-
-/* Make tag rows compact instead of creating large blank card space */
-body[data-page-type="feature_detail_page"] .innerCard .pillRow{
-  gap: 9px;
-  margin-top: 12px;
-  align-items: flex-start;
-}
-
-/* Amenity cards: equal, compact, readable */
-body[data-page-type="feature_detail_page"] .amenityGrid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  align-items: stretch;
-}
-
-body[data-page-type="feature_detail_page"] .amenityCard{
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  gap: 10px;
-}
-
-body[data-page-type="feature_detail_page"] .amenityCard h3,
-body[data-page-type="feature_detail_page"] .relatedFeatureCard h3{
-  margin: 0;
-  font-family: var(--font-head);
-  color: var(--forest);
-  font-size: 20px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-body[data-page-type="feature_detail_page"] .amenityList{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 8px;
-}
-
-body[data-page-type="feature_detail_page"] .amenityList li{
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(245,245,220,0.70);
-  border-radius: 14px;
-  padding: 10px 11px;
-  color: rgba(11,26,16,0.82);
-  font-weight: 800;
-  font-size: 13.8px;
-  line-height: 1.35;
-}
-
-/* Related cards */
-body[data-page-type="feature_detail_page"] .relatedFeatureGrid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  align-items: stretch;
-}
-
-body[data-page-type="feature_detail_page"] .relatedFeatureCard{
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  height: 100%;
-}
-
-body[data-page-type="feature_detail_page"] .relatedFeatureCard:hover{
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-
-body[data-page-type="feature_detail_page"] .linkCta{
-  margin-top: auto;
-  color: var(--forest);
-  font-weight: 800;
-  font-size: 13px;
-}
-
-body[data-page-type="feature_detail_page"] .ctaBand{
-  margin-top: 14px;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="feature_detail_page"] .ctaBand h2{
-  margin: 0 0 6px;
-  font-family: var(--font-head);
-  color: var(--forest);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: 22px;
-  line-height: 1.1;
-}
-
-body[data-page-type="feature_detail_page"] .ctaBand p{
-  margin: 0;
-  color: rgba(11,26,16,0.72);
-  font-weight: 650;
-  line-height: 1.65;
-  max-width: 80ch;
-}
-
-@media (max-width: 900px){
-  body[data-page-type="feature_detail_page"] .wrap{
-    padding: 12px var(--pad) 64px;
-  }
-
-  body[data-page-type="feature_detail_page"] .heroMedia,
-  body[data-page-type="feature_detail_page"] .heroMedia img{
-    min-height: 320px;
-  }
-
-  body[data-page-type="feature_detail_page"] .featureSplit,
-  body[data-page-type="feature_detail_page"] .amenityGrid,
-  body[data-page-type="feature_detail_page"] .relatedFeatureGrid{
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="feature_detail_page"] .featurePanel{
-    padding: 14px;
-  }
-
-  body[data-page-type="feature_detail_page"] .featurePhoto{
-    aspect-ratio: 4 / 3;
-  }
-
-  body[data-page-type="feature_detail_page"] .quickActions .btn,
-  body[data-page-type="feature_detail_page"] .ctaBtns .btn{
-    width: 100%;
-  }
-}
-
-
-/* =========================================================
-   TCFR Feature Detail Alignment Lock
-   Purpose:
-   - Force amenities/feature cards to align visually across columns
-   - Makes card headings, intro text, and list starts consistent
-   - Stronger than prior soft alignment rules so the change is visible
-   ========================================================= */
-
-body[data-page-type="feature_detail_page"] .amenityGrid{
-  align-items: stretch !important;
-}
-
-body[data-page-type="feature_detail_page"] .amenityCard{
-  display: grid !important;
-  grid-template-rows: auto minmax(96px, auto) 1fr !important;
-  gap: 12px !important;
-  height: 100% !important;
-  padding: 18px !important;
-}
-
-body[data-page-type="feature_detail_page"] .amenityCard h3{
-  min-height: 28px !important;
-  margin: 0 !important;
-  display: flex !important;
-  align-items: flex-start !important;
-}
-
-body[data-page-type="feature_detail_page"] .amenityCard p{
-  min-height: 96px !important;
-  margin: 0 !important;
-  line-height: 1.62 !important;
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  color: rgba(11,26,16,0.78) !important;
-}
-
-body[data-page-type="feature_detail_page"] .amenityList{
-  align-self: start !important;
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 10px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-body[data-page-type="feature_detail_page"] .amenityList li{
-  min-height: 42px !important;
-  display: flex !important;
-  align-items: center !important;
-  padding: 11px 13px !important;
-  border-radius: 14px !important;
-  font-size: 14px !important;
-  line-height: 1.25 !important;
-  font-weight: 850 !important;
-  background: rgba(245,245,220,0.78) !important;
-  border: 1px solid rgba(13,89,37,0.18) !important;
-}
-
-/* First overview block: prevent sparse cards and oversized blank zones */
-body[data-page-type="feature_detail_page"] .featureSplit{
-  align-items: stretch !important;
-}
-
-body[data-page-type="feature_detail_page"] .featureCopyStack{
-  display: grid !important;
-  grid-template-rows: auto 1fr !important;
-  gap: 14px !important;
-}
-
-body[data-page-type="feature_detail_page"] .featureCopyStack .innerCard{
-  min-height: 0 !important;
-}
-
-body[data-page-type="feature_detail_page"] .featureCopyStack .innerCard:first-child{
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-body[data-page-type="feature_detail_page"] .featureCopyStack .innerCard:first-child .pillRow{
-  margin-top: 14px !important;
-  align-content: flex-start !important;
-}
-
-body[data-page-type="feature_detail_page"] .featureCopyStack .innerCard:nth-child(2){
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-}
-
-body[data-page-type="feature_detail_page"] .pill,
-body[data-page-type="feature_detail_page"] .tag,
-body[data-page-type="feature_detail_page"] .chip{
-  min-height: 38px !important;
-  padding: 10px 15px !important;
-  font-size: 14px !important;
-  line-height: 1.15 !important;
-}
-
-@media (min-width: 901px){
-  body[data-page-type="feature_detail_page"] .amenityGrid{
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  }
-
-  body[data-page-type="feature_detail_page"] .amenityCard{
-    min-height: 360px !important;
-  }
-}
-
-@media (max-width: 900px){
-  body[data-page-type="feature_detail_page"] .amenityCard{
-    grid-template-rows: auto auto auto !important;
-    min-height: 0 !important;
-  }
-
-  body[data-page-type="feature_detail_page"] .amenityCard p{
-    min-height: 0 !important;
-  }
-}
-
-
-/* =========================================================
-   TCFR Attractions Feature Detail Global Module
-   Purpose:
-   - Move Attractions page layout out of page-level CSS
-   - Match the global feature-detail visual system
-   - Support featured attraction cards, image carousel, videos, and contained CTA bands
-   ========================================================= */
-
-body[data-page-type="feature_detail_page"] .intro{
-  margin-top:14px;
-  padding:18px;
-}
-
-body[data-page-type="feature_detail_page"] .intro p{
-  margin:0;
-  font-size:15.5px;
-  line-height:1.72;
-  color:rgba(11,26,16,0.78);
-  max-width:90ch;
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .featureGrid{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .featureCard{
-  display:flex;
-  flex-direction:column;
-  height:100%;
-  overflow:hidden;
-  background:rgba(255,255,255,0.74);
-  border:1px solid rgba(11,26,16,0.12);
-  border-radius:var(--r);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
-  color:var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .featureImage{
-  position:relative;
-  aspect-ratio:16/10;
-  background:rgba(0,0,0,0.10);
-  overflow:hidden;
-}
-
-body[data-page-type="feature_detail_page"] .featureImage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .featureBody{
-  padding:16px;
-  display:grid;
-  grid-template-rows:auto minmax(96px,auto) auto;
-  gap:12px;
-  flex:1 1 auto;
-}
-
-body[data-page-type="feature_detail_page"] .featureBody h2{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:22px;
-  color:var(--forest);
-  letter-spacing:-0.02em;
-  font-weight: 800;
-  line-height:1.1;
-}
-
-body[data-page-type="feature_detail_page"] .featureBody p{
-  margin:0;
-  font-size:14.8px;
-  line-height:1.65;
-  color:rgba(11,26,16,0.78);
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  align-items:flex-start;
-}
-
-body[data-page-type="feature_detail_page"] .tag{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:38px;
-  font-size:14px;
-  padding:10px 15px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,0.20);
-  background:rgba(245,245,220,0.78);
-  font-weight:800;
-  color:var(--forest);
-  white-space:nowrap;
-  box-shadow:0 10px 26px rgba(13,89,37,0.10);
-  line-height:1.15;
-}
-
-body[data-page-type="feature_detail_page"] .carousel{
-  margin-top:14px;
-  padding:16px;
-  position:relative;
-}
-
-body[data-page-type="feature_detail_page"] .h2{
-  margin:0 0 12px;
-  font-family:var(--font-head);
-  color:var(--forest);
-  letter-spacing:-0.02em;
-  font-weight:800;
-  font-size:22px;
-  line-height:1.1;
-}
-
-body[data-page-type="feature_detail_page"] .carouselViewport{
-  overflow:hidden;
-  border-radius:18px;
-  border:1px solid rgba(11,26,16,0.10);
-  background:rgba(255,255,255,0.55);
-}
-
-body[data-page-type="feature_detail_page"] .carouselTrack{
-  display:flex;
-  transition:transform 0.4s ease;
-  will-change:transform;
-}
-
-body[data-page-type="feature_detail_page"] .carouselItem{
-  flex:0 0 100%;
-  aspect-ratio:16/9;
-  background:rgba(0,0,0,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .carouselItem img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-body[data-page-type="feature_detail_page"] .carouselBtn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.45);
-  color:#fff;
-  border:0;
-  width:44px;
-  height:44px;
-  border-radius:999px;
-  cursor:pointer;
-  font-size:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 16px 40px rgba(0,0,0,0.18);
-}
-
-body[data-page-type="feature_detail_page"] .carouselBtn.prev{ left:20px; }
-body[data-page-type="feature_detail_page"] .carouselBtn.next{ right:20px; }
-
-body[data-page-type="feature_detail_page"] .videoRow{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-  align-items:start;
-}
-
-body[data-page-type="feature_detail_page"] .videoCard{
-  border-radius:var(--r2);
-  overflow:hidden;
-  border:1px solid rgba(11,26,16,0.10);
-  box-shadow:var(--shadow);
-  background:rgba(255,255,255,0.55);
-}
-
-body[data-page-type="feature_detail_page"] .videoWrap{
-  width:100%;
-  aspect-ratio:9/16;
-  position:relative;
-  background:#000;
-}
-
-body[data-page-type="feature_detail_page"] .videoWrap iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  border:0;
-  display:block;
-}
-
-body[data-page-type="feature_detail_page"] .note{
-  margin-top:14px;
-  padding:16px;
-  text-align:center;
-  font-size:14px;
-  color:rgba(11,26,16,0.65);
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .attractionRelatedGrid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .attractionRelatedCard{
-  padding:16px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  height:100%;
-  background:rgba(255,255,255,0.74);
-  border:1px solid rgba(11,26,16,0.12);
-  border-radius:var(--r);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
-  color:var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .attractionRelatedCard h3{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-size:20px;
-  line-height:1.1;
-  letter-spacing:-0.02em;
-}
-
-body[data-page-type="feature_detail_page"] .attractionRelatedCard p{
-  margin:0;
-  color:rgba(11,26,16,0.78);
-  font-size:14.8px;
-  line-height:1.65;
-  font-weight:650;
-}
-
-@media(max-width:900px){
-  body[data-page-type="feature_detail_page"] .featureGrid,
-  body[data-page-type="feature_detail_page"] .videoRow,
-  body[data-page-type="feature_detail_page"] .attractionRelatedGrid{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="feature_detail_page"] .featureBody{
-    grid-template-rows:auto auto auto;
-  }
-
-  body[data-page-type="feature_detail_page"] .carouselBtn.prev{ left:12px; }
-  body[data-page-type="feature_detail_page"] .carouselBtn.next{ right:12px; }
-}
-
-
-/* =========================================================
-   TCFR Destination Support Global Module
-   Purpose:
-   - Global-first layout for regional authority and destination-support pages
-   - Used by Chocó Andino, Pululahua, cloud forest geography, biodiversity, and similar nature-context pages
-   - Layering: page background -> beige panels -> inner cards
-   ========================================================= */
-
-body[data-page-type="destination_support_page"] .wrap{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 18px var(--pad) 76px;
-  color: var(--ink);
-}
-
-body[data-page-type="destination_support_page"] .topBand,
-body[data-page-type="destination_support_page"] .hero,
-body[data-page-type="destination_support_page"] .destinationPanel,
-body[data-page-type="destination_support_page"] .card,
-body[data-page-type="destination_support_page"] .ctaBand{
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  background: rgba(245,245,220,0.72);
-  color: var(--ink);
-}
-
-body[data-page-type="destination_support_page"] .topBand{
-  margin-top: 14px;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="destination_support_page"] .crumbs,
-body[data-page-type="destination_support_page"] .quickActions,
-body[data-page-type="destination_support_page"] .pillRow,
-body[data-page-type="destination_support_page"] .ctaBtns{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="destination_support_page"] .crumbs{
-  font-weight: 800;
-  font-size: 13px;
-  color: rgba(11,26,16,0.75);
-}
-
-body[data-page-type="destination_support_page"] .crumbs a{
-  color: inherit;
-  text-decoration: none;
-}
-
-body[data-page-type="destination_support_page"] .crumbs a:hover{
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-body[data-page-type="destination_support_page"] .hero{
-  margin-top: 14px;
-  overflow: hidden;
-  position: relative;
-}
-
-body[data-page-type="destination_support_page"] .heroMedia{
-  position: relative;
-  overflow: hidden;
-  min-height: 400px;
-  background: rgba(0,0,0,0.10);
-}
-
-body[data-page-type="destination_support_page"] .heroMedia img{
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-}
-
-body[data-page-type="destination_support_page"] .heroShade{
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(920px 520px at 18% 14%, rgba(224,100,58,0.20), rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.46));
-  pointer-events: none;
-}
-
-body[data-page-type="destination_support_page"] .heroBadge,
-body[data-page-type="destination_support_page"] .heroInner{
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
-  max-width: 900px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(0,0,0,0.26);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 16px;
-  color: rgba(255,255,255,0.96);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-}
-
-body[data-page-type="destination_support_page"] .kicker{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(255,255,255,0.92);
-}
-
-body[data-page-type="destination_support_page"] .heroH1,
-body[data-page-type="destination_support_page"] .h1{
-  margin: 8px 0 6px;
-  font-family: var(--font-head);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
-  font-size: clamp(32px, 3.8vw, 54px);
-  color: #fff;
-}
-
-body[data-page-type="destination_support_page"] .heroLead,
-body[data-page-type="destination_support_page"] .lead{
-  margin: 0;
-  max-width: 84ch;
-  font-weight: 650;
-  line-height: 1.7;
-  color: rgba(231,228,209,0.92);
-  font-size: 15.5px;
-}
-
-body[data-page-type="destination_support_page"] .destinationPanel{
-  margin-top: 14px;
-  padding: 18px;
-}
-
-body[data-page-type="destination_support_page"] .destinationPanelHeader{
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-
-body[data-page-type="destination_support_page"] .panelTitle,
-body[data-page-type="destination_support_page"] .cardTitle,
-body[data-page-type="destination_support_page"] .h2{
-  margin: 0;
-  font-family: var(--font-head);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--forest);
-  line-height: 1.1;
-}
-
-body[data-page-type="destination_support_page"] .panelTitle{
-  font-size: clamp(22px, 2.4vw, 30px);
-}
-
-body[data-page-type="destination_support_page"] .cardTitle,
-body[data-page-type="destination_support_page"] .h2{
-  font-size: 21px;
-}
-
-body[data-page-type="destination_support_page"] .panelHint,
-body[data-page-type="destination_support_page"] .cardHint{
-  margin: 0;
-  color: rgba(11,26,16,0.70);
-  font-weight: 700;
-  line-height: 1.65;
-  font-size: 14px;
-}
-
-body[data-page-type="destination_support_page"] .gridA,
-body[data-page-type="destination_support_page"] .destinationSplit{
-  display: grid;
-  grid-template-columns: minmax(0,1.12fr) minmax(0,0.88fr);
-  gap: 14px;
-  align-items: stretch;
-}
-
-body[data-page-type="destination_support_page"] .gridB{
-  margin-top: 14px;
-  display: grid;
-  grid-template-columns: minmax(0,1.12fr) minmax(0,0.88fr);
-  gap: 14px;
-  align-items: start;
-}
-
-body[data-page-type="destination_support_page"] .card{
-  overflow: hidden;
-  position: relative;
-  min-width: 0;
-}
-
-body[data-page-type="destination_support_page"] .cardHead{
-  padding: 16px 16px 0;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 2;
-}
-
-body[data-page-type="destination_support_page"] .pad,
-body[data-page-type="destination_support_page"] .mapWrap,
-body[data-page-type="destination_support_page"] .miniCarouselPad,
-body[data-page-type="destination_support_page"] .sourcesPad{
-  padding: 16px;
-}
-
-body[data-page-type="destination_support_page"] .p{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  line-height: 1.72;
-  font-size: 14.8px;
-  font-weight: 650;
-}
-
-body[data-page-type="destination_support_page"] .p + .p{
-  margin-top: 10px;
-}
-
-body[data-page-type="destination_support_page"] .pillRow{
-  margin-top: 12px;
-}
-
-body[data-page-type="destination_support_page"] .pill{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 38px;
-  padding: 10px 15px;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.20);
-  background: rgba(245,245,220,0.78);
-  color: var(--forest);
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1.15;
-  white-space: nowrap;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="destination_support_page"] .pill strong{
-  color: var(--forest);
-}
-
-body[data-page-type="destination_support_page"] .mapFrame{
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.55);
-  position: relative;
-}
-
-body[data-page-type="destination_support_page"] .mapFrame img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-body[data-page-type="destination_support_page"] .mapTag{
-  position: absolute;
-  left: 12px;
-  bottom: 12px;
-  right: 12px;
-  border-radius: 14px;
-  background: rgba(245,245,220,0.92);
-  border: 1px solid rgba(13,89,37,0.16);
-  padding: 10px;
-  font-weight: 800;
-  color: var(--ink);
-  font-size: 13px;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
-}
-
-body[data-page-type="destination_support_page"] .list{
-  margin: 10px 0 0;
-  padding-left: 18px;
-  color: rgba(11,26,16,0.82);
-  line-height: 1.75;
-  font-weight: 650;
-  font-size: 15px;
-}
-
-body[data-page-type="destination_support_page"] .list li{
-  margin: 6px 0;
-}
-
-body[data-page-type="destination_support_page"] .miniCarousel{
-  border-radius: 18px;
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.55);
-  overflow: hidden;
-}
-
-body[data-page-type="destination_support_page"] .miniViewport{
-  position: relative;
-  overflow: hidden;
-  background: rgba(0,0,0,0.08);
-}
-
-body[data-page-type="destination_support_page"] .miniTrack{
-  display: flex;
-  width: 100%;
-  transform: translateX(0);
-  transition: transform 420ms ease;
-  will-change: transform;
-}
-
-body[data-page-type="destination_support_page"] .miniSlide{
-  flex: 0 0 100%;
-  position: relative;
-  aspect-ratio: 16 / 9;
-  margin: 0;
-  padding: 0;
-}
-
-body[data-page-type="destination_support_page"] .miniSlide img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-body[data-page-type="destination_support_page"] .miniCap{
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  padding: 9px 11px;
-  border-radius: 14px;
-  background: rgba(245,245,220,0.92);
-  border: 1px solid rgba(13,89,37,0.16);
-  color: #0b2b12;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-  font-weight: 800;
-  font-size: 13px;
-  letter-spacing: -0.01em;
-}
-
-body[data-page-type="destination_support_page"] .miniArrow{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 44px;
-  width: 48px;
-  border-radius: 16px;
-  border: 1px solid rgba(245,245,220,0.45);
-  background: rgba(11,26,16,0.30);
-  color: rgba(231,228,209,0.96);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-  cursor: pointer;
-  user-select: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  line-height: 1;
-  z-index: 3;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-body[data-page-type="destination_support_page"] .miniArrow.prev{ left: 10px; }
-body[data-page-type="destination_support_page"] .miniArrow.next{ right: 10px; }
-
-body[data-page-type="destination_support_page"] .miniNav{
-  border-top: 1px solid rgba(11,26,16,0.12);
-  padding: 10px 12px;
-  display: flex;
-  justify-content: center;
-}
-
-body[data-page-type="destination_support_page"] .miniDots{
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-}
-
-body[data-page-type="destination_support_page"] .miniDotBtn{
-  appearance: none;
-  border: 1px solid rgba(13,89,37,0.20);
-  background: rgba(255,255,255,0.72);
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  cursor: pointer;
-  padding: 0;
-}
-
-body[data-page-type="destination_support_page"] .miniDotBtn.is-active{
-  background: rgba(224,100,58,0.95);
-  border-color: rgba(0,0,0,0.10);
-  box-shadow: 0 10px 22px rgba(224,100,58,0.18);
-  transform: scale(1.05);
-}
-
-body[data-page-type="destination_support_page"] .cite{
-  display: inline-block;
-  vertical-align: super;
-  font-size: 0.78em;
-  line-height: 1;
-  margin-left: 4px;
-}
-
-body[data-page-type="destination_support_page"] .cite a{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.70);
-  color: rgba(11,26,16,0.70);
-  font-weight: 800;
-}
-
-body[data-page-type="destination_support_page"] .sourcesList{
-  margin: 0;
-  padding-left: 18px;
-  color: rgba(11,26,16,0.78);
-  line-height: 1.75;
-  font-weight: 650;
-  font-size: 14.6px;
-}
-
-body[data-page-type="destination_support_page"] .sourcesList a{
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-body[data-page-type="destination_support_page"] .sourcesNote{
-  margin: 10px 0 0;
-  color: rgba(11,26,16,0.62);
-  font-weight: 650;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationGrid{
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 14px;
-  align-items: stretch;
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationCard{
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  height: 100%;
-  background: rgba(255,255,255,0.74);
-  border: 1px solid rgba(11,26,16,0.12);
-  border-radius: var(--r);
-  box-shadow: 0 12px 30px rgba(13,89,37,0.10);
-  color: var(--ink);
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationCard h3{
-  margin: 0;
-  font-family: var(--font-head);
-  color: var(--forest);
-  font-size: 20px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationCard p{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  font-size: 14.8px;
-  line-height: 1.65;
-  font-weight: 650;
-}
-
-body[data-page-type="destination_support_page"] .linkCta{
-  margin-top: auto;
-  color: var(--forest);
-  font-weight: 800;
-  font-size: 13px;
-}
-
-body[data-page-type="destination_support_page"] .ctaBand{
-  margin-top: 14px;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="destination_support_page"] .ctaBand h2{
-  margin: 0 0 6px;
-  font-family: var(--font-head);
-  color: var(--forest);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: 22px;
-  line-height: 1.1;
-}
-
-body[data-page-type="destination_support_page"] .ctaBand p{
-  margin: 0;
-  color: rgba(11,26,16,0.72);
-  font-weight: 650;
-  line-height: 1.65;
-  max-width: 80ch;
-}
-
-@media (max-width: 900px){
-  body[data-page-type="destination_support_page"] .wrap{
-    padding: 12px var(--pad) 64px;
-  }
-
-  body[data-page-type="destination_support_page"] .heroMedia,
-  body[data-page-type="destination_support_page"] .heroMedia img{
-    min-height: 320px;
-  }
-
-  body[data-page-type="destination_support_page"] .gridA,
-  body[data-page-type="destination_support_page"] .gridB,
-  body[data-page-type="destination_support_page"] .destinationSplit,
-  body[data-page-type="destination_support_page"] .relatedDestinationGrid{
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="destination_support_page"] .miniSlide{
-    aspect-ratio: 4 / 3;
-  }
-
-  body[data-page-type="destination_support_page"] .quickActions .btn,
-  body[data-page-type="destination_support_page"] .ctaBtns .btn{
-    width: 100%;
-  }
-}
-
-
-/* =========================================================
-   TCFR Destination Support Spacing Lock
-   Purpose:
-   - Fix lower-page rhythm for related links, CTA, sources, and final conversion blocks
-   - Prevent stacked panels from looking patched or uneven
-   ========================================================= */
-
-body[data-page-type="destination_support_page"] .destinationPanel,
-body[data-page-type="destination_support_page"] .ctaBand,
-body[data-page-type="destination_support_page"] .card{
-  margin-top: 14px;
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationGrid{
-  margin-top: 0;
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationCard{
-  min-height: 148px;
-  justify-content: flex-start;
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationCard h3{
-  min-height: 26px;
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationCard p{
-  min-height: 58px;
-}
-
-body[data-page-type="destination_support_page"] .relatedDestinationCard .linkCta{
-  padding-top: 4px;
-}
-
-body[data-page-type="destination_support_page"] .ctaBand{
-  min-height: 132px;
-  align-items: center;
-}
-
-body[data-page-type="destination_support_page"] .ctaBand + .card,
-body[data-page-type="destination_support_page"] .card + .ctaBand,
-body[data-page-type="destination_support_page"] .destinationPanel + .ctaBand{
-  margin-top: 16px;
-}
-
-body[data-page-type="destination_support_page"] .sourcesPad{
-  padding: 16px;
-}
-
-body[data-page-type="destination_support_page"] .sourcesList{
-  margin-top: 10px;
-}
-
-body[data-page-type="destination_support_page"] .sourcesNote{
-  margin-top: 10px;
-}
-
-body[data-page-type="destination_support_page"] .card[aria-label*="Source"],
-body[data-page-type="destination_support_page"] .card[aria-label*="Sources"],
-body[data-page-type="destination_support_page"] .card[aria-label*="Fuente"],
-body[data-page-type="destination_support_page"] .card[aria-label*="Fuentes"]{
-  background: rgba(245,245,220,0.66);
-}
-
-body[data-page-type="destination_support_page"] .card[aria-label*="Source"] .cardHead,
-body[data-page-type="destination_support_page"] .card[aria-label*="Sources"] .cardHead,
-body[data-page-type="destination_support_page"] .card[aria-label*="Fuente"] .cardHead,
-body[data-page-type="destination_support_page"] .card[aria-label*="Fuentes"] .cardHead{
-  padding-bottom: 0;
-}
-
-body[data-page-type="destination_support_page"] .card[aria-label*="Source"] .cardHint,
-body[data-page-type="destination_support_page"] .card[aria-label*="Sources"] .cardHint,
-body[data-page-type="destination_support_page"] .card[aria-label*="Fuente"] .cardHint,
-body[data-page-type="destination_support_page"] .card[aria-label*="Fuentes"] .cardHint{
-  text-align: right;
-}
-
-body[data-page-type="destination_support_page"] main.wrap > .destinationPanel:last-of-type,
-body[data-page-type="destination_support_page"] main.wrap > .ctaBand:last-of-type{
-  margin-bottom: 0;
-}
-
-/* If a page already has a legacy final CTA after sources, make it look intentional */
-body[data-page-type="destination_support_page"] .sourcesBlock + .ctaBand,
-body[data-page-type="destination_support_page"] .card + .ctaBand:last-of-type{
-  background: rgba(245,245,220,0.78);
-}
-
-@media (max-width: 900px){
-  body[data-page-type="destination_support_page"] .relatedDestinationCard,
-  body[data-page-type="destination_support_page"] .ctaBand{
-    min-height: 0;
-  }
-
-  body[data-page-type="destination_support_page"] .relatedDestinationCard h3,
-  body[data-page-type="destination_support_page"] .relatedDestinationCard p{
-    min-height: 0;
-  }
-
-  body[data-page-type="destination_support_page"] .card[aria-label*="Source"] .cardHint,
-  body[data-page-type="destination_support_page"] .card[aria-label*="Sources"] .cardHint,
-  body[data-page-type="destination_support_page"] .card[aria-label*="Fuente"] .cardHint,
-  body[data-page-type="destination_support_page"] .card[aria-label*="Fuentes"] .cardHint{
-    text-align: left;
-  }
-}
-
-
-/* =========================================================
-   TCFR Fauna Feature Detail Global Module
-   Purpose:
-   - Global-first layout for fauna / wildlife feature detail pages
-   - Removes page-level dependency for carousel, fauna cards, videos, and related links
-   - Preserves TCFR layering: page background -> beige panels -> inner cards
-   ========================================================= */
-
-body[data-page-type="feature_detail_page"] .intro{
-  margin-top:14px;
-  padding:18px;
-}
-
-body[data-page-type="feature_detail_page"] .intro p{
-  margin:0;
-  font-size:15.5px;
-  line-height:1.72;
-  color:rgba(11,26,16,0.78);
-  max-width:90ch;
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .carouselWrap{
-  margin-top:14px;
-  padding:16px;
-  position:relative;
-}
-
-body[data-page-type="feature_detail_page"] .carouselViewport{
-  overflow:hidden;
-  border-radius:18px;
-  border:1px solid rgba(11,26,16,0.10);
-  background:rgba(255,255,255,0.55);
-}
-
-body[data-page-type="feature_detail_page"] .carouselTrack{
-  display:flex;
-  transition:transform 0.45s ease;
-  will-change:transform;
-}
-
-body[data-page-type="feature_detail_page"] .carouselSlide{
-  flex:0 0 100%;
-  aspect-ratio:16/9;
-  background:rgba(0,0,0,0.08);
-}
-
-body[data-page-type="feature_detail_page"] .carouselSlide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .carouselBtn{
-  position:absolute;
-  top:calc(50% + 18px);
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.45);
-  color:#fff;
-  border:none;
-  width:44px;
-  height:44px;
-  border-radius:999px;
-  cursor:pointer;
-  font-size:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:2;
-  box-shadow:0 16px 40px rgba(0,0,0,0.18);
-}
-
-body[data-page-type="feature_detail_page"] .carouselBtn.prev{ left:20px; }
-body[data-page-type="feature_detail_page"] .carouselBtn.next{ right:20px; }
-
-body[data-page-type="feature_detail_page"] .faunaGrid{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .faunaCard{
-  display:grid;
-  grid-template-columns:0.95fr 1.05fr;
-  gap:14px;
-  padding:14px;
-  align-items:stretch;
-  background:rgba(255,255,255,0.74);
-  border:1px solid rgba(11,26,16,0.12);
-  border-radius:var(--r);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
-  color:var(--ink);
-  overflow:hidden;
-}
-
-body[data-page-type="feature_detail_page"] .faunaImage{
-  border-radius:18px;
-  overflow:hidden;
-  min-height:260px;
-  background:rgba(0,0,0,0.08);
-  border:1px solid rgba(11,26,16,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .faunaImage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .faunaBody{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:10px;
-  min-width:0;
-}
-
-body[data-page-type="feature_detail_page"] .faunaBody h3{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:22px;
-  color:var(--forest);
-  font-weight: 800;
-  letter-spacing:-0.02em;
-  line-height:1.1;
-}
-
-body[data-page-type="feature_detail_page"] .faunaLatin{
-  font-size:13px;
-  font-style:italic;
-  color:rgba(11,26,16,0.55);
-  font-weight:650;
-  margin-top:-4px;
-}
-
-body[data-page-type="feature_detail_page"] .faunaTags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-body[data-page-type="feature_detail_page"] .faunaText{
-  font-size:14.8px;
-  line-height:1.7;
-  color:rgba(11,26,16,0.78);
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .videoStrip{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-}
-
-body[data-page-type="feature_detail_page"] .videoCard{
-  border-radius:var(--r2);
-  overflow:hidden;
-  border:1px solid rgba(11,26,16,0.10);
-  box-shadow:var(--shadow);
-  background:rgba(255,255,255,0.55);
-}
-
-body[data-page-type="feature_detail_page"] .videoWrap{
-  width:100%;
-  aspect-ratio:9/16;
-  position:relative;
-  background:#000;
-}
-
-body[data-page-type="feature_detail_page"] .videoWrap iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  border:0;
-  display:block;
-}
-
-body[data-page-type="feature_detail_page"] .faunaRelatedGrid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .faunaRelatedCard{
-  padding:16px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  height:100%;
-  background:rgba(255,255,255,0.74);
-  border:1px solid rgba(11,26,16,0.12);
-  border-radius:var(--r);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
-  color:var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .faunaRelatedCard h3{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-size:20px;
-  line-height:1.1;
-  letter-spacing:-0.02em;
-}
-
-body[data-page-type="feature_detail_page"] .faunaRelatedCard p{
-  margin:0;
-  color:rgba(11,26,16,0.78);
-  font-size:14.8px;
-  line-height:1.65;
-  font-weight:650;
-}
-
-@media(max-width:900px){
-  body[data-page-type="feature_detail_page"] .faunaGrid,
-  body[data-page-type="feature_detail_page"] .faunaCard,
-  body[data-page-type="feature_detail_page"] .videoStrip,
-  body[data-page-type="feature_detail_page"] .faunaRelatedGrid{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="feature_detail_page"] .faunaImage{
-    min-height:240px;
-  }
-
-  body[data-page-type="feature_detail_page"] .carouselBtn.prev{ left:12px; }
-  body[data-page-type="feature_detail_page"] .carouselBtn.next{ right:12px; }
-}
-
-
-/* =========================================================
-   TCFR Flora Feature Detail Global Module
-   Purpose:
-   - Global-first layout for flora / plant-life feature detail pages
-   - Removes page-level dependency for flora cards, section breaks, and related links
-   - Preserves TCFR layering: page background -> beige panels -> inner cards
-   ========================================================= */
-
-body[data-page-type="feature_detail_page"] .intro{
-  margin-top:14px;
-  padding:18px;
-}
-
-body[data-page-type="feature_detail_page"] .intro p{
-  margin:0;
-  font-size:15.5px;
-  line-height:1.72;
-  color:rgba(11,26,16,0.78);
-  max-width:90ch;
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .floraGrid{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .sectionBreak{
-  grid-column:1 / -1;
-  padding:16px;
-  background:rgba(245,245,220,0.72);
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  color:var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .sectionBreak h2{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-size:24px;
-  letter-spacing:-0.02em;
-  font-weight:800;
-  line-height:1.1;
-}
-
-body[data-page-type="feature_detail_page"] .sectionBreak p{
-  margin:8px 0 0;
-  color:rgba(11,26,16,0.70);
-  font-size:14.8px;
-  font-weight:650;
-  line-height:1.6;
-  max-width:90ch;
-}
-
-body[data-page-type="feature_detail_page"] .floraCard{
-  display:grid;
-  grid-template-columns:0.95fr 1.05fr;
-  gap:14px;
-  padding:14px;
-  align-items:stretch;
-  background:rgba(255,255,255,0.74);
-  border:1px solid rgba(11,26,16,0.12);
-  border-radius:var(--r);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
-  color:var(--ink);
-  overflow:hidden;
-}
-
-body[data-page-type="feature_detail_page"] .floraImage{
-  border-radius:18px;
-  overflow:hidden;
-  min-height:260px;
-  background:rgba(0,0,0,0.08);
-  border:1px solid rgba(11,26,16,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .floraImage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .floraBody{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:10px;
-  min-width:0;
-}
-
-body[data-page-type="feature_detail_page"] .floraBody h3{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:22px;
-  color:var(--forest);
-  font-weight:800;
-  letter-spacing:-0.02em;
-  line-height:1.1;
-}
-
-body[data-page-type="feature_detail_page"] .floraLatin{
-  font-size:13px;
-  font-style:italic;
-  color:rgba(11,26,16,0.55);
-  font-weight:650;
-  margin-top:-4px;
-}
-
-body[data-page-type="feature_detail_page"] .floraTags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-body[data-page-type="feature_detail_page"] .floraText{
-  font-size:14.8px;
-  line-height:1.7;
-  color:rgba(11,26,16,0.78);
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .floraNote{
-  font-size:13.2px;
-  color:rgba(11,26,16,0.68);
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .floraRelatedGrid,
-body[data-page-type="feature_detail_page"] .relatedGrid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .floraRelatedCard,
-body[data-page-type="feature_detail_page"] .relatedTile{
-  padding:16px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  height:100%;
-  min-height:142px;
-  background:rgba(255,255,255,0.74);
-  border:1px solid rgba(11,26,16,0.12);
-  border-radius:var(--r);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
-  color:var(--ink);
-  text-decoration:none;
-}
-
-body[data-page-type="feature_detail_page"] .floraRelatedCard h3,
-body[data-page-type="feature_detail_page"] .relatedTileTitle{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-size:20px;
-  line-height:1.1;
-  letter-spacing:-0.02em;
-}
-
-body[data-page-type="feature_detail_page"] .floraRelatedCard p,
-body[data-page-type="feature_detail_page"] .relatedTileText{
-  margin:0;
-  color:rgba(11,26,16,0.78);
-  font-size:14.8px;
-  line-height:1.65;
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .floraRelatedCard .linkCta,
-body[data-page-type="feature_detail_page"] .relatedTileMeta{
-  margin-top:auto;
-  color:var(--forest);
-  font-weight:800;
-  font-size:13px;
-}
-
-@media(max-width:900px){
-  body[data-page-type="feature_detail_page"] .floraGrid,
-  body[data-page-type="feature_detail_page"] .floraCard,
-  body[data-page-type="feature_detail_page"] .floraRelatedGrid,
-  body[data-page-type="feature_detail_page"] .relatedGrid{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="feature_detail_page"] .floraImage{
-    min-height:240px;
-  }
-}
-
-
-/* =========================================================
-   TCFR Produce Feature Detail Global Module
-   Purpose:
-   - Global-first layout for local produce / garden-to-table feature pages
-   - Removes page-level dependency for produce grids, highlight split, seasonal cards, and related links
-   - Preserves TCFR layering: page background -> beige panels -> inner cards
-   ========================================================= */
-
-body[data-page-type="feature_detail_page"] .produceGrid{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:12px;
-}
-
-body[data-page-type="feature_detail_page"] .produceItem{
-  position:relative;
-  border-radius:18px;
-  overflow:hidden;
-  aspect-ratio:1/1;
-  background:rgba(0,0,0,0.10);
-  border:1px solid rgba(11,26,16,0.10);
-  box-shadow:0 12px 28px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .produceItem img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .produceCap{
-  position:absolute;
-  left:10px;
-  right:10px;
-  bottom:10px;
-  padding:8px 10px;
-  border-radius:999px;
-  background:rgba(245,245,220,0.92);
-  border:1px solid rgba(13,89,37,0.16);
-  font-size:13px;
-  font-weight: 800;
-  color:#0b2b12;
-  text-align:center;
-  box-shadow:0 12px 28px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .highlight{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:0.95fr 1.05fr;
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .highlightImage{
-  border-radius:24px;
-  overflow:hidden;
-  border:1px solid rgba(11,26,16,0.10);
-  background:rgba(0,0,0,0.10);
-  position:relative;
-  min-height:380px;
-  box-shadow:0 12px 28px rgba(13,89,37,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .highlightImage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .highlightText{
-  padding:16px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  gap:12px;
-  min-width:0;
-}
-
-body[data-page-type="feature_detail_page"] .highlightText h2{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:26px;
-  color:var(--forest);
-  letter-spacing:-0.02em;
-  font-weight:800;
-  line-height:1.08;
-}
-
-body[data-page-type="feature_detail_page"] .highlightText p{
-  margin:0;
-  font-size:15px;
-  line-height:1.75;
-  color:rgba(11,26,16,0.78);
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .miniBox{
-  border-radius:18px;
-  border:1px solid rgba(11,26,16,0.10);
-  background:rgba(255,255,255,0.55);
-  padding:12px;
-  display:grid;
-  gap:8px;
-}
-
-body[data-page-type="feature_detail_page"] .miniTitle{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-weight:800;
-  letter-spacing:-0.02em;
-  font-size:18px;
-  line-height:1.15;
-}
-
-body[data-page-type="feature_detail_page"] .miniList{
-  margin:0;
-  padding-left:18px;
-  color:rgba(11,26,16,0.78);
-  line-height:1.85;
-  font-weight:650;
-  font-size:14.6px;
-}
-
-body[data-page-type="feature_detail_page"] .miniList li{
-  margin:6px 0;
-}
-
-body[data-page-type="feature_detail_page"] .spotlight{
-  margin-top:14px;
-  padding:16px;
-}
-
-body[data-page-type="feature_detail_page"] .spotGrid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .spotItem{
-  border-radius:24px;
-  overflow:hidden;
-  background:rgba(255,255,255,0.66);
-  border:1px solid rgba(11,26,16,0.12);
-  box-shadow:0 12px 28px rgba(13,89,37,0.10);
-  display:flex;
-  flex-direction:column;
-  min-width:0;
-}
-
-body[data-page-type="feature_detail_page"] .spotImage{
-  aspect-ratio:4/5;
-  background:rgba(0,0,0,0.10);
-  border-bottom:1px solid rgba(11,26,16,0.10);
-}
-
-body[data-page-type="feature_detail_page"] .spotImage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
-
-body[data-page-type="feature_detail_page"] .spotBody{
-  padding:12px;
-  display:grid;
-  gap:6px;
-  flex:1 1 auto;
-}
-
-body[data-page-type="feature_detail_page"] .spotBody h3{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:18px;
-  color:var(--forest);
-  font-weight:800;
-  letter-spacing:-0.01em;
-  line-height:1.15;
-}
-
-body[data-page-type="feature_detail_page"] .spotBody p{
-  margin:0;
-  font-size:13.8px;
-  line-height:1.6;
-  color:rgba(11,26,16,0.75);
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .closing{
-  margin-top:14px;
-  padding:16px;
-  text-align:center;
-}
-
-body[data-page-type="feature_detail_page"] .closing p{
-  margin:0 auto;
-  max-width:78ch;
-  font-size:15.5px;
-  line-height:1.75;
-  color:rgba(11,26,16,0.78);
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedPanel{
-  margin-top:18px;
-  padding:18px;
-  background:rgba(245,245,220,0.72);
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  color:var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedHeader{
-  margin-bottom:14px;
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedHeader h2{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-size:clamp(22px,2.4vw,30px);
-  line-height:1.1;
-  letter-spacing:-0.02em;
-  font-weight:800;
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedHeader p{
-  margin:6px 0 0;
-  color:rgba(11,26,16,0.70);
-  font-size:14.5px;
-  line-height:1.65;
-  font-weight:650;
-  max-width:82ch;
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedGrid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedCard{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  min-height:145px;
-  padding:16px;
-  background:rgba(255,255,255,0.76);
-  border:1px solid rgba(11,26,16,0.12);
-  border-radius:var(--r);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
-  color:var(--ink);
-  text-decoration:none;
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedCard h3{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-size:20px;
-  line-height:1.1;
-  letter-spacing:-0.02em;
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedCard p{
-  margin:0;
-  color:rgba(11,26,16,0.78);
-  font-size:14px;
-  line-height:1.62;
-  font-weight:650;
-}
-
-body[data-page-type="feature_detail_page"] .produceRelatedCard span{
-  margin-top:auto;
-  align-self:flex-start;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:32px;
-  padding:8px 11px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,0.18);
-  background:rgba(245,245,220,0.78);
-  color:var(--forest);
-  font-weight:800;
-  font-size:12.5px;
-  line-height:1.1;
-}
-
-body[data-page-type="feature_detail_page"] .produceBottomCta{
-  margin-top:18px;
-  padding:18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:16px;
-  flex-wrap:wrap;
-  background:rgba(245,245,220,0.72);
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  color:var(--ink);
-}
-
-body[data-page-type="feature_detail_page"] .produceBottomCta h2{
-  margin:0 0 6px;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-weight:800;
-  font-size:22px;
-  line-height:1.1;
-}
-
-body[data-page-type="feature_detail_page"] .produceBottomCta p{
-  margin:0;
-  color:rgba(11,26,16,0.72);
-  font-size:14.8px;
-  line-height:1.65;
-  font-weight:650;
-  max-width:80ch;
-}
-
-@media(max-width:900px){
-  body[data-page-type="feature_detail_page"] .produceGrid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-
-  body[data-page-type="feature_detail_page"] .highlight,
-  body[data-page-type="feature_detail_page"] .spotGrid,
-  body[data-page-type="feature_detail_page"] .produceRelatedGrid{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="feature_detail_page"] .highlightImage{
-    min-height:320px;
-  }
-
-  body[data-page-type="feature_detail_page"] .spotImage{
-    aspect-ratio:16/9;
-  }
-
-  body[data-page-type="feature_detail_page"] .produceBottomCta .btn{
-    width:100%;
-  }
-}
-
-
-/* =========================================================
-   TCFR Pululahua Destination Support Global Module
-   Purpose:
-   - Global-first layout for Pululahua destination support pages
-   - Removes page-level dependency for split grids, carousel, related cluster, and CTA
-   - Preserves TCFR layering: page background -> beige panels -> inner cards
-   ========================================================= */
-
-body[data-page-type="destination_support_page"] .grid2{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:1.12fr 0.88fr;
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="destination_support_page"] .pad{
-  padding:14px;
-}
-
-body[data-page-type="destination_support_page"] .p{
-  margin:0;
-  color:rgba(11,26,16,0.78);
-  line-height:1.78;
-  font-size:14.9px;
-  font-weight:650;
-}
-
-body[data-page-type="destination_support_page"] .p + .p{
-  margin-top:10px;
-}
-
-body[data-page-type="destination_support_page"] .list{
-  margin:10px 0 0;
-  padding-left:18px;
-  color:rgba(11,26,16,0.78);
-  line-height:1.85;
-  font-weight:650;
-  font-size:14.6px;
-}
-
-body[data-page-type="destination_support_page"] .list li{
-  margin:6px 0;
-}
-
-body[data-page-type="destination_support_page"] .noteBox{
-  border-radius:18px;
-  border:1px solid rgba(11,26,16,0.10);
-  background:rgba(255,255,255,0.55);
-  padding:14px;
-  margin-top:12px;
-}
-
-body[data-page-type="destination_support_page"] .noteTitle{
-  margin:0 0 8px;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-weight: 800;
-  letter-spacing:-0.02em;
-  font-size:18px;
-  line-height:1.15;
-}
-
-body[data-page-type="destination_support_page"] .noteBox p{
-  margin:0;
-  color:rgba(11,26,16,0.78);
-  line-height:1.75;
-  font-weight:650;
-  font-size:14.4px;
-}
-
-body[data-page-type="destination_support_page"] .carouselPad{
-  padding:14px;
-}
-
-body[data-page-type="destination_support_page"] .hCarousel{
-  border-radius:18px;
-  border:1px solid rgba(11,26,16,0.10);
-  background:rgba(255,255,255,0.55);
-  overflow:hidden;
-}
-
-body[data-page-type="destination_support_page"] .hViewport{
-  position:relative;
-  overflow:hidden;
-  background:rgba(0,0,0,0.08);
-}
-
-body[data-page-type="destination_support_page"] .hTrack{
-  display:flex;
-  width:100%;
-  transform:translateX(0);
-  transition:transform 420ms ease;
-  will-change:transform;
-}
-
-body[data-page-type="destination_support_page"] .hSlide{
-  flex:0 0 100%;
-  position:relative;
-  aspect-ratio:16 / 9;
-  margin:0;
-  padding:0;
-}
-
-body[data-page-type="destination_support_page"] .hSlide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.01);
-}
-
-body[data-page-type="destination_support_page"] .hCap{
-  position:absolute;
-  left:10px;
-  right:10px;
-  bottom:10px;
-  padding:9px 11px;
-  border-radius:14px;
-  background:rgba(245,245,220,0.92);
-  border:1px solid rgba(13,89,37,0.16);
-  color:#0b2b12;
-  box-shadow:0 14px 30px rgba(0,0,0,0.14);
-  font-weight:800;
-  font-size:13px;
-  letter-spacing:-0.01em;
-}
-
-body[data-page-type="destination_support_page"] .hArrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  height:46px;
-  width:52px;
-  border-radius:16px;
-  border:1px solid rgba(245,245,220,0.45);
-  background:rgba(11,26,16,0.30);
-  color:rgba(231,228,209,0.96);
-  box-shadow:0 18px 55px rgba(0,0,0,0.20);
-  cursor:pointer;
-  user-select:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:800;
-  line-height:1;
-  z-index:3;
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-}
-
-body[data-page-type="destination_support_page"] .hArrow.prev{ left:10px; }
-body[data-page-type="destination_support_page"] .hArrow.next{ right:10px; }
-
-body[data-page-type="destination_support_page"] .hNav{
-  border-top:1px solid rgba(11,26,16,0.12);
-  padding:10px 12px;
-  display:flex;
-  justify-content:center;
-}
-
-body[data-page-type="destination_support_page"] .hDots{
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-
-body[data-page-type="destination_support_page"] .hDotBtn{
-  appearance:none;
-  border:1px solid rgba(13,89,37,0.20);
-  background:rgba(255,255,255,0.72);
-  width:10px;
-  height:10px;
-  border-radius:999px;
-  cursor:pointer;
-  padding:0;
-}
-
-body[data-page-type="destination_support_page"] .hDotBtn.is-active{
-  background:rgba(224,100,58,0.95);
-  border-color:rgba(0,0,0,0.10);
-  box-shadow:0 10px 22px rgba(224,100,58,0.18);
-  transform:scale(1.05);
-}
-
-body[data-page-type="destination_support_page"] .tag{
-  display:inline-flex;
-  align-items:center;
-  padding:8px 10px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,0.16);
-  background:rgba(255,255,255,0.60);
-  font-weight:800;
-  font-size:12.2px;
-  color:var(--forest);
-  white-space:nowrap;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedPanel{
-  margin-top:18px;
-  padding:18px;
-  background:rgba(245,245,220,0.72);
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  color:var(--ink);
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedHeader{
-  margin-bottom:14px;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedHeader h2{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-size:clamp(22px,2.4vw,30px);
-  line-height:1.1;
-  letter-spacing:-0.02em;
-  font-weight:800;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedHeader p{
-  margin:6px 0 0;
-  color:rgba(11,26,16,0.70);
-  font-size:14.5px;
-  line-height:1.65;
-  font-weight:650;
-  max-width:82ch;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedGrid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  align-items:stretch;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedCard{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  min-height:145px;
-  padding:16px;
-  background:rgba(255,255,255,0.76);
-  border:1px solid rgba(11,26,16,0.12);
-  border-radius:var(--r);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
-  color:var(--ink);
-  text-decoration:none;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedCard h3{
-  margin:0;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-size:20px;
-  line-height:1.1;
-  letter-spacing:-0.02em;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedCard p{
-  margin:0;
-  color:rgba(11,26,16,0.78);
-  font-size:14px;
-  line-height:1.62;
-  font-weight:650;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaRelatedCard span{
-  margin-top:auto;
-  align-self:flex-start;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:32px;
-  padding:8px 11px;
-  border-radius:999px;
-  border:1px solid rgba(13,89,37,0.18);
-  background:rgba(245,245,220,0.78);
-  color:var(--forest);
-  font-weight:800;
-  font-size:12.5px;
-  line-height:1.1;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaBottomCta{
-  margin-top:18px;
-  padding:18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:16px;
-  flex-wrap:wrap;
-  background:rgba(245,245,220,0.72);
-  border:1px solid var(--line);
-  border-radius:var(--r2);
-  box-shadow:var(--shadow);
-  color:var(--ink);
-}
-
-body[data-page-type="destination_support_page"] .pululahuaBottomCta h2{
-  margin:0 0 6px;
-  font-family:var(--font-head);
-  color:var(--forest);
-  font-weight:800;
-  font-size:22px;
-  line-height:1.1;
-}
-
-body[data-page-type="destination_support_page"] .pululahuaBottomCta p{
-  margin:0;
-  color:rgba(11,26,16,0.72);
-  font-size:14.8px;
-  line-height:1.65;
-  font-weight:650;
-  max-width:80ch;
-}
-
-@media(max-width:900px){
-  body[data-page-type="destination_support_page"] .grid2,
-  body[data-page-type="destination_support_page"] .pululahuaRelatedGrid{
-    grid-template-columns:1fr;
-  }
-
-  body[data-page-type="destination_support_page"] .hSlide{
-    aspect-ratio:4 / 3;
-  }
-
-  body[data-page-type="destination_support_page"] .hArrow.prev{ left:8px; }
-  body[data-page-type="destination_support_page"] .hArrow.next{ right:8px; }
-
-  body[data-page-type="destination_support_page"] .pululahuaBottomCta .btn{
-    width:100%;
-  }
-}
-
-/* =========================================================
-   TCFR Money Page Global Module
-   Purpose:
-   - Moves reusable commercial/money page layout out of page-level CSS
-   - Preserves TCFR layering: page background -> beige panels -> inner cards
-   - Supports pages such as best eco lodge Quito, cloud forest stay pages,
-     nature retreat pages, and similar commercial landing pages
-   ========================================================= */
-
-body[data-page-type="money_page"] .wrap{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 18px var(--pad) 84px;
-  color: var(--ink);
-}
-
-body[data-page-type="money_page"] .topBand,
-body[data-page-type="money_page"] .section,
-body[data-page-type="money_page"] .ctaBand{
-  background: rgba(245,245,220,0.72);
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  color: var(--ink);
-}
-
-body[data-page-type="money_page"] .topBand{
-  margin-top: 14px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type="money_page"] .crumbs{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 800;
-  color: rgba(11,26,16,0.74);
-  letter-spacing: -0.01em;
-}
-
-body[data-page-type="money_page"] .crumbs a{
-  color: inherit;
-  text-decoration: none;
-}
-
-body[data-page-type="money_page"] .topActions,
-body[data-page-type="money_page"] .heroActions,
-body[data-page-type="money_page"] .heroMeta,
-body[data-page-type="money_page"] .ctaBtns,
-body[data-page-type="money_page"] .introList{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-
-body[data-page-type="money_page"] .hero{
-  margin-top: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  position: relative;
-  background: #24341f;
-}
-
-body[data-page-type="money_page"] .heroMedia{
-  position: relative;
-  min-height: 560px;
-  overflow: hidden;
-}
-
-body[data-page-type="money_page"] .heroMedia img{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 54%;
-  display: block;
-  transform: scale(1.015);
-}
-
-body[data-page-type="money_page"] .heroShade{
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(1200px 540px at 15% 12%, rgba(224,100,58,0.16), rgba(0,0,0,0) 55%),
-    linear-gradient(180deg, rgba(5,10,7,0.12), rgba(5,10,7,0.56));
-  pointer-events: none;
-}
-
-body[data-page-type="money_page"] .heroCard{
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  max-width: 790px;
-  padding: 18px 18px 16px;
-  border-radius: var(--r2);
-  background: rgba(17,22,18,0.34);
-  border: 1px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.24);
-  color: rgba(255,255,255,0.97);
-}
-
-body[data-page-type="money_page"] .eyebrow{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.92);
-  line-height: 1.35;
-  padding-top: 2px;
-}
-
-body[data-page-type="money_page"] .hero h1{
-  margin: 8px 0 10px;
-  font-family: var(--font-head);
-  font-size: clamp(36px,4.8vw,62px);
-  line-height: 0.97;
-  letter-spacing: -0.04em;
-  font-weight: 800;
-  color: #fff;
-}
-
-body[data-page-type="money_page"] .heroLead{
-  margin: 0;
-  max-width: 64ch;
-  font-size: 16px;
-  line-height: 1.72;
-  font-weight: 650;
-  color: rgba(255,255,255,0.92);
-}
-
-body[data-page-type="money_page"] .heroActions,
-body[data-page-type="money_page"] .heroMeta{
-  margin-top: 14px;
-}
-
-body[data-page-type="money_page"] .heroChip,
-body[data-page-type="money_page"] .miniChip{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 800;
-  white-space: nowrap;
-  letter-spacing: -0.01em;
-}
-
-body[data-page-type="money_page"] .section{
-  margin-top: 14px;
-  overflow: hidden;
-}
-
-body[data-page-type="money_page"] .pad{
-  padding: 16px;
 }
-
-body[data-page-type="money_page"] .answerBox,
-body[data-page-type="money_page"] .card,
-body[data-page-type="money_page"] .linkCard{
-  border-radius: var(--r);
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(255,255,255,0.56);
-  box-shadow: 0 14px 30px rgba(13,89,37,0.10);
-  padding: 14px;
-  color: var(--ink);
-}
-
-body[data-page-type="money_page"] .split{
-  display: grid;
-  grid-template-columns: 1.04fr 0.96fr;
-  gap: 14px;
-  align-items: stretch;
-}
-
-body[data-page-type="money_page"] .mediaBox{
-  position: relative;
-  min-height: 330px;
-  border-radius: var(--r);
-  overflow: hidden;
-  border: 1px solid rgba(11,26,16,0.10);
-  background: rgba(0,0,0,0.08);
-  box-shadow: var(--shadow);
-}
-
-body[data-page-type="money_page"] .mediaBox img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 54%;
-  display: block;
-}
-
-body[data-page-type="money_page"] .mediaBox::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.20));
-  pointer-events: none;
-}
-
-body[data-page-type="money_page"] .mediaCap{
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  z-index: 1;
-  padding: 10px 12px;
-  border-radius: 15px;
-  background: rgba(245,245,220,0.92);
-  border: 1px solid rgba(13,89,37,0.14);
-  font-size: 13px;
-  font-weight: 800;
-  color: #0B2B12;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-}
-
-body[data-page-type="money_page"] .h2{
-  margin: 0 0 10px;
-  font-family: var(--font-head);
-  font-size: clamp(28px,3vw,44px);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  color: var(--forest);
-  font-weight: 800;
-}
-
-body[data-page-type="money_page"] .h3{
-  margin: 0 0 8px;
-  font-family: var(--font-head);
-  font-size: 24px;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: var(--forest);
-  font-weight: 800;
-}
-
-body[data-page-type="money_page"] .p{
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.82;
-  color: var(--muted);
-  font-weight: 650;
-}
-
-body[data-page-type="money_page"] .p + .p{
-  margin-top: 10px;
-}
-
-body[data-page-type="money_page"] .grid3{
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(3,1fr);
-  align-items: stretch;
-}
-
-body[data-page-type="money_page"] .grid2{
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(2,1fr);
-  align-items: stretch;
-}
-
-body[data-page-type="money_page"] .cardTag,
-body[data-page-type="money_page"] .linkMeta{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.62);
-  border: 1px solid rgba(13,89,37,0.18);
-  color: #0B2B12;
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-body[data-page-type="money_page"] .cardText,
-body[data-page-type="money_page"] .linkText{
-  margin: 0;
-  font-size: 14.2px;
-  line-height: 1.74;
-  color: rgba(11,26,16,0.78);
-  font-weight: 650;
-}
-
-body[data-page-type="money_page"] .linkGrid{
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(3,1fr);
-  align-items: stretch;
-}
-
-body[data-page-type="money_page"] .linkTitle{
-  margin: 0;
-  font-family: var(--font-head);
-  font-size: 23px;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: var(--forest);
-  font-weight: 800;
-}
-
-body[data-page-type="money_page"] .linkTitle a{
-  color: inherit;
-  text-decoration: none;
-}
-
-body[data-page-type="money_page"] .linkCta{
-  width: max-content;
-  white-space: nowrap;
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-body[data-page-type="money_page"] .ctaBand{
-  margin-top: 14px;
-  padding: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-body[data-page-type="money_page"] .ctaCopy{
-  flex: 1 1 520px;
-  min-width: 0;
-}
-
-body[data-page-type="money_page"] .ctaCopy h2{
-  margin: 0 0 6px;
-  font-family: var(--font-head);
-  font-size: clamp(26px,3vw,42px);
-  line-height: 1.03;
-  letter-spacing: -0.03em;
-  color: var(--forest);
-  font-weight: 800;
-}
-
-body[data-page-type="money_page"] .ctaCopy p{
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.78;
-  color: var(--muted);
-  font-weight: 650;
-  max-width: 72ch;
-}
-
-@media (max-width: 980px){
-  body[data-page-type="money_page"] .split,
-  body[data-page-type="money_page"] .grid3,
-  body[data-page-type="money_page"] .grid2,
-  body[data-page-type="money_page"] .linkGrid{
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px){
-  body[data-page-type="money_page"] .wrap{
-    padding: 14px var(--pad) 74px;
-  }
-
-  body[data-page-type="money_page"] .topBand{
-    padding: 14px;
-    gap: 14px;
-  }
-
-  body[data-page-type="money_page"] .topActions{
-    width: 100%;
-  }
-
-  body[data-page-type="money_page"] .topActions .btn{
-    flex: 1 1 calc(50% - 5px);
-    justify-content: center;
-  }
-
-  body[data-page-type="money_page"] .heroMedia{
-    min-height: 560px;
-  }
-
-  body[data-page-type="money_page"] .heroMedia img{
-    object-position: 72% 42%;
-    transform: scale(1.08);
-  }
-
-  body[data-page-type="money_page"] .heroCard{
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    max-width: none;
-    padding: 20px 14px 12px;
-    border-radius: var(--r);
-  }
-
-  body[data-page-type="money_page"] .hero h1{
-    font-size: clamp(28px,8vw,42px);
-    line-height: 1.02;
-  }
-
-  body[data-page-type="money_page"] .heroLead{
-    font-size: 13.5px;
-    line-height: 1.6;
-    max-width: none;
-  }
-
-  body[data-page-type="money_page"] .heroActions{
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  body[data-page-type="money_page"] .heroActions .btn{
-    flex: 1 1 calc(50% - 5px);
-    justify-content: center;
-  }
-
-  body[data-page-type="money_page"] .heroMeta{
-    gap: 6px;
-  }
-
-  body[data-page-type="money_page"] .heroChip,
-  body[data-page-type="money_page"] .miniChip{
-    font-size: 11.5px;
-    padding: 7px 10px;
-  }
-
-  body[data-page-type="money_page"] .h2{
-    font-size: clamp(22px,7vw,34px);
-    line-height: 1.05;
-  }
-
-  body[data-page-type="money_page"] .h3{
-    font-size: 21px;
-  }
-
-  body[data-page-type="money_page"] .mediaBox{
-    min-height: 260px;
-  }
-
-  body[data-page-type="money_page"] .ctaBtns{
-    width: 100%;
-  }
-
-  body[data-page-type="money_page"] .ctaBtns .btn{
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 460px){
-  body[data-page-type="money_page"] .heroMedia{
-    min-height: 540px;
-  }
-
-  body[data-page-type="money_page"] .heroMedia img{
-    object-position: 74% 40%;
-  }
-
-  body[data-page-type="money_page"] .heroCard{
-    padding: 20px 14px 12px;
-  }
-
-  body[data-page-type="money_page"] .topActions .btn{
-    flex: 1 1 100%;
-  }
-
-  body[data-page-type="money_page"] .heroActions{
-    flex-direction: column;
-  }
-
-  body[data-page-type="money_page"] .heroActions .btn{
-    flex: 1 1 100%;
-    width: 100%;
-  }
-}
-
-/* =========================================================
-   TCFR GLOBAL HERO SYSTEM - STRICT GLOBAL CSS
-   Purpose:
-   - Single hero architecture for money pages, feature pages, room pages,
-     hubs, and future generated pages.
-   - Eliminates page-level hero CSS drift.
-   - Keeps all hero typography, overlay, sizing, CTA rhythm, and mobile
-     behavior centralized in /assets/css/site.css.
-   ========================================================= */
-
-/* Standard page shell used by generated TCFR pages */
-body[data-page-type] .wrap,
-body[data-page-type] .roomWrap{
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 18px var(--pad) 84px;
-  color: var(--ink);
-}
-
-/* Hero shells */
-body[data-page-type] .hero,
-body[data-page-type] .roomHero,
-.tcfrHero{
-  margin-top: 14px;
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--r2);
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,0.10);
-  box-shadow: var(--shadow);
-  color: var(--text);
-}
-
-/* Hero media containers */
-body[data-page-type] .heroMedia,
-body[data-page-type] .roomHeroMedia,
-.tcfrHeroMedia{
-  position: relative;
-  min-height: 520px;
-  overflow: hidden;
-  background: rgba(0,0,0,0.10);
-}
-
-body[data-page-type="features_hub"] .heroMedia,
-body[data-page-type="feature_detail_page"] .heroMedia,
-body[data-page-type="destination_support_page"] .heroMedia,
-body[data-page-type="gallery_page"] .heroMedia{
-  min-height: 430px;
-}
-
-body[data-page-type] .roomHeroMedia{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-}
-
-body[data-page-type] .heroMedia img,
-body[data-page-type] .roomHeroMedia img,
-.tcfrHeroMedia img{
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 54%;
-  transform: scale(1.015);
-}
-
-body[data-page-type] .roomHero{
-  min-height: 520px;
-}
-
-body[data-page-type] .roomHeroMedia img{
-  position: absolute;
-}
-
-/* Shared overlay shade */
-body[data-page-type] .heroShade,
-body[data-page-type] .roomHeroOverlay,
-.tcfrHeroShade{
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(1100px 520px at 18% 16%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, rgba(4,12,7,0.08), rgba(4,12,7,0.52));
-}
-
-/* Shared hero content cards */
-body[data-page-type] .heroCard,
-body[data-page-type] .heroInner,
-body[data-page-type] .roomHeroInner,
-.tcfrHeroPanel{
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  z-index: 2;
-  max-width: 790px;
-  padding: 18px 18px 16px;
-  border-radius: var(--r2);
-  background: rgba(17,22,18,0.34);
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.24);
-  color: rgba(231,228,209,0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-body[data-page-type] .roomHeroInner{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 14px;
-  height: auto;
-}
-
-/* Hero label/kicker */
-body[data-page-type] .eyebrow,
-body[data-page-type] .kicker,
-body[data-page-type] .roomKicker,
-.tcfrHeroKicker{
-  display: inline-flex;
-  width: fit-content;
-  align-items: center;
-  gap: 8px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  font-size: 12px;
-  line-height: 1.35;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.92) !important;
-}
-
-/* Hero title */
-body[data-page-type] .heroCard h1,
-body[data-page-type] .heroInner h1,
-body[data-page-type] .roomHeroInner h1,
-body[data-page-type] .heroH1,
-body[data-page-type] .roomTitle,
-.tcfrHeroTitle{
-  margin: 8px 0 10px;
-  max-width: 22ch;
-  font-family: var(--font-head);
-  font-size: clamp(36px,4.8vw,62px);
-  line-height: 0.97;
-  letter-spacing: -0.04em;
-  font-weight: 800;
-  color: rgba(255,255,255,0.98) !important;
-  text-shadow: 0 14px 40px rgba(0,0,0,0.28);
-}
-
-/* Hero lead */
-body[data-page-type] .heroCard p,
-body[data-page-type] .heroInner p,
-body[data-page-type] .roomHeroInner p,
-body[data-page-type] .heroLead,
-body[data-page-type] .roomLead,
-.tcfrHeroLead{
-  margin: 0;
-  max-width: 72ch;
-  font-size: 16px;
-  line-height: 1.72;
-  font-weight: 650;
-  color: rgba(231,228,209,0.92) !important;
-  text-shadow: 0 10px 26px rgba(0,0,0,0.18);
-}
-
-/* Hero actions and meta */
-body[data-page-type] .heroActions,
-body[data-page-type] .roomHeroActions,
-body[data-page-type] .heroMeta,
-.tcfrHeroActions,
-.tcfrHeroMeta{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-
-body[data-page-type] .heroActions,
-body[data-page-type] .roomHeroActions,
-.tcfrHeroActions{
-  margin-top: 14px;
-}
-
-body[data-page-type] .heroMeta,
-.tcfrHeroMeta{
-  margin-top: 14px;
-}
-
-/* Hero chips */
-body[data-page-type] .heroChip,
-body[data-page-type] .miniChip,
-body[data-page-type] .roomScrollHint,
-.tcfrHeroChip{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.92) !important;
-  font-size: 13px;
-  font-weight: 800;
-  white-space: nowrap;
-  letter-spacing: -0.01em;
-}
-
-body[data-page-type] .roomScrollHint{
-  margin-top: 8px;
-  width: fit-content;
-  gap: 10px;
-}
-
-body[data-page-type] .roomScrollDot{
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(231,228,209,0.88);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
-}
-
-/* Hero buttons */
-body[data-page-type] .heroCard .btn.primary,
-body[data-page-type] .heroInner .btn.primary,
-body[data-page-type] .roomHeroInner .btn.primary,
-.tcfrHeroPanel .btn.primary{
-  background: var(--orange) !important;
-  color: #ffffff !important;
-  border-color: transparent !important;
-  box-shadow: 0 16px 40px rgba(224,100,58,0.22) !important;
-}
-
-body[data-page-type] .heroCard .btn.secondary,
-body[data-page-type] .heroInner .btn.secondary,
-body[data-page-type] .roomHeroInner .btn.secondary,
-.tcfrHeroPanel .btn.secondary{
-  background: rgba(245,245,220,0.82) !important;
-  border-color: rgba(13,89,37,0.22) !important;
-  color: var(--forest) !important;
-  box-shadow: 0 14px 30px rgba(13,89,37,0.10) !important;
-}
-
-/* Shared top bands used before heroes */
-body[data-page-type] .topBand{
-  margin-top: 14px;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  background: rgba(245,245,220,0.72);
-  border: 1px solid var(--line);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  color: var(--ink);
-}
-
-body[data-page-type] .crumbs,
-body[data-page-type] .quickActions,
-body[data-page-type] .topActions{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-body[data-page-type] .crumbs{
-  font-weight: 800;
-  font-size: 13px;
-  color: rgba(11,26,16,0.75);
-}
-
-/* =========================================================
-   TCFR ROOM DETAIL GLOBAL MODULE
-   Purpose:
-   - Moves room-detail layout out of individual room page files.
-   - Room pages may keep semantic classes only. No room-level style blocks.
-   ========================================================= */
-
-body[data-page-type="room_detail_page"] .roomWrap{
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 18px 16px 68px;
-}
-
-body[data-page-type="room_detail_page"] .roomGridTop{
-  margin-top: 16px;
-  display: grid;
-  grid-template-columns: 1.02fr 0.98fr;
-  gap: 14px;
-  align-items: start;
-}
-
-body[data-page-type="room_detail_page"] .roomCard{
-  background: rgba(245,245,220,0.72);
-  border: 1px solid rgba(11,26,16,0.12);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  padding: 18px;
-  color: var(--ink);
-  min-width: 0;
-}
-
-body[data-page-type="room_detail_page"] .roomCardTight{
-  padding: 16px;
-}
-
-body[data-page-type="room_detail_page"] .roomH2{
-  margin: 0 0 10px;
-  font-family: var(--font-head);
-  color: var(--forest);
-  letter-spacing: -0.02em;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 1.12;
-}
-
-body[data-page-type="room_detail_page"] .roomCopy{
-  margin: 0;
-  color: var(--ink);
-  line-height: 1.8;
-  font-size: 16px;
-  max-width: 90ch;
-}
-
-body[data-page-type="room_detail_page"] .roomCopy .muted{
-  color: rgba(11,26,16,0.72);
-  font-weight: 650;
-}
-
-body[data-page-type="room_detail_page"] .roomFeatureGrid{
-  margin-top: 12px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-body[data-page-type="room_detail_page"] .roomFeature{
-  border: 1px solid rgba(13,89,37,0.14);
-  background: rgba(255,255,255,0.62);
-  border-radius: 16px;
-  padding: 12px;
-  box-shadow: 0 12px 28px rgba(13,89,37,0.10);
-  min-width: 0;
-}
-
-body[data-page-type="room_detail_page"] .roomFeatureTitle{
-  margin: 0 0 6px;
-  font-weight: 800;
-  color: #0b2b12;
-  letter-spacing: -0.01em;
-  font-size: 13.8px;
-}
-
-body[data-page-type="room_detail_page"] .roomFeatureText{
-  margin: 0;
-  color: rgba(11,26,16,0.78);
-  font-size: 13.3px;
-  line-height: 1.55;
-  font-weight: 650;
-}
-
-body[data-page-type="room_detail_page"] .roomMiniRow{
-  margin-top: 14px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-body[data-page-type="room_detail_page"] .roomMiniPill{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(13,89,37,0.18);
-  background: rgba(255,255,255,0.62);
-  box-shadow: 0 10px 26px rgba(13,89,37,0.10);
-  font-weight: 800;
-  font-size: 13px;
-  color: #0b2b12;
-  white-space: nowrap;
-}
-
-body[data-page-type="room_detail_page"] .roomSection{
-  margin-top: 16px;
-}
-
-body[data-page-type="room_detail_page"] .roomSectionHead{
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 0 0 10px;
-}
-
-body[data-page-type="room_detail_page"] .roomHint{
-  margin: 0;
-  color: rgba(11,26,16,0.72);
-  font-weight: 650;
-  font-size: 13.2px;
-  line-height: 1.55;
-  max-width: 90ch;
-}
-
-body[data-page-type="room_detail_page"] .roomCarousel{
-  background: rgba(245,245,220,0.82);
-  border: 1px solid rgba(11,26,16,0.12);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-body[data-page-type="room_detail_page"] .roomCarouselViewport{
-  position: relative;
-  overflow: hidden;
-  background: rgba(0,0,0,0.08);
-}
-
-body[data-page-type="room_detail_page"] .roomCarouselTrack{
-  display: flex;
-  width: 100%;
-  transform: translateX(0);
-  transition: transform 420ms ease;
-  will-change: transform;
-}
-
-body[data-page-type="room_detail_page"] .roomSlide{
-  flex: 0 0 100%;
-  position: relative;
-  aspect-ratio: 16 / 10;
-  margin: 0;
-  padding: 0;
-}
-
-body[data-page-type="room_detail_page"] .roomSlide img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-body[data-page-type="room_detail_page"] .roomSlideCap{
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
-  border-radius: 16px;
-  background: rgba(11,26,16,0.48);
-  color: rgba(231,228,209,0.95);
-  padding: 12px;
-  font-weight: 800;
-  line-height: 1.5;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-body[data-page-type="room_detail_page"] .roomCarouselNav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 12px;
-}
-
-body[data-page-type="room_detail_page"] .roomDots{
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-
-body[data-page-type="room_detail_page"] .roomDot{
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  border: 0;
-  background: rgba(13,89,37,0.22);
-  cursor: pointer;
-}
-
-body[data-page-type="room_detail_page"] .roomDot.isActive{
-  background: var(--forest);
-}
-
-body[data-page-type="room_detail_page"] .roomCompareGrid{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 12px;
-}
-
-body[data-page-type="room_detail_page"] .roomCompareCard{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-height: 100%;
-  background: rgba(255,255,255,0.62);
-  border: 1px solid rgba(13,89,37,0.13);
-  border-radius: 18px;
-  padding: 14px;
-  box-shadow: 0 12px 26px rgba(13,89,37,0.10);
-  color: var(--ink);
-}
-
-body[data-page-type="room_detail_page"] .roomCompareCard h3{
-  margin: 0;
-  color: var(--forest);
-  font-family: var(--font-head);
-  font-size: 20px;
-  line-height: 1.12;
-}
-
-body[data-page-type="room_detail_page"] .roomCompareCard p{
-  margin: 0;
-  color: rgba(11,26,16,0.75);
-  line-height: 1.62;
-  font-weight: 650;
-  font-size: 13.5px;
-}
-
-body[data-page-type="room_detail_page"] .roomCompareCard .btn{
-  margin-top: auto;
-  width: fit-content;
-}
-
-body[data-page-type="room_detail_page"] .roomFaq{
-  display: grid;
-  gap: 10px;
-}
-
-body[data-page-type="room_detail_page"] .roomFaq details{
-  background: rgba(255,255,255,0.62);
-  border: 1px solid rgba(13,89,37,0.13);
-  border-radius: 16px;
-  padding: 12px 14px;
-}
-
-body[data-page-type="room_detail_page"] .roomFaq summary{
-  cursor: pointer;
-  font-weight: 800;
-  color: #0b2b12;
-}
-
-body[data-page-type="room_detail_page"] .roomFaq p{
-  margin-top: 8px;
-  color: rgba(11,26,16,0.74);
-  font-weight: 650;
-  line-height: 1.7;
-  font-size: 14px;
-}
-
-body[data-page-type="room_detail_page"] .roomCtaBand{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  background: rgba(245,245,220,0.72);
-  border: 1px solid rgba(11,26,16,0.12);
-  border-radius: var(--r2);
-  box-shadow: var(--shadow);
-  padding: 18px;
-  color: var(--ink);
-}
-
-body[data-page-type="room_detail_page"] .roomCtaBand h2{
-  margin: 0 0 6px;
-  font-family: var(--font-head);
-  color: var(--forest);
-  font-size: 28px;
-  line-height: 1.08;
-}
-
-body[data-page-type="room_detail_page"] .roomCtaBand p{
-  margin: 0;
-  color: rgba(11,26,16,0.76);
-  font-weight: 650;
-  line-height: 1.7;
-}
-
-body[data-page-type="room_detail_page"] .roomCtaActions{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 920px){
-  body[data-page-type="room_detail_page"] .roomGridTop,
-  body[data-page-type="room_detail_page"] .roomCompareGrid{
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="room_detail_page"] .roomFeatureGrid{
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px){
-  body[data-page-type] .heroMedia,
-  body[data-page-type] .roomHero{
-    min-height: 560px;
-  }
-
-  body[data-page-type="features_hub"] .heroMedia,
-  body[data-page-type="feature_detail_page"] .heroMedia,
-  body[data-page-type="destination_support_page"] .heroMedia,
-  body[data-page-type="gallery_page"] .heroMedia{
-    min-height: 520px;
-  }
-
-  body[data-page-type] .heroMedia img,
-  body[data-page-type] .roomHeroMedia img{
-    object-position: 68% 42%;
-    transform: scale(1.06);
-  }
-
-  body[data-page-type] .heroCard,
-  body[data-page-type] .heroInner,
-  body[data-page-type] .roomHeroInner,
-  .tcfrHeroPanel{
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    max-width: none;
-    padding: 18px 14px 13px;
-    border-radius: var(--r);
-  }
-
-  body[data-page-type] .heroCard h1,
-  body[data-page-type] .heroInner h1,
-  body[data-page-type] .roomHeroInner h1,
-  body[data-page-type] .heroH1,
-  body[data-page-type] .roomTitle{
-    font-size: clamp(30px,8vw,44px);
-    line-height: 1.02;
-  }
-
-  body[data-page-type] .heroCard p,
-  body[data-page-type] .heroInner p,
-  body[data-page-type] .roomHeroInner p,
-  body[data-page-type] .heroLead,
-  body[data-page-type] .roomLead{
-    font-size: 14px;
-    line-height: 1.62;
-    max-width: none;
-  }
-
-  body[data-page-type] .heroActions .btn,
-  body[data-page-type] .roomHeroActions .btn,
-  body[data-page-type] .topActions .btn,
-  body[data-page-type] .quickActions .btn,
-  body[data-page-type="room_detail_page"] .roomCtaActions .btn{
-    flex: 1 1 calc(50% - 5px);
-    justify-content: center;
-  }
-
-  body[data-page-type="room_detail_page"] .roomWrap{
-    padding: 14px var(--pad) 58px;
-  }
-
-  body[data-page-type="room_detail_page"] .roomSlide{
-    aspect-ratio: 4 / 3;
-  }
-
-  body[data-page-type="room_detail_page"] .roomCtaBand{
-    align-items: stretch;
-  }
-
-  body[data-page-type="room_detail_page"] .roomCtaActions{
-    width: 100%;
-  }
-}
-
-@media (max-width: 460px){
-  body[data-page-type] .heroMedia,
-  body[data-page-type] .roomHero{
-    min-height: 540px;
-  }
 
-  body[data-page-type] .heroActions,
-  body[data-page-type] .roomHeroActions{
-    flex-direction: column;
-    align-items: stretch;
+@media(max-width:420px){
+  .tcfr-social{
+    width:calc(100% - (var(--pad) * 2));
+    border-radius:22px;
+    padding:12px;
   }
 
-  body[data-page-type] .heroActions .btn,
-  body[data-page-type] .roomHeroActions .btn,
-  body[data-page-type] .topActions .btn,
-  body[data-page-type] .quickActions .btn,
-  body[data-page-type="room_detail_page"] .roomCtaActions .btn{
-    width: 100%;
-    flex: 1 1 100%;
+  .tcfr-social a{
+    width:46px;
+    height:46px;
   }
 
-  body[data-page-type] .heroChip,
-  body[data-page-type] .miniChip,
-  body[data-page-type] .roomScrollHint{
-    font-size: 11.5px;
-    padding: 7px 10px;
+  .tcfr-social img{
+    width:23px;
+    height:23px;
   }
 }
