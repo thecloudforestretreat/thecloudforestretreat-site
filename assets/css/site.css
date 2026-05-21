@@ -1030,14 +1030,13 @@ body[data-page-type="home_page"] .bandActions{
 
 /* =========================================================
    TCFR Rooms Hub Global Module
-   Final global-system implementation
+   Production global-system implementation
    Purpose:
-   - Rooms page is managed only from global CSS
-   - Rooms-specific CSS is layout-only plus safe mapping to global cards/sections
-   - Typography, buttons, cards, badges, spacing, colors, and shadows follow the approved global system
+   - Rooms hub is managed by global CSS only
+   - No page-level visual styling required
+   - Matches approved homepage hero, panels, cards, typography, buttons, and labels
+   - Room-specific rules below control layout and content structure only
    ========================================================= */
-
-
 
 .roomsHub{
   max-width:var(--container);
@@ -1048,7 +1047,7 @@ body[data-page-type="home_page"] .bandActions{
 
 .roomsHero{
   display:grid;
-  grid-template-columns:minmax(0,1.08fr) minmax(360px,0.92fr);
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
   gap:18px;
   align-items:stretch;
   margin-top:8px;
@@ -1060,7 +1059,7 @@ body[data-page-type="home_page"] .bandActions{
   border-radius:var(--r2);
   box-shadow:var(--shadow);
   overflow:hidden;
-  background:rgba(245,245,220,0.72);
+  background:rgba(245,245,220,.72);
   color:var(--ink);
 }
 
@@ -1084,7 +1083,9 @@ body[data-page-type="home_page"] .bandActions{
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-items:flex-start;
   gap:18px;
+  text-align:left;
 }
 
 .roomsHeroCopy .badge,
@@ -1092,7 +1093,7 @@ body[data-page-type="home_page"] .bandActions{
 .roomsHeroCopy .eyebrow{
   display:inline-flex;
   align-items:center;
-  gap:8px;
+  justify-content:flex-start;
   width:fit-content;
   margin:0 0 12px;
   padding:0;
@@ -1104,7 +1105,7 @@ body[data-page-type="home_page"] .bandActions{
   font-family:var(--font-body);
   font-size:12px;
   font-weight:800;
-  letter-spacing:0.12em;
+  letter-spacing:.12em;
   line-height:1.2;
   text-transform:uppercase;
   text-align:left;
@@ -1113,21 +1114,22 @@ body[data-page-type="home_page"] .bandActions{
 
 .roomsHeroCopy h1{
   margin:0;
+  max-width:10.5ch;
   color:var(--forest);
   font-family:var(--font-head);
   font-size:clamp(44px,5vw,72px);
   font-weight:800;
-  letter-spacing:-0.045em;
-  line-height:0.96;
+  letter-spacing:-.045em;
+  line-height:.96;
 }
 
 .roomsHeroLead{
-  margin-top:0;
-  color:rgba(11,26,16,0.78);
+  margin:0;
+  max-width:66ch;
+  color:rgba(11,26,16,.78);
   font-size:16px;
   font-weight:750;
   line-height:1.72;
-  max-width:66ch;
 }
 
 .roomsHeroActions,
@@ -1146,7 +1148,7 @@ body[data-page-type="home_page"] .bandActions{
   border:1px solid var(--line);
   border-radius:var(--r2);
   box-shadow:var(--shadow);
-  background:rgba(245,245,220,0.72);
+  background:rgba(245,245,220,.72);
   color:var(--ink);
 }
 
@@ -1166,18 +1168,18 @@ body[data-page-type="home_page"] .bandActions{
   font-family:var(--font-head);
   font-size:clamp(24px,2.6vw,34px);
   font-weight:800;
-  letter-spacing:-0.03em;
+  letter-spacing:-.03em;
   line-height:1.04;
 }
 
 .roomsPanelHeader p,
 .roomsBand p{
   margin:0;
-  color:rgba(11,26,16,0.72);
+  max-width:68ch;
+  color:rgba(11,26,16,.72);
   font-size:14px;
   font-weight:750;
   line-height:1.62;
-  max-width:68ch;
 }
 
 .roomsGrid{
@@ -1211,10 +1213,10 @@ body[data-page-type="home_page"] .bandActions{
   overflow:hidden;
   padding:0;
   border-radius:var(--r);
-  border:1px solid rgba(11,26,16,0.10);
-  background:rgba(255,255,255,0.62);
+  border:1px solid rgba(11,26,16,.10);
+  background:rgba(255,255,255,.62);
   color:var(--ink);
-  box-shadow:0 12px 30px rgba(13,89,37,0.10);
+  box-shadow:0 12px 30px rgba(13,89,37,.10);
   text-decoration:none;
   transition:transform 140ms ease, background 140ms ease, border-color 140ms ease;
 }
@@ -1222,8 +1224,8 @@ body[data-page-type="home_page"] .bandActions{
 .roomCardGlobal:hover,
 .roomsGuideCard:hover{
   transform:translateY(-1px);
-  background:rgba(255,255,255,0.74);
-  border-color:rgba(13,89,37,0.20);
+  background:rgba(255,255,255,.74);
+  border-color:rgba(13,89,37,.20);
   text-decoration:none;
 }
 
@@ -1255,7 +1257,7 @@ body[data-page-type="home_page"] .bandActions{
   font-family:var(--font-head);
   font-size:21px;
   font-weight:800;
-  letter-spacing:-0.02em;
+  letter-spacing:-.02em;
   line-height:1.1;
 }
 
@@ -1263,7 +1265,7 @@ body[data-page-type="home_page"] .bandActions{
 .roomsInfoCard p,
 .roomsGuideCard p{
   margin:0;
-  color:rgba(11,26,16,0.78);
+  color:rgba(11,26,16,.78);
   font-size:14.4px;
   font-weight:700;
   line-height:1.65;
@@ -1284,15 +1286,15 @@ body[data-page-type="home_page"] .bandActions{
   min-height:34px;
   padding:8px 12px;
   border-radius:999px;
-  border:1px solid rgba(13,89,37,0.18);
-  background:rgba(255,255,255,0.60);
+  border:1px solid rgba(13,89,37,.18);
+  background:rgba(255,255,255,.60);
   color:var(--forest);
   font-family:var(--font-body);
   font-size:13px;
   font-weight:800;
   line-height:1.1;
   white-space:nowrap;
-  box-shadow:0 10px 26px rgba(13,89,37,0.10);
+  box-shadow:0 10px 26px rgba(13,89,37,.10);
 }
 
 .roomCardCta,
@@ -1379,7 +1381,6 @@ body[data-page-type="home_page"] .bandActions{
     width:100%;
   }
 }
-
 
 /* =========================================================
    TCFR Features Hub Global Module
@@ -5633,731 +5634,229 @@ body[data-page-type="room_detail_page"] .roomCtaActions{
   }
 }
 
-
 /* =========================================================
-   TCFR Global Design System Consolidation v3
+   TCFR Production Design System Lock
    Purpose:
-   - Stop page-by-page visual drift
-   - Make homepage, rooms, feature pages, booking/contact, and detail pages
-     honor one typography, eyebrow, card, badge, button, and section system
-   - Page-type CSS above this block may define layout only
-   - This block intentionally sits last and neutralizes legacy page-level styles
+   - Final cascade layer for production
+   - Keeps page modules layout-only
+   - Locks shared visual system across homepage, rooms, feature hubs, detail pages, and future pages
+   - Uses weight 800 exactly for display, section, and card headings
    ========================================================= */
 
 :root{
-  --tcfr-panel-bg: rgba(245,245,220,0.72);
-  --tcfr-card-bg: rgba(255,255,255,0.72);
-  --tcfr-card-bg-strong: rgba(255,255,255,0.82);
+  --tcfr-panel-bg:rgba(245,245,220,.72);
+  --tcfr-card-bg:rgba(255,255,255,.62);
+  --tcfr-card-bg-hover:rgba(255,255,255,.74);
 
-  --tcfr-display-weight: 820;
-  --tcfr-section-weight: 820;
-  --tcfr-card-heading-weight: 780;
-  --tcfr-body-weight: 650;
-  --tcfr-body-strong-weight: 760;
+  --tcfr-display-weight:800;
+  --tcfr-section-weight:800;
+  --tcfr-card-heading-weight:800;
+  --tcfr-body-weight:700;
+  --tcfr-body-strong-weight:750;
 
-  --tcfr-display-tracking: -0.036em;
-  --tcfr-section-tracking: -0.026em;
-  --tcfr-card-tracking: -0.018em;
+  --tcfr-display-size:clamp(44px,5vw,72px);
+  --tcfr-section-size:clamp(24px,2.6vw,34px);
+  --tcfr-card-title-size:21px;
 
-  --tcfr-display-line: 0.98;
-  --tcfr-section-line: 1.06;
-  --tcfr-card-line: 1.12;
+  --tcfr-display-line:.96;
+  --tcfr-section-line:1.04;
+  --tcfr-card-line:1.1;
 
-  --tcfr-eyebrow-size: 12px;
-  --tcfr-eyebrow-weight: 900;
-  --tcfr-eyebrow-tracking: 0.12em;
+  --tcfr-display-tracking:-.045em;
+  --tcfr-section-tracking:-.03em;
+  --tcfr-card-tracking:-.02em;
+
+  --tcfr-kicker-size:12px;
+  --tcfr-kicker-weight:800;
+  --tcfr-kicker-tracking:.12em;
 }
 
-/* ---------------------------------------------------------
-   One text system
---------------------------------------------------------- */
-
-body{
-  color: var(--ink);
-  font-family: var(--font-body);
+/* Hidden fallback language links */
+.rawLangLinks{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
 }
 
-p,
-li,
-.bodyText,
-.cardText,
-.tileText,
-.sectionHint,
-.panelHint,
-.roomsHeroLead,
-.roomsPanelHeader p,
-.roomsInfoCard p,
-.roomsGuideCard p,
-.roomCardBody p,
-.heroLead,
-.lead,
-.sub,
-.hint{
-  color: rgba(11,26,16,0.78) !important;
-  font-family: var(--font-body) !important;
-  font-weight: var(--tcfr-body-weight) !important;
-  line-height: 1.68 !important;
-}
-
-/* ---------------------------------------------------------
-   One hero/display heading system
-   Homepage is the reference. Rooms and future pages match it.
---------------------------------------------------------- */
-
-h1,
-.h1,
-.heroH1,
-.heroTitle,
-.roomTitle,
-.roomsHeroCopy h1,
+/* Shared display heading system */
 body[data-page-type="home_page"] .h1,
-body[data-page-type="features_hub"] .heroH1,
-body[data-page-type="feature_detail_page"] .heroH1,
-body[data-page-type="feature_detail_page"] .h1,
-body[data-page-type="money_page"] .heroH1,
-body[data-page-type="destination_support_page"] .heroH1,
-body[data-page-type="room_detail_page"] .roomTitle{
-  margin: 0 0 10px !important;
-  color: var(--forest) !important;
-  font-family: var(--font-head) !important;
-  font-size: clamp(44px, 4.9vw, 72px) !important;
-  font-weight: var(--tcfr-display-weight) !important;
-  letter-spacing: var(--tcfr-display-tracking) !important;
-  line-height: var(--tcfr-display-line) !important;
-  text-wrap: balance;
+body[data-page-type="home_page"] .heroCopy h1,
+.roomsHeroCopy h1,
+body[data-page-type="room_index"] .roomsHeroCopy h1{
+  margin:0 !important;
+  color:var(--forest) !important;
+  font-family:var(--font-head) !important;
+  font-size:var(--tcfr-display-size) !important;
+  font-weight:800 !important;
+  letter-spacing:var(--tcfr-display-tracking) !important;
+  line-height:var(--tcfr-display-line) !important;
+  text-align:left !important;
 }
 
-/* ---------------------------------------------------------
-   One section heading system
---------------------------------------------------------- */
-
-h2,
-.h2,
-.sectionTitle,
-.panelTitle,
-.bandTitle,
+/* Shared section heading system */
+body[data-page-type="home_page"] .h2,
+body[data-page-type="home_page"] .sectionHead h2,
 .roomsPanelHeader h2,
 .roomsBand h2,
-.featurePanelHeader h2,
-.ctaBand h2,
-body[data-page-type="home_page"] .h2,
-body[data-page-type="home_page"] .bandTitle,
 body[data-page-type="features_hub"] .sectionTitle,
 body[data-page-type="feature_detail_page"] .sectionTitle,
 body[data-page-type="feature_detail_page"] .panelTitle{
-  margin: 0 0 10px !important;
-  color: var(--forest) !important;
-  font-family: var(--font-head) !important;
-  font-size: clamp(28px, 2.8vw, 38px) !important;
-  font-weight: var(--tcfr-section-weight) !important;
-  letter-spacing: var(--tcfr-section-tracking) !important;
-  line-height: var(--tcfr-section-line) !important;
-  text-wrap: balance;
+  margin:0 !important;
+  color:var(--forest) !important;
+  font-family:var(--font-head) !important;
+  font-size:var(--tcfr-section-size) !important;
+  font-weight:800 !important;
+  letter-spacing:var(--tcfr-section-tracking) !important;
+  line-height:var(--tcfr-section-line) !important;
+  text-align:left !important;
 }
 
-/* ---------------------------------------------------------
-   One card heading system
---------------------------------------------------------- */
-
-h3,
-h4,
-.cardTitle,
-.tileTitle,
-.trustTitle,
-.roomCardBody h3,
-.roomsInfoCard h3,
-.roomsGuideCard h3,
-.amenityCard h3,
-.relatedFeatureCard h3,
-.innerCard h3,
-.linkCard h3{
-  margin: 0 0 8px !important;
-  color: var(--forest) !important;
-  font-family: var(--font-head) !important;
-  font-size: clamp(20px, 1.7vw, 24px) !important;
-  font-weight: var(--tcfr-card-heading-weight) !important;
-  letter-spacing: var(--tcfr-card-tracking) !important;
-  line-height: var(--tcfr-card-line) !important;
-  text-wrap: balance;
-}
-
-/* ---------------------------------------------------------
-   One eyebrow/kicker system
-   This fixes:
-   - Homepage "Eco-luxury mountain retreat" readability
-   - Rooms "Near Quito..." being centered inside a bubble
-   - Future pages drifting into mixed badge/eyebrow styles
---------------------------------------------------------- */
-
-.kicker,
-.eyebrow,
-.heroKicker,
-.roomKicker,
-.cardTopBadge,
-.roomsHeroCopy .badge,
-body[data-page-type="home_page"] .kicker,
-body[data-page-type="home_page"] .eyebrow,
-body[data-page-type="home_page"] .heroKicker,
-body[data-page-type="features_hub"] .kicker,
-body[data-page-type="feature_detail_page"] .kicker{
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  align-self: flex-start !important;
-  width: fit-content !important;
-  max-width: 100% !important;
-  margin: 0 0 12px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  color: var(--forest) !important;
-  font-family: var(--font-body) !important;
-  font-size: var(--tcfr-eyebrow-size) !important;
-  font-weight: var(--tcfr-eyebrow-weight) !important;
-  letter-spacing: var(--tcfr-eyebrow-tracking) !important;
-  line-height: 1.2 !important;
-  text-align: left !important;
-  text-transform: uppercase !important;
-  text-shadow: none !important;
-  white-space: normal !important;
-}
-
-/* Eyebrows on image/dark overlays remain readable, but same structure. */
-.heroInner .kicker,
-.heroInner .eyebrow,
-.heroCard .kicker,
-.heroCard .eyebrow,
-.roomHeroInner .roomKicker{
-  color: rgba(255,255,255,0.94) !important;
-  text-shadow: 0 1px 12px rgba(0,0,0,0.34) !important;
-}
-
-/* ---------------------------------------------------------
-   One pill/badge system
-   Only true pills/tags use this. Eyebrows do not.
---------------------------------------------------------- */
-
-.badge:not(.roomsHeroCopy .badge),
-.pill,
-.roomPill,
-.tag,
-.chip,
-.heroChip,
-.miniChip,
-body[data-page-type="home_page"] .pill,
-body[data-page-type="features_hub"] .pill,
-body[data-page-type="feature_detail_page"] .pill,
-body[data-page-type="feature_detail_page"] .tag,
-body[data-page-type="feature_detail_page"] .chip{
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  min-height: 36px !important;
-  padding: 9px 13px !important;
-  border-radius: 999px !important;
-  border: 1px solid rgba(13,89,37,0.18) !important;
-  background: rgba(255,255,255,0.62) !important;
-  color: var(--forest) !important;
-  box-shadow: 0 10px 26px rgba(13,89,37,0.08) !important;
-  font-family: var(--font-body) !important;
-  font-size: 13px !important;
-  font-weight: 850 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.1 !important;
-  text-align: center !important;
-  text-transform: none !important;
-  white-space: nowrap !important;
-}
-
-/* ---------------------------------------------------------
-   One button system
---------------------------------------------------------- */
-
-.btn{
-  min-height: 44px !important;
-  padding: 12px 15px !important;
-  border-radius: var(--btn-r) !important;
-  font-family: var(--font-body) !important;
-  font-weight: 850 !important;
-  line-height: 1 !important;
-  text-decoration: none !important;
-}
-
-.btn.primary{
-  background: var(--orange) !important;
-  color: #fff !important;
-  border-color: transparent !important;
-  box-shadow: 0 16px 40px rgba(224,100,58,0.20) !important;
-}
-
-.btn.secondary{
-  background: rgba(245,245,220,0.76) !important;
-  border-color: rgba(13,89,37,0.22) !important;
-  color: var(--forest) !important;
-}
-
-.btn.ghost{
-  background: transparent !important;
-  border-color: rgba(13,89,37,0.22) !important;
-  color: var(--forest) !important;
-}
-
-/* ---------------------------------------------------------
-   One surface/card system
---------------------------------------------------------- */
-
-.card,
-.roomsPanel,
-.roomsBand,
-.featurePanel,
-.featuresPanel,
-.ctaBand,
-.jumpBand,
-.topBand,
-body[data-page-type="home_page"] .section,
-body[data-page-type="home_page"] .band,
-body[data-page-type="features_hub"] .topBand,
-body[data-page-type="features_hub"] .featuresPanel,
-body[data-page-type="features_hub"] .ctaBand,
-body[data-page-type="feature_detail_page"] .topBand,
-body[data-page-type="feature_detail_page"] .featurePanel,
-body[data-page-type="feature_detail_page"] .jumpBand,
-body[data-page-type="feature_detail_page"] .ctaBand{
-  background: var(--tcfr-panel-bg) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: var(--r2) !important;
-  box-shadow: var(--shadow) !important;
-  color: var(--ink) !important;
-}
-
-.tile,
-.trustCard,
-.roomCardGlobal,
-.roomsInfoCard,
-.roomsGuideCard,
-.amenityCard,
-.relatedFeatureCard,
-.innerCard,
-.linkCard,
-body[data-page-type="home_page"] .tile,
-body[data-page-type="home_page"] .trustCard,
-body[data-page-type="features_hub"] .card,
-body[data-page-type="feature_detail_page"] .innerCard,
-body[data-page-type="feature_detail_page"] .amenityCard,
-body[data-page-type="feature_detail_page"] .relatedFeatureCard{
-  background: var(--tcfr-card-bg) !important;
-  border: 1px solid rgba(11,26,16,0.12) !important;
-  border-radius: var(--r) !important;
-  box-shadow: 0 12px 30px rgba(13,89,37,0.10) !important;
-  color: var(--ink) !important;
-}
-
-/* ---------------------------------------------------------
-   One section header rhythm
---------------------------------------------------------- */
-
-.sectionHead,
-.roomsPanelHeader,
-.featurePanelHeader,
-.panelHeader{
-  display: flex !important;
-  align-items: flex-end !important;
-  justify-content: space-between !important;
-  gap: 14px !important;
-  flex-wrap: wrap !important;
-  margin-bottom: 14px !important;
-}
-
-/* ---------------------------------------------------------
-   Rooms page should follow homepage visual language
---------------------------------------------------------- */
-
-.roomsHeroCopy{
-  align-items: flex-start !important;
-  text-align: left !important;
-}
-
-.roomsHeroCopy h1{
-  max-width: 10.8ch !important;
-}
-
-.roomsHeroCopy .badge,
-.roomsHeroCopy .kicker,
-.roomsHeroCopy .eyebrow,
-.roomsHeroCopy .roomKicker{
-  justify-content: flex-start !important;
-  text-align: left !important;
-  align-self: flex-start !important;
-}
-
-/* ---------------------------------------------------------
-   Homepage remains the reference
---------------------------------------------------------- */
-
-body[data-page-type="home_page"] .heroCopy{
-  align-items: flex-start !important;
-  text-align: left !important;
-}
-
-body[data-page-type="home_page"] .heroCopy .kicker,
-body[data-page-type="home_page"] .heroCopy .eyebrow,
-body[data-page-type="home_page"] .heroCopy .heroKicker{
-  color: var(--forest) !important;
-}
-
-/* ---------------------------------------------------------
-   Review logos and external logos never explode
---------------------------------------------------------- */
-
-.tcfr-google-logo,
-body[data-page-type="home_page"] .tcfr-google-logo{
-  width: 34px !important;
-  height: 34px !important;
-  max-width: 34px !important;
-  object-fit: contain !important;
-  flex: 0 0 auto !important;
-}
-
-.tcfr-tourismLogo,
-body[data-page-type="home_page"] .tcfr-tourismLogo{
-  width: 82px !important;
-  max-width: 82px !important;
-  height: auto !important;
-  object-fit: contain !important;
-}
-
-/* ---------------------------------------------------------
-   Responsive consistency
---------------------------------------------------------- */
-
-@media (max-width: 900px){
-  h1,
-  .h1,
-  .heroH1,
-  .heroTitle,
-  .roomTitle,
-  .roomsHeroCopy h1,
-  body[data-page-type="home_page"] .h1{
-    font-size: clamp(38px, 11vw, 56px) !important;
-    line-height: 1.01 !important;
-  }
-
-  h2,
-  .h2,
-  .sectionTitle,
-  .panelTitle,
-  .bandTitle,
-  .roomsPanelHeader h2,
-  .roomsBand h2,
-  body[data-page-type="home_page"] .h2{
-    font-size: clamp(26px, 7vw, 36px) !important;
-    line-height: 1.08 !important;
-  }
-
-  .sectionHead,
-  .roomsPanelHeader,
-  .featurePanelHeader,
-  .panelHeader{
-    align-items: flex-start !important;
-  }
-}
-
-@media (max-width: 640px){
-  .btn{
-    min-height: 44px !important;
-  }
-
-  .kicker,
-  .eyebrow,
-  .heroKicker,
-  .roomKicker,
-  .roomsHeroCopy .badge{
-    font-size: 11.5px !important;
-    line-height: 1.2 !important;
-  }
-}
-
-/* =========================================================
-   TCFR FINAL GLOBAL TYPOGRAPHY LOCK
-   Date: 2026-05-21
-   Purpose:
-   - One heading system across homepage, rooms, features, booking, contact, and detail pages
-   - Display headings use weight 800 exactly
-   - Hero eyebrow/kicker text is plain, left aligned, dark green
-   - Section titles and card titles follow the same hierarchy everywhere
-   - Layout modules remain intact; only typography and label consistency are locked here
-   ========================================================= */
-
-:root{
-  --tcfr-heading-weight: 800;
-  --tcfr-section-weight: 800;
-  --tcfr-card-heading-weight: 800;
-
-  --tcfr-display-size: clamp(42px, 4.6vw, 64px);
-  --tcfr-section-size: clamp(26px, 2.7vw, 36px);
-  --tcfr-card-title-size: clamp(19px, 1.65vw, 24px);
-
-  --tcfr-display-line: 0.98;
-  --tcfr-section-line: 1.06;
-  --tcfr-card-line: 1.12;
-
-  --tcfr-display-spacing: -0.036em;
-  --tcfr-section-spacing: -0.026em;
-  --tcfr-card-spacing: -0.018em;
-
-  --tcfr-kicker-color: var(--forest);
-  --tcfr-kicker-size: 12px;
-  --tcfr-kicker-spacing: 0.12em;
-}
-
-/* Base heading hierarchy */
-h1,
-.h1,
-.heroH1,
-.heroTitle,
-.roomTitle,
-.roomsHeroCopy h1,
-body[data-page-type="home_page"] .h1,
-body[data-page-type="features_hub"] .heroH1,
-body[data-page-type="feature_detail_page"] .heroH1,
-body[data-page-type="feature_detail_page"] .h1{
-  font-family: var(--font-head) !important;
-  font-size: var(--tcfr-display-size) !important;
-  font-weight: var(--tcfr-heading-weight) !important;
-  line-height: var(--tcfr-display-line) !important;
-  letter-spacing: var(--tcfr-display-spacing) !important;
-  color: var(--forest) !important;
-  margin-top: 0 !important;
-}
-
-h2,
-.h2,
-.sectionTitle,
-.panelTitle,
-.bandTitle,
-.roomsPanelHeader h2,
-.roomsBand h2,
-body[data-page-type="home_page"] .h2,
-body[data-page-type="home_page"] .bandTitle,
-body[data-page-type="features_hub"] .sectionTitle,
-body[data-page-type="features_hub"] .ctaBand h2,
-body[data-page-type="feature_detail_page"] .sectionTitle,
-body[data-page-type="feature_detail_page"] .panelTitle,
-body[data-page-type="feature_detail_page"] .ctaBand h2{
-  font-family: var(--font-head) !important;
-  font-size: var(--tcfr-section-size) !important;
-  font-weight: var(--tcfr-section-weight) !important;
-  line-height: var(--tcfr-section-line) !important;
-  letter-spacing: var(--tcfr-section-spacing) !important;
-  color: var(--forest) !important;
-}
-
-h3,
-h4,
-.cardTitle,
-.tileTitle,
-.trustTitle,
-.roomCardBody h3,
-.roomsInfoCard h3,
-.roomsGuideCard h3,
-.amenityCard h3,
-.relatedFeatureCard h3,
+/* Shared card heading system */
 body[data-page-type="home_page"] .tileTitle,
-body[data-page-type="home_page"] .trustTitle,
+.roomCardBody h3,
+.roomsInfoCard h3,
+.roomsGuideCard h3,
 body[data-page-type="features_hub"] .cardTitle,
-body[data-page-type="feature_detail_page"] .cardTitle{
-  font-family: var(--font-head) !important;
-  font-size: var(--tcfr-card-title-size) !important;
-  font-weight: var(--tcfr-card-heading-weight) !important;
-  line-height: var(--tcfr-card-line) !important;
-  letter-spacing: var(--tcfr-card-spacing) !important;
-  color: var(--forest) !important;
+body[data-page-type="feature_detail_page"] .amenityCard h3,
+body[data-page-type="feature_detail_page"] .relatedFeatureCard h3{
+  margin:0 0 6px !important;
+  color:var(--forest) !important;
+  font-family:var(--font-head) !important;
+  font-size:var(--tcfr-card-title-size) !important;
+  font-weight:800 !important;
+  letter-spacing:var(--tcfr-card-tracking) !important;
+  line-height:var(--tcfr-card-line) !important;
+  text-align:left !important;
 }
 
-/* Hero titles should match across homepage and rooms.
-   Homepage and rooms may have different layouts, but not different typography personalities. */
-body[data-page-type="home_page"] .h1,
-.roomsHeroCopy h1{
-  font-size: var(--tcfr-display-size) !important;
-  font-weight: 800 !important;
-  line-height: var(--tcfr-display-line) !important;
-  letter-spacing: var(--tcfr-display-spacing) !important;
-}
-
-/* Plain global eyebrow/kicker style.
-   No pill, no bubble, no white text on pale surfaces, no centered room labels. */
-.kicker,
-.eyebrow,
-.heroKicker,
-.roomKicker,
-.roomsHeroCopy .badge,
+/* Shared eyebrow/kicker system */
 body[data-page-type="home_page"] .kicker,
 body[data-page-type="home_page"] .eyebrow,
 body[data-page-type="home_page"] .heroKicker,
-body[data-page-type="features_hub"] .kicker,
-body[data-page-type="feature_detail_page"] .kicker{
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  width: fit-content !important;
-  max-width: 100% !important;
-  margin: 0 0 12px 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  color: var(--tcfr-kicker-color) !important;
-  font-family: var(--font-body) !important;
-  font-size: var(--tcfr-kicker-size) !important;
-  font-weight: 800 !important;
-  letter-spacing: var(--tcfr-kicker-spacing) !important;
-  line-height: 1.2 !important;
-  text-transform: uppercase !important;
-  text-align: left !important;
-  text-shadow: none !important;
-}
-
-/* Keep hero copy blocks left aligned globally. */
-.heroCopy,
-.roomsHeroCopy,
-.heroInner,
-.roomHeroInner{
-  text-align: left !important;
-}
-
-/* Homepage and rooms hero cards should share the same readable body rhythm. */
-body[data-page-type="home_page"] .sub,
-.roomsHeroLead{
-  font-size: 16px !important;
-  line-height: 1.72 !important;
-  font-weight: 700 !important;
-  color: rgba(11,26,16,0.78) !important;
-}
-
-/* Section header copy alignment and rhythm */
-.sectionHead,
-.roomsPanelHeader,
-.featurePanelHeader{
-  text-align: left !important;
-}
-
-.sectionHead p,
-.roomsPanelHeader p,
-.sectionHint,
-.panelHint,
-.hint{
-  font-size: 14.5px !important;
-  line-height: 1.62 !important;
-  font-weight: 700 !important;
-  color: rgba(11,26,16,0.70) !important;
-}
-
-/* Keep card labels readable but less visually dominant than headings. */
-.pill,
-.roomPill,
-.badge,
-.chip,
-.tag,
-.miniChip,
-.heroChip{
-  font-family: var(--font-body) !important;
-  font-weight: 800 !important;
-}
-
-/* Do not allow old overlay rules to turn light-surface titles white.
-   Actual dark image overlays can still opt in with .onDark. */
-.heroCopy h1,
-.roomsHeroCopy h1,
-.heroCopy h2,
-.roomsHeroCopy h2{
-  color: var(--forest) !important;
-}
-
-/* Dark overlay opt-in remains available for true image overlays. */
-.onDark h1,
-.onDark h2,
-.onDark h3,
-.onDark h4,
-.onDark .kicker,
-.onDark .eyebrow,
-.heroCard.onDark h1,
-.heroCard.onDark h2,
-.heroCard.onDark .kicker,
-.heroCard.onDark .eyebrow{
-  color: rgba(255,255,255,0.96) !important;
-}
-
-/* Mobile keeps the same system, only lowers the max scale for comfortable wrapping. */
-@media (max-width: 640px){
-  :root{
-    --tcfr-display-size: clamp(38px, 12vw, 52px);
-    --tcfr-section-size: clamp(25px, 8vw, 34px);
-    --tcfr-card-title-size: clamp(20px, 6vw, 24px);
-  }
-
-  h1,
-  .h1,
-  .heroH1,
-  .heroTitle,
-  .roomTitle,
-  .roomsHeroCopy h1,
-  body[data-page-type="home_page"] .h1{
-    line-height: 1.01 !important;
-  }
-}
-
-
-
-/* =========================================================
-   TCFR FINAL TYPOGRAPHY LOCK
-   Homepage + Rooms must visually match
-   ========================================================= */
-
-body[data-page-type="home_page"] .h1,
-.roomsHeroCopy h1{
-  font-family: var(--font-head) !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.045em !important;
-  line-height: 0.96 !important;
-  font-size: clamp(44px, 5vw, 72px) !important;
-  color: var(--forest) !important;
-}
-
-body[data-page-type="home_page"] .kicker,
 .roomsHeroCopy .badge,
 .roomsHeroCopy .kicker,
 .roomsHeroCopy .eyebrow{
   display:inline-flex !important;
   align-items:center !important;
+  justify-content:flex-start !important;
   width:fit-content !important;
-  padding:0 !important;
+  max-width:100% !important;
   margin:0 0 12px !important;
+  padding:0 !important;
   border:0 !important;
   border-radius:0 !important;
   background:transparent !important;
   box-shadow:none !important;
   color:var(--forest) !important;
-  font-size:12px !important;
+  font-family:var(--font-body) !important;
+  font-size:var(--tcfr-kicker-size) !important;
   font-weight:800 !important;
-  letter-spacing:0.12em !important;
+  letter-spacing:var(--tcfr-kicker-tracking) !important;
   line-height:1.2 !important;
+  text-align:left !important;
   text-transform:uppercase !important;
+  text-shadow:none !important;
+}
+
+/* Shared panel/card surfaces */
+body[data-page-type="home_page"] .section,
+body[data-page-type="home_page"] .band,
+.roomsPanel,
+.roomsBand{
+  background:var(--tcfr-panel-bg) !important;
+  border:1px solid var(--line) !important;
+  border-radius:var(--r2) !important;
+  box-shadow:var(--shadow) !important;
+  color:var(--ink) !important;
+}
+
+body[data-page-type="home_page"] .tile,
+body[data-page-type="home_page"] .trustCard,
+.roomCardGlobal,
+.roomsInfoCard,
+.roomsGuideCard{
+  background:var(--tcfr-card-bg) !important;
+  border:1px solid rgba(11,26,16,.10) !important;
+  border-radius:var(--r) !important;
+  box-shadow:0 12px 30px rgba(13,89,37,.10) !important;
+  color:var(--ink) !important;
+}
+
+/* Shared body rhythm */
+body[data-page-type="home_page"] .sub,
+.roomsHeroLead{
+  color:rgba(11,26,16,.78) !important;
+  font-size:16px !important;
+  font-weight:750 !important;
+  line-height:1.72 !important;
   text-align:left !important;
 }
 
+body[data-page-type="home_page"] .hint,
+.roomsPanelHeader p,
+.roomsBand p{
+  color:rgba(11,26,16,.72) !important;
+  font-size:14px !important;
+  font-weight:750 !important;
+  line-height:1.62 !important;
+  text-align:left !important;
+}
+
+/* Shared pill system */
+body[data-page-type="home_page"] .pill,
+.roomPill{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:34px !important;
+  padding:8px 12px !important;
+  border-radius:999px !important;
+  border:1px solid rgba(13,89,37,.18) !important;
+  background:rgba(255,255,255,.60) !important;
+  color:var(--forest) !important;
+  font-family:var(--font-body) !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  line-height:1.1 !important;
+  white-space:nowrap !important;
+  box-shadow:0 10px 26px rgba(13,89,37,.10) !important;
+}
+
+/* Rooms inherits homepage hero content behavior */
 .roomsHeroCopy{
   align-items:flex-start !important;
   text-align:left !important;
 }
 
-.roomsHeroLead,
-body[data-page-type="home_page"] .sub{
-  color: rgba(11,26,16,0.78) !important;
-  font-size:16px !important;
-  font-weight:750 !important;
-  line-height:1.72 !important;
+.roomsHeroCopy h1{
+  max-width:10.5ch !important;
+}
+
+/* Keep room cards from becoming newspaper columns when content varies */
+.roomCardBody,
+.roomsInfoCard,
+.roomsGuideCard{
+  min-width:0 !important;
+  overflow:visible !important;
+}
+
+.roomsGrid > *,
+.roomsInfoGrid > *,
+.roomsGuideGrid > *{
+  min-width:0 !important;
+}
+
+/* Responsive lock */
+@media(max-width:640px){
+  body[data-page-type="home_page"] .h1,
+  body[data-page-type="home_page"] .heroCopy h1,
+  .roomsHeroCopy h1{
+    font-size:clamp(36px,13vw,52px) !important;
+  }
 }
