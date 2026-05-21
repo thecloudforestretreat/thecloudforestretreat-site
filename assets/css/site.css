@@ -1038,17 +1038,7 @@ body[data-page-type="home_page"] .bandActions{
    - Typography, buttons, cards, badges, spacing, colors, and shadows follow the approved global system
    ========================================================= */
 
-.rawLangLinks{
-  position:absolute !important;
-  width:1px !important;
-  height:1px !important;
-  padding:0 !important;
-  margin:-1px !important;
-  overflow:hidden !important;
-  clip:rect(0,0,0,0) !important;
-  white-space:nowrap !important;
-  border:0 !important;
-}
+
 
 .roomsHub{
   max-width:var(--container);
@@ -6321,3 +6311,54 @@ body[data-page-type="home_page"] .sub,
   }
 }
 
+
+
+/* =========================================================
+   TCFR FINAL TYPOGRAPHY LOCK
+   Homepage + Rooms must visually match
+   ========================================================= */
+
+body[data-page-type="home_page"] .h1,
+.roomsHeroCopy h1{
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 0.96 !important;
+  font-size: clamp(44px, 5vw, 72px) !important;
+  color: var(--forest) !important;
+}
+
+body[data-page-type="home_page"] .kicker,
+.roomsHeroCopy .badge,
+.roomsHeroCopy .kicker,
+.roomsHeroCopy .eyebrow{
+  display:inline-flex !important;
+  align-items:center !important;
+  width:fit-content !important;
+  padding:0 !important;
+  margin:0 0 12px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  color:var(--forest) !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+  letter-spacing:0.12em !important;
+  line-height:1.2 !important;
+  text-transform:uppercase !important;
+  text-align:left !important;
+}
+
+.roomsHeroCopy{
+  align-items:flex-start !important;
+  text-align:left !important;
+}
+
+.roomsHeroLead,
+body[data-page-type="home_page"] .sub{
+  color: rgba(11,26,16,0.78) !important;
+  font-size:16px !important;
+  font-weight:750 !important;
+  line-height:1.72 !important;
+}
