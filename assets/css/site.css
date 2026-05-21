@@ -581,12 +581,17 @@ body[data-page-type="home_page"] .kicker{
   align-items: center;
   gap: 8px;
   margin-bottom: 12px;
-  color: rgba(13,89,37,0.70);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(13,89,37,0.82);
+  color: rgba(255,255,255,0.96);
   font-size: 12px;
   font-weight: 950;
   letter-spacing: 0.12em;
   line-height: 1.2;
   text-transform: uppercase;
+  width: fit-content;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 }
 
 body[data-page-type="home_page"] .h1{
