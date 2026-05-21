@@ -1,7 +1,7 @@
 /* /assets/css/site.css
    The Cloud Forest Retreat
    Production global CSS system
-   Last updated: 2026-05-21
+   Last updated: 2026-05-21 - true global rooms alignment
 
    Structure:
    1. Tokens
@@ -676,6 +676,200 @@ body[data-page-type="feature_detail_page"] .featurePanelHeader{
 }
 
 /* =========================================================
+   8A. Canonical TCFR component aliases
+   Purpose:
+   - Lets all updated pages use one shared component system.
+   - Keeps existing page-specific class names working during migration.
+   - Page HTML should prefer tcfrHero/tcfrPanel/tcfrCard classes going forward.
+   ========================================================= */
+
+.tcfrHero{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:var(--gap-lg);
+  align-items:stretch;
+  margin-top:8px;
+}
+
+.tcfrHeroMedia,
+.tcfrHeroCopy{
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  background:var(--surface-panel);
+  color:var(--ink);
+}
+
+.tcfrHeroMedia{
+  min-height:420px;
+  position:relative;
+  isolation:isolate;
+}
+
+.tcfrHeroMedia img{
+  width:100%;
+  height:100%;
+  min-height:420px;
+  object-fit:cover;
+  object-position:center;
+}
+
+.tcfrHeroCopy{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:18px;
+  text-align:left;
+}
+
+.tcfrKicker{
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:fit-content;
+  max-width:100%;
+  min-height:0;
+  margin:0 0 12px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  color:var(--forest);
+  font-family:var(--font-body);
+  font-size:var(--kicker-size);
+  font-weight:var(--kicker-weight);
+  letter-spacing:var(--kicker-track);
+  line-height:1.2;
+  text-align:left;
+  text-transform:uppercase;
+  text-shadow:none;
+}
+
+.tcfrDisplay{
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--display-size);
+  font-weight:var(--display-weight);
+  letter-spacing:var(--display-track);
+  line-height:var(--display-line);
+  text-align:left;
+}
+
+.tcfrLead{
+  margin:0;
+  max-width:66ch;
+  color:var(--muted-strong);
+  font-size:16px;
+  font-weight:var(--body-strong-weight);
+  line-height:1.72;
+  text-align:left;
+}
+
+.tcfrActions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+}
+
+.tcfrPanel{
+  margin-top:22px;
+  padding:var(--panel-pad);
+  background:var(--surface-panel);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+.tcfrSectionHead{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:var(--gap);
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.tcfrSectionTitle{
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--section-size);
+  font-weight:var(--section-weight);
+  letter-spacing:var(--section-track);
+  line-height:var(--section-line);
+  text-align:left;
+}
+
+.tcfrCard{
+  background:var(--surface-card);
+  border:1px solid rgba(11,26,16,.10);
+  border-radius:var(--r);
+  box-shadow:var(--shadow-card);
+  color:var(--ink);
+}
+
+.tcfrCardTitle{
+  margin:0 0 6px;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--card-title-size);
+  font-weight:var(--card-title-weight);
+  letter-spacing:var(--card-title-track);
+  line-height:var(--card-title-line);
+  text-align:left;
+}
+
+.tcfrCardBody{
+  padding:var(--card-pad);
+}
+
+@media(max-width:1020px){
+  .tcfrHero{
+    grid-template-columns:1fr;
+  }
+
+  .tcfrHeroMedia,
+  .tcfrHeroMedia img{
+    min-height:420px;
+  }
+
+  .tcfrHeroCopy{
+    padding:22px;
+  }
+}
+
+@media(max-width:640px){
+  .tcfrHeroMedia,
+  .tcfrHeroMedia img{
+    min-height:320px;
+  }
+
+  .tcfrHeroCopy,
+  .tcfrPanel{
+    padding:16px;
+  }
+
+  .tcfrDisplay{
+    font-size:var(--display-size-mobile);
+  }
+
+  .tcfrActions{
+    width:100%;
+  }
+
+  .tcfrActions .btn{
+    width:100%;
+  }
+}
+
+/* =========================================================
    9. Footer support
    ========================================================= */
 
@@ -1004,20 +1198,23 @@ body[data-page-type="home_page"] .bandActions{
    11. Rooms module
    ========================================================= */
 
-body[data-page-type="room_index"] .roomsHub,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsHub,
 .roomsHub{
   padding-top:28px;
   padding-bottom:84px;
 }
 
-body[data-page-type="room_index"] .roomsHeroMedia,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsHeroMedia,
 .roomsHeroMedia{
   min-height:420px;
   position:relative;
   isolation:isolate;
 }
 
-body[data-page-type="room_index"] .roomsHeroMedia img,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsHeroMedia img,
 .roomsHeroMedia img{
   width:100%;
   height:100%;
@@ -1026,30 +1223,36 @@ body[data-page-type="room_index"] .roomsHeroMedia img,
   object-position:center;
 }
 
-body[data-page-type="room_index"] .roomsHeroCopy h1,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsHeroCopy h1,
 .roomsHeroCopy h1{
   max-width:10.5ch;
 }
 
-body[data-page-type="room_index"] .roomsPanel,
-body[data-page-type="room_index"] .roomsBand,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsPanel,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsBand,
 .roomsPanel,
 .roomsBand{
   margin-top:22px;
   padding:var(--panel-pad);
 }
 
-body[data-page-type="room_index"] .roomsGrid,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsGrid,
 .roomsGrid{
   grid-template-columns:repeat(3,minmax(0,1fr));
 }
 
-body[data-page-type="room_index"] .roomsInfoGrid,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsInfoGrid,
 .roomsInfoGrid{
   grid-template-columns:repeat(3,minmax(0,1fr));
 }
 
-body[data-page-type="room_index"] .roomsGuideGrid,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsGuideGrid,
 .roomsGuideGrid{
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
@@ -1057,9 +1260,12 @@ body[data-page-type="room_index"] .roomsGuideGrid,
   align-items:stretch;
 }
 
-body[data-page-type="room_index"] .roomCardGlobal,
-body[data-page-type="room_index"] .roomsInfoCard,
-body[data-page-type="room_index"] .roomsGuideCard,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomCardGlobal,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsInfoCard,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsGuideCard,
 .roomCardGlobal,
 .roomsInfoCard,
 .roomsGuideCard{
@@ -1071,16 +1277,20 @@ body[data-page-type="room_index"] .roomsGuideCard,
   padding:0;
 }
 
-body[data-page-type="room_index"] .roomCardGlobal img,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomCardGlobal img,
 .roomCardGlobal img{
   width:100%;
   aspect-ratio:16 / 10;
   object-fit:cover;
 }
 
-body[data-page-type="room_index"] .roomCardBody,
-body[data-page-type="room_index"] .roomsInfoCard,
-body[data-page-type="room_index"] .roomsGuideCard,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomCardBody,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsInfoCard,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsGuideCard,
 .roomCardBody,
 .roomsInfoCard,
 .roomsGuideCard{
@@ -1088,16 +1298,20 @@ body[data-page-type="room_index"] .roomsGuideCard,
   gap:10px;
 }
 
-body[data-page-type="room_index"] .roomCardBody,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomCardBody,
 .roomCardBody{
   display:flex;
   flex-direction:column;
   height:100%;
 }
 
-body[data-page-type="room_index"] .roomCardBody p,
-body[data-page-type="room_index"] .roomsInfoCard p,
-body[data-page-type="room_index"] .roomsGuideCard p,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomCardBody p,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsInfoCard p,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsGuideCard p,
 .roomCardBody p,
 .roomsInfoCard p,
 .roomsGuideCard p{
@@ -1108,27 +1322,32 @@ body[data-page-type="room_index"] .roomsGuideCard p,
   line-height:1.65;
 }
 
-body[data-page-type="room_index"] .roomPillRow,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomPillRow,
 .roomPillRow{
   margin-top:auto;
 }
 
-body[data-page-type="room_index"] .roomCardCta,
-body[data-page-type="room_index"] .roomsGuideCard .linkCta,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomCardCta,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsGuideCard .linkCta,
 .roomCardCta,
 .roomsGuideCard .linkCta{
   margin-top:auto;
   align-self:flex-start;
 }
 
-body[data-page-type="room_index"] .roomsGuideCard .linkCta,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsGuideCard .linkCta,
 .roomsGuideCard .linkCta{
   color:var(--forest);
   font-size:13px;
   font-weight:800;
 }
 
-body[data-page-type="room_index"] .roomsBand,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsBand,
 .roomsBand{
   display:flex;
   align-items:center;
@@ -1137,7 +1356,8 @@ body[data-page-type="room_index"] .roomsBand,
   flex-wrap:wrap;
 }
 
-body[data-page-type="room_index"] .roomsBandActions,
+body[data-page-type="room_index"],
+body[data-page-type="rooms_hub"] .roomsBandActions,
 .roomsBandActions{
   margin-top:0;
   flex:0 0 auto;
