@@ -1198,22 +1198,48 @@ body[data-page-type="home_page"] .bandActions{
    11. Rooms module
    ========================================================= */
 
-body[data-page-type="room_index"],
+/*
+   Rooms uses the same global hero/panel/card system as the homepage.
+   These rules are layout-only and are scoped to the rooms hub wrapper.
+   Do not target body alone. Body-level selector mistakes caused the broken narrow layout.
+*/
+
+body[data-page-type="room_index"] .roomsHub,
 body[data-page-type="rooms_hub"] .roomsHub,
 .roomsHub{
-  padding-top:28px;
-  padding-bottom:84px;
+  max-width:var(--container);
+  margin:0 auto;
+  padding:28px var(--pad) 84px;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsHero,
+body[data-page-type="rooms_hub"] .roomsHero,
+.roomsHero{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:var(--gap-lg);
+  align-items:stretch;
+  margin-top:8px;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  border-radius:0;
+}
+
+body[data-page-type="room_index"] .roomsHeroMedia,
 body[data-page-type="rooms_hub"] .roomsHeroMedia,
 .roomsHeroMedia{
   min-height:420px;
   position:relative;
   isolation:isolate;
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  background:var(--surface-panel);
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsHeroMedia img,
 body[data-page-type="rooms_hub"] .roomsHeroMedia img,
 .roomsHeroMedia img{
   width:100%;
@@ -1223,35 +1249,155 @@ body[data-page-type="rooms_hub"] .roomsHeroMedia img,
   object-position:center;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsHeroCopy,
+body[data-page-type="rooms_hub"] .roomsHeroCopy,
+.roomsHeroCopy{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:18px;
+  text-align:left;
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  background:var(--surface-panel);
+  color:var(--ink);
+}
+
+body[data-page-type="room_index"] .roomsHeroCopy .badge,
+body[data-page-type="rooms_hub"] .roomsHeroCopy .badge,
+.roomsHeroCopy .badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:fit-content;
+  max-width:100%;
+  min-height:0;
+  margin:0 0 12px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  color:var(--forest);
+  font-family:var(--font-body);
+  font-size:var(--kicker-size);
+  font-weight:var(--kicker-weight);
+  letter-spacing:var(--kicker-track);
+  line-height:1.2;
+  text-align:left;
+  text-transform:uppercase;
+  text-shadow:none;
+}
+
+body[data-page-type="room_index"] .roomsHeroCopy h1,
 body[data-page-type="rooms_hub"] .roomsHeroCopy h1,
 .roomsHeroCopy h1{
   max-width:10.5ch;
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--display-size);
+  font-weight:var(--display-weight);
+  letter-spacing:var(--display-track);
+  line-height:var(--display-line);
+  text-align:left;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsHeroLead,
+body[data-page-type="rooms_hub"] .roomsHeroLead,
+.roomsHeroLead{
+  margin:0;
+  max-width:66ch;
+  color:var(--muted-strong);
+  font-size:16px;
+  font-weight:var(--body-strong-weight);
+  line-height:1.72;
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .roomsHeroActions,
+body[data-page-type="rooms_hub"] .roomsHeroActions,
+.roomsHeroActions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+}
+
+body[data-page-type="room_index"] .roomsPanel,
 body[data-page-type="rooms_hub"] .roomsPanel,
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsBand,
 body[data-page-type="rooms_hub"] .roomsBand,
 .roomsPanel,
 .roomsBand{
   margin-top:22px;
   padding:var(--panel-pad);
+  background:var(--surface-panel);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsPanelHeader,
+body[data-page-type="rooms_hub"] .roomsPanelHeader,
+.roomsPanelHeader{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:var(--gap);
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+body[data-page-type="room_index"] .roomsPanelHeader h2,
+body[data-page-type="rooms_hub"] .roomsPanelHeader h2,
+.roomsPanelHeader h2{
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--section-size);
+  font-weight:var(--section-weight);
+  letter-spacing:var(--section-track);
+  line-height:var(--section-line);
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .roomsPanelHeader p,
+body[data-page-type="rooms_hub"] .roomsPanelHeader p,
+.roomsPanelHeader p{
+  margin:0;
+  max-width:68ch;
+  color:rgba(11,26,16,.72);
+  font-size:14px;
+  font-weight:var(--body-strong-weight);
+  line-height:1.62;
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .roomsGrid,
 body[data-page-type="rooms_hub"] .roomsGrid,
 .roomsGrid{
+  display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:var(--gap);
+  align-items:stretch;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsInfoGrid,
 body[data-page-type="rooms_hub"] .roomsInfoGrid,
 .roomsInfoGrid{
+  display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:var(--gap);
+  align-items:stretch;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsGuideGrid,
 body[data-page-type="rooms_hub"] .roomsGuideGrid,
 .roomsGuideGrid{
   display:grid;
@@ -1260,11 +1406,11 @@ body[data-page-type="rooms_hub"] .roomsGuideGrid,
   align-items:stretch;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomCardGlobal,
 body[data-page-type="rooms_hub"] .roomCardGlobal,
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsInfoCard,
 body[data-page-type="rooms_hub"] .roomsInfoCard,
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsGuideCard,
 body[data-page-type="rooms_hub"] .roomsGuideCard,
 .roomCardGlobal,
 .roomsInfoCard,
@@ -1275,9 +1421,14 @@ body[data-page-type="rooms_hub"] .roomsGuideCard,
   min-width:0;
   overflow:hidden;
   padding:0;
+  background:var(--surface-card);
+  border:1px solid rgba(11,26,16,.10);
+  border-radius:var(--r);
+  box-shadow:var(--shadow-card);
+  color:var(--ink);
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomCardGlobal img,
 body[data-page-type="rooms_hub"] .roomCardGlobal img,
 .roomCardGlobal img{
   width:100%;
@@ -1285,32 +1436,50 @@ body[data-page-type="rooms_hub"] .roomCardGlobal img,
   object-fit:cover;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomCardBody,
 body[data-page-type="rooms_hub"] .roomCardBody,
-body[data-page-type="room_index"],
+.roomCardBody{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  padding:var(--card-pad);
+  gap:10px;
+}
+
+body[data-page-type="room_index"] .roomsInfoCard,
 body[data-page-type="rooms_hub"] .roomsInfoCard,
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsGuideCard,
 body[data-page-type="rooms_hub"] .roomsGuideCard,
-.roomCardBody,
 .roomsInfoCard,
 .roomsGuideCard{
   padding:var(--card-pad);
   gap:10px;
 }
 
-body[data-page-type="room_index"],
-body[data-page-type="rooms_hub"] .roomCardBody,
-.roomCardBody{
-  display:flex;
-  flex-direction:column;
-  height:100%;
+body[data-page-type="room_index"] .roomCardBody h3,
+body[data-page-type="rooms_hub"] .roomCardBody h3,
+body[data-page-type="room_index"] .roomsInfoCard h3,
+body[data-page-type="rooms_hub"] .roomsInfoCard h3,
+body[data-page-type="room_index"] .roomsGuideCard h3,
+body[data-page-type="rooms_hub"] .roomsGuideCard h3,
+.roomCardBody h3,
+.roomsInfoCard h3,
+.roomsGuideCard h3{
+  margin:0 0 6px;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--card-title-size);
+  font-weight:var(--card-title-weight);
+  letter-spacing:var(--card-title-track);
+  line-height:var(--card-title-line);
+  text-align:left;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomCardBody p,
 body[data-page-type="rooms_hub"] .roomCardBody p,
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsInfoCard p,
 body[data-page-type="rooms_hub"] .roomsInfoCard p,
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsGuideCard p,
 body[data-page-type="rooms_hub"] .roomsGuideCard p,
 .roomCardBody p,
 .roomsInfoCard p,
@@ -1322,15 +1491,19 @@ body[data-page-type="rooms_hub"] .roomsGuideCard p,
   line-height:1.65;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomPillRow,
 body[data-page-type="rooms_hub"] .roomPillRow,
 .roomPillRow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
   margin-top:auto;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomCardCta,
 body[data-page-type="rooms_hub"] .roomCardCta,
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsGuideCard .linkCta,
 body[data-page-type="rooms_hub"] .roomsGuideCard .linkCta,
 .roomCardCta,
 .roomsGuideCard .linkCta{
@@ -1338,7 +1511,7 @@ body[data-page-type="rooms_hub"] .roomsGuideCard .linkCta,
   align-self:flex-start;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsGuideCard .linkCta,
 body[data-page-type="rooms_hub"] .roomsGuideCard .linkCta,
 .roomsGuideCard .linkCta{
   color:var(--forest);
@@ -1346,7 +1519,7 @@ body[data-page-type="rooms_hub"] .roomsGuideCard .linkCta,
   font-weight:800;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsBand,
 body[data-page-type="rooms_hub"] .roomsBand,
 .roomsBand{
   display:flex;
@@ -1356,12 +1529,113 @@ body[data-page-type="rooms_hub"] .roomsBand,
   flex-wrap:wrap;
 }
 
-body[data-page-type="room_index"],
+body[data-page-type="room_index"] .roomsBandActions,
 body[data-page-type="rooms_hub"] .roomsBandActions,
 .roomsBandActions{
   margin-top:0;
   flex:0 0 auto;
 }
+
+/* Hide footer/social rail on room pages if footer script injects it into the side rail position. */
+body[data-page-type="room_index"] .tcfr-footer,
+body[data-page-type="rooms_hub"] .tcfr-footer{
+  max-width:var(--container);
+  margin:28px auto 0;
+  padding-left:var(--pad);
+  padding-right:var(--pad);
+}
+
+@media(max-width:1020px){
+  body[data-page-type="room_index"] .roomsHero,
+  body[data-page-type="rooms_hub"] .roomsHero,
+  .roomsHero{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="room_index"] .roomsHeroMedia,
+  body[data-page-type="rooms_hub"] .roomsHeroMedia,
+  body[data-page-type="room_index"] .roomsHeroMedia img,
+  body[data-page-type="rooms_hub"] .roomsHeroMedia img,
+  .roomsHeroMedia,
+  .roomsHeroMedia img{
+    min-height:420px;
+  }
+
+  body[data-page-type="room_index"] .roomsHeroCopy,
+  body[data-page-type="rooms_hub"] .roomsHeroCopy,
+  .roomsHeroCopy{
+    padding:22px;
+  }
+
+  body[data-page-type="room_index"] .roomsGrid,
+  body[data-page-type="rooms_hub"] .roomsGrid,
+  body[data-page-type="room_index"] .roomsInfoGrid,
+  body[data-page-type="rooms_hub"] .roomsInfoGrid,
+  .roomsGrid,
+  .roomsInfoGrid{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="room_index"] .roomsGuideGrid,
+  body[data-page-type="rooms_hub"] .roomsGuideGrid,
+  .roomsGuideGrid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:640px){
+  body[data-page-type="room_index"] .roomsHub,
+  body[data-page-type="rooms_hub"] .roomsHub,
+  .roomsHub{
+    padding-top:18px;
+    padding-bottom:56px;
+  }
+
+  body[data-page-type="room_index"] .roomsHeroMedia,
+  body[data-page-type="rooms_hub"] .roomsHeroMedia,
+  body[data-page-type="room_index"] .roomsHeroMedia img,
+  body[data-page-type="rooms_hub"] .roomsHeroMedia img,
+  .roomsHeroMedia,
+  .roomsHeroMedia img{
+    min-height:320px;
+  }
+
+  body[data-page-type="room_index"] .roomsHeroCopy,
+  body[data-page-type="rooms_hub"] .roomsHeroCopy,
+  body[data-page-type="room_index"] .roomsPanel,
+  body[data-page-type="rooms_hub"] .roomsPanel,
+  .roomsHeroCopy,
+  .roomsPanel{
+    padding:16px;
+  }
+
+  body[data-page-type="room_index"] .roomsHeroCopy h1,
+  body[data-page-type="rooms_hub"] .roomsHeroCopy h1,
+  .roomsHeroCopy h1{
+    max-width:11ch;
+    font-size:var(--display-size-mobile);
+  }
+
+  body[data-page-type="room_index"] .roomsHeroActions,
+  body[data-page-type="rooms_hub"] .roomsHeroActions,
+  .roomsHeroActions{
+    width:100%;
+  }
+
+  body[data-page-type="room_index"] .roomsHeroActions .btn,
+  body[data-page-type="rooms_hub"] .roomsHeroActions .btn,
+  .roomsHeroActions .btn{
+    width:100%;
+  }
+
+  body[data-page-type="room_index"] .roomsGuideGrid,
+  body[data-page-type="rooms_hub"] .roomsGuideGrid,
+  .roomsGuideGrid{
+    grid-template-columns:1fr;
+  }
+}
+
+
 
 /* =========================================================
    12. Features hub module
