@@ -5574,3 +5574,149 @@ body[data-page-type="room_detail_page"] .roomCtaActions{
   }
 }
 
+/* =========================================================
+   TCFR Global Typography System v1
+   Purpose:
+   - Standardize heading weight across homepage, rooms, feature hubs, and detail pages
+   - Keep headings premium and readable without the overly heavy homepage feel
+   - Prevent lighter section/page-level heading drift as pages move into global CSS
+   ========================================================= */
+
+:root{
+  --tcfr-display-weight: 800;
+  --tcfr-heading-weight: 800;
+  --tcfr-section-weight: 780;
+  --tcfr-card-heading-weight: 760;
+  --tcfr-heading-letter-tight: -0.032em;
+  --tcfr-section-letter-tight: -0.024em;
+}
+
+/* Base headings */
+h1,
+.h1,
+.heroH1,
+.roomTitle,
+.heroTitle{
+  font-family: var(--font-head) !important;
+  font-weight: var(--tcfr-display-weight) !important;
+  letter-spacing: var(--tcfr-heading-letter-tight) !important;
+  line-height: 0.98 !important;
+}
+
+h2,
+.h2,
+.sectionTitle,
+.panelTitle,
+.bandTitle,
+.roomsPanelHeader h2,
+.roomsBand h2,
+.featurePanelHeader h2,
+.ctaBand h2{
+  font-family: var(--font-head) !important;
+  font-weight: var(--tcfr-section-weight) !important;
+  letter-spacing: var(--tcfr-section-letter-tight) !important;
+  line-height: 1.06 !important;
+}
+
+h3,
+h4,
+.cardTitle,
+.tileTitle,
+.trustTitle,
+.roomCardBody h3,
+.roomsInfoCard h3,
+.roomsGuideCard h3,
+.amenityCard h3,
+.relatedFeatureCard h3{
+  font-family: var(--font-head) !important;
+  font-weight: var(--tcfr-card-heading-weight) !important;
+  letter-spacing: -0.018em !important;
+  line-height: 1.10 !important;
+}
+
+/* Homepage typography lock */
+body[data-page-type="home_page"] .h1{
+  font-weight: var(--tcfr-display-weight) !important;
+  letter-spacing: var(--tcfr-heading-letter-tight) !important;
+  line-height: 0.98 !important;
+}
+
+body[data-page-type="home_page"] .h2,
+body[data-page-type="home_page"] .bandTitle{
+  font-weight: var(--tcfr-section-weight) !important;
+  letter-spacing: var(--tcfr-section-letter-tight) !important;
+  line-height: 1.06 !important;
+}
+
+body[data-page-type="home_page"] .tileTitle,
+body[data-page-type="home_page"] .trustTitle{
+  font-weight: var(--tcfr-card-heading-weight) !important;
+}
+
+/* Rooms hub typography lock */
+.roomsHeroCopy h1{
+  font-weight: var(--tcfr-display-weight) !important;
+  letter-spacing: var(--tcfr-heading-letter-tight) !important;
+  line-height: 0.98 !important;
+}
+
+.roomsPanelHeader h2,
+.roomsBand h2{
+  font-weight: var(--tcfr-section-weight) !important;
+  letter-spacing: var(--tcfr-section-letter-tight) !important;
+  line-height: 1.06 !important;
+}
+
+.roomCardBody h3,
+.roomsInfoCard h3,
+.roomsGuideCard h3{
+  font-weight: var(--tcfr-card-heading-weight) !important;
+}
+
+/* Feature hubs and feature detail pages */
+body[data-page-type="features_hub"] .heroH1,
+body[data-page-type="feature_detail_page"] .heroH1,
+body[data-page-type="feature_detail_page"] .h1{
+  font-weight: var(--tcfr-display-weight) !important;
+  letter-spacing: var(--tcfr-heading-letter-tight) !important;
+  line-height: 0.98 !important;
+}
+
+body[data-page-type="features_hub"] .sectionTitle,
+body[data-page-type="features_hub"] .ctaBand h2,
+body[data-page-type="feature_detail_page"] .sectionTitle,
+body[data-page-type="feature_detail_page"] .panelTitle,
+body[data-page-type="feature_detail_page"] .ctaBand h2{
+  font-weight: var(--tcfr-section-weight) !important;
+  letter-spacing: var(--tcfr-section-letter-tight) !important;
+  line-height: 1.06 !important;
+}
+
+body[data-page-type="features_hub"] .cardTitle,
+body[data-page-type="feature_detail_page"] .cardTitle,
+body[data-page-type="feature_detail_page"] .amenityCard h3,
+body[data-page-type="feature_detail_page"] .relatedFeatureCard h3{
+  font-weight: var(--tcfr-card-heading-weight) !important;
+}
+
+/* Mobile: keep the same weight, slightly loosen line-height for readability */
+@media (max-width: 640px){
+  h1,
+  .h1,
+  .heroH1,
+  .roomTitle,
+  .heroTitle,
+  body[data-page-type="home_page"] .h1,
+  .roomsHeroCopy h1{
+    line-height: 1.01 !important;
+  }
+
+  h2,
+  .h2,
+  .sectionTitle,
+  .panelTitle,
+  .bandTitle{
+    line-height: 1.08 !important;
+  }
+}
+
