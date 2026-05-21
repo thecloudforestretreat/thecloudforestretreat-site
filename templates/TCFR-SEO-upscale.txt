@@ -28,6 +28,123 @@ STRATEGIC PRIORITIES
 5. Room, lodge, and experience clarity
 6. Technical SEO QA
 7. TSV synchronization
+8. Global CSS standardization
+9. Shared component consistency
+10. Elimination of unnecessary page-level CSS
+
+GLOBAL CSS / COMPONENT CONTRACT RULE
+
+All updated pages must honor the TCFR global component system.
+
+Do not create page-specific typography, button, card, badge, kicker, or section styles unless absolutely required for layout exceptions.
+
+Normalize all pages into shared reusable component classes.
+
+Required shared global structure:
+- tcfr-page
+- tcfr-shell
+- tcfr-section
+- tcfr-section-head
+- tcfr-section-title
+- tcfr-section-intro
+- tcfr-grid
+- tcfr-card
+- tcfr-card-title
+- tcfr-card-text
+- tcfr-actions
+- tcfr-pill
+- btn
+- btn primary
+- btn secondary
+
+Required shared hero system:
+- tcfr-hero
+- tcfr-hero-media
+- tcfr-hero-image
+- tcfr-hero-copy
+- tcfr-kicker
+- tcfr-display
+- tcfr-lead
+
+GLOBAL TYPOGRAPHY STANDARD
+
+All pages must inherit typography from the global system.
+
+Do not create page-level heading font weights or font sizes.
+
+The homepage is the visual authority reference for all future pages.
+
+Standardized typography rules:
+- Hero display weight: 800
+- Hero display alignment: left
+- Hero display line-height: shared globally
+- Section title weight: 800
+- Card title weight: 800
+- Kicker alignment: left
+- Kicker color: dark green
+- Kicker transform: uppercase
+- Kicker spacing: shared globally
+- Kicker style: plain text, not bubble/pill, unless intentionally using tcfr-pill
+- No centered hero kickers unless the layout is intentionally centered
+- No white kicker text on light backgrounds
+- No page-specific hero heading scaling
+- No page-specific heading tracking
+- No page-specific serif weight overrides
+
+CRITICAL GLOBAL CSS RULE
+
+Do not continuously patch site.css with isolated page-specific overrides.
+
+Instead:
+1. Analyze the existing global system first
+2. Normalize inconsistent page HTML into shared components
+3. Remove unnecessary page-level styling
+4. Consolidate repeated patterns into reusable global classes
+5. Ensure all pages inherit the same visual language
+
+The objective is:
+ONE shared visual system
+NOT multiple page-specific systems.
+
+PAGE STANDARDIZATION RULE
+
+Before generating CSS:
+- Compare the uploaded page against existing TCFR production patterns
+- Reuse existing hero structure whenever possible
+- Reuse existing section structures whenever possible
+- Reuse existing card structures whenever possible
+
+If a visual inconsistency exists between pages:
+- Prefer updating HTML structure to honor the global system
+- Avoid introducing one-off CSS fixes
+
+CSS CONSOLIDATION RULE
+
+When updating site.css:
+- Consolidate duplicated typography rules
+- Consolidate duplicated spacing systems
+- Consolidate duplicated hero rules
+- Consolidate duplicated card rules
+- Consolidate duplicated button rules
+- Consolidate duplicated grid rules
+
+Avoid:
+- isolated per-page heading rules
+- page-specific hero font rules
+- page-specific kicker styles
+- deeply nested override selectors
+- emergency !important patches unless absolutely unavoidable
+
+MOBILE CONSISTENCY RULE
+
+Mobile layouts must inherit the same typography scale relationships as desktop.
+
+Do not:
+- arbitrarily reduce heading weights
+- introduce different mobile serif weights
+- center-align hero copy on mobile unless intentional
+- create mobile-only visual systems
+
 
 CRITICAL TSV RULE
 Never regenerate TSV rows from memory.
@@ -127,6 +244,9 @@ Only mark ready/go-live style fields as complete when:
 - EN/ES pairing is correct
 - Spanish accents are correct
 - TSV row alignment is verified
+- Global CSS consistency is verified
+- Typography consistency is verified
+- Shared component compliance is verified
 
 FINAL OUTPUT FORMAT
 Return:
