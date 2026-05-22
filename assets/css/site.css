@@ -1,7 +1,7 @@
 /* /assets/css/site.css
    The Cloud Forest Retreat
    Production global CSS system
-   Last updated: 2026-05-21 - clean rebuild, homepage approved system + rooms module
+   Last updated: 2026-05-21 - rooms hero parity with approved homepage system
 
    System rule:
    Global components control typography, surfaces, spacing, cards, buttons, and rhythm.
@@ -572,6 +572,13 @@ body[data-page-type="home_page"] .bandActions{margin-top:0;flex:0 0 auto;}
    11. Rooms module
    ========================================================= */
 
+/*
+   Rooms now uses the same approved global hero component as the homepage:
+   .wrap, .hero, .heroMedia, .heroCopy, .kicker, .h1, .sub, .heroCtas.
+   This module only preserves room-specific layout and content grids.
+   Desktop hero image height matches homepage at 620px.
+*/
+
 body[data-page-type="rooms_hub"] .roomsHero,
 body[data-page-type="room_index"] .roomsHero{
   grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
@@ -579,12 +586,12 @@ body[data-page-type="room_index"] .roomsHero{
 
 body[data-page-type="rooms_hub"] .roomsHeroMedia,
 body[data-page-type="room_index"] .roomsHeroMedia{
-  min-height:420px;
+  min-height:620px;
 }
 
 body[data-page-type="rooms_hub"] .roomsHeroMedia img,
 body[data-page-type="room_index"] .roomsHeroMedia img{
-  min-height:420px;
+  min-height:620px;
 }
 
 body[data-page-type="rooms_hub"] .roomsHeroCopy,
