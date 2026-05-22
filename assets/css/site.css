@@ -2352,3 +2352,285 @@ body[data-page-type="feature_detail_page"] .ctaBand p{
     height:23px;
   }
 }
+
+/* =========================================================
+   Rooms hero uses homepage global structure
+   Version: home-hero-rooms-1
+
+   Goal:
+   - Rooms hero uses .wrap, .hero, .heroMedia, .heroCopy, .kicker, .h1, .sub, .heroCtas.
+   - Layout remains rooms-specific through .roomsHero proportions only.
+   - Typography, color, spacing, panels, buttons, and rhythm follow homepage standards.
+   ========================================================= */
+
+body[data-page-type="room_index"] .wrap.roomsHub{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:28px var(--pad) 84px;
+}
+
+body[data-page-type="room_index"] .hero.roomsHero{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:var(--gap-lg);
+  align-items:stretch;
+  margin-top:8px;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+}
+
+body[data-page-type="room_index"] .hero.roomsHero .heroMedia{
+  position:relative;
+  min-height:420px;
+  isolation:isolate;
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  background:var(--surface-panel);
+}
+
+body[data-page-type="room_index"] .hero.roomsHero .heroMedia img{
+  width:100%;
+  height:100%;
+  min-height:420px;
+  object-fit:cover;
+  object-position:center;
+}
+
+body[data-page-type="room_index"] .hero.roomsHero .heroCopy{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:18px;
+  text-align:left;
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  background:var(--surface-panel);
+  color:var(--ink);
+}
+
+body[data-page-type="room_index"] .hero.roomsHero .kicker{
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:fit-content;
+  max-width:100%;
+  min-height:0;
+  margin:0 0 12px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  color:var(--forest);
+  font-family:var(--font-body);
+  font-size:var(--kicker-size);
+  font-weight:var(--kicker-weight);
+  letter-spacing:var(--kicker-track);
+  line-height:1.2;
+  text-align:left;
+  text-transform:uppercase;
+  text-shadow:none;
+}
+
+body[data-page-type="room_index"] .hero.roomsHero .h1{
+  max-width:10.5ch;
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--display-size);
+  font-weight:var(--display-weight);
+  letter-spacing:var(--display-track);
+  line-height:var(--display-line);
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .hero.roomsHero .sub{
+  margin:0;
+  max-width:66ch;
+  color:var(--muted-strong);
+  font-size:16px;
+  font-weight:var(--body-strong-weight);
+  line-height:1.72;
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .hero.roomsHero .heroCtas{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+}
+
+body[data-page-type="room_index"] .roomsPanel,
+body[data-page-type="room_index"] .roomsBand{
+  margin-top:22px;
+  padding:var(--panel-pad);
+  background:var(--surface-panel);
+  border:1px solid var(--line);
+  border-radius:var(--r2);
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+
+body[data-page-type="room_index"] .roomsPanelHeader{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:var(--gap);
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+body[data-page-type="room_index"] .roomsPanelHeader .h2,
+body[data-page-type="room_index"] .roomsPanelHeader h2{
+  margin:0;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--section-size);
+  font-weight:var(--section-weight);
+  letter-spacing:var(--section-track);
+  line-height:var(--section-line);
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .roomsPanelHeader p{
+  margin:0;
+  max-width:68ch;
+  color:rgba(11,26,16,.72);
+  font-size:14px;
+  font-weight:var(--body-strong-weight);
+  line-height:1.62;
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .roomsGrid,
+body[data-page-type="room_index"] .roomsInfoGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:var(--gap);
+  align-items:stretch;
+}
+
+body[data-page-type="room_index"] .roomsGuideGrid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+  align-items:stretch;
+}
+
+body[data-page-type="room_index"] .roomCardGlobal,
+body[data-page-type="room_index"] .roomsInfoCard,
+body[data-page-type="room_index"] .roomsGuideCard{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  min-width:0;
+  overflow:hidden;
+  padding:0;
+  background:var(--surface-card);
+  border:1px solid rgba(11,26,16,.10);
+  border-radius:var(--r);
+  box-shadow:var(--shadow-card);
+  color:var(--ink);
+}
+
+body[data-page-type="room_index"] .roomCardGlobal img{
+  width:100%;
+  aspect-ratio:16 / 10;
+  object-fit:cover;
+}
+
+body[data-page-type="room_index"] .roomCardBody,
+body[data-page-type="room_index"] .roomsInfoCard,
+body[data-page-type="room_index"] .roomsGuideCard{
+  padding:var(--card-pad);
+  gap:10px;
+}
+
+body[data-page-type="room_index"] .roomCardBody{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+body[data-page-type="room_index"] .roomCardBody h3,
+body[data-page-type="room_index"] .roomsInfoCard h3,
+body[data-page-type="room_index"] .roomsGuideCard h3{
+  margin:0 0 6px;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--card-title-size);
+  font-weight:var(--card-title-weight);
+  letter-spacing:var(--card-title-track);
+  line-height:var(--card-title-line);
+  text-align:left;
+}
+
+body[data-page-type="room_index"] .roomCardBody p,
+body[data-page-type="room_index"] .roomsInfoCard p,
+body[data-page-type="room_index"] .roomsGuideCard p{
+  margin:0;
+  color:var(--muted-strong);
+  font-size:14.4px;
+  font-weight:700;
+  line-height:1.65;
+}
+
+@media(max-width:1020px){
+  body[data-page-type="room_index"] .hero.roomsHero{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="room_index"] .hero.roomsHero .heroMedia,
+  body[data-page-type="room_index"] .hero.roomsHero .heroMedia img{
+    min-height:420px;
+  }
+
+  body[data-page-type="room_index"] .roomsGrid,
+  body[data-page-type="room_index"] .roomsInfoGrid{
+    grid-template-columns:1fr;
+  }
+
+  body[data-page-type="room_index"] .roomsGuideGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:640px){
+  body[data-page-type="room_index"] .wrap.roomsHub{
+    padding-top:18px;
+    padding-bottom:56px;
+  }
+
+  body[data-page-type="room_index"] .hero.roomsHero .heroMedia,
+  body[data-page-type="room_index"] .hero.roomsHero .heroMedia img{
+    min-height:320px;
+  }
+
+  body[data-page-type="room_index"] .hero.roomsHero .heroCopy,
+  body[data-page-type="room_index"] .roomsPanel{
+    padding:16px;
+  }
+
+  body[data-page-type="room_index"] .hero.roomsHero .h1{
+    max-width:11ch;
+    font-size:var(--display-size-mobile);
+  }
+
+  body[data-page-type="room_index"] .hero.roomsHero .heroCtas,
+  body[data-page-type="room_index"] .hero.roomsHero .heroCtas .btn{
+    width:100%;
+  }
+
+  body[data-page-type="room_index"] .roomsGuideGrid{
+    grid-template-columns:1fr;
+  }
+}
