@@ -2022,11 +2022,11 @@ body[data-page-type="room_index"] .roomPill{
 }
 
 /* =========================================================
-   ROOM_PAGE ROOMS-LAYOUT SUPPORT - common-areas-room-page-rooms-layout-2026-05-27
+   ROOM_PAGE ROOMS-LAYOUT SUPPORT - panoramic-suite-room-page-rooms-layout-2026-05-27
    =========================================================
-   Used by individual room detail/support pages such as Common Areas.
-   This makes room_page use the same page geometry and card system as
-   the approved rooms pages, while keeping the page type as room_page.
+   Used by individual room detail pages.
+   This makes room_page use the same geometry and card system as the approved
+   rooms pages, while keeping the page type as room_page.
 */
 
 body[data-page-type="room_page"] .roomsHub{
