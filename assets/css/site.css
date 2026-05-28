@@ -2022,11 +2022,11 @@ body[data-page-type="room_index"] .roomPill{
 }
 
 /* =========================================================
-   ROOM_PAGE ROOMS-LAYOUT SUPPORT - sunrise-room-room-page-rooms-layout-2026-05-27
+   ROOM_PAGE ROOMS-LAYOUT SUPPORT - sunrise-room-media-restored-2026-05-27
    =========================================================
-   Used by individual room detail pages.
-   This makes room_page use the same geometry and card system as the approved
-   rooms pages, while keeping the page type as room_page.
+   Global room_page support for media-enabled room detail pages.
+   Keeps room pages aligned with approved rooms layout while preserving
+   sales media such as video, gallery/carousel, and room-specific imagery.
 */
 
 body[data-page-type="room_page"] .roomsHub{
@@ -2150,16 +2150,8 @@ body[data-page-type="room_page"] .roomsInfoGrid{
   align-items:stretch;
 }
 
-body[data-page-type="room_page"] .roomsGuideGrid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:var(--gap);
-  align-items:stretch;
-}
-
 body[data-page-type="room_page"] .roomCardGlobal,
-body[data-page-type="room_page"] .roomsInfoCard,
-body[data-page-type="room_page"] .roomsGuideCard{
+body[data-page-type="room_page"] .roomsInfoCard{
   display:flex;
   flex-direction:column;
   height:100%;
@@ -2180,8 +2172,7 @@ body[data-page-type="room_page"] .roomCardGlobal img{
 }
 
 body[data-page-type="room_page"] .roomCardBody,
-body[data-page-type="room_page"] .roomsInfoCard,
-body[data-page-type="room_page"] .roomsGuideCard{
+body[data-page-type="room_page"] .roomsInfoCard{
   padding:var(--card-pad);
   gap:10px;
 }
@@ -2193,8 +2184,7 @@ body[data-page-type="room_page"] .roomCardBody{
 }
 
 body[data-page-type="room_page"] .roomCardBody h3,
-body[data-page-type="room_page"] .roomsInfoCard h3,
-body[data-page-type="room_page"] .roomsGuideCard h3{
+body[data-page-type="room_page"] .roomsInfoCard h3{
   margin:0 0 6px;
   color:var(--forest);
   font-family:var(--font-head);
@@ -2206,8 +2196,7 @@ body[data-page-type="room_page"] .roomsGuideCard h3{
 }
 
 body[data-page-type="room_page"] .roomCardBody p,
-body[data-page-type="room_page"] .roomsInfoCard p,
-body[data-page-type="room_page"] .roomsGuideCard p{
+body[data-page-type="room_page"] .roomsInfoCard p{
   margin:0;
   color:var(--muted-strong);
   font-size:14.4px;
@@ -2223,10 +2212,131 @@ body[data-page-type="room_page"] .roomPillRow{
   margin-top:auto;
 }
 
-body[data-page-type="room_page"] .roomCardCta,
-body[data-page-type="room_page"] .roomsGuideCard .linkCta{
-  margin-top:auto;
-  align-self:flex-start;
+body[data-page-type="room_page"] .roomsMediaSplit{
+  display:grid;
+  grid-template-columns:minmax(0,.72fr) minmax(280px,.28fr);
+  gap:var(--gap);
+  align-items:stretch;
+}
+
+body[data-page-type="room_page"] .roomsVideoFrame{
+  border-radius:var(--r);
+  overflow:hidden;
+  background:rgba(0,0,0,.12);
+  border:1px solid rgba(11,26,16,.10);
+  box-shadow:var(--shadow-card);
+  min-height:520px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+body[data-page-type="room_page"] .roomsVideoVertical{
+  width:min(360px,100%);
+  aspect-ratio:9/16;
+  border-radius:18px;
+  overflow:hidden;
+  background:#000;
+  position:relative;
+}
+
+body[data-page-type="room_page"] .roomsVideoVertical iframe{
+  position:absolute;
+  inset:0;
+  width:178%;
+  height:100%;
+  left:-39%;
+  border:0;
+  display:block;
+}
+
+body[data-page-type="room_page"] .roomsMediaNote{
+  padding:var(--card-pad);
+  background:var(--surface-card);
+  border:1px solid rgba(11,26,16,.10);
+  border-radius:var(--r);
+  box-shadow:var(--shadow-card);
+}
+
+body[data-page-type="room_page"] .roomsMediaNote h3{
+  margin:0 0 8px;
+  color:var(--forest);
+  font-family:var(--font-head);
+  font-size:var(--card-title-size);
+  font-weight:var(--card-title-weight);
+  letter-spacing:var(--card-title-track);
+  line-height:var(--card-title-line);
+}
+
+body[data-page-type="room_page"] .roomsMediaNote p{
+  margin:0;
+  color:var(--muted-strong);
+  font-size:14.4px;
+  font-weight:700;
+  line-height:1.65;
+}
+
+body[data-page-type="room_page"] .roomsCarousel{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--r);
+  border:1px solid rgba(11,26,16,.10);
+  background:var(--surface-card);
+  box-shadow:var(--shadow-card);
+}
+
+body[data-page-type="room_page"] .roomsCarouselTrack{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  gap:0;
+}
+
+body[data-page-type="room_page"] .roomsCarouselSlide{
+  flex:0 0 100%;
+  scroll-snap-align:start;
+  position:relative;
+  margin:0;
+  background:rgba(0,0,0,.08);
+}
+
+body[data-page-type="room_page"] .roomsCarouselSlide img{
+  width:100%;
+  aspect-ratio:16 / 10;
+  object-fit:cover;
+  display:block;
+}
+
+body[data-page-type="room_page"] .roomsCarouselCaption{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(245,245,220,.92);
+  border:1px solid rgba(13,89,37,.14);
+  color:var(--forest);
+  font-weight:900;
+  font-size:13px;
+  box-shadow:0 14px 30px rgba(0,0,0,.12);
+}
+
+body[data-page-type="room_page"] .roomsGalleryThumbs{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:var(--gap);
+  margin-top:var(--gap);
+}
+
+body[data-page-type="room_page"] .roomsGalleryThumbs img{
+  width:100%;
+  aspect-ratio:4 / 3;
+  object-fit:cover;
+  border-radius:var(--r);
+  border:1px solid rgba(11,26,16,.10);
+  box-shadow:var(--shadow-card);
 }
 
 body[data-page-type="room_page"] .roomsBand{
@@ -2246,8 +2356,12 @@ body[data-page-type="room_page"] .roomsBandActions{
   body[data-page-type="room_page"] .roomsHero,
   body[data-page-type="room_page"] .roomsGrid,
   body[data-page-type="room_page"] .roomsInfoGrid,
-  body[data-page-type="room_page"] .roomsGuideGrid{
+  body[data-page-type="room_page"] .roomsMediaSplit{
     grid-template-columns:1fr;
+  }
+
+  body[data-page-type="room_page"] .roomsGalleryThumbs{
+    grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 
@@ -2276,5 +2390,14 @@ body[data-page-type="room_page"] .roomsBandActions{
   body[data-page-type="room_page"] .roomsHeroActions,
   body[data-page-type="room_page"] .roomsHeroActions .btn{
     width:100%;
+  }
+
+  body[data-page-type="room_page"] .roomsVideoFrame{
+    min-height:auto;
+    padding:12px;
+  }
+
+  body[data-page-type="room_page"] .roomsGalleryThumbs{
+    grid-template-columns:1fr;
   }
 }
