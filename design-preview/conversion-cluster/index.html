@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conversion Cluster Design Preview | The Cloud Forest Retreat</title>
+  <meta name="description" content="Private preview of the booking and contact page design system." />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="theme-color" content="#0D5925" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+  />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/header.css?v=4" />
+  <link rel="stylesheet" href="/assets/css/global.css?v=1" />
+  <link rel="stylesheet" href="/assets/css/footer.css?v=5" />
+  <link rel="stylesheet" href="/assets/css/clusters/conversion.css?v=3" />
+
+  <script src="/assets/js/site-config.js?v=2"></script>
+  <script defer src="/assets/js/head.js?v=2"></script>
+</head>
+<body
+  data-page-type="booking_page"
+  data-page-language="en"
+  data-tcfr-cluster="conversion"
+  data-tcfr-template="premium-conversion"
+  data-design-prototype="conversion-v1"
+>
+  <div id="siteHeader" data-current-lang="en"></div>
+
+  <nav class="rawLangLinks" aria-label="Language switch">
+    <a href="/design-preview/conversion-cluster/" lang="en" hreflang="en" aria-current="page">English</a>
+    <a href="/es/reservas/" lang="es" hreflang="es">Español</a>
+  </nav>
+
+  <main class="conversionPage" aria-label="Conversion cluster design preview">
+    <div class="conversionPreview__notice">
+      <strong>Design preview</strong>
+      <span>This no-index page establishes the shared visual system for Booking and Contact.</span>
+    </div>
+
+    <nav class="conversionCrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Booking</span>
+    </nav>
+
+    <section class="conversionHero" data-analytics-section="booking_hero">
+      <div class="conversionHero__copy">
+        <p class="conversionEyebrow">Direct booking with personal support</p>
+        <h1>Plan Your Cloud Forest Stay</h1>
+        <p class="conversionHero__lead">
+          Share your preferred dates, room interests, and travel details.
+          Our team will review your request and reply with availability and clear next steps.
+        </p>
+        <ul class="conversionHero__assurances">
+          <li>No payment is collected with this request</li>
+          <li>Your information goes directly to the retreat team</li>
+          <li>Transportation and activity questions are welcome</li>
+        </ul>
+      </div>
+      <div class="conversionHero__visual">
+        <img
+          src="/assets/images/pages/home/tcfr_images_home_hero-01.jpg"
+          alt="The Cloud Forest Retreat surrounded by green Andean mountains"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="conversionHero__caption">
+          <strong>A private mountainside retreat near Quito</strong>
+          <span>Comfortable rooms, broad views, and direct help planning your arrival.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="conversionSectionHeading" data-analytics-section="booking_introduction">
+      <p class="conversionEyebrow conversionEyebrow--dark">Check availability</p>
+      <h2>Tell us what would make the stay work for you.</h2>
+      <p>
+        This direct request gives the team enough context to confirm dates,
+        recommend a room, and answer practical questions in one reply.
+      </p>
+    </section>
+
+    <section class="conversionWorkspace" data-analytics-section="booking_form">
+      <article class="conversionFormCard">
+        <p class="conversionEyebrow conversionEyebrow--dark">Your stay details</p>
+        <h2>Request availability</h2>
+        <p>Fields marked with an asterisk are required. Submitting the form does not create a charge or confirmed reservation.</p>
+
+        <form id="tcfrBookingFormPreview" novalidate>
+          <div class="conversionFields">
+            <div class="conversionField">
+              <label for="preview-first-name">First name <span>*</span></label>
+              <input id="preview-first-name" name="first_name" type="text" autocomplete="given-name" placeholder="First name" />
+            </div>
+            <div class="conversionField">
+              <label for="preview-last-name">Last name <span>*</span></label>
+              <input id="preview-last-name" name="last_name" type="text" autocomplete="family-name" placeholder="Last name" />
+            </div>
+            <div class="conversionField">
+              <label for="preview-email">Email <span>*</span></label>
+              <input id="preview-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+            </div>
+            <div class="conversionField">
+              <label for="preview-phone">Phone or WhatsApp</label>
+              <input id="preview-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 305 000 0000" />
+            </div>
+            <div class="conversionField">
+              <label for="preview-arrival">Arrival date <span>*</span></label>
+              <input id="preview-arrival" name="arrival_date" type="date" />
+            </div>
+            <div class="conversionField">
+              <label for="preview-departure">Departure date</label>
+              <input id="preview-departure" name="departure_date" type="date" />
+            </div>
+            <div class="conversionField">
+              <label for="preview-guests">Guests <span>*</span></label>
+              <select id="preview-guests" name="guests">
+                <option value="">Choose</option>
+                <option>1 guest</option>
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+              </select>
+            </div>
+            <div class="conversionField">
+              <label for="preview-room">Room preference</label>
+              <select id="preview-room" name="room">
+                <option value="">Recommend a room</option>
+                <option>Panoramic Suite</option>
+                <option>Sunrise Room</option>
+                <option>Sunset Room</option>
+              </select>
+            </div>
+            <div class="conversionField conversionField--wide">
+              <label for="preview-message">Questions or trip details</label>
+              <textarea
+                id="preview-message"
+                name="message"
+                placeholder="Tell us about transportation, activities, timing, or anything else that would help us plan your stay."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="conversionFormFooter">
+            <div data-tcfr-turnstile aria-label="Secure verification"></div>
+            <button class="conversionSubmit" type="button">Send availability request</button>
+          </div>
+        </form>
+      </article>
+
+      <aside class="conversionAside" aria-label="Booking summary">
+        <img
+          class="conversionAside__image"
+          src="/assets/images/pages/rooms/tcfr_rooms_ps_hero_01.jpg"
+          alt="Panoramic Suite at The Cloud Forest Retreat"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="conversionAside__content">
+          <p class="conversionEyebrow conversionEyebrow--dark">Before you submit</p>
+          <h2>A clear path from request to arrival.</h2>
+          <p>We will use the details you share to respond with the most useful options.</p>
+          <ul class="conversionSummary">
+            <li>
+              <strong>Room options</strong>
+              <span>Compare three rooms and shared areas before choosing.</span>
+            </li>
+            <li>
+              <strong>Travel planning</strong>
+              <span>Ask about transportation from Quito and arrival timing.</span>
+            </li>
+            <li>
+              <strong>Direct support</strong>
+              <span>Continue by email or WhatsApp once availability is reviewed.</span>
+            </li>
+          </ul>
+          <a class="conversionAside__link" href="/rooms/">View the rooms →</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="conversionSteps" data-analytics-section="booking_process">
+      <p class="conversionEyebrow">What happens next</p>
+      <h2>From request to confirmed stay</h2>
+      <p>The process stays personal, clear, and easy to follow.</p>
+      <div class="conversionSteps__grid">
+        <article class="conversionStep">
+          <span>01</span>
+          <h3>Share your plans</h3>
+          <p>Send your preferred dates, number of guests, and room interests.</p>
+        </article>
+        <article class="conversionStep">
+          <span>02</span>
+          <h3>Review the options</h3>
+          <p>We reply with availability, helpful recommendations, and next steps.</p>
+        </article>
+        <article class="conversionStep">
+          <span>03</span>
+          <h3>Confirm your stay</h3>
+          <p>Complete the agreed booking method and receive arrival information.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="conversionFaq" data-analytics-section="faq">
+      <div>
+        <p class="conversionEyebrow conversionEyebrow--dark">Questions before booking</p>
+        <h2>Helpful booking details</h2>
+        <p>Short answers for the decisions travelers usually make before sending a request.</p>
+      </div>
+      <div class="conversionFaq__list">
+        <details>
+          <summary>Does this form confirm my reservation?</summary>
+          <p>No. It begins a direct availability conversation. Your reservation is confirmed only after the team verifies the details and you complete the agreed booking step.</p>
+        </details>
+        <details>
+          <summary>Can I ask about transportation from Quito?</summary>
+          <p>Yes. Include your starting point, approximate arrival time, and number of travelers so the team can discuss practical options.</p>
+        </details>
+        <details>
+          <summary>What if I am unsure which room to choose?</summary>
+          <p>Select “Recommend a room” and share what matters most to you. The team can explain the differences before you decide.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="/assets/js/attribution.js?v=1"></script>
+  <script src="/assets/js/site.js?v=6"></script>
+</body>
+</html>

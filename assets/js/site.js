@@ -49,6 +49,24 @@
   function localizeSharedContent() {
     var lang = getPageLanguage() === "es" ? "es" : "en";
 
+    function configValue(path) {
+      var value = TCFR_CONFIG;
+      String(path || "").split(".").forEach(function (part) {
+        value = value && value[part];
+      });
+      return typeof value === "string" ? value : "";
+    }
+
+    qsa(document, "[data-tcfr-config-href]").forEach(function (link) {
+      var href = configValue(link.getAttribute("data-tcfr-config-href"));
+      if (href) link.setAttribute("href", href);
+    });
+
+    qsa(document, "[data-tcfr-config-src]").forEach(function (media) {
+      var src = configValue(media.getAttribute("data-tcfr-config-src"));
+      if (src) media.setAttribute("src", src);
+    });
+
     qsa(document, "[data-route-en][data-route-es]").forEach(function (link) {
       link.setAttribute("href", link.getAttribute("data-route-" + lang) || link.getAttribute("href"));
       var label = link.getAttribute("data-label-" + lang);
@@ -83,6 +101,40 @@
     qsa(document, "[data-current-year]").forEach(function (node) {
       node.textContent = String(new Date().getFullYear());
     });
+  }
+
+  function initTurnstile() {
+    var nodes = qsa(document, "[data-tcfr-turnstile]");
+    if (!nodes.length) return;
+
+    if (document.body && document.body.hasAttribute("data-design-prototype")) {
+      nodes.forEach(function (node) {
+        node.classList.add("tcfr-turnstilePreview");
+      });
+      return;
+    }
+
+    var forms = TCFR_CONFIG.forms || {};
+    var turnstileConfig = forms.turnstile || {};
+    if (turnstileConfig.enabled === false) return;
+
+    var siteKey = String(turnstileConfig.siteKey || "").trim();
+    var scriptUrl = String(turnstileConfig.scriptUrl || "https://challenges.cloudflare.com/turnstile/v0/api.js").trim();
+    if (!siteKey || !scriptUrl) return;
+
+    nodes.forEach(function (node) {
+      node.classList.add("cf-turnstile");
+      node.setAttribute("data-sitekey", siteKey);
+    });
+
+    if (!document.getElementById("tcfr-turnstile-loader")) {
+      var script = document.createElement("script");
+      script.id = "tcfr-turnstile-loader";
+      script.async = true;
+      script.defer = true;
+      script.src = scriptUrl;
+      document.head.appendChild(script);
+    }
   }
 
   function cleanText(text) {
@@ -757,6 +809,7 @@
     );
 
     localizeSharedContent();
+    initTurnstile();
 
     // Initialize behaviors AFTER injection
     initHeaderFromMount(headerMount);

@@ -38,6 +38,37 @@
     gtmContainerId: "GTM-KJ67MZ2C",
     attributionStorageDays: 90,
     analyticsDebug: false,
+    forms: {
+      bookingEndpoint: "/api/booking",
+      contactEndpoint: "/api/contact",
+      turnstile: {
+        enabled: true,
+        siteKey: "0x4AAAAAACauNy6DfCUnIJhS",
+        scriptUrl: "https://challenges.cloudflare.com/turnstile/v0/api.js"
+      }
+    },
+    bookingProviders: {
+      property: {
+        airbnb: "",
+        booking: "",
+        expedia: "https://www.expedia.com/Quito-Hotels-Stay-In-A-UNESCO-Biosphere-Reserve-Nature.h114399386.Hotel-Information"
+      },
+      panoramicSuite: {
+        airbnb: "",
+        booking: "",
+        expedia: "https://www.expedia.com/Quito-Hotels-Luxurious-Panoramic-Suite-At-The-Cloud-Forest-Retreat-W-Views-Modern-Comforts.h114674195.Hotel-Information"
+      },
+      sunriseRoom: {
+        airbnb: "",
+        booking: "",
+        expedia: "https://www.expedia.com/Quito-Hotels-Sunrise-Room-At-The-Cloud-Forest-Retreat.h114675896.Hotel-Information"
+      },
+      sunsetRoom: {
+        airbnb: "",
+        booking: "",
+        expedia: "https://www.expedia.com/Quito-Hotels-Sunset-Room-At-The-Cloud-Forest-Retreat.h114674265.Hotel-Information"
+      }
+    },
     social: {
       instagram: "https://www.instagram.com/thecloudforestretreat/",
       tiktok: "https://www.tiktok.com/@thecloudforestretreat",
