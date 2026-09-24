@@ -1,0 +1,2 @@
+body[data-page-type="home_page"] :where(.heroMedia,.hero){min-height:clamp(560px,78vh,820px)}
+body[data-page-type="home_page"] :where(.heroCard,.heroInner){max-width:720px}

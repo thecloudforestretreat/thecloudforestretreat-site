@@ -1,0 +1,2 @@
+body[data-tcfr-cluster="features"] :where(.featureGrid,.linkGrid,.cardGrid){align-items:stretch}
+body[data-tcfr-cluster="features"] :where(.featureCard,.linkCard){height:100%}

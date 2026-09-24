@@ -44,7 +44,7 @@
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <link href="/assets/css/header.css?v=3" rel="stylesheet"/>
 <!-- Head-only JS -->
-<script defer="" src="/assets/js/head.js?v=1"></script>
+
 <style>
     :root{
       --room-max: 1180px;
@@ -816,8 +816,15 @@
       ]
     }
   ]
-}</script><style>.rawLangLinks{display:none;}html.no-js .rawLangLinks{display:flex;}</style></head>
-<body data-page-language="en" data-page-type="room_detail_page">
+}</script><style>.rawLangLinks{display:none;}html.no-js .rawLangLinks{display:flex;}</style>
+<script src="/assets/js/site-config.js"></script>
+
+<link href="/assets/css/global.css?v=1" rel="stylesheet"/>
+<link href="/assets/css/footer.css?v=5" rel="stylesheet"/>
+<link href="/assets/css/clusters/rooms.css?v=2" rel="stylesheet"/>
+<script defer src="/assets/js/head.js?v=2"></script>
+</head>
+<body data-page-language="en" data-page-type="room_detail_page" data-tcfr-cluster="rooms">
 <div data-current-lang="en" id="siteHeader"></div>
 <nav aria-label="Language switch" class="rawLangLinks">
 <a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="room_detail_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/rooms/panoramic-suite/" hreflang="en" lang="en">English</a>
@@ -1097,7 +1104,7 @@
 </div>
 <div class="relatedTileMeta"><span>Read guide</span></div>
 </a>
-<a class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Cloud Forest Weekend Escape" data-analytics-location="related_guides" data-analytics-page-type="room_detail_page" href="/cloud-forest-weekend-escape/">
+<a class="relatedTile" data-analytics-event="related_content_click" data-analytics-label="Cloud Forest Weekend Escape" data-analytics-location="related_guides" data-analytics-page-type="room_detail_page" href="/weekend-getaway-from-quito/">
 <div>
 <div class="tag">Weekend escape</div>
 <h3 class="relatedTileTitle">Cloud Forest Weekend Escape</h3>
@@ -1109,9 +1116,37 @@
 </div>
 </section>
 </main>
+
+
+
+
+
+
+
+
+<!-- TCFR_ARCHITECTURE_START -->
+<section class="tcfr-related" aria-labelledby="tcfr-related-title" data-analytics-section="related_content">
+  <p class="tcfr-related__eyebrow">Continue exploring</p>
+  <h2 class="tcfr-related__title" id="tcfr-related-title">Plan your cloud forest stay</h2>
+  <div class="tcfr-related__grid">
+      <a class="tcfr-related__link" href="/rooms/sunrise-room/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Sunrise Room</a>
+      <a class="tcfr-related__link" href="/rooms/sunset-room/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Sunset Room</a>
+      <a class="tcfr-related__link" href="/rooms/common-areas/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Common Areas</a>
+      <a class="tcfr-related__link" href="/rooms/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Rooms</a>
+      <a class="tcfr-related__link" href="/cloud-forest-lodge-near-quito/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Cloud Forest Lodge Near Quito</a>
+      <a class="tcfr-related__link" href="/booking/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Booking</a>
+      <a class="tcfr-related__link" href="/about/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">About The Cloud Forest Retreat</a>
+      <a class="tcfr-related__link" href="/contact/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Contact</a>
+  </div>
+  <div class="tcfr-related__cta">
+    <a class="btn primary" href="/booking/" data-analytics-event="booking_cta_click" data-analytics-location="related_content">Check availability</a>
+    <a class="btn secondary" href="/contact/" data-analytics-event="contact_cta_click" data-analytics-location="related_content">Ask a question</a>
+  </div>
+</section>
+<!-- TCFR_ARCHITECTURE_END -->
 <div id="siteFooter"></div>
 <!-- TCFR global behavior: inject header/footer, GA, nav -->
-<script src="/assets/js/site.js?v=3"></script>
+<script src="/assets/js/attribution.js?v=1"></script><script src="/assets/js/site.js?v=3"></script>
 <script>
     (function(){
       "use strict";

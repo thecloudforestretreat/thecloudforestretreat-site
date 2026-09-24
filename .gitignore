@@ -1,0 +1,8 @@
+# Local audit sources and generated deliverables
+audit_inputs/
+outputs/
+scripts/audit_tcfr_architecture.mjs
+scripts/build_enriched_roadmap.mjs
+
+# macOS
+.DS_Store

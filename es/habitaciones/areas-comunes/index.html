@@ -42,7 +42,7 @@
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <link href="/assets/css/header.css?v=3" rel="stylesheet"/>
 <!-- Head-only JS -->
-<script defer="" src="/assets/js/head.js?v=1"></script>
+
 <!-- Structured data: WebPage + Breadcrumbs -->
 <style>
     :root{
@@ -640,7 +640,7 @@
       .bathShot{ min-height: 220px; }
     }
   </style>
-<meta content="es_EC" property="og:locale"/><link href="/assets/css/footer.css?v=3" rel="stylesheet"/><style>
+<meta content="es_EC" property="og:locale"/><style>
 .rawLangLinks{
   position:absolute !important;
   width:1px !important;
@@ -702,8 +702,15 @@
       ]
     }
   ]
-}</script></head>
-<body data-page-language="es" data-page-type="room_support_page">
+}</script>
+<script src="/assets/js/site-config.js"></script>
+
+<link href="/assets/css/global.css?v=1" rel="stylesheet"/>
+<link href="/assets/css/footer.css?v=5" rel="stylesheet"/>
+<link href="/assets/css/clusters/rooms.css?v=2" rel="stylesheet"/>
+<script defer src="/assets/js/head.js?v=2"></script>
+</head>
+<body data-page-language="es" data-page-type="room_support_page" data-tcfr-cluster="rooms">
 <div data-current-lang="es" id="siteHeader"></div><nav aria-label="Selector de idioma" class="rawLangLinks"><a data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="room_support_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/rooms/common-areas/" hreflang="en" lang="en">English</a><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="room_support_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/habitaciones/areas-comunes/" hreflang="es" lang="es">Español</a></nav>
 <main aria-label="Página de Áreas comunes" class="wrap">
 <section aria-label="Navegación de Áreas comunes y acciones de reserva" class="topBand" data-analytics-section="navegacion_de_areas_comunes_y_acciones_de_reserva">
@@ -869,7 +876,7 @@
 </div>
 </aside>
 </section>
- Guest bathroom (common áreas) 
+ Guest bathroom (common áreas)
 <section aria-label="Sección de baño de visitas" class="gridFull" data-analytics-section="seccion_de_banio_de_visitas">
 <article aria-label="Tarjeta de baño de visitas" class="card" data-analytics-section="tarjeta_de_banio_de_visitas">
 <div class="cardHead">
@@ -918,8 +925,36 @@
 </div>
 </section>
 </main>
+
+
+
+
+
+
+
+
+<!-- TCFR_ARCHITECTURE_START -->
+<section class="tcfr-related" aria-labelledby="tcfr-related-title" data-analytics-section="related_content">
+  <p class="tcfr-related__eyebrow">Sigue explorando</p>
+  <h2 class="tcfr-related__title" id="tcfr-related-title">Planifica tu estadía en el bosque nublado</h2>
+  <div class="tcfr-related__grid">
+      <a class="tcfr-related__link" href="/es/habitaciones/suite-panoramica/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Suite panorámica</a>
+      <a class="tcfr-related__link" href="/es/habitaciones/habitacion-amanecer/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Habitación Amanecer</a>
+      <a class="tcfr-related__link" href="/es/habitaciones/habitacion-atardecer/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Habitación Atardecer</a>
+      <a class="tcfr-related__link" href="/es/habitaciones/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Habitaciones</a>
+      <a class="tcfr-related__link" href="/es/lodge-bosque-nublado-cerca-de-quito/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Lodge de bosque nublado cerca de Quito</a>
+      <a class="tcfr-related__link" href="/es/reservas/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Reservas</a>
+      <a class="tcfr-related__link" href="/es/sobre-nosotros/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Sobre nosotros</a>
+      <a class="tcfr-related__link" href="/es/contacto/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Contacto</a>
+  </div>
+  <div class="tcfr-related__cta">
+    <a class="btn primary" href="/es/reservas/" data-analytics-event="booking_cta_click" data-analytics-location="related_content">Consultar disponibilidad</a>
+    <a class="btn secondary" href="/es/contacto/" data-analytics-event="contact_cta_click" data-analytics-location="related_content">Hacer una pregunta</a>
+  </div>
+</section>
+<!-- TCFR_ARCHITECTURE_END -->
 <div id="siteFooter"></div>
-<script src="/assets/js/site.js"></script>
+<script src="/assets/js/attribution.js?v=1"></script><script src="/assets/js/site.js"></script>
 <script>
     (function(){
       "use strict";

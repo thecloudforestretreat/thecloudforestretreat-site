@@ -1,0 +1,2 @@
+body[data-tcfr-cluster="rooms"] :where(.roomGrid,.roomFeatureGrid,.roomCompareGrid){align-items:stretch}
+body[data-tcfr-cluster="rooms"] :where(.roomCard,.roomFeatureCard){height:100%}

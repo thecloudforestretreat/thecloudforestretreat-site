@@ -31,7 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/header.css" />
-  <script src="/assets/js/head.js" defer></script>
+
   <style>
     :root{
       --max: 1120px;
@@ -404,9 +404,14 @@ white-space:nowrap !important;
 border:0 !important;
 }
 </style>
+<script src="/assets/js/site-config.js"></script>
 
+<link href="/assets/css/global.css?v=1" rel="stylesheet"/>
+<link href="/assets/css/footer.css?v=5" rel="stylesheet"/>
+<link href="/assets/css/clusters/legal.css?v=2" rel="stylesheet"/>
+<script defer src="/assets/js/head.js?v=2"></script>
 </head>
-<body data-page-language="en" data-page-type="legal_page">
+<body data-page-language="en" data-page-type="legal_page" data-tcfr-cluster="legal">
   <div id="siteHeader" data-current-lang="en"></div>
 <nav class="rawLangLinks" aria-label="Language switch">
   <a href="https://thecloudforestretreat.com/privacy-policy/" lang="en" hreflang="en" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="legal_page" data-analytics-target-language="en">English</a>
@@ -442,11 +447,11 @@ border:0 !important;
 <section class="contentGrid" aria-label="Privacy Policy content">
   <article class="card contentPad" aria-label="Policy text">
     <h2 class="h2">Privacy Policy for The Cloud Forest Retreat (TCFR)</h2>
-    <p class="sub">Effective Date: 07/02/2025</p>
+    <p class="sub">Last updated: September 23, 2026</p>
 
     <div class="section" aria-label="1. Introduction">
       <p class="p">
-        Welcome to The Cloud Forest Retreat (TCFR). This Privacy Policy explains how we collect, use, and share your information when you use our Instagram automation app that assists with posting images, reels, and content to your Instagram account via the Meta Graph API.
+        Welcome to The Cloud Forest Retreat (TCFR). This Privacy Policy explains how we collect, use, and protect information when you visit our website, contact us, request a booking, or use our Instagram publishing tools.
       </p>
       <p class="p">
         By using our service, you agree to the terms of this Privacy Policy.
@@ -457,6 +462,9 @@ border:0 !important;
       <h3 class="h2" style="font-size:20px;">2. Information We Collect</h3>
       <p class="p">We collect the following types of information when you use our app:</p>
       <ul class="ruleList">
+        <li><strong>Website and device data:</strong> Pages viewed, approximate location derived from IP address, browser and device type, referring page, and interactions such as link clicks, scroll depth, and form starts or completions.</li>
+        <li><strong>Campaign attribution:</strong> UTM campaign parameters, referring domain, landing page, and advertising click identifiers such as GCLID or FBCLID when they are present in the URL.</li>
+        <li><strong>Contact and booking information:</strong> Information you voluntarily submit, such as your name, email address, phone number, travel dates, group details, and message.</li>
         <li><strong>Instagram Account Information:</strong> Your Instagram Business or Creator account ID, username, and related metadata accessed via Meta’s Graph API.</li>
         <li><strong>Content Metadata:</strong> Information about images or videos you publish through our tool (for example media ID, captions, creation status).</li>
         <li><strong>Basic Profile Info:</strong> Public information such as profile picture and display name.</li>
@@ -467,6 +475,9 @@ border:0 !important;
       <h3 class="h2" style="font-size:20px;">3. How We Use Your Information</h3>
       <p class="p">We use the collected information to:</p>
       <ul class="ruleList">
+        <li>Operate, secure, measure, and improve the website</li>
+        <li>Respond to inquiries and process booking requests</li>
+        <li>Understand which campaigns and referring sites lead to inquiries or bookings</li>
         <li>Allow automated scheduling and publishing of Instagram posts</li>
         <li>Check the status of media uploads and publishing</li>
         <li>Improve our services and provide support</li>
@@ -479,21 +490,24 @@ border:0 !important;
     <div class="section" aria-label="4. Data Sharing and Disclosure">
       <h3 class="h2" style="font-size:20px;">4. Data Sharing and Disclosure</h3>
       <p class="p">
-        Your data is only shared with Meta Platforms, Inc. (Facebook/Instagram) for publishing and verifying Instagram content. We do not disclose your information to unauthorized third parties.
+        We use service providers only as needed to operate the website and our communications. These may include Google Analytics and Google Tag Manager for measurement, Cloudflare for hosting and security, Google services for form processing, and Meta Platforms, Inc. for Instagram publishing. We do not sell personal information or disclose it to unauthorized third parties.
       </p>
     </div>
 
     <div class="section" aria-label="5. Data Retention">
       <h3 class="h2" style="font-size:20px;">5. Data Retention</h3>
       <p class="p">
-        We store content IDs and publishing logs only for the purpose of tracking post status and debugging errors. You can request deletion at any time by contacting us at the email listed below.
+        Campaign attribution may be stored in your browser's local storage for up to 90 days. Analytics retention is controlled in our Google Analytics settings. Contact and booking information is kept only as long as reasonably needed to respond, provide services, meet legal obligations, and maintain business records. Content IDs and publishing logs are retained only to track publishing status and diagnose errors. You may request deletion by contacting us below.
       </p>
     </div>
 
     <div class="section" aria-label="6. Third-Party APIs">
       <h3 class="h2" style="font-size:20px;">6. Third-Party APIs</h3>
       <p class="p">
-        This service uses the Meta Graph API. You can read more about Meta’s data practices in Meta’s Data Policy.
+        This website uses Google Analytics 4 and Google Tag Manager. Google may process analytics information under its own privacy terms. Our Instagram publishing service also uses the Meta Graph API. Third-party services may set or read cookies or similar browser storage according to their policies.
+      </p>
+      <p class="p">
+        You can limit measurement by blocking cookies or scripts in your browser, using a supported analytics opt-out tool, or clearing cookies and local storage. Some essential site functions may still use limited storage for security or operation.
       </p>
     </div>
 
@@ -504,6 +518,7 @@ border:0 !important;
         <li>Request to view or delete your data</li>
         <li>Disconnect your Instagram account at any time</li>
         <li>Revoke TCFR’s access via your Facebook account settings</li>
+        <li>Ask questions about, correct, or request deletion of personal information you submitted to us</li>
       </ul>
     </div>
 
@@ -562,7 +577,32 @@ border:0 !important;
   </div>
 </section>
   </main>
-  <div id="siteFooter"></div>
-  <script src="/assets/js/site.js?v=3"></script>
+
+
+
+
+
+
+
+
+<!-- TCFR_ARCHITECTURE_START -->
+<section class="tcfr-related" aria-labelledby="tcfr-related-title" data-analytics-section="related_content">
+  <p class="tcfr-related__eyebrow">Continue exploring</p>
+  <h2 class="tcfr-related__title" id="tcfr-related-title">Plan your cloud forest stay</h2>
+  <div class="tcfr-related__grid">
+      <a class="tcfr-related__link" href="/terms-of-service/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Terms of Service</a>
+      <a class="tcfr-related__link" href="/cloud-forest-lodge-near-quito/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Cloud Forest Lodge Near Quito</a>
+      <a class="tcfr-related__link" href="/booking/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Booking</a>
+      <a class="tcfr-related__link" href="/about/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">About The Cloud Forest Retreat</a>
+      <a class="tcfr-related__link" href="/contact/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Contact</a>
+  </div>
+  <div class="tcfr-related__cta">
+    <a class="btn primary" href="/booking/" data-analytics-event="booking_cta_click" data-analytics-location="related_content">Check availability</a>
+    <a class="btn secondary" href="/contact/" data-analytics-event="contact_cta_click" data-analytics-location="related_content">Ask a question</a>
+  </div>
+</section>
+<!-- TCFR_ARCHITECTURE_END -->
+<div id="siteFooter"></div>
+  <script src="/assets/js/attribution.js?v=1"></script><script src="/assets/js/site.js?v=3"></script>
 </body>
 </html>

@@ -1,0 +1,2 @@
+body[data-tcfr-cluster="nature-birding"] :where(.heroMedia img,.hero img){filter:saturate(1.05) contrast(1.02)}
+body[data-tcfr-cluster="nature-birding"] :where(.linkGrid,.featureGrid,.cardGrid){align-items:stretch}

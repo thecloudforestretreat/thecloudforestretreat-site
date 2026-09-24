@@ -1,0 +1,2 @@
+body[data-tcfr-cluster="editorial"] main :where(p,li){max-width:72ch}
+body[data-tcfr-cluster="editorial"] main :where(h2,h3){scroll-margin-top:92px}

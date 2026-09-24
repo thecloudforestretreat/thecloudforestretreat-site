@@ -34,7 +34,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <link href="/assets/css/header.css" rel="stylesheet"/>
-<script defer="" src="/assets/js/head.js"></script>
+
 <style>
     :root{
       --max: 1120px;
@@ -714,8 +714,14 @@
     }
   ]
 }</script>
-<link href="/assets/css/footer.css" rel="stylesheet"/></head>
-<body data-page-language="en" data-page-type="booking_page">
+<script src="/assets/js/site-config.js"></script>
+
+<link href="/assets/css/global.css?v=1" rel="stylesheet"/>
+<link href="/assets/css/footer.css?v=5" rel="stylesheet"/>
+<link href="/assets/css/clusters/conversion.css?v=2" rel="stylesheet"/>
+<script defer src="/assets/js/head.js?v=2"></script>
+</head>
+<body data-page-language="en" data-page-type="booking_page" data-tcfr-cluster="conversion">
 <div data-current-lang="en" id="siteHeader"></div><nav aria-label="Language switch" class="rawLangLinks"><a aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="booking_page" data-analytics-target-language="en" href="https://thecloudforestretreat.com/booking/" hreflang="en" lang="en">English</a><a data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="booking_page" data-analytics-target-language="es" href="https://thecloudforestretreat.com/es/reservas/" hreflang="es" lang="es">Español</a></nav>
 <main aria-label="Booking page" class="wrap">
 <section aria-label="Booking hero" class="hero" data-analytics-section="booking_hero">
@@ -770,7 +776,7 @@
             On these sites we list the entire house and each room separately, so you can book the stay type that matches your trip.
           </p>
 </div>
-<form action="javascript:void(0);" aria-label="Booking form" data-analytics-event="booking_form_start" data-analytics-form="tcfrBookingForm" data-analytics-page-type="booking_page" id="tcfrBookingForm" method="post" onsubmit="return false;">
+<form action="javascript:void(0);" aria-label="Booking form" data-analytics-event="booking_form_start" data-analytics-form="tcfrBookingForm" data-analytics-page-type="booking_page" id="tcfrBookingForm" method="post" onsubmit="return false;" data-attribution-ready="true"><input type="hidden" name="attribution_first_source" value=""/><input type="hidden" name="attribution_first_medium" value=""/><input type="hidden" name="attribution_first_campaign" value=""/><input type="hidden" name="attribution_first_landing_page" value=""/><input type="hidden" name="attribution_last_source" value=""/><input type="hidden" name="attribution_last_medium" value=""/><input type="hidden" name="attribution_last_campaign" value=""/><input type="hidden" name="attribution_last_landing_page" value=""/><input type="hidden" name="attribution_click_id" value=""/>
 <input id="source_page" name="source_page" type="hidden" value=""/>
 <input id="user_agent" name="user_agent" type="hidden" value=""/>
 <input id="dates_of_visit" name="dates_of_visit" type="hidden" value=""/>
@@ -923,6 +929,29 @@
 </aside>
 </section>
 </main>
+
+
+
+
+
+
+
+
+<!-- TCFR_ARCHITECTURE_START -->
+<section class="tcfr-related" aria-labelledby="tcfr-related-title" data-analytics-section="related_content">
+  <p class="tcfr-related__eyebrow">Continue exploring</p>
+  <h2 class="tcfr-related__title" id="tcfr-related-title">Plan your cloud forest stay</h2>
+  <div class="tcfr-related__grid">
+      <a class="tcfr-related__link" href="/contact/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Contact</a>
+      <a class="tcfr-related__link" href="/cloud-forest-lodge-near-quito/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Cloud Forest Lodge Near Quito</a>
+      <a class="tcfr-related__link" href="/about/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">About The Cloud Forest Retreat</a>
+  </div>
+  <div class="tcfr-related__cta">
+    <a class="btn primary" href="/booking/" data-analytics-event="booking_cta_click" data-analytics-location="related_content">Check availability</a>
+    <a class="btn secondary" href="/contact/" data-analytics-event="contact_cta_click" data-analytics-location="related_content">Ask a question</a>
+  </div>
+</section>
+<!-- TCFR_ARCHITECTURE_END -->
 <div id="siteFooter"></div>
 <script>
     (function(){
@@ -1050,7 +1079,7 @@
 
       var form = document.getElementById("tcfrBookingForm");
       var btn = document.getElementById("tcfrSubmitBtn");
-      
+
       form.addEventListener("submit", function(e){ e.preventDefault(); submitBooking(); });
 var statusCard = document.getElementById("tcfrStatusCard");
 
@@ -1093,12 +1122,14 @@ var statusCard = document.getElementById("tcfrStatusCard");
         statusCard.classList.add("show");
         statusTitle.textContent = "Your request has been sent.";
         statusText.textContent = "We will email you a confirmation shortly.";
+        if (typeof window.gtag === "function") window.gtag("event", "form_submit_success", { form_name: "booking_form", page_language: "en" });
       }
 
       function showError(msg) {
         statusCard.classList.add("show", "error");
         statusTitle.textContent = "Something went wrong.";
         statusText.textContent = msg || "Please try again in a moment.";
+        if (typeof window.gtag === "function") window.gtag("event", "form_submit_error", { form_name: "booking_form", page_language: "en", error_message: msg || "unknown" });
       }
 
       async function submitBooking(){
@@ -1231,5 +1262,5 @@ var statusCard = document.getElementById("tcfrStatusCard");
     initDateGuards();
   }
 })();
-</script><script src="/assets/js/site.js"></script></body>
+</script><script src="/assets/js/attribution.js?v=1"></script><script src="/assets/js/site.js"></script></body>
 </html>

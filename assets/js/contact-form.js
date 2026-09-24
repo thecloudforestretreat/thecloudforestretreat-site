@@ -212,6 +212,12 @@
           lang: fd.get("lang") || lang
         };
 
+        [
+          "attribution_first_source", "attribution_first_medium", "attribution_first_campaign",
+          "attribution_first_landing_page", "attribution_last_source", "attribution_last_medium",
+          "attribution_last_campaign", "attribution_last_landing_page", "attribution_click_id"
+        ].forEach(function(name){ payload[name] = fd.get(name) || ""; });
+
         var res = await fetch("/api/contact", {
           method: "POST",
           credentials: "same-origin",

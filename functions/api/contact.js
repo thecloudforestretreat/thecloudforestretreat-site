@@ -107,6 +107,12 @@ export async function onRequestPost(context) {
     body.set("user_agent", user_agent);
     body.set("ip-best-effort", ip_best_effort);
 
+    [
+      "attribution_first_source", "attribution_first_medium", "attribution_first_campaign",
+      "attribution_first_landing_page", "attribution_last_source", "attribution_last_medium",
+      "attribution_last_campaign", "attribution_last_landing_page", "attribution_click_id"
+    ].forEach((field) => body.set(field, String(data[field] || "").slice(0, 500)));
+
     // Optional language hint if you ever pass it from /es/
     if (data.lang) body.set("lang", String(data.lang));
 

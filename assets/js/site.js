@@ -14,7 +14,7 @@
 (function () {
   "use strict";
 
-  var GA_ID = "G-D3W4SP5MGX";
+  var TCFR_CONFIG = window.TCFR_CONFIG || {};
 
   // Prevent double-running (can happen if the script is included twice)
   if (window.__TCFR_SITE_JS_BOOTED__) return;
@@ -32,36 +32,6 @@
   /* =========================
      GA4
      ========================= */
-  function initGA4() {
-    if (window.__TCFR_GA4_LOADED__) return;
-    window.__TCFR_GA4_LOADED__ = true;
-
-    window.dataLayer = window.dataLayer || [];
-    window.gtag =
-      window.gtag ||
-      function () {
-        window.dataLayer.push(arguments);
-      };
-
-    var hasGtag = document.querySelector(
-      'script[src^="https://www.googletagmanager.com/gtag/js?id="]'
-    );
-    if (!hasGtag) {
-      var s = document.createElement("script");
-      s.async = true;
-      s.src =
-        "https://www.googletagmanager.com/gtag/js?id=" +
-        encodeURIComponent(GA_ID);
-      document.head.appendChild(s);
-    }
-
-    window.gtag("js", new Date());
-    window.gtag("config", GA_ID, {
-      anonymize_ip: true,
-      send_page_view: true
-    });
-  }
-
   function getBodyData(name) {
     var body = document.body;
     if (!body) return "";
@@ -74,6 +44,18 @@
 
   function getPageLanguage() {
     return getBodyData("page-language") || (tcfrIsSpanishPath(window.location.pathname || "/") ? "es" : "en");
+  }
+
+  function localizeSharedContent() {
+    var lang = getPageLanguage() === "es" ? "es" : "en";
+    qsa(document, "[data-route-en][data-route-es]").forEach(function (link) {
+      link.setAttribute("href", link.getAttribute("data-route-" + lang) || link.getAttribute("href"));
+      var label = link.getAttribute("data-label-" + lang);
+      if (label) link.textContent = label;
+    });
+    qsa(document, "[data-current-year]").forEach(function (node) {
+      node.textContent = String(new Date().getFullYear());
+    });
   }
 
   function cleanText(text) {
@@ -220,7 +202,7 @@
     document.addEventListener("submit", function (e) {
       var form = e.target;
       if (!form || form.tagName !== "FORM") return;
-      trackEvent("form_submit_success", {
+      trackEvent("form_submit_attempt", {
         form_name: cleanText(form.getAttribute("name")) || cleanText(form.id) || cleanText(form.getAttribute("data-analytics-form")) || "form"
       });
     });
@@ -525,7 +507,7 @@
     if (target && img.getAttribute("src") !== target) img.setAttribute("src", target);
   }
   function tcfrBuildLink(root, template) {
-    var numRaw = String(root.getAttribute("data-wa-number") || "");
+    var numRaw = String(TCFR_CONFIG.whatsappNumber || root.getAttribute("data-wa-number") || "");
     var num = numRaw.replace(/[^\d]/g, "");
     if (!num) return "";
 
@@ -690,7 +672,6 @@
      Boot
      ========================= */
   async function boot() {
-    initGA4();
     sendEnhancedPageView();
     initScrollDepth();
     initAnalyticsClickTracking();
@@ -700,9 +681,12 @@
 
     // IMPORTANT: Cloudflare Pages often uses "pretty URLs" and redirects *.html -> no extension.
     // We try both, and only inject when we confirm it is a fragment (not a full HTML doc).
+    var headerCandidates = getPageLanguage() === "es"
+      ? ["/assets/includes/header-es", "/assets/includes/header-es.html", "/assets/includes/header", "/assets/includes/header.html"]
+      : ["/assets/includes/header", "/assets/includes/header.html"];
     var headerMount = await injectFragment(
       "siteHeader",
-      ["/assets/includes/header", "/assets/includes/header.html"],
+      headerCandidates,
       isValidHeaderFragment
     );
 
@@ -713,11 +697,14 @@
       isValidFooterFragment
     );
 
+    localizeSharedContent();
+
     // Initialize behaviors AFTER injection
     initHeaderFromMount(headerMount);
 
     // WhatsApp widget may appear after footer injection
     bootWhatsAppSoon();
+    try { document.dispatchEvent(new CustomEvent("tcfr:includes-ready")); } catch (_error) {}
   }
 
   if (document.readyState === "loading") {

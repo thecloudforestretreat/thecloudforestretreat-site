@@ -1,0 +1,2 @@
+body[data-tcfr-cluster="planning"] main :where(p,li){max-width:76ch}
+body[data-tcfr-cluster="planning"] :where(.steps,.checklist,.faq){scroll-margin-top:92px}

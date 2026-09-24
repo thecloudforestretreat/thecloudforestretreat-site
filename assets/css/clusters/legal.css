@@ -1,0 +1,2 @@
+body[data-tcfr-cluster="legal"] main{width:min(100% - 32px,900px);margin-inline:auto}
+body[data-tcfr-cluster="legal"] main :where(p,li){max-width:78ch}

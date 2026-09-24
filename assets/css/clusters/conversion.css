@@ -1,0 +1,2 @@
+body[data-tcfr-cluster="conversion"] :where(form,.formCard,.bookingCard){max-width:860px;margin-inline:auto}
+body[data-tcfr-cluster="conversion"] :where(input,select,textarea){min-height:48px}
