@@ -8,6 +8,32 @@
     defaultLanguage: "en",
     supportedLanguages: ["en", "es"],
     whatsappNumber: "13054585402",
+    whatsapp: {
+      enabled: true,
+      number: "13054585402",
+      imageDesktop: "/assets/images/icons/tcfr_widget_whatsapp_03.png",
+      imageMobile: "/assets/images/icons/tcfr_widget_whatsapp_03.png",
+      messages: {
+        en: {
+          title: "Chat with us on WhatsApp",
+          actions: [
+            { label: "Check availability", message: "Hi! I want to check availability.\n\nPage: {url}" },
+            { label: "Book a reservation", message: "Hi! I want to book a reservation.\n\nPage: {url}" },
+            { label: "Transportation", message: "Hi! I have a transportation question.\n\nPage: {url}" },
+            { label: "Ask a question", message: "Hi! I have a question.\n\nPage: {url}" }
+          ]
+        },
+        es: {
+          title: "Habla con nosotros por WhatsApp",
+          actions: [
+            { label: "Consultar disponibilidad", message: "Hola. Quiero consultar disponibilidad.\n\nPagina: {url}" },
+            { label: "Reservar", message: "Hola. Quiero reservar.\n\nPagina: {url}" },
+            { label: "Transporte", message: "Hola. Tengo una pregunta sobre transporte.\n\nPagina: {url}" },
+            { label: "Hacer una pregunta", message: "Hola. Tengo una pregunta.\n\nPagina: {url}" }
+          ]
+        }
+      }
+    },
     ga4MeasurementId: "G-D3W4SP5MGX",
     gtmContainerId: "GTM-KJ67MZ2C",
     attributionStorageDays: 90,

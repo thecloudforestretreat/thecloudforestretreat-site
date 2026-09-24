@@ -496,18 +496,46 @@
       return null;
     }
   }
+  function tcfrGetWaQuestions() {
+    var wa = TCFR_CONFIG.whatsapp || {};
+    var configured = wa.messages || {};
+
+    if (configured.en || configured.es) {
+      function normalize(language) {
+        var row = configured[language] || {};
+        var actions = Array.isArray(row.actions) ? row.actions : [];
+        return {
+          title: row.title || "",
+          q1: actions[0] && actions[0].label,
+          q2: actions[1] && actions[1].label,
+          q3: actions[2] && actions[2].label,
+          q4: actions[3] && actions[3].label,
+          t1: actions[0] && actions[0].message,
+          t2: actions[1] && actions[1].message,
+          t3: actions[2] && actions[2].message,
+          t4: actions[3] && actions[3].message
+        };
+      }
+
+      return { default_en: normalize("en"), default_es: normalize("es") };
+    }
+
+    return tcfrGetInlineWaQuestions();
+  }
   function tcfrSetImgForViewport(root) {
     var img = root.querySelector(".tcfrWaImg");
     if (!img) return;
 
-    var d = String(root.getAttribute("data-wa-img-desktop") || "");
-    var m = String(root.getAttribute("data-wa-img-mobile") || "");
+    var wa = TCFR_CONFIG.whatsapp || {};
+    var d = String(wa.imageDesktop || root.getAttribute("data-wa-img-desktop") || "");
+    var m = String(wa.imageMobile || root.getAttribute("data-wa-img-mobile") || "");
     var target = tcfrIsMobileLike() ? (m || d) : (d || m);
 
     if (target && img.getAttribute("src") !== target) img.setAttribute("src", target);
   }
   function tcfrBuildLink(root, template) {
-    var numRaw = String(TCFR_CONFIG.whatsappNumber || root.getAttribute("data-wa-number") || "");
+    var wa = TCFR_CONFIG.whatsapp || {};
+    var numRaw = String(wa.number || TCFR_CONFIG.whatsappNumber || root.getAttribute("data-wa-number") || "");
     var num = numRaw.replace(/[^\d]/g, "");
     if (!num) return "";
 
@@ -516,7 +544,7 @@
     return "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
   }
   function tcfrApplyCopy(root) {
-    var data = tcfrGetInlineWaQuestions();
+    var data = tcfrGetWaQuestions();
     if (!data) return;
 
     var p = tcfrNormalizePath(window.location.pathname || "/");
@@ -544,6 +572,10 @@
   }
   function initWhatsAppWidget(root) {
     if (!root || root.__tcfrWaInit) return;
+    if (TCFR_CONFIG.whatsapp && TCFR_CONFIG.whatsapp.enabled === false) {
+      root.hidden = true;
+      return;
+    }
     root.__tcfrWaInit = true;
 
     var btn = root.querySelector(".tcfrWaBtn");
@@ -581,7 +613,7 @@
 
       // Mobile: tap directly to WhatsApp using the first action (availability)
       if (tcfrIsMobileLike()) {
-        var data = tcfrGetInlineWaQuestions();
+        var data = tcfrGetWaQuestions();
         var p = tcfrNormalizePath(window.location.pathname || "/");
         var row = tcfrIsSpanishPath(p) ? (data && data.default_es) : (data && data.default_en);
         var t1 = row && row.t1 ? row.t1 : "Hi! I want to check availability.\n\nPage: {url}";
