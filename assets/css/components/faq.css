@@ -1,0 +1,92 @@
+/* Shared FAQ presentation for every TCFR page cluster. */
+.tcfrFaq {
+  display: block !important;
+  padding: clamp(38px, 6vw, 72px) !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+  border: 1px solid rgba(13, 89, 37, 0.16) !important;
+  border-radius: 30px !important;
+}
+
+.tcfrFaq__intro {
+  max-width: 900px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.tcfrFaq__intro h2 {
+  max-width: 18ch;
+  margin-inline: auto !important;
+}
+
+.tcfrFaq__intro > p:not([class*="Eyebrow"]) {
+  max-width: 66ch !important;
+  margin: 16px auto 0 !important;
+  color: rgba(20, 32, 24, 0.72) !important;
+  line-height: 1.72 !important;
+}
+
+.tcfrFaq__list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.tcfrFaq .tcfrFaq__list details,
+.tcfrFaq .tcfrFaq__list details:first-child {
+  min-height: 88px;
+  padding: 24px !important;
+  background: rgba(255, 255, 255, 0.76) !important;
+  border: 1px solid rgba(13, 89, 37, 0.14) !important;
+  border-radius: 18px !important;
+}
+
+.tcfrFaq .tcfrFaq__list details[open] {
+  background: #fff !important;
+  border-color: rgba(13, 89, 37, 0.28) !important;
+}
+
+.tcfrFaq .tcfrFaq__list summary {
+  position: relative;
+  padding-right: 34px;
+  color: var(--forest, #0d5925) !important;
+  font-weight: 850;
+  line-height: 1.45;
+  cursor: pointer;
+  list-style: none;
+}
+
+.tcfrFaq .tcfrFaq__list summary::-webkit-details-marker {
+  display: none;
+}
+
+.tcfrFaq .tcfrFaq__list summary::after {
+  content: "+";
+  position: absolute;
+  top: -7px;
+  right: 0;
+  color: var(--orange, #e0643a);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.tcfrFaq .tcfrFaq__list details[open] summary::after {
+  content: "−";
+}
+
+.tcfrFaq .tcfrFaq__list details p {
+  margin: 14px 0 0 !important;
+  color: rgba(20, 32, 24, 0.7) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.72 !important;
+}
+
+@media (max-width: 640px) {
+  .tcfrFaq {
+    padding: 32px 22px !important;
+    border-radius: 22px !important;
+  }
+
+  .tcfrFaq__list {
+    grid-template-columns: 1fr !important;
+  }
+}
