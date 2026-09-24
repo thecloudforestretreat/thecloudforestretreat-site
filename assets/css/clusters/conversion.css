@@ -323,7 +323,7 @@ body[data-tcfr-template="premium-conversion"]{
 }
 
 .conversionRating span{color:#e89b21;letter-spacing:.08em}
-.conversionQuotes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:28px 0 22px}
+.conversionQuotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 22px}
 .conversionQuote{margin:0;padding:20px;border-radius:18px;background:var(--conversion-cream)}
 .conversionQuote p{margin:0;color:rgba(20,32,24,.8);line-height:1.65}
 .conversionQuote footer{margin-top:14px;color:var(--conversion-green);font-size:.78rem;font-weight:900}
