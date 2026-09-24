@@ -557,7 +557,7 @@ body[data-tcfr-template="premium-nature-birding"] {
   }
 
   .natureSection {
-    margin: 64px 0;
+    margin: var(--tcfr-section-space) 0;
   }
 
   .natureHeading h2,

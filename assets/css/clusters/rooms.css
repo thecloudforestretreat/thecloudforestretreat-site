@@ -483,7 +483,7 @@ body[data-tcfr-template="premium-rooms"] {
   .roomsShowcase__note { grid-template-columns: 1fr; }
   .roomsShowcase__note div { padding: 11px 14px; }
   .roomsShowcase__note span { display: none; }
-  .roomsSection { margin: 64px 0; }
+  .roomsSection { margin: var(--tcfr-section-space) 0; }
   .roomsSectionHeading h2, .roomsShared__copy h2, .roomsInclusions h2, .roomsFaq h2 { font-size: clamp(2.05rem, 10.5vw, 3rem); }
   .roomsChoice { display: flex; }
   .roomsChoice__image { height: 310px; min-height: 0; }
