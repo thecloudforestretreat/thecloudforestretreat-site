@@ -6,7 +6,7 @@ body[data-tcfr-cluster="stay"] :where(.heroMedia,.roomHero){min-height:clamp(500
 /* Approved premium template for the Stay page cluster. */
 body[data-tcfr-template="premium-stay"]{--stay-ink:#142018;--stay-deep:var(--tcfr-forest-2,#0b2b12);--stay-green:var(--forest,#0d5925);--stay-cream:var(--beige,#f5f5dc);--stay-paper:#fbfaf5;--stay-orange:var(--orange,#e0643a);--stay-line:rgba(13,89,37,.16);--stay-radius:30px;background:radial-gradient(circle at 0 8%,rgba(161,191,170,.2),transparent 28rem),var(--stay-cream);color:var(--stay-ink)}
 body[data-tcfr-template="premium-stay"] #siteHeader{z-index:5000}
-.stayPage{width:min(calc(100% - var(--tcfr-shell-gutter)),var(--tcfr-content-max));margin-inline:auto;padding:18px 0 var(--tcfr-section-space)}
+.stayPage{width:min(calc(100% - var(--tcfr-shell-gutter)),var(--tcfr-content-max));margin-inline:auto;padding:var(--tcfr-page-top) 0 var(--tcfr-section-space)}
 .stayPreview__notice{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 14px;padding:9px 14px;border:1px dashed rgba(18,77,42,.3);border-radius:999px;color:var(--stay-green);background:rgba(255,255,255,.48);font-size:.78rem}.stayPreview__notice span{font-weight:900;letter-spacing:.09em;text-transform:uppercase}.stayPreview__notice p{margin:0;color:inherit;font-size:inherit;line-height:1.4}
 .stayPage__crumbs{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 4px;color:rgba(20,32,24,.65);font-size:.8rem;font-weight:700}.stayPage__crumbs a{color:var(--stay-green)}
 .stayHero{position:relative;min-height:min(790px,84vh);display:grid;align-items:end;overflow:hidden;border-radius:var(--stay-radius);background:var(--stay-deep);box-shadow:0 30px 90px rgba(10,42,22,.24)}
@@ -53,7 +53,7 @@ body[data-tcfr-template="premium-stay"] #siteHeader{z-index:5000}
 .aboutPage {
   width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
   margin-inline: auto;
-  padding: 18px 0 0;
+  padding: var(--tcfr-page-top) 0 0;
 }
 .aboutTop { display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-bottom:18px; padding:14px 18px; background:rgba(255,255,255,.58); border:1px solid var(--stay-line); border-radius:20px; }
 .aboutBreadcrumb,.aboutTop__actions { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
@@ -111,4 +111,8 @@ body[data-tcfr-template="premium-stay"] #siteHeader{z-index:5000}
 .aboutPage .stayFaq { margin-top:var(--tcfr-section-space); margin-bottom:0; }
 body[data-tcfr-template="premium-stay"] .aboutPage .tcfr-related { width:100%; margin-top:var(--tcfr-section-space); }
 @media(max-width:900px){.aboutFacts,.aboutOffers__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.aboutStory,.aboutCommitment,.aboutCta{grid-template-columns:1fr}.aboutStory__figure{min-height:500px}.aboutMedia__image{min-height:480px}}
-@media(max-width:620px){.aboutPage{padding-top:12px}.aboutTop__actions{width:100%}.aboutTop__actions .btn{flex:1}.aboutHero{min-height:680px;border-radius:22px}.aboutHero__veil{background:linear-gradient(0deg,rgba(4,24,12,.94),rgba(4,24,12,.18) 82%)}.aboutHero__content{padding:36px 22px}.aboutHero h1{font-size:clamp(2.65rem,12vw,3.65rem)}.aboutFacts,.aboutOffers__grid{grid-template-columns:1fr}.aboutStory__card,.aboutMedia{padding:26px 22px;border-radius:22px}.aboutStory__figure,.aboutMedia__image{min-height:360px}.aboutOffer{min-height:auto}.aboutCommitment,.aboutCta{padding:32px 22px;border-radius:22px}}
+@media(max-width:620px){.aboutPage{padding-top:var(--tcfr-page-top)}.aboutTop__actions{width:100%}.aboutTop__actions .btn{flex:1}.aboutHero{min-height:680px;border-radius:22px}.aboutHero__veil{background:linear-gradient(0deg,rgba(4,24,12,.94),rgba(4,24,12,.18) 82%)}.aboutHero__content{padding:36px 22px}.aboutHero h1{font-size:clamp(2.65rem,12vw,3.65rem)}.aboutFacts,.aboutOffers__grid{grid-template-columns:1fr}.aboutStory__card,.aboutMedia{padding:26px 22px;border-radius:22px}.aboutStory__figure,.aboutMedia__image{min-height:360px}.aboutOffer{min-height:auto}.aboutCommitment,.aboutCta{padding:32px 22px;border-radius:22px}}
+
+/* Shared site rhythm overrides legacy cluster defaults. */
+.tcfr-landing{padding-top:var(--tcfr-page-top)}
+@media(max-width:600px){.stayPage{padding-top:var(--tcfr-page-top)}}

@@ -18,7 +18,7 @@ body[data-tcfr-template="premium-legal"] {
 body[data-tcfr-template="premium-legal"] main.legalPreview {
   width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
   margin-inline: auto;
-  padding: 18px 0 var(--tcfr-section-space);
+  padding: var(--tcfr-page-top) 0 var(--tcfr-section-space);
 }
 
 .legalNotice {
@@ -342,7 +342,7 @@ body[data-tcfr-template="premium-legal-live"] main.wrap {
   width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
   max-width: none;
   margin-inline: auto;
-  padding: 18px 0 var(--tcfr-section-space);
+  padding: var(--tcfr-page-top) 0 var(--tcfr-section-space);
 }
 
 body[data-tcfr-template="premium-legal-live"] {

@@ -18,7 +18,7 @@ body[data-tcfr-template="premium-rooms"] {
 .roomsPreview {
   width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
   margin-inline: auto;
-  padding: 18px 0 var(--tcfr-section-space);
+  padding: var(--tcfr-page-top) 0 var(--tcfr-section-space);
 }
 
 .roomsPreview > .roomsSection:last-child { margin-bottom: 0; }

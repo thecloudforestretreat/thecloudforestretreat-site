@@ -110,7 +110,7 @@ function ensureHeadAssets(html, cluster) {
   html = html.replace(/<script[^>]+src=["']\/assets\/js\/head\.js[^"']*["'][^>]*><\/script>/gi, "");
   html = html.replace(/\s*<link[^>]+href=["']\/assets\/css\/(?:global|footer)\.css[^"']*["'][^>]*\/?\s*>/gi, "");
   html = html.replace(/\s*<link[^>]+href=["']\/assets\/css\/clusters\/[a-z-]+\.css[^"']*["'][^>]*\/?\s*>/gi, "");
-  const cssBlock = `<link href="/assets/css/global.css?v=1" rel="stylesheet"/>\n<link href="/assets/css/footer.css?v=5" rel="stylesheet"/>\n<link href="/assets/css/clusters/${cluster}.css?v=2" rel="stylesheet"/>`;
+  const cssBlock = `<link href="/assets/css/global.css?v=4" rel="stylesheet"/>\n<link href="/assets/css/footer.css?v=5" rel="stylesheet"/>\n<link href="/assets/css/clusters/${cluster}.css?v=2" rel="stylesheet"/>`;
   html = html.replace(/<\/head>/i, `${cssBlock}\n</head>`);
   if (!html.includes("/assets/js/site-config.js")) html = html.replace(/<\/head>/i, `<script src="/assets/js/site-config.js"></script>\n<script defer src="/assets/js/head.js?v=2"></script>\n</head>`);
   else html = html.replace(/<\/head>/i, `<script defer src="/assets/js/head.js?v=2"></script>\n</head>`);

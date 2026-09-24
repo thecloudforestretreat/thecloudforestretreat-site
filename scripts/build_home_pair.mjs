@@ -187,7 +187,7 @@ function page({ language, title, description, canonical, counterpart, main, rela
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" />
   <link rel="stylesheet" href="/assets/css/site.css?v=2" />
   <link rel="stylesheet" href="/assets/css/header.css?v=5" />
-  <link rel="stylesheet" href="/assets/css/global.css?v=2" />
+  <link rel="stylesheet" href="/assets/css/global.css?v=4" />
   <link rel="stylesheet" href="/assets/css/footer.css?v=10" />
   <link rel="stylesheet" href="/assets/css/clusters/home.css?v=5" />
   <link rel="stylesheet" href="/assets/css/components/faq.css?v=1" />

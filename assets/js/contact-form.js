@@ -218,7 +218,9 @@
           "attribution_last_campaign", "attribution_last_landing_page", "attribution_click_id"
         ].forEach(function(name){ payload[name] = fd.get(name) || ""; });
 
-        var res = await fetch("/api/contact", {
+        var config = window.TCFR_CONFIG || {};
+        var endpoint = (config.forms && config.forms.contactEndpoint) || "/api/contact";
+        var res = await fetch(endpoint, {
           method: "POST",
           credentials: "same-origin",
           headers: {
