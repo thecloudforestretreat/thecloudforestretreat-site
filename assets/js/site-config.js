@@ -9,7 +9,7 @@
     supportedLanguages: ["en", "es"],
     whatsappNumber: "13054585402",
     ga4MeasurementId: "G-D3W4SP5MGX",
-    gtmContainerId: "",
+    gtmContainerId: "GTM-KJ67MZ2C",
     attributionStorageDays: 90,
     analyticsDebug: false,
     social: {
