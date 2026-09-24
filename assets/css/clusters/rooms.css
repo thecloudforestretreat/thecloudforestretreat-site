@@ -18,8 +18,10 @@ body[data-tcfr-template="premium-rooms"] {
 .roomsPreview {
   width: min(100% - 36px, 1280px);
   margin-inline: auto;
-  padding: 18px 0 88px;
+  padding: 18px 0 56px;
 }
+
+.roomsPreview > .roomsSection:last-child { margin-bottom: 0; }
 
 .roomsPreview__notice {
   display: flex;
@@ -414,18 +416,44 @@ body[data-tcfr-template="premium-rooms"] {
 
 .roomsFaq {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: clamp(34px, 7vw, 92px);
+  grid-template-columns: 1fr;
+  gap: 34px;
   align-items: start;
+  padding: clamp(38px, 6vw, 72px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(245, 245, 220, 0.52));
+  border: 1px solid var(--rooms-line);
+  border-radius: 30px;
+}
+
+.roomsFaq__intro {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.roomsFaq__intro > p:not(.roomsEyebrow) { margin-inline: auto; }
+
+.roomsFaq__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .roomsFaq__list details {
-  padding: 21px 0;
-  border-top: 1px solid var(--rooms-line);
+  min-height: 88px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(13, 89, 37, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(10, 42, 22, 0.06);
 }
 
-.roomsFaq__list details:first-child { border-top: 0; padding-top: 0; }
-.roomsFaq__list summary { position: relative; padding-right: 34px; color: var(--rooms-green); font-weight: 850; cursor: pointer; list-style: none; }
+.roomsFaq__list details[open] {
+  background: #fff;
+  border-color: rgba(13, 89, 37, 0.28);
+}
+
+.roomsFaq__list summary { position: relative; padding-right: 34px; color: var(--rooms-green); font-weight: 850; line-height: 1.45; cursor: pointer; list-style: none; }
 .roomsFaq__list summary::-webkit-details-marker { display: none; }
 .roomsFaq__list summary::after { content: "+"; position: absolute; top: -7px; right: 0; color: var(--rooms-orange); font-size: 1.8rem; font-weight: 400; }
 .roomsFaq__list details[open] summary::after { content: "−"; }
@@ -459,10 +487,11 @@ body[data-tcfr-template="premium-rooms"] {
   .roomsSectionHeading h2, .roomsShared__copy h2, .roomsInclusions h2, .roomsFaq h2 { font-size: clamp(2.05rem, 10.5vw, 3rem); }
   .roomsChoice { display: flex; }
   .roomsChoice__image { height: 310px; min-height: 0; }
-  .roomsCompare, .roomsInclusions { padding: 32px 22px; border-radius: 22px; }
+  .roomsCompare, .roomsInclusions, .roomsFaq { padding: 32px 22px; border-radius: 22px; }
   .roomsCompare__row { grid-template-columns: 1fr; gap: 5px; }
   .roomsCompare__row span { padding-left: 14px; }
   .roomsShared__gallery { grid-template-columns: 1fr 1fr; }
   .roomsShared__gallery img, .roomsShared__gallery img:first-child { height: 300px; }
   .roomsInclusions__grid { grid-template-columns: 1fr; }
+  .roomsFaq__list { grid-template-columns: 1fr; }
 }
