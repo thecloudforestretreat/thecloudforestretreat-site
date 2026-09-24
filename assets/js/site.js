@@ -54,7 +54,7 @@
       String(path || "").split(".").forEach(function (part) {
         value = value && value[part];
       });
-      return typeof value === "string" ? value : "";
+      return value === null || value === undefined ? "" : String(value);
     }
 
     qsa(document, "[data-tcfr-config-href]").forEach(function (link) {
@@ -65,6 +65,11 @@
     qsa(document, "[data-tcfr-config-src]").forEach(function (media) {
       var src = configValue(media.getAttribute("data-tcfr-config-src"));
       if (src) media.setAttribute("src", src);
+    });
+
+    qsa(document, "[data-tcfr-config-text]").forEach(function (element) {
+      var text = configValue(element.getAttribute("data-tcfr-config-text"));
+      if (text) element.textContent = text;
     });
 
     qsa(document, "[data-route-en][data-route-es]").forEach(function (link) {

@@ -38,6 +38,12 @@
     gtmContainerId: "GTM-KJ67MZ2C",
     attributionStorageDays: 90,
     analyticsDebug: false,
+    reputation: {
+      googleRating: "5.0",
+      googleReviewCount: "9",
+      googleReviewsReadUrl: "https://g.page/r/CQq5wBqKgv0DEAE",
+      googleReviewsWriteUrl: "https://g.page/r/CQq5wBqKgv0DEAE/review"
+    },
     forms: {
       bookingEndpoint: "/api/booking",
       contactEndpoint: "/api/contact",
