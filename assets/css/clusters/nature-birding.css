@@ -17,9 +17,9 @@ body[data-tcfr-template="premium-nature-birding"] {
 }
 
 .naturePreview {
-  width: min(100% - 36px, 1280px);
+  width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
   margin-inline: auto;
-  padding: 18px 0 56px;
+  padding: 18px 0 var(--tcfr-section-space);
 }
 
 .naturePreview__notice {
@@ -193,7 +193,7 @@ body[data-tcfr-template="premium-nature-birding"] {
 }
 
 .natureSection {
-  margin: clamp(68px, 8vw, 116px) 0;
+  margin: var(--tcfr-section-space) 0;
 }
 
 .naturePreview > .natureSection:last-child {
@@ -510,7 +510,7 @@ body[data-tcfr-template="premium-nature-birding"] {
 
 @media (max-width: 640px) {
   .naturePreview {
-    width: min(100% - 24px, 1280px);
+    width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
     padding-top: 10px;
   }
 

@@ -18,9 +18,9 @@ body[data-tcfr-template="premium-conversion"]{
 }
 
 .conversionPage{
-  width:min(100% - 36px,1180px);
+  width:min(calc(100% - var(--tcfr-shell-gutter)),var(--tcfr-content-max));
   margin-inline:auto;
-  padding:18px 0 88px;
+  padding:18px 0 var(--tcfr-section-space);
 }
 
 .conversionPreview__notice{
@@ -169,7 +169,7 @@ body[data-tcfr-template="premium-conversion"]{
 
 .conversionSectionHeading{
   max-width:780px;
-  margin:clamp(64px,8vw,100px) auto 38px;
+  margin:var(--tcfr-section-space) auto 38px;
   text-align:center;
 }
 
@@ -395,7 +395,7 @@ body[data-tcfr-template="premium-conversion"]{
 .conversionArrival__list span{margin-top:5px;color:rgba(255,255,255,.7);font-size:.82rem;line-height:1.55}
 
 .conversionSteps{
-  margin:clamp(64px,8vw,100px) 0;
+  margin:var(--tcfr-section-space) 0;
   padding:clamp(32px,5vw,58px);
   background:var(--conversion-deep);
 }
@@ -436,7 +436,7 @@ body[data-tcfr-template="premium-conversion"]{
 }
 
 @media(max-width:600px){
-  .conversionPage{width:min(100% - 24px,1180px);padding-top:10px}
+  .conversionPage{width:min(calc(100% - var(--tcfr-shell-gutter)),var(--tcfr-content-max));padding-top:10px}
   .conversionPreview__notice{border-radius:18px}
   .conversionPreview__notice span{display:none}
   .conversionHero{border-radius:22px}

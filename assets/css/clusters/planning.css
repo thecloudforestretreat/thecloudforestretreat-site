@@ -17,9 +17,9 @@ body[data-tcfr-template="premium-planning"] {
 }
 
 .planningPreview {
-  width: min(100% - 36px, 1280px);
+  width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
   margin-inline: auto;
-  padding: 18px 0 56px;
+  padding: 18px 0 var(--tcfr-section-space);
 }
 
 .planningPreview__notice {
@@ -199,7 +199,7 @@ body[data-tcfr-template="premium-planning"] {
 }
 
 .planningSection {
-  margin: clamp(68px, 8vw, 116px) 0;
+  margin: var(--tcfr-section-space) 0;
 }
 
 .planningPreview > .planningSection:last-child {
@@ -460,7 +460,7 @@ body[data-tcfr-template="premium-planning"] {
 
 @media (max-width: 640px) {
   .planningPreview {
-    width: min(100% - 24px, 1280px);
+    width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
     padding-top: 10px;
   }
 

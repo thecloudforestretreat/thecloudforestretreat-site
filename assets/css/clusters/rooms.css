@@ -16,9 +16,9 @@ body[data-tcfr-template="premium-rooms"] {
 }
 
 .roomsPreview {
-  width: min(100% - 36px, 1280px);
+  width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max));
   margin-inline: auto;
-  padding: 18px 0 56px;
+  padding: 18px 0 var(--tcfr-section-space);
 }
 
 .roomsPreview > .roomsSection:last-child { margin-bottom: 0; }
@@ -170,7 +170,7 @@ body[data-tcfr-template="premium-rooms"] {
 .roomsShowcase__note span { margin-top: 3px; color: rgba(255, 255, 255, 0.76); font-size: 0.75rem; }
 
 .roomsSection {
-  margin: clamp(68px, 8vw, 116px) 0;
+  margin: var(--tcfr-section-space) 0;
 }
 
 .roomsSectionHeading {
@@ -471,7 +471,7 @@ body[data-tcfr-template="premium-rooms"] {
 }
 
 @media (max-width: 640px) {
-  .roomsPreview { width: min(100% - 24px, 1280px); padding-top: 10px; }
+  .roomsPreview { width: min(calc(100% - var(--tcfr-shell-gutter)), var(--tcfr-content-max)); padding-top: 10px; }
   .roomsPreview__notice { border-radius: 18px; }
   .roomsPreview__notice p { display: none; }
   .roomsShowcase { border-radius: 22px; }

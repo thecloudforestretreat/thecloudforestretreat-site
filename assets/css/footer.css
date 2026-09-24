@@ -1,13 +1,13 @@
 .tcfr-footer {
-  margin-top: clamp(48px, 6vw, 76px);
-  padding: clamp(50px, 6vw, 82px) 0 26px;
+  margin-top: 0;
+  padding: var(--tcfr-section-space, clamp(56px, 6vw, 88px)) 0 26px;
   color: var(--ink, #142018);
   background: rgb(161, 191, 170);
   border-top: 1px solid rgba(13, 89, 37, 0.12);
 }
 
 .tcfr-footerShell {
-  width: min(100% - 40px, var(--tcfr-content-max, 1180px));
+  width: min(calc(100% - var(--tcfr-shell-gutter, 36px)), var(--tcfr-content-max, 1280px));
   margin: 0 auto;
 }
 
@@ -246,7 +246,7 @@
 
 @media (max-width: 620px) {
   .tcfr-footer { margin-top: 48px; padding-top: 28px; }
-  .tcfr-footerShell { width: min(100% - 24px, var(--tcfr-content-max, 1180px)); }
+  .tcfr-footerShell { width: min(calc(100% - var(--tcfr-shell-gutter, 24px)), var(--tcfr-content-max, 1280px)); }
   .tcfr-footerCta { padding: 30px 20px; border-radius: 22px; }
   .tcfr-footerCta h2 { font-size: clamp(2rem, 10vw, 2.8rem); }
   .tcfr-footerCta__actions { grid-template-columns: 1fr; }
