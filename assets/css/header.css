@@ -53,7 +53,7 @@ body{
 }
 
 .tcfr-header.is-scrolled{
-  background: rgba(245,245,220,0.82);
+  background: rgba(161,191,170,0.97);
   box-shadow: 0 12px 34px rgba(0,0,0,.12);
   border-bottom: 1px solid rgba(13,89,37,.14);
 }
@@ -224,7 +224,12 @@ body{
   line-height: 1;
 }
 
-.tcfr-langBtn.is-active{ background: rgba(13,89,37,.10); }
+.tcfr-langBtn.is-active,
+.tcfr-langBtn[aria-current="page"]{
+  background: var(--tcfr-forest);
+  color: #fff;
+  box-shadow: 0 5px 14px rgba(13,89,37,.20);
+}
 
 .tcfr-langBtn.is-disabled{
   opacity: .55;
@@ -435,6 +440,56 @@ body{
   background: var(--tcfr-orange);
   color: #fff;
   box-shadow: 0 14px 30px rgba(224,100,58,.22);
+}
+
+@media (max-width: 600px){
+  :root{ --tcfr-header-h: 64px; }
+
+  .tcfr-shell{
+    min-height: var(--tcfr-header-h);
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .tcfr-brand{ gap: 8px; }
+  .tcfr-logo{ height: 32px; }
+  .tcfr-brandText{ display:none; }
+  .tcfr-brand::after{
+    content:"Cloud Forest Retreat";
+    max-width: 142px;
+    overflow:hidden;
+    color:var(--tcfr-forest);
+    font-size:14px;
+    font-weight:900;
+    line-height:1.05;
+    letter-spacing:-.02em;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .tcfr-actions{ gap:7px; }
+  .tcfr-lang{ gap:2px;padding:4px; }
+  .tcfr-langBtn{ min-width:34px;height:34px;padding:0 7px; }
+  .tcfr-burger{ width:44px;height:44px;border-radius:13px; }
+
+  .tcfr-mobilePanel{
+    width:min(390px,94vw);
+    padding:12px;
+    border-top-left-radius:16px;
+  }
+
+  .tcfr-navMobile .tcfr-mLink,
+  .tcfr-navMobile .tcfr-mGroup,
+  .tcfr-mSubLink{
+    min-height:48px;
+  }
+
+  .tcfr-mobileCta{
+    position:sticky;
+    bottom:0;
+    min-height:50px;
+    border:3px solid rgba(245,245,220,.98);
+  }
 }
 
 @media (min-width: 901px){

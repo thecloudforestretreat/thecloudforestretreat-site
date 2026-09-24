@@ -48,11 +48,38 @@
 
   function localizeSharedContent() {
     var lang = getPageLanguage() === "es" ? "es" : "en";
+
     qsa(document, "[data-route-en][data-route-es]").forEach(function (link) {
       link.setAttribute("href", link.getAttribute("data-route-" + lang) || link.getAttribute("href"));
       var label = link.getAttribute("data-label-" + lang);
       if (label) link.textContent = label;
     });
+
+    var counterpartLinks = {};
+    qsa(document, ".rawLangLinks a[lang]").forEach(function (link) {
+      var linkLang = String(link.getAttribute("lang") || "").toLowerCase();
+      if (linkLang === "en" || linkLang === "es") {
+        counterpartLinks[linkLang] = link.getAttribute("href") || "";
+      }
+    });
+
+    qsa(document, ".tcfr-langBtn[data-lang]").forEach(function (link) {
+      var linkLang = String(link.getAttribute("data-lang") || "").toLowerCase();
+      var isCurrent = linkLang === lang;
+
+      if (counterpartLinks[linkLang]) {
+        link.setAttribute("href", counterpartLinks[linkLang]);
+      }
+
+      link.classList.toggle("is-active", isCurrent);
+
+      if (isCurrent) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
     qsa(document, "[data-current-year]").forEach(function (node) {
       node.textContent = String(new Date().getFullYear());
     });
