@@ -25,8 +25,8 @@ const translations = new Map([
   ["Space for couples, birders, wellness travelers, and restorative stays", "Espacio para parejas, observadores de aves, viajeros de bienestar y estadías reparadoras"],
   ["Direct local support", "Ayuda local directa"],
   ["Plan rooms, transportation, and arrival details with a real host", "Planifica habitaciones, transporte y llegada directamente con un anfitrión"],
-  ["A stay with a sense of place", "Una estadía con identidad propia"],
-  ["Not a hotel dropped into the landscape.", "No es un hotel colocado en el paisaje."],
+  ["The retreat at a glance", "El refugio de un vistazo"],
+  ["A private cloud forest stay in Pichincha, Ecuador.", "Una estadía privada en el bosque nublado de Pichincha, Ecuador."],
   ["The Cloud Forest Retreat is an intimate mountainside bed and breakfast in Pichincha, Ecuador. The rooms, shared spaces, meals, views, and nearby nature belong to one connected experience: peaceful enough to reset, practical enough to plan, and personal enough to remember.", "The Cloud Forest Retreat es un bed and breakfast íntimo de montaña en Pichincha, Ecuador. Las habitaciones, los espacios compartidos, las comidas, las vistas y la naturaleza cercana forman una experiencia conectada: tranquila para renovarte, práctica para planificar y personal para recordar."],
   ["Stay characteristics", "Características de la estadía"],
   ["Real property", "Propiedad real"],
@@ -189,7 +189,7 @@ function page({ language, title, description, canonical, counterpart, main, rela
   <link rel="stylesheet" href="/assets/css/header.css?v=5" />
   <link rel="stylesheet" href="/assets/css/global.css?v=2" />
   <link rel="stylesheet" href="/assets/css/footer.css?v=10" />
-  <link rel="stylesheet" href="/assets/css/clusters/home.css?v=4" />
+  <link rel="stylesheet" href="/assets/css/clusters/home.css?v=5" />
   <link rel="stylesheet" href="/assets/css/components/faq.css?v=1" />
   <script type="application/ld+json">
 ${schema({ language, url: canonical, title, description, questions })}
