@@ -2,9 +2,7 @@
   margin-top: clamp(48px, 6vw, 76px);
   padding: clamp(50px, 6vw, 82px) 0 26px;
   color: var(--ink, #142018);
-  background:
-    radial-gradient(circle at 92% 10%, rgba(161, 191, 170, 0.25), transparent 24rem),
-    #f1eee3;
+  background: rgb(161, 191, 170);
   border-top: 1px solid rgba(13, 89, 37, 0.12);
 }
 
@@ -19,26 +17,15 @@
   grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
-  overflow: hidden;
   padding: clamp(36px, 5vw, 62px);
-  background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.94) 0 68%, rgba(224, 100, 58, 0.1) 68% 100%);
-  border: 1px solid rgba(13, 89, 37, 0.16);
-  border-left: 5px solid var(--orange, #e0643a);
+  background: rgba(245, 245, 220, 0.78);
+  border: 1px solid rgba(13, 89, 37, 0.2);
   border-radius: 26px;
-  box-shadow: 0 22px 58px rgba(10, 42, 22, 0.11);
+  box-shadow: 0 18px 48px rgba(10, 42, 22, 0.11);
 }
 
 .tcfr-footerCta::after {
-  content: "";
-  position: absolute;
-  top: -88px;
-  right: -70px;
-  width: 220px;
-  height: 220px;
-  border: 1px solid rgba(224, 100, 58, 0.22);
-  border-radius: 50%;
-  pointer-events: none;
+  content: none;
 }
 
 .tcfr-footerEyebrow {
@@ -175,7 +162,7 @@
   justify-content: center;
   gap: 10px;
   padding: 11px 14px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(245, 245, 220, 0.72);
   border: 1px solid rgba(13, 89, 37, 0.14);
   border-radius: 999px;
   box-shadow: 0 12px 32px rgba(10, 42, 22, 0.07);
@@ -188,7 +175,7 @@
   place-items: center;
   border: 1px solid rgba(13, 89, 37, 0.15);
   border-radius: 50%;
-  background: rgba(245, 245, 220, 0.72);
+  background: rgba(255, 255, 255, 0.48);
   transition: transform 160ms ease, background 160ms ease;
 }
 
@@ -206,7 +193,7 @@
 
 .tcfr-footerMeta {
   padding: 20px clamp(8px, 2vw, 26px) 0;
-  border-top: 1px solid rgba(13, 89, 37, 0.17);
+  border-top: 1px solid rgba(13, 89, 37, 0.24);
 }
 
 .tcfr-footerLegal {
@@ -247,7 +234,7 @@
 .tcfrWaFab.is-open .tcfrWaPanel { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
 @media (max-width: 900px) {
-  .tcfr-footerCta { grid-template-columns: 1fr; background: rgba(255, 255, 255, 0.82); }
+  .tcfr-footerCta { grid-template-columns: 1fr; background: rgba(245, 245, 220, 0.78); }
   .tcfr-footerCta__actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tcfr-footerMain { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .tcfr-footerBrand { grid-column: 1 / -1; }
