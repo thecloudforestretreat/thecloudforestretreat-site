@@ -108,6 +108,7 @@
   font-size: clamp(1.2rem, 2vw, 1.55rem);
   font-weight: 800;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .tcfr-footerBrand__link:hover { text-decoration: none; }
