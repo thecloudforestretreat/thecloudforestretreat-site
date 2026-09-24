@@ -72,6 +72,11 @@
       if (text) element.textContent = text;
     });
 
+    qsa(document, "[data-label-en][data-label-es]").forEach(function (element) {
+      var label = element.getAttribute("data-label-" + lang);
+      if (label) element.textContent = label;
+    });
+
     qsa(document, "[data-route-en][data-route-es]").forEach(function (link) {
       link.setAttribute("href", link.getAttribute("data-route-" + lang) || link.getAttribute("href"));
       var label = link.getAttribute("data-label-" + lang);
@@ -784,6 +789,19 @@
     }
   }
 
+  function initFooterWhatsAppTriggers() {
+    qsa(document, "[data-tcfr-wa-open]").forEach(function (trigger) {
+      if (trigger.__tcfrWaTriggerInit) return;
+      trigger.__tcfrWaTriggerInit = true;
+
+      trigger.addEventListener("click", function (event) {
+        event.preventDefault();
+        var button = document.querySelector(".tcfrWaBtn");
+        if (button) button.click();
+      });
+    });
+  }
+
   /* =========================
      Boot
      ========================= */
@@ -821,6 +839,7 @@
 
     // WhatsApp widget may appear after footer injection
     bootWhatsAppSoon();
+    initFooterWhatsAppTriggers();
     try { document.dispatchEvent(new CustomEvent("tcfr:includes-ready")); } catch (_error) {}
   }
 

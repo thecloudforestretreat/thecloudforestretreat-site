@@ -1,57 +1,135 @@
 <!-- /assets/includes/footer.html -->
 <footer class="tcfr-footer" role="contentinfo">
   <div class="tcfr-footerShell">
-    <nav class="tcfr-footerNav" aria-label="Footer navigation">
-      <a href="/rooms/" data-route-en="/rooms/" data-route-es="/es/habitaciones/" data-label-en="Rooms" data-label-es="Habitaciones">Rooms</a>
-      <a href="/features/" data-route-en="/features/" data-route-es="/es/caracteristicas/" data-label-en="Experiences" data-label-es="Experiencias">Experiences</a>
-      <a href="/about/" data-route-en="/about/" data-route-es="/es/sobre-nosotros/" data-label-en="About" data-label-es="Nosotros">About</a>
-      <a href="/contact/" data-route-en="/contact/" data-route-es="/es/contacto/" data-label-en="Contact" data-label-es="Contacto">Contact</a>
-      <a href="/booking/" data-route-en="/booking/" data-route-es="/es/reservas/" data-label-en="Book your stay" data-label-es="Reservar">Book your stay</a>
-      <a href="/privacy-policy/" data-route-en="/privacy-policy/" data-route-es="/es/politica-de-privacidad/" data-label-en="Privacy" data-label-es="Privacidad">Privacy</a>
-    </nav>
-    <nav class="tcfr-social" aria-label="The Cloud Forest Retreat social links">
-      <a href="#" data-tcfr-config-href="social.instagram" target="_blank" rel="noopener" aria-label="Instagram">
-        <img src="/assets/images/icons/tcfr_ig.png" alt="" />
-      </a>
+    <section class="tcfr-footerCta" aria-labelledby="tcfr-footer-cta-title">
+      <div class="tcfr-footerCta__copy">
+        <p
+          class="tcfr-footerEyebrow"
+          data-label-en="Your cloud forest stay"
+          data-label-es="Tu estadía en el bosque nublado"
+        >
+          Your cloud forest stay
+        </p>
+        <h2
+          id="tcfr-footer-cta-title"
+          data-label-en="Ready to plan a quieter escape?"
+          data-label-es="¿Listo para planear una escapada tranquila?"
+        >
+          Ready to plan a quieter escape?
+        </h2>
+        <p
+          data-label-en="Tell us what kind of stay you have in mind. We will help with rooms, availability, transportation, and the details that make arrival easy."
+          data-label-es="Cuéntanos qué tipo de estadía tienes en mente. Te ayudamos con habitaciones, disponibilidad, transporte y los detalles para llegar con tranquilidad."
+        >
+          Tell us what kind of stay you have in mind. We will help with rooms,
+          availability, transportation, and the details that make arrival easy.
+        </p>
+      </div>
 
-      <a href="#" data-tcfr-config-href="social.tiktok" target="_blank" rel="noopener" aria-label="TikTok">
-        <img src="/assets/images/icons/tcfr_tt_02.png" alt="" />
-      </a>
+      <div class="tcfr-footerCta__actions">
+        <a
+          class="tcfr-footerButton tcfr-footerButton--primary"
+          href="/booking/"
+          data-route-en="/booking/"
+          data-route-es="/es/reservas/"
+          data-label-en="Check availability"
+          data-label-es="Consultar disponibilidad"
+          data-analytics-event="booking_cta_click"
+          data-analytics-location="global_footer"
+        >
+          Check availability
+        </a>
+        <button
+          class="tcfr-footerButton tcfr-footerButton--secondary"
+          type="button"
+          data-tcfr-wa-open
+          data-label-en="Plan on WhatsApp"
+          data-label-es="Planear por WhatsApp"
+          data-analytics-event="whatsapp_click"
+          data-analytics-location="global_footer"
+        >
+          Plan on WhatsApp
+        </button>
+      </div>
+    </section>
 
-      <a href="#" data-tcfr-config-href="social.facebook" target="_blank" rel="noopener" aria-label="Facebook">
-        <img src="/assets/images/icons/tcfr_fb_02.png" alt="" />
-      </a>
+    <div class="tcfr-footerMain">
+      <div class="tcfr-footerBrand">
+        <a
+          class="tcfr-footerBrand__link"
+          href="/"
+          data-route-en="/"
+          data-route-es="/es/"
+          aria-label="The Cloud Forest Retreat home"
+        >
+          <img
+            src="/assets/images/tcfr_logo_transparent.png"
+            alt="The Cloud Forest Retreat"
+            width="132"
+            height="132"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>The Cloud Forest Retreat</span>
+        </a>
+        <p
+          data-label-en="An intimate mountainside stay in Ecuador's cloud forest, close enough to Quito and immersed in nature."
+          data-label-es="Una estadía íntima en las montañas del bosque nublado de Ecuador, cerca de Quito y rodeada de naturaleza."
+        >
+          An intimate mountainside stay in Ecuador's cloud forest, close enough
+          to Quito and immersed in nature.
+        </p>
+      </div>
 
-      <a href="#" data-tcfr-config-href="social.youtube" target="_blank" rel="noopener" aria-label="YouTube">
-        <img src="/assets/images/icons/tcfr_yt.png" alt="" />
-      </a>
+      <nav class="tcfr-footerGroup" aria-label="Stay navigation">
+        <h2 data-label-en="Stay" data-label-es="Estadía">Stay</h2>
+        <a href="/rooms/" data-route-en="/rooms/" data-route-es="/es/habitaciones/" data-label-en="Explore the rooms" data-label-es="Explorar habitaciones">Explore the rooms</a>
+        <a href="/rooms/common-areas/" data-route-en="/rooms/common-areas/" data-route-es="/es/habitaciones/areas-comunes/" data-label-en="Common areas" data-label-es="Áreas comunes">Common areas</a>
+        <a href="/booking/" data-route-en="/booking/" data-route-es="/es/reservas/" data-label-en="Book your stay" data-label-es="Reservar estadía">Book your stay</a>
+      </nav>
 
-      <a href="#" data-tcfr-config-href="social.x" target="_blank" rel="noopener" aria-label="X">
-        <img src="/assets/images/icons/tcfr_x.png" alt="" />
-      </a>
+      <nav class="tcfr-footerGroup" aria-label="Explore navigation">
+        <h2 data-label-en="Explore" data-label-es="Explorar">Explore</h2>
+        <a href="/features/" data-route-en="/features/" data-route-es="/es/caracteristicas/" data-label-en="Experiences" data-label-es="Experiencias">Experiences</a>
+        <a href="/about/" data-route-en="/about/" data-route-es="/es/sobre-nosotros/" data-label-en="Our story" data-label-es="Nuestra historia">Our story</a>
+        <a href="https://blog.thecloudforestretreat.com/" target="_blank" rel="noopener" data-label-en="Travel journal" data-label-es="Guías de viaje">Travel journal</a>
+      </nav>
 
-      <a href="#" data-tcfr-config-href="social.googleReviews" target="_blank" rel="noopener" aria-label="Google Reviews">
-        <img src="/assets/images/icons/tcfr_gr.png" alt="" />
-      </a>
-    </nav>
+      <nav class="tcfr-footerGroup" aria-label="Help navigation">
+        <h2 data-label-en="Plan" data-label-es="Planear">Plan</h2>
+        <a href="/contact/" data-route-en="/contact/" data-route-es="/es/contacto/" data-label-en="Contact us" data-label-es="Contáctanos">Contact us</a>
+        <a href="/blog/how-to-get-to-cloud-forest-retreat/" data-route-en="/blog/how-to-get-to-cloud-forest-retreat/" data-route-es="/es/blog/como-llegar-cloud-forest-retreat/" data-label-en="Getting here" data-label-es="Cómo llegar">Getting here</a>
+        <a href="/privacy-policy/" data-route-en="/privacy-policy/" data-route-es="/es/politica-de-privacidad/" data-label-en="Privacy" data-label-es="Privacidad">Privacy</a>
+      </nav>
+    </div>
 
-    <p class="tcfr-footerCopy">
-      The Cloud Forest Retreat © <span data-current-year>2026</span>
-    </p>
+    <div class="tcfr-footerMeta">
+      <nav class="tcfr-social" aria-label="The Cloud Forest Retreat social links">
+        <a href="#" data-tcfr-config-href="social.instagram" target="_blank" rel="noopener" aria-label="Instagram"><img src="/assets/images/icons/tcfr_ig.png" alt="" /></a>
+        <a href="#" data-tcfr-config-href="social.tiktok" target="_blank" rel="noopener" aria-label="TikTok"><img src="/assets/images/icons/tcfr_tt_02.png" alt="" /></a>
+        <a href="#" data-tcfr-config-href="social.facebook" target="_blank" rel="noopener" aria-label="Facebook"><img src="/assets/images/icons/tcfr_fb_02.png" alt="" /></a>
+        <a href="#" data-tcfr-config-href="social.youtube" target="_blank" rel="noopener" aria-label="YouTube"><img src="/assets/images/icons/tcfr_yt.png" alt="" /></a>
+        <a href="#" data-tcfr-config-href="social.x" target="_blank" rel="noopener" aria-label="X"><img src="/assets/images/icons/tcfr_x.png" alt="" /></a>
+        <a href="#" data-tcfr-config-href="social.googleReviews" target="_blank" rel="noopener" aria-label="Google Reviews"><img src="/assets/images/icons/tcfr_gr.png" alt="" /></a>
+      </nav>
+
+      <div class="tcfr-footerLegal">
+        <p class="tcfr-footerCopy">The Cloud Forest Retreat © <span data-current-year>2026</span></p>
+        <span aria-hidden="true">•</span>
+        <p data-label-en="Pichincha, Ecuador" data-label-es="Pichincha, Ecuador">Pichincha, Ecuador</p>
+        <span aria-hidden="true">•</span>
+        <a href="/terms-of-service/" data-route-en="/terms-of-service/" data-route-es="/es/terminos-de-servicio/" data-label-en="Terms" data-label-es="Términos">Terms</a>
+      </div>
+    </div>
   </div>
 </footer>
 
 <!-- WhatsApp Smart CTA (TCFR) -->
 <div class="tcfrWaFab" aria-label="WhatsApp contact">
   <button class="tcfrWaBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="WhatsApp">
-    <img class="tcfrWaImg"
-         alt="Chat on WhatsApp"
-         loading="lazy"
-         decoding="async">
+    <img class="tcfrWaImg" alt="Chat on WhatsApp" loading="lazy" decoding="async" />
   </button>
-
   <div class="tcfrWaBackdrop" tabindex="-1" aria-hidden="true"></div>
-
   <div class="tcfrWaPanel" role="dialog" aria-label="WhatsApp options">
     <div class="tcfrWaHead">
       <div class="tcfrWaTitle">Chat with us on WhatsApp</div>
