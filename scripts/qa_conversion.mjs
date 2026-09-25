@@ -14,18 +14,26 @@ for (const viewport of sizes) {
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto(`http://127.0.0.1:4173/${route}`, { waitUntil: "domcontentloaded", timeout: 10000 });
     await page.waitForTimeout(500);
-    const result = await page.evaluate(() => ({
-      h1: document.querySelectorAll("h1").length,
-      faq: document.querySelectorAll(".conversionFaq details").length,
-      overflow: document.documentElement.scrollWidth > window.innerWidth + 1,
-      form: Boolean(document.querySelector("#tcfrBookingForm, #tcfrContactForm")),
-      pageTop: getComputedStyle(document.documentElement).getPropertyValue("--tcfr-page-top").trim(),
-      language: document.querySelector('.rawLangLinks [aria-current="page"]')?.getAttribute("lang") || ""
-    }));
+    const result = await page.evaluate(() => {
+      const formCard = document.querySelector(".conversionFormCard")?.getBoundingClientRect();
+      const asideCard = document.querySelector(".conversionAside")?.getBoundingClientRect();
+      const workspaceDelta = formCard && asideCard ? Math.abs(formCard.bottom - asideCard.bottom) : null;
+
+      return {
+        h1: document.querySelectorAll("h1").length,
+        faq: document.querySelectorAll(".conversionFaq details").length,
+        overflow: document.documentElement.scrollWidth > window.innerWidth + 1,
+        form: Boolean(document.querySelector("#tcfrBookingForm, #tcfrContactForm")),
+        pageTop: getComputedStyle(document.documentElement).getPropertyValue("--tcfr-page-top").trim(),
+        language: document.querySelector('.rawLangLinks [aria-current="page"]')?.getAttribute("lang") || "",
+        workspaceDelta
+      };
+    });
     const expectedTop = viewport.width <= 760 ? "12px" : "18px";
     const expectedLanguage = route.startsWith("es/") ? "es" : "en";
     const actionableErrors = errors.filter((message) => !message.includes("[Cloudflare Turnstile] Error: 110200"));
-    const pass = result.h1 === 1 && result.faq === 4 && !result.overflow && result.form && result.pageTop === expectedTop && result.language === expectedLanguage && actionableErrors.length === 0;
+    const workspaceAligned = viewport.width <= 900 || (result.workspaceDelta !== null && result.workspaceDelta <= 1);
+    const pass = result.h1 === 1 && result.faq === 4 && !result.overflow && result.form && result.pageTop === expectedTop && result.language === expectedLanguage && workspaceAligned && actionableErrors.length === 0;
     console.log(JSON.stringify({ viewport: viewport.width, route, pass, ...result, errors: actionableErrors }));
     if (!pass) failed = true;
   }
