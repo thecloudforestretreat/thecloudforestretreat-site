@@ -371,6 +371,57 @@ body[data-tcfr-template="premium-rooms"] {
   font-weight: 900;
 }
 
+.roomsGuidance {
+  padding: clamp(38px, 6vw, 72px);
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid var(--rooms-line);
+  border-radius: 30px;
+}
+
+.roomsGuidance__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.roomsGuidance__card {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  padding: 28px;
+  background: var(--rooms-paper);
+  border: 1px solid rgba(13, 89, 37, 0.1);
+  border-radius: 20px;
+}
+
+.roomsGuidance__card > span {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 26px;
+  color: var(--rooms-green);
+  background: #fff;
+  border: 1px solid var(--rooms-line);
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.roomsGuidance__card h3 {
+  margin: 0 0 12px;
+  color: var(--rooms-green);
+  font: 800 1.45rem / 1.08 var(--font-head);
+}
+
+.roomsGuidance__card p {
+  margin: 0;
+  color: rgba(20, 32, 24, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.72;
+}
+
 .roomsInclusions {
   padding: clamp(38px, 6vw, 72px);
   color: #142018;
@@ -459,6 +510,71 @@ body[data-tcfr-template="premium-rooms"] {
 .roomsFaq__list details[open] summary::after { content: "−"; }
 .roomsFaq__list p { margin: 14px 0 0; color: rgba(20, 32, 24, 0.7); font-size: 0.92rem; line-height: 1.72; }
 
+.roomsReviews {
+  padding: clamp(38px, 6vw, 72px);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--rooms-line);
+  border-radius: 30px;
+}
+
+.roomsReviews__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.roomsReviews h2 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--rooms-deep);
+  font: 800 clamp(2.25rem, 4.3vw, 4rem) / 1 var(--font-head);
+  letter-spacing: -0.04em;
+}
+
+.roomsRating {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 15px;
+  color: var(--rooms-green);
+  background: #fff;
+  border: 1px solid var(--rooms-line);
+  border-radius: 16px;
+}
+
+.roomsRating span,
+.roomsReview__stars { color: #fbbc04; letter-spacing: 0.05em; }
+.roomsRating small { font-weight: 800; }
+
+.roomsReviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.roomsReview {
+  display: flex;
+  min-height: 290px;
+  flex-direction: column;
+  padding: 26px;
+  background: rgba(245, 245, 220, 0.74);
+  border: 1px solid rgba(13, 89, 37, 0.08);
+  border-radius: 20px;
+}
+
+.roomsReview p { flex: 1; margin: 18px 0 24px; color: rgba(20, 32, 24, 0.76); line-height: 1.72; }
+.roomsReview footer strong,
+.roomsReview footer span { display: block; }
+.roomsReview footer strong { color: var(--rooms-green); }
+.roomsReview footer span { margin-top: 3px; color: rgba(20, 32, 24, 0.62); font-size: 0.78rem; }
+
+.roomsReviews__links { display: flex; gap: 10px; margin-top: 22px; }
+.roomsReviews__links a { padding: 11px 16px; color: var(--rooms-green); background: #fff; border: 1px solid var(--rooms-line); border-radius: 999px; font-size: 0.82rem; font-weight: 850; }
+.roomsReviews__links a:last-child { color: #fff; background: var(--rooms-orange); border-color: var(--rooms-orange); }
+
 @media (max-width: 980px) {
   .roomsShowcase { grid-template-columns: 1fr; }
   .roomsShowcase__copy { order: 2; }
@@ -468,6 +584,10 @@ body[data-tcfr-template="premium-rooms"] {
   .roomsChoice__image { height: 100%; min-height: 390px; }
   .roomsCompare, .roomsShared, .roomsFaq { grid-template-columns: 1fr; }
   .roomsInclusions__grid { grid-template-columns: repeat(2, 1fr); }
+  .roomsGuidance__grid { grid-template-columns: 1fr; }
+  .roomsGuidance__card { min-height: 0; }
+  .roomsReviews__grid { grid-template-columns: 1fr; }
+  .roomsReview { min-height: 0; }
 }
 
 @media (max-width: 640px) {
@@ -487,11 +607,15 @@ body[data-tcfr-template="premium-rooms"] {
   .roomsSectionHeading h2, .roomsShared__copy h2, .roomsInclusions h2, .roomsFaq h2 { font-size: clamp(2.05rem, 10.5vw, 3rem); }
   .roomsChoice { display: flex; }
   .roomsChoice__image { height: 310px; min-height: 0; }
-  .roomsCompare, .roomsInclusions, .roomsFaq { padding: 32px 22px; border-radius: 22px; }
+  .roomsCompare, .roomsGuidance, .roomsInclusions, .roomsFaq { padding: 32px 22px; border-radius: 22px; }
   .roomsCompare__row { grid-template-columns: 1fr; gap: 5px; }
   .roomsCompare__row span { padding-left: 14px; }
   .roomsShared__gallery { grid-template-columns: 1fr 1fr; }
   .roomsShared__gallery img, .roomsShared__gallery img:first-child { height: 300px; }
   .roomsInclusions__grid { grid-template-columns: 1fr; }
   .roomsFaq__list { grid-template-columns: 1fr; }
+  .roomsReviews { padding: 32px 22px; border-radius: 22px; }
+  .roomsReviews__head { align-items: flex-start; flex-direction: column; }
+  .roomsReviews__links { flex-direction: column; }
+  .roomsReviews__links a { text-align: center; }
 }
