@@ -62,8 +62,12 @@ for (const item of cases) for (const width of [390, 768, 1440]) {
 
   await page.locator(item.form).evaluate(form => form.requestSubmit());
   const emptyInvalid = await page.locator(item.form).evaluate(form => !form.checkValidity());
-  await page.fill('#first_name', 'qa'); await page.fill('#last_name', 'audit');
+  await page.fill('#first_name', 'juan pablo'); await page.fill('#last_name', "o'connor-smith");
   await page.fill('#email', 'invalid-email');
+  const normalizedNames = await page.evaluate(() => ({
+    first: document.querySelector('#first_name')?.value,
+    last: document.querySelector('#last_name')?.value
+  }));
   if (item.kind === 'booking') {
     await page.fill('#phone_number', '+1 555 010 2026');
     await page.fill('#date_start', '2026-12-15');
@@ -118,6 +122,7 @@ for (const item of cases) for (const width of [390, 768, 1440]) {
     noSecret: !initial.secret, turnstile: initial.turnstileNode === `${item.kind}_submit` && initial.turnstileScript,
     messageStartsEmpty: initial.messageStartsEmpty,
     namesAutocapitalize: initial.namesAutocapitalize,
+    nameNormalization: normalizedNames.first === 'Juan Pablo' && normalizedNames.last === "O'Connor-Smith",
     attribution: initial.attribution.attribution_first_source === 'final_qa' && initial.attribution.attribution_last_campaign === 'preproduction',
     responsive: !initial.overflow, emptyValidation: emptyInvalid, emailValidation: invalidEmail, missingToken,
     errorResponse: errorShown, successResponse: final.successShown, buttonRestored: final.buttonEnabled,
@@ -125,6 +130,7 @@ for (const item of cases) for (const width of [390, 768, 1440]) {
     language: final.language === item.lang, sourcePage: final.sourcePage.includes(item.route),
     dateSync: item.kind !== 'booking' || final.dateRange === '',
     requests: requests.length === 2 && requests.every(body => body.includes('final_qa')),
+    normalizedPayload: requests.length === 2 && requests.every(body => body.includes('Juan Pablo') && body.includes("O'Connor-Smith")),
     runtime: errors.length === 0
   };
   const report = { ...item, width, pass: Object.values(checks).every(Boolean), checks, initial, final, errors, requestCount: requests.length };

@@ -33,6 +33,12 @@
     if (typeof window.gtag === "function") window.gtag("event", name, data || {});
   }
 
+  function capitalizeName(value) {
+    return String(value || "").replace(/(^|[\s'-])([a-zà-öø-ÿ])/g, function (_match, separator, letter) {
+      return separator + letter.toUpperCase();
+    });
+  }
+
   ready(function () {
     var form = document.getElementById("tcfrBookingForm");
     if (!form || form.dataset.bookingFormBound === "true") return;
@@ -49,6 +55,14 @@
     var dates = document.getElementById("dates_of_visit");
     var source = document.getElementById("source_page");
     var agent = document.getElementById("user_agent");
+
+    ["#first_name", "#last_name"].forEach(function (selector) {
+      var input = form.querySelector(selector);
+      if (!input) return;
+      var normalize = function () { input.value = capitalizeName(input.value); };
+      input.addEventListener("input", normalize);
+      input.addEventListener("blur", normalize);
+    });
 
     function today() {
       var now = new Date();
@@ -86,6 +100,10 @@
 
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
+      ["#first_name", "#last_name"].forEach(function (selector) {
+        var input = form.querySelector(selector);
+        if (input) input.value = capitalizeName(input.value);
+      });
       syncDates();
       if (!form.reportValidity()) {
         show("error", copy.errorTitle, copy.required);

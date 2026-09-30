@@ -51,11 +51,10 @@
     return lang === "es" ? "es" : "en";
   }
 
-  function capFirstOnly(value){
-    var s = String(value || "").trim();
-    if(!s) return "";
-    s = s.toLowerCase();
-    return s.charAt(0).toUpperCase() + s.slice(1);
+  function capitalizeName(value){
+    return String(value || "").replace(/(^|[\s'-])([a-zà-öø-ÿ])/g, function(_match, separator, letter){
+      return separator + letter.toUpperCase();
+    });
   }
 
   function capMessageFirstChar(value){
@@ -118,8 +117,8 @@
     var lastNameEl = form.querySelector("#last_name");
     var messageEl = form.querySelector("#message");
 
-    if(firstNameEl) firstNameEl.value = capFirstOnly(firstNameEl.value);
-    if(lastNameEl) lastNameEl.value = capFirstOnly(lastNameEl.value);
+    if(firstNameEl) firstNameEl.value = capitalizeName(firstNameEl.value);
+    if(lastNameEl) lastNameEl.value = capitalizeName(lastNameEl.value);
     if(messageEl) messageEl.value = capMessageFirstChar(messageEl.value);
   }
 
@@ -154,7 +153,9 @@
     ["#first_name", "#last_name"].forEach(function(selector){
       var el = form.querySelector(selector);
       if(el){
-        el.addEventListener("blur", function(){ el.value = capFirstOnly(el.value); });
+        var normalize = function(){ el.value = capitalizeName(el.value); };
+        el.addEventListener("input", normalize);
+        el.addEventListener("blur", normalize);
       }
     });
 

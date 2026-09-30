@@ -292,7 +292,7 @@ ${schema(p)}
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/attribution.js?v=1"></script>
-  ${p.type === "booking" ? '<script src="/assets/js/booking-form.js?v=1"></script>' : '<script src="/assets/js/contact-form.js?v=4"></script>'}
+  ${p.type === "booking" ? '<script src="/assets/js/booking-form.js?v=2"></script>' : '<script src="/assets/js/contact-form.js?v=5"></script>'}
   <script src="/assets/js/site.js?v=8"></script>
 </body>
 </html>`);
