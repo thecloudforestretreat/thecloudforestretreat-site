@@ -1,0 +1,2881 @@
+{
+  "batch": "pairs_016_018",
+  "qa": [
+    {
+      "pair": "pair_016",
+      "route": "/features/flora/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Cloud Forest Flora in Ecuador | Plants Near Quito",
+        "description": "Explore cloud forest flora around The Cloud Forest Retreat, including bromeliads, native trees and seasonal plants, with responsible observation guidance.",
+        "canonical": "https://thecloudforestretreat.com/features/flora/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/flora/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/flora/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/flora/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/flora/#webpage",
+          "url": "https://thecloudforestretreat.com/features/flora/",
+          "name": "Cloud Forest Flora in Ecuador | Plants Near Quito",
+          "description": "Explore cloud forest flora around The Cloud Forest Retreat, including bromeliads, native trees and seasonal plants, with responsible observation guidance.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/flora/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1290.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 1546.5625,
+            "action": 1665.953125
+          },
+          {
+            "top": 1726.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 1982.5625,
+            "action": 2101.953125
+          },
+          {
+            "top": 2162.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 2395.234375,
+            "action": 2537.953125
+          },
+          {
+            "top": 2598.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 2854.5625,
+            "action": 2973.953125
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ],
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/cloud-forest-ecuador/",
+          "/cloud-forest-hiking-ecuador/",
+          "/features/choco-andino-de-pichincha/",
+          "/features/fauna/",
+          "/booking/",
+          "/contact/",
+          "/cloud-forest-ecuador/",
+          "/cloud-forest-hiking-ecuador/",
+          "/features/fauna/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:08.014Z\"},\"last_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:08.014Z\"},\"last_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:08.015Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_016",
+      "route": "/es/caracteristicas/flora/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Flora del Bosque Nublado de Ecuador | Cerca de Quito",
+        "description": "Explora la flora alrededor de The Cloud Forest Retreat: bromelias, \u00e1rboles nativos y plantas estacionales, con orientaci\u00f3n para observar responsablemente.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/flora/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/flora/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/flora/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/flora/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/flora/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/flora/",
+          "name": "Flora del Bosque Nublado de Ecuador | Cerca de Quito",
+          "description": "Explora la flora alrededor de The Cloud Forest Retreat: bromelias, \u00e1rboles nativos y plantas estacionales, con orientaci\u00f3n para observar responsablemente.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/flora/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1302.109375,
+            "width": 366,
+            "height": 420,
+            "heading": 1558.125,
+            "action": 1677.515625
+          },
+          {
+            "top": 1738.109375,
+            "width": 366,
+            "height": 420,
+            "heading": 1994.125,
+            "action": 2113.515625
+          },
+          {
+            "top": 2174.109375,
+            "width": 366,
+            "height": 420,
+            "heading": 2406.796875,
+            "action": 2549.515625
+          },
+          {
+            "top": 2610.109375,
+            "width": 366,
+            "height": 420,
+            "heading": 2866.125,
+            "action": 2985.515625
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ],
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/bosque-nublado-ecuador/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/caracteristicas/fauna/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/caracteristicas/fauna/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:08.555Z\"},\"last_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:08.555Z\"},\"last_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:08.555Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_016",
+      "route": "/features/flora/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Cloud Forest Flora in Ecuador | Plants Near Quito",
+        "description": "Explore cloud forest flora around The Cloud Forest Retreat, including bromeliads, native trees and seasonal plants, with responsible observation guidance.",
+        "canonical": "https://thecloudforestretreat.com/features/flora/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/flora/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/flora/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/flora/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/flora/#webpage",
+          "url": "https://thecloudforestretreat.com/features/flora/",
+          "name": "Cloud Forest Flora in Ecuador | Plants Near Quito",
+          "description": "Explore cloud forest flora around The Cloud Forest Retreat, including bromeliads, native trees and seasonal plants, with responsible observation guidance.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/flora/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1865.421875,
+            "action": 1993.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1876.125,
+            "action": 1993.140625
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ],
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/cloud-forest-ecuador/",
+          "/cloud-forest-hiking-ecuador/",
+          "/features/choco-andino-de-pichincha/",
+          "/features/fauna/",
+          "/booking/",
+          "/contact/",
+          "/cloud-forest-ecuador/",
+          "/cloud-forest-hiking-ecuador/",
+          "/features/fauna/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:09.206Z\"},\"last_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:09.206Z\"},\"last_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:09.206Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_016",
+      "route": "/es/caracteristicas/flora/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Flora del Bosque Nublado de Ecuador | Cerca de Quito",
+        "description": "Explora la flora alrededor de The Cloud Forest Retreat: bromelias, \u00e1rboles nativos y plantas estacionales, con orientaci\u00f3n para observar responsablemente.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/flora/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/flora/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/flora/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/flora/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/flora/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/flora/",
+          "name": "Flora del Bosque Nublado de Ecuador | Cerca de Quito",
+          "description": "Explora la flora alrededor de The Cloud Forest Retreat: bromelias, \u00e1rboles nativos y plantas estacionales, con orientaci\u00f3n para observar responsablemente.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/flora/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1865.421875,
+            "action": 1993.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1865.421875,
+            "action": 1993.140625
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ],
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/bosque-nublado-ecuador/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/caracteristicas/fauna/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/caracteristicas/fauna/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:09.759Z\"},\"last_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:09.759Z\"},\"last_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:09.760Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_016",
+      "route": "/features/flora/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Cloud Forest Flora in Ecuador | Plants Near Quito",
+        "description": "Explore cloud forest flora around The Cloud Forest Retreat, including bromeliads, native trees and seasonal plants, with responsible observation guidance.",
+        "canonical": "https://thecloudforestretreat.com/features/flora/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/flora/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/flora/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/flora/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/flora/#webpage",
+          "url": "https://thecloudforestretreat.com/features/flora/",
+          "name": "Cloud Forest Flora in Ecuador | Plants Near Quito",
+          "description": "Explore cloud forest flora around The Cloud Forest Retreat, including bromeliads, native trees and seasonal plants, with responsible observation guidance.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/flora/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1494.5,
+            "action": 1614.078125
+          },
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1494.5,
+            "action": 1614.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1920.5,
+            "action": 2040.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ],
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/cloud-forest-ecuador/",
+          "/cloud-forest-hiking-ecuador/",
+          "/features/choco-andino-de-pichincha/",
+          "/features/fauna/",
+          "/booking/",
+          "/contact/",
+          "/cloud-forest-ecuador/",
+          "/cloud-forest-hiking-ecuador/",
+          "/features/fauna/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:10.288Z\"},\"last_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:10.288Z\"},\"last_page\":\"/features/flora/?utm_source=pair_016_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:10.289Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_016",
+      "route": "/es/caracteristicas/flora/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Flora del Bosque Nublado de Ecuador | Cerca de Quito",
+        "description": "Explora la flora alrededor de The Cloud Forest Retreat: bromelias, \u00e1rboles nativos y plantas estacionales, con orientaci\u00f3n para observar responsablemente.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/flora/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/flora/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/flora/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/flora/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/flora/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/flora/",
+          "name": "Flora del Bosque Nublado de Ecuador | Cerca de Quito",
+          "description": "Explora la flora alrededor de The Cloud Forest Retreat: bromelias, \u00e1rboles nativos y plantas estacionales, con orientaci\u00f3n para observar responsablemente.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/flora/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1494.5,
+            "action": 1614.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1920.5,
+            "action": 2040.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1920.5,
+            "action": 2040.078125
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ],
+          [
+            "en",
+            "/features/flora/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/flora/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/bosque-nublado-ecuador/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/caracteristicas/fauna/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/caracteristicas/fauna/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:10.982Z\"},\"last_touch\":{\"utm_source\":\"pair_016_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:10.982Z\"},\"last_page\":\"/es/caracteristicas/flora/?utm_source=pair_016_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:10.982Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_017",
+      "route": "/features/gallery/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Cloud Forest Retreat Gallery | Rooms, Views & Nature",
+        "description": "Browse real rooms, shared spaces, cloud forest views and nature scenes from The Cloud Forest Retreat near Quito, then compare rooms and plan your stay.",
+        "canonical": "https://thecloudforestretreat.com/features/gallery/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/galeria/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/gallery/#webpage",
+          "url": "https://thecloudforestretreat.com/features/gallery/",
+          "name": "Cloud Forest Retreat Gallery | Rooms, Views & Nature",
+          "description": "Browse real rooms, shared spaces, cloud forest views and nature scenes from The Cloud Forest Retreat near Quito, then compare rooms and plan your stay.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/gallery/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1290.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 1546.5625,
+            "action": 1665.953125
+          },
+          {
+            "top": 1726.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 1982.5625,
+            "action": 2101.953125
+          },
+          {
+            "top": 2162.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 2441.890625,
+            "action": 2537.953125
+          },
+          {
+            "top": 2598.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 2854.5625,
+            "action": 2973.953125
+          },
+          {
+            "top": 3034.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 3313.890625,
+            "action": 3409.953125
+          },
+          {
+            "top": 3470.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 3726.5625,
+            "action": 3845.953125
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ],
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/cloud-forest-lodge-near-quito/",
+          "/rooms/",
+          "/about/",
+          "/cloud-forest-hiking-ecuador/",
+          "/blog/best-time-to-visit-cloud-forest/",
+          "/features/activities/",
+          "/booking/",
+          "/contact/",
+          "/rooms/",
+          "/booking/",
+          "/cloud-forest-lodge-near-quito/",
+          "/rooms/common-areas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:11.744Z\"},\"last_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:11.744Z\"},\"last_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:11.745Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_017",
+      "route": "/es/caracteristicas/galeria/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Galer\u00eda del Refugio | Habitaciones, Vistas y Naturaleza",
+        "description": "Mira habitaciones reales, espacios compartidos, vistas y naturaleza de The Cloud Forest Retreat cerca de Quito; compara opciones y planifica tu estad\u00eda.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/galeria/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/galeria/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/galeria/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/galeria/",
+          "name": "Galer\u00eda del Refugio | Habitaciones, Vistas y Naturaleza",
+          "description": "Mira habitaciones reales, espacios compartidos, vistas y naturaleza de The Cloud Forest Retreat cerca de Quito; compara opciones y planifica tu estad\u00eda.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/galeria/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1331.5,
+            "width": 366,
+            "height": 420,
+            "heading": 1587.515625,
+            "action": 1706.90625
+          },
+          {
+            "top": 1767.5,
+            "width": 366,
+            "height": 420,
+            "heading": 2023.515625,
+            "action": 2142.90625
+          },
+          {
+            "top": 2203.5,
+            "width": 366,
+            "height": 420,
+            "heading": 2459.515625,
+            "action": 2578.90625
+          },
+          {
+            "top": 2639.5,
+            "width": 366,
+            "height": 420,
+            "heading": 2895.515625,
+            "action": 3014.90625
+          },
+          {
+            "top": 3075.5,
+            "width": 366,
+            "height": 420,
+            "heading": 3354.84375,
+            "action": 3450.90625
+          },
+          {
+            "top": 3511.5,
+            "width": 366,
+            "height": 420,
+            "heading": 3767.515625,
+            "action": 3886.90625
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ],
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/habitaciones/",
+          "/es/sobre-nosotros/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/blog/mejor-epoca-visitar-bosque-nublado/",
+          "/es/caracteristicas/actividades/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/reservas/",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/habitaciones/areas-comunes/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:12.285Z\"},\"last_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:12.285Z\"},\"last_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:12.285Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_017",
+      "route": "/features/gallery/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Cloud Forest Retreat Gallery | Rooms, Views & Nature",
+        "description": "Browse real rooms, shared spaces, cloud forest views and nature scenes from The Cloud Forest Retreat near Quito, then compare rooms and plan your stay.",
+        "canonical": "https://thecloudforestretreat.com/features/gallery/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/galeria/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/gallery/#webpage",
+          "url": "https://thecloudforestretreat.com/features/gallery/",
+          "name": "Cloud Forest Retreat Gallery | Rooms, Views & Nature",
+          "description": "Browse real rooms, shared spaces, cloud forest views and nature scenes from The Cloud Forest Retreat near Quito, then compare rooms and plan your stay.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/gallery/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1185.9375,
+            "width": 358,
+            "height": 410,
+            "heading": 1419.890625,
+            "action": 1536.90625
+          },
+          {
+            "top": 1185.9375,
+            "width": 358,
+            "height": 410,
+            "heading": 1419.890625,
+            "action": 1536.90625
+          },
+          {
+            "top": 1611.9375,
+            "width": 358,
+            "height": 410,
+            "heading": 1845.890625,
+            "action": 1962.90625
+          },
+          {
+            "top": 1611.9375,
+            "width": 358,
+            "height": 410,
+            "heading": 1845.890625,
+            "action": 1962.90625
+          },
+          {
+            "top": 2037.9375,
+            "width": 358,
+            "height": 410,
+            "heading": 2271.890625,
+            "action": 2388.90625
+          },
+          {
+            "top": 2037.9375,
+            "width": 358,
+            "height": 410,
+            "heading": 2271.890625,
+            "action": 2388.90625
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ],
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/cloud-forest-lodge-near-quito/",
+          "/rooms/",
+          "/about/",
+          "/cloud-forest-hiking-ecuador/",
+          "/blog/best-time-to-visit-cloud-forest/",
+          "/features/activities/",
+          "/booking/",
+          "/contact/",
+          "/rooms/",
+          "/booking/",
+          "/cloud-forest-lodge-near-quito/",
+          "/rooms/common-areas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:12.872Z\"},\"last_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:12.872Z\"},\"last_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:12.872Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_017",
+      "route": "/es/caracteristicas/galeria/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Galer\u00eda del Refugio | Habitaciones, Vistas y Naturaleza",
+        "description": "Mira habitaciones reales, espacios compartidos, vistas y naturaleza de The Cloud Forest Retreat cerca de Quito; compara opciones y planifica tu estad\u00eda.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/galeria/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/galeria/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/galeria/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/galeria/",
+          "name": "Galer\u00eda del Refugio | Habitaciones, Vistas y Naturaleza",
+          "description": "Mira habitaciones reales, espacios compartidos, vistas y naturaleza de The Cloud Forest Retreat cerca de Quito; compara opciones y planifica tu estad\u00eda.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/galeria/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1876.125,
+            "action": 1993.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1876.125,
+            "action": 1993.140625
+          },
+          {
+            "top": 2068.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 2302.125,
+            "action": 2419.140625
+          },
+          {
+            "top": 2068.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 2302.125,
+            "action": 2419.140625
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ],
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/habitaciones/",
+          "/es/sobre-nosotros/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/blog/mejor-epoca-visitar-bosque-nublado/",
+          "/es/caracteristicas/actividades/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/reservas/",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/habitaciones/areas-comunes/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:13.555Z\"},\"last_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:13.555Z\"},\"last_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:13.555Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_017",
+      "route": "/features/gallery/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Cloud Forest Retreat Gallery | Rooms, Views & Nature",
+        "description": "Browse real rooms, shared spaces, cloud forest views and nature scenes from The Cloud Forest Retreat near Quito, then compare rooms and plan your stay.",
+        "canonical": "https://thecloudforestretreat.com/features/gallery/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/galeria/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/gallery/#webpage",
+          "url": "https://thecloudforestretreat.com/features/gallery/",
+          "name": "Cloud Forest Retreat Gallery | Rooms, Views & Nature",
+          "description": "Browse real rooms, shared spaces, cloud forest views and nature scenes from The Cloud Forest Retreat near Quito, then compare rooms and plan your stay.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/gallery/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          },
+          {
+            "top": 2126.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 2369.828125,
+            "action": 2466.078125
+          },
+          {
+            "top": 2126.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 2369.828125,
+            "action": 2466.078125
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ],
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/cloud-forest-lodge-near-quito/",
+          "/rooms/",
+          "/about/",
+          "/cloud-forest-hiking-ecuador/",
+          "/blog/best-time-to-visit-cloud-forest/",
+          "/features/activities/",
+          "/booking/",
+          "/contact/",
+          "/rooms/",
+          "/booking/",
+          "/cloud-forest-lodge-near-quito/",
+          "/rooms/common-areas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:14.230Z\"},\"last_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:14.230Z\"},\"last_page\":\"/features/gallery/?utm_source=pair_017_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:14.230Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_017",
+      "route": "/es/caracteristicas/galeria/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Galer\u00eda del Refugio | Habitaciones, Vistas y Naturaleza",
+        "description": "Mira habitaciones reales, espacios compartidos, vistas y naturaleza de The Cloud Forest Retreat cerca de Quito; compara opciones y planifica tu estad\u00eda.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/galeria/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/galeria/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/gallery/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/galeria/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/galeria/",
+          "name": "Galer\u00eda del Refugio | Habitaciones, Vistas y Naturaleza",
+          "description": "Mira habitaciones reales, espacios compartidos, vistas y naturaleza de The Cloud Forest Retreat cerca de Quito; compara opciones y planifica tu estad\u00eda.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/galeria/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          },
+          {
+            "top": 2126.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 2369.828125,
+            "action": 2466.078125
+          },
+          {
+            "top": 2126.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 2369.828125,
+            "action": 2466.078125
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ],
+          [
+            "en",
+            "/features/gallery/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/galeria/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/habitaciones/",
+          "/es/sobre-nosotros/",
+          "/es/senderismo-bosque-nublado-ecuador/",
+          "/es/blog/mejor-epoca-visitar-bosque-nublado/",
+          "/es/caracteristicas/actividades/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/reservas/",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/habitaciones/areas-comunes/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:15.060Z\"},\"last_touch\":{\"utm_source\":\"pair_017_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:15.060Z\"},\"last_page\":\"/es/caracteristicas/galeria/?utm_source=pair_017_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:15.060Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_018",
+      "route": "/features/produce/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Local Produce at a Cloud Forest Retreat Near Quito",
+        "description": "Learn how seasonal fruit, herbs and garden produce can connect to a stay at The Cloud Forest Retreat, with clear guidance about availability and meals.",
+        "canonical": "https://thecloudforestretreat.com/features/produce/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/produce/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/produce/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/produce/#webpage",
+          "url": "https://thecloudforestretreat.com/features/produce/",
+          "name": "Local Produce at a Cloud Forest Retreat Near Quito",
+          "description": "Learn how seasonal fruit, herbs and garden produce can connect to a stay at The Cloud Forest Retreat, with clear guidance about availability and meals.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/produce/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1290.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 1569.890625,
+            "action": 1665.953125
+          },
+          {
+            "top": 1726.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 1982.5625,
+            "action": 2101.953125
+          },
+          {
+            "top": 2162.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 2418.5625,
+            "action": 2537.953125
+          },
+          {
+            "top": 2598.546875,
+            "width": 366,
+            "height": 420,
+            "heading": 2854.5625,
+            "action": 2973.953125
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/features/",
+          "/features/amenities/",
+          "/weekend-getaway-from-quito/",
+          "/contact/",
+          "/booking/",
+          "/contact/",
+          "/features/",
+          "/weekend-getaway-from-quito/",
+          "/features/amenities/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:15.944Z\"},\"last_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:15.944Z\"},\"last_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:15.944Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_018",
+      "route": "/es/caracteristicas/productos-locales/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Productos Locales en un Refugio Cerca de Quito",
+        "description": "Conoce c\u00f3mo frutas, hierbas y productos de temporada pueden formar parte de la estad\u00eda, con orientaci\u00f3n clara sobre disponibilidad y comidas.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/produce/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/produce/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/",
+          "name": "Productos Locales en un Refugio Cerca de Quito",
+          "description": "Conoce c\u00f3mo frutas, hierbas y productos de temporada pueden formar parte de la estad\u00eda, con orientaci\u00f3n clara sobre disponibilidad y comidas.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1331.5,
+            "width": 366,
+            "height": 420,
+            "heading": 1610.84375,
+            "action": 1706.90625
+          },
+          {
+            "top": 1767.5,
+            "width": 366,
+            "height": 420,
+            "heading": 2023.515625,
+            "action": 2142.90625
+          },
+          {
+            "top": 2203.5,
+            "width": 366,
+            "height": 420,
+            "heading": 2459.515625,
+            "action": 2578.90625
+          },
+          {
+            "top": 2639.5,
+            "width": 366,
+            "height": 420,
+            "heading": 2895.515625,
+            "action": 3014.90625
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/caracteristicas/",
+          "/es/caracteristicas/amenidades/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/contacto/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/caracteristicas/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/caracteristicas/amenidades/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:16.497Z\"},\"last_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:16.497Z\"},\"last_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:16.497Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_018",
+      "route": "/features/produce/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Local Produce at a Cloud Forest Retreat Near Quito",
+        "description": "Learn how seasonal fruit, herbs and garden produce can connect to a stay at The Cloud Forest Retreat, with clear guidance about availability and meals.",
+        "canonical": "https://thecloudforestretreat.com/features/produce/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/produce/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/produce/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/produce/#webpage",
+          "url": "https://thecloudforestretreat.com/features/produce/",
+          "name": "Local Produce at a Cloud Forest Retreat Near Quito",
+          "description": "Learn how seasonal fruit, herbs and garden produce can connect to a stay at The Cloud Forest Retreat, with clear guidance about availability and meals.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/produce/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1876.125,
+            "action": 1993.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1876.125,
+            "action": 1993.140625
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/features/",
+          "/features/amenities/",
+          "/weekend-getaway-from-quito/",
+          "/contact/",
+          "/booking/",
+          "/contact/",
+          "/features/",
+          "/weekend-getaway-from-quito/",
+          "/features/amenities/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:16.998Z\"},\"last_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:16.998Z\"},\"last_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:16.998Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_018",
+      "route": "/es/caracteristicas/productos-locales/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Productos Locales en un Refugio Cerca de Quito",
+        "description": "Conoce c\u00f3mo frutas, hierbas y productos de temporada pueden formar parte de la estad\u00eda, con orientaci\u00f3n clara sobre disponibilidad y comidas.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/produce/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/produce/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/",
+          "name": "Productos Locales en un Refugio Cerca de Quito",
+          "description": "Conoce c\u00f3mo frutas, hierbas y productos de temporada pueden formar parte de la estad\u00eda, con orientaci\u00f3n clara sobre disponibilidad y comidas.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1216.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1450.125,
+            "action": 1567.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1876.125,
+            "action": 1993.140625
+          },
+          {
+            "top": 1642.171875,
+            "width": 358,
+            "height": 410,
+            "heading": 1876.125,
+            "action": 1993.140625
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/caracteristicas/",
+          "/es/caracteristicas/amenidades/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/contacto/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/caracteristicas/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/caracteristicas/amenidades/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:17.567Z\"},\"last_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:17.567Z\"},\"last_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:17.568Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_018",
+      "route": "/features/produce/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Local Produce at a Cloud Forest Retreat Near Quito",
+        "description": "Learn how seasonal fruit, herbs and garden produce can connect to a stay at The Cloud Forest Retreat, with clear guidance about availability and meals.",
+        "canonical": "https://thecloudforestretreat.com/features/produce/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/produce/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/produce/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/produce/#webpage",
+          "url": "https://thecloudforestretreat.com/features/produce/",
+          "name": "Local Produce at a Cloud Forest Retreat Near Quito",
+          "description": "Learn how seasonal fruit, herbs and garden produce can connect to a stay at The Cloud Forest Retreat, with clear guidance about availability and meals.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/produce/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          }
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "#features-to-explore",
+          "/features/",
+          "/features/amenities/",
+          "/weekend-getaway-from-quito/",
+          "/contact/",
+          "/booking/",
+          "/contact/",
+          "/features/",
+          "/weekend-getaway-from-quito/",
+          "/features/amenities/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:18.203Z\"},\"last_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:18.203Z\"},\"last_page\":\"/features/produce/?utm_source=pair_018_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:18.203Z\"}"
+        }
+      }
+    },
+    {
+      "pair": "pair_018",
+      "route": "/es/caracteristicas/productos-locales/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Productos Locales en un Refugio Cerca de Quito",
+        "description": "Conoce c\u00f3mo frutas, hierbas y productos de temporada pueden formar parte de la estad\u00eda, con orientaci\u00f3n clara sobre disponibilidad y comidas.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/produce/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/produce/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/",
+          "name": "Productos Locales en un Refugio Cerca de Quito",
+          "description": "Conoce c\u00f3mo frutas, hierbas y productos de temporada pueden formar parte de la estad\u00eda, con orientaci\u00f3n clara sobre disponibilidad y comidas.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/productos-locales/#breadcrumb"
+          }
+        },
+        "overflow": false,
+        "cards": [
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1274.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1517.828125,
+            "action": 1614.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          },
+          {
+            "top": 1700.078125,
+            "width": 632,
+            "height": 410,
+            "heading": 1943.828125,
+            "action": 2040.078125
+          }
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ],
+          [
+            "en",
+            "/features/produce/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/productos-locales/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "#features-to-explore",
+          "/es/caracteristicas/",
+          "/es/caracteristicas/amenidades/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/contacto/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/caracteristicas/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/caracteristicas/amenidades/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:18.958Z\"},\"last_touch\":{\"utm_source\":\"pair_018_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:40:18.958Z\"},\"last_page\":\"/es/caracteristicas/productos-locales/?utm_source=pair_018_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:40:18.959Z\"}"
+        }
+      }
+    }
+  ],
+  "links": {
+    "/features/flora/": {
+      "current_unique_inlinks": "8",
+      "current_inlink_sources": "/birds-of-the-cloud-forest-ecuador/ | /blog/ | /blog/things-to-do-near-quito-nature/ | /cloud-forest-quito-ecuador/ | /es/caracteristicas/flora/ | /features/choco-andino-de-pichincha/ | /features/pululahua/ | /features/rio-guayllabamba/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "9",
+      "target": "4"
+    },
+    "/es/caracteristicas/flora/": {
+      "current_unique_inlinks": "8",
+      "current_inlink_sources": "/es/aves-del-bosque-nublado-ecuador/ | /es/blog/ | /es/blog/que-hacer-cerca-de-quito-naturaleza/ | /es/bosque-nublado-quito-ecuador/ | /es/caracteristicas/choco-andino-de-pichincha/ | /es/caracteristicas/pululahua/ | /es/caracteristicas/rio-guayllabamba/ | /features/flora/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "9",
+      "target": "4"
+    },
+    "/features/gallery/": {
+      "current_unique_inlinks": "12",
+      "current_inlink_sources": "/birds-of-the-cloud-forest-ecuador/ | /blog/ | /blog/best-time-to-visit-cloud-forest/ | /blog/birdwatching-near-quito/ | /blog/cloud-forest-itinerary-3-days/ | /es/blog/avistamiento-aves-cerca-de-quito/ | /es/blog/mejor-epoca-visitar-bosque-nublado/ | /es/caracteristicas/galeria/ | /features/amenities/ | /features/fauna/ | /features/pululahua/ | /features/rio-guayllabamba/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "12",
+      "target": "4"
+    },
+    "/es/caracteristicas/galeria/": {
+      "current_unique_inlinks": "8",
+      "current_inlink_sources": "/es/aves-del-bosque-nublado-ecuador/ | /es/blog/ | /es/blog/itinerario-bosque-nublado-3-dias/ | /es/caracteristicas/amenidades/ | /es/caracteristicas/fauna/ | /es/caracteristicas/pululahua/ | /es/caracteristicas/rio-guayllabamba/ | /features/gallery/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "12",
+      "target": "4"
+    },
+    "/features/produce/": {
+      "current_unique_inlinks": "4",
+      "current_inlink_sources": "/blog/ | /cloud-forest-quito-ecuador/ | /es/caracteristicas/productos-locales/ | /nature-activities-quito/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "8",
+      "target": "4"
+    },
+    "/es/caracteristicas/productos-locales/": {
+      "current_unique_inlinks": "4",
+      "current_inlink_sources": "/es/actividades-naturaleza-quito/ | /es/blog/ | /es/bosque-nublado-quito-ecuador/ | /features/produce/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "8",
+      "target": "4"
+    }
+  }
+}
