@@ -1,0 +1,3151 @@
+{
+  "batch": "pairs_019_021",
+  "date": "2026-09-30",
+  "viewports": [
+    390,
+    768,
+    1440
+  ],
+  "browser_results": [
+    {
+      "pair": "pair_019",
+      "route": "/features/pululahua/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pululahua Near Quito | Volcanic Landscape and Nature",
+        "description": "Discover Pululahua near Quito, its volcanic caldera, changing cloud cover and practical planning considerations for a nature-focused stay in Pichincha.",
+        "canonical": "https://thecloudforestretreat.com/features/pululahua/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/pululahua/#webpage",
+          "url": "https://thecloudforestretreat.com/features/pululahua/",
+          "name": "Pululahua Near Quito | Volcanic Landscape and Nature",
+          "description": "Discover Pululahua near Quito, its volcanic caldera, changing cloud cover and practical planning considerations for a nature-focused stay in Pichincha.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/pululahua/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1637.9375,
+              "width": 366,
+              "height": 431.09375
+            },
+            {
+              "top": 2085.03125,
+              "width": 366,
+              "height": 455.28125
+            },
+            {
+              "top": 2556.3125,
+              "width": 366,
+              "height": 455.28125
+            }
+          ],
+          [
+            {
+              "top": 4131.5,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4557.5,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4983.5,
+              "width": 366,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 5706.78125,
+              "width": 320,
+              "height": 142.640625
+            },
+            {
+              "top": 5849.421875,
+              "width": 320,
+              "height": 166.859375
+            },
+            {
+              "top": 6016.28125,
+              "width": 320,
+              "height": 166.859375
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ],
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "#nature-guide",
+          "/booking/",
+          "/waterfalls-near-quito/",
+          "/features/attractions/",
+          "/weekend-getaway-from-quito/",
+          "/waterfalls-near-quito/",
+          "/features/attractions/",
+          "/weekend-getaway-from-quito/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:01.243Z\"},\"last_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:01.243Z\"},\"last_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:01.244Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_019",
+      "route": "/es/caracteristicas/pululahua/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pululahua Cerca de Quito | Paisaje Volc\u00e1nico y Naturaleza",
+        "description": "Descubre Pululahua cerca de Quito, su caldera volc\u00e1nica, nubosidad cambiante y detalles pr\u00e1cticos para una estad\u00eda de naturaleza en Pichincha.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/",
+          "name": "Pululahua Cerca de Quito | Paisaje Volc\u00e1nico y Naturaleza",
+          "description": "Descubre Pululahua cerca de Quito, su caldera volc\u00e1nica, nubosidad cambiante y detalles pr\u00e1cticos para una estad\u00eda de naturaleza en Pichincha.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1570.296875,
+              "width": 366,
+              "height": 431.09375
+            },
+            {
+              "top": 2017.390625,
+              "width": 366,
+              "height": 431.09375
+            },
+            {
+              "top": 2464.484375,
+              "width": 366,
+              "height": 455.28125
+            }
+          ],
+          [
+            {
+              "top": 3995.640625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4421.640625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4847.640625,
+              "width": 366,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 5611.046875,
+              "width": 320,
+              "height": 165.859375
+            },
+            {
+              "top": 5776.90625,
+              "width": 320,
+              "height": 166.859375
+            },
+            {
+              "top": 5943.765625,
+              "width": 320,
+              "height": 166.859375
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ],
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "#nature-guide",
+          "/es/reservas/",
+          "/es/cascadas-cerca-de-quito/",
+          "/es/caracteristicas/atracciones/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/cascadas-cerca-de-quito/",
+          "/es/caracteristicas/atracciones/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:01.818Z\"},\"last_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:01.818Z\"},\"last_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:01.819Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_019",
+      "route": "/features/pululahua/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pululahua Near Quito | Volcanic Landscape and Nature",
+        "description": "Discover Pululahua near Quito, its volcanic caldera, changing cloud cover and practical planning considerations for a nature-focused stay in Pichincha.",
+        "canonical": "https://thecloudforestretreat.com/features/pululahua/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/pululahua/#webpage",
+          "url": "https://thecloudforestretreat.com/features/pululahua/",
+          "name": "Pululahua Near Quito | Volcanic Landscape and Nature",
+          "description": "Discover Pululahua near Quito, its volcanic caldera, changing cloud cover and practical planning considerations for a nature-focused stay in Pichincha.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/pululahua/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1372.015625,
+              "width": 358,
+              "height": 449.28125
+            },
+            {
+              "top": 1372.015625,
+              "width": 358,
+              "height": 449.28125
+            },
+            {
+              "top": 1837.296875,
+              "width": 732,
+              "height": 705.59375
+            }
+          ],
+          [
+            {
+              "top": 3439.109375,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3439.109375,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3865.109375,
+              "width": 732,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 4533.109375,
+              "width": 637.84375,
+              "height": 142.640625
+            },
+            {
+              "top": 4675.75,
+              "width": 637.84375,
+              "height": 143.640625
+            },
+            {
+              "top": 4819.390625,
+              "width": 637.84375,
+              "height": 143.640625
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ],
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "#nature-guide",
+          "/booking/",
+          "/waterfalls-near-quito/",
+          "/features/attractions/",
+          "/weekend-getaway-from-quito/",
+          "/waterfalls-near-quito/",
+          "/features/attractions/",
+          "/weekend-getaway-from-quito/",
+          "/booking/"
+        ],
+        "scripts": [
+          "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:02.363Z\"},\"last_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:02.363Z\"},\"last_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:02.364Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_019",
+      "route": "/es/caracteristicas/pululahua/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pululahua Cerca de Quito | Paisaje Volc\u00e1nico y Naturaleza",
+        "description": "Descubre Pululahua cerca de Quito, su caldera volc\u00e1nica, nubosidad cambiante y detalles pr\u00e1cticos para una estad\u00eda de naturaleza en Pichincha.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/",
+          "name": "Pululahua Cerca de Quito | Paisaje Volc\u00e1nico y Naturaleza",
+          "description": "Descubre Pululahua cerca de Quito, su caldera volc\u00e1nica, nubosidad cambiante y detalles pr\u00e1cticos para una estad\u00eda de naturaleza en Pichincha.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1344.5,
+              "width": 358,
+              "height": 425.09375
+            },
+            {
+              "top": 1344.5,
+              "width": 358,
+              "height": 425.09375
+            },
+            {
+              "top": 1785.59375,
+              "width": 732,
+              "height": 681.40625
+            }
+          ],
+          [
+            {
+              "top": 3348.921875,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3348.921875,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3774.921875,
+              "width": 732,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 4442.921875,
+              "width": 637.84375,
+              "height": 142.640625
+            },
+            {
+              "top": 4585.5625,
+              "width": 637.84375,
+              "height": 143.640625
+            },
+            {
+              "top": 4729.203125,
+              "width": 637.84375,
+              "height": 143.640625
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ],
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "#nature-guide",
+          "/es/reservas/",
+          "/es/cascadas-cerca-de-quito/",
+          "/es/caracteristicas/atracciones/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/cascadas-cerca-de-quito/",
+          "/es/caracteristicas/atracciones/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:03.051Z\"},\"last_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:03.051Z\"},\"last_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:03.051Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_019",
+      "route": "/features/pululahua/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pululahua Near Quito | Volcanic Landscape and Nature",
+        "description": "Discover Pululahua near Quito, its volcanic caldera, changing cloud cover and practical planning considerations for a nature-focused stay in Pichincha.",
+        "canonical": "https://thecloudforestretreat.com/features/pululahua/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/pululahua/#webpage",
+          "url": "https://thecloudforestretreat.com/features/pululahua/",
+          "name": "Pululahua Near Quito | Volcanic Landscape and Nature",
+          "description": "Discover Pululahua near Quito, its volcanic caldera, changing cloud cover and practical planning considerations for a nature-focused stay in Pichincha.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/pululahua/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 478.203125
+            },
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 478.203125
+            },
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 478.203125
+            }
+          ],
+          [
+            {
+              "top": 2540.515625,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2540.515625,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2540.515625,
+              "width": 416,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 3359.078125,
+              "width": 378,
+              "height": 165.859375
+            },
+            {
+              "top": 3359.078125,
+              "width": 378,
+              "height": 165.859375
+            },
+            {
+              "top": 3359.078125,
+              "width": 378,
+              "height": 165.859375
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ],
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "#nature-guide",
+          "/booking/",
+          "/waterfalls-near-quito/",
+          "/features/attractions/",
+          "/weekend-getaway-from-quito/",
+          "/waterfalls-near-quito/",
+          "/features/attractions/",
+          "/weekend-getaway-from-quito/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:03.771Z\"},\"last_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:03.771Z\"},\"last_page\":\"/features/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:03.771Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_019",
+      "route": "/es/caracteristicas/pululahua/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pululahua Cerca de Quito | Paisaje Volc\u00e1nico y Naturaleza",
+        "description": "Descubre Pululahua cerca de Quito, su caldera volc\u00e1nica, nubosidad cambiante y detalles pr\u00e1cticos para una estad\u00eda de naturaleza en Pichincha.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/pululahua/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/",
+          "name": "Pululahua Cerca de Quito | Paisaje Volc\u00e1nico y Naturaleza",
+          "description": "Descubre Pululahua cerca de Quito, su caldera volc\u00e1nica, nubosidad cambiante y detalles pr\u00e1cticos para una estad\u00eda de naturaleza en Pichincha.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 478.203125
+            },
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 478.203125
+            },
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 478.203125
+            }
+          ],
+          [
+            {
+              "top": 2482.640625,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2482.640625,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2482.640625,
+              "width": 416,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 3301.203125,
+              "width": 378,
+              "height": 165.859375
+            },
+            {
+              "top": 3301.203125,
+              "width": 378,
+              "height": 165.859375
+            },
+            {
+              "top": 3301.203125,
+              "width": 378,
+              "height": 165.859375
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ],
+          [
+            "en",
+            "/features/pululahua/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/pululahua/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "#nature-guide",
+          "/es/reservas/",
+          "/es/cascadas-cerca-de-quito/",
+          "/es/caracteristicas/atracciones/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/cascadas-cerca-de-quito/",
+          "/es/caracteristicas/atracciones/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:04.470Z\"},\"last_touch\":{\"utm_source\":\"pair_019_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:04.470Z\"},\"last_page\":\"/es/caracteristicas/pululahua/?utm_source=pair_019_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:04.470Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_020",
+      "route": "/features/rio-guayllabamba/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Guayllabamba River | Cloud Forest Context Near Quito",
+        "description": "Learn how the Guayllabamba River and its valley connect water, elevation and cloud forest habitats near The Cloud Forest Retreat in Pichincha, Ecuador.",
+        "canonical": "https://thecloudforestretreat.com/features/rio-guayllabamba/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/rio-guayllabamba/#webpage",
+          "url": "https://thecloudforestretreat.com/features/rio-guayllabamba/",
+          "name": "Guayllabamba River | Cloud Forest Context Near Quito",
+          "description": "Learn how the Guayllabamba River and its valley connect water, elevation and cloud forest habitats near The Cloud Forest Retreat in Pichincha, Ecuador.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/rio-guayllabamba/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1648.09375,
+              "width": 366,
+              "height": 431.09375
+            },
+            {
+              "top": 2095.1875,
+              "width": 366,
+              "height": 480.078125
+            },
+            {
+              "top": 2591.265625,
+              "width": 366,
+              "height": 455.890625
+            }
+          ],
+          [
+            {
+              "top": 4167.0625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4593.0625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 5019.0625,
+              "width": 366,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 5809.984375,
+              "width": 320,
+              "height": 165.859375
+            },
+            {
+              "top": 5975.84375,
+              "width": 320,
+              "height": 166.859375
+            },
+            {
+              "top": 6142.703125,
+              "width": 320,
+              "height": 166.859375
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "#nature-guide",
+          "/booking/",
+          "/features/choco-andino-de-pichincha/",
+          "/cloud-forest-ecuador/",
+          "/booking/",
+          "/features/choco-andino-de-pichincha/",
+          "/cloud-forest-ecuador/",
+          "/nature-activities-quito/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:05.153Z\"},\"last_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:05.153Z\"},\"last_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:05.154Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_020",
+      "route": "/es/caracteristicas/rio-guayllabamba/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "R\u00edo Guayllabamba | Contexto del Bosque Cerca de Quito",
+        "description": "Conoce c\u00f3mo el r\u00edo Guayllabamba conecta agua, elevaci\u00f3n y h\u00e1bitats del bosque nublado cerca de The Cloud Forest Retreat en Pichincha, Ecuador.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/",
+          "name": "R\u00edo Guayllabamba | Contexto del Bosque Cerca de Quito",
+          "description": "Conoce c\u00f3mo el r\u00edo Guayllabamba conecta agua, elevaci\u00f3n y h\u00e1bitats del bosque nublado cerca de The Cloud Forest Retreat en Pichincha, Ecuador.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1591.296875,
+              "width": 366,
+              "height": 455.890625
+            },
+            {
+              "top": 2063.1875,
+              "width": 366,
+              "height": 480.078125
+            },
+            {
+              "top": 2559.265625,
+              "width": 366,
+              "height": 455.890625
+            }
+          ],
+          [
+            {
+              "top": 4123.890625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4549.890625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4975.890625,
+              "width": 366,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 5766.8125,
+              "width": 320,
+              "height": 142.640625
+            },
+            {
+              "top": 5909.453125,
+              "width": 320,
+              "height": 166.859375
+            },
+            {
+              "top": 6076.3125,
+              "width": 320,
+              "height": 166.859375
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "#nature-guide",
+          "/es/reservas/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/reservas/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/actividades-naturaleza-quito/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:05.749Z\"},\"last_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:05.749Z\"},\"last_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:05.750Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_020",
+      "route": "/features/rio-guayllabamba/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Guayllabamba River | Cloud Forest Context Near Quito",
+        "description": "Learn how the Guayllabamba River and its valley connect water, elevation and cloud forest habitats near The Cloud Forest Retreat in Pichincha, Ecuador.",
+        "canonical": "https://thecloudforestretreat.com/features/rio-guayllabamba/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/rio-guayllabamba/#webpage",
+          "url": "https://thecloudforestretreat.com/features/rio-guayllabamba/",
+          "name": "Guayllabamba River | Cloud Forest Context Near Quito",
+          "description": "Learn how the Guayllabamba River and its valley connect water, elevation and cloud forest habitats near The Cloud Forest Retreat in Pichincha, Ecuador.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/rio-guayllabamba/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1372.015625,
+              "width": 358,
+              "height": 474.078125
+            },
+            {
+              "top": 1372.015625,
+              "width": 358,
+              "height": 474.078125
+            },
+            {
+              "top": 1862.09375,
+              "width": 732,
+              "height": 681.40625
+            }
+          ],
+          [
+            {
+              "top": 3425.421875,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3425.421875,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3851.421875,
+              "width": 732,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 4546.9375,
+              "width": 637.84375,
+              "height": 142.640625
+            },
+            {
+              "top": 4689.578125,
+              "width": 637.84375,
+              "height": 143.640625
+            },
+            {
+              "top": 4833.21875,
+              "width": 637.84375,
+              "height": 143.640625
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "#nature-guide",
+          "/booking/",
+          "/features/choco-andino-de-pichincha/",
+          "/cloud-forest-ecuador/",
+          "/booking/",
+          "/features/choco-andino-de-pichincha/",
+          "/cloud-forest-ecuador/",
+          "/nature-activities-quito/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:06.386Z\"},\"last_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:06.386Z\"},\"last_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:06.386Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_020",
+      "route": "/es/caracteristicas/rio-guayllabamba/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "R\u00edo Guayllabamba | Contexto del Bosque Cerca de Quito",
+        "description": "Conoce c\u00f3mo el r\u00edo Guayllabamba conecta agua, elevaci\u00f3n y h\u00e1bitats del bosque nublado cerca de The Cloud Forest Retreat en Pichincha, Ecuador.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/",
+          "name": "R\u00edo Guayllabamba | Contexto del Bosque Cerca de Quito",
+          "description": "Conoce c\u00f3mo el r\u00edo Guayllabamba conecta agua, elevaci\u00f3n y h\u00e1bitats del bosque nublado cerca de The Cloud Forest Retreat en Pichincha, Ecuador.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1344.5,
+              "width": 358,
+              "height": 474.078125
+            },
+            {
+              "top": 1344.5,
+              "width": 358,
+              "height": 474.078125
+            },
+            {
+              "top": 1834.578125,
+              "width": 732,
+              "height": 681.40625
+            }
+          ],
+          [
+            {
+              "top": 3407.03125,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3407.03125,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3833.03125,
+              "width": 732,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 4501.03125,
+              "width": 637.84375,
+              "height": 142.640625
+            },
+            {
+              "top": 4643.671875,
+              "width": 637.84375,
+              "height": 143.640625
+            },
+            {
+              "top": 4787.3125,
+              "width": 637.84375,
+              "height": 143.640625
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "#nature-guide",
+          "/es/reservas/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/reservas/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/actividades-naturaleza-quito/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:07.037Z\"},\"last_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:07.037Z\"},\"last_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:07.038Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_020",
+      "route": "/features/rio-guayllabamba/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Guayllabamba River | Cloud Forest Context Near Quito",
+        "description": "Learn how the Guayllabamba River and its valley connect water, elevation and cloud forest habitats near The Cloud Forest Retreat in Pichincha, Ecuador.",
+        "canonical": "https://thecloudforestretreat.com/features/rio-guayllabamba/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/features/rio-guayllabamba/#webpage",
+          "url": "https://thecloudforestretreat.com/features/rio-guayllabamba/",
+          "name": "Guayllabamba River | Cloud Forest Context Near Quito",
+          "description": "Learn how the Guayllabamba River and its valley connect water, elevation and cloud forest habitats near The Cloud Forest Retreat in Pichincha, Ecuador.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/features/rio-guayllabamba/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 512.609375
+            },
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 512.609375
+            },
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 512.609375
+            }
+          ],
+          [
+            {
+              "top": 2545.640625,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2545.640625,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2545.640625,
+              "width": 416,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 3364.203125,
+              "width": 378,
+              "height": 142.640625
+            },
+            {
+              "top": 3364.203125,
+              "width": 378,
+              "height": 142.640625
+            },
+            {
+              "top": 3364.203125,
+              "width": 378,
+              "height": 142.640625
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "#nature-guide",
+          "/booking/",
+          "/features/choco-andino-de-pichincha/",
+          "/cloud-forest-ecuador/",
+          "/booking/",
+          "/features/choco-andino-de-pichincha/",
+          "/cloud-forest-ecuador/",
+          "/nature-activities-quito/",
+          "/booking/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:07.696Z\"},\"last_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:07.696Z\"},\"last_page\":\"/features/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:07.696Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_020",
+      "route": "/es/caracteristicas/rio-guayllabamba/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "R\u00edo Guayllabamba | Contexto del Bosque Cerca de Quito",
+        "description": "Conoce c\u00f3mo el r\u00edo Guayllabamba conecta agua, elevaci\u00f3n y h\u00e1bitats del bosque nublado cerca de The Cloud Forest Retreat en Pichincha, Ecuador.",
+        "canonical": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/#webpage",
+          "url": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/",
+          "name": "R\u00edo Guayllabamba | Contexto del Bosque Cerca de Quito",
+          "description": "Conoce c\u00f3mo el r\u00edo Guayllabamba conecta agua, elevaci\u00f3n y h\u00e1bitats del bosque nublado cerca de The Cloud Forest Retreat en Pichincha, Ecuador.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 512.609375
+            },
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 512.609375
+            },
+            {
+              "top": 1190.75,
+              "width": 416,
+              "height": 512.609375
+            }
+          ],
+          [
+            {
+              "top": 2539.203125,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2539.203125,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2539.203125,
+              "width": 416,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 3357.765625,
+              "width": 378,
+              "height": 165.859375
+            },
+            {
+              "top": 3357.765625,
+              "width": 378,
+              "height": 165.859375
+            },
+            {
+              "top": 3357.765625,
+              "width": 378,
+              "height": 165.859375
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ],
+          [
+            "en",
+            "/features/rio-guayllabamba/"
+          ],
+          [
+            "es",
+            "/es/caracteristicas/rio-guayllabamba/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "#nature-guide",
+          "/es/reservas/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/reservas/",
+          "/es/caracteristicas/choco-andino-de-pichincha/",
+          "/es/bosque-nublado-ecuador/",
+          "/es/actividades-naturaleza-quito/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:08.377Z\"},\"last_touch\":{\"utm_source\":\"pair_020_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:08.377Z\"},\"last_page\":\"/es/caracteristicas/rio-guayllabamba/?utm_source=pair_020_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:08.377Z\"}"
+        },
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding"
+      }
+    },
+    {
+      "pair": "pair_021",
+      "route": "/privacy-policy/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Privacy Policy | The Cloud Forest Retreat",
+        "description": "Review how The Cloud Forest Retreat collects, uses, stores and protects website, inquiry, booking, attribution and Instagram publishing information.",
+        "canonical": "https://thecloudforestretreat.com/privacy-policy/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/politica-de-privacidad/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/privacy-policy/#webpage",
+          "url": "https://thecloudforestretreat.com/privacy-policy/",
+          "name": "Privacy Policy | The Cloud Forest Retreat",
+          "description": "Review how The Cloud Forest Retreat collects, uses, stores and protects website, inquiry, booking, attribution and Instagram publishing information.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/privacy-policy/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ],
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-faq",
+          "/contact/",
+          "/terms-of-service/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:09.034Z\"},\"last_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:09.034Z\"},\"last_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:09.034Z\"}"
+        },
+        "cluster": "legal",
+        "template": "premium-legal"
+      }
+    },
+    {
+      "pair": "pair_021",
+      "route": "/es/politica-de-privacidad/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pol\u00edtica de Privacidad | The Cloud Forest Retreat",
+        "description": "Conoce c\u00f3mo The Cloud Forest Retreat recopila, usa, guarda y protege datos del sitio, consultas, reservas, atribuci\u00f3n y publicaci\u00f3n en Instagram.",
+        "canonical": "https://thecloudforestretreat.com/es/politica-de-privacidad/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/politica-de-privacidad/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/politica-de-privacidad/#webpage",
+          "url": "https://thecloudforestretreat.com/es/politica-de-privacidad/",
+          "name": "Pol\u00edtica de Privacidad | The Cloud Forest Retreat",
+          "description": "Conoce c\u00f3mo The Cloud Forest Retreat recopila, usa, guarda y protege datos del sitio, consultas, reservas, atribuci\u00f3n y publicaci\u00f3n en Instagram.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/politica-de-privacidad/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ],
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-faq",
+          "/es/contacto/",
+          "/es/terminos-de-servicio/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:09.582Z\"},\"last_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:09.582Z\"},\"last_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:09.582Z\"}"
+        },
+        "cluster": "legal",
+        "template": "premium-legal"
+      }
+    },
+    {
+      "pair": "pair_021",
+      "route": "/privacy-policy/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Privacy Policy | The Cloud Forest Retreat",
+        "description": "Review how The Cloud Forest Retreat collects, uses, stores and protects website, inquiry, booking, attribution and Instagram publishing information.",
+        "canonical": "https://thecloudforestretreat.com/privacy-policy/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/politica-de-privacidad/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/privacy-policy/#webpage",
+          "url": "https://thecloudforestretreat.com/privacy-policy/",
+          "name": "Privacy Policy | The Cloud Forest Retreat",
+          "description": "Review how The Cloud Forest Retreat collects, uses, stores and protects website, inquiry, booking, attribution and Instagram publishing information.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/privacy-policy/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ],
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-faq",
+          "/contact/",
+          "/terms-of-service/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:10.047Z\"},\"last_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:10.047Z\"},\"last_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:10.047Z\"}"
+        },
+        "cluster": "legal",
+        "template": "premium-legal"
+      }
+    },
+    {
+      "pair": "pair_021",
+      "route": "/es/politica-de-privacidad/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pol\u00edtica de Privacidad | The Cloud Forest Retreat",
+        "description": "Conoce c\u00f3mo The Cloud Forest Retreat recopila, usa, guarda y protege datos del sitio, consultas, reservas, atribuci\u00f3n y publicaci\u00f3n en Instagram.",
+        "canonical": "https://thecloudforestretreat.com/es/politica-de-privacidad/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/politica-de-privacidad/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/politica-de-privacidad/#webpage",
+          "url": "https://thecloudforestretreat.com/es/politica-de-privacidad/",
+          "name": "Pol\u00edtica de Privacidad | The Cloud Forest Retreat",
+          "description": "Conoce c\u00f3mo The Cloud Forest Retreat recopila, usa, guarda y protege datos del sitio, consultas, reservas, atribuci\u00f3n y publicaci\u00f3n en Instagram.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/politica-de-privacidad/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ],
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-faq",
+          "/es/contacto/",
+          "/es/terminos-de-servicio/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:10.522Z\"},\"last_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:10.522Z\"},\"last_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:10.522Z\"}"
+        },
+        "cluster": "legal",
+        "template": "premium-legal"
+      }
+    },
+    {
+      "pair": "pair_021",
+      "route": "/privacy-policy/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Privacy Policy | The Cloud Forest Retreat",
+        "description": "Review how The Cloud Forest Retreat collects, uses, stores and protects website, inquiry, booking, attribution and Instagram publishing information.",
+        "canonical": "https://thecloudforestretreat.com/privacy-policy/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/politica-de-privacidad/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/privacy-policy/#webpage",
+          "url": "https://thecloudforestretreat.com/privacy-policy/",
+          "name": "Privacy Policy | The Cloud Forest Retreat",
+          "description": "Review how The Cloud Forest Retreat collects, uses, stores and protects website, inquiry, booking, attribution and Instagram publishing information.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/privacy-policy/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ],
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-faq",
+          "/contact/",
+          "/terms-of-service/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:11.001Z\"},\"last_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:11.001Z\"},\"last_page\":\"/privacy-policy/?utm_source=pair_021_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:11.001Z\"}"
+        },
+        "cluster": "legal",
+        "template": "premium-legal"
+      }
+    },
+    {
+      "pair": "pair_021",
+      "route": "/es/politica-de-privacidad/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "keyboard": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Pol\u00edtica de Privacidad | The Cloud Forest Retreat",
+        "description": "Conoce c\u00f3mo The Cloud Forest Retreat recopila, usa, guarda y protege datos del sitio, consultas, reservas, atribuci\u00f3n y publicaci\u00f3n en Instagram.",
+        "canonical": "https://thecloudforestretreat.com/es/politica-de-privacidad/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/politica-de-privacidad/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/privacy-policy/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/politica-de-privacidad/#webpage",
+          "url": "https://thecloudforestretreat.com/es/politica-de-privacidad/",
+          "name": "Pol\u00edtica de Privacidad | The Cloud Forest Retreat",
+          "description": "Conoce c\u00f3mo The Cloud Forest Retreat recopila, usa, guarda y protege datos del sitio, consultas, reservas, atribuci\u00f3n y publicaci\u00f3n en Instagram.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/politica-de-privacidad/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ],
+          [
+            "en",
+            "/privacy-policy/"
+          ],
+          [
+            "es",
+            "/es/politica-de-privacidad/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-faq",
+          "/es/contacto/",
+          "/es/terminos-de-servicio/"
+        ],
+        "scripts": [
+          "",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+          "http://127.0.0.1:4173/assets/js/head.js?v=2",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "attribution": {
+          "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:11.578Z\"},\"last_touch\":{\"utm_source\":\"pair_021_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:03:11.578Z\"},\"last_page\":\"/es/politica-de-privacidad/?utm_source=pair_021_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:03:11.579Z\"}"
+        },
+        "cluster": "legal",
+        "template": "premium-legal"
+      }
+    }
+  ],
+  "link_audit": {
+    "/es/caracteristicas/pululahua/": {
+      "current_unique_inlinks": "9",
+      "current_inlink_sources": "/es/aves-del-bosque-nublado-ecuador/ | /es/blog/que-hacer-cerca-de-quito-naturaleza/ | /es/bosque-nublado-quito-ecuador/ | /es/caracteristicas/ | /es/caracteristicas/atracciones/ | /es/colibries-quito-ecuador/ | /es/guia-avistamiento-aves-ecuador/ | /es/lodge-avistamiento-aves-ecuador/ | /features/pululahua/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "7",
+      "target": "6",
+      "broken_local_outlinks": []
+    },
+    "/es/caracteristicas/rio-guayllabamba/": {
+      "current_unique_inlinks": "11",
+      "current_inlink_sources": "/es/actividades-naturaleza-quito/ | /es/aves-del-bosque-nublado-ecuador/ | /es/blog/ | /es/blog/como-llegar-cloud-forest-retreat/ | /es/blog/que-hacer-cerca-de-quito-naturaleza/ | /es/bosque-nublado-quito-ecuador/ | /es/caracteristicas/ | /es/colibries-quito-ecuador/ | /es/guia-avistamiento-aves-ecuador/ | /es/lodge-avistamiento-aves-ecuador/ | /features/rio-guayllabamba/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "7",
+      "target": "6",
+      "broken_local_outlinks": []
+    },
+    "/es/politica-de-privacidad/": {
+      "current_unique_inlinks": "2",
+      "current_inlink_sources": "/es/terminos-de-servicio/ | /privacy-policy/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "4",
+      "target": "2",
+      "broken_local_outlinks": []
+    },
+    "/features/pululahua/": {
+      "current_unique_inlinks": "9",
+      "current_inlink_sources": "/birds-of-the-cloud-forest-ecuador/ | /birdwatching-ecuador-guide/ | /birdwatching-lodge-ecuador/ | /blog/things-to-do-near-quito-nature/ | /cloud-forest-quito-ecuador/ | /es/caracteristicas/pululahua/ | /features/ | /features/attractions/ | /hummingbirds-quito-ecuador/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "7",
+      "target": "6",
+      "broken_local_outlinks": []
+    },
+    "/features/rio-guayllabamba/": {
+      "current_unique_inlinks": "11",
+      "current_inlink_sources": "/birds-of-the-cloud-forest-ecuador/ | /birdwatching-ecuador-guide/ | /birdwatching-lodge-ecuador/ | /blog/ | /blog/how-to-get-to-cloud-forest-retreat/ | /blog/things-to-do-near-quito-nature/ | /cloud-forest-quito-ecuador/ | /es/caracteristicas/rio-guayllabamba/ | /features/ | /hummingbirds-quito-ecuador/ | /nature-activities-quito/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "7",
+      "target": "6",
+      "broken_local_outlinks": []
+    },
+    "/privacy-policy/": {
+      "current_unique_inlinks": "2",
+      "current_inlink_sources": "/es/politica-de-privacidad/ | /terms-of-service/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "4",
+      "target": "2",
+      "broken_local_outlinks": []
+    }
+  },
+  "summary": {
+    "renders": 18,
+    "passed": 18,
+    "failed": 0
+  }
+}
