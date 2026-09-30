@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-30",
+  "pairs": [
+    "pair_038",
+    "pair_039",
+    "pair_040"
+  ],
+  "routes": [
+    "/birds-of-the-cloud-forest-ecuador/",
+    "/es/aves-del-bosque-nublado-ecuador/",
+    "/hummingbirds-quito-ecuador/",
+    "/es/colibries-quito-ecuador/",
+    "/birdwatching-ecuador-guide/",
+    "/es/guia-avistamiento-aves-ecuador/"
+  ],
+  "implementation_commit": "cb61f94",
+  "staging_base_url": "https://codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev/",
+  "cloudflare_checks": {
+    "thecloudforestretreat-staging": "success",
+    "thecloudforestretreat-site": "success"
+  },
+  "browser_qa": {
+    "runner": "scripts/qa_birding_batch_038_040.mjs",
+    "cases": 18,
+    "passed": 18,
+    "widths": [
+      390,
+      768,
+      1440
+    ],
+    "checks": "canonical, hreflang, visible FAQ/schema parity, page schema, responsive overflow and alignment, shared assets, local links, analytics hooks, consent accept/reject, keyboard FAQ"
+  },
+  "link_evidence": {
+    "/birds-of-the-cloud-forest-ecuador/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/birdwatching-ecuador-guide/ | /birdwatching-lodge-ecuador/ | /blog/birdwatching-near-quito/ | /es/aves-del-bosque-nublado-ecuador/ | /features/fauna/ | /hummingbirds-quito-ecuador/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/aves-del-bosque-nublado-ecuador/": {
+      "current_unique_inlinks": 7,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/birds-of-the-cloud-forest-ecuador/ | /design-preview/nature-birding-cluster/ | /es/blog/avistamiento-aves-cerca-de-quito/ | /es/caracteristicas/fauna/ | /es/colibries-quito-ecuador/ | /es/guia-avistamiento-aves-ecuador/ | /es/lodge-avistamiento-aves-ecuador/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/hummingbirds-quito-ecuador/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/birds-of-the-cloud-forest-ecuador/ | /birdwatching-ecuador-guide/ | /birdwatching-lodge-ecuador/ | /blog/birdwatching-near-quito/ | /es/colibries-quito-ecuador/ | /features/fauna/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/colibries-quito-ecuador/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/es/aves-del-bosque-nublado-ecuador/ | /es/blog/avistamiento-aves-cerca-de-quito/ | /es/caracteristicas/fauna/ | /es/guia-avistamiento-aves-ecuador/ | /es/lodge-avistamiento-aves-ecuador/ | /hummingbirds-quito-ecuador/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/birdwatching-ecuador-guide/": {
+      "current_unique_inlinks": 4,
+      "current_unique_outlinks": 8,
+      "current_inlink_sources": "/birds-of-the-cloud-forest-ecuador/ | /birdwatching-lodge-ecuador/ | /es/guia-avistamiento-aves-ecuador/ | /hummingbirds-quito-ecuador/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/guia-avistamiento-aves-ecuador/": {
+      "current_unique_inlinks": 4,
+      "current_unique_outlinks": 8,
+      "current_inlink_sources": "/birdwatching-ecuador-guide/ | /es/aves-del-bosque-nublado-ecuador/ | /es/colibries-quito-ecuador/ | /es/lodge-avistamiento-aves-ecuador/",
+      "target": 4,
+      "broken_local_outlinks": []
+    }
+  },
+  "deployment": {
+    "pages_byte_verified": 6,
+    "mismatches": 0
+  },
+  "google_sheet": {
+    "spreadsheet_id": "1k4eAfdEsZz7lih0t2c_0kv-rwbhyjQNgpyFlu0Qm7L4",
+    "tab": "sitemap_enriched",
+    "rows": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "status": "synchronized and verified",
+    "fields_verified": 192,
+    "mismatches": 0,
+    "validation": "staging dropdown preserved"
+  },
+  "account_side_verification": "GA4/GTM, form attribution and deduplication, Turnstile hostname/server validation, and Search Console remain pending"
+}
