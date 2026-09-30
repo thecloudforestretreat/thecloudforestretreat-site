@@ -15,11 +15,12 @@ for (const lang of ['en', 'es']) {
   const p = copy[lang];
   const hub = await fs.readFile(`${p.hub.slice(1)}index.html`, 'utf8');
   const canonical = origin + paths[lang];
+  const entityId = canonical + (p.entityType === "Place" ? "#shared-spaces" : "#room");
   const schema = {
     '@context': 'https://schema.org', '@graph': [
       { '@type': ['LodgingBusiness', 'BedAndBreakfast'], '@id': `${origin}/#lodging`, name: 'The Cloud Forest Retreat', url: origin + '/', address: { '@type': 'PostalAddress', addressRegion: 'Pichincha', addressCountry: 'EC' } },
-      { '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name: p.title, description: p.description, inLanguage: lang, mainEntity: { '@id': canonical + '#room' }, breadcrumb: { '@id': canonical + '#breadcrumb' } },
-      { '@type': 'HotelRoom', '@id': canonical + '#room', name: p.name, description: p.lead, url: canonical, image: p.photos.map(([file]) => origin + imageBase + file), containedInPlace: { '@id': `${origin}/#lodging` }, ...(p.amenities ? { amenityFeature: p.amenities.map(name => ({ '@type': 'LocationFeatureSpecification', name, value: true })) } : {}) },
+      { '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name: p.title, description: p.description, inLanguage: lang, mainEntity: { '@id': entityId }, breadcrumb: { '@id': canonical + '#breadcrumb' } },
+      { '@type': p.entityType || 'HotelRoom', '@id': entityId, name: p.name, description: p.lead, url: canonical, image: p.photos.map(([file]) => origin + imageBase + file), containedInPlace: { '@id': `${origin}/#lodging` }, ...(p.amenities ? { amenityFeature: p.amenities.map(name => ({ '@type': 'LocationFeatureSpecification', name, value: true })) } : {}) },
       { '@type': 'BreadcrumbList', '@id': canonical + '#breadcrumb', itemListElement: [[p.homeLabel, p.home], [p.hubLabel, p.hub], [p.name, paths[lang]]].map(([name, path], i) => ({ '@type': 'ListItem', position: i + 1, name, item: origin + path })) },
       { '@type': 'FAQPage', '@id': canonical + '#faq', inLanguage: lang, mainEntity: p.faqs.map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })) }
     ]
@@ -164,7 +165,7 @@ ${p.related.map(([label, url]) => `          ${link(url, label, 'related_content
   </body>
 </html>
 `;
-  await fs.writeFile(`${paths[lang].slice(1)}index.html`, html);
+  await fs.writeFile(`${paths[lang].slice(1)}index.html`, html.replaceAll('room_detail_page', p.pageType || 'room_detail_page'));
   console.log(`Updated ${paths[lang]}`);
 }
 }

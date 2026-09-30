@@ -1,0 +1,187 @@
+{
+  "pair": "pair_009",
+  "date": "2026-09-30",
+  "runner": "scripts/qa_common.mjs",
+  "renders": [
+    {
+      "route": "/rooms/common-areas/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "alignment": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/es/habitaciones/areas-comunes/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "alignment": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/rooms/common-areas/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "alignment": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/es/habitaciones/areas-comunes/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "alignment": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/rooms/common-areas/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "alignment": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/es/habitaciones/areas-comunes/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "alignment": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    }
+  ],
+  "incoming_links": {
+    "en": {
+      "current_unique_inlinks": "7",
+      "current_inlink_sources": "/cloud-forest-lodge-near-quito/ | /es/habitaciones/areas-comunes/ | /features/gallery/ | /rooms/ | /rooms/panoramic-suite/ | /rooms/sunrise-room/ | /rooms/sunset-room/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "13"
+    },
+    "es": {
+      "current_unique_inlinks": "7",
+      "current_inlink_sources": "/es/caracteristicas/galeria/ | /es/habitaciones/ | /es/habitaciones/habitacion-amanecer/ | /es/habitaciones/habitacion-atardecer/ | /es/habitaciones/suite-panoramica/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /rooms/common-areas/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "13"
+    }
+  },
+  "limitations": [
+    "Account-side analytics, forms, Turnstile and Search Console verification pending.",
+    "Production unchanged."
+  ]
+}
