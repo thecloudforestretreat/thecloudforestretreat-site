@@ -18,11 +18,11 @@ This document transfers the active The Cloud Forest Retreat website upgrade to a
 
 The enriched roadmap contains 49 English/Spanish page pairs (98 rows).
 
-- Completed and pair-level QA verified: 8 pairs
-- Remaining for full page enrichment and pair-level QA: 41 pairs
-- Next pair in roadmap order: `pair_008`
-  - English: `/rooms/sunset-room/`
-  - Spanish: `/es/habitaciones/habitacion-atardecer/`
+- Completed and pair-level QA verified: 9 pairs
+- Remaining for full page enrichment and pair-level QA: 40 pairs
+- Next pair in roadmap order: `pair_009`
+  - English: `/rooms/common-areas/`
+  - Spanish: `/es/habitaciones/areas-comunes/`
   - Cluster: Rooms
 
 Completed pairs:
@@ -35,12 +35,13 @@ Completed pairs:
 6. `pair_023`: `/cloud-forest-lodge-near-quito/` and `/es/lodge-bosque-nublado-cerca-de-quito/`
 7. `pair_006`: `/rooms/panoramic-suite/` and `/es/habitaciones/suite-panoramica/`
 8. `pair_007`: `/rooms/sunrise-room/` and `/es/habitaciones/habitacion-amanecer/`
+9. `pair_008`: `/rooms/sunset-room/` and `/es/habitaciones/habitacion-atardecer/`
 
 Authoritative roadmap:
 
 `outputs/01a0cacb-9307-7181-a26c-990d3a098536/TCFR_site_roadmap_enriched_2026-09-23.csv`
 
-The Sunrise Room pair passed local browser and visual QA on 2026-09-30. Evidence: `outputs/qa/pair_007_2026-09-30.json`; runner: `scripts/qa_sunrise.mjs`. Google Sheet reconciliation remains pending account access. Pair completion does not mean production deployment or account-side analytics verification.
+The Sunset Room pair passed local browser and visual QA on 2026-09-30. Evidence: `outputs/qa/pair_008_2026-09-30.json`; runner: `scripts/qa_sunset.mjs`. Google Sheet reconciliation remains pending account access. Pair completion does not mean production deployment or account-side analytics verification.
 
 Update both language rows only after a pair passes implementation and QA. Do not mark a pair complete because a global architecture script touched it.
 
@@ -235,7 +236,7 @@ Do not commit account credentials, private tokens, analytics secrets, form secre
 
 Copy the following into a new Codex task on the Mac mini after checking out the branch:
 
-> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_008`: `/rooms/sunset-room/` and `/es/habitaciones/habitacion-atardecer/`. Preserve the approved global system and Rooms cluster, maintain English/Spanish semantic parity, vertical indented HTML, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, analytics attribution hooks, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
+> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_009`: `/rooms/common-areas/` and `/es/habitaciones/areas-comunes/`. Preserve the approved global system and Rooms cluster, maintain English/Spanish semantic parity, vertical indented HTML, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, analytics attribution hooks, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
 
 ## First receiving-host checklist
 
@@ -245,4 +246,4 @@ Copy the following into a new Codex task on the Mac mini after checking out the 
 4. Confirm `git status --short --branch` is clean.
 5. Open the shared conversation link supplied out-of-band for design-decision history.
 6. Start a local preview and verify one completed English/Spanish pair before changing the next pair.
-7. Begin `pair_008` only after the baseline renders correctly.
+7. Begin `pair_009` only after the baseline renders correctly.

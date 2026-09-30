@@ -35,7 +35,7 @@ for (const lang of ['en', 'es']) {
     .replaceAll('tcfr_images_rooms_hero.jpg', p.heroImage || 'tcfr_rooms_ps_c_02.jpg')
     .replace(/(<meta property="og:image:alt" content=")[^"]*/, `$1${esc(p.name)}`)
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2).split('\n').map(line => '      ' + line).join('\n')}\n    </script>`)
-    .replace('rooms.css?v=7', 'rooms.css?v=9');
+    .replace('rooms.css?v=7', 'rooms.css?v=10');
   const reviewsMatch = hub.match(/      <section class="roomsSection roomsReviews"[\s\S]*?      <\/section>/);
   if (!reviewsMatch) throw new Error('Approved Rooms reviews section not found.');
   const reviews = reviewsMatch[0].replace(/(<h2 id="rooms-reviews-title">).*?(<\/h2>)/, `$1${esc(p.reviewTitle)}$2`)
@@ -98,7 +98,7 @@ ${p.photos.map(([file, alt, caption]) => `          <figure>
         </div>
       </section>
 ${p.extraSection || ''}
-      <section class="roomsSection roomsCompare" aria-labelledby="suite-fit-title" data-analytics-section="suite_fit">
+      <section class="roomsSection roomsCompare roomCompareAligned" aria-labelledby="suite-fit-title" data-analytics-section="suite_fit">
         <div class="roomsCompare__intro">
           <p class="roomsEyebrow">${p.featuresLabel}</p>
           <h2 id="suite-fit-title">${p.fitTitle}</h2>
@@ -108,6 +108,7 @@ ${p.extraSection || ''}
           </div>
         </div>
         <div class="roomsCompare__intro">
+          <p class="roomsEyebrow">${p.featuresLabel}</p>
           <h2>${p.sharedTitle}</h2>
           <p>${p.sharedText}</p>
           <div class="roomsShowcase__actions">

@@ -649,3 +649,11 @@ body[data-tcfr-template="premium-rooms"] {
   .suiteDetail .roomsShowcase__media > img { object-position: 60% center; }
   .suiteDetail .roomsShowcase__note { right: 14px; bottom: 14px; left: 14px; }
 }
+
+/* Comparable room-detail columns share content rows on desktop. */
+@media (min-width: 981px) {
+  .suiteDetail .roomCompareAligned { grid-template-rows: repeat(4, auto); row-gap: 16px; }
+  .roomCompareAligned .roomsCompare__intro { display: grid; grid-template-rows: subgrid; grid-row: span 4; }
+  .roomCompareAligned .roomsCompare__intro > * { margin-block: 0; }
+  .roomCompareAligned .roomsShowcase__actions { align-self: end; }
+}
