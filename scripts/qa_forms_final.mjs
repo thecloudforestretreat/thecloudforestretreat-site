@@ -36,6 +36,11 @@ for (const item of cases) for (const width of [390, 768, 1440]) {
   });
   await page.goto(`${origin}${item.route}?utm_source=final_qa&utm_medium=automation&utm_campaign=preproduction`, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector(item.form);
+  await page.waitForFunction(
+    ({ formSelector, action }) => document.querySelector(`${formSelector} .cf-turnstile[data-sitekey][data-action="${action}"]`),
+    { formSelector: item.form, action: `${item.kind}_submit` },
+    { timeout: 10000 }
+  );
   await page.click('[data-tcfr-consent="accept"]');
   const initial = await page.evaluate(({ formSelector, kind }) => {
     const form = document.querySelector(formSelector);

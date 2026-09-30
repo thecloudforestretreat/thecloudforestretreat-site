@@ -182,6 +182,26 @@ Still requires account-side or production-domain verification:
 
 Turnstile error `110200` is expected on an unapproved localhost hostname. Do not disable Turnstile to hide that local-only error. Validate it on an authorized staging hostname.
 
+## Final QA audit — 2026-09-30
+
+Implementation commit `14d100b` passed the code-controlled regression suite on the branch preview:
+
+- 98 roadmap pages tested at 390, 768, and 1440 pixels: 294/294 browser cases passed.
+- Zero broken local links and zero roadmap URLs missing from the 98-URL sitemap.
+- English and Spanish booking/contact forms tested at all three widths: 12/12 interaction cases passed.
+- Form checks cover required fields, invalid email, missing verification token, localized success/error states, submit-button recovery, source/language fields, attribution hydration, analytics events, and responsive overflow.
+- Booking/contact worker functions passed 12/12 isolated validation and security cases, including Turnstile action/hostname checks and server-only forwarding of the Apps Script gate secret.
+- Social metadata was reconciled to each page's canonical URL, title, description, and real hero image; the final social-metadata audit reports zero issues.
+- No client-facing copy of `TCFR_CF_GATE_SECRET` remains in the current working tree. Because an earlier value existed in published Git history, rotate that secret before production.
+
+The branch preview is not ready for a real form-submission acceptance test until these Cloudflare account settings are fixed:
+
+1. Add `codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev` to the hostname allowlist for Turnstile site key `0x4AAAAAACauNy6DfCUnIJhS`. All four deployed forms currently return Turnstile error `110200`, produce no iframe, and produce no token.
+2. Set `TURNSTILE_SECRET_KEY` in the Cloudflare Pages environment used by `thecloudforestretreat-staging`. Both `/api/booking` and `/api/contact` currently return HTTP 500 with `Server misconfigured: TURNSTILE_SECRET_KEY missing.` when sent a token.
+3. Redeploy, obtain real Turnstile tokens, and submit one non-production QA entry through each of `/booking/`, `/es/reservas/`, `/contact/`, and `/es/contacto/`. Confirm all four entries reach the intended Google Sheet and that confirmation/notification emails behave as configured.
+
+Keep production unchanged until the three steps above pass. Account-side GA4/GTM receipt and deduplication, Search Console verification, sitemap submission/interpretation, and the gate-secret rotation also remain launch checks because repository/browser QA cannot prove those account states.
+
 ## Per-pair content and technical requirements
 
 Every English/Spanish pair must receive:

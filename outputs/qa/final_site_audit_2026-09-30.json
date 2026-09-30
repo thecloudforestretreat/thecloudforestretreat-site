@@ -1,0 +1,66 @@
+{
+  "audit_date": "2026-09-30",
+  "implementation_commit": "14d100b",
+  "branch": "codex/tcfr-site-upgrade",
+  "staging_origin": "https://codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev",
+  "roadmap": {
+    "bilingual_pairs_complete": 49,
+    "pages": 98,
+    "sitemap_urls": 98
+  },
+  "full_site_browser_qa": {
+    "local": { "passed": 294, "failed": 0 },
+    "staging": { "passed": 294, "failed": 0 },
+    "viewports": [390, 768, 1440],
+    "broken_local_links": 0,
+    "sitemap_missing_urls": 0
+  },
+  "form_browser_qa": {
+    "local": { "passed": 12, "failed": 0 },
+    "staging_mocked_transport": { "passed": 12, "failed": 0 },
+    "routes": ["/booking/", "/es/reservas/", "/contact/", "/es/contacto/"],
+    "viewports": [390, 768, 1440]
+  },
+  "form_worker_qa": {
+    "passed": 12,
+    "failed": 0
+  },
+  "security": {
+    "client_gate_secret_removed": true,
+    "gate_secret_rotation_required": true,
+    "turnstile_action_and_hostname_validation": true,
+    "same_origin_cors": true
+  },
+  "metadata": {
+    "incorrect_og_urls_fixed": 24,
+    "nonexistent_social_images_fixed": 14,
+    "remaining_social_metadata_issues": 0
+  },
+  "launch_blockers": [
+    {
+      "system": "Cloudflare Turnstile",
+      "status": "blocked",
+      "evidence": "All four staging forms return Turnstile error 110200 and produce no token.",
+      "action": "Allow codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev for site key 0x4AAAAAACauNy6DfCUnIJhS."
+    },
+    {
+      "system": "Cloudflare Pages Functions",
+      "status": "blocked",
+      "evidence": "Both form APIs return HTTP 500: Server misconfigured: TURNSTILE_SECRET_KEY missing.",
+      "action": "Set TURNSTILE_SECRET_KEY in the thecloudforestretreat-staging Pages environment and redeploy."
+    },
+    {
+      "system": "End-to-end form delivery",
+      "status": "pending",
+      "evidence": "A real token cannot be issued until the Turnstile blockers are resolved.",
+      "action": "Submit and verify one QA entry for each language/form combination in the Google Sheet and email workflow."
+    },
+    {
+      "system": "Account-side launch checks",
+      "status": "pending",
+      "evidence": "Repository and browser QA cannot establish external account state.",
+      "action": "Verify GA4/GTM receipt and deduplication, Search Console ownership/sitemap interpretation, and rotate the previously exposed gate secret."
+    }
+  ],
+  "production_ready": false
+}
