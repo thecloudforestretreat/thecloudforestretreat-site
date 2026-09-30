@@ -1,0 +1,109 @@
+{
+  "date": "2026-09-30",
+  "pairs": [
+    "pair_047",
+    "pair_048",
+    "pair_049"
+  ],
+  "routes": [
+    "/mindo-vs-cloud-forest-retreat/",
+    "/es/mindo-vs-cloud-forest-retreat/",
+    "/best-eco-lodge-quito/",
+    "/es/mejor-eco-lodge-quito/",
+    "/where-to-stay-near-quito-nature/",
+    "/es/donde-alojarse-cerca-de-quito-naturaleza/"
+  ],
+  "implementation_commit": "3abea1e",
+  "staging_base_url": "https://codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev/",
+  "cloudflare_checks": {
+    "thecloudforestretreat-staging": "success",
+    "thecloudforestretreat-site": "success"
+  },
+  "browser_qa": {
+    "runner": "scripts/qa_final_batch_047_049.mjs",
+    "cases": 18,
+    "passed": 18,
+    "widths": [
+      390,
+      768,
+      1440
+    ],
+    "checks": "canonical, hreflang, visible FAQ/schema parity, page schema, responsive overflow and alignment, shared assets, local links, analytics hooks, consent accept/reject, keyboard FAQ"
+  },
+  "supporting_inlinks": {
+    "source_pages_checked": 10,
+    "duplicate_links": 0,
+    "analytics_hooks": 10
+  },
+  "link_evidence": {
+    "/mindo-vs-cloud-forest-retreat/": {
+      "current_unique_inlinks": 7,
+      "current_unique_outlinks": 12,
+      "current_inlink_sources": "/cloud-forest-lodge-near-quito/ | /cloud-forest-quito-ecuador/ | /design-preview/planning-cluster/ | /eco-lodge-quito-ecuador/ | /es/mindo-vs-cloud-forest-retreat/ | /nature-retreat-quito/ | /weekend-getaway-from-quito/",
+      "target": 6,
+      "broken_local_outlinks": []
+    },
+    "/es/mindo-vs-cloud-forest-retreat/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 12,
+      "current_inlink_sources": "/es/bosque-nublado-quito-ecuador/ | /es/eco-lodge-quito-ecuador/ | /es/escapada-fin-de-semana-quito/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /es/retiro-naturaleza-quito/ | /mindo-vs-cloud-forest-retreat/",
+      "target": 6,
+      "broken_local_outlinks": []
+    },
+    "/best-eco-lodge-quito/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 8,
+      "current_inlink_sources": "/cloud-forest-lodge-near-quito/ | /eco-lodge-quito-ecuador/ | /es/mejor-eco-lodge-quito/ | /mindo-vs-cloud-forest-retreat/ | /rooms/ | /rooms/panoramic-suite/",
+      "target": 6,
+      "broken_local_outlinks": []
+    },
+    "/es/mejor-eco-lodge-quito/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 8,
+      "current_inlink_sources": "/best-eco-lodge-quito/ | /es/eco-lodge-quito-ecuador/ | /es/habitaciones/ | /es/habitaciones/suite-panoramica/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /es/mindo-vs-cloud-forest-retreat/",
+      "target": 6,
+      "broken_local_outlinks": []
+    },
+    "/where-to-stay-near-quito-nature/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 11,
+      "current_inlink_sources": "/blog/how-to-get-to-cloud-forest-retreat/ | /cloud-forest-lodge-near-quito/ | /es/donde-alojarse-cerca-de-quito-naturaleza/ | /mindo-vs-cloud-forest-retreat/ | /romantic-getaway-quito/ | /rooms/",
+      "target": 6,
+      "broken_local_outlinks": []
+    },
+    "/es/donde-alojarse-cerca-de-quito-naturaleza/": {
+      "current_unique_inlinks": 7,
+      "current_unique_outlinks": 11,
+      "current_inlink_sources": "/es/blog/como-llegar-cloud-forest-retreat/ | /es/caracteristicas/producto-locales/ | /es/escapada-romantica-quito/ | /es/habitaciones/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /es/mindo-vs-cloud-forest-retreat/ | /where-to-stay-near-quito-nature/",
+      "target": 6,
+      "broken_local_outlinks": []
+    }
+  },
+  "deployment": {
+    "pages_byte_verified": 6,
+    "mismatches": 0
+  },
+  "google_sheet": {
+    "spreadsheet_id": "1k4eAfdEsZz7lih0t2c_0kv-rwbhyjQNgpyFlu0Qm7L4",
+    "tab": "sitemap_enriched",
+    "rows": [
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "status": "synchronized and verified",
+    "fields_verified": 192,
+    "mismatches": 0,
+    "editor_access": "confirmed via Google Drive connector",
+    "staging_dropdown_validations_preserved": 6
+  },
+  "project_status": {
+    "completed_pairs": 49,
+    "remaining_pairs": 0,
+    "page_pair_enrichment": "complete"
+  },
+  "account_side_verification": "GA4/GTM, form attribution and deduplication, Turnstile hostname/server validation, and Search Console remain pending"
+}

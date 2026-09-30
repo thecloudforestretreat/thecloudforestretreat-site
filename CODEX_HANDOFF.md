@@ -18,12 +18,10 @@ This document transfers the active The Cloud Forest Retreat website upgrade to a
 
 The enriched roadmap contains 49 English/Spanish page pairs (98 rows).
 
-- Completed and pair-level QA verified: 46 pairs
-- Remaining for full page enrichment and pair-level QA: 3 pairs
-- Next pair in roadmap order: `pair_047`
-  - English: `/mindo-vs-cloud-forest-retreat/`
-  - Spanish: `/es/mindo-vs-cloud-forest-retreat/`
-  - Cluster: Planning
+- Completed and pair-level QA verified: 49 pairs
+- Remaining for full page enrichment and pair-level QA: 0 pairs
+- Page-pair enrichment phase: Complete
+- Next phase: full-site regression review and account-side analytics, forms, Turnstile and Search Console verification
 
 Completed pairs:
 
@@ -73,12 +71,15 @@ Completed pairs:
 44. `pair_044`: `/quito-to-cloud-forest-distance/` and `/es/distancia-quito-bosque-nublado/`
 45. `pair_045`: `/what-to-pack-cloud-forest-ecuador/` and `/es/que-llevar-bosque-nublado-ecuador/`
 46. `pair_046`: `/is-cloud-forest-safe-ecuador/` and `/es/es-seguro-bosque-nublado-ecuador/`
+47. `pair_047`: `/mindo-vs-cloud-forest-retreat/` and `/es/mindo-vs-cloud-forest-retreat/`
+48. `pair_048`: `/best-eco-lodge-quito/` and `/es/mejor-eco-lodge-quito/`
+49. `pair_049`: `/where-to-stay-near-quito-nature/` and `/es/donde-alojarse-cerca-de-quito-naturaleza/`
 
 Authoritative roadmap:
 
 `outputs/01a0cacb-9307-7181-a26c-990d3a098536/TCFR_site_roadmap_enriched_2026-09-23.csv`
 
-The Quito-to-Cloud-Forest Distance, Cloud Forest Packing and Cloud Forest Safety pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `b734fd4`; all six page files were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_044_046_2026-09-30.json`; runner: `scripts/qa_planning_batch_044_046.mjs`. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
+The Mindo Comparison, Best Eco Lodge and Where to Stay Near Quito for Nature pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `3abea1e`; all six page files were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_047_049_2026-09-30.json`; runner: `scripts/qa_final_batch_047_049.mjs`. All 49 bilingual pairs are now enriched and pair-level QA verified. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
 
 Update both language rows only after a pair passes implementation and QA. Do not mark a pair complete because a global architecture script touched it.
 
@@ -274,7 +275,7 @@ Do not commit account credentials, private tokens, analytics secrets, form secre
 
 Copy the following into a new Codex task on the Mac mini after checking out the branch:
 
-> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_047`: `/mindo-vs-cloud-forest-retreat/` and `/es/mindo-vs-cloud-forest-retreat/`. Preserve the approved global system and Planning cluster, maintain English/Spanish semantic parity, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, consent-aware analytics attribution, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
+> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then confirm that all 49 bilingual pairs are enriched and pair-level QA verified. Preserve the approved global and cluster systems. Begin the full-site regression and account-side verification phase: validate staging navigation and forms, GA4/GTM events and deduplication, permitted attribution fields, Turnstile hostname/server validation, Search Console ownership and sitemap interpretation, and production-readiness evidence. Keep production unchanged until explicit approval. Keep all work on staging; do not deploy production.
 
 ## First receiving-host checklist
 
@@ -284,4 +285,4 @@ Copy the following into a new Codex task on the Mac mini after checking out the 
 4. Confirm `git status --short --branch` is clean.
 5. Open the shared conversation link supplied out-of-band for design-decision history.
 6. Start a local preview and verify one completed English/Spanish pair before changing the next pair.
-7. Begin `pair_047` only after the baseline renders correctly.
+7. Begin full-site regression and account-side verification only after the staging baseline renders correctly.
