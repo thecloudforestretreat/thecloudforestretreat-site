@@ -59,6 +59,7 @@ Global requirements:
 - Keep “The Cloud Forest Retreat” on one line where space permits.
 - Social icons appear above the bottom copyright/location/terms line.
 - Use equal-height cards in the same grid row on desktop when the content is comparable.
+- Place section introductions above groups of comparable cards. Comparable cards share equal columns and align eyebrow, heading, description and action rows on desktop/tablet; use content-driven row sizing, not fixed text heights. On mobile, stack cards and release shared row sizing. Intentional editorial layouts may differ, but must not present an introduction as a competing option card.
 - Symmetry and alignment are required on every page: match card insets, align comparable action links/buttons to a common bottom baseline, and check heading/content alignment within each row in both languages. Use flexible layout rather than fixed content heights; preserve natural stacking on mobile.
 - Use responsive stacking on smaller viewports without artificial empty space.
 - Keep HTML vertical, clearly indented, and maintainable.
