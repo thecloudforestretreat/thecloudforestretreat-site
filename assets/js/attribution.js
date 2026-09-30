@@ -8,6 +8,7 @@
     "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
     "gclid", "gbraid", "wbraid", "fbclid", "msclkid", "ttclid"
   ];
+  var saved = {};
 
   function nowIso() { return new Date().toISOString(); }
   function clean(value) { return String(value || "").trim().slice(0, 500); }
@@ -18,6 +19,9 @@
   function write(value) {
     try { window.localStorage.setItem(key, JSON.stringify(value)); }
     catch (_error) {}
+  }
+  function clear() {
+    try { window.localStorage.removeItem(key); } catch (_error) {}
   }
   function referrerHost() {
     if (!document.referrer) return "direct";
@@ -39,31 +43,39 @@
   function hasCampaign(row) {
     return campaignKeys.some(function (name) { return Boolean(row[name]); });
   }
-  function isExpired(saved) {
+  function isExpired(value) {
     var days = Number(config.attributionStorageDays || 90);
-    var created = Date.parse(saved && saved.first_touch && saved.first_touch.captured_at || "");
+    var created = Date.parse(value && value.first_touch && value.first_touch.captured_at || "");
     return !created || Date.now() - created > days * 86400000;
   }
+  function hasConsent() { return window.__TCFR_CONSENT_STATUS__ === "accepted"; }
 
-  var current = campaignSnapshot();
-  var saved = read();
-  if (!saved.first_touch || isExpired(saved)) saved.first_touch = current;
-  if (hasCampaign(current) || !saved.last_touch) saved.last_touch = current;
-  saved.last_page = clean(window.location.pathname + window.location.search);
-  saved.updated_at = nowIso();
-  write(saved);
-  window.TCFR_ATTRIBUTION = saved;
+  function capture() {
+    if (!hasConsent()) {
+      saved = {};
+      window.TCFR_ATTRIBUTION = saved;
+      return;
+    }
+    var current = campaignSnapshot();
+    saved = read();
+    if (!saved.first_touch || isExpired(saved)) saved.first_touch = current;
+    if (hasCampaign(current) || !saved.last_touch) saved.last_touch = current;
+    saved.last_page = clean(window.location.pathname + window.location.search);
+    saved.updated_at = nowIso();
+    write(saved);
+    window.TCFR_ATTRIBUTION = saved;
+  }
 
   function valueFor(name) {
     var first = saved.first_touch || {};
     var last = saved.last_touch || {};
     var map = {
-      attribution_first_source: first.utm_source || first.referrer_host || "direct",
-      attribution_first_medium: first.utm_medium || "referral",
+      attribution_first_source: first.utm_source || first.referrer_host || "",
+      attribution_first_medium: first.utm_medium || "",
       attribution_first_campaign: first.utm_campaign || "",
       attribution_first_landing_page: first.landing_page || "",
-      attribution_last_source: last.utm_source || last.referrer_host || "direct",
-      attribution_last_medium: last.utm_medium || "referral",
+      attribution_last_source: last.utm_source || last.referrer_host || "",
+      attribution_last_medium: last.utm_medium || "",
       attribution_last_campaign: last.utm_campaign || "",
       attribution_last_landing_page: last.landing_page || "",
       attribution_click_id: last.gclid || last.gbraid || last.wbraid || last.fbclid || last.msclkid || last.ttclid || ""
@@ -84,10 +96,14 @@
     });
   }
 
+  capture();
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () { hydrateForms(document); }, { once: true });
-  } else {
-    hydrateForms(document);
-  }
+  } else hydrateForms(document);
   document.addEventListener("tcfr:includes-ready", function () { hydrateForms(document); });
+  document.addEventListener("tcfr:consent-update", function (event) {
+    if (event.detail && event.detail.status === "accepted") capture();
+    else { clear(); saved = {}; window.TCFR_ATTRIBUTION = saved; }
+    hydrateForms(document);
+  });
 })();

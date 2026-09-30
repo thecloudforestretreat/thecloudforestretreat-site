@@ -1,0 +1,3362 @@
+{
+  "batch": "pairs_022_024_025",
+  "date": "2026-09-30",
+  "viewports": [
+    390,
+    768,
+    1440
+  ],
+  "browser_results": [
+    {
+      "pair": "pair_022",
+      "route": "/terms-of-service/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Terms of Service | The Cloud Forest Retreat",
+        "description": "Review The Cloud Forest Retreat terms for website use, booking requests, payments, cancellations, guest responsibilities, third-party services and content rights.",
+        "canonical": "https://thecloudforestretreat.com/terms-of-service/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/terminos-de-servicio/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/terms-of-service/#webpage",
+          "url": "https://thecloudforestretreat.com/terms-of-service/",
+          "name": "Terms of Service | The Cloud Forest Retreat",
+          "description": "Review The Cloud Forest Retreat terms for website use, booking requests, payments, cancellations, guest responsibilities, third-party services and content rights.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/terms-of-service/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ],
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-7",
+          "#legal-8",
+          "#legal-faq",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "scripts": [
+          "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "cluster": "legal",
+        "template": "premium-legal",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:37.334Z\"},\"last_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:37.334Z\"},\"last_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:37.334Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_022",
+      "route": "/es/terminos-de-servicio/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "T\u00e9rminos de servicio | The Cloud Forest Retreat",
+        "description": "Revisa los t\u00e9rminos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido.",
+        "canonical": "https://thecloudforestretreat.com/es/terminos-de-servicio/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/terminos-de-servicio/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/terminos-de-servicio/#webpage",
+          "url": "https://thecloudforestretreat.com/es/terminos-de-servicio/",
+          "name": "T\u00e9rminos de servicio | The Cloud Forest Retreat",
+          "description": "Revisa los t\u00e9rminos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/terminos-de-servicio/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ],
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-7",
+          "#legal-8",
+          "#legal-faq",
+          "/es/contacto/",
+          "/es/politica-de-privacidad/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "cluster": "legal",
+        "template": "premium-legal",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:38.137Z\"},\"last_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:38.137Z\"},\"last_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:38.137Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_022",
+      "route": "/terms-of-service/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Terms of Service | The Cloud Forest Retreat",
+        "description": "Review The Cloud Forest Retreat terms for website use, booking requests, payments, cancellations, guest responsibilities, third-party services and content rights.",
+        "canonical": "https://thecloudforestretreat.com/terms-of-service/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/terminos-de-servicio/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/terms-of-service/#webpage",
+          "url": "https://thecloudforestretreat.com/terms-of-service/",
+          "name": "Terms of Service | The Cloud Forest Retreat",
+          "description": "Review The Cloud Forest Retreat terms for website use, booking requests, payments, cancellations, guest responsibilities, third-party services and content rights.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/terms-of-service/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ],
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-7",
+          "#legal-8",
+          "#legal-faq",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "legal",
+        "template": "premium-legal",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:38.740Z\"},\"last_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:38.740Z\"},\"last_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:38.740Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_022",
+      "route": "/es/terminos-de-servicio/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "T\u00e9rminos de servicio | The Cloud Forest Retreat",
+        "description": "Revisa los t\u00e9rminos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido.",
+        "canonical": "https://thecloudforestretreat.com/es/terminos-de-servicio/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/terminos-de-servicio/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/terminos-de-servicio/#webpage",
+          "url": "https://thecloudforestretreat.com/es/terminos-de-servicio/",
+          "name": "T\u00e9rminos de servicio | The Cloud Forest Retreat",
+          "description": "Revisa los t\u00e9rminos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/terminos-de-servicio/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ],
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-7",
+          "#legal-8",
+          "#legal-faq",
+          "/es/contacto/",
+          "/es/politica-de-privacidad/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "legal",
+        "template": "premium-legal",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:39.311Z\"},\"last_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:39.311Z\"},\"last_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:39.311Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_022",
+      "route": "/terms-of-service/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Terms of Service | The Cloud Forest Retreat",
+        "description": "Review The Cloud Forest Retreat terms for website use, booking requests, payments, cancellations, guest responsibilities, third-party services and content rights.",
+        "canonical": "https://thecloudforestretreat.com/terms-of-service/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/terminos-de-servicio/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/terms-of-service/#webpage",
+          "url": "https://thecloudforestretreat.com/terms-of-service/",
+          "name": "Terms of Service | The Cloud Forest Retreat",
+          "description": "Review The Cloud Forest Retreat terms for website use, booking requests, payments, cancellations, guest responsibilities, third-party services and content rights.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/terms-of-service/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ],
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-7",
+          "#legal-8",
+          "#legal-faq",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "legal",
+        "template": "premium-legal",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:39.971Z\"},\"last_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:39.971Z\"},\"last_page\":\"/terms-of-service/?utm_source=pair_022_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:39.971Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_022",
+      "route": "/es/terminos-de-servicio/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "T\u00e9rminos de servicio | The Cloud Forest Retreat",
+        "description": "Revisa los t\u00e9rminos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido.",
+        "canonical": "https://thecloudforestretreat.com/es/terminos-de-servicio/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/terminos-de-servicio/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/terms-of-service/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/terminos-de-servicio/#webpage",
+          "url": "https://thecloudforestretreat.com/es/terminos-de-servicio/",
+          "name": "T\u00e9rminos de servicio | The Cloud Forest Retreat",
+          "description": "Revisa los t\u00e9rminos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/terminos-de-servicio/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ],
+          [
+            "en",
+            "/terms-of-service/"
+          ],
+          [
+            "es",
+            "/es/terminos-de-servicio/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "#legal-1",
+          "#legal-2",
+          "#legal-3",
+          "#legal-4",
+          "#legal-5",
+          "#legal-6",
+          "#legal-7",
+          "#legal-8",
+          "#legal-faq",
+          "/es/contacto/",
+          "/es/politica-de-privacidad/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/legal.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "legal",
+        "template": "premium-legal",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:40.561Z\"},\"last_touch\":{\"utm_source\":\"pair_022_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:40.561Z\"},\"last_page\":\"/es/terminos-de-servicio/?utm_source=pair_022_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:40.561Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_024",
+      "route": "/eco-lodge-quito-ecuador/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Eco Lodge Quito Ecuador | The Cloud Forest Retreat",
+        "description": "Compare an eco lodge stay near Quito with cloud forest views, comfortable rooms, local nature context and clear booking guidance at The Cloud Forest Retreat.",
+        "canonical": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/",
+          "name": "Eco Lodge Quito Ecuador | The Cloud Forest Retreat",
+          "description": "Compare an eco lodge stay near Quito with cloud forest views, comfortable rooms, local nature context and clear booking guidance at The Cloud Forest Retreat.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2166.96875,
+              "width": 322,
+              "height": 224.75
+            },
+            {
+              "top": 2391.71875,
+              "width": 322,
+              "height": 225.75
+            },
+            {
+              "top": 2617.46875,
+              "width": 322,
+              "height": 225.75
+            }
+          ],
+          [
+            {
+              "top": 4099.71875,
+              "width": 366,
+              "height": 275.65625
+            },
+            {
+              "top": 4391.375,
+              "width": 366,
+              "height": 275.65625
+            },
+            {
+              "top": 4683.03125,
+              "width": 366,
+              "height": 275.65625
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "/rooms/",
+          "/about/",
+          "/rooms/",
+          "/features/amenities/",
+          "/best-eco-lodge-quito/",
+          "/booking/",
+          "/contact/",
+          "/rooms/",
+          "/cloud-forest-lodge-near-quito/",
+          "/features/amenities/",
+          "/booking/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/stay.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:41.278Z\"},\"last_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:41.278Z\"},\"last_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:41.278Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_024",
+      "route": "/es/eco-lodge-quito-ecuador/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Eco lodge Quito Ecuador | The Cloud Forest Retreat",
+        "description": "Compara una estad\u00eda eco lodge cerca de Quito con bosque nublado, habitaciones c\u00f3modas, contexto natural y orientaci\u00f3n clara en The Cloud Forest Retreat.",
+        "canonical": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/",
+          "name": "Eco lodge Quito Ecuador | The Cloud Forest Retreat",
+          "description": "Compara una estad\u00eda eco lodge cerca de Quito con bosque nublado, habitaciones c\u00f3modas, contexto natural y orientaci\u00f3n clara en The Cloud Forest Retreat.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2278.65625,
+              "width": 322,
+              "height": 224.75
+            },
+            {
+              "top": 2503.40625,
+              "width": 322,
+              "height": 225.75
+            },
+            {
+              "top": 2729.15625,
+              "width": 322,
+              "height": 225.75
+            }
+          ],
+          [
+            {
+              "top": 4250.40625,
+              "width": 366,
+              "height": 275.65625
+            },
+            {
+              "top": 4542.0625,
+              "width": 366,
+              "height": 275.65625
+            },
+            {
+              "top": 4833.71875,
+              "width": 366,
+              "height": 275.65625
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "/es/habitaciones/",
+          "/es/sobre-nosotros/",
+          "/es/habitaciones/",
+          "/es/caracteristicas/amenidades/",
+          "/es/mejor-eco-lodge-quito/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/caracteristicas/amenidades/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/stay.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:41.917Z\"},\"last_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:41.917Z\"},\"last_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:41.917Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_024",
+      "route": "/eco-lodge-quito-ecuador/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Eco Lodge Quito Ecuador | The Cloud Forest Retreat",
+        "description": "Compare an eco lodge stay near Quito with cloud forest views, comfortable rooms, local nature context and clear booking guidance at The Cloud Forest Retreat.",
+        "canonical": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/",
+          "name": "Eco Lodge Quito Ecuador | The Cloud Forest Retreat",
+          "description": "Compare an eco lodge stay near Quito with cloud forest views, comfortable rooms, local nature context and clear booking guidance at The Cloud Forest Retreat.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2101.703125,
+              "width": 649.0625,
+              "height": 211.734375
+            },
+            {
+              "top": 2313.4375,
+              "width": 649.0625,
+              "height": 212.734375
+            },
+            {
+              "top": 2526.171875,
+              "width": 649.0625,
+              "height": 212.734375
+            }
+          ],
+          [
+            {
+              "top": 4043.25,
+              "width": 732,
+              "height": 250
+            },
+            {
+              "top": 4309.25,
+              "width": 732,
+              "height": 250
+            },
+            {
+              "top": 4575.25,
+              "width": 732,
+              "height": 250
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "/rooms/",
+          "/about/",
+          "/rooms/",
+          "/features/amenities/",
+          "/best-eco-lodge-quito/",
+          "/booking/",
+          "/contact/",
+          "/rooms/",
+          "/cloud-forest-lodge-near-quito/",
+          "/features/amenities/",
+          "/booking/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/stay.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:42.506Z\"},\"last_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:42.506Z\"},\"last_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:42.506Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_024",
+      "route": "/es/eco-lodge-quito-ecuador/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Eco lodge Quito Ecuador | The Cloud Forest Retreat",
+        "description": "Compara una estad\u00eda eco lodge cerca de Quito con bosque nublado, habitaciones c\u00f3modas, contexto natural y orientaci\u00f3n clara en The Cloud Forest Retreat.",
+        "canonical": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/",
+          "name": "Eco lodge Quito Ecuador | The Cloud Forest Retreat",
+          "description": "Compara una estad\u00eda eco lodge cerca de Quito con bosque nublado, habitaciones c\u00f3modas, contexto natural y orientaci\u00f3n clara en The Cloud Forest Retreat.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2101.703125,
+              "width": 649.0625,
+              "height": 211.734375
+            },
+            {
+              "top": 2313.4375,
+              "width": 649.0625,
+              "height": 212.734375
+            },
+            {
+              "top": 2526.171875,
+              "width": 649.0625,
+              "height": 212.734375
+            }
+          ],
+          [
+            {
+              "top": 4043.25,
+              "width": 732,
+              "height": 250
+            },
+            {
+              "top": 4309.25,
+              "width": 732,
+              "height": 250
+            },
+            {
+              "top": 4575.25,
+              "width": 732,
+              "height": 250
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "/es/habitaciones/",
+          "/es/sobre-nosotros/",
+          "/es/habitaciones/",
+          "/es/caracteristicas/amenidades/",
+          "/es/mejor-eco-lodge-quito/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/caracteristicas/amenidades/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/stay.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:43.257Z\"},\"last_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:43.257Z\"},\"last_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:43.257Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_024",
+      "route": "/eco-lodge-quito-ecuador/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Eco Lodge Quito Ecuador | The Cloud Forest Retreat",
+        "description": "Compare an eco lodge stay near Quito with cloud forest views, comfortable rooms, local nature context and clear booking guidance at The Cloud Forest Retreat.",
+        "canonical": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/",
+          "name": "Eco Lodge Quito Ecuador | The Cloud Forest Retreat",
+          "description": "Compare an eco lodge stay near Quito with cloud forest views, comfortable rooms, local nature context and clear booking guidance at The Cloud Forest Retreat.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2070.703125,
+              "width": 380.65625,
+              "height": 236.75
+            },
+            {
+              "top": 2070.703125,
+              "width": 380.671875,
+              "height": 236.75
+            },
+            {
+              "top": 2070.703125,
+              "width": 380.65625,
+              "height": 236.75
+            }
+          ],
+          [
+            {
+              "top": 3381.796875,
+              "width": 416,
+              "height": 306
+            },
+            {
+              "top": 3381.796875,
+              "width": 416,
+              "height": 306
+            },
+            {
+              "top": 3381.796875,
+              "width": 416,
+              "height": 306
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "/rooms/",
+          "/about/",
+          "/rooms/",
+          "/features/amenities/",
+          "/best-eco-lodge-quito/",
+          "/booking/",
+          "/contact/",
+          "/rooms/",
+          "/cloud-forest-lodge-near-quito/",
+          "/features/amenities/",
+          "/booking/"
+        ],
+        "scripts": [
+          "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/stay.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:44.094Z\"},\"last_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:44.094Z\"},\"last_page\":\"/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:44.094Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_024",
+      "route": "/es/eco-lodge-quito-ecuador/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Eco lodge Quito Ecuador | The Cloud Forest Retreat",
+        "description": "Compara una estad\u00eda eco lodge cerca de Quito con bosque nublado, habitaciones c\u00f3modas, contexto natural y orientaci\u00f3n clara en The Cloud Forest Retreat.",
+        "canonical": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/",
+          "name": "Eco lodge Quito Ecuador | The Cloud Forest Retreat",
+          "description": "Compara una estad\u00eda eco lodge cerca de Quito con bosque nublado, habitaciones c\u00f3modas, contexto natural y orientaci\u00f3n clara en The Cloud Forest Retreat.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/eco-lodge-quito-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2078.890625,
+              "width": 380.65625,
+              "height": 236.75
+            },
+            {
+              "top": 2078.890625,
+              "width": 380.671875,
+              "height": 236.75
+            },
+            {
+              "top": 2078.890625,
+              "width": 380.65625,
+              "height": 236.75
+            }
+          ],
+          [
+            {
+              "top": 3389.984375,
+              "width": 416,
+              "height": 306
+            },
+            {
+              "top": 3389.984375,
+              "width": 416,
+              "height": 306
+            },
+            {
+              "top": 3389.984375,
+              "width": 416,
+              "height": 306
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "en",
+            "/eco-lodge-quito-ecuador/"
+          ],
+          [
+            "es",
+            "/es/eco-lodge-quito-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "/es/habitaciones/",
+          "/es/sobre-nosotros/",
+          "/es/habitaciones/",
+          "/es/caracteristicas/amenidades/",
+          "/es/mejor-eco-lodge-quito/",
+          "/es/reservas/",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/lodge-bosque-nublado-cerca-de-quito/",
+          "/es/caracteristicas/amenidades/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/stay.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:45.153Z\"},\"last_touch\":{\"utm_source\":\"pair_024_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:45.153Z\"},\"last_page\":\"/es/eco-lodge-quito-ecuador/?utm_source=pair_024_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:45.153Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_025",
+      "route": "/birdwatching-lodge-ecuador/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Birdwatching Lodge Ecuador | Cloud Forest Stay Near Quito",
+        "description": "Plan a birdwatching-friendly stay in Ecuador with cloud forest habitat, quiet mornings, comfortable rooms and practical guidance near Quito.",
+        "canonical": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/",
+          "name": "Birdwatching Lodge Ecuador | Cloud Forest Stay Near Quito",
+          "description": "Plan a birdwatching-friendly stay in Ecuador with cloud forest habitat, quiet mornings, comfortable rooms and practical guidance near Quito.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1648.53125,
+              "width": 366,
+              "height": 480.078125
+            },
+            {
+              "top": 2144.609375,
+              "width": 366,
+              "height": 455.28125
+            },
+            {
+              "top": 2615.890625,
+              "width": 366,
+              "height": 455.28125
+            }
+          ],
+          [
+            {
+              "top": 4173.765625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4599.765625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 5025.765625,
+              "width": 366,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 5789.171875,
+              "width": 320,
+              "height": 142.640625
+            },
+            {
+              "top": 5931.8125,
+              "width": 320,
+              "height": 166.859375
+            },
+            {
+              "top": 6098.671875,
+              "width": 320,
+              "height": 166.859375
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "/rooms/",
+          "/birdwatching-ecuador-guide/",
+          "/birds-of-the-cloud-forest-ecuador/",
+          "/hummingbirds-quito-ecuador/",
+          "/rooms/",
+          "/rooms/sunrise-room/",
+          "/birdwatching-ecuador-guide/",
+          "/booking/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:46.043Z\"},\"last_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:46.043Z\"},\"last_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:46.043Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_025",
+      "route": "/es/lodge-avistamiento-aves-ecuador/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Lodge de avistamiento de aves en Ecuador | Cerca de Quito",
+        "description": "Planifica una estad\u00eda para observar aves en Ecuador con h\u00e1bitat de bosque nublado, ma\u00f1anas tranquilas, habitaciones c\u00f3modas y orientaci\u00f3n cerca de Quito.",
+        "canonical": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/",
+          "name": "Lodge de avistamiento de aves en Ecuador | Cerca de Quito",
+          "description": "Planifica una estad\u00eda para observar aves en Ecuador con h\u00e1bitat de bosque nublado, ma\u00f1anas tranquilas, habitaciones c\u00f3modas y orientaci\u00f3n cerca de Quito.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1725.96875,
+              "width": 366,
+              "height": 480.078125
+            },
+            {
+              "top": 2222.046875,
+              "width": 366,
+              "height": 455.28125
+            },
+            {
+              "top": 2693.328125,
+              "width": 366,
+              "height": 455.28125
+            }
+          ],
+          [
+            {
+              "top": 4241.15625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 4667.15625,
+              "width": 366,
+              "height": 410
+            },
+            {
+              "top": 5093.15625,
+              "width": 366,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 5856.5625,
+              "width": 320,
+              "height": 165.859375
+            },
+            {
+              "top": 6022.421875,
+              "width": 320,
+              "height": 166.859375
+            },
+            {
+              "top": 6189.28125,
+              "width": 320,
+              "height": 166.859375
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "/es/habitaciones/",
+          "/es/guia-avistamiento-aves-ecuador/",
+          "/es/aves-del-bosque-nublado-ecuador/",
+          "/es/colibries-quito-ecuador/",
+          "/es/habitaciones/",
+          "/es/habitaciones/habitacion-amanecer/",
+          "/es/guia-avistamiento-aves-ecuador/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:46.670Z\"},\"last_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:46.670Z\"},\"last_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:46.670Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_025",
+      "route": "/birdwatching-lodge-ecuador/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Birdwatching Lodge Ecuador | Cloud Forest Stay Near Quito",
+        "description": "Plan a birdwatching-friendly stay in Ecuador with cloud forest habitat, quiet mornings, comfortable rooms and practical guidance near Quito.",
+        "canonical": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/",
+          "name": "Birdwatching Lodge Ecuador | Cloud Forest Stay Near Quito",
+          "description": "Plan a birdwatching-friendly stay in Ecuador with cloud forest habitat, quiet mornings, comfortable rooms and practical guidance near Quito.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1342.734375,
+              "width": 358,
+              "height": 474.078125
+            },
+            {
+              "top": 1342.734375,
+              "width": 358,
+              "height": 474.078125
+            },
+            {
+              "top": 1832.8125,
+              "width": 732,
+              "height": 705.59375
+            }
+          ],
+          [
+            {
+              "top": 3401.296875,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3401.296875,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3827.296875,
+              "width": 732,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 4495.296875,
+              "width": 637.84375,
+              "height": 142.640625
+            },
+            {
+              "top": 4637.9375,
+              "width": 637.84375,
+              "height": 143.640625
+            },
+            {
+              "top": 4781.578125,
+              "width": 637.84375,
+              "height": 143.640625
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "/rooms/",
+          "/birdwatching-ecuador-guide/",
+          "/birds-of-the-cloud-forest-ecuador/",
+          "/hummingbirds-quito-ecuador/",
+          "/rooms/",
+          "/rooms/sunrise-room/",
+          "/birdwatching-ecuador-guide/",
+          "/booking/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:47.431Z\"},\"last_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:47.431Z\"},\"last_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:47.431Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_025",
+      "route": "/es/lodge-avistamiento-aves-ecuador/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Lodge de avistamiento de aves en Ecuador | Cerca de Quito",
+        "description": "Planifica una estad\u00eda para observar aves en Ecuador con h\u00e1bitat de bosque nublado, ma\u00f1anas tranquilas, habitaciones c\u00f3modas y orientaci\u00f3n cerca de Quito.",
+        "canonical": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/",
+          "name": "Lodge de avistamiento de aves en Ecuador | Cerca de Quito",
+          "description": "Planifica una estad\u00eda para observar aves en Ecuador con h\u00e1bitat de bosque nublado, ma\u00f1anas tranquilas, habitaciones c\u00f3modas y orientaci\u00f3n cerca de Quito.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1426.734375,
+              "width": 358,
+              "height": 474.078125
+            },
+            {
+              "top": 1426.734375,
+              "width": 358,
+              "height": 474.078125
+            },
+            {
+              "top": 1916.8125,
+              "width": 732,
+              "height": 705.59375
+            }
+          ],
+          [
+            {
+              "top": 3538,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3538,
+              "width": 358,
+              "height": 410
+            },
+            {
+              "top": 3964,
+              "width": 732,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 4632,
+              "width": 637.84375,
+              "height": 142.640625
+            },
+            {
+              "top": 4774.640625,
+              "width": 637.84375,
+              "height": 143.640625
+            },
+            {
+              "top": 4918.28125,
+              "width": 637.84375,
+              "height": 143.640625
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "/es/habitaciones/",
+          "/es/guia-avistamiento-aves-ecuador/",
+          "/es/aves-del-bosque-nublado-ecuador/",
+          "/es/colibries-quito-ecuador/",
+          "/es/habitaciones/",
+          "/es/habitaciones/habitacion-amanecer/",
+          "/es/guia-avistamiento-aves-ecuador/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:48.153Z\"},\"last_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:48.153Z\"},\"last_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:48.153Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_025",
+      "route": "/birdwatching-lodge-ecuador/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Birdwatching Lodge Ecuador | Cloud Forest Stay Near Quito",
+        "description": "Plan a birdwatching-friendly stay in Ecuador with cloud forest habitat, quiet mornings, comfortable rooms and practical guidance near Quito.",
+        "canonical": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/",
+          "name": "Birdwatching Lodge Ecuador | Cloud Forest Stay Near Quito",
+          "description": "Plan a birdwatching-friendly stay in Ecuador with cloud forest habitat, quiet mornings, comfortable rooms and practical guidance near Quito.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1161.46875,
+              "width": 416,
+              "height": 536.796875
+            },
+            {
+              "top": 1161.46875,
+              "width": 416,
+              "height": 536.796875
+            },
+            {
+              "top": 1161.46875,
+              "width": 416,
+              "height": 536.796875
+            }
+          ],
+          [
+            {
+              "top": 2540.546875,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2540.546875,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2540.546875,
+              "width": 416,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 3359.109375,
+              "width": 378,
+              "height": 142.640625
+            },
+            {
+              "top": 3359.109375,
+              "width": 378,
+              "height": 142.640625
+            },
+            {
+              "top": 3359.109375,
+              "width": 378,
+              "height": 142.640625
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/",
+          "/rooms/",
+          "/birdwatching-ecuador-guide/",
+          "/birds-of-the-cloud-forest-ecuador/",
+          "/hummingbirds-quito-ecuador/",
+          "/rooms/",
+          "/rooms/sunrise-room/",
+          "/birdwatching-ecuador-guide/",
+          "/booking/"
+        ],
+        "scripts": [
+          "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:48.853Z\"},\"last_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:48.853Z\"},\"last_page\":\"/birdwatching-lodge-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:48.853Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_025",
+      "route": "/es/lodge-avistamiento-aves-ecuador/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Lodge de avistamiento de aves en Ecuador | Cerca de Quito",
+        "description": "Planifica una estad\u00eda para observar aves en Ecuador con h\u00e1bitat de bosque nublado, ma\u00f1anas tranquilas, habitaciones c\u00f3modas y orientaci\u00f3n cerca de Quito.",
+        "canonical": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/birdwatching-lodge-ecuador/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 4,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/#webpage",
+          "url": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/",
+          "name": "Lodge de avistamiento de aves en Ecuador | Cerca de Quito",
+          "description": "Planifica una estad\u00eda para observar aves en Ecuador con h\u00e1bitat de bosque nublado, ma\u00f1anas tranquilas, habitaciones c\u00f3modas y orientaci\u00f3n cerca de Quito.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/#lodging"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/lodge-avistamiento-aves-ecuador/#breadcrumb"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 1227.796875,
+              "width": 416,
+              "height": 547.015625
+            },
+            {
+              "top": 1227.796875,
+              "width": 416,
+              "height": 547.015625
+            },
+            {
+              "top": 1227.796875,
+              "width": 416,
+              "height": 547.015625
+            }
+          ],
+          [
+            {
+              "top": 2669.125,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2669.125,
+              "width": 416,
+              "height": 410
+            },
+            {
+              "top": 2669.125,
+              "width": 416,
+              "height": 410
+            }
+          ],
+          [
+            {
+              "top": 3487.6875,
+              "width": 378,
+              "height": 165.859375
+            },
+            {
+              "top": 3487.6875,
+              "width": 378,
+              "height": 165.859375
+            },
+            {
+              "top": 3487.6875,
+              "width": 378,
+              "height": 165.859375
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ],
+          [
+            "en",
+            "/birdwatching-lodge-ecuador/"
+          ],
+          [
+            "es",
+            "/es/lodge-avistamiento-aves-ecuador/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/",
+          "/es/habitaciones/",
+          "/es/guia-avistamiento-aves-ecuador/",
+          "/es/aves-del-bosque-nublado-ecuador/",
+          "/es/colibries-quito-ecuador/",
+          "/es/habitaciones/",
+          "/es/habitaciones/habitacion-amanecer/",
+          "/es/guia-avistamiento-aves-ecuador/",
+          "/es/reservas/"
+        ],
+        "scripts": [
+          "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+          "http://127.0.0.1:4173/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:4173/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:4173/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:4173/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:4173/assets/css/site.css?v=2",
+          "http://127.0.0.1:4173/assets/css/header.css?v=5",
+          "http://127.0.0.1:4173/assets/css/global.css?v=4",
+          "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+          "http://127.0.0.1:4173/assets/css/clusters/nature-birding.css?v=6",
+          "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "nature-birding",
+        "template": "premium-nature-birding",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:49.769Z\"},\"last_touch\":{\"utm_source\":\"pair_025_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T18:28:49.769Z\"},\"last_page\":\"/es/lodge-avistamiento-aves-ecuador/?utm_source=pair_025_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T18:28:49.769Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    }
+  ],
+  "link_audit": {
+    "/birdwatching-lodge-ecuador/": {
+      "current_unique_inlinks": "14",
+      "current_inlink_sources": "/ | /birds-of-the-cloud-forest-ecuador/ | /birdwatching-ecuador-guide/ | /blog/ | /blog/best-time-to-visit-cloud-forest/ | /blog/birdwatching-near-quito/ | /blog/cloud-forest-itinerary-3-days/ | /es/lodge-avistamiento-aves-ecuador/ | /features/choco-andino-de-pichincha/ | /features/fauna/ | /hummingbirds-quito-ecuador/ | /rooms/common-areas/ | /rooms/sunrise-room/ | /rooms/sunset-room/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "9",
+      "target": "6",
+      "broken_local_outlinks": []
+    },
+    "/eco-lodge-quito-ecuador/": {
+      "current_unique_inlinks": "9",
+      "current_inlink_sources": "/about/ | /best-eco-lodge-quito/ | /blog/ | /cloud-forest-ecuador/ | /cloud-forest-quito-ecuador/ | /es/eco-lodge-quito-ecuador/ | /weekend-getaway-from-quito/ | /wellness-retreat-quito/ | /where-to-stay-near-quito-nature/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "10",
+      "target": "6",
+      "broken_local_outlinks": []
+    },
+    "/es/eco-lodge-quito-ecuador/": {
+      "current_unique_inlinks": "11",
+      "current_inlink_sources": "/best-eco-lodge-quito/ | /eco-lodge-quito-ecuador/ | /es/blog/ | /es/bosque-nublado-ecuador/ | /es/bosque-nublado-quito-ecuador/ | /es/donde-alojarse-cerca-de-quito-naturaleza/ | /es/escapada-fin-de-semana-quito/ | /es/escapada-romantica-quito/ | /es/mejor-eco-lodge-quito/ | /es/retiro-naturaleza-quito/ | /es/sobre-nosotros/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "10",
+      "target": "6",
+      "broken_local_outlinks": []
+    },
+    "/es/lodge-avistamiento-aves-ecuador/": {
+      "current_unique_inlinks": "14",
+      "current_inlink_sources": "/birdwatching-lodge-ecuador/ | /es/ | /es/aves-del-bosque-nublado-ecuador/ | /es/blog/ | /es/blog/avistamiento-aves-cerca-de-quito/ | /es/blog/itinerario-bosque-nublado-3-dias/ | /es/blog/mejor-epoca-visitar-bosque-nublado/ | /es/caracteristicas/choco-andino-de-pichincha/ | /es/caracteristicas/fauna/ | /es/colibries-quito-ecuador/ | /es/guia-avistamiento-aves-ecuador/ | /es/habitaciones/areas-comunes/ | /es/habitaciones/habitacion-amanecer/ | /es/habitaciones/habitacion-atardecer/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "9",
+      "target": "6",
+      "broken_local_outlinks": []
+    },
+    "/es/terminos-de-servicio/": {
+      "current_unique_inlinks": "2",
+      "current_inlink_sources": "/es/politica-de-privacidad/ | /terms-of-service/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "4",
+      "target": "2",
+      "broken_local_outlinks": []
+    },
+    "/terms-of-service/": {
+      "current_unique_inlinks": "2",
+      "current_inlink_sources": "/es/terminos-de-servicio/ | /privacy-policy/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "4",
+      "target": "2",
+      "broken_local_outlinks": []
+    }
+  },
+  "consent_scope": {
+    "roadmap_pages_loading_shared_controller": 98,
+    "default_analytics_storage": "denied",
+    "accept_and_decline_verified": true,
+    "languages": [
+      "en",
+      "es"
+    ]
+  },
+  "summary": {
+    "renders": 18,
+    "passed": 18,
+    "failed": 0
+  }
+}

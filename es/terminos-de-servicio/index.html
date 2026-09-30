@@ -1,417 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Términos de servicio | The Cloud Forest Retreat</title>
-  <meta name="description" content="Lee los Términos de servicio de The Cloud Forest Retreat, incluyendo el uso del sitio, reservas, cancelaciónes, propiedad intelectual y responsabilidades del huésped." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://thecloudforestretreat.com/es/terminos-de-servicio/" />
-  <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/terms-of-service/" />
-  <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/terminos-de-servicio/" />
-  <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/terms-of-service/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="The Cloud Forest Retreat" />
-  <meta property="og:title" content="Términos de servicio | The Cloud Forest Retreat" />
-  <meta property="og:description" content="Lee los Términos de servicio de The Cloud Forest Retreat, incluyendo el uso del sitio, reservas, cancelaciónes, propiedad intelectual y responsabilidades del huésped." />
-  <meta property="og:url" content="https://thecloudforestretreat.com/es/terminos-de-servicio/" />
-  <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:secure_url" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Cloud Forest Retreat en el bosque nublado de Ecuador" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Términos de servicio | The Cloud Forest Retreat" />
-  <meta name="twitter:description" content="Lee los Términos de servicio de The Cloud Forest Retreat, incluyendo el uso del sitio, reservas, cancelaciónes, propiedad intelectual y responsabilidades del huésped." />
-  <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#0D5925" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/site.css?v=2" />
-  <link rel="stylesheet" href="/assets/css/header.css?v=5" />
-
-  <style>
-    :root{
-      --max:1120px;
-      --r:24px;
-      --shadow:0 18px 55px rgba(13,89,37,0.16);
-      --line:rgba(11,26,16,0.12);
-      --glass:rgba(245,245,220,0.78);
-      --glass2:rgba(245,245,220,0.62);
-      --forest:#0D5925;
-      --ink:#0b1a10;
-    }
-
-    *{ box-sizing:border-box; }
-    body{ margin:0; }
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:18px 18px 72px;
-    }
-
-    .card{
-      background:var(--glass2);
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      color: var(--ink);
-      min-width: 0;
-    }
-
-    .topBand{
-      margin-top:14px;
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      background:var(--glass);
-      box-shadow: var(--shadow);
-      padding:14px;
-      display:flex;
-      justify-content:space-between;
-      align-items: center;
-      gap: 10px;
-      flex-wrap:wrap;
-      color: var(--ink);
-    }
-
-    .crumbs{
-      font-size:13px;
-      font-weight:800;
-      color:rgba(11,26,16,0.75);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .crumbs a{ color:inherit; text-decoration:none; }
-    .crumbs a:hover{ text-decoration: underline; text-underline-offset: 3px; }
-
-    /* HERO */
-    .hero{
-      margin-top:14px;
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      background: var(--glass);
-      position: relative;
-      color: var(--ink);
-    }
-
-    /*
-      HERO INTERNO (Términos):
-      Mas corto como otras páginas internas, reduce el scroll antes del contenido legal.
-    */
-    .heroMedia{
-      position:relative;
-      height: clamp(320px, 42vh, 520px);
-      background: rgba(0,0,0,0.10);
-    }
-
-    .heroMedia img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position: center 58%;
-      display:block;
-      transform: scale(1.01);
-    }
-
-    .heroShade{
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(980px 520px at 18% 14%, rgba(224,100,58,0.18), rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      pointer-events: none;
-    }
-
-    .heroInner{
-      position:absolute;
-      left:14px;
-      right:14px;
-      bottom:14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.22);
-      background:rgba(0,0,0,0.30);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding:14px;
-      max-width:860px;
-      color:#fff;
-      box-shadow: 0 18px 55px rgba(0,0,0,0.20);
-    }
-
-    .kicker{
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:0.12em;
-      text-transform:uppercase;
-      color:rgba(255,255,255,0.92);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .heroH1{
-      margin:8px 0 6px;
-      font-family:var(--font-head);
-      font-size:clamp(32px,4vw,54px);
-      font-weight:900;
-      color:#fff;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-    }
-
-    .heroLead{
-      margin:0;
-      font-size:15.5px;
-      line-height:1.7;
-      color:rgba(231,228,209,0.92);
-      font-weight: 650;
-      max-width: 80ch;
-    }
-
-    /* CONTENT */
-    .contentGrid{
-      margin-top:12px;
-      display:grid;
-      grid-template-columns:1.15fr 0.85fr;
-      gap:12px;
-      align-items: start;
-    }
-
-    .contentPad{ padding:16px; }
-
-    .h2{
-      font-family:var(--font-head);
-      font-size:18px;
-      color:var(--forest);
-      margin-top:18px;
-      margin-bottom: 6px;
-      letter-spacing: -0.02em;
-      font-weight: 900;
-    }
-
-    .p{
-      font-size:14.8px;
-      line-height:1.75;
-      color:rgba(11,26,16,0.78);
-      font-weight: 650;
-      margin: 10px 0 0;
-    }
-
-    /* VERTICAL IMAGE */
-    .vFrame{
-      aspect-ratio:9/16;
-      border-radius:var(--r);
-      overflow:hidden;
-      position:relative;
-      border:1px solid var(--line);
-      background:#ccc;
-      box-shadow: var(--shadow);
-    }
-
-    .vFrame img{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position: center 50%;
-      transform: scale(1.01);
-    }
-
-    .vCap{
-      position:absolute;
-      bottom:10px;
-      left:10px;
-      right:10px;
-      background:rgba(245,245,220,0.95);
-      border-radius:14px;
-      padding:10px 12px;
-      font-size:13px;
-      font-weight:900;
-      color:#0b1a10;
-      text-align:center;
-      border: 1px solid rgba(13,89,37,0.16);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-    }
-
-    @media(max-width:900px){
-      .contentGrid{ grid-template-columns:1fr; }
-
-      .heroMedia{ height: clamp(240px, 34vh, 340px); }
-      .heroMedia img{ object-position: center 62%; }
-      .heroInner{ left:12px; right:12px; bottom:12px; padding:12px; max-width:none; }
-    }
-  </style>
-
-<style>
-.rawLangLinks{
-position:absolute !important;
-width:1px !important;
-height:1px !important;
-padding:0 !important;
-margin:-1px !important;
-overflow:hidden !important;
-clip:rect(0,0,0,0) !important;
-white-space:nowrap !important;
-border:0 !important;
-}
-</style>
-<script src="/assets/js/site-config.js?v=2"></script>
-
-<link href="/assets/css/global.css?v=4" rel="stylesheet"/>
-<link href="/assets/css/footer.css?v=10" rel="stylesheet"/>
-<link href="/assets/css/clusters/legal.css?v=5" rel="stylesheet"/>
-<script defer src="/assets/js/head.js?v=2"></script>
-</head>
-<body data-page-language="es" data-page-type="legal_page" data-tcfr-cluster="legal" data-tcfr-template="premium-legal-live">
-<div id="siteHeader" data-current-lang="es"></div>
-<nav class="rawLangLinks" aria-label="Selector de idioma">
-  <a href="https://thecloudforestretreat.com/terms-of-service/" lang="en" hreflang="en" data-analytics-event="language_switch_click" data-analytics-label="English" data-analytics-location="language_switch" data-analytics-page-type="legal_page" data-analytics-target-language="en">English</a>
-  <a href="https://thecloudforestretreat.com/es/terminos-de-servicio/" lang="es" hreflang="es" aria-current="page" data-analytics-event="language_switch_click" data-analytics-label="Español" data-analytics-location="language_switch" data-analytics-page-type="legal_page" data-analytics-target-language="es">Español</a>
-</nav>
-
-<main class="wrap" aria-label="Página de Términos de servicio">
-  <section class="topBand" aria-label="Navegación de página">
-    <div class="crumbs" aria-label="Migas de pan">
-      <a href="/">Inicio</a>
-      <span aria-hidden="true">›</span>
-      <span>Términos de servicio</span>
-    </div>
-  </section>
-
-  <section class="hero" aria-label="Hero de Términos">
-    <div class="heroMedia" aria-label="Imagen hero">
-      <img src="/assets/images/pages/tcfr_terms_hero_01.jpg" alt="Bosque nublado en The Cloud Forest Retreat" loading="eager" decoding="async" />
-      <div class="heroShade" aria-hidden="true"></div>
-      <div class="heroInner" aria-label="Contenido del hero">
-        <div class="kicker">Legal | Transparencia | Confianza</div>
-        <h1 class="heroH1">Términos de servicio</h1>
-        <p class="heroLead">
-          Términos claros ayudan a garantizar una experiencia respetuosa, transparente y agradable para cada huésped.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contentGrid" aria-label="Contenido de Términos">
-    <aside class="legalLiveToc" aria-label="Secciones de los términos">
-      <p class="legalEyebrow">En esta página</p>
-      <h2>Busca una sección</h2>
-      <nav>
-        <a href="#terminos-uso">Uso del sitio</a>
-        <a href="#terminos-reservas">Reservas y pagos</a>
-        <a href="#terminos-cancelaciones">Cancelaciones y reembolsos</a>
-        <a href="#terminos-propiedad">Propiedad intelectual</a>
-        <a href="#terminos-terceros">Servicios de terceros</a>
-        <a href="#terminos-responsabilidad">Limitación de responsabilidad</a>
-        <a href="#terminos-modificaciones">Modificaciones</a>
-        <a href="#terminos-contacto">Contacto</a>
-      </nav>
-    </aside>
-    <article class="card contentPad" aria-label="Texto de Términos">
-      <p class="p"><strong>The Cloud Forest Retreat - Términos de servicio</strong></p>
-      <p class="p"><strong>Última actualización:</strong> 21 de octubre de 2025</p>
-
-      <p class="p">
-        Bienvenido a The Cloud Forest Retreat ("nosotros", "nuestro"). Al usar nuestro sitio web
-        https://thecloudforestretreat.com, aceptas cumplir y quedar sujeto a estos Términos de servicio.
-      </p>
-
-      <h2 class="h2" id="terminos-uso">1. Uso del sitio</h2>
-      <p class="p">
-        Te comprometes a usar nuestro sitio de forma responsable y solo para fines legales relacionados con conocer
-        o reservar estadías en The Cloud Forest Retreat.
-      </p>
-
-      <h2 class="h2" id="terminos-reservas">2. Reservas y pagos</h2>
-      <p class="p">
-        Todas las reservas están sujetas a disponibilidad y confirmación. Al realizar una reserva, aceptas
-        proporcionar información correcta y completar los pagos requeridos según las condiciones
-        que se muestren al momento de confirmar.
-      </p>
-
-      <h2 class="h2" id="terminos-cancelaciones">3. Cancelaciones y reembolsos</h2>
-      <p class="p">
-        Las políticas de cancelación y reembolso se describen en la página de reservas. Por favor revísalas
-        antes de confirmar tu estadía.
-      </p>
-
-      <h2 class="h2" id="terminos-propiedad">4. Propiedad intelectual</h2>
-      <p class="p">
-        Todas las imágenes, videos y contenidos escritos son propiedad de The Cloud Forest Retreat o están licenciados
-        para nuestro uso. No puedes reutilizar nuestro contenido sin permiso.
-      </p>
-
-      <h2 class="h2" id="terminos-terceros">5. Servicios de terceros</h2>
-      <p class="p">
-        Nuestro sitio puede incluir integraciones o enlaces a plataformás de terceros. No somos responsables
-        por sus acciones ni por su contenido.
-      </p>
-
-      <h2 class="h2" id="terminos-responsabilidad">6. Limitación de responsabilidad</h2>
-      <p class="p">
-        No somos responsables por daños o pérdidas que resulten del uso del sitio o de cualquier reserva
-        realizada a través de él.
-      </p>
-
-      <h2 class="h2" id="terminos-modificaciones">7. Modificaciones</h2>
-      <p class="p">
-        Podemos actualizar estos Términos de vez en cuando. El uso continuo del sitio significa que aceptas
-        cualquier cambio.
-      </p>
-
-      <h2 class="h2" id="terminos-contacto">8. Contacto</h2>
-      <p class="p">
-        Si tienes preguntas, escríbenos a info@thecloudforestretreat.com.
-      </p>
-    </article>
-
-    <aside aria-label="Visual de Términos">
-      <div class="vFrame" aria-label="Imagen vertical">
-        <img src="/assets/images/pages/tcfr_terms_01.jpg" alt="Detalle del bosque" loading="lazy" decoding="async" />
-        <div class="vCap">Términos claros apoyan una estadía cuidada.</div>
-      </div>
-    </aside>
-  </section>
-</main>
-
-
-
-
-
-
-
-
-<!-- TCFR_ARCHITECTURE_START -->
-<section class="tcfr-related" aria-labelledby="tcfr-related-title" data-analytics-section="related_content">
-  <p class="tcfr-related__eyebrow">Sigue explorando</p>
-  <h2 class="tcfr-related__title" id="tcfr-related-title">Planifica tu estadía en el bosque nublado</h2>
-  <div class="tcfr-related__grid">
-      <a class="tcfr-related__link" href="/es/politica-de-privacidad/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Política de privacidad</a>
-      <a class="tcfr-related__link" href="/es/lodge-bosque-nublado-cerca-de-quito/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Lodge de bosque nublado cerca de Quito</a>
-      <a class="tcfr-related__link" href="/es/reservas/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Reservas</a>
-      <a class="tcfr-related__link" href="/es/sobre-nosotros/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Sobre nosotros</a>
-      <a class="tcfr-related__link" href="/es/contacto/" data-analytics-event="internal_link_click" data-analytics-location="related_content" data-analytics-section="related_content">Contacto</a>
-  </div>
-  <div class="tcfr-related__cta">
-    <a class="btn primary" href="/es/reservas/" data-analytics-event="booking_cta_click" data-analytics-location="related_content">Consultar disponibilidad</a>
-    <a class="btn secondary" href="/es/contacto/" data-analytics-event="contact_cta_click" data-analytics-location="related_content">Hacer una pregunta</a>
-  </div>
-</section>
-<!-- TCFR_ARCHITECTURE_END -->
-<div id="siteFooter"></div>
-<script src="/assets/js/attribution.js?v=1"></script><script src="/assets/js/site.js?v=8"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Términos de servicio | The Cloud Forest Retreat</title>
+    <meta name="description" content="Revisa los términos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://thecloudforestretreat.com/es/terminos-de-servicio/" />
+    <link rel="alternate" hreflang="en" href="https://thecloudforestretreat.com/terms-of-service/" />
+    <link rel="alternate" hreflang="es" href="https://thecloudforestretreat.com/es/terminos-de-servicio/" />
+    <link rel="alternate" hreflang="x-default" href="https://thecloudforestretreat.com/terms-of-service/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Cloud Forest Retreat" />
+    <meta property="og:title" content="Términos de servicio | The Cloud Forest Retreat" />
+    <meta property="og:description" content="Revisa los términos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido." />
+    <meta property="og:url" content="https://thecloudforestretreat.com/es/terminos-de-servicio/" />
+    <meta property="og:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Términos de servicio | The Cloud Forest Retreat" />
+    <meta name="twitter:description" content="Revisa los términos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido." />
+    <meta name="twitter:image" content="https://thecloudforestretreat.com/og-tcfr.jpg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0D5925" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=2" />
+    <link rel="stylesheet" href="/assets/css/header.css?v=5" />
+    <link rel="stylesheet" href="/assets/css/global.css?v=4" />
+    <link rel="stylesheet" href="/assets/css/footer.css?v=10" />
+    <link rel="stylesheet" href="/assets/css/clusters/legal.css?v=6" />
+    <link rel="stylesheet" href="/assets/css/components/faq.css?v=2" />
+    <script src="/assets/js/site-config.js?v=2"></script>
+    <script defer src="/assets/js/head.js?v=3"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["LodgingBusiness","BedAndBreakfast"],"@id":"https://thecloudforestretreat.com/#lodging","name":"The Cloud Forest Retreat","url":"https://thecloudforestretreat.com/","address":{"@type":"PostalAddress","addressRegion":"Pichincha","addressCountry":"EC"}},{"@type":"WebPage","@id":"https://thecloudforestretreat.com/es/terminos-de-servicio/#webpage","url":"https://thecloudforestretreat.com/es/terminos-de-servicio/","name":"Términos de servicio | The Cloud Forest Retreat","description":"Revisa los términos de The Cloud Forest Retreat sobre uso del sitio, solicitudes, pagos, cancelaciones, responsabilidades, terceros y derechos de contenido.","inLanguage":"es","about":{"@id":"https://thecloudforestretreat.com/#lodging"},"breadcrumb":{"@id":"https://thecloudforestretreat.com/es/terminos-de-servicio/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://thecloudforestretreat.com/es/terminos-de-servicio/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://thecloudforestretreat.com/es/"},{"@type":"ListItem","position":2,"name":"Términos de servicio","item":"https://thecloudforestretreat.com/es/terminos-de-servicio/"}]},{"@type":"FAQPage","@id":"https://thecloudforestretreat.com/es/terminos-de-servicio/#faq","mainEntity":[{"@type":"Question","name":"¿Enviar una solicitud confirma mi estadía?","acceptedAnswer":{"@type":"Answer","text":"No. La estadía se confirma cuando se verifican disponibilidad, precio, inclusiones, requisitos de pago y condiciones aplicables."}},{"@type":"Question","name":"¿Qué política de cancelación aplica?","acceptedAnswer":{"@type":"Answer","text":"Usa la política mostrada para tu tarifa, habitación, fechas y canal específicos. Consulta antes de pagar si algo no está claro."}},{"@type":"Question","name":"¿Las plataformas externas tienen términos separados?","acceptedAnswer":{"@type":"Answer","text":"Sí. Una plataforma puede aplicar condiciones propias de cuenta, pago, cancelación y privacidad además de las condiciones confirmadas para la estadía."}},{"@type":"Question","name":"¿Qué hago si cambian el clima o los caminos?","acceptedAnswer":{"@type":"Answer","text":"Contacta al refugio para recibir orientación actual y toma decisiones conservadoras. Los cambios están sujetos a las condiciones de reserva y alternativas disponibles."}}]}]}</script>
+  </head>
+  <body data-page-language="es" data-page-type="legal_page" data-tcfr-cluster="legal" data-tcfr-template="premium-legal">
+    <div id="siteHeader" data-current-lang="es"></div>
+    <nav class="rawLangLinks" aria-label="Selector de idioma"><a href="/terms-of-service/" lang="en" hreflang="en" >English</a><a href="/es/terminos-de-servicio/" lang="es" hreflang="es" aria-current="page">Español</a></nav>
+    <main class="legalPreview">
+      <section class="legalHero"><div><p class="legalEyebrow">Términos claros · estadías informadas</p><h1>Términos de servicio</h1><p class="legalHero__lead">Estos términos explican el uso del sitio y cómo se gestionan la información de reserva, pagos, cancelaciones, responsabilidades del huésped y servicios de terceros.</p></div><div class="legalHero__meta"><div><strong>Última actualización</strong><span>30 de septiembre de 2026</span></div><div><strong>Contacto</strong><span>Página de contacto</span></div><div><strong>Idiomas</strong><span>English · Español</span></div></div></section>
+      <section class="legalLayout">
+        <aside class="legalToc"><p class="legalEyebrow">En esta página</p><h2>Busca una sección</h2><nav>          <a href="#legal-1" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="Uso del sitio" data-analytics-page-type="legal_page">Uso del sitio</a>
+          <a href="#legal-2" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="Disponibilidad y confirmación" data-analytics-page-type="legal_page">Disponibilidad y confirmación</a>
+          <a href="#legal-3" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="Pagos y datos de reserva" data-analytics-page-type="legal_page">Pagos y datos de reserva</a>
+          <a href="#legal-4" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="Cancelaciones y cambios" data-analytics-page-type="legal_page">Cancelaciones y cambios</a>
+          <a href="#legal-5" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="Responsabilidades del huésped" data-analytics-page-type="legal_page">Responsabilidades del huésped</a>
+          <a href="#legal-6" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="Viaje y condiciones naturales" data-analytics-page-type="legal_page">Viaje y condiciones naturales</a>
+          <a href="#legal-7" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="Servicios de terceros" data-analytics-page-type="legal_page">Servicios de terceros</a>
+          <a href="#legal-8" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="Contenido y actualizaciones" data-analytics-page-type="legal_page">Contenido y actualizaciones</a><a href="#legal-faq" data-analytics-event="internal_link_click" data-analytics-location="legal_toc" data-analytics-label="FAQ" data-analytics-page-type="legal_page">FAQ</a></nav></aside>
+        <article class="legalDocument"><header class="legalDocument__intro"><h2>Términos para usar el sitio y coordinar una estadía</h2><p>Lee los términos que aplican cuando usas el sitio o solicitas una estadía. Una reserva se completa únicamente cuando se confirman disponibilidad, precio, inclusiones y condiciones aplicables.</p></header>        <section class="legalSection" id="legal-1"><span class="legalSection__number">01</span><h2>Uso del sitio</h2><p>Usa este sitio solo para fines legales relacionados con conocer o coordinar una estadía. No interfieras con la seguridad, intentes accesos no autorizados, envíes información falsa ni uses el contenido de forma que perjudique al refugio, sus huéspedes o proveedores.</p></section>
+        <section class="legalSection" id="legal-2"><span class="legalSection__number">02</span><h2>Disponibilidad y confirmación</h2><p>Enviar una consulta o solicitud no crea por sí solo una reserva. Las fechas, ocupación, habitación, precio, impuestos, inclusiones, calendario de pagos y posibles estadías mínimas deben confirmarse mediante el proceso de reserva o directamente con el refugio.</p></section>
+        <section class="legalSection" id="legal-3"><span class="legalSection__number">03</span><h2>Pagos y datos de reserva</h2><p>Proporciona información correcta de huéspedes y contacto y sigue las condiciones de pago de la reserva confirmada. Si usas una plataforma externa, también pueden aplicar sus condiciones de pago. Conserva la confirmación y revisa los detalles antes del viaje.</p></section>
+        <section class="legalSection" id="legal-4"><span class="legalSection__number">04</span><h2>Cancelaciones y cambios</h2><p>Las condiciones de cancelación, reembolso, reprogramación y no presentación pueden variar según tarifa, fechas, habitación y canal. Revisa la política específica antes de pagar y contacta pronto si cambian tus planes; un cambio no está garantizado.</p></section>
+        <section class="legalSection" id="legal-5"><span class="legalSection__number">05</span><h2>Responsabilidades del huésped</h2><p>Los huéspedes deben seguir la orientación de la propiedad y respetar límites de ocupación, espacios compartidos, personal, vecinos, fauna y paisaje. Los menores y demás integrantes del grupo quedan bajo la responsabilidad del huésped titular o su tutor.</p></section>
+        <section class="legalSection" id="legal-6"><span class="legalSection__number">06</span><h2>Viaje y condiciones naturales</h2><p>Los caminos de montaña, clima, visibilidad, servicios y acceso pueden cambiar. Cada huésped debe planificar su viaje, ropa, calzado, seguro y decisiones de salud. Las actividades y avistamientos no están garantizados.</p></section>
+        <section class="legalSection" id="legal-7"><span class="legalSection__number">07</span><h2>Servicios de terceros</h2><p>El sitio puede enlazar plataformas de reserva, mapas, mensajería, analítica u otros proveedores. Sus servicios se rigen por sus propios términos y prácticas de privacidad. El refugio no controla su disponibilidad, contenido o decisiones independientes.</p></section>
+        <section class="legalSection" id="legal-8"><span class="legalSection__number">08</span><h2>Contenido y actualizaciones</h2><p>Los textos, fotografías, videos, marca y diseño pertenecen a The Cloud Forest Retreat o cuentan con licencia y no pueden reutilizarse sin permiso. Estos términos pueden actualizarse; para cada transacción rigen la versión mostrada al reservar y las condiciones específicas confirmadas.</p></section><section class="legalSection tcfrFaq" id="legal-faq"><span class="legalSection__number">FAQ</span><h2>Preguntas frecuentes</h2><div class="tcfrFaq__list">            <details><summary>¿Enviar una solicitud confirma mi estadía?</summary><p>No. La estadía se confirma cuando se verifican disponibilidad, precio, inclusiones, requisitos de pago y condiciones aplicables.</p></details>
+            <details><summary>¿Qué política de cancelación aplica?</summary><p>Usa la política mostrada para tu tarifa, habitación, fechas y canal específicos. Consulta antes de pagar si algo no está claro.</p></details>
+            <details><summary>¿Las plataformas externas tienen términos separados?</summary><p>Sí. Una plataforma puede aplicar condiciones propias de cuenta, pago, cancelación y privacidad además de las condiciones confirmadas para la estadía.</p></details>
+            <details><summary>¿Qué hago si cambian el clima o los caminos?</summary><p>Contacta al refugio para recibir orientación actual y toma decisiones conservadoras. Los cambios están sujetos a las condiciones de reserva y alternativas disponibles.</p></details></div></section></article>
+      </section>
+      <section class="legalCallout"><div><h2>¿Preguntas sobre estos términos?</h2><p>Contáctanos antes de reservar si alguna condición, inclusión o responsabilidad no está clara.</p></div><div class="legalCallout__links"><a href="/es/contacto/" data-analytics-event="contact_cta_click" data-analytics-location="legal_callout" data-analytics-label="Contacto" data-analytics-page-type="legal_page">Contacto</a><a href="/es/politica-de-privacidad/" data-analytics-event="internal_link_click" data-analytics-location="legal_callout" data-analytics-label="Política de privacidad" data-analytics-page-type="legal_page">Política de privacidad</a></div></section>
+    </main>
+    <div id="siteFooter"></div><script src="/assets/js/attribution.js?v=2"></script><script src="/assets/js/site.js?v=8"></script>
+  </body>
 </html>
