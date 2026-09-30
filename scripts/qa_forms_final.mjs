@@ -53,6 +53,7 @@ for (const item of cases) for (const width of [390, 768, 1440]) {
       secret: !!form.querySelector('[name="cf_secret"]') || document.documentElement.innerHTML.includes('TCFR_CF_GATE_'),
       turnstileNode: form.querySelector('.cf-turnstile[data-sitekey]')?.dataset.action || '',
       turnstileScript: !!document.querySelector('#tcfr-turnstile-loader'),
+      messageStartsEmpty: form.querySelector('#message')?.value === '',
       attribution: Object.fromEntries([...form.querySelectorAll('input[name^="attribution_"]')].map(input => [input.name, input.value])),
       overflow: document.documentElement.scrollWidth > innerWidth + 1
     };
@@ -114,6 +115,7 @@ for (const item of cases) for (const width of [390, 768, 1440]) {
   const checks = {
     bound: initial.bound === 'true', labels: initial.labelTargets, required: initial.requiredCount >= (item.kind === 'booking' ? 7 : 4),
     noSecret: !initial.secret, turnstile: initial.turnstileNode === `${item.kind}_submit` && initial.turnstileScript,
+    messageStartsEmpty: initial.messageStartsEmpty,
     attribution: initial.attribution.attribution_first_source === 'final_qa' && initial.attribution.attribution_last_campaign === 'preproduction',
     responsive: !initial.overflow, emptyValidation: emptyInvalid, emailValidation: invalidEmail, missingToken,
     errorResponse: errorShown, successResponse: final.successShown, buttonRestored: final.buttonEnabled,

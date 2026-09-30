@@ -51,9 +51,9 @@
     },
     {
       "system": "End-to-end form delivery",
-      "status": "pending",
-      "evidence": "Configuration checks pass, but a real interactive browser token and Apps Script delivery have not yet been verified.",
-      "action": "Submit and verify one QA entry for each language/form combination in the Google Sheet and email workflow."
+      "status": "blocked",
+      "evidence": "A real English booking submission passed Turnstile but returned HTTP 500 because TCFR_BOOKING_WEBAPP_URL is missing from Preview.",
+      "action": "Mirror TCFR_BOOKING_WEBAPP_URL, TCFR_CONTACT_WEBAPP_URL, and the rotated TCFR_CF_GATE_SECRET from the production integration into Preview, then verify one submission for each language/form combination in the Google Sheet and email workflow."
     },
     {
       "system": "Account-side launch checks",

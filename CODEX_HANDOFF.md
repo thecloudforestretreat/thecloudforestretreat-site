@@ -199,8 +199,9 @@ Cloudflare configuration was rechecked after preview redeploy `9c9205e`:
 - The preview hostname is authorized for Turnstile; error `110200` is gone on all four forms.
 - `TURNSTILE_SECRET_KEY` is active in Preview. Both form APIs reach Turnstile verification and return the expected HTTP 403 response for an intentionally invalid QA token, with no secret or verification details exposed.
 - The same production binding is active; production APIs also reach Turnstile verification for an intentionally invalid token.
+- A real English booking submission then reached the worker but returned HTTP 500 because `TCFR_BOOKING_WEBAPP_URL` is missing from Preview. Mirror the production Apps Script endpoint bindings into Preview before repeating acceptance submissions. Also ensure `TCFR_CONTACT_WEBAPP_URL` and the rotated `TCFR_CF_GATE_SECRET` are present.
 
-The remaining form acceptance step is to obtain real browser tokens and submit one non-production QA entry through each of `/booking/`, `/es/reservas/`, `/contact/`, and `/es/contacto/`. Confirm all four entries reach the intended Google Sheet and that confirmation/notification emails behave as configured.
+After the Apps Script bindings are present, repeat one non-production QA entry through each of `/booking/`, `/es/reservas/`, `/contact/`, and `/es/contacto/`. Confirm all four entries reach the intended Google Sheet and that confirmation/notification emails behave as configured.
 
 Keep production unchanged until the real submission checks pass. Account-side GA4/GTM receipt and deduplication, Search Console verification, sitemap submission/interpretation, and the gate-secret rotation also remain launch checks because repository/browser QA cannot prove those account states.
 
