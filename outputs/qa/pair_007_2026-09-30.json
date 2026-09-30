@@ -1,0 +1,184 @@
+{
+  "pair": "pair_007",
+  "date": "2026-09-30",
+  "runner": "scripts/qa_sunrise.mjs",
+  "renders": [
+    {
+      "route": "/rooms/sunrise-room/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/es/habitaciones/habitacion-amanecer/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/rooms/sunrise-room/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/es/habitaciones/habitacion-amanecer/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/rooms/sunrise-room/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    },
+    {
+      "route": "/es/habitaciones/habitacion-amanecer/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "bathroom": true,
+        "video": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      }
+    }
+  ],
+  "incoming_links": {
+    "en": {
+      "current_unique_inlinks": "7",
+      "current_inlink_sources": "/ | /cloud-forest-lodge-near-quito/ | /es/habitaciones/habitacion-amanecer/ | /rooms/ | /rooms/common-areas/ | /rooms/panoramic-suite/ | /rooms/sunset-room/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "13"
+    },
+    "es": {
+      "current_unique_inlinks": "7",
+      "current_inlink_sources": "/es/ | /es/habitaciones/ | /es/habitaciones/areas-comunes/ | /es/habitaciones/habitacion-atardecer/ | /es/habitaciones/suite-panoramica/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /rooms/sunrise-room/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "13"
+    }
+  },
+  "visual_review": "EN/ES desktop, tablet and mobile; approved Rooms shell; room and shared bathroom photos; aligned desktop cards; no horizontal overflow.",
+  "limitations": [
+    "Account-side GA4/GTM event delivery and deduplication remain pending.",
+    "End-to-end forms, Turnstile and Search Console require account/domain verification.",
+    "Google Sheet write access remains pending.",
+    "Production unchanged."
+  ]
+}

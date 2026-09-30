@@ -620,7 +620,7 @@ body[data-tcfr-template="premium-rooms"] {
   .roomsReviews__links a { text-align: center; }
 }
 
-/* Panoramic Suite detail: extends the approved Rooms shell. */
+/* Room details extend the approved Rooms shell. */
 .suiteDetail .roomsPreview__crumbs { flex-wrap: wrap; }
 .suiteDetail .roomsCompare { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .suiteDetail .roomsGuidance__card { min-height: 0; }
@@ -639,6 +639,7 @@ body[data-tcfr-template="premium-rooms"] {
 .suiteGallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .suiteGallery figcaption { padding: 18px; color: var(--rooms-green); font-weight: 750; }
 .suiteReviewContext { max-width: 66ch; margin: 22px 0 0; color: rgba(20, 32, 24, 0.72); line-height: 1.7; }
+.roomGallery--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 980px) {
   .suiteDetail .roomsCompare, .suiteGallery { grid-template-columns: 1fr; }
 }
