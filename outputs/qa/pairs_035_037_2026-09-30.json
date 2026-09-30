@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-30",
+  "pairs": [
+    "pair_035",
+    "pair_036",
+    "pair_037"
+  ],
+  "routes": [
+    "/cloud-forest-quito-ecuador/",
+    "/es/bosque-nublado-quito-ecuador/",
+    "/cloud-forest-ecuador/",
+    "/es/bosque-nublado-ecuador/",
+    "/nature-retreat-quito/",
+    "/es/retiro-naturaleza-quito/"
+  ],
+  "implementation_commit": "5d065a9",
+  "staging_base_url": "https://codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev/",
+  "cloudflare_checks": {
+    "thecloudforestretreat-staging": "success",
+    "thecloudforestretreat-site": "success"
+  },
+  "browser_qa": {
+    "runner": "scripts/qa_stay_batch_035_037.mjs",
+    "cases": 18,
+    "passed": 18,
+    "widths": [
+      390,
+      768,
+      1440
+    ],
+    "checks": "canonical, hreflang, visible FAQ/schema parity, page schema, responsive overflow and alignment, shared assets, local links, analytics hooks, consent accept/reject, keyboard FAQ"
+  },
+  "link_evidence": {
+    "/cloud-forest-quito-ecuador/": {
+      "current_unique_inlinks": 15,
+      "current_unique_outlinks": 10,
+      "current_inlink_sources": "/about/ | /best-eco-lodge-quito/ | /birds-of-the-cloud-forest-ecuador/ | /cloud-forest-ecuador/ | /cloud-forest-hiking-ecuador/ | /cloud-forest-lodge-near-quito/ | /es/bosque-nublado-quito-ecuador/ | /hummingbirds-quito-ecuador/ | /is-cloud-forest-safe-ecuador/ | /mindo-vs-cloud-forest-retreat/ | /nature-activities-quito/ | /quito-to-cloud-forest-distance/ | /waterfalls-near-quito/ | /what-to-pack-cloud-forest-ecuador/ | /where-to-stay-near-quito-nature/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/bosque-nublado-quito-ecuador/": {
+      "current_unique_inlinks": 16,
+      "current_unique_outlinks": 10,
+      "current_inlink_sources": "/best-eco-lodge-quito/ | /cloud-forest-quito-ecuador/ | /es/actividades-naturaleza-quito/ | /es/aves-del-bosque-nublado-ecuador/ | /es/bosque-nublado-ecuador/ | /es/cascadas-cerca-de-quito/ | /es/colibries-quito-ecuador/ | /es/distancia-quito-bosque-nublado/ | /es/donde-alojarse-cerca-de-quito-naturaleza/ | /es/es-seguro-bosque-nublado-ecuador/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /es/mejor-eco-lodge-quito/ | /es/mindo-vs-cloud-forest-retreat/ | /es/que-llevar-bosque-nublado-ecuador/ | /es/senderismo-bosque-nublado-ecuador/ | /es/sobre-nosotros/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/cloud-forest-ecuador/": {
+      "current_unique_inlinks": 9,
+      "current_unique_outlinks": 12,
+      "current_inlink_sources": "/best-eco-lodge-quito/ | /blog/best-time-to-visit-cloud-forest/ | /cloud-forest-hiking-ecuador/ | /es/bosque-nublado-ecuador/ | /features/ | /features/choco-andino-de-pichincha/ | /features/flora/ | /features/rio-guayllabamba/ | /where-to-stay-near-quito-nature/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/bosque-nublado-ecuador/": {
+      "current_unique_inlinks": 8,
+      "current_unique_outlinks": 12,
+      "current_inlink_sources": "/cloud-forest-ecuador/ | /es/blog/mejor-epoca-visitar-bosque-nublado/ | /es/caracteristicas/ | /es/caracteristicas/choco-andino-de-pichincha/ | /es/caracteristicas/flora/ | /es/caracteristicas/rio-guayllabamba/ | /es/donde-alojarse-cerca-de-quito-naturaleza/ | /es/senderismo-bosque-nublado-ecuador/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/nature-retreat-quito/": {
+      "current_unique_inlinks": 7,
+      "current_unique_outlinks": 10,
+      "current_inlink_sources": "/best-eco-lodge-quito/ | /cloud-forest-hiking-ecuador/ | /cloud-forest-lodge-near-quito/ | /es/retiro-naturaleza-quito/ | /romantic-getaway-quito/ | /wellness-retreat-quito/ | /where-to-stay-near-quito-nature/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/retiro-naturaleza-quito/": {
+      "current_unique_inlinks": 7,
+      "current_unique_outlinks": 10,
+      "current_inlink_sources": "/es/donde-alojarse-cerca-de-quito-naturaleza/ | /es/escapada-romantica-quito/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /es/mejor-eco-lodge-quito/ | /es/retiro-bienestar-quito/ | /es/senderismo-bosque-nublado-ecuador/ | /nature-retreat-quito/",
+      "target": 4,
+      "broken_local_outlinks": []
+    }
+  },
+  "deployment": {
+    "pages_byte_verified": 6,
+    "mismatches": 0
+  },
+  "google_sheet": {
+    "spreadsheet_id": "1k4eAfdEsZz7lih0t2c_0kv-rwbhyjQNgpyFlu0Qm7L4",
+    "tab": "sitemap_enriched",
+    "rows": [
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "status": "synchronized and verified",
+    "fields_verified": 192,
+    "mismatches": 0,
+    "validation": "staging dropdown preserved"
+  },
+  "account_side_verification": "GA4/GTM, form attribution and deduplication, Turnstile hostname/server validation, and Search Console remain pending"
+}

@@ -18,12 +18,12 @@ This document transfers the active The Cloud Forest Retreat website upgrade to a
 
 The enriched roadmap contains 49 English/Spanish page pairs (98 rows).
 
-- Completed and pair-level QA verified: 34 pairs
-- Remaining for full page enrichment and pair-level QA: 15 pairs
-- Next pair in roadmap order: `pair_035`
-  - English: `/cloud-forest-quito-ecuador/`
-  - Spanish: `/es/bosque-nublado-quito-ecuador/`
-  - Cluster: Stay
+- Completed and pair-level QA verified: 37 pairs
+- Remaining for full page enrichment and pair-level QA: 12 pairs
+- Next pair in roadmap order: `pair_038`
+  - English: `/birds-of-the-cloud-forest-ecuador/`
+  - Spanish: `/es/aves-del-bosque-nublado-ecuador/`
+  - Cluster: Nature and birding
 
 Completed pairs:
 
@@ -61,12 +61,15 @@ Completed pairs:
 32. `pair_032`: `/blog/cloud-forest-itinerary-3-days/` and `/es/blog/itinerario-bosque-nublado-3-dias/`
 33. `pair_033`: `/romantic-getaway-quito/` and `/es/escapada-romantica-quito/`
 34. `pair_034`: `/wellness-retreat-quito/` and `/es/retiro-bienestar-quito/`
+35. `pair_035`: `/cloud-forest-quito-ecuador/` and `/es/bosque-nublado-quito-ecuador/`
+36. `pair_036`: `/cloud-forest-ecuador/` and `/es/bosque-nublado-ecuador/`
+37. `pair_037`: `/nature-retreat-quito/` and `/es/retiro-naturaleza-quito/`
 
 Authoritative roadmap:
 
 `outputs/01a0cacb-9307-7181-a26c-990d3a098536/TCFR_site_roadmap_enriched_2026-09-23.csv`
 
-The 3-Day Cloud Forest Itinerary, Romantic Getaway Near Quito and Wellness Retreat Near Quito pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `3615348`; all six page files were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_032_034_2026-09-30.json`; runner: `scripts/qa_mixed_batch_032_034.mjs`. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
+The Cloud Forest Near Quito, Cloud Forest in Ecuador and Nature Retreat Near Quito pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `5d065a9`; all six page files were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_035_037_2026-09-30.json`; runner: `scripts/qa_stay_batch_035_037.mjs`. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
 
 Update both language rows only after a pair passes implementation and QA. Do not mark a pair complete because a global architecture script touched it.
 
@@ -262,7 +265,7 @@ Do not commit account credentials, private tokens, analytics secrets, form secre
 
 Copy the following into a new Codex task on the Mac mini after checking out the branch:
 
-> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_035`: `/cloud-forest-quito-ecuador/` and `/es/bosque-nublado-quito-ecuador/`. Preserve the approved global system and Stay cluster, maintain English/Spanish semantic parity, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, consent-aware analytics attribution, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
+> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_038`: `/birds-of-the-cloud-forest-ecuador/` and `/es/aves-del-bosque-nublado-ecuador/`. Preserve the approved global system and Nature and birding cluster, maintain English/Spanish semantic parity, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, consent-aware analytics attribution, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
 
 ## First receiving-host checklist
 
@@ -272,4 +275,4 @@ Copy the following into a new Codex task on the Mac mini after checking out the 
 4. Confirm `git status --short --branch` is clean.
 5. Open the shared conversation link supplied out-of-band for design-decision history.
 6. Start a local preview and verify one completed English/Spanish pair before changing the next pair.
-7. Begin `pair_035` only after the baseline renders correctly.
+7. Begin `pair_038` only after the baseline renders correctly.
