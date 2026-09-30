@@ -120,7 +120,7 @@ function bookingForm(p) {
                 ${select("how_did_you_hear_about_us", es ? "¿Cómo nos encontraste?" : "How did you hear about us?", [["", es ? "Selecciona" : "Choose"], ["Referral", es ? "Recomendación" : "Referral"], ["Google Search", "Google Search"], ["Google Maps", "Google Maps"], ["Instagram", "Instagram"], ["TikTok", "TikTok"], ["YouTube", "YouTube"], ["Other", es ? "Otro" : "Other"]])}
                 <div class="conversionField conversionField--wide">
                   <label for="message">${es ? "Preguntas o detalles del viaje" : "Questions or trip details"} <span>*</span></label>
-                  <textarea id="message" name="message" required placeholder="${es ? "Cuéntanos sobre transporte, actividades, horarios o cualquier detalle útil." : "Tell us about transportation, activities, timing, or anything else that would help."}"></textarea>
+                  <textarea id="message" name="message" required maxlength="2000" placeholder="${es ? "Cuéntanos sobre transporte, actividades, horarios o cualquier detalle útil." : "Tell us about transportation, activities, timing, or anything else that would help."}"></textarea>
                 </div>
               </div>
               <div class="conversionFormFooter">
@@ -141,7 +141,6 @@ function contactForm(p) {
               <input name="form_type" type="hidden" value="contact" />
               <input name="lang" type="hidden" value="${p.lang}" />
               <input name="source_page" type="hidden" value="" />
-              <input name="cf_secret" type="hidden" value="TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c" />
               <div class="conversionFields">
                 ${field("first_name", es ? "Nombre" : "First name", "text", true, es ? "Tu nombre" : "First name", "given-name")}
                 ${field("last_name", es ? "Apellido" : "Last name", "text", true, es ? "Tu apellido" : "Last name", "family-name")}
@@ -150,7 +149,7 @@ function contactForm(p) {
                 ${select("how_did_you_hear_about_us", es ? "¿Cómo nos encontraste?" : "How did you hear about us?", [["", es ? "Selecciona" : "Choose"], ["Referral", es ? "Recomendación" : "Referral"], ["Google Search", "Google Search"], ["Google Maps", "Google Maps"], ["Instagram", "Instagram"], ["TikTok", "TikTok"], ["YouTube", "YouTube"], ["Other", es ? "Otro" : "Other"]], false, "conversionField--wide")}
                 <div class="conversionField conversionField--wide">
                   <label for="message">${es ? "Mensaje" : "Message"} <span>*</span></label>
-                  <textarea id="message" name="message" required placeholder="${es ? "Cuéntanos qué quieres saber o planificar." : "Tell us what you would like to know or plan."}"></textarea>
+                  <textarea id="message" name="message" required maxlength="2000" placeholder="${es ? "Cuéntanos qué quieres saber o planificar." : "Tell us what you would like to know or plan."}"></textarea>
                 </div>
               </div>
               <div class="conversionFormFooter">
@@ -165,7 +164,8 @@ function contactForm(p) {
 }
 
 function field(id, label, type, required = false, placeholder = "", autocomplete = "") {
-  return `<div class="conversionField"><label for="${id}">${label}${required ? " <span>*</span>" : ""}</label><input id="${id}" name="${id}" type="${type}"${required ? " required" : ""}${placeholder ? ` placeholder="${placeholder}"` : ""}${autocomplete ? ` autocomplete="${autocomplete}"` : ""} /></div>`;
+  const max = id === "email" ? 254 : id === "phone" || id === "phone_number" ? 50 : id === "first_name" || id === "last_name" ? 80 : 0;
+  return `<div class="conversionField"><label for="${id}">${label}${required ? " <span>*</span>" : ""}</label><input id="${id}" name="${id}" type="${type}"${required ? " required" : ""}${max ? ` maxlength="${max}"` : ""}${placeholder ? ` placeholder="${placeholder}"` : ""}${autocomplete ? ` autocomplete="${autocomplete}"` : ""} /></div>`;
 }
 
 function select(id, label, options, required = false, extra = "") {

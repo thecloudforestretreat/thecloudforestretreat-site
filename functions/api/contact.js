@@ -2,7 +2,7 @@ export async function onRequestPost(context) {
   const { request, env } = context;
 
   try {
-    const origin = request.headers.get("Origin") || "";
+    const origin = allowedOrigin(request);
     const contentType = request.headers.get("content-type") || "";
     const isForm =
       contentType.includes("application/x-www-form-urlencoded") ||
@@ -25,6 +25,11 @@ export async function onRequestPost(context) {
       return json({ ok: false, message: "Turnstile token missing." }, 400, origin);
     }
 
+    const turnstileSecret = String(env.TURNSTILE_SECRET_KEY || "").trim();
+    if (!turnstileSecret) {
+      return json({ ok: false, message: "Server misconfigured: TURNSTILE_SECRET_KEY missing." }, 500, origin);
+    }
+
     // Verify Turnstile
     const verifyRes = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
@@ -34,7 +39,7 @@ export async function onRequestPost(context) {
           "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
         body: new URLSearchParams({
-          secret: env.TURNSTILE_SECRET_KEY || "",
+          secret: turnstileSecret,
           response: token,
           remoteip: getIpBestEffort(request) || "",
         }),
@@ -42,21 +47,22 @@ export async function onRequestPost(context) {
     );
 
     const verifyJson = await verifyRes.json().catch(() => ({}));
-    if (!verifyJson.success) {
+    const requestHost = new URL(request.url).hostname;
+    if (!verifyJson.success || verifyJson.action !== "contact_submit" || verifyJson.hostname !== requestHost) {
       return json(
-        { ok: false, message: "Turnstile verification failed.", details: verifyJson },
+        { ok: false, message: "Turnstile verification failed." },
         403,
         origin
       );
     }
 
     // Normalize fields expected by Apps Script
-    const first_name = String(data.first_name || "").trim();
-    const last_name = String(data.last_name || "").trim();
-    const email = String(data.email || "").trim();
-    const phone = String(data.phone || data.phone_number || "").trim();
-    const message = String(data.message || "").trim();
-    const how_did_you_hear_about_us = String(data.how_did_you_hear_about_us || "").trim();
+    const first_name = clean(data.first_name, 80);
+    const last_name = clean(data.last_name, 80);
+    const email = clean(data.email, 254);
+    const phone = clean(data.phone || data.phone_number, 50);
+    const message = clean(data.message, 2000);
+    const how_did_you_hear_about_us = clean(data.how_did_you_hear_about_us, 100);
 
     const source_page = String(data.source_page || request.url || "").trim();
     const user_agent = String(data.user_agent || request.headers.get("User-Agent") || "").trim();
@@ -74,6 +80,7 @@ export async function onRequestPost(context) {
         origin
       );
     }
+    if (!isEmail(email)) return json({ ok: false, message: "Enter a valid email address." }, 400, origin);
 
     // Post to Apps Script Web App
     // Prefer TCFR_CONTACT_WEBAPP_URL; fallback to TCFR_BOOKING_WEBAPP_URL if you reused one
@@ -148,11 +155,26 @@ function json(payload, status = 200, origin = "") {
   const headers = {
     "content-type": "application/json; charset=utf-8",
     "cache-control": "no-store",
-    "access-control-allow-origin": origin || "*",
     "access-control-allow-methods": "POST, OPTIONS",
     "access-control-allow-headers": "Content-Type",
+    "x-content-type-options": "nosniff",
   };
+  if (origin) headers["access-control-allow-origin"] = origin;
   return new Response(JSON.stringify(payload), { status, headers });
+}
+
+function allowedOrigin(request) {
+  const origin = request.headers.get("Origin") || "";
+  try { return origin && origin === new URL(request.url).origin ? origin : ""; }
+  catch (_error) { return ""; }
+}
+
+function clean(value, max) {
+  return String(value || "").trim().slice(0, max);
+}
+
+function isEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
 function getIpBestEffort(request) {

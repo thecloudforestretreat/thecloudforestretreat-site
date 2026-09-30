@@ -135,6 +135,9 @@
     nodes.forEach(function (node) {
       node.classList.add("cf-turnstile");
       node.setAttribute("data-sitekey", siteKey);
+      var form = node.closest("form");
+      if (form && form.id === "tcfrBookingForm") node.setAttribute("data-action", "booking_submit");
+      if (form && form.id === "tcfrContactForm") node.setAttribute("data-action", "contact_submit");
     });
 
     if (!document.getElementById("tcfr-turnstile-loader")) {

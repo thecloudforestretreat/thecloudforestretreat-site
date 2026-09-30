@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
-const source = path.join(root, "audit_inputs", "TCFR_SiteMap - sitemap_enriched.csv");
+const source = path.join(root, "outputs", "01a0cacb-9307-7181-a26c-990d3a098536", "TCFR_site_roadmap_enriched_2026-09-23.csv");
 
 function parseCsv(text) {
   const rows = []; let row = [], value = "", quoted = false;

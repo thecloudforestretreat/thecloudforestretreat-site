@@ -2,7 +2,7 @@ export async function onRequestPost(context) {
   const { request, env } = context;
 
   try {
-    const origin = request.headers.get("Origin") || "";
+    const origin = allowedOrigin(request);
     const contentType = request.headers.get("content-type") || "";
     const isForm = contentType.includes("application/x-www-form-urlencoded") || contentType.includes("multipart/form-data");
 
@@ -22,27 +22,33 @@ export async function onRequestPost(context) {
       return json({ ok: false, message: "Turnstile token missing." }, 400, origin);
     }
 
+    const turnstileSecret = String(env.TURNSTILE_SECRET_KEY || "").trim();
+    if (!turnstileSecret) {
+      return json({ ok: false, message: "Server misconfigured: TURNSTILE_SECRET_KEY missing." }, 500, origin);
+    }
+
     // Verify Turnstile
     const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
       method: "POST",
       headers: { "content-type": "application/x-www-form-urlencoded;charset=UTF-8" },
       body: new URLSearchParams({
-        secret: env.TURNSTILE_SECRET_KEY || "",
+        secret: turnstileSecret,
         response: token,
         remoteip: getIpBestEffort(request) || ""
       })
     });
 
     const verifyJson = await verifyRes.json().catch(() => ({}));
-    if (!verifyJson.success) {
-      return json({ ok: false, message: "Turnstile verification failed.", details: verifyJson }, 403, origin);
+    const requestHost = new URL(request.url).hostname;
+    if (!verifyJson.success || verifyJson.action !== "booking_submit" || verifyJson.hostname !== requestHost) {
+      return json({ ok: false, message: "Turnstile verification failed." }, 403, origin);
     }
 
     // Normalize fields to match Google Sheet headers
-    const first_name = (data.first_name || "").trim();
-    const last_name = (data.last_name || "").trim();
-    const email = (data.email || "").trim();
-    const phone_number = (data.phone_number || data.phone || "").trim();
+    const first_name = clean(data.first_name, 80);
+    const last_name = clean(data.last_name, 80);
+    const email = clean(data.email, 254);
+    const phone_number = clean(data.phone_number || data.phone, 50);
 
     const visit_start = (data.visit_start || data.date_start || "").trim();
     const visit_end = (data.visit_end || data.date_end || "").trim();
@@ -51,7 +57,7 @@ export async function onRequestPost(context) {
     const number_of_days_interested = (data.number_of_days_interested || "").trim();
     const number_of_guests = (data.number_of_guests || "").trim();
 
-    const message = (data.message || "").trim();
+    const message = clean(data.message, 2000);
 
     const how_did_you_hear_about_us = (data.how_did_you_hear_about_us || "").trim();
     const transportation_needed = (data.transportation_needed || "").trim();
@@ -62,12 +68,15 @@ export async function onRequestPost(context) {
     const ip_best_effort = getIpBestEffort(request) || "";
 
     // Basic required checks (keep aligned with Apps Script)
-    if (!first_name || !last_name || !email || !phone_number || !dates_of_visit || !message) {
+    if (!first_name || !last_name || !email || !phone_number || !dates_of_visit || !number_of_guests || !message) {
       return json({
         ok: false,
-        message: "Missing required fields. Please fill First Name, Last Name, Email, Phone, Dates of Visit, and Message."
+        message: "Missing required fields. Please fill First Name, Last Name, Email, Phone, Dates of Visit, Guests, and Message."
       }, 400, origin);
     }
+    if (!isEmail(email)) return json({ ok: false, message: "Enter a valid email address." }, 400, origin);
+    if (!["1", "2", "3", "4+"].includes(number_of_guests)) return json({ ok: false, message: "Select a valid number of guests." }, 400, origin);
+    if (visit_end && visit_end < visit_start) return json({ ok: false, message: "Departure date cannot be before arrival date." }, 400, origin);
 
     // Post to Apps Script Web App
     const webAppUrl = env.TCFR_BOOKING_WEBAPP_URL || "";
@@ -131,11 +140,26 @@ function json(payload, status = 200, origin = "") {
   };
 
   // CORS (keep permissive for your site)
-  headers["access-control-allow-origin"] = origin || "*";
+  if (origin) headers["access-control-allow-origin"] = origin;
   headers["access-control-allow-methods"] = "POST, OPTIONS";
   headers["access-control-allow-headers"] = "Content-Type";
+  headers["x-content-type-options"] = "nosniff";
 
   return new Response(JSON.stringify(payload), { status, headers });
+}
+
+function allowedOrigin(request) {
+  const origin = request.headers.get("Origin") || "";
+  try { return origin && origin === new URL(request.url).origin ? origin : ""; }
+  catch (_error) { return ""; }
+}
+
+function clean(value, max) {
+  return String(value || "").trim().slice(0, max);
+}
+
+function isEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
 function getIpBestEffort(request) {

@@ -14,7 +14,7 @@
   var COPY = {
     en: {
       sending: "Sending...",
-      submit: "Submit",
+      submit: "Send message",
       missingTokenTitle: "Something went wrong",
       missingTokenMsg: "Turnstile token missing. Please complete the verification and try again.",
       unableTitle: "Unable to send",
@@ -25,7 +25,7 @@
     },
     es: {
       sending: "Enviando...",
-      submit: "Enviar",
+      submit: "Enviar mensaje",
       missingTokenTitle: "Algo salió mal",
       missingTokenMsg: "Falta la verificación de Turnstile. Complétala e intenta nuevamente.",
       unableTitle: "No se pudo enviar",
@@ -165,7 +165,6 @@
 
     form.addEventListener("submit", async function(event){
       event.preventDefault();
-      event.stopPropagation();
 
       if(!form.isConnected){ return; }
 
@@ -200,7 +199,6 @@
         }
 
         var payload = {
-          cf_secret: fd.get("cf_secret") || "",
           "cf-turnstile-response": token,
           first_name: fd.get("first_name") || "",
           last_name: fd.get("last_name") || "",
@@ -232,7 +230,7 @@
 
         var data = await readResponse(res);
 
-        if(!res.ok){
+        if(!res.ok || data.ok === false){
           var backendMsg = getBackendMessage(data, copy.defaultError + " HTTP " + res.status + ".");
           setStatus(status, "error", copy.unableTitle, backendMsg);
           track("form_submit_error", {

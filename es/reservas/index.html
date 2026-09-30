@@ -18,6 +18,7 @@
     <meta property="og:description" content="Solicita disponibilidad en The Cloud Forest Retreat en Pichincha, Ecuador. Comparte fechas, habitación, transporte y detalles del viaje." />
     <meta property="og:url" content="https://thecloudforestretreat.com/es/reservas/" />
     <meta property="og:image" content="https://thecloudforestretreat.com/assets/images/pages/tcfr_booking_hero.jpg" />
+    <meta property="og:image:alt" content="The Cloud Forest Retreat en las montañas de Pichincha, Ecuador" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Solicitar Disponibilidad | The Cloud Forest Retreat" />
     <meta name="twitter:description" content="Solicita disponibilidad en The Cloud Forest Retreat en Pichincha, Ecuador. Comparte fechas, habitación, transporte y detalles del viaje." />
@@ -189,22 +190,22 @@
               <div class="conversionField">
                 <label for="first_name">Nombre <span>*</span>
                 </label>
-                <input id="first_name" name="first_name" type="text" required placeholder="Tu nombre" autocomplete="given-name" />
+                <input id="first_name" name="first_name" type="text" required maxlength="80" placeholder="Tu nombre" autocomplete="given-name" />
               </div>
               <div class="conversionField">
                 <label for="last_name">Apellido <span>*</span>
                 </label>
-                <input id="last_name" name="last_name" type="text" required placeholder="Tu apellido" autocomplete="family-name" />
+                <input id="last_name" name="last_name" type="text" required maxlength="80" placeholder="Tu apellido" autocomplete="family-name" />
               </div>
               <div class="conversionField">
                 <label for="email">Email <span>*</span>
                 </label>
-                <input id="email" name="email" type="email" required placeholder="tu@ejemplo.com" autocomplete="email" />
+                <input id="email" name="email" type="email" required maxlength="254" placeholder="tu@ejemplo.com" autocomplete="email" />
               </div>
               <div class="conversionField">
                 <label for="phone_number">Teléfono o WhatsApp <span>*</span>
                 </label>
-                <input id="phone_number" name="phone_number" type="tel" required placeholder="+593 ..." autocomplete="tel" />
+                <input id="phone_number" name="phone_number" type="tel" required maxlength="50" placeholder="+593 ..." autocomplete="tel" />
               </div>
               <div class="conversionField">
                 <label for="date_start">Fecha de llegada <span>*</span>
@@ -260,7 +261,7 @@
               <div class="conversionField conversionField--wide">
                 <label for="message">Preguntas o detalles del viaje <span>*</span>
                 </label>
-                <textarea id="message" name="message" required placeholder="Cuéntanos sobre transporte, actividades, horarios o cualquier detalle útil.">
+                <textarea id="message" name="message" required maxlength="2000" placeholder="Cuéntanos sobre transporte, actividades, horarios o cualquier detalle útil.">
                 </textarea>
               </div>
             </div>

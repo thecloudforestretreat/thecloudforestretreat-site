@@ -18,6 +18,7 @@
     <meta property="og:description" content="Contact The Cloud Forest Retreat about rooms, availability, transportation from Quito, nature activities, or an upcoming stay in Pichincha, Ecuador." />
     <meta property="og:url" content="https://thecloudforestretreat.com/contact/" />
     <meta property="og:image" content="https://thecloudforestretreat.com/assets/images/pages/tcfr_contact_hero.jpg" />
+    <meta property="og:image:alt" content="Mountain landscape surrounding The Cloud Forest Retreat" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Contact The Cloud Forest Retreat | Pichincha, Ecuador" />
     <meta name="twitter:description" content="Contact The Cloud Forest Retreat about rooms, availability, transportation from Quito, nature activities, or an upcoming stay in Pichincha, Ecuador." />
@@ -184,26 +185,25 @@
             <input name="form_type" type="hidden" value="contact" />
             <input name="lang" type="hidden" value="en" />
             <input name="source_page" type="hidden" value="" />
-            <input name="cf_secret" type="hidden" value="TCFR_CF_GATE_2026_9d2f0b1c7a3e4f5a8b6c1d2e3f4a3j9c" />
             <div class="conversionFields">
               <div class="conversionField">
                 <label for="first_name">First name <span>*</span>
                 </label>
-                <input id="first_name" name="first_name" type="text" required placeholder="First name" autocomplete="given-name" />
+                <input id="first_name" name="first_name" type="text" required maxlength="80" placeholder="First name" autocomplete="given-name" />
               </div>
               <div class="conversionField">
                 <label for="last_name">Last name <span>*</span>
                 </label>
-                <input id="last_name" name="last_name" type="text" required placeholder="Last name" autocomplete="family-name" />
+                <input id="last_name" name="last_name" type="text" required maxlength="80" placeholder="Last name" autocomplete="family-name" />
               </div>
               <div class="conversionField">
                 <label for="email">Email <span>*</span>
                 </label>
-                <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+                <input id="email" name="email" type="email" required maxlength="254" placeholder="you@example.com" autocomplete="email" />
               </div>
               <div class="conversionField">
                 <label for="phone">Phone or WhatsApp</label>
-                <input id="phone" name="phone" type="tel" placeholder="+1 305 ..." autocomplete="tel" />
+                <input id="phone" name="phone" type="tel" maxlength="50" placeholder="+1 305 ..." autocomplete="tel" />
               </div>
               <div class="conversionField conversionField--wide">
                 <label for="how_did_you_hear_about_us">How did you hear about us?</label>
@@ -221,7 +221,7 @@
               <div class="conversionField conversionField--wide">
                 <label for="message">Message <span>*</span>
                 </label>
-                <textarea id="message" name="message" required placeholder="Tell us what you would like to know or plan.">
+                <textarea id="message" name="message" required maxlength="2000" placeholder="Tell us what you would like to know or plan.">
                 </textarea>
               </div>
             </div>
