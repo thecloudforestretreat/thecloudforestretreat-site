@@ -1,0 +1,86 @@
+{
+  "batch": "pairs_029_031",
+  "date": "2026-09-30",
+  "status": "staging_deployed_and_verified",
+  "production_unchanged": true,
+  "viewports": [
+    390,
+    768,
+    1440
+  ],
+  "checks": {
+    "browser_runs": 18,
+    "passed": 18,
+    "failed": 0,
+    "visual_review": [
+      "pair_029 English desktop",
+      "pair_030 Spanish mobile",
+      "pair_031 English tablet"
+    ],
+    "inlinks_meet_targets": true,
+    "broken_local_outlinks": 0
+  },
+  "links": {
+    "/blog/best-time-to-visit-cloud-forest/": {
+      "current_unique_inlinks": 5,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/blog/ | /blog/cloud-forest-itinerary-3-days/ | /design-preview/editorial-cluster/ | /es/blog/mejor-epoca-visitar-bosque-nublado/ | /features/gallery/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/blog/mejor-epoca-visitar-bosque-nublado/": {
+      "current_unique_inlinks": 4,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/blog/best-time-to-visit-cloud-forest/ | /es/blog/ | /es/blog/itinerario-bosque-nublado-3-dias/ | /es/caracteristicas/galeria/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/blog/birdwatching-near-quito/": {
+      "current_unique_inlinks": 7,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/blog/ | /blog/cloud-forest-itinerary-3-days/ | /cloud-forest-quito-ecuador/ | /design-preview/editorial-cluster/ | /es/blog/avistamiento-aves-cerca-de-quito/ | /rooms/sunrise-room/ | /rooms/sunset-room/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/blog/avistamiento-aves-cerca-de-quito/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/blog/birdwatching-near-quito/ | /es/blog/ | /es/blog/itinerario-bosque-nublado-3-dias/ | /es/bosque-nublado-quito-ecuador/ | /es/habitaciones/habitacion-amanecer/ | /es/habitaciones/habitacion-atardecer/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/blog/things-to-do-near-quito-nature/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 10,
+      "current_inlink_sources": "/blog/ | /blog/cloud-forest-itinerary-3-days/ | /cloud-forest-quito-ecuador/ | /design-preview/editorial-cluster/ | /es/blog/que-hacer-cerca-de-quito-naturaleza/ | /weekend-getaway-from-quito/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/blog/que-hacer-cerca-de-quito-naturaleza/": {
+      "current_unique_inlinks": 5,
+      "current_unique_outlinks": 10,
+      "current_inlink_sources": "/blog/things-to-do-near-quito-nature/ | /es/blog/ | /es/blog/itinerario-bosque-nublado-3-dias/ | /es/bosque-nublado-quito-ecuador/ | /es/escapada-fin-de-semana-quito/",
+      "target": 4,
+      "broken_local_outlinks": []
+    }
+  },
+  "runner": "scripts/qa_editorial_articles_batch.mjs",
+  "account_side_pending": [
+    "GA4/GTM publication and event verification",
+    "form attribution and deduplication",
+    "Turnstile hostname/server validation",
+    "Google Search Console verification"
+  ],
+  "implementation_commit": "85dba048e91b414e22d2fda3b9d5bf7d1f9f20c7",
+  "implementation_commit_url": "https://github.com/thecloudforestretreat/thecloudforestretreat-site/commit/85dba04",
+  "staging_base": "https://codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev/",
+  "staging_byte_verification": "6/6 changed page files matched",
+  "google_sheet": {
+    "spreadsheet_id": "1k4eAfdEsZz7lih0t2c_0kv-rwbhyjQNgpyFlu0Qm7L4",
+    "sheet": "sitemap_enriched",
+    "rows": "58:63",
+    "fields_verified": 192,
+    "mismatches": 0,
+    "status_validation": "BJ status dropdown preserved"
+  }
+}

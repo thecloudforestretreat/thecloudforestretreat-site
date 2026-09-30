@@ -18,11 +18,11 @@ This document transfers the active The Cloud Forest Retreat website upgrade to a
 
 The enriched roadmap contains 49 English/Spanish page pairs (98 rows).
 
-- Completed and pair-level QA verified: 28 pairs
-- Remaining for full page enrichment and pair-level QA: 21 pairs
-- Next pair in roadmap order: `pair_029`
-  - English: `/blog/best-time-to-visit-cloud-forest/`
-  - Spanish: `/es/blog/mejor-epoca-visitar-bosque-nublado/`
+- Completed and pair-level QA verified: 31 pairs
+- Remaining for full page enrichment and pair-level QA: 18 pairs
+- Next pair in roadmap order: `pair_032`
+  - English: `/blog/cloud-forest-itinerary-3-days/`
+  - Spanish: `/es/blog/itinerario-bosque-nublado-3-dias/`
   - Cluster: Editorial support
 
 Completed pairs:
@@ -55,12 +55,15 @@ Completed pairs:
 26. `pair_026`: `/weekend-getaway-from-quito/` and `/es/escapada-fin-de-semana-quito/`
 27. `pair_027`: `/blog/` and `/es/blog/`
 28. `pair_028`: `/blog/how-to-get-to-cloud-forest-retreat/` and `/es/blog/como-llegar-cloud-forest-retreat/`
+29. `pair_029`: `/blog/best-time-to-visit-cloud-forest/` and `/es/blog/mejor-epoca-visitar-bosque-nublado/`
+30. `pair_030`: `/blog/birdwatching-near-quito/` and `/es/blog/avistamiento-aves-cerca-de-quito/`
+31. `pair_031`: `/blog/things-to-do-near-quito-nature/` and `/es/blog/que-hacer-cerca-de-quito-naturaleza/`
 
 Authoritative roadmap:
 
 `outputs/01a0cacb-9307-7181-a26c-990d3a098536/TCFR_site_roadmap_enriched_2026-09-23.csv`
 
-The Weekend Getaway, bilingual Blog hub and How to Get Here pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `868bd21`; all six page files and the shared Editorial CSS were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_026_028_2026-09-30.json`; runner: `scripts/qa_editorial_batch.mjs`. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
+The Best Time to Visit, Birdwatching Near Quito and Things to Do Near Quito pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `85dba04`; all six page files were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_029_031_2026-09-30.json`; runner: `scripts/qa_editorial_articles_batch.mjs`. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
 
 Update both language rows only after a pair passes implementation and QA. Do not mark a pair complete because a global architecture script touched it.
 
@@ -256,7 +259,7 @@ Do not commit account credentials, private tokens, analytics secrets, form secre
 
 Copy the following into a new Codex task on the Mac mini after checking out the branch:
 
-> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_029`: `/blog/best-time-to-visit-cloud-forest/` and `/es/blog/mejor-epoca-visitar-bosque-nublado/`. Preserve the approved global system and Editorial cluster, maintain English/Spanish semantic parity, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, consent-aware analytics attribution, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
+> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_032`: `/blog/cloud-forest-itinerary-3-days/` and `/es/blog/itinerario-bosque-nublado-3-dias/`. Preserve the approved global system and Editorial cluster, maintain English/Spanish semantic parity, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, consent-aware analytics attribution, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
 
 ## First receiving-host checklist
 
@@ -266,4 +269,4 @@ Copy the following into a new Codex task on the Mac mini after checking out the 
 4. Confirm `git status --short --branch` is clean.
 5. Open the shared conversation link supplied out-of-band for design-decision history.
 6. Start a local preview and verify one completed English/Spanish pair before changing the next pair.
-7. Begin `pair_029` only after the baseline renders correctly.
+7. Begin `pair_032` only after the baseline renders correctly.
