@@ -3147,5 +3147,15 @@
     "renders": 18,
     "passed": 18,
     "failed": 0
+  },
+  "deployment": {
+    "commit": "d5bd801",
+    "branch": "codex/tcfr-site-upgrade",
+    "staging_url": "https://codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev/",
+    "cloudflare_check": "success",
+    "deployed_pages_byte_verified": 6,
+    "production_unchanged": true,
+    "google_sheet_rows": "sitemap_enriched!38:43",
+    "google_sheet_fields_verified": 192
   }
 }
