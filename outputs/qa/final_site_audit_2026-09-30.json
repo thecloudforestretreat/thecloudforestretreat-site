@@ -39,20 +39,20 @@
   "launch_blockers": [
     {
       "system": "Cloudflare Turnstile",
-      "status": "blocked",
-      "evidence": "All four staging forms return Turnstile error 110200 and produce no token.",
-      "action": "Allow codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev for site key 0x4AAAAAACauNy6DfCUnIJhS."
+      "status": "resolved",
+      "evidence": "After preview redeploy 9c9205e, all four staging forms load without Turnstile error 110200.",
+      "action": "Complete real browser-token submission tests."
     },
     {
       "system": "Cloudflare Pages Functions",
-      "status": "blocked",
-      "evidence": "Both form APIs return HTTP 500: Server misconfigured: TURNSTILE_SECRET_KEY missing.",
-      "action": "Set TURNSTILE_SECRET_KEY in the thecloudforestretreat-staging Pages environment and redeploy."
+      "status": "resolved",
+      "evidence": "After preview redeploy 9c9205e, both form APIs reach Turnstile and return the expected HTTP 403 for an intentionally invalid token.",
+      "action": "No configuration action remains for TURNSTILE_SECRET_KEY."
     },
     {
       "system": "End-to-end form delivery",
       "status": "pending",
-      "evidence": "A real token cannot be issued until the Turnstile blockers are resolved.",
+      "evidence": "Configuration checks pass, but a real interactive browser token and Apps Script delivery have not yet been verified.",
       "action": "Submit and verify one QA entry for each language/form combination in the Google Sheet and email workflow."
     },
     {
