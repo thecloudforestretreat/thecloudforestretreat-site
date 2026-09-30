@@ -49,9 +49,24 @@ body[data-tcfr-template="premium-home"] {
 .homeIntro__proof strong { color: var(--home-green); font-size: .9rem; }
 .homeIntro__proof span { margin-top: 6px; color: rgba(20,32,24,.67); font-size: .78rem; line-height: 1.5; }
 .homeRooms { display: grid; grid-template-columns: .76fr 1.24fr; gap: 18px; align-items: stretch; }
-.homeRooms__intro { display: flex; flex-direction: column; justify-content: space-between; padding: clamp(30px,4vw,50px); color: #fff; background: var(--home-deep); border-radius: 26px; }
+.homeRooms__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  padding: clamp(30px,4vw,50px);
+  color: #fff;
+  background-color: var(--home-deep);
+  background-image:
+    linear-gradient(160deg, rgba(3,24,12,.88), rgba(3,24,12,.80)),
+    url("/assets/images/pages/rooms/tcfr_rooms_ps_c_01.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 26px;
+}
 .homeRooms__intro h2 { color: #fff; font-size: clamp(2.5rem,4.4vw,4rem); }
-.homeRooms__intro > p:not(.homeEyebrow) { color: rgba(255,255,255,.78); line-height: 1.7; }
+.homeRooms__intro p:not(.homeEyebrow) { color: #fff; line-height: 1.7; }
+.homeRooms__intro .homeEyebrow { color: #f4ba91; }
 .homeRooms__intro a { align-self: flex-start; color: #fff; font-weight: 850; }
 .homeRooms__grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
 .homeRoom { position: relative; min-height: 520px; display: flex; align-items: end; overflow: hidden; color: #fff; border-radius: 26px; box-shadow: 0 20px 54px rgba(10,42,22,.16); }
