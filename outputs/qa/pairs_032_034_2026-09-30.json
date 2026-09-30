@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-30",
+  "pairs": [
+    "pair_032",
+    "pair_033",
+    "pair_034"
+  ],
+  "routes": [
+    "/blog/cloud-forest-itinerary-3-days/",
+    "/es/blog/itinerario-bosque-nublado-3-dias/",
+    "/romantic-getaway-quito/",
+    "/es/escapada-romantica-quito/",
+    "/wellness-retreat-quito/",
+    "/es/retiro-bienestar-quito/"
+  ],
+  "implementation_commit": "3615348",
+  "staging_base_url": "https://codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev/",
+  "cloudflare_checks": {
+    "thecloudforestretreat-staging": "success",
+    "thecloudforestretreat-site": "success"
+  },
+  "browser_qa": {
+    "runner": "scripts/qa_mixed_batch_032_034.mjs",
+    "cases": 18,
+    "passed": 18,
+    "widths": [
+      390,
+      768,
+      1440
+    ],
+    "checks": "canonical, hreflang, visible FAQ/schema parity, page schema, responsive overflow and alignment, shared assets, local links, analytics hooks, consent accept/reject, keyboard FAQ"
+  },
+  "link_evidence": {
+    "/blog/cloud-forest-itinerary-3-days/": {
+      "current_unique_inlinks": 4,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/blog/ | /cloud-forest-quito-ecuador/ | /design-preview/editorial-cluster/ | /es/blog/itinerario-bosque-nublado-3-dias/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/blog/itinerario-bosque-nublado-3-dias/": {
+      "current_unique_inlinks": 4,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/blog/cloud-forest-itinerary-3-days/ | /es/blog/ | /es/bosque-nublado-quito-ecuador/ | /es/escapada-fin-de-semana-quito/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/romantic-getaway-quito/": {
+      "current_unique_inlinks": 5,
+      "current_unique_outlinks": 11,
+      "current_inlink_sources": "/ | /about/ | /es/escapada-romantica-quito/ | /nature-retreat-quito/ | /rooms/panoramic-suite/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/escapada-romantica-quito/": {
+      "current_unique_inlinks": 6,
+      "current_unique_outlinks": 11,
+      "current_inlink_sources": "/es/ | /es/habitaciones/suite-panoramica/ | /es/mejor-eco-lodge-quito/ | /es/retiro-naturaleza-quito/ | /es/sobre-nosotros/ | /romantic-getaway-quito/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/wellness-retreat-quito/": {
+      "current_unique_inlinks": 4,
+      "current_unique_outlinks": 11,
+      "current_inlink_sources": "/ | /about/ | /es/retiro-bienestar-quito/ | /nature-retreat-quito/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/retiro-bienestar-quito/": {
+      "current_unique_inlinks": 5,
+      "current_unique_outlinks": 11,
+      "current_inlink_sources": "/es/ | /es/mejor-eco-lodge-quito/ | /es/retiro-naturaleza-quito/ | /es/sobre-nosotros/ | /wellness-retreat-quito/",
+      "target": 4,
+      "broken_local_outlinks": []
+    }
+  },
+  "deployment": {
+    "pages_byte_verified": 6,
+    "mismatches": 0
+  },
+  "google_sheet": {
+    "spreadsheet_id": "1k4eAfdEsZz7lih0t2c_0kv-rwbhyjQNgpyFlu0Qm7L4",
+    "tab": "sitemap_enriched",
+    "rows": [
+      64,
+      65,
+      96,
+      97,
+      98,
+      99
+    ],
+    "status": "synchronized and verified",
+    "fields_verified": 192,
+    "mismatches": 0,
+    "validation": "staging dropdown preserved"
+  },
+  "account_side_verification": "GA4/GTM, form attribution and deduplication, Turnstile hostname/server validation, and Search Console remain pending"
+}
