@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-30",
+  "pairs": [
+    "pair_044",
+    "pair_045",
+    "pair_046"
+  ],
+  "routes": [
+    "/quito-to-cloud-forest-distance/",
+    "/es/distancia-quito-bosque-nublado/",
+    "/what-to-pack-cloud-forest-ecuador/",
+    "/es/que-llevar-bosque-nublado-ecuador/",
+    "/is-cloud-forest-safe-ecuador/",
+    "/es/es-seguro-bosque-nublado-ecuador/"
+  ],
+  "implementation_commit": "b734fd4",
+  "staging_base_url": "https://codex-tcfr-site-upgrade.thecloudforestretreat-site.pages.dev/",
+  "cloudflare_checks": {
+    "thecloudforestretreat-staging": "success",
+    "thecloudforestretreat-site": "success"
+  },
+  "browser_qa": {
+    "runner": "scripts/qa_planning_batch_044_046.mjs",
+    "cases": 18,
+    "passed": 18,
+    "widths": [
+      390,
+      768,
+      1440
+    ],
+    "checks": "canonical, hreflang, visible FAQ/schema parity, page schema, responsive overflow and alignment, shared assets, local links, analytics hooks, consent accept/reject, keyboard FAQ"
+  },
+  "link_evidence": {
+    "/quito-to-cloud-forest-distance/": {
+      "current_unique_inlinks": 12,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/blog/how-to-get-to-cloud-forest-retreat/ | /booking/ | /cloud-forest-quito-ecuador/ | /contact/ | /design-preview/planning-cluster/ | /es/distancia-quito-bosque-nublado/ | /is-cloud-forest-safe-ecuador/ | /mindo-vs-cloud-forest-retreat/ | /waterfalls-near-quito/ | /weekend-getaway-from-quito/ | /what-to-pack-cloud-forest-ecuador/ | /where-to-stay-near-quito-nature/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/distancia-quito-bosque-nublado/": {
+      "current_unique_inlinks": 13,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/best-eco-lodge-quito/ | /design-preview/planning-cluster/ | /es/blog/como-llegar-cloud-forest-retreat/ | /es/bosque-nublado-quito-ecuador/ | /es/cascadas-cerca-de-quito/ | /es/contacto/ | /es/donde-alojarse-cerca-de-quito-naturaleza/ | /es/es-seguro-bosque-nublado-ecuador/ | /es/mejor-eco-lodge-quito/ | /es/mindo-vs-cloud-forest-retreat/ | /es/que-llevar-bosque-nublado-ecuador/ | /es/reservas/ | /quito-to-cloud-forest-distance/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/what-to-pack-cloud-forest-ecuador/": {
+      "current_unique_inlinks": 16,
+      "current_unique_outlinks": 11,
+      "current_inlink_sources": "/blog/best-time-to-visit-cloud-forest/ | /blog/cloud-forest-itinerary-3-days/ | /cloud-forest-ecuador/ | /cloud-forest-hiking-ecuador/ | /cloud-forest-lodge-near-quito/ | /design-preview/planning-cluster/ | /es/que-llevar-bosque-nublado-ecuador/ | /is-cloud-forest-safe-ecuador/ | /mindo-vs-cloud-forest-retreat/ | /quito-to-cloud-forest-distance/ | /rooms/ | /rooms/common-areas/ | /rooms/panoramic-suite/ | /rooms/sunrise-room/ | /rooms/sunset-room/ | /weekend-getaway-from-quito/",
+      "target": 6,
+      "broken_local_outlinks": []
+    },
+    "/es/que-llevar-bosque-nublado-ecuador/": {
+      "current_unique_inlinks": 15,
+      "current_unique_outlinks": 11,
+      "current_inlink_sources": "/es/blog/itinerario-bosque-nublado-3-dias/ | /es/blog/mejor-epoca-visitar-bosque-nublado/ | /es/bosque-nublado-ecuador/ | /es/distancia-quito-bosque-nublado/ | /es/es-seguro-bosque-nublado-ecuador/ | /es/escapada-fin-de-semana-quito/ | /es/habitaciones/ | /es/habitaciones/areas-comunes/ | /es/habitaciones/habitacion-amanecer/ | /es/habitaciones/habitacion-atardecer/ | /es/habitaciones/suite-panoramica/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /es/mindo-vs-cloud-forest-retreat/ | /es/senderismo-bosque-nublado-ecuador/ | /what-to-pack-cloud-forest-ecuador/",
+      "target": 6,
+      "broken_local_outlinks": []
+    },
+    "/is-cloud-forest-safe-ecuador/": {
+      "current_unique_inlinks": 5,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/design-preview/planning-cluster/ | /es/es-seguro-bosque-nublado-ecuador/ | /mindo-vs-cloud-forest-retreat/ | /quito-to-cloud-forest-distance/ | /what-to-pack-cloud-forest-ecuador/",
+      "target": 4,
+      "broken_local_outlinks": []
+    },
+    "/es/es-seguro-bosque-nublado-ecuador/": {
+      "current_unique_inlinks": 4,
+      "current_unique_outlinks": 9,
+      "current_inlink_sources": "/es/distancia-quito-bosque-nublado/ | /es/mindo-vs-cloud-forest-retreat/ | /es/que-llevar-bosque-nublado-ecuador/ | /is-cloud-forest-safe-ecuador/",
+      "target": 4,
+      "broken_local_outlinks": []
+    }
+  },
+  "deployment": {
+    "pages_byte_verified": 6,
+    "mismatches": 0
+  },
+  "google_sheet": {
+    "spreadsheet_id": "1k4eAfdEsZz7lih0t2c_0kv-rwbhyjQNgpyFlu0Qm7L4",
+    "tab": "sitemap_enriched",
+    "rows": [
+      84,
+      85,
+      86,
+      87,
+      88,
+      89
+    ],
+    "status": "synchronized and verified",
+    "fields_verified": 192,
+    "mismatches": 0,
+    "editor_access": "confirmed via Google Drive connector",
+    "staging_dropdown_validations_preserved": 6
+  },
+  "account_side_verification": "GA4/GTM, form attribution and deduplication, Turnstile hostname/server validation, and Search Console remain pending"
+}
