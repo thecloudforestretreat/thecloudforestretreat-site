@@ -59,6 +59,7 @@ Global requirements:
 - Keep “The Cloud Forest Retreat” on one line where space permits.
 - Social icons appear above the bottom copyright/location/terms line.
 - Use equal-height cards in the same grid row on desktop when the content is comparable.
+- Symmetry and alignment are required on every page: match card insets, align comparable action links/buttons to a common bottom baseline, and check heading/content alignment within each row in both languages. Use flexible layout rather than fixed content heights; preserve natural stacking on mobile.
 - Use responsive stacking on smaller viewports without artificial empty space.
 - Keep HTML vertical, clearly indented, and maintainable.
 - Do not introduce unsupported, exaggerated, misleading, or cheesy positioning statements.
@@ -172,7 +173,7 @@ Do not mark a pair complete until all of the following pass:
 6. Analytics and attribution hooks are present.
 7. Header, footer, site configuration, global CSS, and the assigned cluster CSS are used.
 8. Rendered QA passes at 390, 768, and 1440 pixels.
-9. Comparable desktop cards align and no artificial whitespace remains.
+9. Comparable desktop cards align in height, padding and action baseline; heading/content alignment is reviewed in both languages and no artificial whitespace remains.
 10. The pair’s two roadmap rows are updated with specific completion evidence.
 11. Changes are committed with a focused commit message.
 

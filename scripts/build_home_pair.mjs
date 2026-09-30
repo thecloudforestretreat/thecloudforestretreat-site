@@ -189,7 +189,7 @@ function page({ language, title, description, canonical, counterpart, main, rela
   <link rel="stylesheet" href="/assets/css/header.css?v=5" />
   <link rel="stylesheet" href="/assets/css/global.css?v=4" />
   <link rel="stylesheet" href="/assets/css/footer.css?v=10" />
-  <link rel="stylesheet" href="/assets/css/clusters/home.css?v=6" />
+  <link rel="stylesheet" href="/assets/css/clusters/home.css?v=7" />
   <link rel="stylesheet" href="/assets/css/components/faq.css?v=1" />
   <script type="application/ld+json">
 ${schema({ language, url: canonical, title, description, questions })}
