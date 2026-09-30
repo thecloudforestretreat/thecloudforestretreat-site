@@ -18,12 +18,12 @@ This document transfers the active The Cloud Forest Retreat website upgrade to a
 
 The enriched roadmap contains 49 English/Spanish page pairs (98 rows).
 
-- Completed and pair-level QA verified: 25 pairs
-- Remaining for full page enrichment and pair-level QA: 24 pairs
-- Next pair in roadmap order: `pair_026`
-  - English: `/weekend-getaway-from-quito/`
-  - Spanish: `/es/escapada-fin-de-semana-quito/`
-  - Cluster: Commercial near Quito stay
+- Completed and pair-level QA verified: 28 pairs
+- Remaining for full page enrichment and pair-level QA: 21 pairs
+- Next pair in roadmap order: `pair_029`
+  - English: `/blog/best-time-to-visit-cloud-forest/`
+  - Spanish: `/es/blog/mejor-epoca-visitar-bosque-nublado/`
+  - Cluster: Editorial support
 
 Completed pairs:
 
@@ -52,12 +52,15 @@ Completed pairs:
 23. `pair_022`: `/terms-of-service/` and `/es/terminos-de-servicio/`
 24. `pair_024`: `/eco-lodge-quito-ecuador/` and `/es/eco-lodge-quito-ecuador/`
 25. `pair_025`: `/birdwatching-lodge-ecuador/` and `/es/lodge-avistamiento-aves-ecuador/`
+26. `pair_026`: `/weekend-getaway-from-quito/` and `/es/escapada-fin-de-semana-quito/`
+27. `pair_027`: `/blog/` and `/es/blog/`
+28. `pair_028`: `/blog/how-to-get-to-cloud-forest-retreat/` and `/es/blog/como-llegar-cloud-forest-retreat/`
 
 Authoritative roadmap:
 
 `outputs/01a0cacb-9307-7181-a26c-990d3a098536/TCFR_site_roadmap_enriched_2026-09-23.csv`
 
-The Terms of Service, Eco Lodge Quito Ecuador and Birdwatching Lodge Ecuador pairs passed local browser, consent-flow and visual QA on 2026-09-30. Evidence: `outputs/qa/pairs_022_024_025_2026-09-30.json`; runner: `scripts/qa_next_batch.mjs`. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
+The Weekend Getaway, bilingual Blog hub and How to Get Here pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `868bd21`; all six page files and the shared Editorial CSS were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_026_028_2026-09-30.json`; runner: `scripts/qa_editorial_batch.mjs`. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
 
 Update both language rows only after a pair passes implementation and QA. Do not mark a pair complete because a global architecture script touched it.
 
@@ -253,7 +256,7 @@ Do not commit account credentials, private tokens, analytics secrets, form secre
 
 Copy the following into a new Codex task on the Mac mini after checking out the branch:
 
-> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_026`: `/weekend-getaway-from-quito/` and `/es/escapada-fin-de-semana-quito/`. Preserve the approved global system and Stay cluster, maintain English/Spanish semantic parity, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, consent-aware analytics attribution, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
+> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_029`: `/blog/best-time-to-visit-cloud-forest/` and `/es/blog/mejor-epoca-visitar-bosque-nublado/`. Preserve the approved global system and Editorial cluster, maintain English/Spanish semantic parity, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, consent-aware analytics attribution, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
 
 ## First receiving-host checklist
 
@@ -263,4 +266,4 @@ Copy the following into a new Codex task on the Mac mini after checking out the 
 4. Confirm `git status --short --branch` is clean.
 5. Open the shared conversation link supplied out-of-band for design-decision history.
 6. Start a local preview and verify one completed English/Spanish pair before changing the next pair.
-7. Begin `pair_026` only after the baseline renders correctly.
+7. Begin `pair_029` only after the baseline renders correctly.
