@@ -619,3 +619,32 @@ body[data-tcfr-template="premium-rooms"] {
   .roomsReviews__links { flex-direction: column; }
   .roomsReviews__links a { text-align: center; }
 }
+
+/* Panoramic Suite detail: extends the approved Rooms shell. */
+.suiteDetail .roomsPreview__crumbs { flex-wrap: wrap; }
+.suiteDetail .roomsCompare { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.suiteDetail .roomsGuidance__card { min-height: 0; }
+.suiteGallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.suiteGallery figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--rooms-paper);
+  border: 1px solid var(--rooms-line);
+  border-radius: 22px;
+}
+.suiteGallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.suiteGallery figcaption { padding: 18px; color: var(--rooms-green); font-weight: 750; }
+.suiteReviewContext { max-width: 66ch; margin: 22px 0 0; color: rgba(20, 32, 24, 0.72); line-height: 1.7; }
+@media (max-width: 980px) {
+  .suiteDetail .roomsCompare, .suiteGallery { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .suiteDetail .roomsShowcase__media { min-height: 340px; height: 340px; }
+  .suiteDetail .roomsShowcase__media > img { object-position: 60% center; }
+  .suiteDetail .roomsShowcase__note { right: 14px; bottom: 14px; left: 14px; }
+}

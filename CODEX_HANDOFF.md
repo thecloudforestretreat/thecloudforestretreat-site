@@ -18,11 +18,11 @@ This document transfers the active The Cloud Forest Retreat website upgrade to a
 
 The enriched roadmap contains 49 English/Spanish page pairs (98 rows).
 
-- Completed and pair-level QA verified: 6 pairs
-- Remaining for full page enrichment and pair-level QA: 43 pairs
-- Next pair in roadmap order: `pair_006`
-  - English: `/rooms/panoramic-suite/`
-  - Spanish: `/es/habitaciones/suite-panoramica/`
+- Completed and pair-level QA verified: 7 pairs
+- Remaining for full page enrichment and pair-level QA: 42 pairs
+- Next pair in roadmap order: `pair_007`
+  - English: `/rooms/sunrise-room/`
+  - Spanish: `/es/habitaciones/habitacion-amanecer/`
   - Cluster: Rooms
 
 Completed pairs:
@@ -33,10 +33,13 @@ Completed pairs:
 4. `pair_004`: `/contact/` and `/es/contacto/`
 5. `pair_005`: `/rooms/` and `/es/habitaciones/`
 6. `pair_023`: `/cloud-forest-lodge-near-quito/` and `/es/lodge-bosque-nublado-cerca-de-quito/`
+7. `pair_006`: `/rooms/panoramic-suite/` and `/es/habitaciones/suite-panoramica/`
 
 Authoritative roadmap:
 
 `outputs/01a0cacb-9307-7181-a26c-990d3a098536/TCFR_site_roadmap_enriched_2026-09-23.csv`
+
+The Panoramic Suite pair passed local browser and visual QA on 2026-09-30. Evidence: `outputs/qa/pair_006_2026-09-30.json`; runner: `scripts/qa_panoramic.mjs`. Google Sheet reconciliation remains pending account access. Pair completion does not mean production deployment or account-side analytics verification.
 
 Update both language rows only after a pair passes implementation and QA. Do not mark a pair complete because a global architecture script touched it.
 
@@ -221,14 +224,14 @@ Do not commit account credentials, private tokens, analytics secrets, form secre
 
 Copy the following into a new Codex task on the Mac mini after checking out the branch:
 
-> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_006`: `/rooms/panoramic-suite/` and `/es/habitaciones/suite-panoramica/`. Preserve the approved global system and Rooms cluster, maintain English/Spanish semantic parity, vertical indented HTML, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, analytics attribution hooks, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
+> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then continue in roadmap order with `pair_007`: `/rooms/sunrise-room/` and `/es/habitaciones/habitacion-amanecer/`. Preserve the approved global system and Rooms cluster, maintain English/Spanish semantic parity, vertical indented HTML, factual guest-facing content, global container/spacing consistency, equal-height comparable cards, responsive behavior, FAQs/schema parity, SEO/AEO/GEO, internal links, analytics attribution hooks, shared includes, and centralized site configuration. Render and verify both pages at 390, 768, and 1440 pixels. Update only the two corresponding roadmap rows after all QA gates pass, commit the pair with focused evidence, and report the completed pair and the next pair. Keep all work on staging; do not deploy production.
 
 ## First receiving-host checklist
 
 1. Clone or open the TCFR repository on the Mac mini.
 2. Fetch `origin` and check out `codex/tcfr-site-upgrade`.
-3. Confirm this file and the six completed-pair commits are present.
+3. Confirm this file and the completed-pair commits are present.
 4. Confirm `git status --short --branch` is clean.
 5. Open the shared conversation link supplied out-of-band for design-decision history.
 6. Start a local preview and verify one completed English/Spanish pair before changing the next pair.
-7. Begin `pair_006` only after the baseline renders correctly.
+7. Begin `pair_007` only after the baseline renders correctly.

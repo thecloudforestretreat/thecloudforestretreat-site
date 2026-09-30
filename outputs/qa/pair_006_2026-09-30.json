@@ -1,0 +1,182 @@
+{
+  "pair_id": "pair_006",
+  "date": "2026-09-30",
+  "environment": "Local preview of upgrade branch; no production deployment",
+  "results": [
+    {
+      "route": "/rooms/panoramic-suite/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      },
+      "errors": [],
+      "brokenLinks": []
+    },
+    {
+      "route": "/es/habitaciones/suite-panoramica/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      },
+      "errors": [],
+      "brokenLinks": []
+    },
+    {
+      "route": "/rooms/panoramic-suite/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      },
+      "errors": [],
+      "brokenLinks": []
+    },
+    {
+      "route": "/es/habitaciones/suite-panoramica/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      },
+      "errors": [],
+      "brokenLinks": []
+    },
+    {
+      "route": "/rooms/panoramic-suite/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      },
+      "errors": [],
+      "brokenLinks": []
+    },
+    {
+      "route": "/es/habitaciones/suite-panoramica/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "room": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "config": true,
+        "attribution": true,
+        "sharedAssets": true,
+        "spacing": true,
+        "errors": true,
+        "faqKeyboard": true
+      },
+      "errors": [],
+      "brokenLinks": []
+    }
+  ],
+  "incoming_links": {
+    "en": {
+      "current_unique_inlinks": "6",
+      "current_inlink_sources": "/cloud-forest-lodge-near-quito/ | /es/habitaciones/suite-panoramica/ | /rooms/ | /rooms/common-areas/ | /rooms/sunrise-room/ | /rooms/sunset-room/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "13"
+    },
+    "es": {
+      "current_unique_inlinks": "6",
+      "current_inlink_sources": "/es/habitaciones/ | /es/habitaciones/areas-comunes/ | /es/habitaciones/habitacion-amanecer/ | /es/habitaciones/habitacion-atardecer/ | /es/lodge-bosque-nublado-cerca-de-quito/ | /rooms/panoramic-suite/",
+      "inlink_gap": "0",
+      "current_unique_outlinks": "13"
+    }
+  },
+  "visual_review": "Both languages reviewed at 390, 768 and 1440 pixels; gallery captions corrected to inspected images; mobile hero shortened.",
+  "limitations": [
+    "Account-side GA4/GTM, Search Console, form endpoint and Turnstile verification not included.",
+    "Google Sheet synchronization pending Editor access."
+  ]
+}
