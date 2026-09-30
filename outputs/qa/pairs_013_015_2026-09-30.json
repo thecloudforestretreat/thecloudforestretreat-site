@@ -1,0 +1,2745 @@
+[
+  {
+    "pair": "pair_013",
+    "route": "/features/attractions/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Nearby Attractions in Ecuador’s Cloud Forest | Quito",
+      "description": "Plan nearby cloud forest attractions from The Cloud Forest Retreat, including Pululahua, waterfalls and nature outings, with practical guidance for your dates.",
+      "canonical": "https://thecloudforestretreat.com/features/attractions/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/attractions/#webpage",
+        "url": "https://thecloudforestretreat.com/features/attractions/",
+        "name": "Nearby Attractions in Ecuador’s Cloud Forest | Quito",
+        "description": "Plan nearby cloud forest attractions from The Cloud Forest Retreat, including Pululahua, waterfalls and nature outings, with practical guidance for your dates.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/attractions/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1290.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 1546.5625,
+          "action": 1665.953125
+        },
+        {
+          "top": 1726.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 1982.5625,
+          "action": 2101.953125
+        },
+        {
+          "top": 2162.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 2418.5625,
+          "action": 2537.953125
+        },
+        {
+          "top": 2598.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 2854.5625,
+          "action": 2973.953125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ],
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/features/pululahua/",
+        "/waterfalls-near-quito/",
+        "/weekend-getaway-from-quito/",
+        "/features/activities/",
+        "/booking/",
+        "/contact/",
+        "/features/pululahua/",
+        "/waterfalls-near-quito/",
+        "/weekend-getaway-from-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:34.340Z\"},\"last_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:34.340Z\"},\"last_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:34.341Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_013",
+    "route": "/es/caracteristicas/atracciones/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Atracciones Cercanas en el Bosque Nublado de Quito",
+      "description": "Planifica atracciones cercanas desde The Cloud Forest Retreat, como Pululahua, cascadas y salidas de naturaleza, con orientación práctica.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/",
+        "name": "Atracciones Cercanas en el Bosque Nublado de Quito",
+        "description": "Planifica atracciones cercanas desde The Cloud Forest Retreat, como Pululahua, cascadas y salidas de naturaleza, con orientación práctica.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1290.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 1546.5625,
+          "action": 1665.953125
+        },
+        {
+          "top": 1726.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 1982.5625,
+          "action": 2101.953125
+        },
+        {
+          "top": 2162.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 2418.5625,
+          "action": 2537.953125
+        },
+        {
+          "top": 2598.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 2854.5625,
+          "action": 2973.953125
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ],
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/caracteristicas/pululahua/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/caracteristicas/actividades/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/caracteristicas/pululahua/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:34.869Z\"},\"last_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:34.869Z\"},\"last_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:34.869Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_013",
+    "route": "/features/attractions/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Nearby Attractions in Ecuador’s Cloud Forest | Quito",
+      "description": "Plan nearby cloud forest attractions from The Cloud Forest Retreat, including Pululahua, waterfalls and nature outings, with practical guidance for your dates.",
+      "canonical": "https://thecloudforestretreat.com/features/attractions/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/attractions/#webpage",
+        "url": "https://thecloudforestretreat.com/features/attractions/",
+        "name": "Nearby Attractions in Ecuador’s Cloud Forest | Quito",
+        "description": "Plan nearby cloud forest attractions from The Cloud Forest Retreat, including Pululahua, waterfalls and nature outings, with practical guidance for your dates.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/attractions/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1216.171875,
+          "width": 358,
+          "height": 410,
+          "heading": 1450.125,
+          "action": 1567.140625
+        },
+        {
+          "top": 1216.171875,
+          "width": 358,
+          "height": 410,
+          "heading": 1439.421875,
+          "action": 1567.140625
+        },
+        {
+          "top": 1642.171875,
+          "width": 358,
+          "height": 410,
+          "heading": 1876.125,
+          "action": 1993.140625
+        },
+        {
+          "top": 1642.171875,
+          "width": 358,
+          "height": 410,
+          "heading": 1876.125,
+          "action": 1993.140625
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ],
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/features/pululahua/",
+        "/waterfalls-near-quito/",
+        "/weekend-getaway-from-quito/",
+        "/features/activities/",
+        "/booking/",
+        "/contact/",
+        "/features/pululahua/",
+        "/waterfalls-near-quito/",
+        "/weekend-getaway-from-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:35.472Z\"},\"last_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:35.472Z\"},\"last_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:35.472Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_013",
+    "route": "/es/caracteristicas/atracciones/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Atracciones Cercanas en el Bosque Nublado de Quito",
+      "description": "Planifica atracciones cercanas desde The Cloud Forest Retreat, como Pululahua, cascadas y salidas de naturaleza, con orientación práctica.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/",
+        "name": "Atracciones Cercanas en el Bosque Nublado de Quito",
+        "description": "Planifica atracciones cercanas desde The Cloud Forest Retreat, como Pululahua, cascadas y salidas de naturaleza, con orientación práctica.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1832.109375,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ],
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/caracteristicas/pululahua/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/caracteristicas/actividades/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/caracteristicas/pululahua/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:36.013Z\"},\"last_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:36.013Z\"},\"last_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:36.013Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_013",
+    "route": "/features/attractions/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Nearby Attractions in Ecuador’s Cloud Forest | Quito",
+      "description": "Plan nearby cloud forest attractions from The Cloud Forest Retreat, including Pululahua, waterfalls and nature outings, with practical guidance for your dates.",
+      "canonical": "https://thecloudforestretreat.com/features/attractions/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/attractions/#webpage",
+        "url": "https://thecloudforestretreat.com/features/attractions/",
+        "name": "Nearby Attractions in Ecuador’s Cloud Forest | Quito",
+        "description": "Plan nearby cloud forest attractions from The Cloud Forest Retreat, including Pululahua, waterfalls and nature outings, with practical guidance for your dates.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/attractions/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ],
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/features/pululahua/",
+        "/waterfalls-near-quito/",
+        "/weekend-getaway-from-quito/",
+        "/features/activities/",
+        "/booking/",
+        "/contact/",
+        "/features/pululahua/",
+        "/waterfalls-near-quito/",
+        "/weekend-getaway-from-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:36.647Z\"},\"last_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:36.647Z\"},\"last_page\":\"/features/attractions/?utm_source=pair_013_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:36.647Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_013",
+    "route": "/es/caracteristicas/atracciones/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Atracciones Cercanas en el Bosque Nublado de Quito",
+      "description": "Planifica atracciones cercanas desde The Cloud Forest Retreat, como Pululahua, cascadas y salidas de naturaleza, con orientación práctica.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/attractions/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/",
+        "name": "Atracciones Cercanas en el Bosque Nublado de Quito",
+        "description": "Planifica atracciones cercanas desde The Cloud Forest Retreat, como Pululahua, cascadas y salidas de naturaleza, con orientación práctica.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ],
+        [
+          "en",
+          "/features/attractions/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/atracciones/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/caracteristicas/pululahua/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/caracteristicas/actividades/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/caracteristicas/pululahua/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:37.322Z\"},\"last_touch\":{\"utm_source\":\"pair_013_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:37.322Z\"},\"last_page\":\"/es/caracteristicas/atracciones/?utm_source=pair_013_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:37.322Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_014",
+    "route": "/features/choco-andino-de-pichincha/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Chocó Andino de Pichincha | Cloud Forest Context",
+      "description": "Understand the Chocó Andino de Pichincha around The Cloud Forest Retreat: cloud forest geography, biodiversity and practical ways to explore responsibly.",
+      "canonical": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/#webpage",
+        "url": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/",
+        "name": "Chocó Andino de Pichincha | Cloud Forest Context",
+        "description": "Understand the Chocó Andino de Pichincha around The Cloud Forest Retreat: cloud forest geography, biodiversity and practical ways to explore responsibly.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1260.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1516.328125,
+          "action": 1635.71875
+        },
+        {
+          "top": 1696.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1952.328125,
+          "action": 2071.71875
+        },
+        {
+          "top": 2132.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2388.328125,
+          "action": 2507.71875
+        },
+        {
+          "top": 2568.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2824.328125,
+          "action": 2943.71875
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/cloud-forest-ecuador/",
+        "/features/fauna/",
+        "/features/flora/",
+        "/birdwatching-lodge-ecuador/",
+        "/booking/",
+        "/contact/",
+        "/features/fauna/",
+        "/features/flora/",
+        "/birdwatching-lodge-ecuador/",
+        "/cloud-forest-ecuador/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:38.060Z\"},\"last_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:38.060Z\"},\"last_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:38.060Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_014",
+    "route": "/es/caracteristicas/choco-andino-de-pichincha/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Chocó Andino de Pichincha | Contexto del Bosque",
+      "description": "Comprende el Chocó Andino de Pichincha alrededor del refugio: geografía, biodiversidad y formas prácticas de explorar responsablemente.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/",
+        "name": "Chocó Andino de Pichincha | Contexto del Bosque",
+        "description": "Comprende el Chocó Andino de Pichincha alrededor del refugio: geografía, biodiversidad y formas prácticas de explorar responsablemente.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1260.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1516.328125,
+          "action": 1635.71875
+        },
+        {
+          "top": 1696.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1952.328125,
+          "action": 2071.71875
+        },
+        {
+          "top": 2132.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2388.328125,
+          "action": 2507.71875
+        },
+        {
+          "top": 2568.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2847.65625,
+          "action": 2943.71875
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/bosque-nublado-ecuador/",
+        "/es/caracteristicas/fauna/",
+        "/es/caracteristicas/flora/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/caracteristicas/fauna/",
+        "/es/caracteristicas/flora/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/bosque-nublado-ecuador/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:38.665Z\"},\"last_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:38.665Z\"},\"last_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:38.666Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_014",
+    "route": "/features/choco-andino-de-pichincha/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Chocó Andino de Pichincha | Cloud Forest Context",
+      "description": "Understand the Chocó Andino de Pichincha around The Cloud Forest Retreat: cloud forest geography, biodiversity and practical ways to explore responsibly.",
+      "canonical": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/#webpage",
+        "url": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/",
+        "name": "Chocó Andino de Pichincha | Cloud Forest Context",
+        "description": "Understand the Chocó Andino de Pichincha around The Cloud Forest Retreat: cloud forest geography, biodiversity and practical ways to explore responsibly.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/cloud-forest-ecuador/",
+        "/features/fauna/",
+        "/features/flora/",
+        "/birdwatching-lodge-ecuador/",
+        "/booking/",
+        "/contact/",
+        "/features/fauna/",
+        "/features/flora/",
+        "/birdwatching-lodge-ecuador/",
+        "/cloud-forest-ecuador/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:39.270Z\"},\"last_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:39.270Z\"},\"last_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:39.270Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_014",
+    "route": "/es/caracteristicas/choco-andino-de-pichincha/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Chocó Andino de Pichincha | Contexto del Bosque",
+      "description": "Comprende el Chocó Andino de Pichincha alrededor del refugio: geografía, biodiversidad y formas prácticas de explorar responsablemente.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/",
+        "name": "Chocó Andino de Pichincha | Contexto del Bosque",
+        "description": "Comprende el Chocó Andino de Pichincha alrededor del refugio: geografía, biodiversidad y formas prácticas de explorar responsablemente.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/bosque-nublado-ecuador/",
+        "/es/caracteristicas/fauna/",
+        "/es/caracteristicas/flora/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/caracteristicas/fauna/",
+        "/es/caracteristicas/flora/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/bosque-nublado-ecuador/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:39.896Z\"},\"last_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:39.896Z\"},\"last_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:39.896Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_014",
+    "route": "/features/choco-andino-de-pichincha/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Chocó Andino de Pichincha | Cloud Forest Context",
+      "description": "Understand the Chocó Andino de Pichincha around The Cloud Forest Retreat: cloud forest geography, biodiversity and practical ways to explore responsibly.",
+      "canonical": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/#webpage",
+        "url": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/",
+        "name": "Chocó Andino de Pichincha | Cloud Forest Context",
+        "description": "Understand the Chocó Andino de Pichincha around The Cloud Forest Retreat: cloud forest geography, biodiversity and practical ways to explore responsibly.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/cloud-forest-ecuador/",
+        "/features/fauna/",
+        "/features/flora/",
+        "/birdwatching-lodge-ecuador/",
+        "/booking/",
+        "/contact/",
+        "/features/fauna/",
+        "/features/flora/",
+        "/birdwatching-lodge-ecuador/",
+        "/cloud-forest-ecuador/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:40.516Z\"},\"last_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:40.516Z\"},\"last_page\":\"/features/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:40.517Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_014",
+    "route": "/es/caracteristicas/choco-andino-de-pichincha/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Chocó Andino de Pichincha | Contexto del Bosque",
+      "description": "Comprende el Chocó Andino de Pichincha alrededor del refugio: geografía, biodiversidad y formas prácticas de explorar responsablemente.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/",
+        "name": "Chocó Andino de Pichincha | Contexto del Bosque",
+        "description": "Comprende el Chocó Andino de Pichincha alrededor del refugio: geografía, biodiversidad y formas prácticas de explorar responsablemente.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ],
+        [
+          "en",
+          "/features/choco-andino-de-pichincha/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/choco-andino-de-pichincha/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/bosque-nublado-ecuador/",
+        "/es/caracteristicas/fauna/",
+        "/es/caracteristicas/flora/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/caracteristicas/fauna/",
+        "/es/caracteristicas/flora/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/bosque-nublado-ecuador/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:41.258Z\"},\"last_touch\":{\"utm_source\":\"pair_014_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:41.258Z\"},\"last_page\":\"/es/caracteristicas/choco-andino-de-pichincha/?utm_source=pair_014_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:41.258Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_015",
+    "route": "/features/fauna/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Fauna in Ecuador | Wildlife Guide",
+      "description": "Learn about cloud forest fauna around The Cloud Forest Retreat, including hummingbirds, toucans, butterflies and responsible wildlife observation near Quito.",
+      "canonical": "https://thecloudforestretreat.com/features/fauna/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/fauna/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/fauna/#webpage",
+        "url": "https://thecloudforestretreat.com/features/fauna/",
+        "name": "Cloud Forest Fauna in Ecuador | Wildlife Guide",
+        "description": "Learn about cloud forest fauna around The Cloud Forest Retreat, including hummingbirds, toucans, butterflies and responsible wildlife observation near Quito.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/fauna/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1290.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 1546.5625,
+          "action": 1665.953125
+        },
+        {
+          "top": 1726.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 1982.5625,
+          "action": 2101.953125
+        },
+        {
+          "top": 2162.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 2418.5625,
+          "action": 2537.953125
+        },
+        {
+          "top": 2598.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 2831.234375,
+          "action": 2973.953125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ],
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/hummingbirds-quito-ecuador/",
+        "/birds-of-the-cloud-forest-ecuador/",
+        "/features/gallery/",
+        "/features/choco-andino-de-pichincha/",
+        "/booking/",
+        "/contact/",
+        "/birdwatching-lodge-ecuador/",
+        "/birds-of-the-cloud-forest-ecuador/",
+        "/hummingbirds-quito-ecuador/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:42.017Z\"},\"last_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:42.017Z\"},\"last_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:42.018Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_015",
+    "route": "/es/caracteristicas/fauna/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Fauna del Bosque Nublado de Ecuador | Guía",
+      "description": "Conoce la fauna del bosque nublado alrededor del refugio: colibríes, tucanes, mariposas y observación responsable cerca de Quito.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/fauna/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/fauna/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/fauna/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/fauna/",
+        "name": "Fauna del Bosque Nublado de Ecuador | Guía",
+        "description": "Conoce la fauna del bosque nublado alrededor del refugio: colibríes, tucanes, mariposas y observación responsable cerca de Quito.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/fauna/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1271.875,
+          "width": 366,
+          "height": 420,
+          "heading": 1504.5625,
+          "action": 1647.28125
+        },
+        {
+          "top": 1707.875,
+          "width": 366,
+          "height": 420,
+          "heading": 1963.890625,
+          "action": 2083.28125
+        },
+        {
+          "top": 2143.875,
+          "width": 366,
+          "height": 420,
+          "heading": 2399.890625,
+          "action": 2519.28125
+        },
+        {
+          "top": 2579.875,
+          "width": 366,
+          "height": 420,
+          "heading": 2812.5625,
+          "action": 2955.28125
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ],
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/colibries-quito-ecuador/",
+        "/es/aves-del-bosque-nublado-ecuador/",
+        "/es/caracteristicas/galeria/",
+        "/es/caracteristicas/choco-andino-de-pichincha/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/aves-del-bosque-nublado-ecuador/",
+        "/es/colibries-quito-ecuador/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:42.638Z\"},\"last_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:42.638Z\"},\"last_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:42.639Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_015",
+    "route": "/features/fauna/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Fauna in Ecuador | Wildlife Guide",
+      "description": "Learn about cloud forest fauna around The Cloud Forest Retreat, including hummingbirds, toucans, butterflies and responsible wildlife observation near Quito.",
+      "canonical": "https://thecloudforestretreat.com/features/fauna/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/fauna/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/fauna/#webpage",
+        "url": "https://thecloudforestretreat.com/features/fauna/",
+        "name": "Cloud Forest Fauna in Ecuador | Wildlife Guide",
+        "description": "Learn about cloud forest fauna around The Cloud Forest Retreat, including hummingbirds, toucans, butterflies and responsible wildlife observation near Quito.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/fauna/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1409.1875,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1835.1875,
+          "action": 1962.90625
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ],
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/hummingbirds-quito-ecuador/",
+        "/birds-of-the-cloud-forest-ecuador/",
+        "/features/gallery/",
+        "/features/choco-andino-de-pichincha/",
+        "/booking/",
+        "/contact/",
+        "/birdwatching-lodge-ecuador/",
+        "/birds-of-the-cloud-forest-ecuador/",
+        "/hummingbirds-quito-ecuador/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:43.250Z\"},\"last_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:43.250Z\"},\"last_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:43.250Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_015",
+    "route": "/es/caracteristicas/fauna/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Fauna del Bosque Nublado de Ecuador | Guía",
+      "description": "Conoce la fauna del bosque nublado alrededor del refugio: colibríes, tucanes, mariposas y observación responsable cerca de Quito.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/fauna/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/fauna/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/fauna/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/fauna/",
+        "name": "Fauna del Bosque Nublado de Ecuador | Guía",
+        "description": "Conoce la fauna del bosque nublado alrededor del refugio: colibríes, tucanes, mariposas y observación responsable cerca de Quito.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/fauna/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1409.1875,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1835.1875,
+          "action": 1962.90625
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ],
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/colibries-quito-ecuador/",
+        "/es/aves-del-bosque-nublado-ecuador/",
+        "/es/caracteristicas/galeria/",
+        "/es/caracteristicas/choco-andino-de-pichincha/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/aves-del-bosque-nublado-ecuador/",
+        "/es/colibries-quito-ecuador/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:43.793Z\"},\"last_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:43.793Z\"},\"last_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:43.793Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_015",
+    "route": "/features/fauna/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Fauna in Ecuador | Wildlife Guide",
+      "description": "Learn about cloud forest fauna around The Cloud Forest Retreat, including hummingbirds, toucans, butterflies and responsible wildlife observation near Quito.",
+      "canonical": "https://thecloudforestretreat.com/features/fauna/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/fauna/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/fauna/#webpage",
+        "url": "https://thecloudforestretreat.com/features/fauna/",
+        "name": "Cloud Forest Fauna in Ecuador | Wildlife Guide",
+        "description": "Learn about cloud forest fauna around The Cloud Forest Retreat, including hummingbirds, toucans, butterflies and responsible wildlife observation near Quito.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/fauna/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1920.5,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ],
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/hummingbirds-quito-ecuador/",
+        "/birds-of-the-cloud-forest-ecuador/",
+        "/features/gallery/",
+        "/features/choco-andino-de-pichincha/",
+        "/booking/",
+        "/contact/",
+        "/birdwatching-lodge-ecuador/",
+        "/birds-of-the-cloud-forest-ecuador/",
+        "/hummingbirds-quito-ecuador/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:44.450Z\"},\"last_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:44.450Z\"},\"last_page\":\"/features/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:44.450Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_015",
+    "route": "/es/caracteristicas/fauna/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Fauna del Bosque Nublado de Ecuador | Guía",
+      "description": "Conoce la fauna del bosque nublado alrededor del refugio: colibríes, tucanes, mariposas y observación responsable cerca de Quito.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/fauna/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/fauna/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/fauna/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/fauna/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/fauna/",
+        "name": "Fauna del Bosque Nublado de Ecuador | Guía",
+        "description": "Conoce la fauna del bosque nublado alrededor del refugio: colibríes, tucanes, mariposas y observación responsable cerca de Quito.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/fauna/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1920.5,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ],
+        [
+          "en",
+          "/features/fauna/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/fauna/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/colibries-quito-ecuador/",
+        "/es/aves-del-bosque-nublado-ecuador/",
+        "/es/caracteristicas/galeria/",
+        "/es/caracteristicas/choco-andino-de-pichincha/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/lodge-avistamiento-aves-ecuador/",
+        "/es/aves-del-bosque-nublado-ecuador/",
+        "/es/colibries-quito-ecuador/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:45.210Z\"},\"last_touch\":{\"utm_source\":\"pair_015_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T17:14:45.210Z\"},\"last_page\":\"/es/caracteristicas/fauna/?utm_source=pair_015_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T17:14:45.211Z\"}"
+      }
+    }
+  }
+]

@@ -41,4 +41,5 @@ async function render(p,type){const es=p.path.startsWith('/es/'),canonical=origi
     </main><div id="siteFooter"></div><script src="/assets/js/attribution.js?v=1"></script><script src="/assets/js/site.js?v=8"></script></body></html>\n`;
  await fs.writeFile(p.path.slice(1)+'index.html',html);console.log('Updated '+p.path);
 }
+export {render};
 for(const [type,pair] of Object.entries(pages))for(const p of Object.values(pair))await render(p,type);
