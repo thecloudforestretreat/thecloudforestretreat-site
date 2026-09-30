@@ -165,7 +165,8 @@ function contactForm(p) {
 
 function field(id, label, type, required = false, placeholder = "", autocomplete = "") {
   const max = id === "email" ? 254 : id === "phone" || id === "phone_number" ? 50 : id === "first_name" || id === "last_name" ? 80 : 0;
-  return `<div class="conversionField"><label for="${id}">${label}${required ? " <span>*</span>" : ""}</label><input id="${id}" name="${id}" type="${type}"${required ? " required" : ""}${max ? ` maxlength="${max}"` : ""}${placeholder ? ` placeholder="${placeholder}"` : ""}${autocomplete ? ` autocomplete="${autocomplete}"` : ""} /></div>`;
+  const autocapitalize = id === "first_name" || id === "last_name" ? ' autocapitalize="words"' : "";
+  return `<div class="conversionField"><label for="${id}">${label}${required ? " <span>*</span>" : ""}</label><input id="${id}" name="${id}" type="${type}"${required ? " required" : ""}${max ? ` maxlength="${max}"` : ""}${placeholder ? ` placeholder="${placeholder}"` : ""}${autocomplete ? ` autocomplete="${autocomplete}"` : ""}${autocapitalize} /></div>`;
 }
 
 function select(id, label, options, required = false, extra = "") {
