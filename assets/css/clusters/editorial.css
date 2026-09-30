@@ -467,3 +467,25 @@ body[data-tcfr-template="premium-article"] .editorialArticle__prose {
     padding-inline: 20px;
   }
 }
+
+/* Structured long-form guide treatment shared by Editorial articles. */
+body[data-tcfr-template="premium-article"] {
+  --editorial-deep:#082d16;
+  --editorial-green:var(--forest,#0d5925);
+  --editorial-cream:var(--beige,#f5f5dc);
+  --editorial-paper:#fbfaf5;
+  --editorial-orange:var(--orange,#e0643a);
+  --editorial-line:rgba(13,89,37,.16);
+  color:#142018;
+  background:radial-gradient(circle at 0 15%,rgba(161,191,170,.2),transparent 30rem),var(--editorial-cream);
+}
+.editorialCrumbs{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:18px;color:rgba(20,32,24,.62);font-size:.82rem;font-weight:800}.editorialCrumbs a{color:var(--editorial-green)}
+body[data-tcfr-template="premium-article"] .editorialArticle{width:100%}
+.editorialArticle__hero{display:grid;grid-template-columns:1.02fr .98fr;min-height:610px;overflow:hidden;color:#fff;background:var(--editorial-deep);border-radius:30px;box-shadow:0 30px 90px rgba(10,42,22,.22)}
+.editorialArticle__heroCopy{display:flex;flex-direction:column;justify-content:center;padding:clamp(38px,6vw,78px)}.editorialArticle__hero h1{max-width:13ch;margin:0;color:#fff;font:800 clamp(3rem,5.5vw,5.25rem)/.96 var(--font-head);letter-spacing:-.05em}.editorialArticle__heroCopy>p:not(.editorialEyebrow){margin:22px 0 0;color:rgba(255,255,255,.88);font-size:clamp(1rem,1.35vw,1.15rem);line-height:1.72}.editorialArticle__hero>img{width:100%;height:100%;object-fit:cover}.editorialArticle__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.editorialButtonLight{color:#fff!important;background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.38)!important}
+.editorialArticle__quick{max-width:980px;margin:clamp(32px,5vw,54px) auto;padding:clamp(26px,4vw,42px);background:#fff;border:1px solid var(--editorial-line);border-left:6px solid var(--editorial-orange);border-radius:0 24px 24px 0;box-shadow:0 18px 50px rgba(10,42,22,.08)}.editorialArticle__quick>p:last-child{margin:0;color:var(--editorial-deep);font:700 clamp(1.15rem,2vw,1.45rem)/1.55 var(--font-head)}
+body[data-tcfr-template="premium-article"] .editorialArticle__body{grid-template-columns:250px minmax(0,1fr);max-width:1080px;margin-inline:auto;gap:clamp(30px,5vw,64px)}
+body[data-tcfr-template="premium-article"] .editorialArticle__toc{padding:24px;background:rgba(255,255,255,.62);border:1px solid var(--editorial-line);border-radius:22px}.editorialArticle__toc nav{display:grid}.editorialArticle__toc a{display:grid;grid-template-columns:30px 1fr;gap:8px;padding:13px 0;color:var(--editorial-green);border-top:1px solid var(--editorial-line);font-size:.86rem;font-weight:800;line-height:1.35}.editorialArticle__toc a:first-child{border-top:0}.editorialArticle__toc a span{color:var(--editorial-orange);font-size:.7rem;letter-spacing:.08em}
+body[data-tcfr-template="premium-article"] .editorialArticle__prose{display:grid;gap:18px;font-size:1.02rem;line-height:1.8}.editorialArticle__section{position:relative;padding:clamp(28px,4vw,46px);background:rgba(255,255,255,.68);border:1px solid var(--editorial-line);border-radius:24px}.editorialArticle__number{color:var(--editorial-orange);font-size:.72rem;font-weight:900;letter-spacing:.14em}.editorialArticle__section h2{margin:12px 0 18px;color:var(--editorial-deep);font:800 clamp(2rem,3.7vw,3.25rem)/1 var(--font-head);letter-spacing:-.04em}.editorialArticle__section p{margin:0;color:rgba(20,32,24,.74)}.editorialArticle__section ul{display:grid;gap:10px;margin:24px 0 0;padding:0;list-style:none}.editorialArticle__section li{position:relative;padding:12px 14px 12px 42px;color:var(--editorial-green);background:var(--editorial-cream);border-radius:14px;font-weight:700;line-height:1.5}.editorialArticle__section li:before{content:'✓';position:absolute;left:15px;color:var(--editorial-orange);font-weight:900}.editorialArticle__check{margin-top:var(--tcfr-section-space)}
+@media(max-width:980px){.editorialArticle__hero{grid-template-columns:1fr;min-height:0}.editorialArticle__hero>img{height:440px;order:-1}.editorialArticle__heroCopy{padding:42px 32px}body[data-tcfr-template="premium-article"] .editorialArticle__body{grid-template-columns:1fr}body[data-tcfr-template="premium-article"] .editorialArticle__toc{position:static}.editorialArticle__toc nav{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px}}
+@media(max-width:620px){.editorialArticle__hero{border-radius:22px}.editorialArticle__hero>img{height:310px}.editorialArticle__heroCopy{padding:32px 22px}.editorialArticle__hero h1{font-size:clamp(2.6rem,12vw,3.65rem)}.editorialArticle__actions{display:grid}.editorialArticle__actions .btn{width:100%}.editorialArticle__quick{border-radius:0 18px 18px 0}.editorialArticle__toc nav{grid-template-columns:1fr}.editorialArticle__section{padding:28px 22px;border-radius:20px}}
