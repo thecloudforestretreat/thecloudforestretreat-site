@@ -307,3 +307,23 @@ body[data-tcfr-template="premium-features"] {
   .featuresDay__step { grid-template-columns: 1fr; gap: 7px; }
   .featuresFaq__list { grid-template-columns: 1fr; }
 }
+
+/* Bilingual feature batch: comparable cards share content rows on larger screens. */
+.featureBatchGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(410px, auto);
+}
+.featureBatchGrid .featuresTile { grid-column: span 1; }
+@media (min-width: 641px) {
+  .featureBatchGrid .featuresTile__content {
+    width: 100%;
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .featureBatchGrid .featuresTile__link { margin-top: auto; padding-top: 15px; }
+}
+@media (max-width: 640px) {
+  .featureBatchGrid { grid-template-columns: 1fr; grid-auto-rows: 420px; }
+}

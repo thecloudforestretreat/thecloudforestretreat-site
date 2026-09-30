@@ -1,0 +1,3109 @@
+[
+  {
+    "pair": "pair_010",
+    "route": "/features/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Retreat Features | Activities & Amenities",
+      "description": "Explore activities, amenities, nearby attractions and cloud forest landscapes at The Cloud Forest Retreat near Quito, then plan your stay.",
+      "canonical": "https://thecloudforestretreat.com/features/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "CollectionPage",
+        "@id": "https://thecloudforestretreat.com/features/#webpage",
+        "url": "https://thecloudforestretreat.com/features/",
+        "name": "Cloud Forest Retreat Features | Activities & Amenities",
+        "description": "Explore activities, amenities, nearby attractions and cloud forest landscapes at The Cloud Forest Retreat near Quito, then plan your stay.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "mainEntity": {
+          "@id": "https://thecloudforestretreat.com/features/#list"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/#breadcrumb"
+        }
+      },
+      "itemList": {
+        "@type": "ItemList",
+        "@id": "https://thecloudforestretreat.com/features/#list",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Amenities",
+            "url": "https://thecloudforestretreat.com/features/amenities/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Activities",
+            "url": "https://thecloudforestretreat.com/features/activities/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Nearby attractions",
+            "url": "https://thecloudforestretreat.com/features/attractions/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Chocó Andino",
+            "url": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Pululahua",
+            "url": "https://thecloudforestretreat.com/features/pululahua/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Río Guayllabamba",
+            "url": "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          }
+        ]
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1260.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1516.328125,
+          "action": 1635.71875
+        },
+        {
+          "top": 1696.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1952.328125,
+          "action": 2071.71875
+        },
+        {
+          "top": 2132.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2388.328125,
+          "action": 2507.71875
+        },
+        {
+          "top": 2568.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2824.328125,
+          "action": 2943.71875
+        },
+        {
+          "top": 3004.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 3260.328125,
+          "action": 3379.71875
+        },
+        {
+          "top": 3440.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 3719.65625,
+          "action": 3815.71875
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ],
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/features/amenities/",
+        "/features/activities/",
+        "/features/attractions/",
+        "/features/choco-andino-de-pichincha/",
+        "/features/pululahua/",
+        "/features/rio-guayllabamba/",
+        "/booking/",
+        "/contact/",
+        "/rooms/",
+        "/booking/",
+        "/cloud-forest-ecuador/",
+        "/rooms/common-areas/"
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:16.629Z\"},\"last_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:16.629Z\"},\"last_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:16.629Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_010",
+    "route": "/es/caracteristicas/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Características del Refugio | Actividades y Amenidades",
+      "description": "Explora actividades, amenidades, atracciones cercanas y paisajes del bosque nublado en The Cloud Forest Retreat cerca de Quito.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "CollectionPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/",
+        "name": "Características del Refugio | Actividades y Amenidades",
+        "description": "Explora actividades, amenidades, atracciones cercanas y paisajes del bosque nublado en The Cloud Forest Retreat cerca de Quito.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "mainEntity": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/#list"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/#breadcrumb"
+        }
+      },
+      "itemList": {
+        "@type": "ItemList",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/#list",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Amenidades",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Actividades",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Atracciones cercanas",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Chocó Andino",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Pululahua",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Río Guayllabamba",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          }
+        ]
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1260.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1516.328125,
+          "action": 1635.71875
+        },
+        {
+          "top": 1696.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1952.328125,
+          "action": 2071.71875
+        },
+        {
+          "top": 2132.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2388.328125,
+          "action": 2507.71875
+        },
+        {
+          "top": 2568.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2824.328125,
+          "action": 2943.71875
+        },
+        {
+          "top": 3004.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 3260.328125,
+          "action": 3379.71875
+        },
+        {
+          "top": 3440.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 3719.65625,
+          "action": 3815.71875
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ],
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/caracteristicas/amenidades/",
+        "/es/caracteristicas/actividades/",
+        "/es/caracteristicas/atracciones/",
+        "/es/caracteristicas/choco-andino-de-pichincha/",
+        "/es/caracteristicas/pululahua/",
+        "/es/caracteristicas/rio-guayllabamba/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/habitaciones/",
+        "/es/reservas/",
+        "/es/bosque-nublado-ecuador/",
+        "/es/habitaciones/areas-comunes/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:17.530Z\"},\"last_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:17.530Z\"},\"last_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:17.531Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_010",
+    "route": "/features/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Retreat Features | Activities & Amenities",
+      "description": "Explore activities, amenities, nearby attractions and cloud forest landscapes at The Cloud Forest Retreat near Quito, then plan your stay.",
+      "canonical": "https://thecloudforestretreat.com/features/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "CollectionPage",
+        "@id": "https://thecloudforestretreat.com/features/#webpage",
+        "url": "https://thecloudforestretreat.com/features/",
+        "name": "Cloud Forest Retreat Features | Activities & Amenities",
+        "description": "Explore activities, amenities, nearby attractions and cloud forest landscapes at The Cloud Forest Retreat near Quito, then plan your stay.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "mainEntity": {
+          "@id": "https://thecloudforestretreat.com/features/#list"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/#breadcrumb"
+        }
+      },
+      "itemList": {
+        "@type": "ItemList",
+        "@id": "https://thecloudforestretreat.com/features/#list",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Amenities",
+            "url": "https://thecloudforestretreat.com/features/amenities/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Activities",
+            "url": "https://thecloudforestretreat.com/features/activities/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Nearby attractions",
+            "url": "https://thecloudforestretreat.com/features/attractions/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Chocó Andino",
+            "url": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Pululahua",
+            "url": "https://thecloudforestretreat.com/features/pululahua/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Río Guayllabamba",
+            "url": "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          }
+        ]
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 2037.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 2271.890625,
+          "action": 2388.90625
+        },
+        {
+          "top": 2037.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 2271.890625,
+          "action": 2388.90625
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ],
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/features/amenities/",
+        "/features/activities/",
+        "/features/attractions/",
+        "/features/choco-andino-de-pichincha/",
+        "/features/pululahua/",
+        "/features/rio-guayllabamba/",
+        "/booking/",
+        "/contact/",
+        "/rooms/",
+        "/booking/",
+        "/cloud-forest-ecuador/",
+        "/rooms/common-areas/"
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:18.174Z\"},\"last_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:18.174Z\"},\"last_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:18.174Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_010",
+    "route": "/es/caracteristicas/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Características del Refugio | Actividades y Amenidades",
+      "description": "Explora actividades, amenidades, atracciones cercanas y paisajes del bosque nublado en The Cloud Forest Retreat cerca de Quito.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "CollectionPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/",
+        "name": "Características del Refugio | Actividades y Amenidades",
+        "description": "Explora actividades, amenidades, atracciones cercanas y paisajes del bosque nublado en The Cloud Forest Retreat cerca de Quito.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "mainEntity": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/#list"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/#breadcrumb"
+        }
+      },
+      "itemList": {
+        "@type": "ItemList",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/#list",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Amenidades",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Actividades",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Atracciones cercanas",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Chocó Andino",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Pululahua",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Río Guayllabamba",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          }
+        ]
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 2037.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 2271.890625,
+          "action": 2388.90625
+        },
+        {
+          "top": 2037.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 2271.890625,
+          "action": 2388.90625
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ],
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/caracteristicas/amenidades/",
+        "/es/caracteristicas/actividades/",
+        "/es/caracteristicas/atracciones/",
+        "/es/caracteristicas/choco-andino-de-pichincha/",
+        "/es/caracteristicas/pululahua/",
+        "/es/caracteristicas/rio-guayllabamba/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/habitaciones/",
+        "/es/reservas/",
+        "/es/bosque-nublado-ecuador/",
+        "/es/habitaciones/areas-comunes/"
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:18.998Z\"},\"last_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:18.998Z\"},\"last_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:18.998Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_010",
+    "route": "/features/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Retreat Features | Activities & Amenities",
+      "description": "Explore activities, amenities, nearby attractions and cloud forest landscapes at The Cloud Forest Retreat near Quito, then plan your stay.",
+      "canonical": "https://thecloudforestretreat.com/features/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "CollectionPage",
+        "@id": "https://thecloudforestretreat.com/features/#webpage",
+        "url": "https://thecloudforestretreat.com/features/",
+        "name": "Cloud Forest Retreat Features | Activities & Amenities",
+        "description": "Explore activities, amenities, nearby attractions and cloud forest landscapes at The Cloud Forest Retreat near Quito, then plan your stay.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "mainEntity": {
+          "@id": "https://thecloudforestretreat.com/features/#list"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/#breadcrumb"
+        }
+      },
+      "itemList": {
+        "@type": "ItemList",
+        "@id": "https://thecloudforestretreat.com/features/#list",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Amenities",
+            "url": "https://thecloudforestretreat.com/features/amenities/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Activities",
+            "url": "https://thecloudforestretreat.com/features/activities/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Nearby attractions",
+            "url": "https://thecloudforestretreat.com/features/attractions/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Chocó Andino",
+            "url": "https://thecloudforestretreat.com/features/choco-andino-de-pichincha/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Pululahua",
+            "url": "https://thecloudforestretreat.com/features/pululahua/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Río Guayllabamba",
+            "url": "https://thecloudforestretreat.com/features/rio-guayllabamba/"
+          }
+        ]
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 2126.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 2369.828125,
+          "action": 2466.078125
+        },
+        {
+          "top": 2126.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 2369.828125,
+          "action": 2466.078125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ],
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/features/amenities/",
+        "/features/activities/",
+        "/features/attractions/",
+        "/features/choco-andino-de-pichincha/",
+        "/features/pululahua/",
+        "/features/rio-guayllabamba/",
+        "/booking/",
+        "/contact/",
+        "/rooms/",
+        "/booking/",
+        "/cloud-forest-ecuador/",
+        "/rooms/common-areas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:19.804Z\"},\"last_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:19.804Z\"},\"last_page\":\"/features/?utm_source=pair_010_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:19.804Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_010",
+    "route": "/es/caracteristicas/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Características del Refugio | Actividades y Amenidades",
+      "description": "Explora actividades, amenidades, atracciones cercanas y paisajes del bosque nublado en The Cloud Forest Retreat cerca de Quito.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "CollectionPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/",
+        "name": "Características del Refugio | Actividades y Amenidades",
+        "description": "Explora actividades, amenidades, atracciones cercanas y paisajes del bosque nublado en The Cloud Forest Retreat cerca de Quito.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "mainEntity": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/#list"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/#breadcrumb"
+        }
+      },
+      "itemList": {
+        "@type": "ItemList",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/#list",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Amenidades",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Actividades",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Atracciones cercanas",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/atracciones/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Chocó Andino",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/choco-andino-de-pichincha/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Pululahua",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/pululahua/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Río Guayllabamba",
+            "url": "https://thecloudforestretreat.com/es/caracteristicas/rio-guayllabamba/"
+          }
+        ]
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 2126.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 2369.828125,
+          "action": 2466.078125
+        },
+        {
+          "top": 2126.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 2369.828125,
+          "action": 2466.078125
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ],
+        [
+          "en",
+          "/features/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/caracteristicas/amenidades/",
+        "/es/caracteristicas/actividades/",
+        "/es/caracteristicas/atracciones/",
+        "/es/caracteristicas/choco-andino-de-pichincha/",
+        "/es/caracteristicas/pululahua/",
+        "/es/caracteristicas/rio-guayllabamba/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/habitaciones/",
+        "/es/reservas/",
+        "/es/bosque-nublado-ecuador/",
+        "/es/habitaciones/areas-comunes/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:20.754Z\"},\"last_touch\":{\"utm_source\":\"pair_010_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:20.754Z\"},\"last_page\":\"/es/caracteristicas/?utm_source=pair_010_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:20.754Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_011",
+    "route": "/features/activities/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Activities Near Quito | Retreat Guide",
+      "description": "Plan cloud forest activities near Quito, including hiking, yoga, biking and horseback riding. Learn what to confirm for weather, access and availability.",
+      "canonical": "https://thecloudforestretreat.com/features/activities/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/activities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/activities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/activities/#webpage",
+        "url": "https://thecloudforestretreat.com/features/activities/",
+        "name": "Cloud Forest Activities Near Quito | Retreat Guide",
+        "description": "Plan cloud forest activities near Quito, including hiking, yoga, biking and horseback riding. Learn what to confirm for weather, access and availability.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/activities/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1230.078125,
+          "width": 366,
+          "height": 420,
+          "heading": 1486.09375,
+          "action": 1605.484375
+        },
+        {
+          "top": 1666.078125,
+          "width": 366,
+          "height": 420,
+          "heading": 1922.09375,
+          "action": 2041.484375
+        },
+        {
+          "top": 2102.078125,
+          "width": 366,
+          "height": 420,
+          "heading": 2358.09375,
+          "action": 2477.484375
+        },
+        {
+          "top": 2538.078125,
+          "width": 366,
+          "height": 420,
+          "heading": 2794.09375,
+          "action": 2913.484375
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ],
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/cloud-forest-hiking-ecuador/",
+        "/contact/",
+        "/contact/",
+        "/contact/",
+        "/booking/",
+        "/contact/",
+        "/weekend-getaway-from-quito/",
+        "/nature-activities-quito/",
+        "/waterfalls-near-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:21.538Z\"},\"last_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:21.538Z\"},\"last_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:21.538Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_011",
+    "route": "/es/caracteristicas/actividades/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Actividades de Bosque Nublado Cerca de Quito",
+      "description": "Planifica caminatas, yoga, ciclismo y cabalgatas cerca de Quito. Conoce qué confirmar sobre clima, acceso y disponibilidad.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/actividades/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/activities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/activities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/actividades/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/actividades/",
+        "name": "Actividades de Bosque Nublado Cerca de Quito",
+        "description": "Planifica caminatas, yoga, ciclismo y cabalgatas cerca de Quito. Conoce qué confirmar sobre clima, acceso y disponibilidad.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/actividades/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1271.03125,
+          "width": 366,
+          "height": 420,
+          "heading": 1527.046875,
+          "action": 1646.4375
+        },
+        {
+          "top": 1707.03125,
+          "width": 366,
+          "height": 420,
+          "heading": 1963.046875,
+          "action": 2082.4375
+        },
+        {
+          "top": 2143.03125,
+          "width": 366,
+          "height": 420,
+          "heading": 2399.046875,
+          "action": 2518.4375
+        },
+        {
+          "top": 2579.03125,
+          "width": 366,
+          "height": 420,
+          "heading": 2835.046875,
+          "action": 2954.4375
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ],
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/senderismo-bosque-nublado-ecuador/",
+        "/es/contacto/",
+        "/es/contacto/",
+        "/es/contacto/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/actividades-naturaleza-quito/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:22.196Z\"},\"last_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:22.196Z\"},\"last_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:22.196Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_011",
+    "route": "/features/activities/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Activities Near Quito | Retreat Guide",
+      "description": "Plan cloud forest activities near Quito, including hiking, yoga, biking and horseback riding. Learn what to confirm for weather, access and availability.",
+      "canonical": "https://thecloudforestretreat.com/features/activities/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/activities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/activities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/activities/#webpage",
+        "url": "https://thecloudforestretreat.com/features/activities/",
+        "name": "Cloud Forest Activities Near Quito | Retreat Guide",
+        "description": "Plan cloud forest activities near Quito, including hiking, yoga, biking and horseback riding. Learn what to confirm for weather, access and availability.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/activities/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ],
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/cloud-forest-hiking-ecuador/",
+        "/contact/",
+        "/contact/",
+        "/contact/",
+        "/booking/",
+        "/contact/",
+        "/weekend-getaway-from-quito/",
+        "/nature-activities-quito/",
+        "/waterfalls-near-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:23.001Z\"},\"last_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:23.001Z\"},\"last_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:23.001Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_011",
+    "route": "/es/caracteristicas/actividades/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Actividades de Bosque Nublado Cerca de Quito",
+      "description": "Planifica caminatas, yoga, ciclismo y cabalgatas cerca de Quito. Conoce qué confirmar sobre clima, acceso y disponibilidad.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/actividades/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/activities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/activities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/actividades/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/actividades/",
+        "name": "Actividades de Bosque Nublado Cerca de Quito",
+        "description": "Planifica caminatas, yoga, ciclismo y cabalgatas cerca de Quito. Conoce qué confirmar sobre clima, acceso y disponibilidad.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/actividades/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ],
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/senderismo-bosque-nublado-ecuador/",
+        "/es/contacto/",
+        "/es/contacto/",
+        "/es/contacto/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/actividades-naturaleza-quito/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:23.685Z\"},\"last_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:23.685Z\"},\"last_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:23.685Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_011",
+    "route": "/features/activities/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Activities Near Quito | Retreat Guide",
+      "description": "Plan cloud forest activities near Quito, including hiking, yoga, biking and horseback riding. Learn what to confirm for weather, access and availability.",
+      "canonical": "https://thecloudforestretreat.com/features/activities/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/activities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/activities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/activities/#webpage",
+        "url": "https://thecloudforestretreat.com/features/activities/",
+        "name": "Cloud Forest Activities Near Quito | Retreat Guide",
+        "description": "Plan cloud forest activities near Quito, including hiking, yoga, biking and horseback riding. Learn what to confirm for weather, access and availability.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/activities/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1920.5,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1920.5,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ],
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/cloud-forest-hiking-ecuador/",
+        "/contact/",
+        "/contact/",
+        "/contact/",
+        "/booking/",
+        "/contact/",
+        "/weekend-getaway-from-quito/",
+        "/nature-activities-quito/",
+        "/waterfalls-near-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:24.359Z\"},\"last_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:24.359Z\"},\"last_page\":\"/features/activities/?utm_source=pair_011_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:24.359Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_011",
+    "route": "/es/caracteristicas/actividades/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Actividades de Bosque Nublado Cerca de Quito",
+      "description": "Planifica caminatas, yoga, ciclismo y cabalgatas cerca de Quito. Conoce qué confirmar sobre clima, acceso y disponibilidad.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/actividades/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/activities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/actividades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/activities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/actividades/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/actividades/",
+        "name": "Actividades de Bosque Nublado Cerca de Quito",
+        "description": "Planifica caminatas, yoga, ciclismo y cabalgatas cerca de Quito. Conoce qué confirmar sobre clima, acceso y disponibilidad.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/actividades/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1920.5,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1920.5,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ],
+        [
+          "en",
+          "/features/activities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/actividades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/senderismo-bosque-nublado-ecuador/",
+        "/es/contacto/",
+        "/es/contacto/",
+        "/es/contacto/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/escapada-fin-de-semana-quito/",
+        "/es/actividades-naturaleza-quito/",
+        "/es/cascadas-cerca-de-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:25.345Z\"},\"last_touch\":{\"utm_source\":\"pair_011_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:25.345Z\"},\"last_page\":\"/es/caracteristicas/actividades/?utm_source=pair_011_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:25.345Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_012",
+    "route": "/features/amenities/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Retreat Amenities | Near Quito",
+      "description": "Review rooms, shared spaces, Wi-Fi, kitchen access and outdoor amenities at The Cloud Forest Retreat near Quito, with details to confirm before booking.",
+      "canonical": "https://thecloudforestretreat.com/features/amenities/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/amenities/#webpage",
+        "url": "https://thecloudforestretreat.com/features/amenities/",
+        "name": "Cloud Forest Retreat Amenities | Near Quito",
+        "description": "Review rooms, shared spaces, Wi-Fi, kitchen access and outdoor amenities at The Cloud Forest Retreat near Quito, with details to confirm before booking.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/amenities/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1290.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 1546.5625,
+          "action": 1665.953125
+        },
+        {
+          "top": 1726.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 1959.234375,
+          "action": 2101.953125
+        },
+        {
+          "top": 2162.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 2418.5625,
+          "action": 2537.953125
+        },
+        {
+          "top": 2598.546875,
+          "width": 366,
+          "height": 420,
+          "heading": 2854.5625,
+          "action": 2973.953125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ],
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/rooms/",
+        "/rooms/common-areas/",
+        "/features/gallery/",
+        "/contact/",
+        "/booking/",
+        "/contact/",
+        "/rooms/",
+        "/rooms/common-areas/",
+        "/cloud-forest-lodge-near-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:26.107Z\"},\"last_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:26.107Z\"},\"last_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:26.107Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_012",
+    "route": "/es/caracteristicas/amenidades/",
+    "width": 390,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Amenidades del Refugio de Bosque Nublado",
+      "description": "Revisa habitaciones, espacios compartidos, Wi-Fi, cocina y áreas exteriores de The Cloud Forest Retreat cerca de Quito antes de reservar.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/",
+        "name": "Amenidades del Refugio de Bosque Nublado",
+        "description": "Revisa habitaciones, espacios compartidos, Wi-Fi, cocina y áreas exteriores de The Cloud Forest Retreat cerca de Quito antes de reservar.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1260.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1516.328125,
+          "action": 1635.71875
+        },
+        {
+          "top": 1696.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 1952.328125,
+          "action": 2071.71875
+        },
+        {
+          "top": 2132.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2388.328125,
+          "action": 2507.71875
+        },
+        {
+          "top": 2568.3125,
+          "width": 366,
+          "height": 420,
+          "heading": 2824.328125,
+          "action": 2943.71875
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ],
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/habitaciones/",
+        "/es/habitaciones/areas-comunes/",
+        "/es/caracteristicas/galeria/",
+        "/es/contacto/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/habitaciones/",
+        "/es/habitaciones/areas-comunes/",
+        "/es/lodge-bosque-nublado-cerca-de-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69t0",
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "12px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:26.798Z\"},\"last_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:26.798Z\"},\"last_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:26.799Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_012",
+    "route": "/features/amenities/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Retreat Amenities | Near Quito",
+      "description": "Review rooms, shared spaces, Wi-Fi, kitchen access and outdoor amenities at The Cloud Forest Retreat near Quito, with details to confirm before booking.",
+      "canonical": "https://thecloudforestretreat.com/features/amenities/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/amenities/#webpage",
+        "url": "https://thecloudforestretreat.com/features/amenities/",
+        "name": "Cloud Forest Retreat Amenities | Near Quito",
+        "description": "Review rooms, shared spaces, Wi-Fi, kitchen access and outdoor amenities at The Cloud Forest Retreat near Quito, with details to confirm before booking.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/amenities/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1216.171875,
+          "width": 358,
+          "height": 410,
+          "heading": 1450.125,
+          "action": 1567.140625
+        },
+        {
+          "top": 1216.171875,
+          "width": 358,
+          "height": 410,
+          "heading": 1439.421875,
+          "action": 1567.140625
+        },
+        {
+          "top": 1642.171875,
+          "width": 358,
+          "height": 410,
+          "heading": 1876.125,
+          "action": 1993.140625
+        },
+        {
+          "top": 1642.171875,
+          "width": 358,
+          "height": 410,
+          "heading": 1865.421875,
+          "action": 1993.140625
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ],
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/rooms/",
+        "/rooms/common-areas/",
+        "/features/gallery/",
+        "/contact/",
+        "/booking/",
+        "/contact/",
+        "/rooms/",
+        "/rooms/common-areas/",
+        "/cloud-forest-lodge-near-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:27.586Z\"},\"last_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:27.586Z\"},\"last_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:27.586Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_012",
+    "route": "/es/caracteristicas/amenidades/",
+    "width": 768,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Amenidades del Refugio de Bosque Nublado",
+      "description": "Revisa habitaciones, espacios compartidos, Wi-Fi, cocina y áreas exteriores de The Cloud Forest Retreat cerca de Quito antes de reservar.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/",
+        "name": "Amenidades del Refugio de Bosque Nublado",
+        "description": "Revisa habitaciones, espacios compartidos, Wi-Fi, cocina y áreas exteriores de The Cloud Forest Retreat cerca de Quito antes de reservar.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1185.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1419.890625,
+          "action": 1536.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1845.890625,
+          "action": 1962.90625
+        },
+        {
+          "top": 1611.9375,
+          "width": 358,
+          "height": 410,
+          "heading": 1835.1875,
+          "action": 1962.90625
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ],
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/habitaciones/",
+        "/es/habitaciones/areas-comunes/",
+        "/es/caracteristicas/galeria/",
+        "/es/contacto/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/habitaciones/",
+        "/es/habitaciones/areas-comunes/",
+        "/es/lodge-bosque-nublado-cerca-de-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:28.267Z\"},\"last_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:28.267Z\"},\"last_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:28.267Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_012",
+    "route": "/features/amenities/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Cloud Forest Retreat Amenities | Near Quito",
+      "description": "Review rooms, shared spaces, Wi-Fi, kitchen access and outdoor amenities at The Cloud Forest Retreat near Quito, with details to confirm before booking.",
+      "canonical": "https://thecloudforestretreat.com/features/amenities/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/features/amenities/#webpage",
+        "url": "https://thecloudforestretreat.com/features/amenities/",
+        "name": "Cloud Forest Retreat Amenities | Near Quito",
+        "description": "Review rooms, shared spaces, Wi-Fi, kitchen access and outdoor amenities at The Cloud Forest Retreat near Quito, with details to confirm before booking.",
+        "inLanguage": "en",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/features/amenities/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1920.5,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "en",
+      "langLinks": [
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ],
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/",
+        "/booking/",
+        "#features-to-explore",
+        "/rooms/",
+        "/rooms/common-areas/",
+        "/features/gallery/",
+        "/contact/",
+        "/booking/",
+        "/contact/",
+        "/rooms/",
+        "/rooms/common-areas/",
+        "/cloud-forest-lodge-near-quito/",
+        "/booking/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:29.007Z\"},\"last_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:29.007Z\"},\"last_page\":\"/features/amenities/?utm_source=pair_012_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:29.007Z\"}"
+      }
+    }
+  },
+  {
+    "pair": "pair_012",
+    "route": "/es/caracteristicas/amenidades/",
+    "width": 1440,
+    "pass": true,
+    "checks": {
+      "heading": true,
+      "metadata": true,
+      "canonical": true,
+      "alternates": true,
+      "faq": true,
+      "schema": true,
+      "responsive": true,
+      "language": true,
+      "includes": true,
+      "assets": true,
+      "links": true,
+      "hooks": true,
+      "attribution": true,
+      "sharedAssets": true,
+      "spacing": true,
+      "errors": true,
+      "keyboard": true
+    },
+    "errors": [],
+    "broken": [],
+    "result": {
+      "h1": 1,
+      "title": "Amenidades del Refugio de Bosque Nublado",
+      "description": "Revisa habitaciones, espacios compartidos, Wi-Fi, cocina y áreas exteriores de The Cloud Forest Retreat cerca de Quito antes de reservar.",
+      "canonical": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/",
+      "alternates": [
+        [
+          "en",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ],
+        [
+          "es",
+          "https://thecloudforestretreat.com/es/caracteristicas/amenidades/"
+        ],
+        [
+          "x-default",
+          "https://thecloudforestretreat.com/features/amenities/"
+        ]
+      ],
+      "faqMatches": true,
+      "faqCount": 4,
+      "webpage": {
+        "@type": "WebPage",
+        "@id": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/#webpage",
+        "url": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/",
+        "name": "Amenidades del Refugio de Bosque Nublado",
+        "description": "Revisa habitaciones, espacios compartidos, Wi-Fi, cocina y áreas exteriores de The Cloud Forest Retreat cerca de Quito antes de reservar.",
+        "inLanguage": "es",
+        "about": {
+          "@id": "https://thecloudforestretreat.com/#lodging"
+        },
+        "breadcrumb": {
+          "@id": "https://thecloudforestretreat.com/es/caracteristicas/amenidades/#breadcrumb"
+        }
+      },
+      "overflow": false,
+      "cards": [
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1517.828125,
+          "action": 1614.078125
+        },
+        {
+          "top": 1274.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1494.5,
+          "action": 1614.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1943.828125,
+          "action": 2040.078125
+        },
+        {
+          "top": 1700.078125,
+          "width": 632,
+          "height": 410,
+          "heading": 1920.5,
+          "action": 2040.078125
+        }
+      ],
+      "lang": "es",
+      "langLinks": [
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ],
+        [
+          "en",
+          "/features/amenities/"
+        ],
+        [
+          "es",
+          "/es/caracteristicas/amenidades/"
+        ]
+      ],
+      "includes": true,
+      "brokenImages": [],
+      "untracked": [],
+      "links": [
+        "/es/",
+        "/es/reservas/",
+        "#features-to-explore",
+        "/es/habitaciones/",
+        "/es/habitaciones/areas-comunes/",
+        "/es/caracteristicas/galeria/",
+        "/es/contacto/",
+        "/es/reservas/",
+        "/es/contacto/",
+        "/es/habitaciones/",
+        "/es/habitaciones/areas-comunes/",
+        "/es/lodge-bosque-nublado-cerca-de-quito/",
+        "/es/reservas/"
+      ],
+      "scripts": [
+        "",
+        "http://127.0.0.1:4173/assets/js/site-config.js?v=3",
+        "http://127.0.0.1:4173/assets/js/head.js?v=2",
+        "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+        "http://127.0.0.1:4173/assets/js/attribution.js?v=1",
+        "http://127.0.0.1:4173/assets/js/site.js?v=8"
+      ],
+      "styles": [
+        "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+        "http://127.0.0.1:4173/assets/css/site.css?v=2",
+        "http://127.0.0.1:4173/assets/css/header.css?v=5",
+        "http://127.0.0.1:4173/assets/css/global.css?v=4",
+        "http://127.0.0.1:4173/assets/css/footer.css?v=10",
+        "http://127.0.0.1:4173/assets/css/clusters/features.css?v=7",
+        "http://127.0.0.1:4173/assets/css/components/faq.css?v=2"
+      ],
+      "pageTop": "18px",
+      "attribution": {
+        "tcfr_attribution_v1": "{\"first_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:29.876Z\"},\"last_touch\":{\"utm_source\":\"pair_012_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-09-30T16:40:29.876Z\"},\"last_page\":\"/es/caracteristicas/amenidades/?utm_source=pair_012_qa&utm_medium=test\",\"updated_at\":\"2026-09-30T16:40:29.877Z\"}"
+      }
+    }
+  }
+]
