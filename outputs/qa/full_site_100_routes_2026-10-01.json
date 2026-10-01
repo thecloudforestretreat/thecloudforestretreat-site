@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-01T18:02:58.923Z",
+  "origin": "http://127.0.0.1:56093",
+  "routes": 100,
+  "widths": [
+    390,
+    768,
+    1440
+  ],
+  "browserCases": 300,
+  "passedCases": 300,
+  "failedCases": 0,
+  "brokenLinks": [],
+  "sitemapMissing": [],
+  "failed": []
+}

@@ -55,6 +55,11 @@
     var dates = document.getElementById("dates_of_visit");
     var source = document.getElementById("source_page");
     var agent = document.getElementById("user_agent");
+    var roomPreference = document.getElementById("room_preference");
+
+    if (roomPreference && new URLSearchParams(window.location.search).get("stay") === "entire-house") {
+      roomPreference.value = "Entire house";
+    }
 
     ["#first_name", "#last_name"].forEach(function (selector) {
       var input = form.querySelector(selector);

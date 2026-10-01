@@ -16,9 +16,9 @@ This document transfers the active The Cloud Forest Retreat website upgrade to a
 
 ## Current implementation status
 
-The enriched roadmap contains 49 English/Spanish page pairs (98 rows).
+The enriched roadmap contains 50 English/Spanish page pairs (100 rows).
 
-- Completed and pair-level QA verified: 49 pairs
+- Completed and pair-level QA verified: 50 pairs
 - Remaining for full page enrichment and pair-level QA: 0 pairs
 - Page-pair enrichment phase: Complete
 - Next phase: full-site regression review and account-side analytics, forms, Turnstile and Search Console verification
@@ -74,12 +74,15 @@ Completed pairs:
 47. `pair_047`: `/mindo-vs-cloud-forest-retreat/` and `/es/mindo-vs-cloud-forest-retreat/`
 48. `pair_048`: `/best-eco-lodge-quito/` and `/es/mejor-eco-lodge-quito/`
 49. `pair_049`: `/where-to-stay-near-quito-nature/` and `/es/donde-alojarse-cerca-de-quito-naturaleza/`
+50. `pair_050`: `/whole-house-rental-near-quito/` and `/es/alquiler-casa-completa-cerca-de-quito/`
 
 Authoritative roadmap:
 
 `outputs/01a0cacb-9307-7181-a26c-990d3a098536/TCFR_site_roadmap_enriched_2026-09-23.csv`
 
-The Mindo Comparison, Best Eco Lodge and Where to Stay Near Quito for Nature pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `3abea1e`; all six page files were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_047_049_2026-09-30.json`; runner: `scripts/qa_final_batch_047_049.mjs`. All 49 bilingual pairs are now enriched and pair-level QA verified. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 98 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
+The Whole-House Rental Near Quito / Alquiler de Casa Completa pair passed local browser, consent-flow, booking-preselection and visual QA on 2026-10-01. The final full-site audit passed 300/300 browser cases across 100 routes at 390, 768 and 1440 pixels, with zero broken local links and complete sitemap coverage. Evidence: `outputs/qa/pair_050_2026-10-01.json` and `outputs/qa/full_site_100_routes_2026-10-01.json`; runners: `scripts/qa_whole_house_pair.mjs` and `scripts/qa_full_site_final.mjs`.
+
+The Mindo Comparison, Best Eco Lodge and Where to Stay Near Quito for Nature pairs passed local browser, consent-flow and visual QA on 2026-09-30. Implementation commit: `3abea1e`; all six page files were byte-verified on the branch preview. Evidence: `outputs/qa/pairs_047_049_2026-09-30.json`; runner: `scripts/qa_final_batch_047_049.mjs`. All 50 bilingual pairs are now enriched and pair-level QA verified. The shared bilingual privacy-consent controller now defaults optional analytics to denied, supports accept/decline and preference reopening, gates attribution storage on consent, and is loaded by all 100 roadmap pages. Google Sheet editor access remains confirmed and progress is synchronized after deployment verification. Preserve native validations; use staging for completed upgrade rows and separate pair-level QA from account-side analytics verification. Pair completion does not mean production deployment or account-side analytics verification.
 
 Update both language rows only after a pair passes implementation and QA. Do not mark a pair complete because a global architecture script touched it.
 
@@ -186,8 +189,8 @@ Turnstile error `110200` is expected on an unapproved localhost hostname. Do not
 
 Implementation commit `14d100b` passed the code-controlled regression suite on the branch preview:
 
-- 98 roadmap pages tested at 390, 768, and 1440 pixels: 294/294 browser cases passed.
-- Zero broken local links and zero roadmap URLs missing from the 98-URL sitemap.
+- 100 roadmap pages tested at 390, 768, and 1440 pixels: 300/300 browser cases passed.
+- Zero broken local links and zero roadmap URLs missing from the 100-URL sitemap.
 - English and Spanish booking/contact forms tested at all three widths: 12/12 interaction cases passed.
 - Form checks cover required fields, invalid email, missing verification token, localized success/error states, submit-button recovery, source/language fields, attribution hydration, analytics events, and responsive overflow.
 - Booking/contact worker functions passed 12/12 isolated validation and security cases, including Turnstile action/hostname checks and server-only forwarding of the Apps Script gate secret.
@@ -298,7 +301,7 @@ Do not commit account credentials, private tokens, analytics secrets, form secre
 
 Copy the following into a new Codex task on the Mac mini after checking out the branch:
 
-> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then confirm that all 49 bilingual pairs are enriched and pair-level QA verified. Preserve the approved global and cluster systems. Begin the full-site regression and account-side verification phase: validate staging navigation and forms, GA4/GTM events and deduplication, permitted attribution fields, Turnstile hostname/server validation, Search Console ownership and sitemap interpretation, and production-readiness evidence. Keep production unchanged until explicit approval. Keep all work on staging; do not deploy production.
+> Continue the TCFR Site Upgrade from the repository handoff. Work only in the `thecloudforestretreat-site` repository on branch `codex/tcfr-site-upgrade`. Read `CODEX_HANDOFF.md` and the enriched roadmap CSV completely before editing. Inspect the working tree and current commits, then confirm that all 50 bilingual pairs are enriched and pair-level QA verified. Preserve the approved global and cluster systems. Begin the full-site regression and account-side verification phase: validate staging navigation and forms, GA4/GTM events and deduplication, permitted attribution fields, Turnstile hostname/server validation, Search Console ownership and sitemap interpretation, and production-readiness evidence. Keep production unchanged until explicit approval. Keep all work on staging; do not deploy production.
 
 ## First receiving-host checklist
 

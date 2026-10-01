@@ -1,0 +1,1222 @@
+{
+  "reports": [
+    {
+      "pair": "pair_050",
+      "route": "/whole-house-rental-near-quito/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Whole-House Rental Near Quito | The Cloud Forest Retreat",
+        "description": "Reserve The Cloud Forest Retreat as a private whole-house stay near Quito, with three accommodations, shared living spaces, gardens and cloud forest views.",
+        "canonical": "https://thecloudforestretreat.com/whole-house-rental-near-quito/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 5,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#webpage",
+          "url": "https://thecloudforestretreat.com/whole-house-rental-near-quito/",
+          "name": "Whole-House Rental Near Quito | The Cloud Forest Retreat",
+          "headline": "A private whole-house rental in Ecuador's cloud forest",
+          "description": "Reserve The Cloud Forest Retreat as a private whole-house stay near Quito, with three accommodations, shared living spaces, gardens and cloud forest views.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#accommodation"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#breadcrumb"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2372.65625,
+              "width": 322,
+              "height": 293.359375
+            },
+            {
+              "top": 2666.015625,
+              "width": 322,
+              "height": 269.34375
+            },
+            {
+              "top": 2935.359375,
+              "width": 322,
+              "height": 269.34375
+            }
+          ],
+          [
+            {
+              "top": 4576.828125,
+              "width": 366,
+              "height": 302.3125
+            },
+            {
+              "top": 4895.140625,
+              "width": 366,
+              "height": 302.3125
+            },
+            {
+              "top": 5213.453125,
+              "width": 366,
+              "height": 302.3125
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/?stay=entire-house",
+          "/rooms/",
+          "/rooms/common-areas/",
+          "/rooms/panoramic-suite/",
+          "/rooms/sunrise-room/",
+          "/rooms/sunset-room/",
+          "/features/amenities/",
+          "/nature-retreat-quito/",
+          "/weekend-getaway-from-quito/",
+          "/features/activities/",
+          "/booking/?stay=entire-house",
+          "/contact/",
+          "/rooms/",
+          "/rooms/common-areas/",
+          "/features/amenities/",
+          "/quito-to-cloud-forest-distance/",
+          "/booking/?stay=entire-house"
+        ],
+        "scripts": [
+          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:55995/assets/css/site.css?v=2",
+          "http://127.0.0.1:55995/assets/css/header.css?v=5",
+          "http://127.0.0.1:55995/assets/css/global.css?v=4",
+          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
+          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:00.238Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:00.238Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:00.238Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_050",
+      "route": "/es/alquiler-casa-completa-cerca-de-quito/",
+      "width": 390,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Alquiler de Casa Completa Cerca de Quito | Cloud Forest Retreat",
+        "description": "Reserva The Cloud Forest Retreat como casa completa y privada cerca de Quito, con tres alojamientos, áreas comunes, jardines y vistas al bosque nublado.",
+        "canonical": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 5,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#webpage",
+          "url": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/",
+          "name": "Alquiler de Casa Completa Cerca de Quito | Cloud Forest Retreat",
+          "headline": "Una casa completa y privada en el bosque nublado de Ecuador",
+          "description": "Reserva The Cloud Forest Retreat como casa completa y privada cerca de Quito, con tres alojamientos, áreas comunes, jardines y vistas al bosque nublado.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#accommodation"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#breadcrumb"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2431.546875,
+              "width": 322,
+              "height": 268.34375
+            },
+            {
+              "top": 2699.890625,
+              "width": 322,
+              "height": 269.34375
+            },
+            {
+              "top": 2969.234375,
+              "width": 322,
+              "height": 269.34375
+            }
+          ],
+          [
+            {
+              "top": 4636.296875,
+              "width": 366,
+              "height": 302.3125
+            },
+            {
+              "top": 4954.609375,
+              "width": 366,
+              "height": 302.3125
+            },
+            {
+              "top": 5272.921875,
+              "width": 366,
+              "height": 328.96875
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/?stay=entire-house",
+          "/es/habitaciones/",
+          "/es/habitaciones/areas-comunes/",
+          "/es/habitaciones/suite-panoramica/",
+          "/es/habitaciones/habitacion-amanecer/",
+          "/es/habitaciones/habitacion-atardecer/",
+          "/es/caracteristicas/amenidades/",
+          "/es/retiro-naturaleza-quito/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/caracteristicas/actividades/",
+          "/es/reservas/?stay=entire-house",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/habitaciones/areas-comunes/",
+          "/es/caracteristicas/amenidades/",
+          "/es/distancia-quito-bosque-nublado/",
+          "/es/reservas/?stay=entire-house"
+        ],
+        "scripts": [
+          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:55995/assets/css/site.css?v=2",
+          "http://127.0.0.1:55995/assets/css/header.css?v=5",
+          "http://127.0.0.1:55995/assets/css/global.css?v=4",
+          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
+          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "12px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:00.894Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:00.894Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:00.894Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_050",
+      "route": "/whole-house-rental-near-quito/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Whole-House Rental Near Quito | The Cloud Forest Retreat",
+        "description": "Reserve The Cloud Forest Retreat as a private whole-house stay near Quito, with three accommodations, shared living spaces, gardens and cloud forest views.",
+        "canonical": "https://thecloudforestretreat.com/whole-house-rental-near-quito/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 5,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#webpage",
+          "url": "https://thecloudforestretreat.com/whole-house-rental-near-quito/",
+          "name": "Whole-House Rental Near Quito | The Cloud Forest Retreat",
+          "headline": "A private whole-house rental in Ecuador's cloud forest",
+          "description": "Reserve The Cloud Forest Retreat as a private whole-house stay near Quito, with three accommodations, shared living spaces, gardens and cloud forest views.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#accommodation"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#breadcrumb"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2166.796875,
+              "width": 649.0625,
+              "height": 255.328125
+            },
+            {
+              "top": 2422.125,
+              "width": 649.0625,
+              "height": 256.328125
+            },
+            {
+              "top": 2678.453125,
+              "width": 649.0625,
+              "height": 256.328125
+            }
+          ],
+          [
+            {
+              "top": 4316.609375,
+              "width": 732,
+              "height": 251.703125
+            },
+            {
+              "top": 4584.3125,
+              "width": 732,
+              "height": 251.703125
+            },
+            {
+              "top": 4852.015625,
+              "width": 732,
+              "height": 251.703125
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/?stay=entire-house",
+          "/rooms/",
+          "/rooms/common-areas/",
+          "/rooms/panoramic-suite/",
+          "/rooms/sunrise-room/",
+          "/rooms/sunset-room/",
+          "/features/amenities/",
+          "/nature-retreat-quito/",
+          "/weekend-getaway-from-quito/",
+          "/features/activities/",
+          "/booking/?stay=entire-house",
+          "/contact/",
+          "/rooms/",
+          "/rooms/common-areas/",
+          "/features/amenities/",
+          "/quito-to-cloud-forest-distance/",
+          "/booking/?stay=entire-house"
+        ],
+        "scripts": [
+          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:55995/assets/css/site.css?v=2",
+          "http://127.0.0.1:55995/assets/css/header.css?v=5",
+          "http://127.0.0.1:55995/assets/css/global.css?v=4",
+          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
+          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:01.520Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:01.520Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:01.520Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_050",
+      "route": "/es/alquiler-casa-completa-cerca-de-quito/",
+      "width": 768,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Alquiler de Casa Completa Cerca de Quito | Cloud Forest Retreat",
+        "description": "Reserva The Cloud Forest Retreat como casa completa y privada cerca de Quito, con tres alojamientos, áreas comunes, jardines y vistas al bosque nublado.",
+        "canonical": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 5,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#webpage",
+          "url": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/",
+          "name": "Alquiler de Casa Completa Cerca de Quito | Cloud Forest Retreat",
+          "headline": "Una casa completa y privada en el bosque nublado de Ecuador",
+          "description": "Reserva The Cloud Forest Retreat como casa completa y privada cerca de Quito, con tres alojamientos, áreas comunes, jardines y vistas al bosque nublado.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#accommodation"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#breadcrumb"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2196.6875,
+              "width": 649.0625,
+              "height": 255.328125
+            },
+            {
+              "top": 2452.015625,
+              "width": 649.0625,
+              "height": 256.328125
+            },
+            {
+              "top": 2708.34375,
+              "width": 649.0625,
+              "height": 256.328125
+            }
+          ],
+          [
+            {
+              "top": 4346.5,
+              "width": 732,
+              "height": 251.703125
+            },
+            {
+              "top": 4614.203125,
+              "width": 732,
+              "height": 251.703125
+            },
+            {
+              "top": 4881.90625,
+              "width": 732,
+              "height": 251.703125
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/?stay=entire-house",
+          "/es/habitaciones/",
+          "/es/habitaciones/areas-comunes/",
+          "/es/habitaciones/suite-panoramica/",
+          "/es/habitaciones/habitacion-amanecer/",
+          "/es/habitaciones/habitacion-atardecer/",
+          "/es/caracteristicas/amenidades/",
+          "/es/retiro-naturaleza-quito/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/caracteristicas/actividades/",
+          "/es/reservas/?stay=entire-house",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/habitaciones/areas-comunes/",
+          "/es/caracteristicas/amenidades/",
+          "/es/distancia-quito-bosque-nublado/",
+          "/es/reservas/?stay=entire-house"
+        ],
+        "scripts": [
+          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:55995/assets/css/site.css?v=2",
+          "http://127.0.0.1:55995/assets/css/header.css?v=5",
+          "http://127.0.0.1:55995/assets/css/global.css?v=4",
+          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
+          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:02.301Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:02.301Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:02.301Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_050",
+      "route": "/whole-house-rental-near-quito/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Whole-House Rental Near Quito | The Cloud Forest Retreat",
+        "description": "Reserve The Cloud Forest Retreat as a private whole-house stay near Quito, with three accommodations, shared living spaces, gardens and cloud forest views.",
+        "canonical": "https://thecloudforestretreat.com/whole-house-rental-near-quito/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 5,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#webpage",
+          "url": "https://thecloudforestretreat.com/whole-house-rental-near-quito/",
+          "name": "Whole-House Rental Near Quito | The Cloud Forest Retreat",
+          "headline": "A private whole-house rental in Ecuador's cloud forest",
+          "description": "Reserve The Cloud Forest Retreat as a private whole-house stay near Quito, with three accommodations, shared living spaces, gardens and cloud forest views.",
+          "inLanguage": "en",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#accommodation"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/whole-house-rental-near-quito/#breadcrumb"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2187.28125,
+              "width": 380.65625,
+              "height": 305.359375
+            },
+            {
+              "top": 2187.28125,
+              "width": 380.671875,
+              "height": 305.359375
+            },
+            {
+              "top": 2187.28125,
+              "width": 380.65625,
+              "height": 305.359375
+            }
+          ],
+          [
+            {
+              "top": 3596.875,
+              "width": 416,
+              "height": 310.3125
+            },
+            {
+              "top": 3596.875,
+              "width": 416,
+              "height": 310.3125
+            },
+            {
+              "top": 3596.875,
+              "width": 416,
+              "height": 310.3125
+            }
+          ]
+        ],
+        "lang": "en",
+        "langLinks": [
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/",
+          "/booking/?stay=entire-house",
+          "/rooms/",
+          "/rooms/common-areas/",
+          "/rooms/panoramic-suite/",
+          "/rooms/sunrise-room/",
+          "/rooms/sunset-room/",
+          "/features/amenities/",
+          "/nature-retreat-quito/",
+          "/weekend-getaway-from-quito/",
+          "/features/activities/",
+          "/booking/?stay=entire-house",
+          "/contact/",
+          "/rooms/",
+          "/rooms/common-areas/",
+          "/features/amenities/",
+          "/quito-to-cloud-forest-distance/",
+          "/booking/?stay=entire-house"
+        ],
+        "scripts": [
+          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:55995/assets/css/site.css?v=2",
+          "http://127.0.0.1:55995/assets/css/header.css?v=5",
+          "http://127.0.0.1:55995/assets/css/global.css?v=4",
+          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
+          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Your privacy"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:03.060Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:03.060Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:03.060Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    },
+    {
+      "pair": "pair_050",
+      "route": "/es/alquiler-casa-completa-cerca-de-quito/",
+      "width": 1440,
+      "pass": true,
+      "checks": {
+        "heading": true,
+        "metadata": true,
+        "canonical": true,
+        "alternates": true,
+        "faq": true,
+        "schema": true,
+        "responsive": true,
+        "language": true,
+        "includes": true,
+        "assets": true,
+        "links": true,
+        "hooks": true,
+        "sharedAssets": true,
+        "cluster": true,
+        "spacing": true,
+        "errors": true,
+        "consentInitial": true,
+        "consentAccept": true,
+        "consentLanguage": true,
+        "keyboard": true,
+        "consentReject": true
+      },
+      "errors": [],
+      "broken": [],
+      "result": {
+        "h1": 1,
+        "title": "Alquiler de Casa Completa Cerca de Quito | Cloud Forest Retreat",
+        "description": "Reserva The Cloud Forest Retreat como casa completa y privada cerca de Quito, con tres alojamientos, áreas comunes, jardines y vistas al bosque nublado.",
+        "canonical": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/",
+        "alternates": [
+          [
+            "en",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "x-default",
+            "https://thecloudforestretreat.com/whole-house-rental-near-quito/"
+          ]
+        ],
+        "faqMatches": true,
+        "faqCount": 5,
+        "webpage": {
+          "@type": "WebPage",
+          "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#webpage",
+          "url": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/",
+          "name": "Alquiler de Casa Completa Cerca de Quito | Cloud Forest Retreat",
+          "headline": "Una casa completa y privada en el bosque nublado de Ecuador",
+          "description": "Reserva The Cloud Forest Retreat como casa completa y privada cerca de Quito, con tres alojamientos, áreas comunes, jardines y vistas al bosque nublado.",
+          "inLanguage": "es",
+          "about": {
+            "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#accommodation"
+          },
+          "breadcrumb": {
+            "@id": "https://thecloudforestretreat.com/es/alquiler-casa-completa-cerca-de-quito/#breadcrumb"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+          }
+        },
+        "lodging": {
+          "@type": [
+            "LodgingBusiness",
+            "BedAndBreakfast"
+          ],
+          "@id": "https://thecloudforestretreat.com/#lodging",
+          "name": "The Cloud Forest Retreat",
+          "url": "https://thecloudforestretreat.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Pichincha",
+            "addressCountry": "EC"
+          }
+        },
+        "overflow": false,
+        "groups": [
+          [
+            {
+              "top": 2295.28125,
+              "width": 380.65625,
+              "height": 280.34375
+            },
+            {
+              "top": 2295.28125,
+              "width": 380.671875,
+              "height": 280.34375
+            },
+            {
+              "top": 2295.28125,
+              "width": 380.65625,
+              "height": 280.34375
+            }
+          ],
+          [
+            {
+              "top": 3679.859375,
+              "width": 416,
+              "height": 310.3125
+            },
+            {
+              "top": 3679.859375,
+              "width": 416,
+              "height": 310.3125
+            },
+            {
+              "top": 3679.859375,
+              "width": 416,
+              "height": 310.3125
+            }
+          ]
+        ],
+        "lang": "es",
+        "langLinks": [
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ],
+          [
+            "en",
+            "/whole-house-rental-near-quito/"
+          ],
+          [
+            "es",
+            "/es/alquiler-casa-completa-cerca-de-quito/"
+          ]
+        ],
+        "includes": true,
+        "brokenImages": [],
+        "untracked": [],
+        "links": [
+          "/es/",
+          "/es/reservas/?stay=entire-house",
+          "/es/habitaciones/",
+          "/es/habitaciones/areas-comunes/",
+          "/es/habitaciones/suite-panoramica/",
+          "/es/habitaciones/habitacion-amanecer/",
+          "/es/habitaciones/habitacion-atardecer/",
+          "/es/caracteristicas/amenidades/",
+          "/es/retiro-naturaleza-quito/",
+          "/es/escapada-fin-de-semana-quito/",
+          "/es/caracteristicas/actividades/",
+          "/es/reservas/?stay=entire-house",
+          "/es/contacto/",
+          "/es/habitaciones/",
+          "/es/habitaciones/areas-comunes/",
+          "/es/caracteristicas/amenidades/",
+          "/es/distancia-quito-bosque-nublado/",
+          "/es/reservas/?stay=entire-house"
+        ],
+        "scripts": [
+          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "",
+          "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
+          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+        ],
+        "styles": [
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
+          "http://127.0.0.1:55995/assets/css/site.css?v=2",
+          "http://127.0.0.1:55995/assets/css/header.css?v=5",
+          "http://127.0.0.1:55995/assets/css/global.css?v=4",
+          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
+          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+        ],
+        "pageTop": "18px",
+        "cluster": "stay",
+        "template": "premium-stay",
+        "consentTitle": "Tu privacidad"
+      },
+      "consentInitial": {
+        "status": "unknown",
+        "banner": true,
+        "attribution": null,
+        "defaultDenied": true,
+        "gtm": true
+      },
+      "consentAccepted": {
+        "status": "accepted",
+        "saved": "accepted",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:03.949Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:03.949Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:03.949Z\"}",
+        "manage": true,
+        "updateGranted": true
+      }
+    }
+  ],
+  "bookingChecks": [
+    {
+      "route": "/booking/?stay=entire-house",
+      "pass": true,
+      "result": {
+        "value": "Entire house",
+        "text": "Entire house"
+      }
+    },
+    {
+      "route": "/es/reservas/?stay=entire-house",
+      "pass": true,
+      "result": {
+        "value": "Entire house",
+        "text": "Casa completa"
+      }
+    }
+  ]
+}

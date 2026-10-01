@@ -1,17 +1,34 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
+import http from 'node:http';
 import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || path.join(os.homedir(), '.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'));
 const root = process.cwd();
-const origin = (process.env.TCFR_QA_ORIGIN || 'http://127.0.0.1:4173').replace(/\/$/, '');
+let origin = (process.env.TCFR_QA_ORIGIN || '').replace(/\/$/, '');
 const canonicalOrigin = 'https://thecloudforestretreat.com';
 const output = process.env.QA_OUTPUT || '/tmp/tcfr-full-site-final-qa';
 const widths = (process.env.TCFR_QA_WIDTHS || '390,768,1440').split(',').map(Number);
 const workerCount = Number(process.env.TCFR_QA_WORKERS || 2);
 const roadmap = path.join(root, 'outputs/01a0cacb-9307-7181-a26c-990d3a098536/TCFR_site_roadmap_enriched_2026-09-23.csv');
+let localServer;
+if (!origin) {
+  const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.ico': 'image/x-icon', '.xml': 'application/xml; charset=utf-8' };
+  localServer = http.createServer(async (req, res) => {
+    try {
+      const url = new URL(req.url, 'http://localhost');
+      let file = path.join(root, decodeURIComponent(url.pathname));
+      if (url.pathname.endsWith('/')) file = path.join(file, 'index.html');
+      const body = await fs.readFile(file);
+      res.writeHead(200, { 'content-type': mime[path.extname(file)] || 'application/octet-stream' });
+      res.end(body);
+    } catch (_error) { res.writeHead(404); res.end('Not found'); }
+  });
+  await new Promise(resolve => localServer.listen(0, '127.0.0.1', resolve));
+  origin = `http://127.0.0.1:${localServer.address().port}`;
+}
 
 function parseCsv(text) {
   const rows = []; let row = []; let value = ''; let quoted = false;
@@ -49,7 +66,7 @@ await fs.mkdir(output, { recursive: true });
 const rows = parseCsv(await fs.readFile(roadmap, 'utf8'));
 const routes = rows.slice(1).map(row => row[8]).filter(route => /^\//.test(route));
 const uniqueRoutes = [...new Set(routes)];
-if (uniqueRoutes.length !== 98) throw new Error(`Expected 98 roadmap routes, found ${uniqueRoutes.length}`);
+if (uniqueRoutes.length !== 100) throw new Error(`Expected 100 roadmap routes, found ${uniqueRoutes.length}`);
 
 const pairMap = new Map();
 for (let i = 0; i < uniqueRoutes.length; i += 2) {
@@ -169,6 +186,7 @@ async function worker() {
 
 await Promise.all(Array.from({ length: workerCount }, worker));
 await browser.close();
+if (localServer) await new Promise(resolve => localServer.close(resolve));
 
 const brokenLinks = [];
 for (const [route, links] of allLinks) {
