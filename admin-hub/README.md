@@ -10,7 +10,9 @@ This is a separate Cloudflare Pages application for `https://admin.thecloudfores
 | Search Console | `sc-domain:thecloudforestretreat.com` | Linked to GA4; production sitemap successful |
 | Tag Manager | account `6378581981`, container `265010300` / `GTM-KJ67MZ2C`, workspace `3` | Version 2 published; one Google tag; no workspace changes |
 | Google Business Profile | The Cloud Forest Retreat, one location | Owner access confirmed; Performance API authorization pending |
-| Cloudflare | `thecloudforestretreat.com` | Public site and forms live; admin project pending creation |
+| Cloudflare | `thecloudforestretreat.com` | Public site and forms live; admin Pages project created |
+
+Cloudflare Pages project: `tcfr-marketing-admin`, connected to production branch `codex/tcfr-site-upgrade` with root directory `admin-hub`.
 
 GA4 currently labels consent signals inactive. A direct production browser probe confirmed denied defaults, cookieless denied-state pings, accepted updates, and post-consent cookies. Keep this diagnostic open until GA4 has enough production traffic to refresh its status.
 
