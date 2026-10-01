@@ -117,3 +117,8 @@ body[data-tcfr-template="premium-stay"] .aboutPage .tcfr-related { width:100%; m
 /* Shared site rhythm overrides legacy cluster defaults. */
 .tcfr-landing{padding-top:var(--tcfr-page-top)}
 @media(max-width:600px){.stayPage{padding-top:var(--tcfr-page-top)}}
+
+/* Whole-house hero keeps the aerial house view visible beside and above the copy. */
+.stayHero--wholeHouse .stayHero__image{object-position:center 48%}
+@media(max-width:900px){.stayHero--wholeHouse .stayHero__image{object-position:32% center}}
+@media(max-width:600px){.stayHero--wholeHouse .stayHero__image{object-position:29% center}}

@@ -67,7 +67,7 @@
           },
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+            "url": "https://thecloudforestretreat.com/assets/images/pages/home/tcfr_images_home_hero-01.jpg"
           }
         },
         "lodging": {
@@ -164,21 +164,22 @@
           "/booking/?stay=entire-house"
         ],
         "scripts": [
-          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
-          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69u0h1",
+          "http://127.0.0.1:58652/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:58652/assets/js/head.js?v=3",
           "",
           "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
-          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
-          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+          "http://127.0.0.1:58652/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:58652/assets/js/site.js?v=8"
         ],
         "styles": [
           "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
-          "http://127.0.0.1:55995/assets/css/site.css?v=2",
-          "http://127.0.0.1:55995/assets/css/header.css?v=5",
-          "http://127.0.0.1:55995/assets/css/global.css?v=4",
-          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
-          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
-          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+          "http://127.0.0.1:58652/assets/css/site.css?v=2",
+          "http://127.0.0.1:58652/assets/css/header.css?v=5",
+          "http://127.0.0.1:58652/assets/css/global.css?v=4",
+          "http://127.0.0.1:58652/assets/css/footer.css?v=10",
+          "http://127.0.0.1:58652/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:58652/assets/css/components/faq.css?v=2"
         ],
         "pageTop": "12px",
         "cluster": "stay",
@@ -195,7 +196,7 @@
       "consentAccepted": {
         "status": "accepted",
         "saved": "accepted",
-        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:00.238Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:00.238Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:00.238Z\"}",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:45.004Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:45.004Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:14:45.004Z\"}",
         "manage": true,
         "updateGranted": true
       }
@@ -267,7 +268,7 @@
           },
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+            "url": "https://thecloudforestretreat.com/assets/images/pages/home/tcfr_images_home_hero-01.jpg"
           }
         },
         "lodging": {
@@ -364,21 +365,21 @@
           "/es/reservas/?stay=entire-house"
         ],
         "scripts": [
-          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
-          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "http://127.0.0.1:58652/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:58652/assets/js/head.js?v=3",
           "",
           "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
-          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
-          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+          "http://127.0.0.1:58652/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:58652/assets/js/site.js?v=8"
         ],
         "styles": [
           "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
-          "http://127.0.0.1:55995/assets/css/site.css?v=2",
-          "http://127.0.0.1:55995/assets/css/header.css?v=5",
-          "http://127.0.0.1:55995/assets/css/global.css?v=4",
-          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
-          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
-          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+          "http://127.0.0.1:58652/assets/css/site.css?v=2",
+          "http://127.0.0.1:58652/assets/css/header.css?v=5",
+          "http://127.0.0.1:58652/assets/css/global.css?v=4",
+          "http://127.0.0.1:58652/assets/css/footer.css?v=10",
+          "http://127.0.0.1:58652/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:58652/assets/css/components/faq.css?v=2"
         ],
         "pageTop": "12px",
         "cluster": "stay",
@@ -395,7 +396,7 @@
       "consentAccepted": {
         "status": "accepted",
         "saved": "accepted",
-        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:00.894Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:00.894Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:00.894Z\"}",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:46.197Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:46.197Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:14:46.197Z\"}",
         "manage": true,
         "updateGranted": true
       }
@@ -467,7 +468,7 @@
           },
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+            "url": "https://thecloudforestretreat.com/assets/images/pages/home/tcfr_images_home_hero-01.jpg"
           }
         },
         "lodging": {
@@ -564,21 +565,21 @@
           "/booking/?stay=entire-house"
         ],
         "scripts": [
-          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
-          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "http://127.0.0.1:58652/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:58652/assets/js/head.js?v=3",
           "",
           "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
-          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
-          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+          "http://127.0.0.1:58652/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:58652/assets/js/site.js?v=8"
         ],
         "styles": [
           "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
-          "http://127.0.0.1:55995/assets/css/site.css?v=2",
-          "http://127.0.0.1:55995/assets/css/header.css?v=5",
-          "http://127.0.0.1:55995/assets/css/global.css?v=4",
-          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
-          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
-          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+          "http://127.0.0.1:58652/assets/css/site.css?v=2",
+          "http://127.0.0.1:58652/assets/css/header.css?v=5",
+          "http://127.0.0.1:58652/assets/css/global.css?v=4",
+          "http://127.0.0.1:58652/assets/css/footer.css?v=10",
+          "http://127.0.0.1:58652/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:58652/assets/css/components/faq.css?v=2"
         ],
         "pageTop": "18px",
         "cluster": "stay",
@@ -595,7 +596,7 @@
       "consentAccepted": {
         "status": "accepted",
         "saved": "accepted",
-        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:01.520Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:01.520Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:01.520Z\"}",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:46.812Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:46.812Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:14:46.812Z\"}",
         "manage": true,
         "updateGranted": true
       }
@@ -667,7 +668,7 @@
           },
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+            "url": "https://thecloudforestretreat.com/assets/images/pages/home/tcfr_images_home_hero-01.jpg"
           }
         },
         "lodging": {
@@ -764,21 +765,21 @@
           "/es/reservas/?stay=entire-house"
         ],
         "scripts": [
-          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
-          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "http://127.0.0.1:58652/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:58652/assets/js/head.js?v=3",
           "",
           "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
-          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
-          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+          "http://127.0.0.1:58652/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:58652/assets/js/site.js?v=8"
         ],
         "styles": [
           "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
-          "http://127.0.0.1:55995/assets/css/site.css?v=2",
-          "http://127.0.0.1:55995/assets/css/header.css?v=5",
-          "http://127.0.0.1:55995/assets/css/global.css?v=4",
-          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
-          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
-          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+          "http://127.0.0.1:58652/assets/css/site.css?v=2",
+          "http://127.0.0.1:58652/assets/css/header.css?v=5",
+          "http://127.0.0.1:58652/assets/css/global.css?v=4",
+          "http://127.0.0.1:58652/assets/css/footer.css?v=10",
+          "http://127.0.0.1:58652/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:58652/assets/css/components/faq.css?v=2"
         ],
         "pageTop": "18px",
         "cluster": "stay",
@@ -795,7 +796,7 @@
       "consentAccepted": {
         "status": "accepted",
         "saved": "accepted",
-        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:02.301Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:02.301Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:02.301Z\"}",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:47.575Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:47.575Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:14:47.575Z\"}",
         "manage": true,
         "updateGranted": true
       }
@@ -867,7 +868,7 @@
           },
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+            "url": "https://thecloudforestretreat.com/assets/images/pages/home/tcfr_images_home_hero-01.jpg"
           }
         },
         "lodging": {
@@ -964,21 +965,21 @@
           "/booking/?stay=entire-house"
         ],
         "scripts": [
-          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
-          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "http://127.0.0.1:58652/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:58652/assets/js/head.js?v=3",
           "",
           "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
-          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
-          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+          "http://127.0.0.1:58652/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:58652/assets/js/site.js?v=8"
         ],
         "styles": [
           "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
-          "http://127.0.0.1:55995/assets/css/site.css?v=2",
-          "http://127.0.0.1:55995/assets/css/header.css?v=5",
-          "http://127.0.0.1:55995/assets/css/global.css?v=4",
-          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
-          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
-          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+          "http://127.0.0.1:58652/assets/css/site.css?v=2",
+          "http://127.0.0.1:58652/assets/css/header.css?v=5",
+          "http://127.0.0.1:58652/assets/css/global.css?v=4",
+          "http://127.0.0.1:58652/assets/css/footer.css?v=10",
+          "http://127.0.0.1:58652/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:58652/assets/css/components/faq.css?v=2"
         ],
         "pageTop": "18px",
         "cluster": "stay",
@@ -995,7 +996,7 @@
       "consentAccepted": {
         "status": "accepted",
         "saved": "accepted",
-        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:03.060Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:03.060Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:03.060Z\"}",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:48.417Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:48.417Z\"},\"last_page\":\"/whole-house-rental-near-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:14:48.417Z\"}",
         "manage": true,
         "updateGranted": true
       }
@@ -1067,7 +1068,7 @@
           },
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://thecloudforestretreat.com/assets/images/pages/rooms/tcfr_rooms_common_area_hero_01.jpg"
+            "url": "https://thecloudforestretreat.com/assets/images/pages/home/tcfr_images_home_hero-01.jpg"
           }
         },
         "lodging": {
@@ -1164,21 +1165,22 @@
           "/es/reservas/?stay=entire-house"
         ],
         "scripts": [
-          "http://127.0.0.1:55995/assets/js/site-config.js?v=2",
-          "http://127.0.0.1:55995/assets/js/head.js?v=3",
+          "https://www.googletagmanager.com/gtag/js?id=G-D3W4SP5MGX&cx=c&gtm=4e69u2h2",
+          "http://127.0.0.1:58652/assets/js/site-config.js?v=2",
+          "http://127.0.0.1:58652/assets/js/head.js?v=3",
           "",
           "https://www.googletagmanager.com/gtm.js?id=GTM-KJ67MZ2C",
-          "http://127.0.0.1:55995/assets/js/attribution.js?v=2",
-          "http://127.0.0.1:55995/assets/js/site.js?v=8"
+          "http://127.0.0.1:58652/assets/js/attribution.js?v=2",
+          "http://127.0.0.1:58652/assets/js/site.js?v=8"
         ],
         "styles": [
           "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap",
-          "http://127.0.0.1:55995/assets/css/site.css?v=2",
-          "http://127.0.0.1:55995/assets/css/header.css?v=5",
-          "http://127.0.0.1:55995/assets/css/global.css?v=4",
-          "http://127.0.0.1:55995/assets/css/footer.css?v=10",
-          "http://127.0.0.1:55995/assets/css/clusters/stay.css?v=8",
-          "http://127.0.0.1:55995/assets/css/components/faq.css?v=2"
+          "http://127.0.0.1:58652/assets/css/site.css?v=2",
+          "http://127.0.0.1:58652/assets/css/header.css?v=5",
+          "http://127.0.0.1:58652/assets/css/global.css?v=4",
+          "http://127.0.0.1:58652/assets/css/footer.css?v=10",
+          "http://127.0.0.1:58652/assets/css/clusters/stay.css?v=8",
+          "http://127.0.0.1:58652/assets/css/components/faq.css?v=2"
         ],
         "pageTop": "18px",
         "cluster": "stay",
@@ -1195,7 +1197,7 @@
       "consentAccepted": {
         "status": "accepted",
         "saved": "accepted",
-        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:03.949Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:02:03.949Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:02:03.949Z\"}",
+        "attribution": "{\"first_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:49.327Z\"},\"last_touch\":{\"utm_source\":\"pair_050_qa\",\"utm_medium\":\"test\",\"landing_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"referrer\":\"\",\"referrer_host\":\"direct\",\"captured_at\":\"2026-10-01T18:14:49.327Z\"},\"last_page\":\"/es/alquiler-casa-completa-cerca-de-quito/?utm_source=pair_050_qa&utm_medium=test\",\"updated_at\":\"2026-10-01T18:14:49.327Z\"}",
         "manage": true,
         "updateGranted": true
       }
