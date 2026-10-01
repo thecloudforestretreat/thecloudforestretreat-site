@@ -1,0 +1,17 @@
+name = "tcfr-marketing-admin"
+compatibility_date = "2026-09-30"
+pages_build_output_dir = "dist"
+
+[vars]
+GA4_PROPERTY_ID = "449392042"
+GA4_STREAM_ID = "8455404842"
+GA4_MEASUREMENT_ID = "G-D3W4SP5MGX"
+GSC_SITE_URL = "sc-domain:thecloudforestretreat.com"
+GTM_ACCOUNT_ID = "6378581981"
+GTM_CONTAINER_ID = "265010300"
+GTM_PUBLIC_ID = "GTM-KJ67MZ2C"
+GTM_WORKSPACE_ID = "3"
+PUBLIC_SITE_ORIGIN = "https://thecloudforestretreat.com"
+ADMIN_HOSTNAME = "admin.thecloudforestretreat.com"
+ADMIN_EMAIL_ALLOWLIST = "thecloudforestretreat@gmail.com,sschettini18@gmail.com"
+

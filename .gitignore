@@ -6,3 +6,6 @@ scripts/build_enriched_roadmap.mjs
 
 # macOS
 .DS_Store
+
+# Private admin build output
+admin-hub/dist/
