@@ -122,3 +122,18 @@ body[data-tcfr-template="premium-stay"] .aboutPage .tcfr-related { width:100%; m
 .stayHero--wholeHouse .stayHero__image{object-position:center 48%}
 @media(max-width:900px){.stayHero--wholeHouse .stayHero__image{object-position:32% center}}
 @media(max-width:600px){.stayHero--wholeHouse .stayHero__image{object-position:29% center}}
+
+/* Keep the whole-house summary compact so it supports the aerial hero. */
+.stayHero--wholeHouse .stayHero__facts{left:auto;right:clamp(20px,4vw,52px);width:min(650px,calc(100% - 104px))}
+@media(max-width:900px){
+  .stayHero--wholeHouse .stayHero__content{padding-bottom:150px}
+  .stayHero--wholeHouse .stayHero__facts{left:16px;right:16px;width:auto;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stayHero--wholeHouse .stayHero__facts div{display:flex;min-width:0;align-items:center;justify-content:center;padding:14px 10px;text-align:center;border-top:0;border-left:1px solid rgba(255,255,255,.12)}
+  .stayHero--wholeHouse .stayHero__facts div:first-child{border-left:0}
+  .stayHero--wholeHouse .stayHero__facts strong{margin:0;font-size:.78rem;line-height:1.25}
+}
+@media(max-width:600px){
+  .stayHero--wholeHouse{min-height:680px}
+  .stayHero--wholeHouse .stayHero__content{padding-bottom:132px}
+  .stayHero--wholeHouse .stayHero__facts{left:12px;right:12px}
+}
