@@ -61,6 +61,19 @@ export async function onRequestPost(context) {
     const last_name = clean(data.last_name, 80);
     const email = clean(data.email, 254);
     const phone = clean(data.phone || data.phone_number, 50);
+    const inquiryRaw = clean(data.inquiry_type, 100);
+    const inquiryTypes = ["General question", "Whole-house rental", "Existing booking", "Transportation and arrival", "Activities and stay planning", "Partnerships or other"];
+    const inquiry_type = inquiryTypes.includes(inquiryRaw) ? inquiryRaw : "";
+    const inquiryLabelsEs = {
+      "General question": "Pregunta general",
+      "Whole-house rental": "Alquiler de casa completa",
+      "Existing booking": "Reserva existente",
+      "Transportation and arrival": "Transporte y llegada",
+      "Activities and stay planning": "Actividades y planificación",
+      "Partnerships or other": "Colaboraciones u otro",
+    };
+    const isSpanish = String(data.lang || "").toLowerCase() === "es";
+    const inquiryLabel = isSpanish ? inquiryLabelsEs[inquiry_type] : inquiry_type;
     const message = clean(data.message, 2000);
     const how_did_you_hear_about_us = clean(data.how_did_you_hear_about_us, 100);
 
@@ -107,7 +120,10 @@ export async function onRequestPost(context) {
     body.set("last_name", last_name);
     body.set("email", email);
     body.set("phone", phone);
-    body.set("message", message);
+    body.set("inquiry_type", inquiry_type);
+    // The current Apps Script sheet predates inquiry_type. Prefix the upstream
+    // message so its sheet and notification emails retain the selection.
+    body.set("message", inquiry_type ? `[${isSpanish ? "Tipo de consulta" : "Inquiry type"}: ${inquiryLabel}]\n\n${message}` : message);
     body.set("how_did_you_hear_about_us", how_did_you_hear_about_us);
 
     body.set("source_page", source_page);

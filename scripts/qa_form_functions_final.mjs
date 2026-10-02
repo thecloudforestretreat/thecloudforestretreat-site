@@ -41,7 +41,7 @@ const validBooking = {
 };
 const validContact = {
   'cf-turnstile-response': 'token', first_name: 'QA', last_name: 'Audit', email: 'qa@example.com',
-  message: 'Automated QA only', cf_secret: 'client-value-must-not-pass'
+  inquiry_type: 'Whole-house rental', message: 'Automated QA only', cf_secret: 'client-value-must-not-pass'
 };
 const verifiedBooking = { success: true, action: 'booking_submit', hostname: 'staging.example.com' };
 const verifiedContact = { success: true, action: 'contact_submit', hostname: 'staging.example.com' };
@@ -57,7 +57,8 @@ await run('contact invalid email', contact, { ...validContact, email: 'invalid' 
 await run('booking invalid dates', booking, { ...validBooking, date_end: '2026-12-14' }, baseEnv, verifiedBooking, ({ response, calls }) => response.status === 400 && calls.length === 1);
 await run('booking invalid guests', booking, { ...validBooking, number_of_guests: '12' }, baseEnv, verifiedBooking, ({ response, calls }) => response.status === 400 && calls.length === 1);
 await run('booking success', booking, validBooking, baseEnv, verifiedBooking, ({ response, data, calls }) => response.status === 200 && data.ok === true && calls.length === 2 && calls[1].body.includes('cf_secret=server-gate-secret') && !calls[1].body.includes('client-value-must-not-pass'));
-await run('contact success', contact, validContact, baseEnv, verifiedContact, ({ response, data, calls }) => response.status === 200 && data.ok === true && calls.length === 2 && calls[1].body.includes('cf_secret=server-gate-secret') && !calls[1].body.includes('client-value-must-not-pass'));
+await run('contact success', contact, validContact, baseEnv, verifiedContact, ({ response, data, calls }) => response.status === 200 && data.ok === true && calls.length === 2 && calls[1].body.includes('cf_secret=server-gate-secret') && calls[1].body.includes('inquiry_type=Whole-house+rental') && calls[1].body.includes('message=%5BInquiry+type%3A+Whole-house+rental%5D%0A%0AAutomated+QA+only') && !calls[1].body.includes('client-value-must-not-pass'));
+await run('contact Spanish inquiry', contact, { ...validContact, lang: 'es' }, baseEnv, verifiedContact, ({ response, data, calls }) => response.status === 200 && data.ok === true && calls.length === 2 && calls[1].body.includes('message=%5BTipo+de+consulta%3A+Alquiler+de+casa+completa%5D%0A%0AAutomated+QA+only'));
 
 const failed = results.filter(result => !result.pass);
 console.log(JSON.stringify({ cases: results.length, passed: results.length - failed.length, failed: failed.length, results }, null, 2));

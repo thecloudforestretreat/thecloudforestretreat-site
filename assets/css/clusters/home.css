@@ -79,6 +79,15 @@ body[data-tcfr-template="premium-home"] {
 .homeRoom__copy h3 { margin: 9px 0 7px; color: #fff; font: 800 clamp(2rem,3vw,3.05rem)/1 var(--font-head); }
 .homeRoom__copy p { margin: 0 0 18px; color: rgba(255,255,255,.82); line-height: 1.55; }
 .homeRoom__copy strong { display: block; color: #fff; line-height: 1.5; }
+.homeWholeHouse { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(0,.88fr); min-height: 430px; overflow: hidden; color: #fff; background: var(--home-deep); border-radius: 28px; box-shadow: 0 24px 68px rgba(10,42,22,.2); }
+.homeWholeHouse__image { width: 100%; height: 100%; min-height: 430px; object-fit: cover; object-position: center; }
+.homeWholeHouse__content { display: flex; flex-direction: column; justify-content: center; padding: clamp(32px,5vw,66px); }
+.homeWholeHouse__content .homeEyebrow { color: #f4ba91; }
+.homeWholeHouse__content h2 { max-width: 12ch; margin: 0; color: #fff; font: 800 clamp(2.4rem,4.2vw,4rem)/.98 var(--font-head); letter-spacing: -.044em; }
+.homeWholeHouse__content > p:not(.homeEyebrow) { max-width: 54ch; margin: 20px 0 0; color: rgba(255,255,255,.82); line-height: 1.72; }
+.homeWholeHouse__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: 28px; }
+.homeWholeHouse__actions .btn { min-height: 50px; border-radius: 999px; }
+.homeWholeHouse__link { color: #fff; font-size: .9rem; font-weight: 850; line-height: 1.5; }
 .homeHeading { width: 100%; margin-bottom: 34px; }
 .homeHeading > p:not(.homeEyebrow) { max-width: 76ch; margin: 16px 0 0; color: rgba(20,32,24,.72); font-size: 1.04rem; line-height: 1.76; }
 .homePaths { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
@@ -118,6 +127,8 @@ body[data-tcfr-template="premium-home"] {
   .homeIntro,.homeRooms,.homeTrust { grid-template-columns: 1fr; }
 
   .homeArrival { min-height: 470px; }
+  .homeWholeHouse { grid-template-columns: 1fr; }
+  .homeWholeHouse__image { min-height: 0; aspect-ratio: 16 / 9; }
 }
 @media (max-width: 760px) {
   .homePreview__notice { align-items: flex-start; border-radius: 18px; }
@@ -135,6 +146,13 @@ body[data-tcfr-template="premium-home"] {
   .homeRoom__copy { display: block; }
   .homeReviews__top { align-items: flex-start; flex-direction: column; }
   .homeReview { min-height: auto; }
+  .homeWholeHouse { border-radius: 24px; }
+  .homeWholeHouse__image { aspect-ratio: 4 / 3; }
+  .homeWholeHouse__content { padding: 28px 24px 32px; }
+  .homeWholeHouse__content h2 { max-width: 14ch; }
+  .homeWholeHouse__actions { align-items: stretch; flex-direction: column; }
+  .homeWholeHouse__actions .btn { width: 100%; justify-content: center; text-align: center; }
+  .homeWholeHouse__link { padding: 10px 4px 0; text-align: center; }
 }
 @media (max-width: 520px) {
   .homePreview { padding-top: var(--tcfr-page-top); }

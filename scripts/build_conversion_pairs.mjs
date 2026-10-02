@@ -20,7 +20,7 @@ const pages = [
     steps: [["Share your plans", "Send preferred dates, guest count, and room interests."], ["Review the options", "We reply with availability, recommendations, and next steps."], ["Confirm your stay", "Complete the agreed booking step and receive arrival guidance."]],
     faqEyebrow: "Questions before booking", faqTitle: "Helpful booking details", faqIntro: "Clear answers for the decisions travelers usually make before requesting availability.",
     faqs: [["Does this form confirm my reservation?", "No. It starts a direct availability conversation. A reservation is confirmed only after the team verifies the details and you complete the agreed booking step."], ["Can I ask about transportation from Quito?", "Yes. Include your starting point, approximate arrival time, and number of travelers so the team can discuss practical options."], ["What if I am unsure which room to choose?", "Choose the option asking for a recommendation and explain what matters most to you. The team can clarify the room differences."], ["When will I receive arrival information?", "Confirmed guests receive the location details and practical guidance needed to reach the retreat."]],
-    related: [["Explore the rooms", "/rooms/"], ["Getting here", "/quito-to-cloud-forest-distance/"], ["Contact the retreat", "/contact/"], ["Cloud Forest Lodge Near Quito", "/cloud-forest-lodge-near-quito/"], ["Nature activities", "/nature-activities-quito/"], ["About the retreat", "/about/"]]
+    related: [["Explore the rooms", "/rooms/"], ["Getting here", "/quito-to-cloud-forest-distance/"], ["Contact the retreat", "/contact/"], ["Cloud Forest Lodge Near Quito", "/cloud-forest-lodge-near-quito/"], ["Nature activities", "/nature-activities-quito/"], ["About the retreat", "/about/"], ["About the whole-house stay", "/whole-house-rental-near-quito/", "Whole-house stay"]]
   },
   {
     path: "es/reservas/index.html", lang: "es", type: "booking", pageType: "booking_page",
@@ -41,7 +41,7 @@ const pages = [
     steps: [["Comparte tus planes", "Envía fechas, número de huéspedes e interés de habitación."], ["Revisa las opciones", "Respondemos con disponibilidad, recomendaciones y próximos pasos."], ["Confirma tu estadía", "Completa el paso acordado y recibe orientación para llegar."]],
     faqEyebrow: "Preguntas antes de reservar", faqTitle: "Información útil para reservar", faqIntro: "Respuestas claras para las decisiones habituales antes de solicitar disponibilidad.",
     faqs: [["¿Este formulario confirma mi reserva?", "No. Inicia una conversación directa sobre disponibilidad. La reserva se confirma después de verificar los detalles y completar el paso acordado."], ["¿Puedo preguntar por transporte desde Quito?", "Sí. Indica tu punto de partida, hora aproximada y número de viajeros para conversar sobre opciones prácticas."], ["¿Qué hago si no sé qué habitación elegir?", "Selecciona la opción para recibir una recomendación y explica qué es importante para ti. El equipo puede aclarar las diferencias."], ["¿Cuándo recibiré la información para llegar?", "Los huéspedes confirmados reciben la ubicación y la orientación práctica necesaria para llegar al refugio."]],
-    related: [["Explorar habitaciones", "/es/habitaciones/"], ["Cómo llegar", "/es/distancia-quito-bosque-nublado/"], ["Contactar al refugio", "/es/contacto/"], ["Lodge cerca de Quito", "/es/lodge-bosque-nublado-cerca-de-quito/"], ["Actividades de naturaleza", "/es/actividades-naturaleza-quito/"], ["Sobre el refugio", "/es/sobre-nosotros/"]]
+    related: [["Explorar habitaciones", "/es/habitaciones/"], ["Cómo llegar", "/es/distancia-quito-bosque-nublado/"], ["Contactar al refugio", "/es/contacto/"], ["Lodge cerca de Quito", "/es/lodge-bosque-nublado-cerca-de-quito/"], ["Actividades de naturaleza", "/es/actividades-naturaleza-quito/"], ["Sobre el refugio", "/es/sobre-nosotros/"], ["Conoce la casa completa", "/es/alquiler-casa-completa-cerca-de-quito/", "Casa completa"]]
   },
   {
     path: "contact/index.html", lang: "en", type: "contact", pageType: "contact_page",
@@ -146,7 +146,8 @@ function contactForm(p) {
                 ${field("last_name", es ? "Apellido" : "Last name", "text", true, es ? "Tu apellido" : "Last name", "family-name")}
                 ${field("email", "Email", "email", true, es ? "tu@ejemplo.com" : "you@example.com", "email")}
                 ${field("phone", es ? "Teléfono o WhatsApp" : "Phone or WhatsApp", "tel", false, es ? "+593 ..." : "+1 305 ...", "tel")}
-                ${select("how_did_you_hear_about_us", es ? "¿Cómo nos encontraste?" : "How did you hear about us?", [["", es ? "Selecciona" : "Choose"], ["Referral", es ? "Recomendación" : "Referral"], ["Google Search", "Google Search"], ["Google Maps", "Google Maps"], ["Instagram", "Instagram"], ["TikTok", "TikTok"], ["YouTube", "YouTube"], ["Other", es ? "Otro" : "Other"]], false, "conversionField--wide")}
+                ${select("inquiry_type", es ? "Tipo de consulta" : "Inquiry type", [["", es ? "Selecciona" : "Choose"], ["General question", es ? "Pregunta general" : "General question"], ["Whole-house rental", es ? "Alquiler de casa completa" : "Whole-house rental"], ["Existing booking", es ? "Reserva existente" : "Existing booking"], ["Transportation and arrival", es ? "Transporte y llegada" : "Transportation and arrival"], ["Activities and stay planning", es ? "Actividades y planificación" : "Activities and stay planning"], ["Partnerships or other", es ? "Colaboraciones u otro" : "Partnerships or other"]])}
+                ${select("how_did_you_hear_about_us", es ? "¿Cómo nos encontraste?" : "How did you hear about us?", [["", es ? "Selecciona" : "Choose"], ["Referral", es ? "Recomendación" : "Referral"], ["Google Search", "Google Search"], ["Google Maps", "Google Maps"], ["Instagram", "Instagram"], ["TikTok", "TikTok"], ["YouTube", "YouTube"], ["Other", es ? "Otro" : "Other"]])}
                 <div class="conversionField conversionField--wide">
                   <label for="message">${es ? "Mensaje" : "Message"} <span>*</span></label>
                   <textarea id="message" name="message" required maxlength="2000" placeholder="${es ? "Cuéntanos qué quieres saber o planificar." : "Tell us what you would like to know or plan."}"></textarea>
@@ -212,7 +213,7 @@ function formatHtml(html) {
       if (!voidTags.has(tag) && !closesOnLine && !/\/>$/.test(line) && !/^<!/.test(line)) depth += 1;
     }
     return rendered;
-  }).join("\n").replace(/\n{3,}/g, "\n\n") + "\n";
+  }).join("\n").replace(/\n{3,}/g, "\n\n").replace(/(<textarea[^>]*>)\s*(<\/textarea>)/g, "$1$2") + "\n";
 }
 
 function render(p) {
@@ -221,7 +222,7 @@ function render(p) {
   const esUrl = es ? p.canonical : p.counterpart;
   const pageLabel = p.type === "booking" ? (es ? "Reservas" : "Booking") : (es ? "Contacto" : "Contact");
   const form = p.type === "booking" ? bookingForm(p) : contactForm(p);
-  const related = p.related.map(([label, href]) => `<a class="tcfr-related__link" href="${href}" ${analytics("internal_link_click", "related_content", p.pageType)}>${label}</a>`).join("\n          ");
+  const related = p.related.map(([label, href, analyticsLabel]) => `<a class="tcfr-related__link" href="${href}" ${analytics("internal_link_click", "related_content", p.pageType)}${analyticsLabel ? ` data-analytics-label="${analyticsLabel}"` : ""}>${label}</a>`).join("\n          ");
   return formatHtml(`<!DOCTYPE html>
 <html lang="${p.lang}">
 <head>
@@ -242,6 +243,7 @@ function render(p) {
   <meta property="og:description" content="${p.description}" />
   <meta property="og:url" content="${p.canonical}" />
   <meta property="og:image" content="https://thecloudforestretreat.com${p.image}" />
+  <meta property="og:image:alt" content="${p.imageAlt}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${p.title}" />
   <meta name="twitter:description" content="${p.description}" />
@@ -292,7 +294,7 @@ ${schema(p)}
   </main>
   <div id="siteFooter"></div>
   <script src="/assets/js/attribution.js?v=1"></script>
-  ${p.type === "booking" ? '<script src="/assets/js/booking-form.js?v=2"></script>' : '<script src="/assets/js/contact-form.js?v=5"></script>'}
+  ${p.type === "booking" ? '<script src="/assets/js/booking-form.js?v=3"></script>' : '<script src="/assets/js/contact-form.js?v=6"></script>'}
   <script src="/assets/js/site.js?v=8"></script>
 </body>
 </html>`);

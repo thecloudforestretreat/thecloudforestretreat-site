@@ -205,7 +205,19 @@
                 <label for="phone">Phone or WhatsApp</label>
                 <input id="phone" name="phone" type="tel" maxlength="50" placeholder="+1 305 ..." autocomplete="tel" />
               </div>
-              <div class="conversionField conversionField--wide">
+              <div class="conversionField ">
+                <label for="inquiry_type">Inquiry type</label>
+                <select id="inquiry_type" name="inquiry_type">
+                  <option value="">Choose</option>
+                  <option value="General question">General question</option>
+                  <option value="Whole-house rental">Whole-house rental</option>
+                  <option value="Existing booking">Existing booking</option>
+                  <option value="Transportation and arrival">Transportation and arrival</option>
+                  <option value="Activities and stay planning">Activities and stay planning</option>
+                  <option value="Partnerships or other">Partnerships or other</option>
+                </select>
+              </div>
+              <div class="conversionField ">
                 <label for="how_did_you_hear_about_us">How did you hear about us?</label>
                 <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us">
                   <option value="">Choose</option>
@@ -395,7 +407,7 @@
     </div>
     <script src="/assets/js/attribution.js?v=1">
     </script>
-    <script src="/assets/js/contact-form.js?v=5">
+    <script src="/assets/js/contact-form.js?v=6">
     </script>
     <script src="/assets/js/site.js?v=8">
     </script>

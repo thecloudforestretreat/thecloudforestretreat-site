@@ -147,8 +147,12 @@
     var status = getStatusElements();
     var submitBtn = form.querySelector('button[type="submit"]') || document.getElementById("tcfrSubmitBtn") || document.getElementById("tcfrContactSubmitBtn");
     var sourcePageEl = form.querySelector('input[name="source_page"]');
+    var inquiryTypeEl = form.querySelector('[name="inquiry_type"]');
 
     if(sourcePageEl){ sourcePageEl.value = window.location.href; }
+    if(inquiryTypeEl && new URLSearchParams(window.location.search).get("topic") === "whole-house"){
+      inquiryTypeEl.value = "Whole-house rental";
+    }
 
     ["#first_name", "#last_name"].forEach(function(selector){
       var el = form.querySelector(selector);
@@ -205,6 +209,7 @@
           last_name: fd.get("last_name") || "",
           email: fd.get("email") || "",
           phone: fd.get("phone") || "",
+          inquiry_type: fd.get("inquiry_type") || "",
           message: fd.get("message") || "",
           how_did_you_hear_about_us: fd.get("how_did_you_hear_about_us") || "",
           source_page: fd.get("source_page") || window.location.href,
@@ -254,7 +259,8 @@
           event_label: "Contact form submitted",
           label: "Contact form submitted",
           form_name: "contact_form",
-          http_status: res.status
+          http_status: res.status,
+          inquiry_type: fd.get("inquiry_type") || "unspecified"
         });
 
         if(window.turnstile && typeof window.turnstile.reset === "function"){

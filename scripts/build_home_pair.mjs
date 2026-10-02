@@ -44,6 +44,13 @@ const translations = new Map([
   ["Sunrise Room", "Habitación Amanecer"],
   ["A calm, private room designed for slow mornings and mountain air.", "Una habitación privada y tranquila para mañanas lentas y aire de montaña."],
   ["View room details →", "Ver detalles →"],
+  ["Aerial view of The Cloud Forest Retreat and its cloud forest valley", "Vista aérea de The Cloud Forest Retreat y su valle de bosque nublado"],
+  ["One private group", "Un solo grupo privado"],
+  ["Reserve the whole retreat together.", "Reserva todo el refugio para tu grupo."],
+  ["Bring family or friends together with all three accommodations and the shared living spaces reserved for one group. Capacity, rates, meals, and exact inclusions are confirmed for each stay.", "Reúne a familiares o amigos con los tres alojamientos y las áreas comunes reservados para un solo grupo. La capacidad, tarifas, comidas e inclusiones exactas se confirman para cada estadía."],
+  ["Explore the whole-house stay", "Explorar la casa completa"],
+  ["Check whole-house availability", "Consultar disponibilidad de la casa completa"],
+  ["Check availability →", "Consultar disponibilidad →"],
   ["Sunset Room at The Cloud Forest Retreat", "Habitación Atardecer en The Cloud Forest Retreat"],
   ["Evening views", "Vistas al atardecer"],
   ["Sunset Room", "Habitación Atardecer"],
@@ -98,6 +105,8 @@ mainEs = mainEs
   .replaceAll('href="/rooms/"', 'href="/es/habitaciones/"')
   .replaceAll('href="/rooms/sunrise-room/"', 'href="/es/habitaciones/habitacion-amanecer/"')
   .replaceAll('href="/rooms/sunset-room/"', 'href="/es/habitaciones/habitacion-atardecer/"')
+  .replaceAll('href="/whole-house-rental-near-quito/"', 'href="/es/alquiler-casa-completa-cerca-de-quito/"')
+  .replaceAll('href="/booking/?stay=entire-house"', 'href="/es/reservas/?stay=entire-house"')
   .replaceAll('href="/birdwatching-lodge-ecuador/"', 'href="/es/lodge-avistamiento-aves-ecuador/"')
   .replaceAll('href="/features/activities/"', 'href="/es/caracteristicas/actividades/"')
   .replaceAll('href="/features/amenities/"', 'href="/es/caracteristicas/amenidades/"');
@@ -174,6 +183,7 @@ function page({ language, title, description, canonical, counterpart, main, rela
   <meta property="og:description" content="${description}" />
   <meta property="og:url" content="${canonical}" />
   <meta property="og:image" content="https://thecloudforestretreat.com/assets/images/pages/home/tcfr_images_home_hero-01.jpg" />
+  <meta property="og:image:alt" content="${es ? "Vista aérea de The Cloud Forest Retreat en el bosque nublado de Pichincha, Ecuador" : "Aerial view of The Cloud Forest Retreat in the cloud forest of Pichincha, Ecuador"}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${title}" />
   <meta name="twitter:description" content="${description}" />
@@ -189,7 +199,7 @@ function page({ language, title, description, canonical, counterpart, main, rela
   <link rel="stylesheet" href="/assets/css/header.css?v=5" />
   <link rel="stylesheet" href="/assets/css/global.css?v=4" />
   <link rel="stylesheet" href="/assets/css/footer.css?v=10" />
-  <link rel="stylesheet" href="/assets/css/clusters/home.css?v=8" />
+  <link rel="stylesheet" href="/assets/css/clusters/home.css?v=9" />
   <link rel="stylesheet" href="/assets/css/components/faq.css?v=1" />
   <script type="application/ld+json">
 ${schema({ language, url: canonical, title, description, questions })}
