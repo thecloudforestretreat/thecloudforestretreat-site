@@ -231,7 +231,7 @@ body[data-tcfr-template="premium-conversion"]{
   gap:18px;
 }
 
-.conversionField{display:grid;gap:8px}
+.conversionField{display:grid;min-width:0;gap:8px}
 .conversionField--wide{grid-column:1/-1}
 .conversionField label{color:var(--conversion-deep);font-size:.86rem;font-weight:850}
 .conversionField label span{color:var(--conversion-orange)}
@@ -256,6 +256,18 @@ body[data-tcfr-template="premium-conversion"]{
 }
 
 .conversionField textarea{min-height:126px;resize:vertical}
+.conversionField input[type="date"]{
+  display:block;
+  min-width:0;
+  max-width:100%;
+  box-sizing:border-box;
+  -webkit-appearance:none;
+  appearance:none;
+}
+.conversionField input[type="date"]::-webkit-date-and-time-value{
+  min-width:0;
+  text-align:left;
+}
 .conversionFormFooter{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-top:auto;padding-top:22px;flex-wrap:wrap}
 
 .tcfr-turnstilePreview{
