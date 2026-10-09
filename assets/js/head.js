@@ -109,7 +109,7 @@
       ".tcfrConsent__text a{color:#0d5925;font-weight:800;text-underline-offset:3px}",
       ".tcfrConsent__actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}",
       ".tcfrConsent__button{min-height:44px;padding:10px 17px;border:1px solid #0d5925;border-radius:999px;background:#fff;color:#0d5925;font:inherit;font-weight:850;cursor:pointer}",
-      ".tcfrConsent__button--accept{border-color:#ee653b;background:#ee653b;color:#fff}",
+      ".tcfrConsent__button--accept{border-color:#b94724;background:#b94724;color:#fff}",
       ".tcfrConsent__button:focus-visible,.tcfrConsentManage:focus-visible{outline:3px solid #f2c94c;outline-offset:3px}",
       ".tcfrConsentManage{position:fixed;left:12px;bottom:12px;z-index:2147482999;padding:8px 12px;border:1px solid rgba(13,89,37,.3);border-radius:999px;background:rgba(255,253,243,.97);color:#0d5925;box-shadow:0 5px 18px rgba(3,34,14,.16);font:800 12px/1 Inter,system-ui,sans-serif;cursor:pointer}",
       "@media(max-width:700px){.tcfrConsent{left:10px;right:10px;bottom:10px;padding:15px;border-radius:17px}.tcfrConsent__row{display:block}.tcfrConsent__actions{margin-top:13px}.tcfrConsent__button{flex:1}.tcfrConsentManage{left:8px;bottom:8px}}"
@@ -129,7 +129,7 @@
     banner.setAttribute("aria-labelledby", "tcfr-consent-title");
     banner.innerHTML = '<div class="tcfrConsent__row"><div class="tcfrConsent__copy"><h2 class="tcfrConsent__title" id="tcfr-consent-title">' +
       (spanish ? "Tu privacidad" : "Your privacy") + '</h2><p class="tcfrConsent__text">' +
-      (spanish ? 'Usamos analítica opcional para mejorar el sitio y medir nuestras campañas. El sitio, WhatsApp y los formularios funcionan aunque rechaces. <a href="/es/politica-de-privacidad/">Más información</a>.' : 'We use optional analytics to improve the site and measure our campaigns. The site, WhatsApp, and forms still work if you decline. <a href="/privacy-policy/">Learn more</a>.') +
+      (spanish ? 'Usamos analítica opcional para mejorar el sitio y medir nuestras campañas. El sitio, WhatsApp y los formularios funcionan aunque rechaces. <a href="/es/politica-de-privacidad/">Política de privacidad</a>.' : 'We use optional analytics to improve the site and measure our campaigns. The site, WhatsApp, and forms still work if you decline. <a href="/privacy-policy/">Privacy policy</a>.') +
       '</p></div><div class="tcfrConsent__actions"><button class="tcfrConsent__button" type="button" data-tcfr-consent="reject">' +
       (spanish ? "Rechazar" : "Decline") + '</button><button class="tcfrConsent__button tcfrConsent__button--accept" type="button" data-tcfr-consent="accept">' +
       (spanish ? "Aceptar" : "Accept") + '</button></div></div>';

@@ -59,7 +59,7 @@ body[data-tcfr-template="premium-home"] {
   background-color: var(--home-deep);
   background-image:
     linear-gradient(160deg, rgba(3,24,12,.88), rgba(3,24,12,.80)),
-    url("/assets/images/pages/rooms/tcfr_rooms_ps_c_01.jpg");
+    url("/assets/images/pages/rooms/tcfr_rooms_ps_c_01-optimized.webp");
   background-size: cover;
   background-position: center;
   border-radius: 26px;
@@ -163,3 +163,6 @@ body[data-tcfr-template="premium-home"] {
   .homeReviews__links { flex-direction: column; }
   .homeReviews__links a { text-align: center; }
 }
+
+/* Preserve warm orange branding while meeting contrast for small white CTA labels. */
+body[data-tcfr-template="premium-home"]{--orange:#b94724;--home-orange:#b94724;}

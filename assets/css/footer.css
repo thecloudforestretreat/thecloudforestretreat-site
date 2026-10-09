@@ -266,3 +266,8 @@
   .tcfr-footerButton,
   .tcfr-social a { transition: none; }
 }
+
+.tcfr-footer{--forest:#0a4b1e;}
+
+.tcfr-footer{--orange:#732b13;}
+.tcfr-footerBrand p,.tcfr-footerLegal p,.tcfr-footerCopy{color:#233d2c;}
