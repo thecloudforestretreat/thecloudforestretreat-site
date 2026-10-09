@@ -11,8 +11,8 @@
     whatsapp: {
       enabled: true,
       number: "13054585402",
-      imageDesktop: "/assets/images/icons/tcfr_widget_whatsapp_03.png",
-      imageMobile: "/assets/images/icons/tcfr_widget_whatsapp_03.png",
+      imageDesktop: "/assets/images/icons/tcfr_widget_whatsapp_03-optimized.webp",
+      imageMobile: "/assets/images/icons/tcfr_widget_whatsapp_03-optimized.webp",
       messages: {
         en: {
           title: "Chat with us on WhatsApp",
