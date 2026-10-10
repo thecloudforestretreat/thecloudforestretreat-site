@@ -16,7 +16,7 @@
   update();
   const start = () => {
     if (!started) {
-      video.src = matchMedia('(max-width:767px)').matches ? '/assets/video/tcfr-hero-mobile-02.mp4' : '/assets/video/tcfr-hero-desktop-02.mp4';
+      video.src = matchMedia('(max-width:767px)').matches ? '/assets/video/tcfr-hero-mobile-preview-option2.mp4' : '/assets/video/tcfr-hero-desktop-02.mp4';
       started = true;
     }
     video.play().catch(update);
