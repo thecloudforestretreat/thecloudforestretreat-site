@@ -188,6 +188,9 @@
         payload[key] = params[key];
       }
     }
+    // GTM's Google tag does not establish an on-page default event group.
+    var destination = String((window.TCFR_CONFIG || {}).ga4MeasurementId || "").trim();
+    if (/^G-[A-Z0-9]+$/.test(destination)) payload.send_to = destination;
     window.gtag("event", name, payload);
   }
 

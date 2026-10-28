@@ -98,7 +98,9 @@
   }
 
   function track(eventName, params){
-    params = params || {};
+    params = Object.assign({}, params || {});
+    var destination = String((window.TCFR_CONFIG || {}).ga4MeasurementId || "").trim();
+    if (/^G-[A-Z0-9]+$/.test(destination)) params.send_to = destination;
     params.page_type = document.body.getAttribute("data-page-type") || "contact_page";
     params.page_language = document.body.getAttribute("data-page-language") || document.documentElement.lang || "en";
 
