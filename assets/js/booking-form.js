@@ -30,7 +30,10 @@
   }
 
   function track(name, data) {
-    if (typeof window.gtag === "function") window.gtag("event", name, data || {});
+    var payload = Object.assign({}, data || {});
+    var destination = String((window.TCFR_CONFIG || {}).ga4MeasurementId || "").trim();
+    if (/^G-[A-Z0-9]+$/.test(destination)) payload.send_to = destination;
+    if (typeof window.gtag === "function") window.gtag("event", name, payload);
   }
 
   function capitalizeName(value) {
