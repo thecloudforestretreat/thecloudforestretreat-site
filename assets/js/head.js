@@ -49,7 +49,12 @@
     document.head.appendChild(script);
   }
 
-  if (/^GTM-[A-Z0-9]+$/.test(gtmId)) {
+  // Keep staging, preview and local QA out of the production analytics property.
+  var analyticsHost = String(window.location.hostname || "").toLowerCase();
+  var productionHost = analyticsHost === "thecloudforestretreat.com" || analyticsHost === "www.thecloudforestretreat.com";
+  if (!productionHost) {
+    window.__TCFR_ANALYTICS_MODE__ = "disabled-nonproduction";
+  } else if (/^GTM-[A-Z0-9]+$/.test(gtmId)) {
     window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
     addScript("https://www.googletagmanager.com/gtm.js?id=" + encodeURIComponent(gtmId), "tcfr-gtm-loader");
     window.__TCFR_ANALYTICS_MODE__ = "gtm-consent-mode";
